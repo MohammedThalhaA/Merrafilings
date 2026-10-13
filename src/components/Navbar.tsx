@@ -62,7 +62,7 @@ export default function Navbar({ onOpenSearch, onOpenContact }: NavbarProps) {
                   <button
                     key={cat.id}
                     onClick={onOpenContact}
-                    className="px-2 py-1.5 text-[13px] xl:text-[13.5px] font-normal text-[#344054] hover:text-[#111827] rounded-md transition-colors cursor-pointer inline-flex items-center gap-1 whitespace-nowrap shrink-0"
+                    className="px-2 py-1.5 text-[14px] xl:text-[14.5px] font-medium text-[#111827] hover:text-[#155EEF] rounded-md transition-colors cursor-pointer inline-flex items-center gap-1 whitespace-nowrap shrink-0"
                   >
                     {cat.label}
                   </button>
@@ -74,16 +74,16 @@ export default function Navbar({ onOpenSearch, onOpenContact }: NavbarProps) {
                   <button
                     onClick={() => setActiveDropdown(isOpen ? null : cat.id)}
                     onMouseEnter={() => setActiveDropdown(cat.id)}
-                    className={`px-2 py-1.5 text-[13px] xl:text-[13.5px] font-normal rounded-md transition-colors inline-flex items-center gap-1 cursor-pointer whitespace-nowrap shrink-0 ${
+                    className={`px-2 py-1.5 text-[14px] xl:text-[14.5px] font-medium rounded-md transition-colors inline-flex items-center gap-1 cursor-pointer whitespace-nowrap shrink-0 ${
                       isOpen
                         ? "text-[#155EEF] bg-[#F8FAFC]"
-                        : "text-[#344054] hover:text-[#155EEF] hover:bg-[#F8FAFC]/80"
+                        : "text-[#111827] hover:text-[#155EEF] hover:bg-[#F8FAFC]/80"
                     }`}
                     aria-expanded={isOpen}
                   >
                     <span>{cat.label}</span>
                     <ChevronDown
-                      className={`w-3.5 h-3.5 text-[#667085] transition-transform duration-200 shrink-0 ${
+                      className={`w-3.5 h-3.5 text-[#475467] transition-transform duration-200 shrink-0 ${
                         isOpen ? "rotate-180 text-[#155EEF]" : "group-hover:text-[#155EEF]"
                       }`}
                     />
@@ -194,7 +194,7 @@ export default function Navbar({ onOpenSearch, onOpenContact }: NavbarProps) {
             {/* Search Trigger */}
             <button
               onClick={onOpenSearch}
-              className="p-2 text-[#475467] hover:text-[#111827] hover:bg-[#F8FAFC] rounded-full transition-colors cursor-pointer shrink-0"
+              className="p-2 text-[#111827] hover:text-[#155EEF] hover:bg-[#F8FAFC] rounded-full transition-colors cursor-pointer shrink-0"
               title="Search services (Ctrl + K)"
               aria-label="Search all services"
             >
@@ -205,7 +205,7 @@ export default function Navbar({ onOpenSearch, onOpenContact }: NavbarProps) {
             <div className="relative shrink-0">
               <button
                 onClick={() => setDashboardOpen(!dashboardOpen)}
-                className="inline-flex items-center justify-center px-5 py-2 text-[13.5px] font-normal text-[#344054] bg-white border border-[#E4E7EC] hover:border-[#155EEF] hover:text-[#155EEF] rounded-full transition-all shadow-xs hover:shadow-sm cursor-pointer whitespace-nowrap shrink-0"
+                className="inline-flex items-center justify-center px-5 py-2 text-[14px] font-medium text-[#111827] bg-white border border-[#D0D5DD] hover:border-[#155EEF] hover:text-[#155EEF] rounded-full transition-all shadow-xs hover:shadow-sm cursor-pointer whitespace-nowrap shrink-0"
               >
                 Login
               </button>
