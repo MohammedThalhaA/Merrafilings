@@ -468,7 +468,7 @@ export default function TrustRegistrationPage() {
         onOpenContact={() => setIsContactOpen(true)}
       />
 
-      {/* Hero Section with IndiaFilings Curved Radial Mesh Background */}
+      {/* Hero Section with Merrafilings Curved Radial Mesh Background */}
       <section className="relative overflow-visible pt-6 sm:pt-8 md:pt-10 pb-16 bg-white">
         {/* Curved gradient backdrop canvas */}
         <div
@@ -506,7 +506,7 @@ export default function TrustRegistrationPage() {
           {/* Breadcrumb Navigation */}
           <nav className="flex items-center gap-2 text-xs font-light text-slate-400 mb-6">
             <a href="/" className="hover:text-slate-700 transition-colors">
-              IndiaFilings
+              MerraFilings
             </a>
             <span>/</span>
             <a href="/registrations" className="hover:text-slate-700 transition-colors">
@@ -925,7 +925,7 @@ export default function TrustRegistrationPage() {
         </div>
       </section>
 
-      {/* Pricing Section (Matching Exact IndiaFilings Layout & Green Hover) */}
+      {/* Pricing Section (Matching Exact Merrafilings Layout & Green Hover) */}
       <section id="pricing" className="py-14 sm:py-16 bg-white">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-10">

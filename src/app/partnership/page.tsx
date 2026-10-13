@@ -242,7 +242,7 @@ const FAQ_EXTRA_COL_2 = [
 ];
 
 const RELATED_SERVICES_TAGS = [
-  "IndiaFilings Signup",
+  "Merrafilings Portal",
   "Partnership Deed Drafting",
   "LLP Registration",
   "Sole Proprietorship",
@@ -445,7 +445,7 @@ export default function PartnershipPage() {
         onOpenContact={() => setContactOpen(true)}
       />
 
-      {/* Hero Section with IndiaFilings Curved Radial Mesh Background */}
+      {/* Hero Section with Merrafilings Curved Radial Mesh Background */}
       <section className="relative overflow-visible pt-6 sm:pt-8 md:pt-10 pb-16 bg-white">
         {/* Curved gradient backdrop canvas with curved bottom edge */}
         <div
@@ -489,7 +489,7 @@ export default function PartnershipPage() {
               Registration Online in India
             </h1>
             <p className="mt-3 text-[13px] sm:text-[14.5px] font-light text-slate-600 max-w-2xl mx-auto leading-relaxed">
-              Start your Partnership Firm Registration in India today with IndiaFilings. Expert help on partnership deed drafting, PAN card, GST registration, MSME, and certificate of registration.
+              Start your Partnership Firm Registration in India today with Merrafilings. Expert legal support on partnership deed drafting, notary execution, PAN, GST, and Registrar of Firms (ROF) certificate.
             </p>
           </div>
 
@@ -816,7 +816,7 @@ export default function PartnershipPage() {
         </div>
       </section>
 
-      {/* Pricing Section (Matching exact IndiaFilings design with Green Hover Border & Dynamic Button) */}
+      {/* Pricing Section (Matching exact Merrafilings design with Green Hover Border & Dynamic Button) */}
       <section id="pricing" className="py-14 sm:py-16 bg-white">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-10">
@@ -1121,13 +1121,13 @@ export default function PartnershipPage() {
         </div>
       </section>
 
-      {/* Comprehensive Guide Section (Matching exact IndiaFilings reference design) */}
+      {/* Comprehensive Guide Section (Matching exact Merrafilings reference design) */}
       <section id="overview-section" className="py-10 sm:py-12 bg-white">
         <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb Navigation */}
           <nav className="flex items-center gap-2 text-[13px] font-light text-slate-500 mb-5 flex-wrap">
             <a href="/" className="hover:text-[#155EEF] transition-colors">
-              IndiaFilings
+              Merrafilings
             </a>
             <span className="text-slate-300">/</span>
             <a href="/startup" className="hover:text-[#155EEF] transition-colors">
@@ -1148,7 +1148,7 @@ export default function PartnershipPage() {
                     Partnership Firm Registration in India
                   </h1>
                   <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
-                    A <strong className="font-normal text-slate-900">partnership firm</strong> is one of the most preferred business structures in India, where two or more individuals come together to run a business and share profits and losses. Governed by the <strong className="font-normal text-slate-900">Indian Partnership Act, 1932</strong>, a partnership firm offers immense operational flexibility, shared management responsibility, and ease of formation. Whether you are starting a new joint venture or formalizing an ongoing enterprise, understanding the complete <a href="#pricing" className="text-[#155EEF] hover:underline font-normal">partnership firm registration process</a> is the first step towards building a legally recognized and credible business in India. Our legal experts at <a href="/" className="text-[#00B074] hover:underline font-normal">IndiaFilings</a> guide you through every milestone from custom deed drafting to Registrar of Firms certificate delivery.
+                    A <strong className="font-normal text-slate-900">partnership firm</strong> is one of the most preferred business structures in India, where two or more individuals come together to run a business and share profits and losses. Governed by the <strong className="font-normal text-slate-900">Indian Partnership Act, 1932</strong>, a partnership firm offers immense operational flexibility, shared management responsibility, and ease of formation. Whether you are starting a new joint venture or formalizing an ongoing enterprise, understanding the complete <a href="#pricing" className="text-[#155EEF] hover:underline font-normal">partnership firm registration process</a> is the first step towards building a legally recognized and credible business in India. Our legal experts at <a href="/" className="text-[#00B074] hover:underline font-normal">MerraFilings</a> guide you through every milestone from custom deed drafting to Registrar of Firms certificate delivery.
                   </p>
                 </div>
 
@@ -1510,13 +1510,13 @@ export default function PartnershipPage() {
                   </div>
                 </div>
 
-                {/* Section 10: Why Choose IndiaFilings */}
+                {/* Section 10: Why Choose Merrafilings */}
                 <div className="border-t border-slate-100 pt-6">
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
-                    Why Choose IndiaFilings for Partnership Firm Registration?
+                    Why Choose Merrafilings for Partnership Firm Registration?
                   </h2>
                   <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
-                    IndiaFilings is India&apos;s leading corporate services platform, having assisted over 100,000+ businesses with firm registration and annual compliance:
+                    Merrafilings is India&apos;s leading corporate compliance platform, having assisted over 100,000+ businesses with firm registration and annual compliance:
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[13px] font-light text-slate-700">
                     <div className="flex items-center gap-2">
@@ -1630,7 +1630,7 @@ export default function PartnershipPage() {
         </div>
       </section>
 
-      {/* Frequently Asked Questions Section (Matching exact IndiaFilings 2-column reference design) */}
+      {/* Frequently Asked Questions Section (Matching exact Merrafilings 2-column reference design) */}
       <section className="py-14 sm:py-18 bg-white border-t border-[#E4E7EC]">
         <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           {/* Top Green Accent Dash */}

@@ -248,7 +248,7 @@ const FAQ_EXTRA_COL_2 = [
 ];
 
 const RELATED_SERVICES_TAGS = [
-  "IndiaFilings Signup",
+  "Merrafilings Portal",
   "OPC Registration",
   "Partnership Firm Registration",
   "Private Limited Company",
@@ -408,7 +408,7 @@ export default function ProprietorshipPage() {
         onOpenContact={() => setContactOpen(true)}
       />
 
-      {/* Hero Section with IndiaFilings Curved Radial Mesh Background */}
+      {/* Hero Section with Merrafilings Curved Radial Mesh Background */}
       <section className="relative overflow-visible pt-6 sm:pt-8 md:pt-10 pb-16 bg-white">
         {/* Curved gradient backdrop canvas with curved bottom edge */}
         <div
@@ -748,7 +748,7 @@ export default function ProprietorshipPage() {
         </div>
       </section>
 
-      {/* Our Clients Section (Matching exact IndiaFilings Mini Cards Carousel in Reference Screenshot) */}
+      {/* Our Clients Section (Matching exact Merrafilings Mini Cards Carousel in Reference Screenshot) */}
       <section className="py-9 sm:py-11 bg-white border-b border-[#E4E7EC]">
         <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header with Gradient Line */}
@@ -799,7 +799,7 @@ export default function ProprietorshipPage() {
         </div>
       </section>
 
-      {/* Pricing Section (Matching exact IndiaFilings design in Screenshot 1) */}
+      {/* Pricing Section (Matching exact Merrafilings design in Screenshot 1) */}
       <section id="pricing" className="py-14 sm:py-16 bg-white">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-10">
@@ -1003,7 +1003,7 @@ export default function ProprietorshipPage() {
                   1 Year GST Filing + ITR
                 </h3>
                 <p className="text-[12.5px] font-light text-slate-500 mt-2 leading-relaxed">
-                  IndiaFilings seamlessly provides customized accounting services for businesses with turnover up to 40 lakhs, ensuring co...{" "}
+                  Merrafilings seamlessly provides customized accounting services for businesses with turnover up to 40 lakhs, ensuring co...{" "}
                   <button
                     type="button"
                     onClick={(e) => {
@@ -1094,13 +1094,13 @@ export default function ProprietorshipPage() {
         </div>
       </section>
 
-      {/* Comprehensive Guide Section (Matching exact IndiaFilings reference design in Screenshot) */}
+      {/* Comprehensive Guide Section (Matching exact Merrafilings reference design in Screenshot) */}
       <section className="py-10 sm:py-12 bg-white">
         <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb Navigation */}
           <nav className="flex items-center gap-2 text-[13px] font-light text-slate-500 mb-5 flex-wrap">
             <a href="/" className="hover:text-[#155EEF] transition-colors">
-              IndiaFilings
+              Merrafilings
             </a>
             <span className="text-slate-300">/</span>
             <a href="#startup" className="hover:text-[#155EEF] transition-colors">
@@ -1121,7 +1121,7 @@ export default function ProprietorshipPage() {
                     Solo Proprietorship Firm Registration Online in India
                   </h1>
                   <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
-                    Starting a business as a <strong className="font-normal text-slate-900">sole proprietor</strong> offers simplicity and complete control over your individual business registration. Whether you are an entrepreneur looking to establish your presence or planning to expand your business ventures, understanding the nuances of <a href="#pricing" className="text-[#155EEF] hover:underline font-normal">proprietorship registration online</a> is crucial. This comprehensive guide covers everything you need to know about registering a sole proprietorship in India, from eligibility criteria to the final registration process. Our experts at <a href="/" className="text-[#00B074] hover:underline font-normal">IndiaFilings</a> provide seamless solutions for self-employed registration and business establishment with affordable fees.
+                    Starting a business as a <strong className="font-normal text-slate-900">sole proprietor</strong> offers simplicity and complete control over your individual business registration. Whether you are an entrepreneur looking to establish your presence or planning to expand your business ventures, understanding the nuances of <a href="#pricing" className="text-[#155EEF] hover:underline font-normal">proprietorship registration online</a> is crucial. This comprehensive guide covers everything you need to know about registering a sole proprietorship in India, from eligibility criteria to the final registration process. Our experts at <a href="/" className="text-[#00B074] hover:underline font-normal">Merrafilings</a> provide seamless solutions for self-employed registration and business establishment with affordable fees.
                   </p>
                 </div>
 
@@ -1375,7 +1375,7 @@ export default function ProprietorshipPage() {
               </article>
             </div>
 
-            {/* Right Sticky Sidebar (Matching exact IndiaFilings widgets in Screenshot) */}
+            {/* Right Sticky Sidebar (Matching exact Merrafilings widgets in Screenshot) */}
             <div className="space-y-5 lg:sticky lg:top-24">
               {/* Consult Experts Pill Card with 3 Avatars */}
               <div
@@ -1465,7 +1465,7 @@ export default function ProprietorshipPage() {
         </div>
       </section>
 
-      {/* Frequently Asked Questions Section (Matching exact IndiaFilings 2-column reference design) */}
+      {/* Frequently Asked Questions Section (Matching exact Merrafilings 2-column reference design) */}
       <section className="py-14 sm:py-18 bg-white border-t border-[#E4E7EC]">
         <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           {/* Top Green Accent Dash */}

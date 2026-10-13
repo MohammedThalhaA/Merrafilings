@@ -43,7 +43,7 @@ export const NAV_CATEGORIES: NavCategory[] = [
         [
           { title: "Section 8 Company", href: "/section-8-company-registration" },
           { title: "Trust Registration", href: "/trust-registration" },
-          { title: "Public Limited Company", href: "#public-ltd" },
+          { title: "Public Limited Company", href: "/public-limited-company" },
           { title: "Producer Company", href: "#producer" },
           { title: "Indian Subsidiary", href: "#subsidiary" },
         ],

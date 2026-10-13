@@ -35,7 +35,7 @@ export default function Navbar({ onOpenSearch, onOpenContact }: NavbarProps) {
           {/* Brand Logo */}
           <div className="flex items-center gap-4 lg:gap-5 shrink-0">
             <a href="#" className="flex items-center gap-2 group" aria-label="MerraFilings Home">
-              {/* Brand Logo: IndiaFilings inspired oval crest badge */}
+              {/* Brand Logo: Merrafilings oval crest badge */}
               <div className="relative flex items-center justify-center">
                 <div className="w-[124px] h-[40px] rounded-[22px] border-2 border-[#15803D] bg-white flex items-center justify-center px-2 py-0.5 shadow-xs relative overflow-hidden group-hover:border-[#155EEF] transition-colors">
                   <div className="absolute -top-1 -right-1 w-6 h-6 bg-[#EA580C]/15 rounded-full blur-[2px]" />

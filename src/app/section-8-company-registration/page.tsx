@@ -194,7 +194,7 @@ const FAQ_COL_2 = [
   },
   {
     q: "How long will it take to incorporate a Company?",
-    a: "IndiaFilings can incorporate a Section 8 Company within 15 to 25 working days. The turnaround time depends on the prompt submission of KYC documents by the promoters and the speed of government approvals for the Section 8 License (Form INC-12) and SPICe+ Part B incorporation.",
+    a: "Merrafilings can incorporate a Section 8 Company within 15 to 25 working days. The turnaround time depends on the prompt submission of KYC documents by the promoters and the speed of government approvals for the Section 8 License (Form INC-12) and SPICe+ Part B incorporation.",
   },
   {
     q: "What is a Digital Signature Certificate (DSC)?",
@@ -241,7 +241,7 @@ const FAQ_EXTRA_COL_2 = [
 ];
 
 const RELATED_SERVICES_TAGS = [
-  "IndiaFilings Signup",
+  "Merrafilings Portal",
   "Trust Registration",
   "Society Registration",
   "12A and 80G Registration",
@@ -373,7 +373,7 @@ export default function Section8CompanyPage() {
         onOpenContact={() => setContactOpen(true)}
       />
 
-      {/* Hero Section with IndiaFilings Curved Radial Mesh Background */}
+      {/* Hero Section with Merrafilings Curved Radial Mesh Background */}
       <section className="relative overflow-visible pt-6 sm:pt-8 md:pt-10 pb-16 bg-white">
         {/* Curved gradient backdrop canvas with curved bottom edge */}
         <div
@@ -744,7 +744,7 @@ export default function Section8CompanyPage() {
         </div>
       </section>
 
-      {/* Pricing Section (Matching exact IndiaFilings design with Green Hover Border & Dynamic Button) */}
+      {/* Pricing Section (Matching exact Merrafilings design with Green Hover Border & Dynamic Button) */}
       <section id="pricing" className="py-14 sm:py-16 bg-white">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-10">
@@ -1049,13 +1049,13 @@ export default function Section8CompanyPage() {
         </div>
       </section>
 
-      {/* Comprehensive Guide Section (Matching exact IndiaFilings reference design) */}
+      {/* Comprehensive Guide Section (Matching exact Merrafilings reference design) */}
       <section id="overview-section" className="py-10 sm:py-12 bg-white">
         <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb Navigation */}
           <nav className="flex items-center gap-2 text-[13px] font-light text-slate-500 mb-5 flex-wrap">
             <a href="/" className="hover:text-[#155EEF] transition-colors">
-              IndiaFilings
+              Merrafilings
             </a>
             <span className="text-slate-300">/</span>
             <a href="/startup" className="hover:text-[#155EEF] transition-colors">
@@ -1076,7 +1076,7 @@ export default function Section8CompanyPage() {
                     Section 8 Company Registration Online in India
                   </h1>
                   <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
-                    <strong className="font-normal text-slate-900">Section 8 company registration in India</strong> is the legally recognized process of incorporating a non-profit organization under the <strong className="font-normal text-slate-900">Companies Act, 2013</strong>. It is ideal for individuals and organizations aiming to promote education, charity, science, religion, arts, or social welfare. A Section 8 company enjoys distinct legal identity, <a href="#pricing" className="text-[#155EEF] hover:underline font-normal">income tax benefits</a>, and higher credibility compared to traditional non-profit structures. Our experts at <a href="/" className="text-[#00B074] hover:underline font-normal">IndiaFilings</a> provide complete end-to-end guidance from name approval to 12A &amp; 80G registrations at transparent costs.
+                    <strong className="font-normal text-slate-900">Section 8 company registration in India</strong> is the legally recognized process of incorporating a non-profit organization under the <strong className="font-normal text-slate-900">Companies Act, 2013</strong>. It is ideal for individuals and organizations aiming to promote education, charity, science, religion, arts, or social welfare. A Section 8 company enjoys distinct legal identity, <a href="#pricing" className="text-[#155EEF] hover:underline font-normal">income tax benefits</a>, and higher credibility compared to traditional non-profit structures. Our experts at <a href="/" className="text-[#00B074] hover:underline font-normal">Merrafilings</a> provide complete end-to-end guidance from name approval to 12A &amp; 80G registrations at transparent costs.
                   </p>
                 </div>
 
@@ -1569,13 +1569,13 @@ export default function Section8CompanyPage() {
                   </div>
                 </div>
 
-                {/* Section 11: Why Choose IndiaFilings */}
+                {/* Section 11: Why Choose Merrafilings */}
                 <div className="border-t border-slate-100 pt-6">
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
-                    Why Choose IndiaFilings for Section 8 Company Registration?
+                    Why Choose Merrafilings for Section 8 Company Registration?
                   </h2>
                   <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
-                    IndiaFilings is India&apos;s largest cloud compliance platform, assisting thousands of non-profits, foundations, and social impact leaders nationwide:
+                    Merrafilings is India&apos;s modern cloud compliance platform, assisting thousands of non-profits, foundations, and social impact leaders nationwide:
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[13px] font-light text-slate-700">
                     <div className="flex items-center gap-2">
@@ -1689,7 +1689,7 @@ export default function Section8CompanyPage() {
         </div>
       </section>
 
-      {/* Frequently Asked Questions Section (Matching exact IndiaFilings 2-column reference design) */}
+      {/* Frequently Asked Questions Section (Matching exact Merrafilings 2-column reference design) */}
       <section className="py-14 sm:py-18 bg-white border-t border-[#E4E7EC]">
         <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           {/* Top Green Accent Dash */}
