@@ -243,15 +243,12 @@ function StartupGuideContent() {
 
   return (
     <>
-      {/* Intro with Centered Title matching Reference Image */}
-                <div>
-                  <h1 className="text-2xl sm:text-[26px] md:text-[28px] font-normal text-[#1F1646] text-center mb-6 leading-snug">
-                    Startup India Registration Online in India
-                  </h1>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
-                    India has built one of the world&apos;s most vibrant and rapidly expanding startup ecosystems, and the <strong className="font-medium text-slate-800">Startup India Registration</strong> scheme is at the very core of this entrepreneurial transformation. Backed directly by the Government of India, this flagship program provides early-stage companies and innovative ventures with formal DPIIT recognition, substantial tax exemptions, subsidised intellectual property protection, streamlined compliance self-certification, and direct access to state-backed capital funds.
-                  </p>
-                </div>
+      {/* Intro */}
+      <div>
+        <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+          India has built one of the world&apos;s most vibrant and rapidly expanding startup ecosystems, and the <strong className="font-medium text-slate-800">Startup India Registration</strong> scheme is at the very core of this entrepreneurial transformation. Backed directly by the Government of India, this flagship program provides early-stage companies and innovative ventures with formal DPIIT recognition, substantial tax exemptions, subsidised intellectual property protection, streamlined compliance self-certification, and direct access to state-backed capital funds.
+        </p>
+      </div>
 
                 {/* Section 1: What is a Startup? */}
                 <div className="border-t border-slate-100 pt-6">
