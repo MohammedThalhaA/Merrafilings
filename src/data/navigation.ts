@@ -37,7 +37,7 @@ export const NAV_CATEGORIES: NavCategory[] = [
           { title: "Partnership", href: "/partnership" },
           { title: "One Person Company", href: "/one-person-company" },
           { title: "Limited Liability Partnership", href: "/llp-registration" },
-          { title: "Private Limited Company", href: "#pvt-ltd" },
+          { title: "Private Limited Company", href: "/company-registration" },
         ],
         // Column 2 from Screenshot 1
         [
@@ -45,7 +45,7 @@ export const NAV_CATEGORIES: NavCategory[] = [
           { title: "Trust Registration", href: "/trust-registration" },
           { title: "Public Limited Company", href: "/public-limited-company" },
           { title: "Producer Company", href: "/producer-company-registration" },
-          { title: "Indian Subsidiary", href: "#subsidiary" },
+          { title: "Indian Subsidiary", href: "/indian-subsidiary" },
         ],
       ],
     },

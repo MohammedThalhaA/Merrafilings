@@ -8,13 +8,16 @@ export default function Footer() {
     {
       title: "Start a Business",
       links: [
-        { name: "Private Limited Company", href: "#pvt-ltd" },
+        { name: "Private Limited Company", href: "/company-registration" },
+        { name: "Indian Subsidiary", href: "/indian-subsidiary" },
         { name: "One Person Company (OPC)", href: "/one-person-company" },
         { name: "Limited Liability Partnership", href: "/llp-registration" },
         { name: "Section 8 Non-Profit", href: "/section-8-company-registration" },
+        { name: "Public Limited Company", href: "/public-limited-company" },
+        { name: "Producer Company", href: "/producer-company-registration" },
+        { name: "Trust Registration", href: "/trust-registration" },
         { name: "Partnership Firm", href: "/partnership" },
         { name: "Sole Proprietorship", href: "/proprietorship" },
-        { name: "USA LLC Incorporation", href: "#us-llc" },
       ],
     },
     {
