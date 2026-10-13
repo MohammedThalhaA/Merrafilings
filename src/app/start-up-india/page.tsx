@@ -241,361 +241,339 @@ const POPULAR_SEARCHES_TAGS = [
 ];
 
 export default function StartupIndiaPage() {
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [contactOpen, setContactOpen] = useState(false);
+
+  // Form states
   const [formName, setFormName] = useState("");
   const [formEmail, setFormEmail] = useState("");
   const [formPhone, setFormPhone] = useState("");
   const [formState, setFormState] = useState("");
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  const [expandedCard, setExpandedCard] = useState<number | null>(null);
-  const [openFaq, setOpenFaq] = useState<string | null>(null);
+  // FAQ state
+  const [openFaq, setOpenFaq] = useState<string | null>("startup-c1-0");
   const [showMoreFaqs, setShowMoreFaqs] = useState(false);
-  const [stateListOpen, setStateListOpen] = useState(false);
 
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [isContactOpen, setIsContactOpen] = useState(false);
+  // Read more states for pricing cards
+  const [expandedCard, setExpandedCard] = useState<number | null>(null);
 
-  const clientsScrollRef = useRef<HTMLDivElement>(null);
+  // State list collapse toggle
+  const [stateListOpen, setStateListOpen] = useState(true);
+
+  // Clients carousel scroll ref
+  const clientScrollRef = useRef<HTMLDivElement>(null);
 
   const scrollClients = (direction: "left" | "right") => {
-    if (clientsScrollRef.current) {
-      const scrollAmount = 300;
-      clientsScrollRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount,
-        behavior: "smooth",
-      });
+    if (clientScrollRef.current) {
+      const scrollAmount = direction === "left" ? -300 : 300;
+      clientScrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   };
 
-  const handleHeroSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setFormSubmitted(true);
+    if (formName && formEmail && formPhone && formState) {
+      setFormSubmitted(true);
+    }
   };
 
   return (
-    <div className="min-h-screen bg-white font-sans text-slate-800 antialiased selection:bg-[#6B4BFF]/20 selection:text-[#12023B]">
-      {/* Global Navigation Bar */}
+    <div className="min-h-screen bg-white text-zinc-900 font-sans antialiased selection:bg-[#155EEF] selection:text-white">
+      {/* Header Navigation */}
       <Navbar
-        onOpenSearch={() => setIsSearchOpen(true)}
-        onOpenContact={() => setIsContactOpen(true)}
+        onOpenSearch={() => setSearchOpen(true)}
+        onOpenContact={() => setContactOpen(true)}
       />
 
-      {/* Hero Section */}
-      <section
-        className="relative overflow-visible pt-6 sm:pt-8 md:pt-[30px] pb-6 sm:pb-8 md:pb-10"
-        aria-label="Startup India Registration"
-      >
-        {/* Curved Radial Mesh Backdrop */}
+      {/* Hero Section with Merrafilings Curved Radial Mesh Background */}
+      <section className="relative overflow-visible pt-6 sm:pt-8 md:pt-10 pb-16 bg-white">
+        {/* Curved gradient backdrop canvas with curved bottom edge */}
         <div
-          className="absolute inset-x-0 top-0 z-0 mx-auto w-full px-4 sm:px-0 rounded-b-[40px] sm:rounded-b-[52px] md:rounded-b-[64px]"
+          className="absolute inset-x-0 top-0 z-0 mx-auto w-full rounded-b-[40px] sm:rounded-b-[52px] md:rounded-b-[64px] overflow-hidden pointer-events-none"
           style={{
-            height: "calc(100% - 100px)",
-            minHeight: "560px",
+            height: "calc(100% - 90px)",
+            minHeight: "540px",
             background: `
-              radial-gradient(ellipse 140% 90% at 20% 100%, 
-                rgb(255, 209, 189) 0%,
-                rgba(255, 233, 225, 1) 25%,
-                rgba(240, 208, 195, 0.5) 45%,
-                rgba(238, 218, 209, 0.2) 65%,
+              radial-gradient(ellipse 65% 75% at 0% 75%, 
+                rgb(255, 215, 198) 0%,
+                rgba(255, 226, 213, 0.95) 25%,
+                rgba(255, 238, 230, 0.6) 50%,
+                rgba(255, 248, 244, 0.15) 75%,
                 transparent 85%
               ),
-              radial-gradient(ellipse 140% 90% at 80% 100%,
-                rgb(153, 228, 255) 0%,
-                rgb(153, 228, 255) 0%,
-                rgba(187, 222, 233, 0.5) 45%,
-                rgba(189, 229, 241, 0.2) 65%,
+              radial-gradient(ellipse 65% 75% at 100% 75%,
+                rgb(192, 226, 236) 0%,
+                rgba(202, 232, 240, 0.95) 25%,
+                rgba(220, 240, 247, 0.6) 50%,
+                rgba(238, 248, 252, 0.15) 75%,
                 transparent 85%
               ),
-              linear-gradient(to bottom,
-                #ffffff 0%,
-                #FAF8F8 35%,
-                #F5F2F2 55%,
-                #F0EEEE 70%,
-                rgba(235, 233, 233, 0.5) 85%,
-                rgba(230, 228, 228, 0.2) 100%
+              linear-gradient(180deg,
+                rgb(255, 255, 255) 0%,
+                rgb(250, 249, 248) 35%,
+                rgb(245, 243, 241) 70%,
+                rgb(239, 236, 232) 100%
               )
             `,
           }}
           aria-hidden="true"
         />
 
-        <div className="relative mx-auto px-4 sm:px-6 lg:px-8 max-w-[1280px]">
-          {/* Main Title & Subtitle */}
-          <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center text-center pt-2">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-normal leading-snug tracking-tight text-[#12023B]">
+        <div className="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Main Hero Title & Tagline */}
+          <div className="text-center max-w-3xl mx-auto mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-[34px] lg:text-[38px] font-light text-[#12023B] leading-snug">
               Get Your{" "}
-              <span className="bg-gradient-to-r from-[#5C3BFF] via-[#7052FF] to-[#FF4ED0] bg-clip-text text-transparent font-medium">
+              <span className="bg-gradient-to-r from-[#5C3BFF] via-[#7052FF] to-[#FF4ED0] bg-clip-text text-transparent font-light">
                 Startup India
               </span>{" "}
               Recognition Today
             </h1>
-            <p className="mt-3.5 sm:mt-4 max-w-2xl text-[13px] sm:text-[14px] md:text-[15px] leading-relaxed text-slate-600 font-light">
-              Start your journey towards 3-year income tax holidays, 80% patent rebates, angel tax relief, public procurement priority, and national DPIIT recognition for your innovative venture.
+            <p className="mt-3 text-[13px] sm:text-[14.5px] font-light text-slate-600 max-w-2xl mx-auto leading-relaxed">
+              Start your journey towards 3-year income tax holidays, 80% patent rebates, angel tax exemption, government tenders without prior turnover, and national DPIIT recognition for your venture.
             </p>
-
-            {/* Pill Banner: Starts from ₹4,899 */}
-            <div className="mt-5">
-              <a
-                href="#pricing"
-                className="inline-flex items-center gap-2 px-4 py-1.5 sm:px-5 sm:py-2 rounded-full border-2 border-blue-500 bg-white shadow-sm hover:shadow-md hover:border-blue-600 hover:bg-blue-50 transition-all text-xs sm:text-sm group"
-              >
-                <div className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
-                  <Rocket className="w-3 h-3 text-blue-600" />
-                </div>
-                <span className="text-slate-700">
-                  Get Your Startup India Registration — starts from{" "}
-                  <strong className="text-slate-900 font-semibold">₹4,899</strong>
-                </span>
-                <span className="text-blue-600 font-medium group-hover:underline inline-flex items-center gap-0.5">
-                  View Price <ChevronRight className="w-3 h-3" />
-                </span>
-              </a>
-            </div>
           </div>
 
-          {/* Floating Glassmorphic Lead Intake Card */}
-          <div className="relative z-10 mx-auto mt-8 sm:mt-10 max-w-5xl">
-            <div className="w-full rounded-2xl sm:rounded-3xl lg:rounded-[32px] border border-white/70 bg-white/90 shadow-xl sm:shadow-2xl shadow-slate-900/10 backdrop-blur p-5 sm:p-8 lg:p-10">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-                {/* Left Column: Value Prop & Bullet Points */}
-                <div className="space-y-4">
-                  <div>
-                    <h2 className="text-xl sm:text-2xl lg:text-3xl font-medium text-[#12023B] tracking-tight">
-                      Apply for Startup India Registration Now
-                    </h2>
-                    <p className="mt-2 text-xs sm:text-sm leading-relaxed text-slate-600 font-light">
-                      Turn your innovative idea into a government-recognized high-growth venture with complete DPIIT recognition, tax relief, and IP protection support.
-                    </p>
-                  </div>
-
-                  {/* 5 Purple Icon Bullets */}
-                  <ul className="space-y-3.5 pt-2">
-                    <li className="flex items-center gap-3 text-xs sm:text-[13.5px] text-slate-700">
-                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-white/40 to-white/20 border border-purple-200/40 shadow-sm flex items-center justify-center shrink-0">
-                        <Award className="w-4 h-4 text-[#6B4BFF]" />
-                      </div>
-                      <span>Official DPIIT Certificate of Recognition</span>
-                    </li>
-                    <li className="flex items-center gap-3 text-xs sm:text-[13.5px] text-slate-700">
-                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-white/40 to-white/20 border border-purple-200/40 shadow-sm flex items-center justify-center shrink-0">
-                        <BadgePercent className="w-4 h-4 text-[#6B4BFF]" />
-                      </div>
-                      <span>3-Year Income Tax Holiday Advisory (Section 80-IAC)</span>
-                    </li>
-                    <li className="flex items-center gap-3 text-xs sm:text-[13.5px] text-slate-700">
-                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-white/40 to-white/20 border border-purple-200/40 shadow-sm flex items-center justify-center shrink-0">
-                        <ShieldCheck className="w-4 h-4 text-[#6B4BFF]" />
-                      </div>
-                      <span>Angel Tax Exemption (Sec 56) &amp; SIDBI Fund of Funds</span>
-                    </li>
-                    <li className="flex items-center gap-3 text-xs sm:text-[13.5px] text-slate-700">
-                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-white/40 to-white/20 border border-purple-200/40 shadow-sm flex items-center justify-center shrink-0">
-                        <FileCheck className="w-4 h-4 text-[#6B4BFF]" />
-                      </div>
-                      <span>80% Rebate on Patent &amp; 50% on Trademark Filings</span>
-                    </li>
-                    <li className="flex items-center gap-3 text-xs sm:text-[13.5px] text-slate-700">
-                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-white/40 to-white/20 border border-purple-200/40 shadow-sm flex items-center justify-center shrink-0">
-                        <FileText className="w-4 h-4 text-[#6B4BFF]" />
-                      </div>
-                      <a
-                        href="#documents-required"
-                        className="font-medium bg-gradient-to-r from-[#5D54FF] via-[#A767EC] to-[#F968E7] bg-clip-text text-transparent underline underline-offset-2 hover:opacity-85 transition-opacity"
-                      >
-                        Required Documents Checklist
-                      </a>
-                    </li>
-                  </ul>
+          {/* Hero Content Glassmorphism Box */}
+          <div className="w-full max-w-[72rem] mx-auto rounded-2xl sm:rounded-3xl lg:rounded-[32px] border border-white/70 bg-white/90 shadow-xl sm:shadow-2xl shadow-slate-900/10 backdrop-blur p-6 sm:p-8 lg:p-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+              {/* Left Column: Key Features */}
+              <div className="space-y-6">
+                <div>
+                  <h2 className="text-xl sm:text-2xl md:text-3xl font-normal text-[#12023B] mb-2 sm:mb-3">
+                    Apply for Startup India Registration Now
+                  </h2>
+                  <p className="text-[13px] sm:text-[14px] font-light text-slate-600 leading-relaxed">
+                    Turn your innovative idea into a government-recognized high-growth venture with complete DPIIT recognition, tax relief, and IP protection support.
+                  </p>
                 </div>
 
-                {/* Right Column: Lead Intake Form */}
-                <div className="bg-[#FAF8F5]/60 rounded-2xl p-5 sm:p-7 border border-[#E4E7EC]/70">
-                  {formSubmitted ? (
-                    <div className="text-center py-8 space-y-4">
-                      <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
-                        <Check className="w-8 h-8" />
-                      </div>
-                      <h3 className="text-xl font-bold text-[#111827]">Application Received!</h3>
-                      <p className="text-[14px] text-[#475467]">
-                        Thank you, <strong className="text-[#111827]">{formName}</strong>. Our startup advisory team will call you at <strong className="text-[#111827]">{formPhone}</strong> within 15 minutes to review your eligibility and pitch deck.
-                      </p>
-                      <button
-                        onClick={() => setFormSubmitted(false)}
-                        className="px-5 py-2 text-[13px] font-medium text-[#155EEF] hover:underline"
+                {/* 5 Bullet Features */}
+                <ul className="space-y-3 pt-2">
+                  <li className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-white/80 border border-purple-200/50 shadow-xs flex items-center justify-center shrink-0">
+                      <Award className="w-4 h-4 text-[#6B4BFF]" />
+                    </div>
+                    <span className="text-[13.5px] font-light text-slate-700">Official DPIIT Certificate of Recognition</span>
+                  </li>
+
+                  <li className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-white/80 border border-purple-200/50 shadow-xs flex items-center justify-center shrink-0">
+                      <BadgePercent className="w-4 h-4 text-[#6B4BFF]" />
+                    </div>
+                    <span className="text-[13.5px] font-light text-slate-700">3-Year Income Tax Holiday Advisory (Section 80-IAC)</span>
+                  </li>
+
+                  <li className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-white/80 border border-purple-200/50 shadow-xs flex items-center justify-center shrink-0">
+                      <ShieldCheck className="w-4 h-4 text-[#6B4BFF]" />
+                    </div>
+                    <span className="text-[13.5px] font-light text-slate-700">Angel Tax Exemption (Sec 56) &amp; SIDBI Fund of Funds</span>
+                  </li>
+
+                  <li className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-white/80 border border-purple-200/50 shadow-xs flex items-center justify-center shrink-0">
+                      <FileCheck className="w-4 h-4 text-[#6B4BFF]" />
+                    </div>
+                    <span className="text-[13.5px] font-light text-slate-700">80% Rebate on Patent &amp; 50% on Trademark Filings</span>
+                  </li>
+
+                  <li className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-white/80 border border-purple-200/50 shadow-xs flex items-center justify-center shrink-0">
+                      <FileText className="w-4 h-4 text-[#6B4BFF]" />
+                    </div>
+                    <a
+                      href="#documents-required"
+                      className="text-[13.5px] font-semibold bg-gradient-to-r from-[#5D54FF] via-[#A767EC] to-[#F968E7] bg-clip-text text-transparent underline underline-offset-2 decoration-[#A767EC] hover:opacity-85 transition-opacity cursor-pointer"
+                    >
+                      Required Documents
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Right Column: Lead Form */}
+              <div className="bg-[#FAF8F5]/60 rounded-2xl p-5 sm:p-7 border border-[#E4E7EC]/70">
+                {formSubmitted ? (
+                  <div className="text-center py-8 space-y-4">
+                    <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+                      <Check className="w-8 h-8" />
+                    </div>
+                    <h3 className="text-xl font-bold text-[#111827]">Application Received!</h3>
+                    <p className="text-[14px] text-[#475467]">
+                      Thank you, <strong className="text-[#111827]">{formName}</strong>. Our startup advisory team will call you at <strong className="text-[#111827]">{formPhone}</strong> within 15 minutes.
+                    </p>
+                    <button
+                      onClick={() => setFormSubmitted(false)}
+                      className="px-5 py-2 text-[13px] font-medium text-[#155EEF] hover:underline"
+                    >
+                      Submit another query
+                    </button>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    {/* Continue with Google */}
+                    <button
+                      type="button"
+                      onClick={() => alert("Google Single Sign-On simulation. Please fill in the details below.")}
+                      className="w-full flex items-center justify-center gap-3 py-2.5 px-4 bg-white hover:bg-[#F8FAFC] border border-[#D0D5DD] rounded-xl text-[14px] font-medium text-[#344054] shadow-xs transition-colors cursor-pointer"
+                    >
+                      <svg className="w-5 h-5" viewBox="0 0 24 24">
+                        <path
+                          fill="#4285F4"
+                          d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                        />
+                        <path
+                          fill="#34A853"
+                          d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                        />
+                        <path
+                          fill="#FBBC05"
+                          d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"
+                        />
+                        <path
+                          fill="#EA4335"
+                          d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"
+                        />
+                      </svg>
+                      <span>Continue with Google</span>
+                    </button>
+
+                    {/* OR divider */}
+                    <div className="relative flex items-center justify-center my-3">
+                      <div className="border-t border-[#D0D5DD] w-full" />
+                      <span className="bg-[#FAF8F5] px-3 text-[12px] font-semibold text-[#98A2B3] uppercase tracking-wider absolute">
+                        OR
+                      </span>
+                    </div>
+
+                    {/* Name */}
+                    <div>
+                      <input
+                        type="text"
+                        required
+                        placeholder="Name *"
+                        value={formName}
+                        onChange={(e) => setFormName(e.target.value)}
+                        className="w-full px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-md text-[13.5px] font-normal text-slate-800 placeholder-slate-400 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all"
+                      />
+                    </div>
+
+                    {/* Email */}
+                    <div>
+                      <input
+                        type="email"
+                        required
+                        placeholder="Email *"
+                        value={formEmail}
+                        onChange={(e) => setFormEmail(e.target.value)}
+                        className="w-full px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-md text-[13.5px] font-normal text-slate-800 placeholder-slate-400 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all"
+                      />
+                    </div>
+
+                    {/* Phone Number with India Flag */}
+                    <div className="flex">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-2.5 bg-[#F8FAFC] border border-r-0 border-[#D0D5DD] rounded-l-md text-[13px] text-slate-600 font-normal select-none">
+                        <span>🇮🇳</span>
+                        <span>+91</span>
+                      </span>
+                      <input
+                        type="tel"
+                        required
+                        placeholder="Phone Number *"
+                        pattern="[0-9]{10}"
+                        value={formPhone}
+                        onChange={(e) => setFormPhone(e.target.value)}
+                        className="flex-1 min-w-0 px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-r-md text-[13.5px] font-normal text-slate-800 placeholder-slate-400 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all"
+                      />
+                    </div>
+
+                    {/* Select State */}
+                    <div>
+                      <select
+                        required
+                        value={formState}
+                        onChange={(e) => setFormState(e.target.value)}
+                        className="w-full px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-md text-[13.5px] font-normal text-slate-700 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all cursor-pointer"
                       >
-                        Submit another query
+                        <option value="">Select State *</option>
+                        {INDIAN_STATES.map((s) => (
+                          <option key={s} value={s}>
+                            {s}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+
+                    {/* Continue Button */}
+                    <div className="pt-2 flex justify-end">
+                      <button
+                        type="submit"
+                        className="px-8 py-2.5 rounded-lg font-medium text-sm text-white bg-gradient-to-r from-[#594CF5] to-[#D946EF] hover:opacity-95 shadow-sm transition-all cursor-pointer"
+                      >
+                        Continue
                       </button>
                     </div>
-                  ) : (
-                    <form onSubmit={handleHeroSubmit} className="space-y-4">
-                      {/* Continue with Google */}
-                      <button
-                        type="button"
-                        onClick={() => alert("Google Single Sign-On simulation. Please fill in the details below.")}
-                        className="w-full flex items-center justify-center gap-3 py-2.5 px-4 bg-white hover:bg-[#F8FAFC] border border-[#D0D5DD] rounded-xl text-[14px] font-medium text-[#344054] shadow-xs transition-colors cursor-pointer"
-                      >
-                        <svg className="w-5 h-5" viewBox="0 0 24 24">
-                          <path
-                            fill="#4285F4"
-                            d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
-                          />
-                          <path
-                            fill="#34A853"
-                            d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
-                          />
-                          <path
-                            fill="#FBBC05"
-                            d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"
-                          />
-                          <path
-                            fill="#EA4335"
-                            d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"
-                          />
-                        </svg>
-                        <span>Continue with Google</span>
-                      </button>
+                  </form>
+                )}
+              </div>
+            </div>
 
-                      {/* OR divider */}
-                      <div className="relative flex items-center justify-center my-3">
-                        <div className="border-t border-[#D0D5DD] w-full" />
-                        <span className="bg-[#FAF8F5] px-3 text-[12px] font-semibold text-[#98A2B3] uppercase tracking-wider absolute">
-                          OR
-                        </span>
-                      </div>
-
-                      {/* Name */}
-                      <div>
-                        <input
-                          type="text"
-                          required
-                          placeholder="Name *"
-                          value={formName}
-                          onChange={(e) => setFormName(e.target.value)}
-                          className="w-full px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-md text-[13.5px] font-normal text-slate-800 placeholder-slate-400 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all"
-                        />
-                      </div>
-
-                      {/* Email */}
-                      <div>
-                        <input
-                          type="email"
-                          required
-                          placeholder="Email *"
-                          value={formEmail}
-                          onChange={(e) => setFormEmail(e.target.value)}
-                          className="w-full px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-md text-[13.5px] font-normal text-slate-800 placeholder-slate-400 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all"
-                        />
-                      </div>
-
-                      {/* Phone Number with India Flag */}
-                      <div className="flex">
-                        <span className="inline-flex items-center gap-1.5 px-3 py-2.5 bg-[#F8FAFC] border border-r-0 border-[#D0D5DD] rounded-l-md text-[13px] text-slate-600 font-normal select-none">
-                          <span>🇮🇳</span>
-                          <span>+91</span>
-                        </span>
-                        <input
-                          type="tel"
-                          required
-                          placeholder="Phone Number *"
-                          pattern="[0-9]{10}"
-                          value={formPhone}
-                          onChange={(e) => setFormPhone(e.target.value)}
-                          className="flex-1 min-w-0 px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-r-md text-[13.5px] font-normal text-slate-800 placeholder-slate-400 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all"
-                        />
-                      </div>
-
-                      {/* Select State */}
-                      <div>
-                        <select
-                          required
-                          value={formState}
-                          onChange={(e) => setFormState(e.target.value)}
-                          className="w-full px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-md text-[13.5px] font-normal text-slate-700 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all cursor-pointer"
-                        >
-                          <option value="">Select State *</option>
-                          {INDIAN_STATES.map((s) => (
-                            <option key={s} value={s}>
-                              {s}
-                            </option>
-                          ))}
-                        </select>
-                      </div>
-
-                      {/* Continue Button */}
-                      <div className="pt-2 flex justify-end">
-                        <button
-                          type="submit"
-                          className="px-8 py-2.5 rounded-lg font-medium text-sm text-white bg-gradient-to-r from-[#594CF5] to-[#D946EF] hover:opacity-95 shadow-sm transition-all cursor-pointer"
-                        >
-                          Continue
-                        </button>
-                      </div>
-                    </form>
-                  )}
+            {/* Trust Stats Cards with Hover Effects */}
+            <div className="mt-8 pt-6 border-t border-slate-100/80 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4">
+              {/* Card 1: 4.4 Verified Reviews */}
+              <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-amber-200 hover:shadow-[0_8px_25px_rgba(245,158,11,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
+                <div className="w-11 h-11 rounded-2xl bg-[#FFF6E9] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-2 shadow-2xs">
+                  <svg className="w-5 h-5 text-[#F04438] transition-colors" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="flex items-center gap-1.5 font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">
+                    <span>4.4</span>
+                    <div className="flex items-center text-amber-400 text-[11px] gap-0.5">
+                      <span>★</span><span>★</span><span>★</span><span>★</span>
+                      <span className="relative inline-block text-slate-300">
+                        ★
+                        <span className="absolute inset-0 overflow-hidden w-[40%] text-amber-400">★</span>
+                      </span>
+                    </div>
+                  </div>
+                  <p className="text-[11.5px] font-light text-slate-500">Verified Reviews</p>
                 </div>
               </div>
 
-              {/* 4 Bottom Trust Stat Cards */}
-              <div className="mt-8 pt-6 border-t border-slate-100/80 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4">
-                {/* Stat 1: 4.4 Verified Reviews */}
-                <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-amber-200 hover:shadow-[0_8px_25px_rgba(245,158,11,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
-                  <div className="w-11 h-11 rounded-2xl bg-[#FFF6E9] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-2 shadow-2xs">
-                    <svg className="w-5 h-5 text-[#F04438]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-1.5 font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">
-                      <span>4.4</span>
-                      <div className="flex items-center text-amber-400 text-[11px] gap-0.5">
-                        <span>★</span><span>★</span><span>★</span><span>★</span>
-                        <span className="relative inline-block text-slate-300">
-                          ★
-                          <span className="absolute inset-0 overflow-hidden w-[40%] text-amber-400">★</span>
-                        </span>
-                      </div>
-                    </div>
-                    <p className="text-[11.5px] font-light text-slate-500 mt-0.5">Verified Reviews</p>
-                  </div>
+              {/* Card 2: 15+ Years of Experience */}
+              <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-amber-200 hover:shadow-[0_8px_25px_rgba(217,119,6,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
+                <div className="w-11 h-11 rounded-2xl bg-[#FFF8E7] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-2 shadow-2xs">
+                  <Award className="w-5 h-5 text-[#D97706] transition-colors" />
                 </div>
-
-                {/* Stat 2: 15+ Years Experience */}
-                <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-blue-200 hover:shadow-[0_8px_25px_rgba(37,99,235,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
-                  <div className="w-11 h-11 rounded-2xl bg-[#EFF8FF] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-2 shadow-2xs">
-                    <Award className="w-5 h-5 text-[#2E90FA]" />
-                  </div>
-                  <div>
-                    <div className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">
-                      15+ Years
-                    </div>
-                    <p className="text-[11.5px] font-light text-slate-500 mt-0.5">Startup Advisory</p>
-                  </div>
+                <div>
+                  <p className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">15+ Years</p>
+                  <p className="text-[11.5px] font-light text-slate-500">of Experience</p>
                 </div>
+              </div>
 
-                {/* Stat 3: 2 Lakh+ Clients */}
-                <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-purple-200 hover:shadow-[0_8px_25px_rgba(147,51,234,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
-                  <div className="w-11 h-11 rounded-2xl bg-[#F9F5FF] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-2 shadow-2xs">
-                    <Users className="w-5 h-5 text-[#7F56D9]" />
-                  </div>
-                  <div>
-                    <div className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">
-                      2 Lakh+
-                    </div>
-                    <p className="text-[11.5px] font-light text-slate-500 mt-0.5">Venture Clients</p>
-                  </div>
+              {/* Card 3: 2 Lakh+ Customers */}
+              <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-purple-200 hover:shadow-[0_8px_25px_rgba(107,75,255,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
+                <div className="w-11 h-11 rounded-2xl bg-[#F5F3FF] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-2 shadow-2xs">
+                  <Users className="w-5 h-5 text-[#6B4BFF] transition-colors" />
                 </div>
+                <div>
+                  <p className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">2 Lakh+ Customers</p>
+                  <p className="text-[11.5px] font-light text-slate-500">Served Across India</p>
+                </div>
+              </div>
 
-                {/* Stat 4: App Tracking */}
-                <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-emerald-200 hover:shadow-[0_8px_25px_rgba(16,185,129,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
-                  <div className="w-11 h-11 rounded-2xl bg-[#ECFDF3] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-2 shadow-2xs">
-                    <Smartphone className="w-5 h-5 text-[#12B76A]" />
-                  </div>
-                  <div>
-                    <div className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">
-                      LEDGERS
-                    </div>
-                    <p className="text-[11.5px] font-light text-slate-500 mt-0.5">App Tracking &amp; Compliance</p>
-                  </div>
+              {/* Card 4: App Tracking */}
+              <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-emerald-200 hover:shadow-[0_8px_25px_rgba(0,176,116,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
+                <div className="w-11 h-11 rounded-2xl bg-[#ECFDF5] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-2 shadow-2xs">
+                  <Smartphone className="w-5 h-5 text-[#00B074] transition-colors" />
+                </div>
+                <div>
+                  <p className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">App Tracking</p>
+                  <p className="text-[11.5px] font-light text-slate-500">Live Status &amp; Alerts</p>
                 </div>
               </div>
             </div>
@@ -603,10 +581,11 @@ export default function StartupIndiaPage() {
         </div>
       </section>
 
-      {/* Clients Carousel */}
-      <section className="py-6 border-y border-slate-100 bg-[#FAF9F7]/50 overflow-hidden">
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Our Clients Section (Single-row Mini Cards Carousel) */}
+      <section className="py-7 border-y border-slate-100 bg-white overflow-hidden">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4">
+            {/* Scroll Left Button */}
             <button
               type="button"
               onClick={() => scrollClients("left")}
@@ -616,20 +595,23 @@ export default function StartupIndiaPage() {
               <ChevronLeft className="w-4 h-4" />
             </button>
 
+            {/* Horizontal Mini Cards Container */}
             <div
-              ref={clientsScrollRef}
-              className="flex items-center gap-6 sm:gap-10 overflow-x-auto no-scrollbar scroll-smooth py-1"
+              ref={clientScrollRef}
+              className="flex items-center gap-3 sm:gap-3.5 overflow-x-auto scrollbar-none scroll-smooth py-1 px-1 flex-1 min-w-0"
+              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             >
               {CLIENT_MINI_CARDS.map((client, idx) => (
                 <div
                   key={idx}
-                  className="px-6 py-2 rounded-xl bg-white border border-slate-200/80 shadow-3xs hover:shadow-xs hover:border-slate-300 transition-all shrink-0 flex items-center justify-center min-w-[130px]"
+                  className="h-[52px] sm:h-[54px] w-[130px] sm:w-[145px] px-3.5 rounded-xl border border-slate-200/85 bg-white flex items-center justify-center shadow-3xs hover:shadow-xs hover:border-slate-300 transition-all shrink-0 cursor-pointer select-none"
                 >
                   {client.logo}
                 </div>
               ))}
             </div>
 
+            {/* Scroll Right Button */}
             <button
               type="button"
               onClick={() => scrollClients("right")}
@@ -642,9 +624,9 @@ export default function StartupIndiaPage() {
         </div>
       </section>
 
-      {/* Pricing Packages Section */}
+      {/* Pricing Section (Matching exact Merrafilings design with Green Hover Border & Dynamic Button) */}
       <section id="pricing" className="py-14 sm:py-16 bg-white">
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-10">
             <h2 className="text-2xl sm:text-[28px] md:text-[32px] font-normal text-[#111827] leading-snug">
               Simple packages. Transparent{" "}
@@ -654,7 +636,7 @@ export default function StartupIndiaPage() {
             </h2>
             <div className="w-12 h-[2px] bg-gradient-to-r from-[#7052FF] to-[#E966DF] rounded-full mx-auto mt-2 mb-3" />
             <p className="text-[13px] sm:text-[13.5px] font-light text-slate-500">
-              Zero government fees on Startup India portal. Transparent professional pricing for full application drafting &amp; advisory.
+              Zero government fee on the Startup India portal. Transparent professional pricing for full application drafting &amp; advisory.
             </p>
           </div>
 
@@ -695,35 +677,35 @@ export default function StartupIndiaPage() {
                   <p className="text-[12.5px] font-light text-slate-500 mb-3">What&apos;s included:</p>
                   <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
                     <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0" viewBox="0 0 16 16" fill="none">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
                         <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>DPIIT Eligibility &amp; Sector Verification</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0" viewBox="0 0 16 16" fill="none">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
                         <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Startup India Portal Account Creation</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0" viewBox="0 0 16 16" fill="none">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
                         <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Proof of Concept &amp; Pitch Deck Audit</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0" viewBox="0 0 16 16" fill="none">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
                         <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Formal Letter of Authorization Drafting</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0" viewBox="0 0 16 16" fill="none">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
                         <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
@@ -738,7 +720,7 @@ export default function StartupIndiaPage() {
                     }}
                     className="text-[12px] font-normal text-[#00B074] hover:underline cursor-pointer mt-2 block"
                   >
-                    +2 more features
+                    +2 more
                   </button>
                 </div>
               </div>
@@ -746,7 +728,7 @@ export default function StartupIndiaPage() {
               <div className="mt-8 pt-2">
                 <button
                   type="button"
-                  onClick={() => setIsContactOpen(true)}
+                  onClick={() => setContactOpen(true)}
                   className="w-full py-2.5 px-4 rounded-xl font-medium text-[14.5px] text-[#00B074] bg-[#E8FAF2] group-hover:bg-[#00B074] group-hover:text-white hover:!bg-[#009B66] border border-[#00B074]/35 group-hover:border-[#00B074] transition-all duration-200 cursor-pointer shadow-xs group-hover:shadow-sm"
                 >
                   Register Now
@@ -757,7 +739,7 @@ export default function StartupIndiaPage() {
             {/* Package 2: Standard DPIIT Recognition (Most Popular) */}
             <div className="group bg-white rounded-[22px] border-[1.5px] border-[#00B074] p-6 sm:p-7 flex flex-col justify-between shadow-[0_16px_36px_rgba(0,176,116,0.12)] hover:shadow-[0_20px_42px_rgba(0,176,116,0.2)] hover:-translate-y-1.5 transition-all duration-300 ease-out cursor-pointer relative">
               <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#00B074] to-[#059669] text-white text-[11px] font-semibold tracking-wider uppercase py-1 px-4 rounded-full shadow-xs">
-                Most Popular • Recommended
+                Most Popular
               </div>
 
               <div>
@@ -794,35 +776,35 @@ export default function StartupIndiaPage() {
                   <p className="text-[12.5px] font-light text-slate-500 mb-3">What&apos;s included:</p>
                   <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
                     <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0" viewBox="0 0 16 16" fill="none">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
                         <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Complete DPIIT Recognition Filing</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0" viewBox="0 0 16 16" fill="none">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
                         <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Professional Innovation Narrative Writing</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0" viewBox="0 0 16 16" fill="none">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
                         <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Official DPIIT Certificate Issuance</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0" viewBox="0 0 16 16" fill="none">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
                         <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Self-Certification under Labor Laws Guide</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0" viewBox="0 0 16 16" fill="none">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
                         <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
@@ -837,7 +819,7 @@ export default function StartupIndiaPage() {
                     }}
                     className="text-[12px] font-normal text-[#00B074] hover:underline cursor-pointer mt-2 block"
                   >
-                    +3 more features
+                    +3 more
                   </button>
                 </div>
               </div>
@@ -845,7 +827,7 @@ export default function StartupIndiaPage() {
               <div className="mt-8 pt-2">
                 <button
                   type="button"
-                  onClick={() => setIsContactOpen(true)}
+                  onClick={() => setContactOpen(true)}
                   className="w-full py-2.5 px-4 rounded-xl font-medium text-[14.5px] text-white bg-[#00B074] hover:bg-[#009B66] border border-[#00B074] transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md"
                 >
                   Register Now
@@ -889,35 +871,35 @@ export default function StartupIndiaPage() {
                   <p className="text-[12.5px] font-light text-slate-500 mb-3">What&apos;s included:</p>
                   <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
                     <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0" viewBox="0 0 16 16" fill="none">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
                         <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>DPIIT Recognition Certificate</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0" viewBox="0 0 16 16" fill="none">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
                         <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Section 80-IAC 3-Year Tax Exemption Dossier</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0" viewBox="0 0 16 16" fill="none">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
                         <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Angel Tax Exemption Form 2 Declaration</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0" viewBox="0 0 16 16" fill="none">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
                         <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>GeM Portal Government Tender Registration</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0" viewBox="0 0 16 16" fill="none">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
                         <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
@@ -932,7 +914,7 @@ export default function StartupIndiaPage() {
                     }}
                     className="text-[12px] font-normal text-[#00B074] hover:underline cursor-pointer mt-2 block"
                   >
-                    +4 more features
+                    +3 more
                   </button>
                 </div>
               </div>
@@ -940,7 +922,7 @@ export default function StartupIndiaPage() {
               <div className="mt-8 pt-2">
                 <button
                   type="button"
-                  onClick={() => setIsContactOpen(true)}
+                  onClick={() => setContactOpen(true)}
                   className="w-full py-2.5 px-4 rounded-xl font-medium text-[14.5px] text-[#00B074] bg-[#E8FAF2] group-hover:bg-[#00B074] group-hover:text-white hover:!bg-[#009B66] border border-[#00B074]/35 group-hover:border-[#00B074] transition-all duration-200 cursor-pointer shadow-xs group-hover:shadow-sm"
                 >
                   Register Now
@@ -951,260 +933,229 @@ export default function StartupIndiaPage() {
         </div>
       </section>
 
-      {/* Detailed Guide Section with 2 Columns (8 Cols Article + 4 Cols Sticky Sidebar) */}
-      <section id="overview-section" className="py-12 sm:py-16 bg-[#FAFAF9]/60 border-t border-slate-200/70">
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            {/* Left 8 Columns: Authoritative Guide */}
-            <div className="lg:col-span-8">
-              <article className="bg-white rounded-2xl border border-slate-200/80 shadow-xs p-6 sm:p-8 md:p-10 space-y-8">
-                {/* Section 1: Introduction */}
+      {/* Comprehensive Guide Section (Matching exact Merrafilings reference design) */}
+      <section id="overview-section" className="py-10 sm:py-12 bg-white">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Breadcrumb Navigation */}
+          <nav className="flex items-center gap-2 text-[13px] font-light text-slate-500 mb-5 flex-wrap">
+            <a href="/" className="hover:text-[#155EEF] transition-colors">
+              Merrafilings
+            </a>
+            <span className="text-slate-300">/</span>
+            <a href="/registrations" className="hover:text-[#155EEF] transition-colors">
+              Registrations
+            </a>
+            <span className="text-slate-300">/</span>
+            <span className="text-[#00B074] font-normal">Startup India</span>
+          </nav>
+
+          {/* Grid Layout: Main Article on Left, Sidebar on Right (Full width, not squeezed in center) */}
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_330px] xl:grid-cols-[1fr_350px] gap-6 lg:gap-8 items-start">
+            {/* Left Content Card */}
+            <div className="bg-white rounded-2xl border border-slate-200/80 shadow-xs relative overflow-hidden p-6 sm:p-10 border-t-2 border-t-emerald-400">
+              <article className="max-w-none space-y-7">
+                {/* Section 1: Intro with Centered Title matching Reference Image */}
                 <div>
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-purple-50 text-purple-700 text-xs font-medium mb-3">
-                    <Rocket className="w-3.5 h-3.5" />
-                    <span>Government Flagship Initiative</span>
-                  </div>
-                  <h2 className="text-xl sm:text-2xl font-normal text-[#12023B] tracking-tight leading-snug">
-                    What is the Startup India Scheme?
+                  <h1 className="text-2xl sm:text-[26px] md:text-[28px] font-normal text-[#1F1646] text-center mb-6 leading-snug">
+                    Startup India Registration Online in India
+                  </h1>
+                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+                    India has built one of the world&apos;s most dynamic startup ecosystems, and the <strong className="font-medium text-slate-800">Startup India Registration</strong> scheme is at the heart of this transformation. Backed by the Government of India, this initiative empowers entrepreneurs with DPIIT recognition, tax relief, funding access, and regulatory support to build scalable, innovation-driven businesses across the country.
+                  </p>
+                </div>
+
+                {/* Section 2: What is a Startup */}
+                <div className="border-t border-slate-100 pt-6">
+                  <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
+                    What is a Startup as per Government Guidelines?
                   </h2>
-                  <p className="mt-3 text-[13.5px] font-light leading-relaxed text-slate-600">
-                    The <strong className="font-medium text-slate-800">Startup India Scheme</strong> is a landmark government initiative launched by the Government of India under Prime Minister Narendra Modi and managed by the <strong>Department for Promotion of Industry and Internal Trade (DPIIT)</strong>. The program is built to foster innovation, create scalable entrepreneurial ventures, provide tax exemptions, and nurture an ecosystem of job creators across India.
+                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                    As per the Government of India, a startup is an entity incorporated or registered in India that is less than 10 years old, has an annual turnover not exceeding ₹100 crore in any financial year, and is engaged in innovation, development, or improvement of products, processes, or services with a scalable business model.
                   </p>
-                  <p className="mt-2.5 text-[13.5px] font-light leading-relaxed text-slate-600">
-                    Through official <strong>DPIIT Recognition</strong>, qualifying startups gain access to three consecutive years of 100% income tax holidays (Section 80-IAC), angel tax relief (Section 56), 80% statutory rebates on patent filing, and priority entry into public procurement and government contracts.
+                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+                    The business must not be formed by splitting up or reconstructing a business already in existence.
                   </p>
                 </div>
 
-                {/* Section 2: Definition of Startup */}
+                {/* Section 3: Eligible Entities Table */}
                 <div className="border-t border-slate-100 pt-6">
-                  <h3 className="text-[17px] font-normal text-[#12023B] mb-3">
-                    Statutory Definition &amp; Eligibility Criteria for Startups in India
-                  </h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 my-4">
-                    <div className="p-4 rounded-xl border border-purple-100 bg-purple-50/50">
-                      <div className="text-lg font-bold text-[#6B4BFF]">Under 10 Years</div>
-                      <div className="text-xs font-medium text-slate-800 mt-1">Age of the Entity</div>
-                      <div className="text-[11.5px] text-slate-500 font-light mt-0.5">The business must be incorporated or registered for less than 10 years</div>
-                    </div>
-                    <div className="p-4 rounded-xl border border-blue-100 bg-blue-50/50">
-                      <div className="text-lg font-bold text-blue-600">Under ₹100 Crore</div>
-                      <div className="text-xs font-medium text-slate-800 mt-1">Turnover Threshold</div>
-                      <div className="text-[11.5px] text-slate-500 font-light mt-0.5">Annual turnover must not have exceeded ₹100 Cr in any financial year</div>
-                    </div>
-                    <div className="p-4 rounded-xl border border-emerald-100 bg-emerald-50/50">
-                      <div className="text-lg font-bold text-emerald-600">Innovation &amp; Scale</div>
-                      <div className="text-xs font-medium text-slate-800 mt-1">Core Business Model</div>
-                      <div className="text-[11.5px] text-slate-500 font-light mt-0.5">Must create or significantly improve products, processes, or scalable tech</div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Section 3: Eligible Entities Matrix Table */}
-                <div className="border-t border-slate-100 pt-6">
-                  <h3 className="text-[17px] font-normal text-[#12023B] mb-3">
-                    Entity Types Eligible for Startup India Recognition
-                  </h3>
-                  <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs">
+                  <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
+                    Which Business Entities Can Apply for Startup India in India?
+                  </h2>
+                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                    The Government of India recognises only specific legal entity types under the Startup India program:
+                  </p>
+                  <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-5">
                     <table className="w-full text-left text-[12.5px] font-light text-slate-700">
                       <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                         <tr>
-                          <th className="py-3 px-4 font-normal">Business Structure</th>
+                          <th className="py-3 px-4 font-normal">Entity Type</th>
                           <th className="py-3 px-4 font-normal">Governing Law</th>
                           <th className="py-3 px-4 font-normal">DPIIT Eligible</th>
-                          <th className="py-3 px-4 font-normal">80-IAC Tax Exemption Eligible</th>
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-slate-100">
-                        <tr className="hover:bg-emerald-50/40 transition-colors">
-                          <td className="py-3 px-4 font-medium text-slate-900">Private Limited Company</td>
+                        <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
+                          <td className="relative py-3 px-4 font-normal text-slate-800">
+                            <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                            Private Limited Company
+                          </td>
                           <td className="py-3 px-4 text-slate-600">Companies Act, 2013</td>
-                          <td className="py-3 px-4 text-emerald-600 font-medium">✅ Yes</td>
-                          <td className="py-3 px-4 text-emerald-600 font-medium">✅ Yes (Subject to IMB approval)</td>
+                          <td className="py-3 px-4 text-[#00A86B] font-medium">✅ Yes</td>
                         </tr>
-                        <tr className="hover:bg-emerald-50/40 transition-colors">
-                          <td className="py-3 px-4 font-medium text-slate-900">Limited Liability Partnership (LLP)</td>
+                        <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
+                          <td className="relative py-3 px-4 font-normal text-slate-800">
+                            <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                            Limited Liability Partnership (LLP)
+                          </td>
                           <td className="py-3 px-4 text-slate-600">LLP Act, 2008</td>
-                          <td className="py-3 px-4 text-emerald-600 font-medium">✅ Yes</td>
-                          <td className="py-3 px-4 text-emerald-600 font-medium">✅ Yes (Subject to IMB approval)</td>
+                          <td className="py-3 px-4 text-[#00A86B] font-medium">✅ Yes</td>
                         </tr>
-                        <tr className="hover:bg-emerald-50/40 transition-colors">
-                          <td className="py-3 px-4 font-medium text-slate-900">Registered Partnership Firm</td>
+                        <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
+                          <td className="relative py-3 px-4 font-normal text-slate-800">
+                            <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                            Registered Partnership Firm
+                          </td>
                           <td className="py-3 px-4 text-slate-600">Indian Partnership Act, 1932</td>
-                          <td className="py-3 px-4 text-emerald-600 font-medium">✅ Yes</td>
-                          <td className="py-3 px-4 text-red-600 font-light">❌ No (Only Pvt Ltd &amp; LLP)</td>
+                          <td className="py-3 px-4 text-[#00A86B] font-medium">✅ Yes</td>
                         </tr>
-                        <tr className="hover:bg-slate-50 transition-colors">
-                          <td className="py-3 px-4 font-normal text-slate-700">Sole Proprietorship</td>
-                          <td className="py-3 px-4 text-slate-500">Not Applicable</td>
-                          <td className="py-3 px-4 text-red-600 font-light">❌ Not Eligible</td>
-                          <td className="py-3 px-4 text-red-600 font-light">❌ Not Eligible</td>
+                        <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
+                          <td className="relative py-3 px-4 font-normal text-slate-800">
+                            <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                            Sole Proprietorship
+                          </td>
+                          <td className="py-3 px-4 text-slate-600">Not Applicable</td>
+                          <td className="py-3 px-4 text-red-500 font-light">❌ No</td>
                         </tr>
-                        <tr className="hover:bg-slate-50 transition-colors">
-                          <td className="py-3 px-4 font-normal text-slate-700">Public Limited Company</td>
-                          <td className="py-3 px-4 text-slate-500">Companies Act, 2013</td>
-                          <td className="py-3 px-4 text-red-600 font-light">❌ Not Eligible</td>
-                          <td className="py-3 px-4 text-red-600 font-light">❌ Not Eligible</td>
+                        <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
+                          <td className="relative py-3 px-4 font-normal text-slate-800">
+                            <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                            Public Limited Company
+                          </td>
+                          <td className="py-3 px-4 text-slate-600">Companies Act, 2013</td>
+                          <td className="py-3 px-4 text-red-500 font-light">❌ No</td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
                 </div>
 
-                {/* Section 4: Key Benefits Grid */}
+                {/* Section 4: Benefits of DPIIT Recognition */}
                 <div className="border-t border-slate-100 pt-6">
-                  <h3 className="text-[17px] font-normal text-[#12023B] mb-3">
-                    Major Benefits of Startup India DPIIT Recognition
-                  </h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
-                    <div className="p-4 rounded-xl border border-slate-200/90 bg-[#FAF9F7]/60">
-                      <span className="font-medium text-slate-800 block mb-1 flex items-center gap-2">
-                        <BadgePercent className="w-4 h-4 text-[#00B074]" />
-                        Section 80-IAC 3-Year Tax Holiday
-                      </span>
-                      <span className="text-xs text-slate-500 leading-relaxed block">
-                        Eligible startups enjoy 100% tax exemption on corporate profits for any 3 consecutive assessment years out of their first 10 years of business.
-                      </span>
-                    </div>
-                    <div className="p-4 rounded-xl border border-slate-200/90 bg-[#FAF9F7]/60">
-                      <span className="font-medium text-slate-800 block mb-1 flex items-center gap-2">
-                        <ShieldCheck className="w-4 h-4 text-[#00B074]" />
-                        Angel Tax Exemption (Sec 56)
-                      </span>
-                      <span className="text-xs text-slate-500 leading-relaxed block">
-                        No capital gains tax on investments received above Fair Market Value (FMV) from angel investors and funds upon filing Form 2.
-                      </span>
-                    </div>
-                    <div className="p-4 rounded-xl border border-slate-200/90 bg-[#FAF9F7]/60">
-                      <span className="font-medium text-slate-800 block mb-1 flex items-center gap-2">
-                        <FileCheck className="w-4 h-4 text-[#00B074]" />
-                        80% Patent &amp; 50% Trademark Rebates
-                      </span>
-                      <span className="text-xs text-slate-500 leading-relaxed block">
-                        Massive discounts on government intellectual property filing fees plus fast-tracked examination by the patent office.
-                      </span>
-                    </div>
-                    <div className="p-4 rounded-xl border border-slate-200/90 bg-[#FAF9F7]/60">
-                      <span className="font-medium text-slate-800 block mb-1 flex items-center gap-2">
-                        <Landmark className="w-4 h-4 text-[#00B074]" />
-                        GeM Public Procurement Priority
-                      </span>
-                      <span className="text-xs text-slate-500 leading-relaxed block">
-                        Exemption from prior turnover, prior experience, and Earnest Money Deposit (EMD) requirements in public government tenders.
-                      </span>
-                    </div>
-                    <div className="p-4 rounded-xl border border-slate-200/90 bg-[#FAF9F7]/60">
-                      <span className="font-medium text-slate-800 block mb-1 flex items-center gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-[#00B074]" />
-                        Self-Certification for 9 Labor Laws
-                      </span>
-                      <span className="text-xs text-slate-500 leading-relaxed block">
-                        Self-certify compliance under 9 labor and 3 environmental laws for up to 5 years without random unannounced inspections.
-                      </span>
-                    </div>
-                    <div className="p-4 rounded-xl border border-slate-200/90 bg-[#FAF9F7]/60">
-                      <span className="font-medium text-slate-800 block mb-1 flex items-center gap-2">
-                        <Clock className="w-4 h-4 text-[#00B074]" />
-                        90-Day Fast-Track Exit under IBC
-                      </span>
-                      <span className="text-xs text-slate-500 leading-relaxed block">
-                        Simplified and rapid winding-up procedures under the Insolvency and Bankruptcy Code in just 90 days if business winds down.
-                      </span>
-                    </div>
-                  </div>
+                  <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
+                    What Are the Benefits of Registering Under Startup India?
+                  </h2>
+                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                    Registering under the Startup India scheme unlocks a structured suite of benefits specifically designed to ease the financial and operational burden on early-stage businesses:
+                  </p>
+                  <ul className="space-y-2 text-[13px] font-light text-slate-600 mb-4">
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#00A86B] font-bold">✓</span>
+                      <span><strong>Tax Holiday:</strong> 3-year income tax exemption on 100% of profits under Section 80-IAC of the Income Tax Act</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#00A86B] font-bold">✓</span>
+                      <span><strong>Angel Tax Exemption:</strong> Relief from tax on share premium investments above Fair Market Value under Section 56(2)(viib)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#00A86B] font-bold">✓</span>
+                      <span><strong>IP Rebates:</strong> 80% rebate on statutory patent filing fees and 50% rebate on trademark applications</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#00A86B] font-bold">✓</span>
+                      <span><strong>Compliance Relaxation:</strong> Self-certification under 9 labor laws and 3 environmental laws for up to 5 years</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#00A86B] font-bold">✓</span>
+                      <span><strong>Government Procurement:</strong> Exemption from prior turnover and experience criteria in public tenders on GeM</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#00A86B] font-bold">✓</span>
+                      <span><strong>Fast-Track Exit:</strong> 90-day winding-up provisions under the Insolvency and Bankruptcy Code (IBC)</span>
+                    </li>
+                  </ul>
                 </div>
 
-                {/* Section 5: Documents Required Table */}
+                {/* Section 5: Documents Required */}
                 <div id="documents-required" className="border-t border-slate-100 pt-6">
-                  <h3 className="text-[17px] font-normal text-[#12023B] mb-3">
-                    Checklist of Documents Required for DPIIT Registration
-                  </h3>
-                  <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs">
+                  <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
+                    What Documents Are Needed for Startup India Registration?
+                  </h2>
+                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                    Preparing a complete set of documents ensures an error-free, expedited DPIIT recognition process:
+                  </p>
+
+                  <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-5">
                     <table className="w-full text-left text-[12.5px] font-light text-slate-700">
                       <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                         <tr>
                           <th className="py-3 px-4 font-normal">Document Category</th>
-                          <th className="py-3 px-4 font-normal">Specific Requirements</th>
+                          <th className="py-3 px-4 font-normal">Requirements</th>
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-slate-100">
-                        <tr className="hover:bg-slate-50 transition-colors">
-                          <td className="py-3 px-4 font-normal text-slate-800">Incorporation Proof</td>
-                          <td className="py-3 px-4 text-slate-600">Certificate of Incorporation (for Pvt Ltd / LLP) or Registrar of Firms Certificate (Partnership)</td>
+                        <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
+                          <td className="relative py-3 px-4 font-normal text-slate-800">
+                            <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                            Incorporation Certificate
+                          </td>
+                          <td className="py-3 px-4 text-slate-600">Certificate of Incorporation (for Pvt Ltd / LLP) or Partnership Registration Certificate</td>
                         </tr>
-                        <tr className="hover:bg-slate-50 transition-colors">
-                          <td className="py-3 px-4 font-normal text-slate-800">Tax Identification</td>
-                          <td className="py-3 px-4 text-slate-600">Company / LLP / Firm PAN Card with registered office address proof</td>
+                        <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
+                          <td className="relative py-3 px-4 font-normal text-slate-800">
+                            <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                            Tax Identification Proof
+                          </td>
+                          <td className="py-3 px-4 text-slate-600">Company / LLP / Firm PAN Card with registered office details</td>
                         </tr>
-                        <tr className="hover:bg-slate-50 transition-colors">
-                          <td className="py-3 px-4 font-normal text-slate-800">Proof of Innovation / Concept</td>
-                          <td className="py-3 px-4 text-slate-600">Pitch Deck, Website URL, mobile application link, demo video, or product brochure explaining uniqueness</td>
+                        <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
+                          <td className="relative py-3 px-4 font-normal text-slate-800">
+                            <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                            Proof of Concept / Pitch Deck
+                          </td>
+                          <td className="py-3 px-4 text-slate-600">Presentation, Pitch Deck, Website URL, mobile app link, or video explaining innovation</td>
                         </tr>
-                        <tr className="hover:bg-slate-50 transition-colors">
-                          <td className="py-3 px-4 font-normal text-slate-800">Letter of Authorization</td>
-                          <td className="py-3 px-4 text-slate-600">Board Resolution or authorization letter on letterhead authorizing designated founder to file</td>
+                        <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
+                          <td className="relative py-3 px-4 font-normal text-slate-800">
+                            <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                            Authorization Letter
+                          </td>
+                          <td className="py-3 px-4 text-slate-600">Board Resolution or authorization letter authorizing the designated founder to file</td>
                         </tr>
-                        <tr className="hover:bg-slate-50 transition-colors">
-                          <td className="py-3 px-4 font-normal text-slate-800">IP Documents (Optional)</td>
-                          <td className="py-3 px-4 text-slate-600">Trademark application numbers or patent publication certificates (strengthens approval probability)</td>
+                        <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
+                          <td className="relative py-3 px-4 font-normal text-slate-800">
+                            <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                            IP Filings (If Any)
+                          </td>
+                          <td className="py-3 px-4 text-slate-600">Trademark application numbers or patent publication certificates (optional)</td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
                 </div>
 
-                {/* Section 6: Step-by-Step Registration Roadmap */}
+                {/* Section 6: Step-by-Step Registration Process */}
                 <div className="border-t border-slate-100 pt-6">
-                  <h3 className="text-[17px] font-normal text-[#12023B] mb-3">
-                    Step-by-Step DPIIT Recognition Process with Merrafilings
-                  </h3>
-                  <div className="space-y-3">
-                    {[
-                      {
-                        step: "Step 1",
-                        title: "Business Structure & Eligibility Audit",
-                        desc: "Our startup advisors verify that your entity meets the 10-year age limit, turnover ceiling, and qualifies as a Private Ltd, LLP, or registered partnership.",
-                      },
-                      {
-                        step: "Step 2",
-                        title: "Innovation Statement & Pitch Deck Formatting",
-                        desc: "We craft a persuasive, institutional-grade statement of innovation answering how your venture disrupts markets, creates jobs, or improves processes.",
-                      },
-                      {
-                        step: "Step 3",
-                        title: "Startup India Portal Application Submission",
-                        desc: "We file the formal application on the national startupindia.gov.in portal with all required attachments, founder KYC, and authorization letters.",
-                      },
-                      {
-                        step: "Step 4",
-                        title: "DPIIT Scrutiny & Query Handling",
-                        desc: "Our legal officers coordinate directly with DPIIT scrutiny officers, addressing any clarifications or document queries promptly.",
-                      },
-                      {
-                        step: "Step 5",
-                        title: "Certificate Issuance & Tax Holiday Guidance",
-                        desc: "Your digital DPIIT Certificate of Recognition with unique QR code is issued, unlocking tax holidays, IP rebates, and GeM procurement access.",
-                      },
-                    ].map((st, idx) => (
-                      <div key={idx} className="flex gap-4 p-4 rounded-xl border border-slate-100 bg-[#FAF9F7]/40">
-                        <span className="font-semibold text-xs text-[#6B4BFF] uppercase tracking-wider shrink-0 mt-0.5">
-                          {st.step}
-                        </span>
-                        <div>
-                          <div className="font-medium text-[13.5px] text-slate-800">{st.title}</div>
-                          <div className="text-[12.5px] font-light text-slate-600 mt-1 leading-relaxed">{st.desc}</div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                  <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
+                    Step-by-Step Startup India Registration Process
+                  </h2>
+                  <ol className="list-decimal list-inside space-y-2 text-[13px] font-light text-slate-600 mb-4">
+                    <li><strong>Incorporate Business:</strong> Incorporate as Private Limited Company, LLP, or Registered Partnership Firm</li>
+                    <li><strong>Portal Account Creation:</strong> Register profile on the official startupindia.gov.in national portal</li>
+                    <li><strong>Fill Application:</strong> Enter entity details, incorporation date, sector, and comprehensive innovation description</li>
+                    <li><strong>Upload Documents:</strong> Upload incorporation certificate, authorization letter, and pitch deck</li>
+                    <li><strong>Self-Certification:</strong> Affirm compliance under prescribed DPIIT eligibility rules</li>
+                    <li><strong>DPIIT Certificate Issuance:</strong> Upon scrutiny approval, receive your digital Certificate of Recognition</li>
+                  </ol>
                 </div>
               </article>
             </div>
 
-            {/* Right 4 Columns: Sticky Sidebar */}
-            <div className="lg:col-span-4 space-y-6 lg:sticky lg:top-24">
+            {/* Right Sticky Sidebar */}
+            <div className="space-y-6 lg:sticky lg:top-24">
               {/* Consult Experts Card with 3 Avatars */}
               <div
-                onClick={() => setIsContactOpen(true)}
+                onClick={() => setContactOpen(true)}
                 className="bg-white rounded-2xl border border-slate-200/80 shadow-2xs hover:shadow-xs p-4 flex items-center justify-between transition-all cursor-pointer group"
               >
                 <div className="flex items-center gap-3">
@@ -1226,7 +1177,7 @@ export default function StartupIndiaPage() {
                     />
                   </div>
                   <span className="text-[14px] font-normal text-slate-800">
-                    Consult <span className="text-[#155EEF] font-normal">Startup Experts</span>
+                    Consult <span className="text-[#155EEF] font-normal">Experts</span>
                   </span>
                 </div>
                 <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-[#155EEF] transition-colors" />
@@ -1259,7 +1210,7 @@ export default function StartupIndiaPage() {
                 </div>
               </div>
 
-              {/* State-wise Directory Dropdown */}
+              {/* Startup India by State Directory */}
               <div className="bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden border-t-2 border-t-emerald-400">
                 <div className="p-4 border-b border-slate-100 flex items-center justify-between">
                   <span className="font-normal text-[14px] text-slate-800">Startup India by State</span>
@@ -1290,15 +1241,15 @@ export default function StartupIndiaPage() {
         </div>
       </section>
 
-      {/* 2-Column FAQ Section */}
-      <section id="faqs" className="py-14 sm:py-16 bg-white border-t border-slate-200/70">
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 2-Column FAQ Section matching reference screenshot */}
+      <section id="faqs" className="py-14 sm:py-16 bg-white border-t border-slate-100">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="w-12 h-[3px] bg-[#00A86B] mb-3" />
           <h2 className="text-2xl sm:text-[28px] font-normal text-[#111827]">
-            Frequently Asked Questions
+            Frequently asked questions
           </h2>
           <p className="text-[13px] sm:text-[13.5px] font-light text-slate-500 mt-1.5 mb-8">
-            Common questions about Startup India registration, DPIIT recognition, tax holidays, and funding support in India.
+            Common questions about Startup India Registration and DPIIT Recognition Starting at ₹4,899 in India.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
@@ -1373,7 +1324,7 @@ export default function StartupIndiaPage() {
             </div>
           </div>
 
-          {/* Load More Button */}
+          {/* Load more questions button */}
           <div className="text-center mt-9 mb-14">
             <button
               type="button"
@@ -1384,10 +1335,10 @@ export default function StartupIndiaPage() {
             </button>
           </div>
 
-          {/* Related Services Tags */}
+          {/* Related Services Card */}
           <div className="bg-white rounded-2xl border border-slate-200/90 shadow-2xs p-5 sm:p-6 mb-6">
             <h3 className="font-normal text-[15px] sm:text-[16px] text-slate-800 mb-4">
-              Related Services — Startup Incorporation &amp; Tax Compliance
+              Related Services - Business Registration
             </h3>
             <div className="flex flex-wrap gap-2 sm:gap-2.5">
               {RELATED_SERVICES_TAGS.map((tag, idx) => (
@@ -1402,7 +1353,7 @@ export default function StartupIndiaPage() {
             </div>
           </div>
 
-          {/* Popular Searches Tags */}
+          {/* Popular Searches Card */}
           <div className="bg-white rounded-2xl border border-slate-200/90 shadow-2xs p-5 sm:p-6 mb-6">
             <h3 className="font-normal text-[15px] sm:text-[16px] text-slate-800 mb-4">
               Popular Searches
@@ -1425,7 +1376,7 @@ export default function StartupIndiaPage() {
       {/* Floating Live Chat Button */}
       <div className="fixed bottom-6 right-6 z-40">
         <button
-          onClick={() => setIsContactOpen(true)}
+          onClick={() => setContactOpen(true)}
           className="inline-flex items-center gap-2 px-4.5 py-2.5 rounded-full bg-[#00BF72] hover:bg-[#00AB66] text-white font-medium text-[13.5px] shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5 cursor-pointer"
         >
           <MessageCircle className="w-4.5 h-4.5 fill-white text-[#00BF72]" />
@@ -1435,13 +1386,13 @@ export default function StartupIndiaPage() {
 
       {/* Global Modals */}
       <ServiceSearchModal
-        isOpen={isSearchOpen}
-        onClose={() => setIsSearchOpen(false)}
-        onSelectService={() => setIsContactOpen(true)}
+        isOpen={searchOpen}
+        onClose={() => setSearchOpen(false)}
+        onSelectService={() => setContactOpen(true)}
       />
       <ContactModal
-        isOpen={isContactOpen}
-        onClose={() => setIsContactOpen(false)}
+        isOpen={contactOpen}
+        onClose={() => setContactOpen(false)}
         serviceTitle="Startup India Registration & DPIIT Recognition"
       />
 

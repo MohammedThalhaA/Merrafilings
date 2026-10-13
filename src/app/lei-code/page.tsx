@@ -240,360 +240,338 @@ const POPULAR_SEARCHES_TAGS = [
 ];
 
 export default function LeiCodePage() {
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [contactOpen, setContactOpen] = useState(false);
+
+  // Form states
   const [formName, setFormName] = useState("");
   const [formEmail, setFormEmail] = useState("");
   const [formPhone, setFormPhone] = useState("");
   const [formState, setFormState] = useState("");
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  const [expandedCard, setExpandedCard] = useState<number | null>(null);
-  const [openFaq, setOpenFaq] = useState<string | null>(null);
+  // FAQ state
+  const [openFaq, setOpenFaq] = useState<string | null>("lei-c1-0");
   const [showMoreFaqs, setShowMoreFaqs] = useState(false);
-  const [stateListOpen, setStateListOpen] = useState(false);
 
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [isContactOpen, setIsContactOpen] = useState(false);
+  // Read more states for pricing cards
+  const [expandedCard, setExpandedCard] = useState<number | null>(null);
 
-  const clientsScrollRef = useRef<HTMLDivElement>(null);
+  // State list collapse toggle
+  const [stateListOpen, setStateListOpen] = useState(true);
+
+  // Clients carousel scroll ref
+  const clientScrollRef = useRef<HTMLDivElement>(null);
 
   const scrollClients = (direction: "left" | "right") => {
-    if (clientsScrollRef.current) {
-      const scrollAmount = 300;
-      clientsScrollRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount,
-        behavior: "smooth",
-      });
+    if (clientScrollRef.current) {
+      const scrollAmount = direction === "left" ? -300 : 300;
+      clientScrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   };
 
-  const handleHeroSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setFormSubmitted(true);
+    if (formName && formEmail && formPhone && formState) {
+      setFormSubmitted(true);
+    }
   };
 
   return (
-    <div className="min-h-screen bg-white font-sans text-slate-800 antialiased selection:bg-[#6B4BFF]/20 selection:text-[#12023B]">
-      {/* Global Navigation Bar */}
+    <div className="min-h-screen bg-white text-zinc-900 font-sans antialiased selection:bg-[#155EEF] selection:text-white">
+      {/* Header Navigation */}
       <Navbar
-        onOpenSearch={() => setIsSearchOpen(true)}
-        onOpenContact={() => setIsContactOpen(true)}
+        onOpenSearch={() => setSearchOpen(true)}
+        onOpenContact={() => setContactOpen(true)}
       />
 
-      {/* Hero Section */}
-      <section
-        className="relative overflow-visible pt-6 sm:pt-8 md:pt-[30px] pb-6 sm:pb-8 md:pb-10"
-        aria-label="LEI Code Registration"
-      >
-        {/* Curved Radial Mesh Backdrop */}
+      {/* Hero Section with Merrafilings Curved Radial Mesh Background */}
+      <section className="relative overflow-visible pt-6 sm:pt-8 md:pt-10 pb-16 bg-white">
+        {/* Curved gradient backdrop canvas with curved bottom edge */}
         <div
-          className="absolute inset-x-0 top-0 z-0 mx-auto w-full px-4 sm:px-0 rounded-b-[40px] sm:rounded-b-[52px] md:rounded-b-[64px]"
+          className="absolute inset-x-0 top-0 z-0 mx-auto w-full rounded-b-[40px] sm:rounded-b-[52px] md:rounded-b-[64px] overflow-hidden pointer-events-none"
           style={{
-            height: "calc(100% - 100px)",
-            minHeight: "560px",
+            height: "calc(100% - 90px)",
+            minHeight: "540px",
             background: `
-              radial-gradient(ellipse 140% 90% at 20% 100%, 
-                rgb(255, 209, 189) 0%,
-                rgba(255, 233, 225, 1) 25%,
-                rgba(240, 208, 195, 0.5) 45%,
-                rgba(238, 218, 209, 0.2) 65%,
+              radial-gradient(ellipse 65% 75% at 0% 75%, 
+                rgb(255, 215, 198) 0%,
+                rgba(255, 226, 213, 0.95) 25%,
+                rgba(255, 238, 230, 0.6) 50%,
+                rgba(255, 248, 244, 0.15) 75%,
                 transparent 85%
               ),
-              radial-gradient(ellipse 140% 90% at 80% 100%,
-                rgb(153, 228, 255) 0%,
-                rgb(153, 228, 255) 0%,
-                rgba(187, 222, 233, 0.5) 45%,
-                rgba(189, 229, 241, 0.2) 65%,
+              radial-gradient(ellipse 65% 75% at 100% 75%,
+                rgb(192, 226, 236) 0%,
+                rgba(202, 232, 240, 0.95) 25%,
+                rgba(220, 240, 247, 0.6) 50%,
+                rgba(238, 248, 252, 0.15) 75%,
                 transparent 85%
               ),
-              linear-gradient(to bottom,
-                #ffffff 0%,
-                #FAF8F8 35%,
-                #F5F2F2 55%,
-                #F0EEEE 70%,
-                rgba(235, 233, 233, 0.5) 85%,
-                rgba(230, 228, 228, 0.2) 100%
+              linear-gradient(180deg,
+                rgb(255, 255, 255) 0%,
+                rgb(250, 249, 248) 35%,
+                rgb(245, 243, 241) 70%,
+                rgb(239, 236, 232) 100%
               )
             `,
           }}
           aria-hidden="true"
         />
 
-        <div className="relative mx-auto px-4 sm:px-6 lg:px-8 max-w-[1280px]">
-          {/* Main Title & Subtitle */}
-          <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center text-center pt-2">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-normal leading-snug tracking-tight text-[#12023B]">
-              <span className="bg-gradient-to-r from-[#5C3BFF] via-[#7052FF] to-[#FF4ED0] bg-clip-text text-transparent font-medium">
+        <div className="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Main Hero Title & Tagline */}
+          <div className="text-center max-w-3xl mx-auto mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-[34px] lg:text-[38px] font-light text-[#12023B] leading-snug">
+              <span className="bg-gradient-to-r from-[#5C3BFF] via-[#7052FF] to-[#FF4ED0] bg-clip-text text-transparent font-light">
                 LEI Registration
               </span>{" "}
-              for Businesses &amp; Financial Transactions
+              for Businesses &amp; Transactions
             </h1>
-            <p className="mt-3.5 sm:mt-4 max-w-2xl text-[13px] sm:text-[14px] md:text-[15px] leading-relaxed text-slate-600 font-light">
+            <p className="mt-3 text-[13px] sm:text-[14.5px] font-light text-slate-600 max-w-2xl mx-auto leading-relaxed">
               Establish global financial identity with an internationally recognized 20-digit LEI code mandatory for RBI, SEBI, cross-border payments, RTGS/NEFT above ₹50 Cr, and global market compliance.
             </p>
-
-            {/* Pill Banner: Starts from ₹4,899 */}
-            <div className="mt-5">
-              <a
-                href="#pricing"
-                className="inline-flex items-center gap-2 px-4 py-1.5 sm:px-5 sm:py-2 rounded-full border-2 border-blue-500 bg-white shadow-sm hover:shadow-md hover:border-blue-600 hover:bg-blue-50 transition-all text-xs sm:text-sm group"
-              >
-                <div className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
-                  <Sparkles className="w-3 h-3 text-blue-600" />
-                </div>
-                <span className="text-slate-700">
-                  Get Your LEI Code Registration — starts from{" "}
-                  <strong className="text-slate-900 font-semibold">₹4,899</strong>
-                </span>
-                <span className="text-blue-600 font-medium group-hover:underline inline-flex items-center gap-0.5">
-                  View Price <ChevronRight className="w-3 h-3" />
-                </span>
-              </a>
-            </div>
           </div>
 
-          {/* Floating Glassmorphic Lead Intake Card */}
-          <div className="relative z-10 mx-auto mt-8 sm:mt-10 max-w-5xl">
-            <div className="w-full rounded-2xl sm:rounded-3xl lg:rounded-[32px] border border-white/70 bg-white/90 shadow-xl sm:shadow-2xl shadow-slate-900/10 backdrop-blur p-5 sm:p-8 lg:p-10">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-                {/* Left Column: Value Prop & Bullet Points */}
-                <div className="space-y-4">
-                  <div>
-                    <h2 className="text-xl sm:text-2xl lg:text-3xl font-medium text-[#12023B] tracking-tight">
-                      Apply for Your LEI Code
-                    </h2>
-                    <p className="mt-2 text-xs sm:text-sm leading-relaxed text-slate-600 font-light">
-                      Senior compliance specialists manage LEI validation, CCIL/GLEIF submission, and global registry issuance for fast, error-free processing.
-                    </p>
-                  </div>
-
-                  {/* 5 Purple Icon Bullets */}
-                  <ul className="space-y-3.5 pt-2">
-                    <li className="flex items-center gap-3 text-xs sm:text-[13.5px] text-slate-700">
-                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-white/40 to-white/20 border border-purple-200/40 shadow-sm flex items-center justify-center shrink-0">
-                        <Globe2 className="w-4 h-4 text-[#6B4BFF]" />
-                      </div>
-                      <span>Global GLEIF &amp; CCIL Registry Alignment</span>
-                    </li>
-                    <li className="flex items-center gap-3 text-xs sm:text-[13.5px] text-slate-700">
-                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-white/40 to-white/20 border border-purple-200/40 shadow-sm flex items-center justify-center shrink-0">
-                        <Landmark className="w-4 h-4 text-[#6B4BFF]" />
-                      </div>
-                      <span>RBI Mandate for RTGS/NEFT Above ₹50 Crore</span>
-                    </li>
-                    <li className="flex items-center gap-3 text-xs sm:text-[13.5px] text-slate-700">
-                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-white/40 to-white/20 border border-purple-200/40 shadow-sm flex items-center justify-center shrink-0">
-                        <CheckCircle2 className="w-4 h-4 text-[#6B4BFF]" />
-                      </div>
-                      <span>Fast Processing with Document Accuracy Checks</span>
-                    </li>
-                    <li className="flex items-center gap-3 text-xs sm:text-[13.5px] text-slate-700">
-                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-white/40 to-white/20 border border-purple-200/40 shadow-sm flex items-center justify-center shrink-0">
-                        <ShieldCheck className="w-4 h-4 text-[#6B4BFF]" />
-                      </div>
-                      <span>Multi-Year Renewal Protection against Lapsed Status</span>
-                    </li>
-                    <li className="flex items-center gap-3 text-xs sm:text-[13.5px] text-slate-700">
-                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-white/40 to-white/20 border border-purple-200/40 shadow-sm flex items-center justify-center shrink-0">
-                        <FileText className="w-4 h-4 text-[#6B4BFF]" />
-                      </div>
-                      <a
-                        href="#documents-required"
-                        className="font-medium bg-gradient-to-r from-[#5D54FF] via-[#A767EC] to-[#F968E7] bg-clip-text text-transparent underline underline-offset-2 hover:opacity-85 transition-opacity"
-                      >
-                        Required Documents Checklist
-                      </a>
-                    </li>
-                  </ul>
+          {/* Hero Content Glassmorphism Box */}
+          <div className="w-full max-w-[72rem] mx-auto rounded-2xl sm:rounded-3xl lg:rounded-[32px] border border-white/70 bg-white/90 shadow-xl sm:shadow-2xl shadow-slate-900/10 backdrop-blur p-6 sm:p-8 lg:p-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+              {/* Left Column: Key Features */}
+              <div className="space-y-6">
+                <div>
+                  <h2 className="text-xl sm:text-2xl md:text-3xl font-normal text-[#12023B] mb-2 sm:mb-3">
+                    Apply for Your LEI Code
+                  </h2>
+                  <p className="text-[13px] sm:text-[14px] font-light text-slate-600 leading-relaxed">
+                    Specialists manage LEI validation, CCIL/GLEIF submission, and global registration for fast, compliant 20-digit issuance.
+                  </p>
                 </div>
 
-                {/* Right Column: Lead Intake Form */}
-                <div className="bg-[#FAF8F5]/60 rounded-2xl p-5 sm:p-7 border border-[#E4E7EC]/70">
-                  {formSubmitted ? (
-                    <div className="text-center py-8 space-y-4">
-                      <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
-                        <Check className="w-8 h-8" />
-                      </div>
-                      <h3 className="text-xl font-bold text-[#111827]">Application Received!</h3>
-                      <p className="text-[14px] text-[#475467]">
-                        Thank you, <strong className="text-[#111827]">{formName}</strong>. Our senior regulatory specialist will call you at <strong className="text-[#111827]">{formPhone}</strong> within 15 minutes to initiate your LEI application.
-                      </p>
-                      <button
-                        onClick={() => setFormSubmitted(false)}
-                        className="px-5 py-2 text-[13px] font-medium text-[#155EEF] hover:underline"
+                {/* 5 Bullet Features */}
+                <ul className="space-y-3 pt-2">
+                  <li className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-white/80 border border-purple-200/50 shadow-xs flex items-center justify-center shrink-0">
+                      <Globe2 className="w-4 h-4 text-[#6B4BFF]" />
+                    </div>
+                    <span className="text-[13.5px] font-light text-slate-700">Global LEI Database Registration Support</span>
+                  </li>
+
+                  <li className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-white/80 border border-purple-200/50 shadow-xs flex items-center justify-center shrink-0">
+                      <Landmark className="w-4 h-4 text-[#6B4BFF]" />
+                    </div>
+                    <span className="text-[13.5px] font-light text-slate-700">RBI, SEBI &amp; International Compliance Alignment</span>
+                  </li>
+
+                  <li className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-white/80 border border-purple-200/50 shadow-xs flex items-center justify-center shrink-0">
+                      <CheckCircle2 className="w-4 h-4 text-[#6B4BFF]" />
+                    </div>
+                    <span className="text-[13.5px] font-light text-slate-700">Fast Processing with Application Accuracy Checks</span>
+                  </li>
+
+                  <li className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-white/80 border border-purple-200/50 shadow-xs flex items-center justify-center shrink-0">
+                      <ShieldCheck className="w-4 h-4 text-[#6B4BFF]" />
+                    </div>
+                    <span className="text-[13.5px] font-light text-slate-700">Renewal &amp; Lifecycle LEI Management Support</span>
+                  </li>
+
+                  <li className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-white/80 border border-purple-200/50 shadow-xs flex items-center justify-center shrink-0">
+                      <FileText className="w-4 h-4 text-[#6B4BFF]" />
+                    </div>
+                    <a
+                      href="#documents-required"
+                      className="text-[13.5px] font-semibold bg-gradient-to-r from-[#5D54FF] via-[#A767EC] to-[#F968E7] bg-clip-text text-transparent underline underline-offset-2 decoration-[#A767EC] hover:opacity-85 transition-opacity cursor-pointer"
+                    >
+                      Required Documents
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Right Column: Lead Form */}
+              <div className="bg-[#FAF8F5]/60 rounded-2xl p-5 sm:p-7 border border-[#E4E7EC]/70">
+                {formSubmitted ? (
+                  <div className="text-center py-8 space-y-4">
+                    <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+                      <Check className="w-8 h-8" />
+                    </div>
+                    <h3 className="text-xl font-bold text-[#111827]">Application Received!</h3>
+                    <p className="text-[14px] text-[#475467]">
+                      Thank you, <strong className="text-[#111827]">{formName}</strong>. Our senior regulatory specialist will call you at <strong className="text-[#111827]">{formPhone}</strong> within 15 minutes.
+                    </p>
+                    <button
+                      onClick={() => setFormSubmitted(false)}
+                      className="px-5 py-2 text-[13px] font-medium text-[#155EEF] hover:underline"
+                    >
+                      Submit another query
+                    </button>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    {/* Continue with Google */}
+                    <button
+                      type="button"
+                      onClick={() => alert("Google Single Sign-On simulation. Please fill in the details below.")}
+                      className="w-full flex items-center justify-center gap-3 py-2.5 px-4 bg-white hover:bg-[#F8FAFC] border border-[#D0D5DD] rounded-xl text-[14px] font-medium text-[#344054] shadow-xs transition-colors cursor-pointer"
+                    >
+                      <svg className="w-5 h-5" viewBox="0 0 24 24">
+                        <path
+                          fill="#4285F4"
+                          d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                        />
+                        <path
+                          fill="#34A853"
+                          d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                        />
+                        <path
+                          fill="#FBBC05"
+                          d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"
+                        />
+                        <path
+                          fill="#EA4335"
+                          d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"
+                        />
+                      </svg>
+                      <span>Continue with Google</span>
+                    </button>
+
+                    {/* OR divider */}
+                    <div className="relative flex items-center justify-center my-3">
+                      <div className="border-t border-[#D0D5DD] w-full" />
+                      <span className="bg-[#FAF8F5] px-3 text-[12px] font-semibold text-[#98A2B3] uppercase tracking-wider absolute">
+                        OR
+                      </span>
+                    </div>
+
+                    {/* Name */}
+                    <div>
+                      <input
+                        type="text"
+                        required
+                        placeholder="Name *"
+                        value={formName}
+                        onChange={(e) => setFormName(e.target.value)}
+                        className="w-full px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-md text-[13.5px] font-normal text-slate-800 placeholder-slate-400 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all"
+                      />
+                    </div>
+
+                    {/* Email */}
+                    <div>
+                      <input
+                        type="email"
+                        required
+                        placeholder="Email *"
+                        value={formEmail}
+                        onChange={(e) => setFormEmail(e.target.value)}
+                        className="w-full px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-md text-[13.5px] font-normal text-slate-800 placeholder-slate-400 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all"
+                      />
+                    </div>
+
+                    {/* Phone Number with India Flag */}
+                    <div className="flex">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-2.5 bg-[#F8FAFC] border border-r-0 border-[#D0D5DD] rounded-l-md text-[13px] text-slate-600 font-normal select-none">
+                        <span>🇮🇳</span>
+                        <span>+91</span>
+                      </span>
+                      <input
+                        type="tel"
+                        required
+                        placeholder="Phone Number *"
+                        pattern="[0-9]{10}"
+                        value={formPhone}
+                        onChange={(e) => setFormPhone(e.target.value)}
+                        className="flex-1 min-w-0 px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-r-md text-[13.5px] font-normal text-slate-800 placeholder-slate-400 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all"
+                      />
+                    </div>
+
+                    {/* Select State */}
+                    <div>
+                      <select
+                        required
+                        value={formState}
+                        onChange={(e) => setFormState(e.target.value)}
+                        className="w-full px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-md text-[13.5px] font-normal text-slate-700 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all cursor-pointer"
                       >
-                        Submit another query
+                        <option value="">Select State *</option>
+                        {INDIAN_STATES.map((s) => (
+                          <option key={s} value={s}>
+                            {s}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+
+                    {/* Continue Button */}
+                    <div className="pt-2 flex justify-end">
+                      <button
+                        type="submit"
+                        className="px-8 py-2.5 rounded-lg font-medium text-sm text-white bg-gradient-to-r from-[#594CF5] to-[#D946EF] hover:opacity-95 shadow-sm transition-all cursor-pointer"
+                      >
+                        Continue
                       </button>
                     </div>
-                  ) : (
-                    <form onSubmit={handleHeroSubmit} className="space-y-4">
-                      {/* Continue with Google */}
-                      <button
-                        type="button"
-                        onClick={() => alert("Google Single Sign-On simulation. Please fill in the details below.")}
-                        className="w-full flex items-center justify-center gap-3 py-2.5 px-4 bg-white hover:bg-[#F8FAFC] border border-[#D0D5DD] rounded-xl text-[14px] font-medium text-[#344054] shadow-xs transition-colors cursor-pointer"
-                      >
-                        <svg className="w-5 h-5" viewBox="0 0 24 24">
-                          <path
-                            fill="#4285F4"
-                            d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
-                          />
-                          <path
-                            fill="#34A853"
-                            d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
-                          />
-                          <path
-                            fill="#FBBC05"
-                            d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"
-                          />
-                          <path
-                            fill="#EA4335"
-                            d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"
-                          />
-                        </svg>
-                        <span>Continue with Google</span>
-                      </button>
+                  </form>
+                )}
+              </div>
+            </div>
 
-                      {/* OR divider */}
-                      <div className="relative flex items-center justify-center my-3">
-                        <div className="border-t border-[#D0D5DD] w-full" />
-                        <span className="bg-[#FAF8F5] px-3 text-[12px] font-semibold text-[#98A2B3] uppercase tracking-wider absolute">
-                          OR
-                        </span>
-                      </div>
-
-                      {/* Name */}
-                      <div>
-                        <input
-                          type="text"
-                          required
-                          placeholder="Name *"
-                          value={formName}
-                          onChange={(e) => setFormName(e.target.value)}
-                          className="w-full px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-md text-[13.5px] font-normal text-slate-800 placeholder-slate-400 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all"
-                        />
-                      </div>
-
-                      {/* Email */}
-                      <div>
-                        <input
-                          type="email"
-                          required
-                          placeholder="Email *"
-                          value={formEmail}
-                          onChange={(e) => setFormEmail(e.target.value)}
-                          className="w-full px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-md text-[13.5px] font-normal text-slate-800 placeholder-slate-400 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all"
-                        />
-                      </div>
-
-                      {/* Phone Number with India Flag */}
-                      <div className="flex">
-                        <span className="inline-flex items-center gap-1.5 px-3 py-2.5 bg-[#F8FAFC] border border-r-0 border-[#D0D5DD] rounded-l-md text-[13px] text-slate-600 font-normal select-none">
-                          <span>🇮🇳</span>
-                          <span>+91</span>
-                        </span>
-                        <input
-                          type="tel"
-                          required
-                          placeholder="Phone Number *"
-                          pattern="[0-9]{10}"
-                          value={formPhone}
-                          onChange={(e) => setFormPhone(e.target.value)}
-                          className="flex-1 min-w-0 px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-r-md text-[13.5px] font-normal text-slate-800 placeholder-slate-400 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all"
-                        />
-                      </div>
-
-                      {/* Select State */}
-                      <div>
-                        <select
-                          required
-                          value={formState}
-                          onChange={(e) => setFormState(e.target.value)}
-                          className="w-full px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-md text-[13.5px] font-normal text-slate-700 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all cursor-pointer"
-                        >
-                          <option value="">Select State *</option>
-                          {INDIAN_STATES.map((s) => (
-                            <option key={s} value={s}>
-                              {s}
-                            </option>
-                          ))}
-                        </select>
-                      </div>
-
-                      {/* Continue Button */}
-                      <div className="pt-2 flex justify-end">
-                        <button
-                          type="submit"
-                          className="px-8 py-2.5 rounded-lg font-medium text-sm text-white bg-gradient-to-r from-[#594CF5] to-[#D946EF] hover:opacity-95 shadow-sm transition-all cursor-pointer"
-                        >
-                          Continue
-                        </button>
-                      </div>
-                    </form>
-                  )}
+            {/* Trust Stats Cards with Hover Effects */}
+            <div className="mt-8 pt-6 border-t border-slate-100/80 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4">
+              {/* Card 1: 4.4 Verified Reviews */}
+              <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-amber-200 hover:shadow-[0_8px_25px_rgba(245,158,11,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
+                <div className="w-11 h-11 rounded-2xl bg-[#FFF6E9] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-2 shadow-2xs">
+                  <svg className="w-5 h-5 text-[#F04438] transition-colors" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="flex items-center gap-1.5 font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">
+                    <span>4.4</span>
+                    <div className="flex items-center text-amber-400 text-[11px] gap-0.5">
+                      <span>★</span><span>★</span><span>★</span><span>★</span>
+                      <span className="relative inline-block text-slate-300">
+                        ★
+                        <span className="absolute inset-0 overflow-hidden w-[40%] text-amber-400">★</span>
+                      </span>
+                    </div>
+                  </div>
+                  <p className="text-[11.5px] font-light text-slate-500">Verified Reviews</p>
                 </div>
               </div>
 
-              {/* 4 Bottom Trust Stat Cards */}
-              <div className="mt-8 pt-6 border-t border-slate-100/80 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4">
-                {/* Stat 1: 4.4 Verified Reviews */}
-                <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-amber-200 hover:shadow-[0_8px_25px_rgba(245,158,11,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
-                  <div className="w-11 h-11 rounded-2xl bg-[#FFF6E9] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-2 shadow-2xs">
-                    <svg className="w-5 h-5 text-[#F04438]" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-1.5 font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">
-                      <span>4.4</span>
-                      <div className="flex items-center text-amber-400 text-[11px] gap-0.5">
-                        <span>★</span><span>★</span><span>★</span><span>★</span>
-                        <span className="relative inline-block text-slate-300">
-                          ★
-                          <span className="absolute inset-0 overflow-hidden w-[40%] text-amber-400">★</span>
-                        </span>
-                      </div>
-                    </div>
-                    <p className="text-[11.5px] font-light text-slate-500 mt-0.5">Verified Reviews</p>
-                  </div>
+              {/* Card 2: 15+ Years of Experience */}
+              <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-amber-200 hover:shadow-[0_8px_25px_rgba(217,119,6,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
+                <div className="w-11 h-11 rounded-2xl bg-[#FFF8E7] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-2 shadow-2xs">
+                  <Award className="w-5 h-5 text-[#D97706] transition-colors" />
                 </div>
-
-                {/* Stat 2: 15+ Years Experience */}
-                <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-blue-200 hover:shadow-[0_8px_25px_rgba(37,99,235,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
-                  <div className="w-11 h-11 rounded-2xl bg-[#EFF8FF] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-2 shadow-2xs">
-                    <Award className="w-5 h-5 text-[#2E90FA]" />
-                  </div>
-                  <div>
-                    <div className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">
-                      15+ Years
-                    </div>
-                    <p className="text-[11.5px] font-light text-slate-500 mt-0.5">Regulatory Experience</p>
-                  </div>
+                <div>
+                  <p className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">15+ Years</p>
+                  <p className="text-[11.5px] font-light text-slate-500">of Experience</p>
                 </div>
+              </div>
 
-                {/* Stat 3: 2 Lakh+ Clients */}
-                <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-purple-200 hover:shadow-[0_8px_25px_rgba(147,51,234,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
-                  <div className="w-11 h-11 rounded-2xl bg-[#F9F5FF] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-2 shadow-2xs">
-                    <Users className="w-5 h-5 text-[#7F56D9]" />
-                  </div>
-                  <div>
-                    <div className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">
-                      2 Lakh+
-                    </div>
-                    <p className="text-[11.5px] font-light text-slate-500 mt-0.5">Corporate Clients</p>
-                  </div>
+              {/* Card 3: 2 Lakh+ Customers */}
+              <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-purple-200 hover:shadow-[0_8px_25px_rgba(107,75,255,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
+                <div className="w-11 h-11 rounded-2xl bg-[#F5F3FF] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-2 shadow-2xs">
+                  <Users className="w-5 h-5 text-[#6B4BFF] transition-colors" />
                 </div>
+                <div>
+                  <p className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">2 Lakh+ Customers</p>
+                  <p className="text-[11.5px] font-light text-slate-500">Served Across India</p>
+                </div>
+              </div>
 
-                {/* Stat 4: App Tracking */}
-                <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-emerald-200 hover:shadow-[0_8px_25px_rgba(16,185,129,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
-                  <div className="w-11 h-11 rounded-2xl bg-[#ECFDF3] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-2 shadow-2xs">
-                    <Smartphone className="w-5 h-5 text-[#12B76A]" />
-                  </div>
-                  <div>
-                    <div className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">
-                      LEDGERS
-                    </div>
-                    <p className="text-[11.5px] font-light text-slate-500 mt-0.5">App Tracking &amp; Renewal</p>
-                  </div>
+              {/* Card 4: App Tracking */}
+              <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-emerald-200 hover:shadow-[0_8px_25px_rgba(0,176,116,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
+                <div className="w-11 h-11 rounded-2xl bg-[#ECFDF5] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-2 shadow-2xs">
+                  <Smartphone className="w-5 h-5 text-[#00B074] transition-colors" />
+                </div>
+                <div>
+                  <p className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">App Tracking</p>
+                  <p className="text-[11.5px] font-light text-slate-500">Live Status &amp; Alerts</p>
                 </div>
               </div>
             </div>
@@ -601,10 +579,11 @@ export default function LeiCodePage() {
         </div>
       </section>
 
-      {/* Clients Carousel */}
-      <section className="py-6 border-y border-slate-100 bg-[#FAF9F7]/50 overflow-hidden">
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Our Clients Section (Single-row Mini Cards Carousel) */}
+      <section className="py-7 border-y border-slate-100 bg-white overflow-hidden">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4">
+            {/* Scroll Left Button */}
             <button
               type="button"
               onClick={() => scrollClients("left")}
@@ -614,20 +593,23 @@ export default function LeiCodePage() {
               <ChevronLeft className="w-4 h-4" />
             </button>
 
+            {/* Horizontal Mini Cards Container */}
             <div
-              ref={clientsScrollRef}
-              className="flex items-center gap-6 sm:gap-10 overflow-x-auto no-scrollbar scroll-smooth py-1"
+              ref={clientScrollRef}
+              className="flex items-center gap-3 sm:gap-3.5 overflow-x-auto scrollbar-none scroll-smooth py-1 px-1 flex-1 min-w-0"
+              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             >
               {CLIENT_MINI_CARDS.map((client, idx) => (
                 <div
                   key={idx}
-                  className="px-6 py-2 rounded-xl bg-white border border-slate-200/80 shadow-3xs hover:shadow-xs hover:border-slate-300 transition-all shrink-0 flex items-center justify-center min-w-[130px]"
+                  className="h-[52px] sm:h-[54px] w-[130px] sm:w-[145px] px-3.5 rounded-xl border border-slate-200/85 bg-white flex items-center justify-center shadow-3xs hover:shadow-xs hover:border-slate-300 transition-all shrink-0 cursor-pointer select-none"
                 >
                   {client.logo}
                 </div>
               ))}
             </div>
 
+            {/* Scroll Right Button */}
             <button
               type="button"
               onClick={() => scrollClients("right")}
@@ -640,9 +622,9 @@ export default function LeiCodePage() {
         </div>
       </section>
 
-      {/* Pricing Packages Section */}
+      {/* Pricing Section (Matching exact Merrafilings design with Green Hover Border & Dynamic Button) */}
       <section id="pricing" className="py-14 sm:py-16 bg-white">
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-10">
             <h2 className="text-2xl sm:text-[28px] md:text-[32px] font-normal text-[#111827] leading-snug">
               Simple packages. Transparent{" "}
@@ -693,35 +675,35 @@ export default function LeiCodePage() {
                   <p className="text-[12.5px] font-light text-slate-500 mb-3">What&apos;s included:</p>
                   <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
                     <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0" viewBox="0 0 16 16" fill="none">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
                         <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>New 20-Digit LEI Code Allotment</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0" viewBox="0 0 16 16" fill="none">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
                         <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>CCIL / GLEIF Database Publication</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0" viewBox="0 0 16 16" fill="none">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
                         <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Board Resolution &amp; Drafting Review</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0" viewBox="0 0 16 16" fill="none">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
                         <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Level 1 Reference Data Validation</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0" viewBox="0 0 16 16" fill="none">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
                         <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
@@ -736,7 +718,7 @@ export default function LeiCodePage() {
                     }}
                     className="text-[12px] font-normal text-[#00B074] hover:underline cursor-pointer mt-2 block"
                   >
-                    +2 more features
+                    +2 more
                   </button>
                 </div>
               </div>
@@ -744,7 +726,7 @@ export default function LeiCodePage() {
               <div className="mt-8 pt-2">
                 <button
                   type="button"
-                  onClick={() => setIsContactOpen(true)}
+                  onClick={() => setContactOpen(true)}
                   className="w-full py-2.5 px-4 rounded-xl font-medium text-[14.5px] text-[#00B074] bg-[#E8FAF2] group-hover:bg-[#00B074] group-hover:text-white hover:!bg-[#009B66] border border-[#00B074]/35 group-hover:border-[#00B074] transition-all duration-200 cursor-pointer shadow-xs group-hover:shadow-sm"
                 >
                   Register Now
@@ -755,7 +737,7 @@ export default function LeiCodePage() {
             {/* Package 2: 3-Year LEI Code (Most Popular) */}
             <div className="group bg-white rounded-[22px] border-[1.5px] border-[#00B074] p-6 sm:p-7 flex flex-col justify-between shadow-[0_16px_36px_rgba(0,176,116,0.12)] hover:shadow-[0_20px_42px_rgba(0,176,116,0.2)] hover:-translate-y-1.5 transition-all duration-300 ease-out cursor-pointer relative">
               <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#00B074] to-[#059669] text-white text-[11px] font-semibold tracking-wider uppercase py-1 px-4 rounded-full shadow-xs">
-                Most Popular • Recommended
+                Most Popular
               </div>
 
               <div>
@@ -792,35 +774,35 @@ export default function LeiCodePage() {
                   <p className="text-[12.5px] font-light text-slate-500 mb-3">What&apos;s included:</p>
                   <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
                     <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0" viewBox="0 0 16 16" fill="none">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
                         <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Full 3-Year Active Validity Guarantee</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0" viewBox="0 0 16 16" fill="none">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
                         <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Automated Annual Data Re-verification</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0" viewBox="0 0 16 16" fill="none">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
                         <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Level 1 &amp; Level 2 GLEIF Mapping</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0" viewBox="0 0 16 16" fill="none">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
                         <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Free Legal Address &amp; Name Updates</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0" viewBox="0 0 16 16" fill="none">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
                         <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
@@ -835,7 +817,7 @@ export default function LeiCodePage() {
                     }}
                     className="text-[12px] font-normal text-[#00B074] hover:underline cursor-pointer mt-2 block"
                   >
-                    +3 more features
+                    +3 more
                   </button>
                 </div>
               </div>
@@ -843,7 +825,7 @@ export default function LeiCodePage() {
               <div className="mt-8 pt-2">
                 <button
                   type="button"
-                  onClick={() => setIsContactOpen(true)}
+                  onClick={() => setContactOpen(true)}
                   className="w-full py-2.5 px-4 rounded-xl font-medium text-[14.5px] text-white bg-[#00B074] hover:bg-[#009B66] border border-[#00B074] transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md"
                 >
                   Register Now
@@ -887,35 +869,35 @@ export default function LeiCodePage() {
                   <p className="text-[12.5px] font-light text-slate-500 mb-3">What&apos;s included:</p>
                   <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
                     <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0" viewBox="0 0 16 16" fill="none">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
                         <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>5-Year Continuous Active Registration</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0" viewBox="0 0 16 16" fill="none">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
                         <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Zero Lapsed Status Guarantee</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0" viewBox="0 0 16 16" fill="none">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
                         <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Complex Parent-Subsidiary GLEIF Tree</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0" viewBox="0 0 16 16" fill="none">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
                         <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Priority 24-Hour Issuance Turnaround</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0" viewBox="0 0 16 16" fill="none">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
                         <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
                         <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
@@ -930,7 +912,7 @@ export default function LeiCodePage() {
                     }}
                     className="text-[12px] font-normal text-[#00B074] hover:underline cursor-pointer mt-2 block"
                   >
-                    +4 more features
+                    +3 more
                   </button>
                 </div>
               </div>
@@ -938,7 +920,7 @@ export default function LeiCodePage() {
               <div className="mt-8 pt-2">
                 <button
                   type="button"
-                  onClick={() => setIsContactOpen(true)}
+                  onClick={() => setContactOpen(true)}
                   className="w-full py-2.5 px-4 rounded-xl font-medium text-[14.5px] text-[#00B074] bg-[#E8FAF2] group-hover:bg-[#00B074] group-hover:text-white hover:!bg-[#009B66] border border-[#00B074]/35 group-hover:border-[#00B074] transition-all duration-200 cursor-pointer shadow-xs group-hover:shadow-sm"
                 >
                   Register Now
@@ -949,221 +931,249 @@ export default function LeiCodePage() {
         </div>
       </section>
 
-      {/* Detailed Guide Section with 2 Columns (8 Cols Article + 4 Cols Sticky Sidebar) */}
-      <section id="overview-section" className="py-12 sm:py-16 bg-[#FAFAF9]/60 border-t border-slate-200/70">
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            {/* Left 8 Columns: Authoritative Guide */}
-            <div className="lg:col-span-8">
-              <article className="bg-white rounded-2xl border border-slate-200/80 shadow-xs p-6 sm:p-8 md:p-10 space-y-8">
-                {/* Section 1: Introduction */}
+      {/* Comprehensive Guide Section (Matching exact Merrafilings reference design) */}
+      <section id="overview-section" className="py-10 sm:py-12 bg-white">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Breadcrumb Navigation */}
+          <nav className="flex items-center gap-2 text-[13px] font-light text-slate-500 mb-5 flex-wrap">
+            <a href="/" className="hover:text-[#155EEF] transition-colors">
+              Merrafilings
+            </a>
+            <span className="text-slate-300">/</span>
+            <a href="/registrations" className="hover:text-[#155EEF] transition-colors">
+              Registrations
+            </a>
+            <span className="text-slate-300">/</span>
+            <span className="text-[#00B074] font-normal">Legal Entity Identifier Code</span>
+          </nav>
+
+          {/* Grid Layout: Main Article on Left, Sidebar on Right (Full width, not squeezed in center) */}
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_330px] xl:grid-cols-[1fr_350px] gap-6 lg:gap-8 items-start">
+            {/* Left Content Card */}
+            <div className="bg-white rounded-2xl border border-slate-200/80 shadow-xs relative overflow-hidden p-6 sm:p-10 border-t-2 border-t-emerald-400">
+              <article className="max-w-none space-y-7">
+                {/* Section 1: Intro with Centered Title matching Reference Image */}
                 <div>
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-purple-50 text-purple-700 text-xs font-medium mb-3">
-                    <Sparkles className="w-3.5 h-3.5" />
-                    <span>Global Regulatory Identifier</span>
-                  </div>
-                  <h2 className="text-xl sm:text-2xl font-normal text-[#12023B] tracking-tight leading-snug">
-                    What is a Legal Entity Identifier (LEI) Code?
+                  <h1 className="text-2xl sm:text-[26px] md:text-[28px] font-normal text-[#1F1646] text-center mb-6 leading-snug">
+                    Legal Entity Identifier Number Registration Online in India
+                  </h1>
+                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+                    A <strong className="font-medium text-slate-800">Legal Entity Identifier (LEI) number</strong> is a unique 20-character alphanumeric code assigned to legal entities participating in financial transactions. Businesses, banks, and financial institutions in India must obtain an <strong className="font-medium text-slate-800">LEI registration</strong> to comply with Reserve Bank of India (RBI) mandates and global financial regulations. For seamless business registrations and compliance services in India, Merrafilings offers end-to-end support to help entities obtain their LEI number quickly and accurately.
+                  </p>
+                </div>
+
+                {/* Section 2: What is an LEI */}
+                <div className="border-t border-slate-100 pt-6">
+                  <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
+                    What is a Legal Entity Identifier (LEI) Number?
                   </h2>
-                  <p className="mt-3 text-[13.5px] font-light leading-relaxed text-slate-600">
-                    A <strong className="font-medium text-slate-800">Legal Entity Identifier (LEI)</strong> is a unique 20-character alphanumeric code established by the <strong>Financial Stability Board (FSB)</strong> and endorsed by G20 nations in the aftermath of the 2008 global financial crisis. It uniquely identifies distinct legal entities engaging in financial market transactions worldwide.
+                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                    A Legal Entity Identifier number is a globally recognized unique identification code issued to legal entities involved in financial transactions. Introduced by the <strong>Financial Stability Board (FSB)</strong> and endorsed by the G20, the LEI system was created to improve transparency in global financial markets. In India, the Reserve Bank of India has made LEI registration mandatory for entities participating in large-value financial transactions, over-the-counter derivatives, and foreign currency transactions.
                   </p>
-                  <p className="mt-2.5 text-[13.5px] font-light leading-relaxed text-slate-600">
-                    In India, the <strong>Reserve Bank of India (RBI)</strong> and <strong>Securities and Exchange Board of India (SEBI)</strong> have mandated LEI codes across corporate lending, Over-The-Counter (OTC) derivatives, money markets, and high-value centralized payment transfers (RTGS and NEFT exceeding ₹50 Crore).
+                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+                    Every LEI number is linked to verified reference data about a legal entity, ensuring accuracy and reliability in the global financial system.
                   </p>
                 </div>
 
-                {/* Section 2: Structure Breakdown */}
+                {/* Section 3: Structure of an LEI Code */}
                 <div className="border-t border-slate-100 pt-6">
-                  <h3 className="text-[17px] font-normal text-[#12023B] mb-3">
-                    Structure of a 20-Character LEI Code (ISO 17442 Standard)
-                  </h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 my-4">
-                    <div className="p-4 rounded-xl border border-purple-100 bg-purple-50/50">
-                      <div className="text-lg font-bold text-[#6B4BFF] font-mono">3358</div>
-                      <div className="text-xs font-medium text-slate-800 mt-1">Chars 1–4: LOU Prefix</div>
-                      <div className="text-[11.5px] text-slate-500 font-light mt-0.5">Identifies the accredited Local Operating Unit (e.g., CCIL in India)</div>
-                    </div>
-                    <div className="p-4 rounded-xl border border-blue-100 bg-blue-50/50">
-                      <div className="text-lg font-bold text-blue-600 font-mono">00N4879K2L1P</div>
-                      <div className="text-xs font-medium text-slate-800 mt-1">Chars 5–18: Entity ID</div>
-                      <div className="text-[11.5px] text-slate-500 font-light mt-0.5">Unique alpha-numeric entity code assigned to the business</div>
-                    </div>
-                    <div className="p-4 rounded-xl border border-emerald-100 bg-emerald-50/50">
-                      <div className="text-lg font-bold text-emerald-600 font-mono">82</div>
-                      <div className="text-xs font-medium text-slate-800 mt-1">Chars 19–20: Check Digits</div>
-                      <div className="text-[11.5px] text-slate-500 font-light mt-0.5">Two mathematical checksum digits for real-time validation</div>
-                    </div>
-                  </div>
+                  <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
+                    Structure of an LEI Code (ISO 17442 Norm)
+                  </h2>
+                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-3">
+                    An LEI code is a 20-character alphanumeric identifier structured as follows:
+                  </p>
+                  <ul className="space-y-2 text-[13px] font-light text-slate-600 mb-4">
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#00A86B] font-bold">✓</span>
+                      <span><strong>Characters 1-4:</strong> Prefix identifying the LEI issuing organization (Local Operating Unit like CCIL in India)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#00A86B] font-bold">✓</span>
+                      <span><strong>Characters 5-18:</strong> Unique entity-specific identifier assigned to the legal entity</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#00A86B] font-bold">✓</span>
+                      <span><strong>Characters 19-20:</strong> Two check digits used for mathematical validation and error detection</span>
+                    </li>
+                  </ul>
                 </div>
 
-                {/* Section 3: LEI vs Other Identifiers Table */}
+                {/* Section 4: LEI vs Other Business Identifiers Table */}
                 <div className="border-t border-slate-100 pt-6">
-                  <h3 className="text-[17px] font-normal text-[#12023B] mb-3">
-                    Comparative Breakdown: LEI vs Other Business Identifiers
-                  </h3>
-                  <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs">
+                  <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
+                    LEI vs. Other Business Identifiers
+                  </h2>
+                  <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-5">
                     <table className="w-full text-left text-[12.5px] font-light text-slate-700">
                       <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                         <tr>
                           <th className="py-3 px-4 font-normal">Identifier</th>
                           <th className="py-3 px-4 font-normal">Issuing Authority</th>
-                          <th className="py-3 px-4 font-normal">Geographic Scope</th>
-                          <th className="py-3 px-4 font-normal">Primary Function</th>
+                          <th className="py-3 px-4 font-normal">Scope</th>
+                          <th className="py-3 px-4 font-normal">Purpose</th>
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-slate-100">
-                        <tr className="hover:bg-purple-50/40 transition-colors">
-                          <td className="py-3 px-4 font-medium text-slate-900">LEI Code (20 Digits)</td>
+                        <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
+                          <td className="relative py-3 px-4 font-normal text-slate-800">
+                            <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                            LEI Number
+                          </td>
                           <td className="py-3 px-4 text-slate-600">GLEIF / CCIL (India)</td>
-                          <td className="py-3 px-4 text-purple-700 font-medium">Global (180+ Countries)</td>
-                          <td className="py-3 px-4 text-slate-600">Financial transactions, OTC derivatives, high-value RTGS</td>
+                          <td className="py-3 px-4 text-[#00A86B] font-medium">Global</td>
+                          <td className="py-3 px-4 text-slate-600">Financial transaction &amp; banking identification</td>
                         </tr>
-                        <tr className="hover:bg-slate-50 transition-colors">
-                          <td className="py-3 px-4 font-normal text-slate-800">PAN (10 Digits)</td>
+                        <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
+                          <td className="relative py-3 px-4 font-normal text-slate-800">
+                            <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                            PAN
+                          </td>
                           <td className="py-3 px-4 text-slate-600">Income Tax Department</td>
-                          <td className="py-3 px-4 text-slate-600">National (India)</td>
-                          <td className="py-3 px-4 text-slate-600">Tax assessment and TDS compliance</td>
+                          <td className="py-3 px-4 text-slate-600">India</td>
+                          <td className="py-3 px-4 text-slate-600">Tax assessment identification</td>
                         </tr>
-                        <tr className="hover:bg-slate-50 transition-colors">
-                          <td className="py-3 px-4 font-normal text-slate-800">CIN (21 Digits)</td>
+                        <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
+                          <td className="relative py-3 px-4 font-normal text-slate-800">
+                            <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                            CIN
+                          </td>
                           <td className="py-3 px-4 text-slate-600">Ministry of Corporate Affairs</td>
-                          <td className="py-3 px-4 text-slate-600">National (India)</td>
-                          <td className="py-3 px-4 text-slate-600">Corporate incorporation identity under Companies Act</td>
+                          <td className="py-3 px-4 text-slate-600">India</td>
+                          <td className="py-3 px-4 text-slate-600">Company registration identity</td>
                         </tr>
-                        <tr className="hover:bg-slate-50 transition-colors">
-                          <td className="py-3 px-4 font-normal text-slate-800">GSTIN (15 Digits)</td>
+                        <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
+                          <td className="relative py-3 px-4 font-normal text-slate-800">
+                            <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                            GSTIN
+                          </td>
                           <td className="py-3 px-4 text-slate-600">GST Council / CBIC</td>
-                          <td className="py-3 px-4 text-slate-600">National (India)</td>
-                          <td className="py-3 px-4 text-slate-600">Indirect tax invoice matching &amp; input tax credit</td>
+                          <td className="py-3 px-4 text-slate-600">India</td>
+                          <td className="py-3 px-4 text-slate-600">Goods and Services Tax identification</td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
                 </div>
 
-                {/* Section 4: Why Mandatory in India */}
+                {/* Section 5: Why Mandatory in India */}
                 <div className="border-t border-slate-100 pt-6">
-                  <h3 className="text-[17px] font-normal text-[#12023B] mb-3">
-                    Reserve Bank of India (RBI) LEI Mandates
-                  </h3>
-                  <div className="space-y-3 text-[13px] font-light text-slate-600 leading-relaxed">
-                    <p>
-                      The Reserve Bank of India has issued phased notifications making LEI compulsory for non-individual borrowers and entities conducting large-scale capital movements:
-                    </p>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-                      <div className="p-3.5 rounded-xl border border-slate-200/90 bg-[#FAF9F7]/60">
-                        <span className="font-medium text-slate-800 block mb-1">RTGS / NEFT Over ₹50 Crore</span>
-                        <span className="text-xs text-slate-500">All payment transactions initiated by entities of value ₹50 Cr and above must include remitter and beneficiary LEIs.</span>
-                      </div>
-                      <div className="p-3.5 rounded-xl border border-slate-200/90 bg-[#FAF9F7]/60">
-                        <span className="font-medium text-slate-800 block mb-1">Over-the-Counter Derivatives</span>
-                        <span className="text-xs text-slate-500">Interest rate, foreign currency, and credit derivatives markets require active LEI for deal reporting.</span>
-                      </div>
-                      <div className="p-3.5 rounded-xl border border-slate-200/90 bg-[#FAF9F7]/60">
-                        <span className="font-medium text-slate-800 block mb-1">Large Corporate Borrowers</span>
-                        <span className="text-xs text-slate-500">Borrowers with aggregate credit exposure exceeding ₹5 Crore from banking networks must hold an active LEI.</span>
-                      </div>
-                      <div className="p-3.5 rounded-xl border border-slate-200/90 bg-[#FAF9F7]/60">
-                        <span className="font-medium text-slate-800 block mb-1">Cross-Border Forex Transfers</span>
-                        <span className="text-xs text-slate-500">Capital account outward remittances and foreign portfolio investments require verified LEI credentials.</span>
-                      </div>
-                    </div>
-                  </div>
+                  <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
+                    Why is Legal Entity Identifier Registration Mandatory in India?
+                  </h2>
+                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                    The LEI registration India mandate was introduced by the Reserve Bank of India to strengthen the financial system and enhance transparency in large-value transactions. The RBI has progressively expanded the scope of LEI number compliance:
+                  </p>
+                  <ul className="space-y-2 text-[13px] font-light text-slate-600 mb-4">
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#00A86B] font-bold">✓</span>
+                      <span>All over-the-counter (OTC) derivative transactions involving non-individual residents</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#00A86B] font-bold">✓</span>
+                      <span>Large-value transactions in centralized payment systems (RTGS and NEFT above Rs. 50 crore)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#00A86B] font-bold">✓</span>
+                      <span>Non-derivative markets including government securities and money markets</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#00A86B] font-bold">✓</span>
+                      <span>Cross-border foreign currency transactions above specified regulatory thresholds</span>
+                    </li>
+                  </ul>
                 </div>
 
-                {/* Section 5: Documents Required Table */}
+                {/* Section 6: Documents Required */}
                 <div id="documents-required" className="border-t border-slate-100 pt-6">
-                  <h3 className="text-[17px] font-normal text-[#12023B] mb-3">
-                    Mandatory Documents Required for LEI Application
-                  </h3>
-                  <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs">
+                  <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
+                    What Documents Are Required for LEI Registration in India?
+                  </h2>
+                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                    Submitting the correct documents is essential for a smooth LEI number registration process. Below is the checklist for different legal entities:
+                  </p>
+
+                  <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-5">
                     <table className="w-full text-left text-[12.5px] font-light text-slate-700">
                       <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                         <tr>
-                          <th className="py-3 px-4 font-normal">Entity Type</th>
-                          <th className="py-3 px-4 font-normal">Mandatory Documents to be Uploaded</th>
+                          <th className="py-3 px-4 font-normal">Type of Entity</th>
+                          <th className="py-3 px-4 font-normal">Documents to be Uploaded</th>
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-slate-100">
-                        <tr className="hover:bg-slate-50 transition-colors">
-                          <td className="py-3 px-4 font-normal text-slate-800">Private / Public Ltd. Company</td>
-                          <td className="py-3 px-4 text-slate-600">Certificate of Incorporation, MoA &amp; AoA, Company PAN, Audited Balance Sheet, Board Resolution</td>
+                        <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
+                          <td className="relative py-3 px-4 font-normal text-slate-800">
+                            <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                            Private / Public Limited Company
+                          </td>
+                          <td className="py-3 px-4 text-slate-600">Certificate of Incorporation, MOA and AOA, PAN Card, Audited Balance Sheet, Board Resolution</td>
                         </tr>
-                        <tr className="hover:bg-slate-50 transition-colors">
-                          <td className="py-3 px-4 font-normal text-slate-800">Limited Liability Partnership (LLP)</td>
-                          <td className="py-3 px-4 text-slate-600">Certificate of Incorporation, Registered LLP Agreement, LLP PAN, Designated Partners KYC</td>
+                        <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
+                          <td className="relative py-3 px-4 font-normal text-slate-800">
+                            <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                            Partnership Firm
+                          </td>
+                          <td className="py-3 px-4 text-slate-600">Partnership Deed, PAN Card, GST Registration Certificate, Address Proof</td>
                         </tr>
-                        <tr className="hover:bg-slate-50 transition-colors">
-                          <td className="py-3 px-4 font-normal text-slate-800">Partnership Firm</td>
-                          <td className="py-3 px-4 text-slate-600">Notarized/Registered Partnership Deed, Firm PAN, Registration Certificate (if any), Partners KYC</td>
+                        <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
+                          <td className="relative py-3 px-4 font-normal text-slate-800">
+                            <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                            LLP (Limited Liability Partnership)
+                          </td>
+                          <td className="py-3 px-4 text-slate-600">Certificate of Incorporation, LLP Agreement, PAN Card, Partners KYC</td>
                         </tr>
-                        <tr className="hover:bg-slate-50 transition-colors">
-                          <td className="py-3 px-4 font-normal text-slate-800">Trust / Society / Non-Profit</td>
-                          <td className="py-3 px-4 text-slate-600">Trust Deed or Bylaws, Registration Certificate, Trust PAN, Resolution of Trustees</td>
+                        <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
+                          <td className="relative py-3 px-4 font-normal text-slate-800">
+                            <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                            Trust / Society / Non-Profit
+                          </td>
+                          <td className="py-3 px-4 text-slate-600">Registration Certificate, Trust Deed or MOA, PAN Card, Address Proof</td>
                         </tr>
-                        <tr className="hover:bg-slate-50 transition-colors">
-                          <td className="py-3 px-4 font-normal text-slate-800">Foreign Subsidiary in India</td>
-                          <td className="py-3 px-4 text-slate-600">Indian CoI, Parent Entity Apostilled Incorporation Proof, Parent LEI (for Level 2 linkage), PAN</td>
+                        <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
+                          <td className="relative py-3 px-4 font-normal text-slate-800">
+                            <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                            Foreign Entity
+                          </td>
+                          <td className="py-3 px-4 text-slate-600">Certificate of Incorporation from country of origin, Notarized documents, Parent LEI</td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
                 </div>
 
-                {/* Section 6: Step-by-Step Registration Process */}
+                {/* Section 7: Process of LEI Application */}
                 <div className="border-t border-slate-100 pt-6">
-                  <h3 className="text-[17px] font-normal text-[#12023B] mb-3">
-                    Step-by-Step LEI Registration Process with Merrafilings
-                  </h3>
-                  <div className="space-y-3">
-                    {[
-                      {
-                        step: "Step 1",
-                        title: "Document Collection & Pre-Verification",
-                        desc: "Our legal officers verify your incorporation certificate, PAN card, audited balance sheets, and ensure the official legal name exactly matches government registries.",
-                      },
-                      {
-                        step: "Step 2",
-                        title: "Drafting Board Resolution & Power of Attorney",
-                        desc: "We draft the formal Board Resolution authorizing the application and designated signatory to ensure 100% compliance with LOU regulatory norms.",
-                      },
-                      {
-                        step: "Step 3",
-                        title: "Online Filing on Accredited CCIL / LOU Portal",
-                        desc: "Our team enters verified Level 1 reference data (name, legal address, headquarters) and Level 2 parent structure data into the official registry.",
-                      },
-                      {
-                        step: "Step 4",
-                        title: "LOU Validation & 20-Digit LEI Issuance",
-                        desc: "The issuing authority verifies the submitted records against the MCA / Income Tax databases and assigns your unique 20-character LEI code.",
-                      },
-                      {
-                        step: "Step 5",
-                        title: "Global GLEIF Publication & Certificate Download",
-                        desc: "Your LEI code is published on the international GLEIF registry and your official PDF certificate is sent instantly for bank submission.",
-                      },
-                    ].map((st, idx) => (
-                      <div key={idx} className="flex gap-4 p-4 rounded-xl border border-slate-100 bg-[#FAF9F7]/40">
-                        <span className="font-semibold text-xs text-[#6B4BFF] uppercase tracking-wider shrink-0 mt-0.5">
-                          {st.step}
-                        </span>
-                        <div>
-                          <div className="font-medium text-[13.5px] text-slate-800">{st.title}</div>
-                          <div className="text-[12.5px] font-light text-slate-600 mt-1 leading-relaxed">{st.desc}</div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                  <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
+                    Step-by-Step LEI Application Process
+                  </h2>
+                  <ol className="list-decimal list-inside space-y-2 text-[13px] font-light text-slate-600 mb-4">
+                    <li><strong>Pre-Verification:</strong> Legal experts verify your entity registration documents and legal name</li>
+                    <li><strong>Drafting Resolution:</strong> Preparation of formal Board Resolution authorizing designated applicant</li>
+                    <li><strong>Online Application:</strong> Entering verified Level 1 reference data and Level 2 corporate ownership details</li>
+                    <li><strong>Document Upload:</strong> Uploading audited balance sheets and authorized signatory KYC</li>
+                    <li><strong>LOU Validation:</strong> Clearing Corporation of India (CCIL) verifies data against government registries</li>
+                    <li><strong>LEI Issuance:</strong> 20-digit LEI code is generated and published in the global GLEIF database</li>
+                  </ol>
+                </div>
+
+                {/* Section 8: Validity and Renewal */}
+                <div className="border-t border-slate-100 pt-6">
+                  <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
+                    What is the Renewal and Validity of LEI Code in India?
+                  </h2>
+                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                    An LEI number validity period is typically one year from the date of issuance. Entities must ensure timely renewal to maintain an active LEI status in the global LEI database. An expired LEI can result in transaction rejections and regulatory non-compliance penalties imposed by the RBI.
+                  </p>
                 </div>
               </article>
             </div>
 
-            {/* Right 4 Columns: Sticky Sidebar */}
-            <div className="lg:col-span-4 space-y-6 lg:sticky lg:top-24">
+            {/* Right Sticky Sidebar */}
+            <div className="space-y-6 lg:sticky lg:top-24">
               {/* Consult Experts Card with 3 Avatars */}
               <div
-                onClick={() => setIsContactOpen(true)}
+                onClick={() => setContactOpen(true)}
                 className="bg-white rounded-2xl border border-slate-200/80 shadow-2xs hover:shadow-xs p-4 flex items-center justify-between transition-all cursor-pointer group"
               >
                 <div className="flex items-center gap-3">
@@ -1185,7 +1195,7 @@ export default function LeiCodePage() {
                     />
                   </div>
                   <span className="text-[14px] font-normal text-slate-800">
-                    Consult <span className="text-[#155EEF] font-normal">LEI Experts</span>
+                    Consult <span className="text-[#155EEF] font-normal">Experts</span>
                   </span>
                 </div>
                 <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-[#155EEF] transition-colors" />
@@ -1218,7 +1228,7 @@ export default function LeiCodePage() {
                 </div>
               </div>
 
-              {/* State-wise Directory Dropdown */}
+              {/* LEI Code by State Directory */}
               <div className="bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden border-t-2 border-t-emerald-400">
                 <div className="p-4 border-b border-slate-100 flex items-center justify-between">
                   <span className="font-normal text-[14px] text-slate-800">LEI Registration by State</span>
@@ -1249,15 +1259,15 @@ export default function LeiCodePage() {
         </div>
       </section>
 
-      {/* 2-Column FAQ Section */}
-      <section id="faqs" className="py-14 sm:py-16 bg-white border-t border-slate-200/70">
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 2-Column FAQ Section matching reference screenshot */}
+      <section id="faqs" className="py-14 sm:py-16 bg-white border-t border-slate-100">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="w-12 h-[3px] bg-[#00A86B] mb-3" />
           <h2 className="text-2xl sm:text-[28px] font-normal text-[#111827]">
-            Frequently Asked Questions
+            Frequently asked questions
           </h2>
           <p className="text-[13px] sm:text-[13.5px] font-light text-slate-500 mt-1.5 mb-8">
-            Essential queries about Legal Entity Identifier (LEI) Code registration, RBI rules, validity, and renewal in India.
+            Common questions about Legal Entity Identifier (LEI) Code Registration Starting at ₹4,899 in India.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
@@ -1332,7 +1342,7 @@ export default function LeiCodePage() {
             </div>
           </div>
 
-          {/* Load More Button */}
+          {/* Load more questions button */}
           <div className="text-center mt-9 mb-14">
             <button
               type="button"
@@ -1343,10 +1353,10 @@ export default function LeiCodePage() {
             </button>
           </div>
 
-          {/* Related Services Tags */}
+          {/* Related Services Card */}
           <div className="bg-white rounded-2xl border border-slate-200/90 shadow-2xs p-5 sm:p-6 mb-6">
             <h3 className="font-normal text-[15px] sm:text-[16px] text-slate-800 mb-4">
-              Related Services — Corporate &amp; Financial Compliance
+              Related Services - Business Registration
             </h3>
             <div className="flex flex-wrap gap-2 sm:gap-2.5">
               {RELATED_SERVICES_TAGS.map((tag, idx) => (
@@ -1361,7 +1371,7 @@ export default function LeiCodePage() {
             </div>
           </div>
 
-          {/* Popular Searches Tags */}
+          {/* Popular Searches Card */}
           <div className="bg-white rounded-2xl border border-slate-200/90 shadow-2xs p-5 sm:p-6 mb-6">
             <h3 className="font-normal text-[15px] sm:text-[16px] text-slate-800 mb-4">
               Popular Searches
@@ -1384,7 +1394,7 @@ export default function LeiCodePage() {
       {/* Floating Live Chat Button */}
       <div className="fixed bottom-6 right-6 z-40">
         <button
-          onClick={() => setIsContactOpen(true)}
+          onClick={() => setContactOpen(true)}
           className="inline-flex items-center gap-2 px-4.5 py-2.5 rounded-full bg-[#00BF72] hover:bg-[#00AB66] text-white font-medium text-[13.5px] shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5 cursor-pointer"
         >
           <MessageCircle className="w-4.5 h-4.5 fill-white text-[#00BF72]" />
@@ -1394,13 +1404,13 @@ export default function LeiCodePage() {
 
       {/* Global Modals */}
       <ServiceSearchModal
-        isOpen={isSearchOpen}
-        onClose={() => setIsSearchOpen(false)}
-        onSelectService={() => setIsContactOpen(true)}
+        isOpen={searchOpen}
+        onClose={() => setSearchOpen(false)}
+        onSelectService={() => setContactOpen(true)}
       />
       <ContactModal
-        isOpen={isContactOpen}
-        onClose={() => setIsContactOpen(false)}
+        isOpen={contactOpen}
+        onClose={() => setContactOpen(false)}
         serviceTitle="Legal Entity Identifier (LEI) Code Registration"
       />
 
