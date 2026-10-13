@@ -9,8 +9,8 @@ export default function Footer() {
       title: "Start a Business",
       links: [
         { name: "Private Limited Company", href: "#pvt-ltd" },
-        { name: "One Person Company (OPC)", href: "#opc" },
-        { name: "Limited Liability Partnership", href: "#llp" },
+        { name: "One Person Company (OPC)", href: "/one-person-company" },
+        { name: "Limited Liability Partnership", href: "/llp-registration" },
         { name: "Section 8 Non-Profit", href: "/section-8-company-registration" },
         { name: "Partnership Firm", href: "/partnership" },
         { name: "Sole Proprietorship", href: "/proprietorship" },
