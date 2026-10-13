@@ -141,11 +141,11 @@ export default function AIComplianceCloud({ onExplore, onBookDemo }: AIComplianc
 
           {/* Right Column: AI Compliance Cloud Interactive Diagram (Matching Screenshot 2) */}
           <div className="lg:col-span-7">
-            <div className="relative bg-[#F8FAFC] rounded-3xl border border-[#E4E7EC] p-6 sm:p-8 md:p-10 shadow-xs overflow-hidden min-h-[460px] flex items-center">
+            <div className="relative bg-[#F8FAFC] rounded-3xl border border-[#E4E7EC] p-6 sm:p-8 md:p-10 shadow-xs overflow-hidden min-h-[480px] flex flex-col justify-between">
               {/* Radial gradient background flair */}
               <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-72 h-72 bg-[#155EEF]/5 rounded-full blur-3xl pointer-events-none" />
 
-              <div className="relative w-full flex flex-col md:flex-row items-center justify-between gap-6 md:gap-3 py-2">
+              <div className="relative w-full flex flex-col md:flex-row items-center justify-between gap-6 md:gap-3 py-2 my-auto">
                 
                 {/* Center Hub: Dark box "MerraFilings AI COMPLIANCE CLOUD" */}
                 <div className="flex flex-col items-center justify-center shrink-0">
@@ -290,15 +290,22 @@ export default function AIComplianceCloud({ onExplore, onBookDemo }: AIComplianc
                         key={node.id}
                         onMouseEnter={() => setActiveNode(i)}
                         onMouseLeave={() => setActiveNode(null)}
-                        className={`relative h-[48px] bg-white rounded-2xl border px-3.5 flex items-center justify-between transition-all duration-200 cursor-pointer shadow-2xs ${
+                        className={`relative h-[48px] bg-white rounded-2xl border px-3.5 flex items-center justify-between transition-all duration-200 cursor-pointer shadow-2xs group ${
                           isActive
-                            ? "border-[#155EEF] shadow-md -translate-x-1"
+                            ? "shadow-md -translate-x-1.5"
                             : "border-[#E4E7EC] hover:border-[#CBD5E1]"
                         }`}
+                        style={{
+                          borderColor: isActive ? node.color : undefined,
+                          boxShadow: isActive ? `0 6px 16px -2px ${node.color}25` : undefined,
+                          backgroundColor: isActive ? `${node.color}06` : '#FFFFFF',
+                        }}
                       >
                         <div className="flex items-center gap-3 min-w-0">
                           <div
-                            className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 transition-transform group-hover:scale-105"
+                            className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 transition-transform duration-200 ${
+                              isActive ? "scale-110" : "group-hover:scale-105"
+                            }`}
                             style={{
                               backgroundColor: `${node.color}15`,
                               color: node.color,
@@ -307,24 +314,53 @@ export default function AIComplianceCloud({ onExplore, onBookDemo }: AIComplianc
                             <Icon className="w-4 h-4" />
                           </div>
                           <div className="min-w-0 flex-1">
-                            <span className="block text-[13.5px] font-semibold text-[#111827] truncate">
+                            <span
+                              className="block text-[13.5px] font-semibold truncate transition-colors duration-200"
+                              style={{ color: isActive ? node.color : '#111827' }}
+                            >
                               {node.title}
                             </span>
                           </div>
                         </div>
 
-                        {/* Interactive Tooltip on hover */}
-                        {isActive && (
-                          <div className="absolute top-full left-0 right-0 mt-1 z-20 bg-[#111827] text-white rounded-lg p-2 text-[11px] shadow-lg animate-in fade-in duration-150">
-                            <p className="font-semibold text-[#38BDF8]">{node.tag}</p>
-                            <p className="text-[#E2E8F0] mt-0.5">{node.detail}</p>
-                          </div>
-                        )}
+                        {/* Subtle Active Indicator Arrow in Matching Color */}
+                        <div className="flex items-center gap-1 shrink-0">
+                          <ArrowRight
+                            className={`w-3.5 h-3.5 transition-all duration-200 ${
+                              isActive ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1"
+                            }`}
+                            style={{ color: node.color }}
+                          />
+                        </div>
                       </div>
                     );
                   })}
                 </div>
 
+              </div>
+
+              {/* Bottom Live Stream Intelligence Bar */}
+              <div className="w-full shrink-0 mt-5 pt-3.5 border-t border-[#E4E7EC] flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+                {activeNode !== null ? (
+                  <div className="flex items-center gap-2 min-w-0 sm:flex-1 animate-in fade-in duration-150">
+                    <span
+                      className="w-2 h-2 rounded-full animate-pulse shrink-0"
+                      style={{ backgroundColor: nodes[activeNode].color }}
+                    />
+                    <span className="font-semibold text-[#111827] shrink-0">{nodes[activeNode].title}:</span>
+                    <span className="text-slate-600 font-light truncate min-w-0">{nodes[activeNode].detail}</span>
+                  </div>
+                ) : (
+                  <div className="flex items-center gap-2 text-slate-400 font-light min-w-0 sm:flex-1">
+                    <Sparkles className="w-3.5 h-3.5 text-[#155EEF] shrink-0" />
+                    <span className="truncate">Hover over any compliance channel to inspect live statutory pipelines &amp; integrations</span>
+                  </div>
+                )}
+                <div className="shrink-0 flex items-center gap-2 self-start sm:self-auto">
+                  <span className="text-[10.5px] font-mono px-2 py-0.5 rounded-full bg-slate-200/70 text-slate-700">
+                    {activeNode !== null ? nodes[activeNode].tag : "Direct API Sync"}
+                  </span>
+                </div>
               </div>
             </div>
           </div>
