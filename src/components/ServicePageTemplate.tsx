@@ -22,7 +22,829 @@ import {
   Clock,
   Globe2,
   Lock,
+  ArrowUpRight,
+  CheckCircle2,
+  Scale,
+  Receipt,
+  FileCheck,
+  Briefcase,
+  Zap,
+  TrendingUp,
+  Star,
+  BadgePercent,
+  Activity,
+  Laptop,
+  Store,
+  Layers,
 } from "lucide-react";
+
+export interface SpotlightCardItem {
+  icon: React.ReactNode;
+  iconBg: string;
+  iconColor: string;
+  hoverBorder: string;
+  title: string;
+  desc: string;
+}
+
+export interface ServiceSpotlightData {
+  mandatoryTag: string;
+  mandatoryTitle: string;
+  mandatorySubtitle: string;
+  mandatoryItems: SpotlightCardItem[];
+  chooseTag: string;
+  chooseTitle: string;
+  chooseSubtitle: string;
+  chooseItems: SpotlightCardItem[];
+  dashboardMetric1: { label: string; value: string };
+  dashboardMetric2: { label: string; value: string };
+  dashboardSteps: string[];
+}
+
+export function getServiceSpotlightData(breadcrumbCurrent: string, badgeText?: string): ServiceSpotlightData {
+  const b = (breadcrumbCurrent || "").toLowerCase();
+
+  // 1. Professional Tax
+  if (b.includes("professional tax")) {
+    return {
+      mandatoryTag: "STATUTORY STATE TAX MANDATE",
+      mandatoryTitle: "Why Professional Tax Registration is Mandatory for Businesses?",
+      mandatorySubtitle: "Mandatory state-level tax compliance for employers and practicing professionals to ensure lawful salary disbursement and statutory returns.",
+      dashboardMetric1: { label: "Processing SLA", value: "3 - 5 Days" },
+      dashboardMetric2: { label: "Approval Rate", value: "99.8%" },
+      dashboardSteps: [
+        "Jurisdiction & Certificate Classification (PTRC / PTEC)",
+        "State Commercial Tax Portal Profile Lodgement",
+        "Official Registration Certificate Issuance"
+      ],
+      mandatoryItems: [
+        {
+          icon: <Receipt className="w-5 h-5" />,
+          iconBg: "bg-emerald-50",
+          iconColor: "text-emerald-600",
+          hoverBorder: "hover:border-emerald-500",
+          title: "Mandatory State Tax Compliance",
+          desc: "Professional Tax registration (PTRC / PTEC) is legally compulsory for employers and practicing professionals across applicable states."
+        },
+        {
+          icon: <Briefcase className="w-5 h-5" />,
+          iconBg: "bg-blue-50",
+          iconColor: "text-blue-600",
+          hoverBorder: "hover:border-blue-500",
+          title: "Required for Payroll Processing",
+          desc: "Essential for legal salary structuring, monthly employee wage deductions, and remitting timely state challans."
+        },
+        {
+          icon: <Scale className="w-5 h-5" />,
+          iconBg: "bg-amber-50",
+          iconColor: "text-amber-600",
+          hoverBorder: "hover:border-amber-500",
+          title: "Avoid Heavy State Tax Penalties",
+          desc: "Non-registration incurs steep statutory fines up to ₹5/day and 1.25% monthly interest on overdue tax liabilities."
+        },
+        {
+          icon: <FileCheck className="w-5 h-5" />,
+          iconBg: "bg-indigo-50",
+          iconColor: "text-indigo-600",
+          hoverBorder: "hover:border-indigo-500",
+          title: "Prerequisite for Commercial Licenses",
+          desc: "Compulsory prerequisite for Municipal Trade Licenses, Shop & Establishment permits, and corporate bank accounts."
+        }
+      ],
+      chooseTag: "THE MERRAFILINGS ADVANTAGE",
+      chooseTitle: "Why Choose Merrafilings for Professional Tax?",
+      chooseSubtitle: "Merrafilings – India's trusted corporate compliance cloud & regulatory advisory platform.",
+      chooseItems: [
+        {
+          icon: <Users className="w-5 h-5" />,
+          iconBg: "bg-blue-50",
+          iconColor: "text-blue-600",
+          hoverBorder: "hover:border-blue-500",
+          title: "Trusted by 100,000+ Businesses",
+          desc: "Dedicated assistance for corporate employers, LLP partners, directors, and independent medical/legal practitioners."
+        },
+        {
+          icon: <ShieldCheck className="w-5 h-5" />,
+          iconBg: "bg-emerald-50",
+          iconColor: "text-emerald-600",
+          hoverBorder: "hover:border-emerald-500",
+          title: "State-Wise Compliance Experts",
+          desc: "Dedicated tax advocates ensuring accurate slab mapping across Maharashtra, Karnataka, West Bengal, Tamil Nadu & more."
+        },
+        {
+          icon: <Zap className="w-5 h-5" />,
+          iconBg: "bg-purple-50",
+          iconColor: "text-purple-600",
+          hoverBorder: "hover:border-purple-500",
+          title: "Online Compliance Dashboard",
+          desc: "Track PTRC / PTEC application status, download e-certificates, and automate monthly challans directly online."
+        },
+        {
+          icon: <TrendingUp className="w-5 h-5" />,
+          iconBg: "bg-amber-50",
+          iconColor: "text-amber-600",
+          hoverBorder: "hover:border-amber-500",
+          title: "Transparent Fixed Pricing",
+          desc: "Affordable upfront quotes with 100% money-back service guarantee and zero unexpected department liaison fees."
+        }
+      ]
+    };
+  }
+
+  // 2. ESI Registration
+  if (b.includes("esi")) {
+    return {
+      mandatoryTag: "COMPULSORY LABOUR LAW SOCIAL SECURITY",
+      mandatoryTitle: "Why ESI Registration is Mandatory for Employers?",
+      mandatorySubtitle: "Statutory social security mandate under the ESI Act for all commercial establishments and factories with 10 or more workers.",
+      dashboardMetric1: { label: "ESIC Code Allotment", value: "2 - 3 Days" },
+      dashboardMetric2: { label: "Worker Coverage", value: "100% Insured" },
+      dashboardSteps: [
+        "Shram Suvidha Profile & Statutory Form 1 Lodgement",
+        "DSC Digital Authentication & Officer Verification",
+        "17-Digit Employer Code & Pehchan Card Delivery"
+      ],
+      mandatoryItems: [
+        {
+          icon: <ShieldCheck className="w-5 h-5" />,
+          iconBg: "bg-emerald-50",
+          iconColor: "text-emerald-600",
+          hoverBorder: "hover:border-emerald-500",
+          title: "Mandatory Social Security Coverage",
+          desc: "Compulsory under Section 2A of the ESI Act for all factories and establishments with 10+ employees earning up to ₹21,000/mo."
+        },
+        {
+          icon: <Activity className="w-5 h-5" />,
+          iconBg: "bg-blue-50",
+          iconColor: "text-blue-600",
+          hoverBorder: "hover:border-blue-500",
+          title: "Complete Medical & Sickness Benefits",
+          desc: "Provides full medical outpatient cover, sickness cash compensation, maternity benefits, and disability pension for your staff."
+        },
+        {
+          icon: <Scale className="w-5 h-5" />,
+          iconBg: "bg-purple-50",
+          iconColor: "text-purple-600",
+          hoverBorder: "hover:border-purple-500",
+          title: "Total Employer Legal Immunity",
+          desc: "Under Section 53, registered employers are fully shielded from tort damages and Employee Compensation Act lawsuits."
+        },
+        {
+          icon: <Receipt className="w-5 h-5" />,
+          iconBg: "bg-rose-50",
+          iconColor: "text-rose-600",
+          hoverBorder: "hover:border-rose-500",
+          title: "Avoid 12% Interest & Damages",
+          desc: "Unregistered employers face 12% annual interest, damages up to 25%, and criminal prosecution under Section 85."
+        }
+      ],
+      chooseTag: "THE MERRAFILINGS ADVANTAGE",
+      chooseTitle: "Why Choose Merrafilings for ESI Registration?",
+      chooseSubtitle: "Merrafilings – India's trusted labour law compliance partner for over 25,000+ registered employers.",
+      chooseItems: [
+        {
+          icon: <Zap className="w-5 h-5" />,
+          iconBg: "bg-blue-50",
+          iconColor: "text-blue-600",
+          hoverBorder: "hover:border-blue-500",
+          title: "17-Digit Code in 48-72 Hours",
+          desc: "Direct Shram Suvidha API integration ensuring rapid code generation without visiting ESIC branch offices."
+        },
+        {
+          icon: <Users className="w-5 h-5" />,
+          iconBg: "bg-emerald-50",
+          iconColor: "text-emerald-600",
+          hoverBorder: "hover:border-emerald-500",
+          title: "Pehchan Smart Card Enrollment",
+          desc: "Complete roster onboarding support to generate individual Insurance Numbers and downloadable Pehchan smart identity cards."
+        },
+        {
+          icon: <FileCheck className="w-5 h-5" />,
+          iconBg: "bg-purple-50",
+          iconColor: "text-purple-600",
+          hoverBorder: "hover:border-purple-500",
+          title: "Monthly ECR Return & Challan Engine",
+          desc: "Automated wage ledger calculations to file monthly contributions smoothly before the 15th statutory deadline."
+        },
+        {
+          icon: <Award className="w-5 h-5" />,
+          iconBg: "bg-amber-50",
+          iconColor: "text-amber-600",
+          hoverBorder: "hover:border-amber-500",
+          title: "Dedicated Labour Law Consultant",
+          desc: "Assigned compliance officer to handle ESIC inspections, C-18 notices, and annual record maintenance."
+        }
+      ]
+    };
+  }
+
+  // 3. FSSAI Registration / Food License
+  if (b.includes("fssai")) {
+    return {
+      mandatoryTag: "MANDATORY FOOD SAFETY & STANDARDS COMPLIANCE",
+      mandatoryTitle: "Why FSSAI Registration is Mandatory for Food Businesses?",
+      mandatorySubtitle: "Statutory 14-digit food safety license under the FSS Act, 2006 for all food business operators (FBOs) manufacturing, handling, or selling food.",
+      dashboardMetric1: { label: "FoSCoS Approval SLA", value: "3 - 7 Days" },
+      dashboardMetric2: { label: "First-Time Pass Rate", value: "99.4%" },
+      dashboardSteps: [
+        "Food Category Selection & Kitchen Layout Vetting",
+        "FoSCoS Central Server Application Lodgement",
+        "14-Digit FSSAI Certificate Issuance & E-Locker Deposit"
+      ],
+      mandatoryItems: [
+        {
+          icon: <FileCheck className="w-5 h-5" />,
+          iconBg: "bg-emerald-50",
+          iconColor: "text-emerald-600",
+          hoverBorder: "hover:border-emerald-500",
+          title: "Statutory Legal Requirement",
+          desc: "Section 31 of the FSS Act makes it illegal to operate any food business without an active FSSAI registration or license."
+        },
+        {
+          icon: <Briefcase className="w-5 h-5" />,
+          iconBg: "bg-blue-50",
+          iconColor: "text-blue-600",
+          hoverBorder: "hover:border-blue-500",
+          title: "Mandatory for Swiggy & Zomato",
+          desc: "Non-negotiable requirement for listing on food delivery platforms, cloud kitchen marketplaces, and quick-commerce apps."
+        },
+        {
+          icon: <ShieldCheck className="w-5 h-5" />,
+          iconBg: "bg-purple-50",
+          iconColor: "text-purple-600",
+          hoverBorder: "hover:border-purple-500",
+          title: "Builds Consumer Trust & Hygiene Seal",
+          desc: "Printing the 14-digit FSSAI logo on product packaging and menus reassures consumers of verified food safety."
+        },
+        {
+          icon: <Scale className="w-5 h-5" />,
+          iconBg: "bg-amber-50",
+          iconColor: "text-amber-600",
+          hoverBorder: "hover:border-amber-500",
+          title: "Avoid ₹5 Lakh Fine & Imprisonment",
+          desc: "Operating without FSSAI attracts severe penalties up to ₹5,00,000, shop sealing, and up to 6 months imprisonment."
+        }
+      ],
+      chooseTag: "THE MERRAFILINGS ADVANTAGE",
+      chooseTitle: "Why Choose Merrafilings for FSSAI?",
+      chooseSubtitle: "Merrafilings – trusted food safety compliance partner for 40,000+ restaurants and food startups.",
+      chooseItems: [
+        {
+          icon: <Zap className="w-5 h-5" />,
+          iconBg: "bg-blue-50",
+          iconColor: "text-blue-600",
+          hoverBorder: "hover:border-blue-500",
+          title: "100% Online FoSCoS Portal Filing",
+          desc: "Direct submission on the central Food Safety Compliance System with zero visits to municipal health wards."
+        },
+        {
+          icon: <Award className="w-5 h-5" />,
+          iconBg: "bg-emerald-50",
+          iconColor: "text-emerald-600",
+          hoverBorder: "hover:border-emerald-500",
+          title: "Precision License Classification",
+          desc: "Expert guidance between Basic Registration (under ₹12L turnover), State License, and Central License categories."
+        },
+        {
+          icon: <FileCheck className="w-5 h-5" />,
+          iconBg: "bg-purple-50",
+          iconColor: "text-purple-600",
+          hoverBorder: "hover:border-purple-500",
+          title: "Guaranteed Dossier Review",
+          desc: "Thorough vetting of kitchen floorplans, water test reports, and food category codes to eliminate query notices."
+        },
+        {
+          icon: <TrendingUp className="w-5 h-5" />,
+          iconBg: "bg-amber-50",
+          iconColor: "text-amber-600",
+          hoverBorder: "hover:border-amber-500",
+          title: "Automated Renewal Tracking",
+          desc: "Proactive renewal alerts to prevent the ₹100/day late filing penalty before license expiration."
+        }
+      ]
+    };
+  }
+
+  // 4. ISO Registration
+  if (b.includes("iso")) {
+    return {
+      mandatoryTag: "INTERNATIONAL QUALITY & SECURITY BENCHMARK",
+      mandatoryTitle: "Why ISO Certification is Crucial for Growing Enterprises?",
+      mandatorySubtitle: "Internationally recognized quality management certification (ISO 9001, 27001, 14001) that validates enterprise capability.",
+      dashboardMetric1: { label: "Turnaround Time", value: "3 - 5 Days" },
+      dashboardMetric2: { label: "Global Validity", value: "160+ Countries" },
+      dashboardSteps: [
+        "Gap Analysis & Quality SOP Manual Preparation",
+        "Internal Audit & Stage 1/2 Assessment Review",
+        "Accredited ISO Certificate Issuance & QR Validation"
+      ],
+      mandatoryItems: [
+        {
+          icon: <Award className="w-5 h-5" />,
+          iconBg: "bg-emerald-50",
+          iconColor: "text-emerald-600",
+          hoverBorder: "hover:border-emerald-500",
+          title: "Mandatory for Govt & Global Tenders",
+          desc: "Compulsory pre-qualification criterion for bidding on PSU tenders, defense contracts, and global corporate RFPs."
+        },
+        {
+          icon: <Globe2 className="w-5 h-5" />,
+          iconBg: "bg-blue-50",
+          iconColor: "text-blue-600",
+          hoverBorder: "hover:border-blue-500",
+          title: "International Credibility & Trust",
+          desc: "Demonstrates world-class operational standards, risk management, and quality control valid across 160+ countries."
+        },
+        {
+          icon: <Building className="w-5 h-5" />,
+          iconBg: "bg-purple-50",
+          iconColor: "text-purple-600",
+          hoverBorder: "hover:border-purple-500",
+          title: "Enterprise & MNC Vendor Onboarding",
+          desc: "Mandatory requirement demanded by tier-1 banks, insurance firms, and multinationals before signing vendor agreements."
+        },
+        {
+          icon: <TrendingUp className="w-5 h-5" />,
+          iconBg: "bg-amber-50",
+          iconColor: "text-amber-600",
+          hoverBorder: "hover:border-amber-500",
+          title: "Reduces Operational Errors & Waste",
+          desc: "Streamlines internal business processes, reduces operational defects, and elevates workforce productivity."
+        }
+      ],
+      chooseTag: "THE MERRAFILINGS ADVANTAGE",
+      chooseTitle: "Why Choose Merrafilings for ISO Certification?",
+      chooseSubtitle: "Merrafilings – India's accredited corporate certification advisory for fast-growing businesses.",
+      chooseItems: [
+        {
+          icon: <ShieldCheck className="w-5 h-5" />,
+          iconBg: "bg-blue-50",
+          iconColor: "text-blue-600",
+          hoverBorder: "hover:border-blue-500",
+          title: "IAF & Internationally Accredited Bodies",
+          desc: "Choice of recognized certification bodies with QR-code verifiable certificates for instant global verification."
+        },
+        {
+          icon: <FileText className="w-5 h-5" />,
+          iconBg: "bg-emerald-50",
+          iconColor: "text-emerald-600",
+          hoverBorder: "hover:border-emerald-500",
+          title: "Turnkey SOP & Audit Documentation",
+          desc: "Expert lead auditors draft your complete quality policy manual, audit checklist, and management reviews."
+        },
+        {
+          icon: <Zap className="w-5 h-5" />,
+          iconBg: "bg-purple-50",
+          iconColor: "text-purple-600",
+          hoverBorder: "hover:border-purple-500",
+          title: "Fast-Track 3-Day Delivery",
+          desc: "Digital certification workflow with fast turnaround and verifiable online validation for tight tender timelines."
+        },
+        {
+          icon: <Clock className="w-5 h-5" />,
+          iconBg: "bg-amber-50",
+          iconColor: "text-amber-600",
+          hoverBorder: "hover:border-amber-500",
+          title: "Continuous Surveillance Support",
+          desc: "Annual surveillance audit handholding to ensure your certification remains compliant throughout its 3-year validity."
+        }
+      ]
+    };
+  }
+
+  // 5. Trade License
+  if (b.includes("trade")) {
+    return {
+      mandatoryTag: "MUNICIPAL CORPORATION STATUTORY COMPLIANCE",
+      mandatoryTitle: "Why Municipal Trade License is Mandatory for Commercial Premises?",
+      mandatorySubtitle: "Statutory municipal permit required before commencing any commercial, manufacturing, or service operation within municipal limits.",
+      dashboardMetric1: { label: "Ward Approval SLA", value: "5 - 7 Days" },
+      dashboardMetric2: { label: "Municipal Coverage", value: "Pan-India" },
+      dashboardSteps: [
+        "Premises & Property Tax Document Audit",
+        "Ward Portal Application & Inspection Liaison",
+        "Official Municipal Trade License Issuance"
+      ],
+      mandatoryItems: [
+        {
+          icon: <Building className="w-5 h-5" />,
+          iconBg: "bg-emerald-50",
+          iconColor: "text-emerald-600",
+          hoverBorder: "hover:border-emerald-500",
+          title: "Mandatory Municipal Authorization",
+          desc: "Legally required under state municipal corporation acts before operating any retail, manufacturing, or commercial space."
+        },
+        {
+          icon: <ShieldCheck className="w-5 h-5" />,
+          iconBg: "bg-blue-50",
+          iconColor: "text-blue-600",
+          hoverBorder: "hover:border-blue-500",
+          title: "Health, Safety & Fire Clearance",
+          desc: "Formally validates that your commercial premise conforms to municipal health bylaws and fire safety norms."
+        },
+        {
+          icon: <Receipt className="w-5 h-5" />,
+          iconBg: "bg-purple-50",
+          iconColor: "text-purple-600",
+          hoverBorder: "hover:border-purple-500",
+          title: "Required for Current Accounts & Loans",
+          desc: "Essential proof of legitimate commercial location demanded by banks, NBFCs, and payment gateway providers."
+        },
+        {
+          icon: <Scale className="w-5 h-5" />,
+          iconBg: "bg-amber-50",
+          iconColor: "text-amber-600",
+          hoverBorder: "hover:border-amber-500",
+          title: "Prevent Premature Shop Sealing",
+          desc: "Operating without a trade license attracts immediate municipal sealing orders, heavy daily fines, and closure notices."
+        }
+      ],
+      chooseTag: "THE MERRAFILINGS ADVANTAGE",
+      chooseTitle: "Why Choose Merrafilings for Trade License?",
+      chooseSubtitle: "Merrafilings – Pan-India municipal compliance specialists for retail and commercial enterprises.",
+      chooseItems: [
+        {
+          icon: <Building className="w-5 h-5" />,
+          iconBg: "bg-blue-50",
+          iconColor: "text-blue-600",
+          hoverBorder: "hover:border-blue-500",
+          title: "Pan-India Municipal Coverage",
+          desc: "Deep expertise across civic corporations in Mumbai (BMC), Delhi (MCD), Bengaluru (BBMP), Chennai, and Kolkata."
+        },
+        {
+          icon: <FileCheck className="w-5 h-5" />,
+          iconBg: "bg-emerald-50",
+          iconColor: "text-emerald-600",
+          hoverBorder: "hover:border-emerald-500",
+          title: "Property & Zonal Compliance Audit",
+          desc: "Verification of property tax receipts, commercial occupancy NOCs, and master plan zoning rules."
+        },
+        {
+          icon: <Zap className="w-5 h-5" />,
+          iconBg: "bg-purple-50",
+          iconColor: "text-purple-600",
+          hoverBorder: "hover:border-purple-500",
+          title: "100% Online Hassle-Free Filing",
+          desc: "We handle the entire ward-level liaison and sanitary inspection coordination digitally."
+        },
+        {
+          icon: <Clock className="w-5 h-5" />,
+          iconBg: "bg-amber-50",
+          iconColor: "text-amber-600",
+          hoverBorder: "hover:border-amber-500",
+          title: "Annual Renewal Management",
+          desc: "Automated advance renewal alerts so your municipal trade license never lapses into late penalty surcharges."
+        }
+      ]
+    };
+  }
+
+  // 6. Startup India
+  if (b.includes("startup")) {
+    return {
+      mandatoryTag: "GOVERNMENT OF INDIA DPIIT RECOGNITION",
+      mandatoryTitle: "Why DPIIT Startup India Recognition is Crucial for New Ventures?",
+      mandatorySubtitle: "Official recognition unlocking 3-year income tax holiday, angel tax exemption, and public procurement benefits.",
+      dashboardMetric1: { label: "DPIIT Certificate SLA", value: "2 - 4 Days" },
+      dashboardMetric2: { label: "Success Rate", value: "98.4%" },
+      dashboardSteps: [
+        "Innovation Narrative & Incorporation Charter Review",
+        "DPIIT National Portal Registration & Upload",
+        "Official Startup India Certificate & Tax Holiday Filing"
+      ],
+      mandatoryItems: [
+        {
+          icon: <Award className="w-5 h-5" />,
+          iconBg: "bg-emerald-50",
+          iconColor: "text-emerald-600",
+          hoverBorder: "hover:border-emerald-500",
+          title: "Section 80-IAC 3-Year 100% Tax Holiday",
+          desc: "Eligible startups can claim 100% tax exemption on profits for 3 consecutive financial years."
+        },
+        {
+          icon: <ShieldCheck className="w-5 h-5" />,
+          iconBg: "bg-blue-50",
+          iconColor: "text-blue-600",
+          hoverBorder: "hover:border-blue-500",
+          title: "Complete Angel Tax Exemption",
+          desc: "Section 56(2)(viib) exemption protects early-stage equity funding raised above fair market value from taxation."
+        },
+        {
+          icon: <Briefcase className="w-5 h-5" />,
+          iconBg: "bg-purple-50",
+          iconColor: "text-purple-600",
+          hoverBorder: "hover:border-purple-500",
+          title: "Exemption in Government Tenders",
+          desc: "Relaxed public procurement norms with complete exemption from prior turnover, prior experience, and EMD deposits."
+        },
+        {
+          icon: <TrendingUp className="w-5 h-5" />,
+          iconBg: "bg-amber-50",
+          iconColor: "text-amber-600",
+          hoverBorder: "hover:border-amber-500",
+          title: "80% Patent & 50% Trademark Rebates",
+          desc: "Massive statutory fee reductions and expedited examination for intellectual property registrations."
+        }
+      ],
+      chooseTag: "THE MERRAFILINGS ADVANTAGE",
+      chooseTitle: "Why Choose Merrafilings for Startup India?",
+      chooseSubtitle: "Merrafilings – India's #1 startup legal partner, helping 15,000+ startups obtain DPIIT certificates.",
+      chooseItems: [
+        {
+          icon: <Users className="w-5 h-5" />,
+          iconBg: "bg-blue-50",
+          iconColor: "text-blue-600",
+          hoverBorder: "hover:border-blue-500",
+          title: "Specialized Startup Legal Counsel",
+          desc: "Seasoned corporate lawyers craft your innovation pitch, business scalability model, and documentation."
+        },
+        {
+          icon: <Award className="w-5 h-5" />,
+          iconBg: "bg-emerald-50",
+          iconColor: "text-emerald-600",
+          hoverBorder: "hover:border-emerald-500",
+          title: "98.4% First-Time DPIIT Approval Rate",
+          desc: "Rigorous validation against innovation benchmarks to eliminate rejection risks on the national portal."
+        },
+        {
+          icon: <FileText className="w-5 h-5" />,
+          iconBg: "bg-purple-50",
+          iconColor: "text-purple-600",
+          hoverBorder: "hover:border-purple-500",
+          title: "Section 80-IAC Board Prep",
+          desc: "Guidance for presenting your pitch before the Inter-Ministerial Board for tax exemption clearance."
+        },
+        {
+          icon: <TrendingUp className="w-5 h-5" />,
+          iconBg: "bg-amber-50",
+          iconColor: "text-amber-600",
+          hoverBorder: "hover:border-amber-500",
+          title: "Seed Fund & Compliance Advisory",
+          desc: "End-to-end support for term sheets, SHA drafting, and Startup India Seed Fund Scheme applications."
+        }
+      ]
+    };
+  }
+
+  // 7. RCMC Registration
+  if (b.includes("rcmc")) {
+    return {
+      mandatoryTag: "FOREIGN TRADE POLICY (FTP) EXPORT MANDATE",
+      mandatoryTitle: "Why RCMC Registration is Essential for Exporters in India",
+      mandatorySubtitle: "Mandatory DGFT authorization connecting exporters with Export Promotion Councils to unlock duty incentives and export benefits.",
+      dashboardMetric1: { label: "Council SLA", value: "3 - 5 Days" },
+      dashboardMetric2: { label: "FTP Incentives", value: "100% Eligible" },
+      dashboardSteps: [
+        "Product ITC-HS Code & Appropriate EPC Selection",
+        "DGFT e-RCMC Portal Documentation & Application Lodgement",
+        "Council Verification & 5-Year RCMC Certificate Issuance"
+      ],
+      mandatoryItems: [
+        {
+          icon: <Award className="w-5 h-5" />,
+          iconBg: "bg-emerald-50",
+          iconColor: "text-emerald-600",
+          hoverBorder: "hover:border-emerald-500",
+          title: "Claim RoDTEP & Duty Drawback",
+          desc: "Mandatory prerequisite to claim export incentives, customs duty remissions, and RoDTEP financial benefits."
+        },
+        {
+          icon: <ShieldCheck className="w-5 h-5" />,
+          iconBg: "bg-blue-50",
+          iconColor: "text-blue-600",
+          hoverBorder: "hover:border-blue-500",
+          title: "Advance Authorization & EPCG Scheme",
+          desc: "Permits duty-free import of raw materials and capital goods for export manufacturing under DGFT foreign trade schemes."
+        },
+        {
+          icon: <Briefcase className="w-5 h-5" />,
+          iconBg: "bg-purple-50",
+          iconColor: "text-purple-600",
+          hoverBorder: "hover:border-purple-500",
+          title: "Export Restricted & Regulated Goods",
+          desc: "Legally authorizes your enterprise to trade in restricted goods specified in the Foreign Trade Policy."
+        },
+        {
+          icon: <TrendingUp className="w-5 h-5" />,
+          iconBg: "bg-amber-50",
+          iconColor: "text-amber-600",
+          hoverBorder: "hover:border-amber-500",
+          title: "Global Trade Delegations & Buyer Meets",
+          desc: "Gain privileged access to international buyer-seller meets, foreign trade delegations, and international expos."
+        }
+      ],
+      chooseTag: "THE MERRAFILINGS ADVANTAGE",
+      chooseTitle: "Why Choose Merrafilings for RCMC Registration?",
+      chooseSubtitle: "Merrafilings is India's leading foreign trade consultant, facilitating seamless EPC and FIEO registrations for exporters nationwide.",
+      chooseItems: [
+        {
+          icon: <Users className="w-5 h-5" />,
+          iconBg: "bg-blue-50",
+          iconColor: "text-blue-600",
+          hoverBorder: "hover:border-blue-500",
+          title: "Accurate EPC Jurisdiction Mapping",
+          desc: "Our trade experts map your business to the exact jurisdiction among 35 Export Promotion Councils, APEDA, or FIEO."
+        },
+        {
+          icon: <Award className="w-5 h-5" />,
+          iconBg: "bg-emerald-50",
+          iconColor: "text-emerald-600",
+          hoverBorder: "hover:border-emerald-500",
+          title: "100% Online DGFT e-RCMC Filing",
+          desc: "Fast digital lodgement on the DGFT e-RCMC portal with thorough document validation to eliminate rejections."
+        },
+        {
+          icon: <FileText className="w-5 h-5" />,
+          iconBg: "bg-purple-50",
+          iconColor: "text-purple-600",
+          hoverBorder: "hover:border-purple-500",
+          title: "CA-Certified FX Earnings Support",
+          desc: "Assistance with statutory past foreign exchange earnings statements, MOA alignment, and bank documentation."
+        },
+        {
+          icon: <TrendingUp className="w-5 h-5" />,
+          iconBg: "bg-amber-50",
+          iconColor: "text-amber-600",
+          hoverBorder: "hover:border-amber-500",
+          title: "Post-Registration Compliance & Renewals",
+          desc: "Automated alerts for quarterly export return submissions, council amendments, and timely 5-year renewal filing."
+        }
+      ]
+    };
+  }
+
+  // 8. Barcode Registration
+  if (b.includes("barcode")) {
+    return {
+      mandatoryTag: "GLOBAL PRODUCT IDENTIFICATION MANDATE",
+      mandatoryTitle: "Why GS1 Barcode Registration is Mandatory for Modern Brands",
+      mandatorySubtitle: "Assign globally authentic GTIN identifiers to eliminate duplicate SKU errors and meet mandatory marketplace requirements.",
+      dashboardMetric1: { label: "GS1 Allocation SLA", value: "2 - 3 Days" },
+      dashboardMetric2: { label: "Marketplace Acceptance", value: "100% Guaranteed" },
+      dashboardSteps: [
+        "Product SKU Analysis & Company Turnover Bracket Mapping",
+        "GS1 India National Portal Lodgement & Allotment Filing",
+        "Official Allotment Letter & Digital Barcode Files Delivery"
+      ],
+      mandatoryItems: [
+        {
+          icon: <Store className="w-5 h-5" />,
+          iconBg: "bg-emerald-50",
+          iconColor: "text-emerald-600",
+          hoverBorder: "hover:border-emerald-500",
+          title: "Mandatory for Amazon & Flipkart",
+          desc: "Strictly required for product listings, Brand Registry, and preventing hijackers on national e-commerce portals."
+        },
+        {
+          icon: <ShieldCheck className="w-5 h-5" />,
+          iconBg: "bg-blue-50",
+          iconColor: "text-blue-600",
+          hoverBorder: "hover:border-blue-500",
+          title: "Supermarket & Modern Retail POS",
+          desc: "Enables instant automated point-of-sale optical barcode scanning across modern retail supermarkets and department stores."
+        },
+        {
+          icon: <Layers className="w-5 h-5" />,
+          iconBg: "bg-purple-50",
+          iconColor: "text-purple-600",
+          hoverBorder: "hover:border-purple-500",
+          title: "Global Supply Chain & Quick Commerce",
+          desc: "Seamless integration with Blinkit, Zepto, Swiggy Instamart, and international customs tracking systems."
+        },
+        {
+          icon: <TrendingUp className="w-5 h-5" />,
+          iconBg: "bg-amber-50",
+          iconColor: "text-amber-600",
+          hoverBorder: "hover:border-amber-500",
+          title: "Combat Counterfeits & Duplicates",
+          desc: "Unique GS1 prefix identifies your brand globally and protects your consumer goods from duplicate and fake copies."
+        }
+      ],
+      chooseTag: "THE MERRAFILINGS ADVANTAGE",
+      chooseTitle: "Why Choose Merrafilings for Barcode Registration?",
+      chooseSubtitle: "Merrafilings helps over 10,000+ FMCG, retail, and e-commerce enterprises secure authentic GS1 India barcodes with rapid turnaround.",
+      chooseItems: [
+        {
+          icon: <Users className="w-5 h-5" />,
+          iconBg: "bg-blue-50",
+          iconColor: "text-blue-600",
+          hoverBorder: "hover:border-blue-500",
+          title: "100% Authentic GS1 India Registration",
+          desc: "Direct allocation from GS1 India—never counterfeit or recycled numbers that get delisted by e-commerce platforms."
+        },
+        {
+          icon: <Award className="w-5 h-5" />,
+          iconBg: "bg-emerald-50",
+          iconColor: "text-emerald-600",
+          hoverBorder: "hover:border-emerald-500",
+          title: "Expedited 48-Hour Processing",
+          desc: "Swift verification of audited financial records and prompt fee lodgement for rapid barcode certificate issuance."
+        },
+        {
+          icon: <FileText className="w-5 h-5" />,
+          iconBg: "bg-purple-50",
+          iconColor: "text-purple-600",
+          hoverBorder: "hover:border-purple-500",
+          title: "Digital Barcode Artwork in All Formats",
+          desc: "Receive high-resolution print-ready barcode artwork in vector EPS, PNG, and PDF formats for immediate packaging print."
+        },
+        {
+          icon: <TrendingUp className="w-5 h-5" />,
+          iconBg: "bg-amber-50",
+          iconColor: "text-amber-600",
+          hoverBorder: "hover:border-amber-500",
+          title: "Cataloging & Marketplace Advisory",
+          desc: "Hands-on assistance in mapping GTINs with Amazon ASINs, Flipkart FSNs, and packaging compliance regulations."
+        }
+      ]
+    };
+  }
+
+  // 9. General Fallback
+  return {
+    mandatoryTag: "STATUTORY CORPORATE MANDATE",
+    mandatoryTitle: `Why ${breadcrumbCurrent} is Essential for Your Business`,
+    mandatorySubtitle: "Ensure 100% regulatory compliance, protect your enterprise against penalties, and unlock legitimate commercial operations.",
+    dashboardMetric1: { label: "Processing SLA", value: "3 - 5 Days" },
+    dashboardMetric2: { label: "Govt SLA", value: "Guaranteed" },
+    dashboardSteps: [
+      "Entity KYC & Statutory Documentation Scrutiny",
+      "Government Portal Profile & Application Lodgement",
+      "Official Certificate Issuance & E-Locker Deposit"
+    ],
+    mandatoryItems: [
+      {
+        icon: <ShieldCheck className="w-5 h-5" />,
+        iconBg: "bg-emerald-50",
+        iconColor: "text-emerald-600",
+        hoverBorder: "hover:border-emerald-500",
+        title: "Statutory Legal Validity",
+        desc: "Ensures your enterprise operates with lawful regulatory standing across municipal, state, and central jurisdictions."
+      },
+      {
+        icon: <Briefcase className="w-5 h-5" />,
+        iconBg: "bg-blue-50",
+        iconColor: "text-blue-600",
+        hoverBorder: "hover:border-blue-500",
+        title: "Commercial Banking & Funding",
+        desc: "Essential prerequisite for opening current bank accounts, securing term loans, and attracting equity investments."
+      },
+      {
+        icon: <Scale className="w-5 h-5" />,
+        iconBg: "bg-purple-50",
+        iconColor: "text-purple-600",
+        hoverBorder: "hover:border-purple-500",
+        title: "Avoid Regulatory Sanctions & Fines",
+        desc: "Protects your management from compounding late penalties, compliance notices, and operational disruption."
+      },
+      {
+        icon: <TrendingUp className="w-5 h-5" />,
+        iconBg: "bg-amber-50",
+        iconColor: "text-amber-600",
+        hoverBorder: "hover:border-amber-500",
+        title: "Market Credibility & Client Trust",
+        desc: "Signals institutional credibility to enterprise clients, vendor networks, and institutional partners."
+      }
+    ],
+    chooseTag: "THE MERRAFILINGS ADVANTAGE",
+    chooseTitle: `Why Choose Merrafilings for ${breadcrumbCurrent}?`,
+    chooseSubtitle: "Merrafilings – India's trusted corporate compliance cloud & regulatory advisory platform.",
+    chooseItems: [
+      {
+        icon: <Users className="w-5 h-5" />,
+        iconBg: "bg-blue-50",
+        iconColor: "text-blue-600",
+        hoverBorder: "hover:border-blue-500",
+        title: "Assigned Senior Specialists",
+        desc: "Dedicated corporate attorneys, CAs, and CS professionals supervising every application step."
+      },
+      {
+        icon: <Zap className="w-5 h-5" />,
+        iconBg: "bg-emerald-50",
+        iconColor: "text-emerald-600",
+        hoverBorder: "hover:border-emerald-500",
+        title: "100% Online Paperless Process",
+        desc: "Zero physical queues or department visits — complete digital submission and e-certificate delivery."
+      },
+      {
+        icon: <ShieldCheck className="w-5 h-5" />,
+        iconBg: "bg-purple-50",
+        iconColor: "text-purple-600",
+        hoverBorder: "hover:border-purple-500",
+        title: "LEDGERS Cloud Automated Filing",
+        desc: "Integrated compliance dashboard providing timely renewal alerts and secure digital record vaults."
+      },
+      {
+        icon: <Award className="w-5 h-5" />,
+        iconBg: "bg-amber-50",
+        iconColor: "text-amber-600",
+        hoverBorder: "hover:border-amber-500",
+        title: "Transparent Upfront Pricing",
+        desc: "Honest, all-inclusive quotes with zero surprise department liaison fees or unexpected charges."
+      }
+    ]
+  };
+}
 
 export interface ServicePageContextType {
   openContactModal: (serviceTitle?: string) => void;
@@ -68,6 +890,7 @@ export interface ServicePageTemplateProps {
   pricingTitle?: React.ReactNode;
   pricingSubtitle?: string;
   breadcrumbCurrent: string;
+  spotlight?: ServiceSpotlightData;
   guideTitle?: string;
   guideContent: React.ReactNode;
   relatedGuides: string[];
@@ -191,10 +1014,12 @@ export default function ServicePageTemplate({
     "MCA ROC annual compliances",
     "Fast-track processing timelines",
   ],
+  spotlight,
 }: ServicePageTemplateProps) {
   const [searchOpen, setSearchOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
   const [modalServiceTitle, setModalServiceTitle] = useState(breadcrumbCurrent);
+  const spotlightData = spotlight || getServiceSpotlightData(breadcrumbCurrent, badgeText);
 
   // Form states
   const [formName, setFormName] = useState("");
@@ -568,6 +1393,272 @@ export default function ServicePageTemplate({
               >
                 <ChevronRight className="w-4 h-4" />
               </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3.5. Service Strategic Spotlight: Why Mandatory & Why Choose Merrafilings */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white via-slate-50/40 to-[#FAF9F7]/70 border-b border-slate-100">
+        <div className="w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10 space-y-20 lg:space-y-24">
+          {/* Part 1: Why Mandatory */}
+          <div className="space-y-10 sm:space-y-12">
+            <div className="text-center max-w-3xl xl:max-w-4xl mx-auto mb-12">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200/60 text-[#155EEF] text-[11px] sm:text-xs font-medium uppercase tracking-wider mb-3">
+                <ShieldCheck className="w-3.5 h-3.5" />
+                {spotlightData.mandatoryTag}
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-normal text-[#111827]">
+                {spotlightData.mandatoryTitle}
+              </h2>
+              <p className="mt-2 text-xs sm:text-sm text-slate-500 font-light max-w-2xl mx-auto">
+                {spotlightData.mandatorySubtitle}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+              {/* Left Column: Interactive Compliance Cloud Showcase Card */}
+              <div className="lg:col-span-5 flex flex-col">
+                <div className="bg-slate-900 rounded-2xl sm:rounded-3xl p-6 sm:p-7 text-white shadow-xl shadow-slate-900/10 flex flex-col justify-between border border-slate-800 relative overflow-hidden h-full group">
+                  {/* Subtle Background Glow */}
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl -z-10 group-hover:bg-emerald-500/15 transition-all duration-500" />
+                  <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -z-10 group-hover:bg-blue-500/15 transition-all duration-500" />
+
+                  {/* Top Bar */}
+                  <div>
+                    <div className="flex items-center justify-between border-b border-slate-800 pb-4 mb-5">
+                      <div className="flex items-center gap-2">
+                        <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80" />
+                        <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
+                        <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
+                        <span className="text-[11px] font-mono text-slate-400 ml-2">merrafilings.gov-sync</span>
+                      </div>
+                      <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10.5px] font-medium">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                        Live Registry
+                      </div>
+                    </div>
+
+                    {/* Service Name Chip */}
+                    <div className="mb-4">
+                      <span className="text-[10px] font-semibold tracking-wider uppercase text-emerald-400 block mb-1">
+                        Active Statutory Flow
+                      </span>
+                      <h3 className="text-base sm:text-lg font-semibold text-white">
+                        {breadcrumbCurrent} Gateway
+                      </h3>
+                    </div>
+
+                    {/* Progress Checklist */}
+                    <div className="space-y-2.5 my-5 bg-slate-800/50 p-4 rounded-xl border border-slate-800/80">
+                      {spotlightData.dashboardSteps.map((step, sIdx) => (
+                        <div key={sIdx} className="flex items-start gap-2.5 text-xs text-slate-300">
+                          <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                          <span className="font-light">{step}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Live Metrics Grid */}
+                    <div className="grid grid-cols-2 gap-3 mb-6">
+                      <div className="bg-slate-800/60 p-3 rounded-xl border border-slate-800">
+                        <span className="text-[10.5px] text-slate-400 font-light block">
+                          {spotlightData.dashboardMetric1.label}
+                        </span>
+                        <span className="text-sm font-semibold text-white tracking-tight mt-0.5 block">
+                          {spotlightData.dashboardMetric1.value}
+                        </span>
+                      </div>
+                      <div className="bg-slate-800/60 p-3 rounded-xl border border-slate-800">
+                        <span className="text-[10.5px] text-slate-400 font-light block">
+                          {spotlightData.dashboardMetric2.label}
+                        </span>
+                        <span className="text-sm font-semibold text-emerald-400 tracking-tight mt-0.5 block">
+                          {spotlightData.dashboardMetric2.value}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Bottom Action Area */}
+                  <div className="pt-2">
+                    <button
+                      type="button"
+                      onClick={() => openServiceModal(breadcrumbCurrent)}
+                      className="w-full py-3 px-5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-500 hover:brightness-110 shadow-lg shadow-emerald-600/25 hover:shadow-emerald-600/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer"
+                    >
+                      <span>File Online with Expert Assistance</span>
+                      <ArrowUpRight className="w-4 h-4" />
+                    </button>
+                    <p className="text-[11px] text-slate-400 text-center mt-2.5 font-light">
+                      Toll-Free Helpline: <span className="text-slate-300 font-medium">1800 123 4567</span> • Zero Physical Visits
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column: 4 Strategic Mandate Feature Cards */}
+              <div className="lg:col-span-7 flex flex-col justify-center">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                  {spotlightData.mandatoryItems.map((item, idx) => (
+                    <div
+                      key={idx}
+                      className={`p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:shadow-md hover:-translate-y-1 transition-all duration-200 cursor-pointer group flex flex-col justify-between ${item.hoverBorder}`}
+                    >
+                      <div>
+                        <div className={`w-10 h-10 rounded-xl ${item.iconBg} ${item.iconColor} flex items-center justify-center shrink-0 mb-3.5 group-hover:scale-105 transition-transform`}>
+                          {item.icon}
+                        </div>
+                        <h4 className="text-[14.5px] sm:text-[15px] font-medium text-[#111827] group-hover:text-slate-950 transition-colors">
+                          {item.title}
+                        </h4>
+                        <p className="text-[12.5px] sm:text-[13px] text-slate-600 font-light leading-relaxed mt-1.5">
+                          {item.desc}
+                        </p>
+                      </div>
+                      <div className="mt-3.5 pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400 group-hover:text-slate-600">
+                        <span className="text-[11px] font-medium uppercase tracking-wider">Statutory Mandate</span>
+                        <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Subtle Decorative Section Divider */}
+          <div className="relative">
+            <div className="absolute inset-0 flex items-center" aria-hidden="true">
+              <div className="w-full border-t border-slate-200/80" />
+            </div>
+            <div className="relative flex justify-center">
+              <span className="bg-white px-4 py-1 text-xs font-semibold uppercase tracking-wider text-slate-400 border border-slate-200/80 rounded-full shadow-2xs">
+                The Merrafilings Legal &amp; Compliance Advantage
+              </span>
+            </div>
+          </div>
+
+          {/* Part 2: Why Choose Merrafilings */}
+          <div className="space-y-10 sm:space-y-12">
+            <div className="text-center max-w-3xl xl:max-w-4xl mx-auto mb-12">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/60 text-[#15803D] text-[11px] sm:text-xs font-medium uppercase tracking-wider mb-3">
+                <Award className="w-3.5 h-3.5" />
+                {spotlightData.chooseTag}
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-normal text-[#111827]">
+                {spotlightData.chooseTitle}
+              </h2>
+              <p className="mt-2 text-xs sm:text-sm text-slate-500 font-light max-w-2xl mx-auto">
+                {spotlightData.chooseSubtitle}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+              {/* Left Column: 4 Value Pillar Cards */}
+              <div className="lg:col-span-7 flex flex-col justify-center order-2 lg:order-1">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                  {spotlightData.chooseItems.map((item, idx) => (
+                    <div
+                      key={idx}
+                      className={`p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:shadow-md hover:-translate-y-1 transition-all duration-200 cursor-pointer group flex flex-col justify-between ${item.hoverBorder}`}
+                    >
+                      <div>
+                        <div className={`w-10 h-10 rounded-xl ${item.iconBg} ${item.iconColor} flex items-center justify-center shrink-0 mb-3.5 group-hover:scale-105 transition-transform`}>
+                          {item.icon}
+                        </div>
+                        <h4 className="text-[14.5px] sm:text-[15px] font-medium text-[#111827] group-hover:text-slate-950 transition-colors">
+                          {item.title}
+                        </h4>
+                        <p className="text-[12.5px] sm:text-[13px] text-slate-600 font-light leading-relaxed mt-1.5">
+                          {item.desc}
+                        </p>
+                      </div>
+                      <div className="mt-3.5 pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400 group-hover:text-emerald-600">
+                        <span className="text-[11px] font-medium uppercase tracking-wider">Guaranteed Quality</span>
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Right Column: Enterprise Credibility & Assurance Showcase Card */}
+              <div className="lg:col-span-5 flex flex-col order-1 lg:order-2">
+                <div className="bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] rounded-2xl sm:rounded-3xl p-6 sm:p-7 text-white shadow-xl shadow-slate-900/10 flex flex-col justify-between border border-slate-700/80 relative overflow-hidden h-full group">
+                  {/* Background Glow */}
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -z-10 group-hover:bg-blue-500/15 transition-all duration-500" />
+                  <div className="absolute bottom-0 left-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl -z-10 group-hover:bg-emerald-500/15 transition-all duration-500" />
+
+                  {/* Top Stats */}
+                  <div>
+                    <div className="flex items-center justify-between border-b border-slate-800 pb-4 mb-5">
+                      <div className="flex items-center gap-1.5 text-amber-400 text-xs font-semibold">
+                        <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
+                        <span>4.9 / 5 Rated Platform</span>
+                      </div>
+                      <span className="text-[11px] text-slate-400 font-mono">100,000+ Filings</span>
+                    </div>
+
+                    <div className="grid grid-cols-3 gap-2.5 mb-5 text-center">
+                      <div className="bg-slate-800/60 p-2.5 rounded-xl border border-slate-800">
+                        <span className="text-base sm:text-lg font-bold text-white block">100k+</span>
+                        <span className="text-[10px] text-slate-400 block mt-0.5">Enterprises</span>
+                      </div>
+                      <div className="bg-slate-800/60 p-2.5 rounded-xl border border-slate-800">
+                        <span className="text-base sm:text-lg font-bold text-emerald-400 block">28</span>
+                        <span className="text-[10px] text-slate-400 block mt-0.5">States &amp; UTs</span>
+                      </div>
+                      <div className="bg-slate-800/60 p-2.5 rounded-xl border border-slate-800">
+                        <span className="text-base sm:text-lg font-bold text-blue-400 block">99.8%</span>
+                        <span className="text-[10px] text-slate-400 block mt-0.5">Pass SLA</span>
+                      </div>
+                    </div>
+
+                    {/* Trust Badges */}
+                    <div className="space-y-2 mb-5">
+                      <div className="flex items-center gap-2 text-xs text-slate-300">
+                        <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+                        <span>ISO 27001 Certified Bank-Grade Data Vault</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-xs text-slate-300">
+                        <Award className="w-4 h-4 text-blue-400 shrink-0" />
+                        <span>Bar Council &amp; ICAI Regulated Practitioners</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-xs text-slate-300">
+                        <Clock className="w-4 h-4 text-amber-400 shrink-0" />
+                        <span>Real-Time Government Portal Sync &amp; Challan Storage</span>
+                      </div>
+                    </div>
+
+                    {/* Verified Endorsement */}
+                    <div className="p-3.5 rounded-xl bg-slate-800/50 border border-slate-800/80 mb-5">
+                      <p className="text-[11.5px] text-slate-300 italic leading-relaxed">
+                        &ldquo;Merrafilings took complete ownership of our corporate filings. Transparent pricing, zero hidden charges, and certificates delivered well ahead of schedule.&rdquo;
+                      </p>
+                      <div className="mt-2 text-[10.5px] text-slate-400 flex items-center justify-between">
+                        <span className="font-medium text-slate-200">Vikram Singhania, Founder</span>
+                        <span className="text-emerald-400 font-semibold">&check; Verified Client</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Bottom Action Area */}
+                  <div>
+                    <button
+                      type="button"
+                      onClick={() => openServiceModal(breadcrumbCurrent)}
+                      className="w-full py-3 px-5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-[#155EEF] via-[#2563EB] to-[#4F46E5] hover:brightness-110 shadow-lg shadow-blue-600/25 hover:shadow-blue-600/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer"
+                    >
+                      <span>Speak to a Senior Specialist</span>
+                      <ArrowUpRight className="w-4 h-4" />
+                    </button>
+                    <p className="text-[11px] text-slate-400 text-center mt-2.5 font-light">
+                      Instant Callback Within 15 Minutes • Confidential &amp; Protected
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

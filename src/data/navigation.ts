@@ -68,8 +68,8 @@ export const NAV_CATEGORIES: NavCategory[] = [
         [
           { title: "ESI Registration", href: "/esi-registration" },
           { title: "Professional Tax Registration", href: "/professional-tax-registration" },
-          { title: "RCMC Registration", href: "#rcmc" },
-          { title: "Barcode Registration", href: "#barcode" },
+          { title: "RCMC Registration", href: "/rcmc-registration" },
+          { title: "Barcode Registration", href: "/barcode-registration" },
         ],
         [
           { title: "Digital Signature", href: "#dsc" },
