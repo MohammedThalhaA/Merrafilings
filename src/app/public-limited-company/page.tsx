@@ -608,22 +608,7 @@ export default function PublicLimitedCompanyPage() {
                       </svg>
                     </div>
                     <span className="text-[13.5px] font-light text-slate-700">
-                      MCA Name Reservation (RUN Portal)
-                    </span>
-                  </li>
-
-                  <li className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-white/80 border border-purple-200/50 shadow-xs flex items-center justify-center shrink-0">
-                      <svg className="w-4 h-4" fill="#6B4BFF" viewBox="0 0 20 20">
-                        <path
-                          fillRule="evenodd"
-                          d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                    <span className="text-[13.5px] font-light text-slate-700">
-                      Class-3 DSC &amp; DIN for 3 Directors
+                      MCA Name Approval
                     </span>
                   </li>
 
@@ -639,12 +624,12 @@ export default function PublicLimitedCompanyPage() {
                           strokeLinecap="round"
                           strokeLinejoin="round"
                           strokeWidth="2"
-                          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
                         />
                       </svg>
                     </div>
                     <span className="text-[13.5px] font-light text-slate-700">
-                      SPICe+ Part B Incorporation Filing
+                      Company Incorporation
                     </span>
                   </li>
 
@@ -659,7 +644,22 @@ export default function PublicLimitedCompanyPage() {
                       </svg>
                     </div>
                     <span className="text-[13.5px] font-light text-slate-700">
-                      Custom MOA &amp; AOA Drafting
+                      MCA &amp; AOA Drafting
+                    </span>
+                  </li>
+
+                  <li className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-white/80 border border-purple-200/50 shadow-xs flex items-center justify-center shrink-0">
+                      <svg className="w-4 h-4" fill="#6B4BFF" viewBox="0 0 20 20">
+                        <path
+                          fillRule="evenodd"
+                          d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span className="text-[13.5px] font-light text-slate-700">
+                      PAN &amp; TAN Registration
                     </span>
                   </li>
 
@@ -751,12 +751,12 @@ export default function PublicLimitedCompanyPage() {
                       </span>
                     </div>
 
-                    {/* Full Name */}
+                    {/* Name */}
                     <div>
                       <input
                         type="text"
                         required
-                        placeholder="Full Name *"
+                        placeholder="Name *"
                         value={formName}
                         onChange={(e) => setFormName(e.target.value)}
                         className="w-full px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-md text-[13.5px] font-normal text-slate-800 placeholder-slate-400 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all"
@@ -768,7 +768,7 @@ export default function PublicLimitedCompanyPage() {
                       <input
                         type="email"
                         required
-                        placeholder="Email Address *"
+                        placeholder="Email *"
                         value={formEmail}
                         onChange={(e) => setFormEmail(e.target.value)}
                         className="w-full px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-md text-[13.5px] font-normal text-slate-800 placeholder-slate-400 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all"
@@ -809,25 +809,11 @@ export default function PublicLimitedCompanyPage() {
                       </select>
                     </div>
 
-                    {/* Action Buttons: WhatsApp & Continue */}
-                    <div className="pt-2 flex items-center justify-between gap-3">
-                      <button
-                        type="button"
-                        onClick={() =>
-                          window.open(
-                            `https://wa.me/918939885544?text=Hi,%20I%20want%20to%20register%20a%20Public%20Limited%20Company%20in%20India`,
-                            "_blank"
-                          )
-                        }
-                        className="inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-lg border border-slate-200 bg-white text-xs font-medium text-slate-700 hover:bg-slate-50 transition-colors cursor-pointer"
-                      >
-                        <MessageCircle className="w-3.5 h-3.5 text-[#25D366]" />
-                        <span>WhatsApp</span>
-                      </button>
-
+                    {/* Continue Button */}
+                    <div className="pt-2 flex justify-end">
                       <button
                         type="submit"
-                        className="flex-1 py-2.5 rounded-lg font-medium text-sm text-white bg-gradient-to-r from-[#594CF5] to-[#D946EF] hover:opacity-95 shadow-sm transition-all cursor-pointer text-center"
+                        className="px-8 py-2.5 rounded-lg font-medium text-sm text-white bg-gradient-to-r from-[#594CF5] to-[#D946EF] hover:opacity-95 shadow-sm transition-all cursor-pointer"
                       >
                         Continue
                       </button>

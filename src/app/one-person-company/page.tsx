@@ -476,133 +476,182 @@ export default function OnePersonCompanyPage() {
             </p>
           </div>
 
-          {/* Hero Journey Card (Form & Value Props) */}
-          <div className="max-w-5xl mx-auto rounded-3xl border border-white/80 bg-white/95 shadow-xl shadow-slate-900/5 p-6 sm:p-8 lg:p-10 backdrop-blur-md">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          {/* Hero Content Glassmorphism Box */}
+          <div className="w-full max-w-[72rem] mx-auto rounded-2xl sm:rounded-3xl lg:rounded-[32px] border border-white/70 bg-white/90 shadow-xl sm:shadow-2xl shadow-slate-900/10 backdrop-blur p-6 sm:p-8 lg:p-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
               {/* Left Column: Key Features */}
-              <div className="lg:col-span-7 space-y-6">
+              <div className="space-y-6">
                 <div>
-                  <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] leading-snug">
-                    Launch Your OPC with Zero Hassle
+                  <h2 className="text-xl sm:text-2xl md:text-3xl font-normal text-[#12023B] mb-2 sm:mb-3">
+                    Start Your One Person Company
                   </h2>
-                  <p className="text-xs sm:text-[13px] font-light text-slate-500 mt-1.5 leading-relaxed">
-                    Fast-track your incorporation with India’s trusted corporate filing partner. Complete documentation, nominee filing, and bank account opening included.
+                  <p className="text-[13px] sm:text-[14px] font-light text-slate-600 leading-relaxed">
+                    Fast-track your incorporation with India’s trusted corporate filing partner. Complete documentation, nominee filing, SPICe+ approval, and bank account setup included.
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-                  <div className="flex items-start gap-3 p-3 rounded-xl bg-[#FAF9F7] border border-slate-200/60">
-                    <div className="w-8 h-8 rounded-lg bg-purple-100/80 flex items-center justify-center shrink-0 text-[#6B4BFF]">
-                      <FileText className="w-4 h-4" />
+                {/* 5 Bullet Features */}
+                <ul className="space-y-3 pt-2">
+                  <li className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-white/80 border border-purple-200/50 shadow-xs flex items-center justify-center shrink-0">
+                      <svg className="w-4 h-4" fill="#6B4BFF" viewBox="0 0 20 20">
+                        <path
+                          fillRule="evenodd"
+                          d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
                     </div>
-                    <div>
-                      <h4 className="text-[13px] font-medium text-slate-800">
-                        MCA Name Approval
-                      </h4>
-                      <p className="text-[11.5px] font-light text-slate-500">
-                        SPICe+ Part A / RUN filing
-                      </p>
-                    </div>
-                  </div>
+                    <span className="text-[13.5px] font-light text-slate-700">
+                      MCA Name Approval
+                    </span>
+                  </li>
 
-                  <div className="flex items-start gap-3 p-3 rounded-xl bg-[#FAF9F7] border border-slate-200/60">
-                    <div className="w-8 h-8 rounded-lg bg-emerald-100/80 flex items-center justify-center shrink-0 text-[#00A86B]">
-                      <ShieldCheck className="w-4 h-4" />
+                  <li className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-white/80 border border-purple-200/50 shadow-xs flex items-center justify-center shrink-0">
+                      <svg
+                        className="w-4 h-4"
+                        fill="none"
+                        stroke="#6B4BFF"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                        />
+                      </svg>
                     </div>
-                    <div>
-                      <h4 className="text-[13px] font-medium text-slate-800">
-                        Limited Liability Shield
-                      </h4>
-                      <p className="text-[11.5px] font-light text-slate-500">
-                        100% personal asset protection
-                      </p>
-                    </div>
-                  </div>
+                    <span className="text-[13.5px] font-light text-slate-700">
+                      Company Incorporation
+                    </span>
+                  </li>
 
-                  <div className="flex items-start gap-3 p-3 rounded-xl bg-[#FAF9F7] border border-slate-200/60">
-                    <div className="w-8 h-8 rounded-lg bg-blue-100/80 flex items-center justify-center shrink-0 text-blue-600">
-                      <Briefcase className="w-4 h-4" />
+                  <li className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-white/80 border border-purple-200/50 shadow-xs flex items-center justify-center shrink-0">
+                      <svg className="w-4 h-4" fill="#6B4BFF" viewBox="0 0 20 20">
+                        <path
+                          fillRule="evenodd"
+                          d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
                     </div>
-                    <div>
-                      <h4 className="text-[13px] font-medium text-slate-800">
-                        e-MOA & e-AOA Drafting
-                      </h4>
-                      <p className="text-[11.5px] font-light text-slate-500">
-                        Custom objectives & nominee INC-3
-                      </p>
-                    </div>
-                  </div>
+                    <span className="text-[13.5px] font-light text-slate-700">
+                      e-MOA &amp; e-AOA Drafting
+                    </span>
+                  </li>
 
-                  <div className="flex items-start gap-3 p-3 rounded-xl bg-[#FAF9F7] border border-slate-200/60">
-                    <div className="w-8 h-8 rounded-lg bg-amber-100/80 flex items-center justify-center shrink-0 text-amber-600">
-                      <Clock className="w-4 h-4" />
+                  <li className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-white/80 border border-purple-200/50 shadow-xs flex items-center justify-center shrink-0">
+                      <svg className="w-4 h-4" fill="#6B4BFF" viewBox="0 0 20 20">
+                        <path
+                          fillRule="evenodd"
+                          d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
                     </div>
-                    <div>
-                      <h4 className="text-[13px] font-medium text-slate-800">
-                        7–10 Days Delivery
-                      </h4>
-                      <p className="text-[11.5px] font-light text-slate-500">
-                        Guaranteed timeline with CIN & PAN
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                    <span className="text-[13.5px] font-light text-slate-700">
+                      PAN &amp; TAN Registration
+                    </span>
+                  </li>
 
-                {/* Sub-features checklist */}
-                <div className="pt-2 flex flex-wrap gap-y-2 gap-x-4 text-xs font-light text-slate-600">
-                  <div className="flex items-center gap-1.5">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#00A86B]" />
-                    <span>No Minimum Capital Required</span>
-                  </div>
-                  <div className="flex items-center gap-1.5">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#00A86B]" />
-                    <span>Zero Annual General Meeting Burden</span>
-                  </div>
-                  <div className="flex items-center gap-1.5">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#00A86B]" />
-                    <span>Free Corporate Bank Account Assistance</span>
-                  </div>
-                </div>
+                  <li className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-white/80 border border-purple-200/50 shadow-xs flex items-center justify-center shrink-0">
+                      <svg
+                        className="w-4 h-4"
+                        fill="none"
+                        stroke="#6B4BFF"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                        />
+                      </svg>
+                    </div>
+                    <a
+                      href="#documents"
+                      className="text-[13.5px] font-semibold bg-gradient-to-r from-[#5D54FF] via-[#A767EC] to-[#F968E7] bg-clip-text text-transparent underline underline-offset-2 decoration-[#A767EC] hover:opacity-85 transition-opacity cursor-pointer"
+                    >
+                      Required Documents
+                    </a>
+                  </li>
+                </ul>
               </div>
 
-              {/* Right Column: Interactive Consultation Form */}
-              <div className="lg:col-span-5 bg-gradient-to-b from-[#FAF9F7] to-white p-6 sm:p-7 rounded-2xl border border-slate-200/80 shadow-xs">
-                <div className="mb-4 text-center sm:text-left">
-                  <h3 className="text-[17px] font-medium text-[#1F1646]">
-                    Start Your OPC Registration
-                  </h3>
-                  <p className="text-xs font-light text-slate-500 mt-0.5">
-                    Fill the details to get an instant cost estimate and expert call.
-                  </p>
-                </div>
-
+              {/* Right Column: Interactive Lead Generation Form */}
+              <div className="bg-[#FAF8F5]/60 rounded-2xl p-5 sm:p-7 border border-[#E4E7EC]/70">
                 {formSubmitted ? (
-                  <div className="py-8 text-center space-y-3">
-                    <div className="w-12 h-12 rounded-full bg-emerald-100 text-[#00A86B] mx-auto flex items-center justify-center">
-                      <Check className="w-6 h-6 stroke-[2.5]" />
+                  <div className="text-center py-8 space-y-4">
+                    <div className="w-16 h-16 rounded-full bg-emerald-100 text-[#00A86B] flex items-center justify-center mx-auto">
+                      <Check className="w-8 h-8 stroke-[2.5]" />
                     </div>
-                    <h4 className="text-[16px] font-medium text-slate-800">
-                      Application Submitted!
-                    </h4>
-                    <p className="text-xs font-light text-slate-600 max-w-xs mx-auto">
-                      Thank you, {formName}. Our Senior Company Incorporation Specialist will reach out to you within 15 minutes.
+                    <h3 className="text-xl font-bold text-[#111827]">
+                      Application Received!
+                    </h3>
+                    <p className="text-[14px] text-[#475467]">
+                      Thank you, <strong className="text-[#111827]">{formName}</strong>. A Senior Company Incorporation Specialist from Merrafilings will contact you at <strong className="text-[#111827]">{formPhone}</strong> within 15 minutes.
                     </p>
                     <button
                       type="button"
                       onClick={() => setFormSubmitted(false)}
-                      className="text-xs font-medium text-[#00A86B] underline pt-2"
+                      className="px-5 py-2 text-[13px] font-medium text-[#155EEF] hover:underline cursor-pointer"
                     >
-                      Submit another enquiry
+                      Submit another query
                     </button>
                   </div>
                 ) : (
-                  <form onSubmit={handleHeroFormSubmit} className="space-y-3">
-                    {/* Full Name */}
+                  <form onSubmit={handleHeroFormSubmit} className="space-y-4">
+                    {/* Continue with Google */}
+                    <button
+                      type="button"
+                      onClick={() =>
+                        alert(
+                          "Google Single Sign-On simulation. Please enter your details below."
+                        )
+                      }
+                      className="w-full flex items-center justify-center gap-3 py-2.5 px-4 bg-white hover:bg-[#F8FAFC] border border-[#D0D5DD] rounded-xl text-[14px] font-medium text-[#344054] shadow-xs transition-colors cursor-pointer"
+                    >
+                      <svg className="w-5 h-5" viewBox="0 0 24 24">
+                        <path
+                          fill="#4285F4"
+                          d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                        />
+                        <path
+                          fill="#34A853"
+                          d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                        />
+                        <path
+                          fill="#FBBC05"
+                          d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"
+                        />
+                        <path
+                          fill="#EA4335"
+                          d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"
+                        />
+                      </svg>
+                      <span>Continue with Google</span>
+                    </button>
+
+                    {/* OR divider */}
+                    <div className="relative flex items-center justify-center my-3">
+                      <div className="border-t border-[#D0D5DD] w-full" />
+                      <span className="bg-[#FAF8F5] px-3 text-[12px] font-semibold text-[#98A2B3] uppercase tracking-wider absolute">
+                        OR
+                      </span>
+                    </div>
+
+                    {/* Name */}
                     <div>
                       <input
                         type="text"
                         required
-                        placeholder="Full Name *"
+                        placeholder="Name *"
                         value={formName}
                         onChange={(e) => setFormName(e.target.value)}
                         className="w-full px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-md text-[13.5px] font-normal text-slate-800 placeholder-slate-400 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all"
@@ -614,7 +663,7 @@ export default function OnePersonCompanyPage() {
                       <input
                         type="email"
                         required
-                        placeholder="Email Address *"
+                        placeholder="Email *"
                         value={formEmail}
                         onChange={(e) => setFormEmail(e.target.value)}
                         className="w-full px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-md text-[13.5px] font-normal text-slate-800 placeholder-slate-400 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all"
@@ -646,7 +695,7 @@ export default function OnePersonCompanyPage() {
                         onChange={(e) => setFormState(e.target.value)}
                         className="w-full px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-md text-[13.5px] font-normal text-slate-700 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all cursor-pointer"
                       >
-                        <option value="">Select State of Registered Office *</option>
+                        <option value="">Select State *</option>
                         {INDIAN_STATES.map((s) => (
                           <option key={s} value={s}>
                             {s}
@@ -655,27 +704,13 @@ export default function OnePersonCompanyPage() {
                       </select>
                     </div>
 
-                    {/* Action Buttons */}
-                    <div className="pt-2 flex items-center justify-between gap-3">
-                      <button
-                        type="button"
-                        onClick={() =>
-                          window.open(
-                            `https://wa.me/918939885544?text=Hi,%20I%20want%20to%20register%20a%20One%20Person%20Company%20(OPC)`,
-                            "_blank"
-                          )
-                        }
-                        className="inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-lg border border-slate-200 bg-white text-xs font-medium text-slate-700 hover:bg-slate-50 transition-colors cursor-pointer"
-                      >
-                        <MessageCircle className="w-3.5 h-3.5 text-[#25D366]" />
-                        <span>WhatsApp</span>
-                      </button>
-
+                    {/* Continue Button */}
+                    <div className="pt-2 flex justify-end">
                       <button
                         type="submit"
-                        className="flex-1 py-2.5 rounded-lg font-medium text-sm text-white bg-gradient-to-r from-[#594CF5] to-[#D946EF] hover:opacity-95 shadow-sm transition-all cursor-pointer text-center"
+                        className="px-8 py-2.5 rounded-lg font-medium text-sm text-white bg-gradient-to-r from-[#594CF5] to-[#D946EF] hover:opacity-95 shadow-sm transition-all cursor-pointer"
                       >
-                        Continue Application
+                        Continue
                       </button>
                     </div>
                   </form>
@@ -685,20 +720,18 @@ export default function OnePersonCompanyPage() {
 
             {/* Trust Stats Cards with Hover Effects */}
             <div className="mt-8 pt-6 border-t border-slate-100/80 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4">
-              {/* Card 1: 4.4 Verified Reviews */}
+              {/* Card 1: 4.8 Verified Reviews */}
               <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-amber-200 hover:shadow-[0_8px_25px_rgba(245,158,11,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
                 <div className="w-11 h-11 rounded-2xl bg-[#FFF6E9] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-2 shadow-2xs">
-                  <Award className="w-5 h-5 text-[#F04438] transition-colors" />
+                  <svg className="w-5 h-5 text-[#F04438] transition-colors" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
                 </div>
                 <div>
                   <div className="flex items-center gap-1.5 font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">
-                    <span>4.4</span>
+                    <span>4.8</span>
                     <div className="flex items-center text-amber-400 text-[11px] gap-0.5">
-                      <span>★</span><span>★</span><span>★</span><span>★</span>
-                      <span className="relative inline-block text-slate-300">
-                        ★
-                        <span className="absolute inset-0 overflow-hidden w-[40%] text-amber-400">★</span>
-                      </span>
+                      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                     </div>
                   </div>
                   <p className="text-[11.5px] font-light text-slate-500">Verified Reviews</p>
@@ -708,33 +741,40 @@ export default function OnePersonCompanyPage() {
               {/* Card 2: 15+ Years of Experience */}
               <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-amber-200 hover:shadow-[0_8px_25px_rgba(217,119,6,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
                 <div className="w-11 h-11 rounded-2xl bg-[#FFF8E7] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-2 shadow-2xs">
-                  <ShieldCheck className="w-5 h-5 text-[#D97706] transition-colors" />
+                  <svg className="w-5 h-5 text-[#D97706] transition-colors" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.504-1.125-1.125-1.125h-6.75c-.621 0-1.125.504-1.125 1.125v3.375m9 0h-9M6.75 6.75h10.5m-10.5 0a3 3 0 01-3-3V3.75h16.5v.001a3 3 0 01-3 3m-10.5 0v3.75a5.25 5.25 0 0010.5 0V6.75" />
+                  </svg>
                 </div>
                 <div>
                   <p className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">15+ Years</p>
-                  <p className="text-[11.5px] font-light text-slate-500">Corporate Law Experience</p>
+                  <p className="text-[11.5px] font-light text-slate-500">of Experience</p>
                 </div>
               </div>
 
               {/* Card 3: 2 Lakh+ Customers */}
-              <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-purple-200 hover:shadow-[0_8px_25px_rgba(107,75,255,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
-                <div className="w-11 h-11 rounded-2xl bg-[#F5F3FF] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-2 shadow-2xs">
-                  <Users className="w-5 h-5 text-[#6B4BFF] transition-colors" />
+              <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-orange-200 hover:shadow-[0_8px_25px_rgba(234,88,12,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
+                <div className="w-11 h-11 rounded-2xl bg-[#FFF4ED] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-2 shadow-2xs">
+                  <svg className="w-5 h-5 text-[#EA580C] transition-colors" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                  </svg>
                 </div>
                 <div>
-                  <p className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">2 Lakh+ Companies</p>
-                  <p className="text-[11.5px] font-light text-slate-500">Incorporated Pan India</p>
+                  <p className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">2 Lakh+ Customers</p>
+                  <p className="text-[11.5px] font-light text-slate-500">Trusted across India</p>
                 </div>
               </div>
 
               {/* Card 4: App Tracking */}
-              <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-emerald-200 hover:shadow-[0_8px_25px_rgba(0,176,116,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
-                <div className="w-11 h-11 rounded-2xl bg-[#ECFDF5] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-2 shadow-2xs">
-                  <Smartphone className="w-5 h-5 text-[#00B074] transition-colors" />
+              <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-rose-200 hover:shadow-[0_8px_25px_rgba(240,68,56,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
+                <div className="w-11 h-11 rounded-2xl bg-[#FFF1F3] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-2 shadow-2xs">
+                  <svg className="w-5 h-5 text-[#F04438] transition-colors" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                  </svg>
                 </div>
                 <div>
-                  <p className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">Live ROC Tracking</p>
-                  <p className="text-[11.5px] font-light text-slate-500">Status Updates on App</p>
+                  <p className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">App Tracking</p>
+                  <p className="text-[11.5px] font-light text-slate-500">Live status updates</p>
                 </div>
               </div>
             </div>

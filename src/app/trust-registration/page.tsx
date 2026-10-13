@@ -776,25 +776,11 @@ export default function TrustRegistrationPage() {
                       </select>
                     </div>
 
-                    {/* Action Buttons: WhatsApp & Continue */}
-                    <div className="pt-2 flex items-center justify-between gap-3">
-                      <button
-                        type="button"
-                        onClick={() =>
-                          window.open(
-                            `https://wa.me/918939885544?text=Hi,%20I%20want%20to%20register%20a%20Trust%20in%20India`,
-                            "_blank"
-                          )
-                        }
-                        className="inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-lg border border-slate-200 bg-white text-xs font-medium text-slate-700 hover:bg-slate-50 transition-colors cursor-pointer"
-                      >
-                        <MessageCircle className="w-3.5 h-3.5 text-[#25D366]" />
-                        <span>WhatsApp</span>
-                      </button>
-
+                    {/* Continue Button */}
+                    <div className="pt-2 flex justify-end">
                       <button
                         type="submit"
-                        className="flex-1 py-2.5 rounded-lg font-medium text-sm text-white bg-gradient-to-r from-[#594CF5] to-[#D946EF] hover:opacity-95 shadow-sm transition-all cursor-pointer text-center"
+                        className="px-8 py-2.5 rounded-lg font-medium text-sm text-white bg-gradient-to-r from-[#594CF5] to-[#D946EF] hover:opacity-95 shadow-sm transition-all cursor-pointer"
                       >
                         Continue
                       </button>
