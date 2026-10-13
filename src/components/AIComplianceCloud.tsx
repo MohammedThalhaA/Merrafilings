@@ -80,7 +80,7 @@ export default function AIComplianceCloud({ onExplore, onBookDemo }: AIComplianc
 
   return (
     <section className="py-20 md:py-28 bg-white border-b border-[#E4E7EC]">
-      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
           
           {/* Left Column: Text Information (Matching Screenshot 2) */}
@@ -125,14 +125,14 @@ export default function AIComplianceCloud({ onExplore, onBookDemo }: AIComplianc
             <div className="pt-4 flex flex-wrap items-center gap-3">
               <button
                 onClick={onExplore}
-                className="px-5 py-2.5 text-[14px] font-semibold text-white bg-[#155EEF] hover:bg-[#1849A9] rounded-xl shadow-xs transition-colors flex items-center gap-2 cursor-pointer"
+                className="px-5 py-2.5 text-[14px] font-semibold text-white bg-[#155EEF] hover:bg-[#1849A9] rounded-xl shadow-xs hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 flex items-center gap-2 cursor-pointer group"
               >
                 <span>Explore AI Compliance</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </button>
               <button
                 onClick={onBookDemo}
-                className="px-5 py-2.5 text-[14px] font-semibold text-[#111827] bg-white border border-[#E4E7EC] hover:bg-[#F8FAFC] rounded-xl transition-colors cursor-pointer"
+                className="px-5 py-2.5 text-[14px] font-semibold text-[#111827] bg-white border border-[#E4E7EC] hover:bg-[#F8FAFC] hover:border-slate-400 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 rounded-xl transition-all duration-200 cursor-pointer"
               >
                 Book a Live Demo
               </button>

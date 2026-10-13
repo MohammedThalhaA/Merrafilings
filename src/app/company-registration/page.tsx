@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useState, useRef } from "react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import ContactModal from "@/components/ContactModal";
-import ServiceSearchModal from "@/components/ServiceSearchModal";
+import React from "react";
+import ServicePageTemplate, {
+  PricingPackage,
+  useServicePage,
+} from "@/components/ServicePageTemplate";
 import {
   FileText,
   ShieldCheck,
@@ -15,7 +15,6 @@ import {
   ChevronRight,
   ChevronLeft,
   ArrowRight,
-  MessageCircle,
   HelpCircle,
   Sparkles,
   Building,
@@ -33,102 +32,6 @@ import {
   FileCheck,
   Globe2,
 } from "lucide-react";
-
-const INDIAN_STATES = [
-  "Andhra Pradesh",
-  "Arunachal Pradesh",
-  "Assam",
-  "Bihar",
-  "Chhattisgarh",
-  "Goa",
-  "Gujarat",
-  "Haryana",
-  "Himachal Pradesh",
-  "Jharkhand",
-  "Karnataka",
-  "Kerala",
-  "Madhya Pradesh",
-  "Maharashtra",
-  "Manipur",
-  "Meghalaya",
-  "Mizoram",
-  "Nagaland",
-  "Odisha",
-  "Punjab",
-  "Rajasthan",
-  "Sikkim",
-  "Tamil Nadu",
-  "Telangana",
-  "Tripura",
-  "Uttar Pradesh",
-  "Uttarakhand",
-  "West Bengal",
-  "Delhi NCR",
-  "Chandigarh",
-  "Jammu & Kashmir",
-  "Ladakh",
-  "Puducherry",
-];
-
-const CLIENT_MINI_CARDS = [
-  {
-    name: "CRED",
-    logo: (
-      <span className="text-[17px] font-bold tracking-tighter text-slate-800 select-none">
-        CRED
-      </span>
-    ),
-  },
-  {
-    name: "meesho",
-    logo: (
-      <span className="text-[16px] font-extrabold tracking-tight text-[#9A216A] select-none">
-        meesho
-      </span>
-    ),
-  },
-  {
-    name: "Razorpay",
-    logo: (
-      <div className="flex items-center gap-1 font-bold text-[#0C2340] text-[15px] select-none">
-        <span className="text-[#0C6CF2]">R</span>azorpay
-      </div>
-    ),
-  },
-  {
-    name: "Zepto",
-    logo: (
-      <span className="text-[17px] font-black tracking-tight text-[#7915F7] select-none">
-        zepto
-      </span>
-    ),
-  },
-  {
-    name: "slice",
-    logo: (
-      <span className="text-[17px] font-bold tracking-tight text-[#7C3AED] select-none">
-        slice
-      </span>
-    ),
-  },
-  {
-    name: "Cars24",
-    logo: (
-      <div className="flex items-center gap-0.5 font-black text-slate-800 text-[15px] select-none">
-        <span>CARS</span>
-        <span className="text-[#FF5A00]">24</span>
-      </div>
-    ),
-  },
-  {
-    name: "Groww",
-    logo: (
-      <span className="text-[16px] font-bold tracking-tight text-[#00D09C] select-none">
-        groww
-      </span>
-    ),
-  },
-];
 
 const COMPANY_MIN_REQUIREMENTS_TABLE = [
   {
@@ -310,748 +213,105 @@ const POPULAR_SEARCHES_TAGS = [
   "Company Registration Stamp Duty by State",
 ];
 
-export default function CompanyRegistrationPage() {
-  const [isContactOpen, setIsContactOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
+const PACKAGES: PricingPackage[] = [
+  {
+    name: "Private Ltd - Incorporation",
+    shortDesc:
+      "Register your company in just 7–10 days. Online, investor-ready & hassle-free incorporation...",
+    expandedDesc:
+      "Includes name reservation via RUN/SPICe+ Part A, 2 Director Identification Numbers (DIN), Digital Signatures (DSC), SPICe+ Part B drafting, e-MOA, e-AOA, PAN, TAN & Bank Account opening assistance.",
+    price: "₹2,899",
+    priceSub: "+ MCA Government Fees & Stamp Duty",
+    features: [
+      "Company Name Approval via SPICe+ Part A",
+      "2 Digital Signature Certificates (DSC Class 3)",
+      "2 Director Identification Numbers (DIN)",
+      "Drafting of e-MOA & e-AOA Constitutionals",
+      "Incorporation Certificate (COI) Issuance",
+      "Company PAN & TAN Allotment",
+      "Zero-Balance Corporate Bank Account Opening",
+    ],
+  },
+  {
+    name: "Incorporation & Compliance",
+    popular: true,
+    badge: "Most Popular",
+    shortDesc:
+      "Complete incorporation plus mandatory 1st year ROC compliances to keep your company audit-ready...",
+    expandedDesc:
+      "Covers complete incorporation, Commencement of Business Certificate (INC-20A), Auditor Appointment (ADT-1), DIR-3 KYC for directors, and first annual MCA compliance filings.",
+    price: "₹19,899",
+    priceSub: "+ MCA Stamp Duty | Full 1-Year Compliance Shield",
+    features: [
+      "Complete Company Incorporation Package",
+      "Commencement of Business (Form INC-20A)",
+      "Auditor Appointment Filing (Form ADT-1)",
+      "DIR-3 KYC Filing for 2 Directors",
+      "Annual ROC Return Filing (AOC-4 & MGT-7)",
+      "Minutes of First Board Meeting & Share Certificates",
+      "Dedicated Corporate Secretary / CA Manager",
+    ],
+  },
+  {
+    name: "Comprehensive Startup Suite",
+    shortDesc:
+      "The all-inclusive package: Incorporation, 1-Year ROC compliance, GST registration, Trademark & Cloud Accounting...",
+    expandedDesc:
+      "Engineered for high-growth ventures raising funds. Covers full incorporation, corporate filings, GST registration, 1 Trademark filing under 1 class, and LEDGERS cloud accounting suite.",
+    price: "₹29,899",
+    priceSub: "+ MCA Stamp Duty | Enterprise Growth Tier",
+    features: [
+      "Complete Company Incorporation Suite",
+      "Full 1-Year ROC & MCA Annual Compliance",
+      "GST Registration & 12 Months GST Returns",
+      "1 Trademark Registration Application (1 Class)",
+      "LEDGERS Cloud Invoicing & Accounting Software (1 Year)",
+      "Preparation of Financial Statements & Audit Support",
+      "Corporate Income Tax Return (ITR-6) Filing",
+    ],
+  },
+];
 
-  // Form states
-  const [formName, setFormName] = useState("");
-  const [formEmail, setFormEmail] = useState("");
-  const [formPhone, setFormPhone] = useState("");
-  const [formState, setFormState] = useState("");
-  const [formSubmitted, setFormSubmitted] = useState(false);
+const FORM_FEATURES = [
+  {
+    icon: <Building className="w-4 h-4" />,
+    text: "SPICe+ MCA Fast-Track Incorporation",
+  },
+  {
+    icon: <Users className="w-4 h-4" />,
+    text: "2 DIN & Class-3 Digital Signatures Included",
+  },
+  {
+    icon: <FileText className="w-4 h-4" />,
+    text: "e-MOA, e-AOA, PAN, TAN & Bank Account",
+  },
+  {
+    icon: <ShieldCheck className="w-4 h-4" />,
+    text: "100% Online MCA Portal Scrutiny & Approval",
+  },
+  {
+    icon: <Sparkles className="w-4 h-4" />,
+    text: "Documents Required for Company Registration →",
+    isLink: true,
+    href: "#documents-required",
+  },
+];
 
-  // Pricing card expand states
-  const [expandedCard, setExpandedCard] = useState<number | null>(null);
+const RELATED_GUIDES = [
+  "Comprehensive Checklist for Private Limited Company Incorporation",
+  "Understanding SPICe+ Part A & Part B MCA Filing Process",
+  "Mandatory Post-Incorporation Compliances: INC-20A & ADT-1",
+  "Differences Between Private Limited, LLP, and OPC in India",
+  "Director Identification Number (DIN) & Class-3 DSC Guide",
+  "How to Open a Corporate Bank Account After Company Incorporation",
+];
 
-  // FAQ states
-  const [openFaq, setOpenFaq] = useState<string | null>("c1-0");
-  const [showMoreFaqs, setShowMoreFaqs] = useState(false);
-
-  // State list collapse in sidebar
-  const [stateListOpen, setStateListOpen] = useState(true);
-
-  // Client mini cards carousel scroll
-  const clientScrollRef = useRef<HTMLDivElement>(null);
-
-  const scrollClients = (direction: "left" | "right") => {
-    if (clientScrollRef.current) {
-      const scrollAmount = direction === "left" ? -280 : 280;
-      clientScrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
-    }
-  };
-
-  const handleHeroFormSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formName || !formEmail || !formPhone || !formState) return;
-    setFormSubmitted(true);
-  };
+function CompanyGuideContent() {
+  const { openContactModal } = useServicePage();
 
   return (
-    <div className="min-h-screen bg-white font-sans text-slate-800 antialiased selection:bg-[#00A86B]/15 selection:text-[#00A86B]">
-      {/* Top Header Navigation */}
-      <Navbar
-        onOpenSearch={() => setIsSearchOpen(true)}
-        onOpenContact={() => setIsContactOpen(true)}
-      />
-
-      {/* Hero Section with Merrafilings Curved Radial Mesh Background */}
-      <section className="relative overflow-visible pt-6 sm:pt-8 md:pt-10 pb-16 bg-white">
-        {/* Curved gradient backdrop canvas */}
-        <div
-          className="absolute inset-x-0 top-0 z-0 mx-auto w-full rounded-b-[40px] sm:rounded-b-[52px] md:rounded-b-[64px] overflow-hidden pointer-events-none"
-          style={{
-            height: "calc(100% - 90px)",
-            minHeight: "540px",
-            background: `
-              radial-gradient(ellipse 65% 75% at 0% 75%, 
-                rgb(255, 215, 198) 0%,
-                rgba(255, 226, 213, 0.95) 25%,
-                rgba(255, 238, 230, 0.6) 50%,
-                rgba(255, 248, 244, 0.15) 75%,
-                transparent 85%
-              ),
-              radial-gradient(ellipse 65% 75% at 100% 75%,
-                rgb(192, 226, 236) 0%,
-                rgba(202, 232, 240, 0.95) 25%,
-                rgba(220, 240, 247, 0.6) 50%,
-                rgba(238, 248, 252, 0.15) 75%,
-                transparent 85%
-              ),
-              linear-gradient(180deg,
-                rgb(255, 255, 255) 0%,
-                rgb(250, 249, 248) 35%,
-                rgb(245, 243, 241) 70%,
-                rgb(239, 236, 232) 100%
-              )
-            `,
-          }}
-          aria-hidden="true"
-        />
-
-        <div className="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Main Hero Title & Tagline */}
-          <div className="text-center max-w-3xl mx-auto mb-6">
-            <h1 className="text-2xl sm:text-3xl md:text-[34px] lg:text-[38px] font-light text-[#12023B] leading-snug">
-              <span className="bg-gradient-to-r from-[#5C3BFF] via-[#7052FF] to-[#FF4ED0] bg-clip-text text-transparent font-light">
-                Private Limited Company
-              </span>{" "}
-              Registration in India
-            </h1>
-            <p className="mt-3 text-[13px] sm:text-[14.5px] font-light text-slate-600 max-w-2xl mx-auto leading-relaxed">
-              Register your Private Limited Company online in India with expert assistance. Fast MCA name approval, SPICe+ incorporation, MOA &amp; AOA drafting, PAN &amp; TAN cards, and complete compliance support.
-            </p>
-          </div>
-
-          {/* Hero Content Glassmorphism Box */}
-          <div className="w-full max-w-[72rem] mx-auto rounded-2xl sm:rounded-3xl lg:rounded-[32px] border border-white/70 bg-white/90 shadow-xl sm:shadow-2xl shadow-slate-900/10 backdrop-blur p-6 sm:p-8 lg:p-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-              {/* Left Column: Key Features */}
-              <div className="space-y-6">
-                <div>
-                  <h2 className="text-xl sm:text-2xl md:text-3xl font-normal text-[#12023B] mb-2 sm:mb-3">
-                    Start Your Company in India
-                  </h2>
-                  <p className="text-[13px] sm:text-[14px] font-light text-slate-600 leading-relaxed">
-                    India&apos;s most popular legal structure for startups and ambitious founders looking to raise institutional funding and protect private assets.
-                  </p>
-                </div>
-
-                {/* 5 Bullet Features */}
-                <ul className="space-y-3 pt-2">
-                  <li className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-white/80 border border-purple-200/50 shadow-xs flex items-center justify-center shrink-0">
-                      <svg className="w-4 h-4" fill="#6B4BFF" viewBox="0 0 20 20">
-                        <path
-                          fillRule="evenodd"
-                          d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                    <span className="text-[13.5px] font-light text-slate-700">MCA Name Approval (RUN Portal)</span>
-                  </li>
-
-                  <li className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-white/80 border border-purple-200/50 shadow-xs flex items-center justify-center shrink-0">
-                      <svg className="w-4 h-4" fill="#6B4BFF" viewBox="0 0 20 20">
-                        <path
-                          fillRule="evenodd"
-                          d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                    <span className="text-[13.5px] font-light text-slate-700">SPICe+ Incorporation Filing</span>
-                  </li>
-
-                  <li className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-white/80 border border-purple-200/50 shadow-xs flex items-center justify-center shrink-0">
-                      <svg className="w-4 h-4" fill="none" stroke="#6B4BFF" viewBox="0 0 24 24">
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                        />
-                      </svg>
-                    </div>
-                    <span className="text-[13.5px] font-light text-slate-700">MOA &amp; AOA Drafting (e-MOA/e-AOA)</span>
-                  </li>
-
-                  <li className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-white/80 border border-purple-200/50 shadow-xs flex items-center justify-center shrink-0">
-                      <svg className="w-4 h-4" fill="#6B4BFF" viewBox="0 0 20 20">
-                        <path
-                          fillRule="evenodd"
-                          d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                    <span className="text-[13.5px] font-light text-slate-700">PAN &amp; TAN Allotment</span>
-                  </li>
-
-                  <li className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-white/80 border border-purple-200/50 shadow-xs flex items-center justify-center shrink-0">
-                      <svg className="w-4 h-4" fill="none" stroke="#6B4BFF" viewBox="0 0 24 24">
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                        />
-                      </svg>
-                    </div>
-                    <a
-                      href="#documents-section"
-                      className="text-[13.5px] font-semibold bg-gradient-to-r from-[#5D54FF] via-[#A767EC] to-[#F968E7] bg-clip-text text-transparent underline underline-offset-2 decoration-[#A767EC] hover:opacity-85 transition-opacity cursor-pointer"
-                    >
-                      Required Documents
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Right Column: Lead Form */}
-              <div className="bg-[#FAF8F5]/60 rounded-2xl p-5 sm:p-7 border border-[#E4E7EC]/70">
-                {formSubmitted ? (
-                  <div className="text-center py-8 space-y-4">
-                    <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
-                      <Check className="w-8 h-8" />
-                    </div>
-                    <h3 className="text-xl font-bold text-[#111827]">Application Received!</h3>
-                    <p className="text-[14px] text-[#475467]">
-                      Thank you, <strong className="text-[#111827]">{formName}</strong>. Our senior corporate incorporation specialist will contact you at <strong className="text-[#111827]">{formPhone}</strong> within 15 minutes.
-                    </p>
-                    <button
-                      type="button"
-                      onClick={() => setFormSubmitted(false)}
-                      className="px-5 py-2 text-[13px] font-medium text-[#155EEF] hover:underline cursor-pointer"
-                    >
-                      Submit another query
-                    </button>
-                  </div>
-                ) : (
-                  <form onSubmit={handleHeroFormSubmit} className="space-y-4">
-                    {/* Continue with Google */}
-                    <button
-                      type="button"
-                      onClick={() => alert("Google Single Sign-On simulation. Please fill in the details below.")}
-                      className="w-full flex items-center justify-center gap-3 py-2.5 px-4 bg-white hover:bg-[#F8FAFC] border border-[#D0D5DD] rounded-xl text-[14px] font-medium text-[#344054] shadow-xs transition-colors cursor-pointer"
-                    >
-                      <svg className="w-5 h-5" viewBox="0 0 24 24">
-                        <path
-                          fill="#4285F4"
-                          d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
-                        />
-                        <path
-                          fill="#34A853"
-                          d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
-                        />
-                        <path
-                          fill="#FBBC05"
-                          d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"
-                        />
-                        <path
-                          fill="#EA4335"
-                          d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"
-                        />
-                      </svg>
-                      <span>Continue with Google</span>
-                    </button>
-
-                    {/* OR divider */}
-                    <div className="relative flex items-center justify-center my-3">
-                      <div className="border-t border-[#D0D5DD] w-full" />
-                      <span className="bg-[#FAF8F5] px-3 text-[12px] font-semibold text-[#98A2B3] uppercase tracking-wider absolute">
-                        OR
-                      </span>
-                    </div>
-
-                    {/* Name */}
-                    <div>
-                      <input
-                        type="text"
-                        required
-                        placeholder="Name *"
-                        value={formName}
-                        onChange={(e) => setFormName(e.target.value)}
-                        className="w-full px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-md text-[13.5px] font-normal text-slate-800 placeholder-slate-400 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all"
-                      />
-                    </div>
-
-                    {/* Email */}
-                    <div>
-                      <input
-                        type="email"
-                        required
-                        placeholder="Email *"
-                        value={formEmail}
-                        onChange={(e) => setFormEmail(e.target.value)}
-                        className="w-full px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-md text-[13.5px] font-normal text-slate-800 placeholder-slate-400 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all"
-                      />
-                    </div>
-
-                    {/* Phone Number with India Flag */}
-                    <div className="flex">
-                      <span className="inline-flex items-center gap-1.5 px-3 py-2.5 bg-[#F8FAFC] border border-r-0 border-[#D0D5DD] rounded-l-md text-[13px] text-slate-600 font-normal select-none">
-                        <span>🇮🇳</span>
-                        <span>+91</span>
-                      </span>
-                      <input
-                        type="tel"
-                        required
-                        placeholder="Phone Number *"
-                        value={formPhone}
-                        onChange={(e) => setFormPhone(e.target.value)}
-                        className="w-full px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-r-md text-[13.5px] font-normal text-slate-800 placeholder-slate-400 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all"
-                      />
-                    </div>
-
-                    {/* Select State */}
-                    <div>
-                      <select
-                        required
-                        value={formState}
-                        onChange={(e) => setFormState(e.target.value)}
-                        className="w-full px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-md text-[13.5px] font-normal text-slate-800 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all"
-                      >
-                        <option value="">Select State *</option>
-                        {INDIAN_STATES.map((st) => (
-                          <option key={st} value={st}>
-                            {st}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-
-                    {/* Submit Button */}
-                    <div className="pt-2 flex justify-end">
-                      <button
-                        type="submit"
-                        className="px-8 py-2.5 rounded-lg font-medium text-sm text-white bg-gradient-to-r from-[#594CF5] to-[#D946EF] hover:opacity-95 shadow-sm transition-all cursor-pointer"
-                      >
-                        Continue
-                      </button>
-                    </div>
-                  </form>
-                )}
-              </div>
-            </div>
-
-            {/* Trust Stats Cards with Hover Effects */}
-            <div className="mt-8 pt-6 border-t border-slate-100/80 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4">
-              {/* Card 1: 4.4 Verified Reviews */}
-              <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-amber-200 hover:shadow-[0_8px_25px_rgba(245,158,11,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
-                <div className="w-11 h-11 rounded-2xl bg-[#FFF6E9] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-2 shadow-2xs">
-                  <svg className="w-5 h-5 text-[#F04438] transition-colors" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <div className="flex items-center gap-1.5 font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">
-                    <span>4.4</span>
-                    <div className="flex items-center text-amber-400 text-[11px] gap-0.5">
-                      <span>★</span><span>★</span><span>★</span><span>★</span>
-                      <span className="relative inline-block text-slate-300">
-                        ★
-                        <span className="absolute inset-0 overflow-hidden w-[40%] text-amber-400">★</span>
-                      </span>
-                    </div>
-                  </div>
-                  <p className="text-[11.5px] font-light text-slate-500">Verified Reviews</p>
-                </div>
-              </div>
-
-              {/* Card 2: 15+ Years of Experience */}
-              <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-amber-200 hover:shadow-[0_8px_25px_rgba(217,119,6,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
-                <div className="w-11 h-11 rounded-2xl bg-[#FFF8E7] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-2 shadow-2xs">
-                  <svg className="w-5 h-5 text-[#D97706] transition-colors" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.504-1.125-1.125-1.125h-6.75c-.621 0-1.125.504-1.125 1.125v3.375m9 0h-9M6.75 6.75h10.5m-10.5 0a3 3 0 01-3-3V3.75h16.5v.001a3 3 0 01-3 3m-10.5 0v3.75a5.25 5.25 0 0010.5 0V6.75" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">15+ Years</p>
-                  <p className="text-[11.5px] font-light text-slate-500">of Experience</p>
-                </div>
-              </div>
-
-              {/* Card 3: 2 Lakh+ Customers */}
-              <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-purple-200 hover:shadow-[0_8px_25px_rgba(107,75,255,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
-                <div className="w-11 h-11 rounded-2xl bg-[#F5F3FF] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-2 shadow-2xs">
-                  <Users className="w-5 h-5 text-[#6B4BFF] transition-colors" />
-                </div>
-                <div>
-                  <p className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">2 Lakh+ Customers</p>
-                  <p className="text-[11.5px] font-light text-slate-500">Served Across India</p>
-                </div>
-              </div>
-
-              {/* Card 4: App Tracking */}
-              <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-emerald-200 hover:shadow-[0_8px_25px_rgba(0,176,116,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
-                <div className="w-11 h-11 rounded-2xl bg-[#ECFDF5] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-2 shadow-2xs">
-                  <Smartphone className="w-5 h-5 text-[#00B074] transition-colors" />
-                </div>
-                <div>
-                  <p className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">App Tracking</p>
-                  <p className="text-[11.5px] font-light text-slate-500">Live Status &amp; Alerts</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Clients Section (Single-row Mini Cards Carousel) */}
-      <section className="py-7 border-y border-slate-100 bg-white overflow-hidden">
-        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between gap-4">
-            <button
-              type="button"
-              onClick={() => scrollClients("left")}
-              className="w-9 h-9 rounded-full bg-white border border-slate-200/90 shadow-2xs hover:shadow-xs flex items-center justify-center text-slate-500 hover:text-slate-800 hover:border-slate-300 transition-all shrink-0 cursor-pointer"
-              aria-label="Scroll clients left"
-            >
-              <ChevronLeft className="w-4 h-4" />
-            </button>
-
-            <div
-              ref={clientScrollRef}
-              className="flex items-center gap-3 sm:gap-3.5 overflow-x-auto scrollbar-none scroll-smooth py-1 px-1 flex-1 min-w-0"
-              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-            >
-              {CLIENT_MINI_CARDS.map((client, idx) => (
-                <div
-                  key={idx}
-                  className="h-[52px] sm:h-[54px] w-[130px] sm:w-[145px] px-3.5 rounded-xl border border-slate-200/85 bg-white flex items-center justify-center shadow-3xs hover:shadow-xs hover:border-slate-300 transition-all shrink-0 cursor-pointer select-none"
-                >
-                  {client.logo}
-                </div>
-              ))}
-            </div>
-
-            <button
-              type="button"
-              onClick={() => scrollClients("right")}
-              className="w-9 h-9 rounded-full bg-white border border-slate-200/90 shadow-2xs hover:shadow-xs flex items-center justify-center text-slate-500 hover:text-slate-800 hover:border-slate-300 transition-all shrink-0 cursor-pointer"
-              aria-label="Scroll clients right"
-            >
-              <ChevronRight className="w-4 h-4" />
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section (Matching exact Merrafilings design with Green Hover Border & Register Button) */}
-      <section id="pricing" className="py-14 sm:py-16 bg-white">
-        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-10">
-            <h2 className="text-2xl sm:text-[28px] md:text-[32px] font-normal text-[#111827] leading-snug">
-              Simple packages. Transparent{" "}
-              <span className="bg-gradient-to-r from-[#7052FF] via-[#9E6AFF] to-[#E966DF] bg-clip-text text-transparent font-normal">
-                pricing.
-              </span>
-            </h2>
-            <div className="w-12 h-[2px] bg-gradient-to-r from-[#7052FF] to-[#E966DF] rounded-full mx-auto mt-2 mb-3" />
-            <p className="text-[13px] sm:text-[13.5px] font-light text-slate-500">
-              Transparent pricing and end-to-end corporate support from name reservation to incorporation certificate.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-7 items-stretch">
-            {/* Package 1: Private Limited Company - Incorporation */}
-            <div className="group bg-white rounded-[22px] border-[1.5px] border-slate-200/90 hover:border-[#00B074] p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-[0_16px_36px_rgba(0,176,116,0.14)] hover:-translate-y-1.5 transition-all duration-300 ease-out cursor-pointer relative">
-              <div>
-                <h3 className="text-[17px] sm:text-[18px] font-normal text-[#111827] group-hover:text-emerald-950 transition-colors">
-                  Private Ltd - Incorporation
-                </h3>
-                <p className="text-[12.5px] font-light text-slate-500 mt-2 leading-relaxed">
-                  Register your company in just 7–10 days. Online, investor-ready &amp; hassle-free incorporation...{" "}
-                  <button
-                    type="button"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setExpandedCard(expandedCard === 1 ? null : 1);
-                    }}
-                    className="text-[#155EEF] font-normal hover:underline inline-flex items-center gap-0.5 cursor-pointer"
-                  >
-                    {expandedCard === 1 ? "Read less ⌃" : "Read more ⌵"}
-                  </button>
-                </p>
-                {expandedCard === 1 && (
-                  <p className="text-[12px] font-light text-slate-600 mt-2 bg-[#F8FAFC] p-3 rounded-lg border border-[#E4E7EC]">
-                    Includes RUN name reservation, Class 3 DSC for 2 directors, DIN allotment, e-MOA &amp; e-AOA drafting, SPICe+ Part B incorporation filing, Certificate of Incorporation (CIN), and PAN/TAN cards.
-                  </p>
-                )}
-
-                <div className="mt-5 mb-5">
-                  <div className="text-[26px] sm:text-[28px] font-normal text-[#111827] tracking-tight">
-                    ₹2,899
-                  </div>
-                  <p className="text-[11.5px] font-light text-slate-400 mt-0.5">+ GST | Govt. fee &amp; DSC extra</p>
-                </div>
-
-                <div className="pt-2">
-                  <p className="text-[12.5px] font-light text-slate-500 mb-3">What&apos;s included:</p>
-                  <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
-                    <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
-                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
-                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                      <span>MCA Name Reservation (RUN Portal)</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
-                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
-                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                      <span>Class 3 DSC for 2 Directors</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
-                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
-                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                      <span>DIN Allotment for 2 Directors</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
-                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
-                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                      <span>Drafting of e-MOA (INC-33) &amp; e-AOA (INC-34)</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
-                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
-                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                      <span>Certificate of Incorporation (CIN), PAN &amp; TAN</span>
-                    </li>
-                  </ul>
-                  <button
-                    type="button"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setExpandedCard(expandedCard === 1 ? null : 1);
-                    }}
-                    className="text-[12px] font-normal text-[#00B074] hover:underline cursor-pointer mt-2 block"
-                  >
-                    +2 more
-                  </button>
-                </div>
-              </div>
-
-              <div className="mt-8 pt-2">
-                <button
-                  type="button"
-                  onClick={() => setIsContactOpen(true)}
-                  className="w-full py-2.5 px-4 rounded-xl font-medium text-[14.5px] text-[#00B074] bg-[#E8FAF2] group-hover:bg-[#00B074] group-hover:text-white hover:!bg-[#009B66] border border-[#00B074]/35 group-hover:border-[#00B074] transition-all duration-200 cursor-pointer shadow-xs group-hover:shadow-sm"
-                >
-                  Register Now
-                </button>
-              </div>
-            </div>
-
-            {/* Package 2: Incorporation + Compliance (Recommended) */}
-            <div className="group bg-white rounded-[22px] border-[2px] border-[#00B074] p-6 sm:p-7 flex flex-col justify-between shadow-md hover:shadow-[0_20px_40px_rgba(0,176,116,0.18)] hover:-translate-y-1.5 transition-all duration-300 ease-out cursor-pointer relative">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#00B074] text-white text-[11px] font-medium tracking-wide uppercase px-3 py-0.5 rounded-full shadow-2xs">
-                Most Popular
-              </div>
-
-              <div>
-                <h3 className="text-[17px] sm:text-[18px] font-normal text-[#111827] group-hover:text-emerald-950 transition-colors">
-                  Incorporation &amp; Compliance
-                </h3>
-                <p className="text-[12.5px] font-light text-slate-500 mt-2 leading-relaxed">
-                  Full incorporation plus mandatory post-incorporation setup, Commencement of Business (INC-20A), and 1st year compliances...{" "}
-                  <button
-                    type="button"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setExpandedCard(expandedCard === 2 ? null : 2);
-                    }}
-                    className="text-[#155EEF] font-normal hover:underline inline-flex items-center gap-0.5 cursor-pointer"
-                  >
-                    {expandedCard === 2 ? "Read less ⌃" : "Read more ⌵"}
-                  </button>
-                </p>
-                {expandedCard === 2 && (
-                  <p className="text-[12px] font-light text-slate-600 mt-2 bg-[#F8FAFC] p-3 rounded-lg border border-[#E4E7EC]">
-                    Includes full incorporation package plus Form INC-20A filing, issuance of physical share certificates, statutory registers setup, GST registration, and first board meeting documentation.
-                  </p>
-                )}
-
-                <div className="mt-5 mb-5">
-                  <div className="text-[26px] sm:text-[28px] font-normal text-[#111827] tracking-tight">
-                    ₹19,899
-                  </div>
-                  <p className="text-[11.5px] font-light text-slate-400 mt-0.5">+ GST | Complete Post-Inc Setup</p>
-                </div>
-
-                <div className="pt-2">
-                  <p className="text-[12.5px] font-light text-slate-500 mb-3">What&apos;s included:</p>
-                  <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
-                    <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
-                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
-                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                      <span>Complete Private Limited Incorporation</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
-                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
-                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                      <span>Commencement of Business (Form INC-20A)</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
-                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
-                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                      <span>Government GST Registration Certificate</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
-                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
-                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                      <span>Share Certificates &amp; Statutory Registers (Sec 88)</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
-                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
-                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                      <span>Dedicated CA &amp; Corporate Legal Advisor</span>
-                    </li>
-                  </ul>
-                  <button
-                    type="button"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setExpandedCard(expandedCard === 2 ? null : 2);
-                    }}
-                    className="text-[12px] font-normal text-[#00B074] hover:underline cursor-pointer mt-2 block"
-                  >
-                    +3 more
-                  </button>
-                </div>
-              </div>
-
-              <div className="mt-8 pt-2">
-                <button
-                  type="button"
-                  onClick={() => setIsContactOpen(true)}
-                  className="w-full py-2.5 px-4 rounded-xl font-medium text-[14.5px] text-white bg-[#00B074] hover:bg-[#009B66] transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md"
-                >
-                  Register Now
-                </button>
-              </div>
-            </div>
-
-            {/* Package 3: Comprehensive Startup Suite */}
-            <div className="group bg-white rounded-[22px] border-[1.5px] border-slate-200/90 hover:border-[#00B074] p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-[0_16px_36px_rgba(0,176,116,0.14)] hover:-translate-y-1.5 transition-all duration-300 ease-out cursor-pointer relative">
-              <div>
-                <h3 className="text-[17px] sm:text-[18px] font-normal text-[#111827] group-hover:text-emerald-950 transition-colors">
-                  Comprehensive Startup Suite
-                </h3>
-                <p className="text-[12.5px] font-light text-slate-500 mt-2 leading-relaxed">
-                  Total annual compliance coverage: incorporation, GST, trademark application, accounting, and annual ROC filings...{" "}
-                  <button
-                    type="button"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setExpandedCard(expandedCard === 3 ? null : 3);
-                    }}
-                    className="text-[#155EEF] font-normal hover:underline inline-flex items-center gap-0.5 cursor-pointer"
-                  >
-                    {expandedCard === 3 ? "Read less ⌃" : "Read more ⌵"}
-                  </button>
-                </p>
-                {expandedCard === 3 && (
-                  <p className="text-[12px] font-light text-slate-600 mt-2 bg-[#F8FAFC] p-3 rounded-lg border border-[#E4E7EC]">
-                    Includes full incorporation package, INC-20A, 1 Trademark application (Form TM-A), Form AOC-4 &amp; MGT-7 filings, director KYC (DIR-3 KYC for 2), corporate tax return (ITR-6), and 1-year Merrafilings Ledgers cloud software.
-                  </p>
-                )}
-
-                <div className="mt-5 mb-5">
-                  <div className="text-[26px] sm:text-[28px] font-normal text-[#111827] tracking-tight">
-                    ₹29,899
-                  </div>
-                  <p className="text-[11.5px] font-light text-slate-400 mt-0.5">+ GST | Full 1st Year Compliance &amp; TM</p>
-                </div>
-
-                <div className="pt-2">
-                  <p className="text-[12.5px] font-light text-slate-500 mb-3">What&apos;s included:</p>
-                  <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
-                    <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
-                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
-                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                      <span>Everything in Incorporation &amp; Compliance</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
-                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
-                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                      <span>1 Brand Trademark Application (TM-A Filing)</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
-                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
-                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                      <span>Annual ROC Filing: Form AOC-4 &amp; Form MGT-7</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
-                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
-                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                      <span>Director KYC (DIR-3 KYC for 2 Directors)</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
-                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
-                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                      <span>Corporate Income Tax Return (ITR-6) Filing</span>
-                    </li>
-                  </ul>
-                  <button
-                    type="button"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setExpandedCard(expandedCard === 3 ? null : 3);
-                    }}
-                    className="text-[12px] font-normal text-[#00B074] hover:underline cursor-pointer mt-2 block"
-                  >
-                    +3 more
-                  </button>
-                </div>
-              </div>
-
-              <div className="mt-8 pt-2">
-                <button
-                  type="button"
-                  onClick={() => setIsContactOpen(true)}
-                  className="w-full py-2.5 px-4 rounded-xl font-medium text-[14.5px] text-[#00B074] bg-[#E8FAF2] group-hover:bg-[#00B074] group-hover:text-white hover:!bg-[#009B66] border border-[#00B074]/35 group-hover:border-[#00B074] transition-all duration-200 cursor-pointer shadow-xs group-hover:shadow-sm"
-                >
-                  Register Now
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Main Content & Sticky Sidebar Grid Section */}
-      <section id="overview-section" className="py-12 bg-[#FAF9F7]/50 border-t border-slate-100">
-        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Breadcrumb Navigation */}
-          <nav className="flex items-center gap-2 text-[13px] font-light text-slate-500 mb-6 flex-wrap">
-            <a href="/" className="hover:text-[#155EEF] transition-colors">
-              Merrafilings
-            </a>
-            <span className="text-slate-300">/</span>
-            <a href="/startup" className="hover:text-[#155EEF] transition-colors">
-              Business Registration
-            </a>
-            <span className="text-slate-300">/</span>
-            <span className="text-[#00B074] font-normal">Private Limited Company</span>
-          </nav>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
-            {/* Left Column: Comprehensive Guide Content (8 cols) */}
-            <div className="lg:col-span-8 bg-white p-6 sm:p-8 md:p-10 rounded-2xl border border-slate-200/80 shadow-2xs space-y-10">
-              {/* Section 1: Overview */}
+    <>
+      {/* Section 1: Overview */}
               <div>
                 <h1 className="text-2xl sm:text-[26px] md:text-[28px] font-normal text-[#1F1646] text-center mb-6 leading-snug">
                   Private Limited Company Registration Online in India
@@ -1427,262 +687,45 @@ export default function CompanyRegistrationPage() {
                   </div>
                 </div>
               </div>
-            </div>
+    </>
+  );
+}
 
-            {/* Right Sticky Sidebar (4 cols) */}
-            <div className="lg:col-span-4 space-y-6 lg:sticky lg:top-24">
-              {/* Consult Experts Card with 3 Avatars */}
-              <div
-                onClick={() => setIsContactOpen(true)}
-                className="bg-white rounded-2xl border border-slate-200/80 shadow-2xs hover:shadow-xs p-4 flex items-center justify-between transition-all cursor-pointer group"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="flex -space-x-2 overflow-hidden">
-                    <img
-                      className="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover"
-                      src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=faces"
-                      alt="Expert 1"
-                    />
-                    <img
-                      className="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover"
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=faces"
-                      alt="Expert 2"
-                    />
-                    <img
-                      className="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover"
-                      src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=faces"
-                      alt="Expert 3"
-                    />
-                  </div>
-                  <span className="text-[14px] font-normal text-slate-800">
-                    Consult <span className="text-[#155EEF] font-normal">Experts</span>
-                  </span>
-                </div>
-                <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-[#155EEF] transition-colors" />
-              </div>
-
-              {/* Related Guides Card */}
-              <div className="bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden border-t-2 border-t-emerald-400">
-                <div className="p-5">
-                  <h4 className="font-normal text-[14px] text-slate-800 mb-4">Related Guides</h4>
-                  <ul className="space-y-3.5 text-[12.5px] font-light text-slate-700">
-                    {[
-                      "Understanding Private Limited Company Structure",
-                      "How to Choose a Unique Company Name on MCA",
-                      "Step-by-Step Guide to Form INC-20A Commencement",
-                      "Key Differences Between Private Limited and LLP",
-                      "How to Issue ESOPs in a Private Limited Company",
-                      "Mandatory Annual ROC Filings (AOC-4 and MGT-7)",
-                    ].map((guide, idx) => (
-                      <li key={idx} className="border-b border-slate-100 pb-3 last:border-0 last:pb-0">
-                        <a
-                          href="#overview-section"
-                          className="flex items-start gap-2.5 text-slate-600 hover:text-[#155EEF] transition-colors group"
-                        >
-                          <span className="text-slate-400 group-hover:text-[#155EEF] shrink-0 text-[13px] leading-tight">→</span>
-                          <span className="line-clamp-2 leading-snug">{guide}</span>
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              {/* Company Registration by State Directory */}
-              <div className="bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden border-t-2 border-t-emerald-400">
-                <div className="p-4 border-b border-slate-100 flex items-center justify-between">
-                  <span className="font-normal text-[14px] text-slate-800">Company Registration by State</span>
-                  <button
-                    type="button"
-                    onClick={() => setStateListOpen(!stateListOpen)}
-                    className="p-1 text-slate-400 hover:text-slate-700 cursor-pointer"
-                  >
-                    {stateListOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-                  </button>
-                </div>
-                {stateListOpen && (
-                  <div className="max-h-[380px] overflow-y-auto p-4 space-y-1.5 text-[12.5px] font-light">
-                    {INDIAN_STATES.slice(0, 18).map((st, idx) => (
-                      <a
-                        key={idx}
-                        href="#overview-section"
-                        className="flex items-center justify-between py-1.5 px-2 text-[#00B074] hover:text-emerald-700 hover:bg-emerald-50/50 rounded-lg transition-colors border-b border-slate-50 last:border-0"
-                      >
-                        <span>Company Registration in {st}</span>
-                        <span className="text-slate-300 text-[11px]">→</span>
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Frequently Asked Questions Section (Matching exact Merrafilings 2-column reference design) */}
-      <section className="py-14 sm:py-18 bg-white border-t border-[#E4E7EC]">
-        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Top Green Accent Dash */}
-          <div className="w-10 h-[3px] bg-[#00A86B] mb-3.5 rounded-full" />
-
-          {/* Section Header */}
-          <h2 className="text-2xl sm:text-[28px] md:text-[32px] font-normal text-slate-900 tracking-tight leading-snug">
-            Frequently asked questions
-          </h2>
-          <p className="text-[13px] sm:text-[13.5px] font-light text-slate-500 mt-1.5 mb-8">
-            Common questions about Private Limited Company Incorporation Starting at ₹2,899 in India.
-          </p>
-
-          {/* 2-Column FAQ Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
-            {/* Column 1 */}
-            <div className="space-y-3.5">
-              {(showMoreFaqs ? [...FAQ_COL_1, ...FAQ_EXTRA_COL_1] : FAQ_COL_1).map((faq, idx) => {
-                const faqId = `c1-${idx}`;
-                const isOpen = openFaq === faqId;
-                return (
-                  <div
-                    key={idx}
-                    onClick={() => setOpenFaq(isOpen ? null : faqId)}
-                    className={`bg-white rounded-xl border transition-all duration-200 cursor-pointer overflow-hidden group ${
-                      isOpen
-                        ? "border-[#00B074] shadow-xs"
-                        : "border-slate-200/90 hover:border-[#00B074] hover:shadow-2xs"
-                    }`}
-                  >
-                    <div className="py-4 px-5 flex items-center justify-between gap-4">
-                      <span className="font-normal text-[13.5px] sm:text-[14px] text-slate-800 leading-snug group-hover:text-slate-900">
-                        {faq.q}
-                      </span>
-                      <ChevronDown
-                        className={`w-4 h-4 shrink-0 transition-transform duration-200 ${
-                          isOpen ? "rotate-180 text-[#00B074]" : "text-slate-400 group-hover:text-slate-600"
-                        }`}
-                      />
-                    </div>
-                    {isOpen && (
-                      <div className="px-5 pb-4.5 pt-1 text-[13px] font-light text-slate-600 leading-relaxed border-t border-slate-100">
-                        {faq.a}
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* Column 2 */}
-            <div className="space-y-3.5">
-              {(showMoreFaqs ? [...FAQ_COL_2, ...FAQ_EXTRA_COL_2] : FAQ_COL_2).map((faq, idx) => {
-                const faqId = `c2-${idx}`;
-                const isOpen = openFaq === faqId;
-                return (
-                  <div
-                    key={idx}
-                    onClick={() => setOpenFaq(isOpen ? null : faqId)}
-                    className={`bg-white rounded-xl border transition-all duration-200 cursor-pointer overflow-hidden group ${
-                      isOpen
-                        ? "border-[#00B074] shadow-xs"
-                        : "border-slate-200/90 hover:border-[#00B074] hover:shadow-2xs"
-                    }`}
-                  >
-                    <div className="py-4 px-5 flex items-center justify-between gap-4">
-                      <span className="font-normal text-[13.5px] sm:text-[14px] text-slate-800 leading-snug group-hover:text-slate-900">
-                        {faq.q}
-                      </span>
-                      <ChevronDown
-                        className={`w-4 h-4 shrink-0 transition-transform duration-200 ${
-                          isOpen ? "rotate-180 text-[#00B074]" : "text-slate-400 group-hover:text-slate-600"
-                        }`}
-                      />
-                    </div>
-                    {isOpen && (
-                      <div className="px-5 pb-4.5 pt-1 text-[13px] font-light text-slate-600 leading-relaxed border-t border-slate-100">
-                        {faq.a}
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Load more questions button */}
-          <div className="text-center mt-9 mb-14">
-            <button
-              type="button"
-              onClick={() => setShowMoreFaqs(!showMoreFaqs)}
-              className="px-6 py-2.5 rounded-lg bg-[#00A86B] hover:bg-[#00925d] text-white text-[13.5px] font-medium transition-colors shadow-xs cursor-pointer inline-flex items-center gap-1.5"
-            >
-              <span>{showMoreFaqs ? "Show less questions" : "Load more questions"}</span>
-            </button>
-          </div>
-
-          {/* Related Services - Business Registration Card */}
-          <div className="bg-white rounded-2xl border border-slate-200/90 shadow-2xs p-5 sm:p-6 mb-6">
-            <h3 className="font-normal text-[15px] sm:text-[16px] text-slate-800 mb-4">
-              Related Services - Business Registration
-            </h3>
-            <div className="flex flex-wrap gap-2 sm:gap-2.5">
-              {RELATED_SERVICES_TAGS.map((tag, idx) => (
-                <a
-                  key={idx}
-                  href="#pricing"
-                  className="inline-flex items-center px-3.5 py-1.5 rounded-lg border border-slate-200/90 bg-white text-[12px] sm:text-[12.5px] font-light text-slate-600 hover:text-[#00A86B] hover:border-[#00A86B] transition-all shadow-3xs hover:shadow-2xs cursor-pointer"
-                >
-                  {tag}
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {/* Popular Searches Card */}
-          <div className="bg-white rounded-2xl border border-slate-200/90 shadow-2xs p-5 sm:p-6 mb-6">
-            <h3 className="font-normal text-[15px] sm:text-[16px] text-slate-800 mb-4">
-              Popular Searches
-            </h3>
-            <div className="flex flex-wrap gap-2 sm:gap-2.5">
-              {POPULAR_SEARCHES_TAGS.map((tag, idx) => (
-                <a
-                  key={idx}
-                  href="#pricing"
-                  className="inline-flex items-center px-3.5 py-1.5 rounded-lg border border-slate-200/90 bg-white text-[12px] sm:text-[12.5px] font-light text-slate-600 hover:text-[#00A86B] hover:border-[#00A86B] transition-all shadow-3xs hover:shadow-2xs cursor-pointer"
-                >
-                  {tag}
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Floating Live Chat Button */}
-      <div className="fixed bottom-6 right-6 z-40">
-        <button
-          type="button"
-          onClick={() => setIsContactOpen(true)}
-          className="inline-flex items-center gap-2 px-4.5 py-2.5 rounded-full bg-[#00BF72] hover:bg-[#00AB66] text-white font-medium text-[13.5px] shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5 cursor-pointer"
-        >
-          <MessageCircle className="w-4.5 h-4.5 fill-white text-[#00BF72]" />
-          <span>Live chat with experts</span>
-        </button>
-      </div>
-
-      {/* Global Modals */}
-      <ContactModal
-        isOpen={isContactOpen}
-        onClose={() => setIsContactOpen(false)}
-        serviceTitle="Private Limited Company Registration in India"
-      />
-
-      <ServiceSearchModal
-        isOpen={isSearchOpen}
-        onClose={() => setIsSearchOpen(false)}
-        onSelectService={() => setIsContactOpen(true)}
-      />
-
-      {/* Footer */}
-      <Footer />
-    </div>
+export default function CompanyRegistrationPage() {
+  return (
+    <ServicePageTemplate
+      badgeText="India's #1 Corporate Formation Platform"
+      heroTitle={
+        <>
+          <span>Register Your </span>
+          <span className="bg-gradient-to-r from-[#5C3BFF] via-[#7052FF] to-[#FF4ED0] bg-clip-text text-transparent font-medium">
+            Private Limited Company
+          </span>{" "}
+          <span>Online</span>
+        </>
+      }
+      heroSubtitle="Incorporate your company in India fast, 100% online, and hassle-free. Get MCA approval, SPICe+ filing, digital signatures, PAN, TAN & corporate bank account."
+      formTitle="Incorporate Your Company"
+      formSubtitle="Enter your details below to get immediate guidance from an MCA filing specialist."
+      formFeatures={FORM_FEATURES}
+      packages={PACKAGES}
+      pricingTitle={
+        <>
+          Simple packages. Transparent{" "}
+          <span className="font-normal text-[#00B074]">pricing.</span>
+        </>
+      }
+      pricingSubtitle="Transparent pricing and end-to-end corporate support from name reservation to incorporation certificate."
+      breadcrumbCurrent="Private Limited Company"
+      guideContent={<CompanyGuideContent />}
+      relatedGuides={RELATED_GUIDES}
+      faqCol1={FAQ_COL_1}
+      faqCol2={FAQ_COL_2}
+      faqExtraCol1={FAQ_EXTRA_COL_1}
+      faqExtraCol2={FAQ_EXTRA_COL_2}
+      faqSubtitle="Common questions about incorporating a Private Limited Company in India."
+      relatedServicesTags={RELATED_SERVICES_TAGS}
+      popularSearchesTags={POPULAR_SEARCHES_TAGS}
+    />
   );
 }

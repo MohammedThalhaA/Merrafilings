@@ -147,3 +147,45 @@ html, body {
 .animate-emitter-beacon {
   animation: emitterBeacon 1.8s ease-in-out infinite;
 }
+
+/* ==========================================================================
+   Table Row Hover - Clean Color Highlight (Zero Layout Shift / No Shaking)
+   ========================================================================== */
+table tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+table tbody tr td {
+  transition: background-color 0.15s ease;
+}
+
+table tbody tr:hover,
+table tbody tr:hover td {
+  background-color: #EFF6FF !important; /* Clean ice-blue hover color effect */
+}
+
+/* ==========================================================================
+   Global Interactive Button & Card Hover Transitions
+   ========================================================================== */
+.card-hover-effect {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, background-color 0.2s ease;
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -8px rgba(15, 23, 42, 0.1), 0 4px 12px -2px rgba(15, 23, 42, 0.05);
+}
+
+.btn-hover-effect {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.btn-hover-effect:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -4px rgba(89, 76, 245, 0.35);
+}
+
+.btn-hover-effect:active {
+  transform: translateY(0);
+}
+

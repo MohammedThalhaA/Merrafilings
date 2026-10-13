@@ -15,7 +15,7 @@ export default function ClientLogos() {
 
   return (
     <section className="py-10 bg-white border-b border-[#E4E7EC]/70">
-      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10">
         {/* Section Tag */}
         <p className="text-center text-[12px] md:text-[13px] font-semibold text-[#475467] uppercase tracking-[0.16em] mb-8">
           OUR CLIENTS

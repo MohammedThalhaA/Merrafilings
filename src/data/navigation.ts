@@ -55,48 +55,27 @@ export const NAV_CATEGORIES: NavCategory[] = [
     label: "Registrations",
     hasDropdown: true,
     columnLayout: {
-      columnsCount: 4,
-      width: "w-[890px]",
+      columnsCount: 3,
+      width: "w-[680px]",
       columns: [
-        // Column 1 from Screenshot 2
         [
           { title: "Startup India", href: "/start-up-india" },
-          { title: "Trade License", href: "#trade-license" },
-          { title: "FSSAI Registration", href: "#fssai-reg" },
-          { title: "FSSAI License", href: "#fssai-lic" },
-          { title: "Halal License & Certification", href: "#halal" },
-          { title: "ICEGATE Registration", href: "#icegate" },
-          { title: "Import Export Code", href: "#iec" },
+          { title: "Trade License", href: "/trade-license" },
+          { title: "FSSAI Registration", href: "/fssai" },
+          { title: "FSSAI License", href: "/fssai-license" },
+          { title: "ISO Registration", href: "/iso-registration" },
         ],
-        // Column 2 from Screenshot 2
         [
-          { title: "Legal Entity Identifier Code", href: "/lei-code" },
-          { title: "ISO Registration", href: "#iso" },
-          { title: "PF Registration", href: "#pf" },
-          { title: "ESI Registration", href: "#esi" },
-          { title: "Professional Tax Registration", href: "#pt" },
+          { title: "ESI Registration", href: "/esi-registration" },
+          { title: "Professional Tax Registration", href: "/professional-tax-registration" },
           { title: "RCMC Registration", href: "#rcmc" },
-          { title: "TN RERA Registration for Agents", href: "#tn-rera" },
-        ],
-        // Column 3 from Screenshot 2
-        [
-          { title: "12A and 80G Registration", href: "#12a-80g" },
-          { title: "12A Registration", href: "#12a" },
-          { title: "80G Registration", href: "#80g" },
           { title: "Barcode Registration", href: "#barcode" },
-          { title: "BIS Registration", href: "#bis" },
-          { title: "Certificate of Incumbency", href: "#incumbency" },
-          { title: "Darpan Registration", href: "#darpan" },
         ],
-        // Column 4 from Screenshot 2
         [
           { title: "Digital Signature", href: "#dsc" },
           { title: "Shop Act Registration", href: "#shop-act" },
           { title: "Udyam Registration", href: "#udyam" },
-          { title: "Fire License", href: "#fire-license" },
           { title: "Legal Name Change", href: "#name-change" },
-          { title: "Water Testing", href: "#water-testing" },
-          { title: "Food Testing", href: "#food-testing" },
         ],
       ],
     },

@@ -41,7 +41,7 @@ export default function HowItWorks({ onStartProcess }: HowItWorksProps) {
 
   return (
     <section className="py-20 md:py-28 bg-[#F8FAFC] border-b border-[#E4E7EC]">
-      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10">
         
         {/* Section Header */}
         <div className="text-center max-w-[760px] mx-auto mb-16">
@@ -58,25 +58,25 @@ export default function HowItWorks({ onStartProcess }: HowItWorksProps) {
         </div>
 
         {/* 4 Steps Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 2xl:gap-8">
           {steps.map((item, idx) => {
             const Icon = item.icon;
             return (
               <div
                 key={idx}
-                className="bg-white rounded-2xl border border-[#E4E7EC] p-6 sm:p-7 relative flex flex-col justify-between hover:shadow-md transition-all duration-200"
+                className="bg-white rounded-2xl border border-[#E4E7EC] p-6 sm:p-7 relative flex flex-col justify-between hover:border-[#155EEF]/50 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-2 transition-all duration-300 cursor-pointer group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-5">
-                    <span className="font-mono text-[13px] font-bold text-[#94A3B8] tracking-wider">
+                    <span className="font-mono text-[13px] font-bold text-[#94A3B8] tracking-wider group-hover:text-[#155EEF] transition-colors">
                       {item.step}
                     </span>
-                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center border ${item.color}`}>
+                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center border group-hover:scale-110 transition-transform duration-200 ${item.color}`}>
                       <Icon className="w-5 h-5" />
                     </div>
                   </div>
 
-                  <h3 className="text-[17px] font-semibold text-[#111827] leading-snug">
+                  <h3 className="text-[17px] font-semibold text-[#111827] leading-snug group-hover:text-[#155EEF] transition-colors">
                     {item.title}
                   </h3>
 
@@ -97,10 +97,10 @@ export default function HowItWorks({ onStartProcess }: HowItWorksProps) {
         <div className="mt-12 text-center">
           <button
             onClick={onStartProcess}
-            className="inline-flex items-center gap-2 px-6 py-3 text-[14px] font-semibold text-white bg-[#155EEF] hover:bg-[#1849A9] rounded-full shadow-xs transition-colors cursor-pointer"
+            className="inline-flex items-center gap-2 px-6 py-3 text-[14px] font-semibold text-white bg-[#155EEF] hover:bg-[#1849A9] rounded-full shadow-xs hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 cursor-pointer group"
           >
             <span>Start Your Incorporation or Filing Today</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </button>
         </div>
 

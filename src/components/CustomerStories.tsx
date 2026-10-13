@@ -93,7 +93,7 @@ export default function CustomerStories() {
 
   return (
     <section className="py-20 md:py-28 bg-white border-b border-[#E4E7EC]">
-      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10">
         
         {/* Header (Matching Screenshot 4) */}
         <div className="mb-12 md:mb-14">
@@ -106,12 +106,12 @@ export default function CustomerStories() {
         </div>
 
         {/* 4 Cards Grid (Matching Screenshot 4) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 2xl:gap-8">
           {stories.map((story) => (
             <div
               key={story.id}
               onClick={() => setSelectedStory(story)}
-              className="group relative h-[420px] sm:h-[450px] rounded-[24px] sm:rounded-[28px] overflow-hidden cursor-pointer shadow-xs hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1.5"
+              className="group relative h-[420px] sm:h-[450px] 2xl:h-[480px] rounded-[24px] sm:rounded-[28px] overflow-hidden cursor-pointer shadow-xs hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1.5"
             >
               {/* Background Photo */}
               <Image

@@ -45,20 +45,21 @@ export default function FAQSection() {
 
   return (
     <section className="py-20 md:py-28 bg-white border-b border-[#E4E7EC]" id="faqs">
-      <div className="max-w-[1040px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10">
+        <div className="max-w-[1100px] 2xl:max-w-[1240px] mx-auto">
         
-        {/* Section Heading (Matching Screenshot 5) */}
-        <div className="text-center mb-14 md:mb-16">
-          <h2 className="text-[32px] sm:text-[38px] md:text-[40px] font-semibold text-[#111827] tracking-tight">
-            Frequently asked questions
-          </h2>
-          <p className="mt-3 text-[15px] sm:text-[16px] text-[#475467]">
-            Find answers to common questions about registration, taxation, and company compliance.
-          </p>
-        </div>
+          {/* Section Heading (Matching Screenshot 5) */}
+          <div className="text-center mb-14 md:mb-16">
+            <h2 className="text-[32px] sm:text-[38px] md:text-[40px] font-semibold text-[#111827] tracking-tight">
+              Frequently asked questions
+            </h2>
+            <p className="mt-3 text-[15px] sm:text-[16px] text-[#475467]">
+              Find answers to common questions about registration, taxation, and company compliance.
+            </p>
+          </div>
 
-        {/* Accordion List (Matching Screenshot 5) */}
-        <div className="border-t border-[#E4E7EC]">
+          {/* Accordion List (Matching Screenshot 5) */}
+          <div className="border-t border-[#E4E7EC]">
           {faqs.map((faq, idx) => {
             const isOpen = openIndex === idx;
 
@@ -96,8 +97,8 @@ export default function FAQSection() {
             );
           })}
         </div>
-
       </div>
-    </section>
-  );
+    </div>
+  </section>
+);
 }

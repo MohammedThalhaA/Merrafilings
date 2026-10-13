@@ -87,7 +87,7 @@ export default function BusinessSolutionsGrid({ onSelectSolution }: BusinessSolu
 
   return (
     <section className="py-20 md:py-28 bg-white border-b border-[#E4E7EC]" id="solutions">
-      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10">
         
         {/* Section Header (Matching Screenshot 3) */}
         <div className="text-center max-w-[800px] mx-auto mb-14 md:mb-16">
@@ -101,7 +101,7 @@ export default function BusinessSolutionsGrid({ onSelectSolution }: BusinessSolu
         </div>
 
         {/* 6 Cards Grid (Matching Screenshot 3) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 xl:gap-8">
           {solutions.map((item) => {
             const Icon = item.icon;
 
@@ -109,12 +109,12 @@ export default function BusinessSolutionsGrid({ onSelectSolution }: BusinessSolu
               <div
                 key={item.id}
                 onClick={() => onSelectSolution && onSelectSolution(item.title)}
-                className="group bg-white rounded-2xl md:rounded-[22px] border border-[#E4E7EC] p-7 sm:p-8 flex flex-col justify-between hover:border-[#CBD5E1] hover:shadow-md transition-all duration-200 cursor-pointer"
+                className="group bg-white rounded-2xl md:rounded-[22px] border border-[#E4E7EC] p-7 sm:p-8 flex flex-col justify-between hover:border-[#155EEF]/50 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-2 transition-all duration-300 cursor-pointer"
               >
                 <div>
                   {/* Icon */}
                   <div className="mb-6">
-                    <Icon className={`w-8 h-8 ${item.iconColor} stroke-[1.8]`} />
+                    <Icon className={`w-8 h-8 ${item.iconColor} stroke-[1.8] group-hover:scale-110 transition-transform duration-200`} />
                   </div>
 
                   {/* Title */}
@@ -134,7 +134,7 @@ export default function BusinessSolutionsGrid({ onSelectSolution }: BusinessSolu
                     className={`inline-flex items-center gap-2 text-[14px] font-semibold ${item.buttonColor} transition-colors`}
                   >
                     <span>{item.buttonText}</span>
-                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1.5" />
                   </span>
                 </div>
               </div>

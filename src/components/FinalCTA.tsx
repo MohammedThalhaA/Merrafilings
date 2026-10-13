@@ -24,8 +24,8 @@ export default function FinalCTA({ onFormSubmit }: FinalCTAProps) {
 
   return (
     <section className="py-20 md:py-24 bg-white border-b border-[#E4E7EC]">
-      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#FBFAF7] rounded-3xl border border-[#E4E7EC] p-8 sm:p-12 md:p-16 relative overflow-hidden">
+      <div className="w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10">
+        <div className="bg-[#FBFAF7] rounded-3xl border border-[#E4E7EC] p-8 sm:p-12 md:p-16 2xl:p-20 relative overflow-hidden">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             
@@ -37,7 +37,7 @@ export default function FinalCTA({ onFormSubmit }: FinalCTAProps) {
               <h2 className="text-[32px] sm:text-[38px] md:text-[42px] font-semibold text-[#111827] tracking-tight leading-[1.2]">
                 Ready to launch or scale your business in India?
               </h2>
-              <p className="text-[15px] sm:text-[16px] text-[#475467] leading-relaxed max-w-[580px]">
+              <p className="text-[15px] sm:text-[16px] text-[#475467] leading-relaxed max-w-[680px]">
                 Speak with our experienced corporate legal &amp; tax advisors. Get clear pricing,
                 regulatory checklists, and a tailored timeline for your business today.
               </p>
@@ -137,7 +137,7 @@ export default function FinalCTA({ onFormSubmit }: FinalCTAProps) {
 
                     <button
                       type="submit"
-                      className="w-full py-3 px-4 rounded-xl text-[14px] font-semibold text-white bg-[#155EEF] hover:bg-[#1849A9] shadow-xs transition-colors flex items-center justify-center gap-2 cursor-pointer mt-2"
+                      className="w-full py-3 px-4 rounded-xl text-[14px] font-semibold text-white bg-[#155EEF] hover:bg-[#1849A9] shadow-xs hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer mt-2"
                     >
                       <PhoneCall className="w-4 h-4" />
                       <span>Get Free Consultation</span>

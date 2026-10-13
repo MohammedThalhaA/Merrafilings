@@ -25,12 +25,16 @@ export default function Footer() {
       links: [
         { name: "Startup India DPIIT", href: "/start-up-india" },
         { name: "LEI Code Registration", href: "/lei-code" },
+        { name: "Trade License", href: "/trade-license" },
+        { name: "FSSAI Registration", href: "/fssai" },
+        { name: "FSSAI Food License", href: "/fssai-license" },
+        { name: "ISO Certification", href: "/iso-registration" },
+        { name: "ESI Registration", href: "/esi-registration" },
+        { name: "Professional Tax Registration", href: "/professional-tax-registration" },
         { name: "GST Registration", href: "#gst-reg" },
         { name: "Udyam / MSME Registration", href: "#msme" },
-        { name: "FSSAI Food License", href: "#fssai" },
         { name: "Import Export Code (IEC)", href: "#iec" },
         { name: "Shop & Establishment", href: "#shop" },
-        { name: "Professional Tax (PT)", href: "#pt" },
       ],
     },
     {
@@ -75,7 +79,7 @@ export default function Footer() {
     <footer className="bg-white border-t border-[#E4E7EC] font-sans">
       {/* Top Banner Contact / Helpline */}
       <div className="border-b border-[#E4E7EC] bg-[#FBFAF7]/60 py-6">
-        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             {/* Logo Badge */}
             <div className="w-[110px] h-[34px] rounded-full border-2 border-[#15803D] bg-white flex items-center justify-center px-2 py-0.5 shadow-2xs">
@@ -106,8 +110,8 @@ export default function Footer() {
       </div>
 
       {/* Main Footer Links Columns */}
-      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+      <div className="w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10 py-14">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 2xl:gap-12">
           {footerColumns.map((col, idx) => (
             <div key={idx} className="space-y-3.5">
               <h4 className="text-[13.5px] font-bold text-[#111827] uppercase tracking-wider">

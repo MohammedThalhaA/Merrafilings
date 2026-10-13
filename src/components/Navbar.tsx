@@ -30,7 +30,7 @@ export default function Navbar({ onOpenSearch, onOpenContact }: NavbarProps) {
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-[#E4E7EC] font-sans transition-all" ref={dropdownRef}>
-      <div className="max-w-[1600px] mx-auto px-3 sm:px-5 lg:px-6">
+      <div className="w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10">
         <div className="flex items-center justify-between h-[70px] gap-2 lg:gap-4">
           {/* Brand Logo */}
           <div className="flex items-center gap-4 lg:gap-5 shrink-0">
