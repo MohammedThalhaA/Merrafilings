@@ -130,104 +130,109 @@ const CLIENT_MINI_CARDS = [
   },
 ];
 
-interface PricingTier {
-  id: string;
-  name: string;
-  badge?: string;
-  price: string;
-  originalPrice: string;
-  gstNote: string;
-  description: string;
-  features: string[];
-  popular?: boolean;
-}
-
-const PRICING_TIERS: PricingTier[] = [
+const LLP_MIN_REQUIREMENTS_TABLE = [
   {
-    id: "standard",
-    name: "LLP Incorporation",
-    price: "₹2,899",
-    originalPrice: "₹5,999",
-    gstNote: "+ Govt fees & Stamp Duty as applicable",
-    description: "Fast-track incorporation for modern startups and consulting firms.",
-    features: [
-      "RUN-LLP Name Approval Filing",
-      "Class-3 DSC for 2 Designated Partners",
-      "DPIN Allocation for 2 Partners",
-      "FiLLiP Incorporation Form Submission",
-      "Certificate of Incorporation (COI) & LLPIN",
-      "Firm PAN & TAN Allotment",
-      "Zero-balance Corporate Bank Account setup",
-    ],
+    requirement: "Minimum Number of Partners",
+    criteria: "Minimum 2 partners required (no maximum statutory limit)",
   },
   {
-    id: "incorporation_agreement",
-    name: "Incorporation + Agreement",
-    badge: "MOST POPULAR",
-    price: "₹5,899",
-    originalPrice: "₹10,999",
-    gstNote: "+ Govt fees & Stamp Duty as applicable",
-    popular: true,
-    description: "Complete incorporation with customized legal deed and MCA Form 3 filing.",
-    features: [
-      "Everything included in LLP Incorporation",
-      "Custom LLP Agreement Drafting by Senior Legal Advocate",
-      "Profit/Loss sharing & Capital Contribution clauses",
-      "Dispute resolution & Non-compete covenants",
-      "State-specific Stamp Paper & Notarization support",
-      "Filing of Form 3 with MCA within 30 days",
-      "Udyam / MSME Registration Certificate included",
-    ],
+    requirement: "Designated Partners",
+    criteria: "Minimum 2 designated partners (must be individuals, at least 1 must be an Indian resident)",
   },
   {
-    id: "comprehensive",
-    name: "Incorporation + Annual Compliance",
-    badge: "COMPLETE VALUE",
-    price: "₹9,899",
-    originalPrice: "₹18,999",
-    gstNote: "+ Govt fees as applicable",
-    description: "End-to-end setup and 1-year secretarial & tax filing protection.",
-    features: [
-      "Everything in Incorporation + Agreement plan",
-      "1-Year Dedicated Corporate Secretarial Advisor",
-      "Annual Return Filing (Form 11)",
-      "Statement of Account & Solvency (Form 8)",
-      "ITR-5 Income Tax Return Filing for the entity",
-      "DIR-3 KYC for 2 Designated Partners",
-      "GST Registration & quarterly filing consultation",
-    ],
+    requirement: "Identification Number",
+    criteria: "DPIN (Designated Partner Identification Number) or DIN for all designated partners",
+  },
+  {
+    requirement: "Digital Signatures",
+    criteria: "Class 3 DSC for all proposed designated partners to sign MCA e-filings",
+  },
+  {
+    requirement: "Minimum Capital Contribution",
+    criteria: "No minimum capital requirement; can begin with any nominal amount (e.g. ₹1,000)",
+  },
+  {
+    requirement: "Registered Business Address",
+    criteria: "Commercial or residential physical address anywhere in India with utility bill & NOC",
+  },
+  {
+    requirement: "Constitutional Charter",
+    criteria: "Executed LLP Agreement on state judicial stamp paper filed within 30 days of incorporation",
   },
 ];
 
-interface FAQItem {
-  q: string;
-  a: string;
-}
+const LLP_COMPARISON_TABLE = [
+  {
+    parameter: "Governing Statute",
+    llp: "LLP Act, 2008 (Ministry of Corporate Affairs)",
+    pvtLtd: "Companies Act, 2013 (MCA)",
+    partnership: "Indian Partnership Act, 1932 (State Registrar)",
+  },
+  {
+    parameter: "Legal Identity",
+    llp: "Separate legal entity distinct from partners",
+    pvtLtd: "Separate legal entity distinct from directors",
+    partnership: "No separate identity; partners are personally liable",
+  },
+  {
+    parameter: "Liability of Partners/Members",
+    llp: "Limited to agreed capital contribution",
+    pvtLtd: "Limited to face value of unpaid shares",
+    partnership: "Unlimited; personal assets can be attached",
+  },
+  {
+    parameter: "Minimum / Max Members",
+    llp: "Minimum 2, No maximum limit",
+    pvtLtd: "Minimum 2, Maximum 200",
+    partnership: "Minimum 2, Maximum 50",
+  },
+  {
+    parameter: "Mandatory Audit Requirement",
+    llp: "Exempt if turnover < ₹40L & capital < ₹25L",
+    pvtLtd: "Mandatory from day 1 regardless of revenue",
+    partnership: "Only if tax audit limits are crossed",
+  },
+  {
+    parameter: "Annual Filings & Overhead",
+    llp: "Form 11 & Form 8 (Low compliance cost)",
+    pvtLtd: "AOC-4, MGT-7, Board meetings (Moderate to high)",
+    partnership: "Income tax return only (Minimal)",
+  },
+  {
+    parameter: "Foreign Investment (FDI)",
+    llp: "100% permitted under automatic FDI route",
+    pvtLtd: "Permitted under automatic & approval routes",
+    partnership: "Prior RBI / Government approval required",
+  },
+];
 
-const FAQS: FAQItem[] = [
+const FAQ_COL_1 = [
   {
     q: "What is a Limited Liability Partnership (LLP)?",
-    a: "An LLP is an incorporated business entity that combines the flexibility of a traditional partnership with the limited liability protections of a private limited company. Governed by the LLP Act 2008, it is a separate legal entity distinct from its partners, meaning partners are not personally liable for the firm's obligations or the wrongful acts of other partners.",
+    a: "An LLP is an incorporated corporate body combining the flexibility of an ordinary partnership firm with the limited liability protections of a private limited company. Formed under the LLP Act 2008, it is a separate legal entity distinct from its partners, meaning partners are not personally liable for the debts or wrongful acts of other partners.",
   },
   {
     q: "How many partners are required to register an LLP?",
-    a: "A minimum of two partners are required to incorporate an LLP. There is no upper limit on the maximum number of partners. At least two partners must be designated partners, and at least one designated partner must be an Indian resident (residing in India for not less than 120 days during the financial year).",
+    a: "A minimum of two partners are required to form an LLP. There is no statutory upper limit on the maximum number of partners. At least two partners must be designated partners, and at least one designated partner must be an Indian resident (residing in India for not less than 120 days during the financial year).",
   },
   {
     q: "Is there any minimum capital requirement for starting an LLP?",
-    a: "No, there is no statutory minimum capital requirement to incorporate an LLP. Partners can begin with any nominal contribution, such as ₹1,000 or ₹10,000. Capital can be contributed in tangible form (cash, property) or intangible form (know-how, contracts).",
+    a: "No! There is no mandatory minimum capital requirement to incorporate an LLP. Partners can commence operations with any nominal contribution, such as ₹1,000 or ₹10,000. Capital can be contributed in monetary form or through tangible/intangible assets.",
   },
   {
-    q: "What is DPIN and is it mandatory for all partners?",
-    a: "DPIN stands for Designated Partner Identification Number. It is a unique 8-digit identification number allotted by the Ministry of Corporate Affairs (MCA). It is mandatory for all designated partners in an LLP. If a partner already possesses a DIN (Director Identification Number), the same number functions as DPIN.",
-  },
-  {
-    q: "Is an audit mandatory for an LLP in India?",
-    a: "No! Unlike Private Limited Companies which require mandatory statutory audits from day one, an LLP is exempt from audit if its annual turnover does not exceed ₹40 Lakhs or its partner capital contribution does not exceed ₹25 Lakhs. This significantly lowers ongoing compliance costs.",
+    q: "Is a statutory audit mandatory for an LLP in India?",
+    a: "No! Unlike Private Limited Companies which require statutory audits from day one, an LLP is legally exempt from audit if its annual turnover does not exceed ₹40 Lakhs or its partner capital contribution does not exceed ₹25 Lakhs. This significantly reduces ongoing accounting and compliance overhead.",
   },
   {
     q: "What is an LLP Agreement and why must it be filed within 30 days?",
-    a: "The LLP Agreement is the foundational constitutional charter defining the rights, duties, capital ratios, profit-sharing formulas, admission/retirement terms, and managerial obligations of the partners. Under Section 23 of the LLP Act, this agreement must be executed on judicial stamp paper and filed with the MCA in Form 3 within 30 days of incorporation.",
+    a: "The LLP Agreement is the foundational constitutional charter defining the rights, duties, capital contributions, profit-sharing ratios, and managerial responsibilities of partners. Under Section 23 of the LLP Act, this agreement must be executed on judicial stamp paper and filed with the MCA in Form 3 within 30 days of incorporation.",
+  },
+];
+
+const FAQ_COL_2 = [
+  {
+    q: "What is DPIN and is it mandatory for all partners?",
+    a: "DPIN stands for Designated Partner Identification Number. It is a unique 8-digit identification number allotted by the Ministry of Corporate Affairs (MCA). It is mandatory for all designated partners in an LLP. If a partner already possesses a DIN (Director Identification Number), the same number functions as DPIN.",
   },
   {
     q: "Can NRIs and foreign nationals become partners in an Indian LLP?",
@@ -239,7 +244,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: "Which is better for startups: LLP or Private Limited Company?",
-    a: "An LLP is ideal for bootstrapping founders, professional service practices, family businesses, and software agencies who want limited liability protection, lower compliance overhead, no mandatory audits (up to ₹40L turnover), and no dividend distribution tax. A Private Limited Company is preferable if you plan to raise institutional VC/seed equity funding or issue ESOPs.",
+    a: "An LLP is ideal for bootstrapping founders, professional service practices, consultancies, and family businesses that seek limited liability, lower compliance burdens, audit exemption (up to ₹40L turnover), and no dividend distribution tax. A Private Limited Company is preferable if you plan to raise institutional VC/seed equity funding or issue ESOPs.",
   },
   {
     q: "Can an existing partnership firm be converted into an LLP?",
@@ -247,20 +252,86 @@ const FAQS: FAQItem[] = [
   },
 ];
 
+const FAQ_EXTRA_COL_1 = [
+  {
+    q: "Can a salaried individual become a partner in an LLP?",
+    a: "Yes, an employed individual can become a partner in an LLP, provided their existing employment contract or employer's HR policies do not prohibit holding directorships or commercial partnerships in external businesses.",
+  },
+  {
+    q: "What is the tax rate applicable to an LLP in India?",
+    a: "An LLP is taxed as a separate legal firm at a flat corporate tax rate of 30% plus surcharge and health & education cess. Notably, profits distributed to partners after paying corporate tax are completely tax-free in the hands of the individual partners.",
+  },
+];
+
+const FAQ_EXTRA_COL_2 = [
+  {
+    q: "Can a residential property be used as the registered office for an LLP?",
+    a: "Yes, a residential property owned or rented by any partner can be used as the registered office address. You only need to provide a recent electricity or gas bill, along with a No Objection Certificate (NOC) from the property owner.",
+  },
+  {
+    q: "What happens if the LLP Agreement is not filed within 30 days?",
+    a: "Delay in filing Form 3 attracts a statutory MCA late fee of ₹100 per day until rectified. Merrafilings ensures your LLP Agreement is drafted, executed on judicial stamp paper, and filed with the MCA well within the prescribed 30-day window.",
+  },
+];
+
+const RELATED_SERVICES_TAGS = [
+  "Private Limited Company",
+  "One Person Company",
+  "Partnership Firm",
+  "Sole Proprietorship",
+  "Section 8 Company Registration",
+  "Trust Registration",
+  "LLP Agreement Drafting Form 3",
+  "Form 11 Annual Return Filing",
+  "Form 8 Statement of Accounts",
+  "GST Registration for LLP",
+  "Convert Partnership to LLP",
+  "LLP Winding Up & Strike Off",
+];
+
+const POPULAR_SEARCHES_TAGS = [
+  "LLP Registration Online India",
+  "Limited Liability Partnership Formation",
+  "LLP Name Approval RUN MCA",
+  "FiLLiP Form Incorporation",
+  "DPIN Allotment Online",
+  "LLP vs Private Limited Company",
+  "LLP vs Partnership Firm",
+  "LLP Agreement Judicial Stamp Paper",
+  "Audit Exemption for LLP",
+  "Designated Partner Resident India",
+  "Class 3 DSC for Designated Partners",
+  "Form 11 Annual Filing Due Date",
+  "Form 8 Solvency Statement",
+  "Flat 30% Corporate Tax for LLP",
+  "PAN and TAN for LLP",
+  "LLP Bank Current Account Opening",
+  "FDI in LLP Automatic Route",
+  "LLP Stamp Duty by State",
+];
+
 export default function LLPRegistrationPage() {
-  const [activeTab, setActiveTab] = useState<"overview" | "eligibility" | "documents" | "process" | "comparison" | "compliance">("overview");
-  const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
-  // Hero Lead Form State
+  // Form states
   const [formName, setFormName] = useState("");
   const [formEmail, setFormEmail] = useState("");
   const [formPhone, setFormPhone] = useState("");
   const [formState, setFormState] = useState("");
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  // Clients carousel scroll
+  // Pricing card expand states
+  const [expandedCard, setExpandedCard] = useState<number | null>(null);
+
+  // FAQ states
+  const [openFaq, setOpenFaq] = useState<string | null>("c1-0");
+  const [showMoreFaqs, setShowMoreFaqs] = useState(false);
+
+  // State list collapse in sidebar
+  const [stateListOpen, setStateListOpen] = useState(true);
+
+  // Client mini cards carousel scroll
   const clientScrollRef = useRef<HTMLDivElement>(null);
 
   const scrollClients = (direction: "left" | "right") => {
@@ -272,28 +343,47 @@ export default function LLPRegistrationPage() {
 
   const handleHeroFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formName || !formEmail || !formPhone || !formState) {
-      alert("Please fill in all required fields.");
-      return;
-    }
+    if (!formName || !formEmail || !formPhone || !formState) return;
     setFormSubmitted(true);
   };
 
   return (
-    <div className="min-h-screen bg-[#FDFCFB] text-slate-800 font-sans antialiased selection:bg-[#6B4BFF]/10 selection:text-[#6B4BFF]">
+    <div className="min-h-screen bg-white font-sans text-slate-800 antialiased selection:bg-[#00A86B]/15 selection:text-[#00A86B]">
+      {/* Top Header Navigation */}
       <Navbar
         onOpenSearch={() => setIsSearchOpen(true)}
         onOpenContact={() => setIsContactOpen(true)}
       />
 
-      {/* Hero Section */}
-      <section className="relative pt-6 sm:pt-8 md:pt-10 pb-8 sm:pb-12 overflow-hidden bg-gradient-to-b from-[#FAF8F5] via-white to-white">
+      {/* Hero Section with Merrafilings Curved Radial Mesh Background */}
+      <section className="relative overflow-visible pt-6 sm:pt-8 md:pt-10 pb-16 bg-white">
+        {/* Curved gradient backdrop canvas */}
         <div
-          className="absolute inset-x-0 top-0 z-0 mx-auto w-full max-w-[1600px] h-[520px] pointer-events-none opacity-60"
+          className="absolute inset-x-0 top-0 z-0 mx-auto w-full rounded-b-[40px] sm:rounded-b-[52px] md:rounded-b-[64px] overflow-hidden pointer-events-none"
           style={{
+            height: "calc(100% - 90px)",
+            minHeight: "540px",
             background: `
-              radial-gradient(ellipse 70% 50% at 20% 20%, rgba(200, 190, 255, 0.35) 0%, transparent 70%),
-              radial-gradient(ellipse 60% 40% at 80% 25%, rgba(255, 210, 230, 0.35) 0%, transparent 70%)
+              radial-gradient(ellipse 65% 75% at 0% 75%, 
+                rgb(255, 215, 198) 0%,
+                rgba(255, 226, 213, 0.95) 25%,
+                rgba(255, 238, 230, 0.6) 50%,
+                rgba(255, 248, 244, 0.15) 75%,
+                transparent 85%
+              ),
+              radial-gradient(ellipse 65% 75% at 100% 75%,
+                rgb(192, 226, 236) 0%,
+                rgba(202, 232, 240, 0.95) 25%,
+                rgba(220, 240, 247, 0.6) 50%,
+                rgba(238, 248, 252, 0.15) 75%,
+                transparent 85%
+              ),
+              linear-gradient(180deg,
+                rgb(255, 255, 255) 0%,
+                rgb(250, 249, 248) 35%,
+                rgb(245, 243, 241) 70%,
+                rgb(239, 236, 232) 100%
+              )
             `,
           }}
           aria-hidden="true"
@@ -304,30 +394,13 @@ export default function LLPRegistrationPage() {
           <div className="text-center max-w-3xl mx-auto mb-6">
             <h1 className="text-2xl sm:text-3xl md:text-[34px] lg:text-[38px] font-light text-[#12023B] leading-snug">
               <span className="bg-gradient-to-r from-[#5C3BFF] via-[#7052FF] to-[#FF4ED0] bg-clip-text text-transparent font-light">
-                LLP Registration
+                Limited Liability Partnership
               </span>{" "}
-              in India
+              Registration in India
             </h1>
             <p className="mt-3 text-[13px] sm:text-[14.5px] font-light text-slate-600 max-w-2xl mx-auto leading-relaxed">
-              Register your Limited Liability Partnership (LLP) in India with expert CA/CS assistance. Get MCA name approval, RUN filing, FiLLiP incorporation, LLP Agreement drafting, PAN &amp; TAN registration, and compliance support.
+              Register an LLP online in India with end-to-end legal support. Enjoy limited liability protection, zero mandatory audit up to ₹40L turnover, MCA name approval, and custom LLP Agreement drafting.
             </p>
-
-            {/* Price Pill Banner */}
-            <div className="mt-4 flex items-center justify-center">
-              <a
-                href="#pricing"
-                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg border-2 border-blue-500 bg-white shadow-xs hover:shadow-md hover:bg-blue-50/50 transition-all cursor-pointer group"
-              >
-                <span className="text-xs sm:text-sm text-slate-700">
-                  LLP Registration starting from{" "}
-                  <strong className="text-slate-900 font-semibold">₹2,899</strong>
-                </span>
-                <span className="text-xs sm:text-sm font-medium text-blue-600 underline group-hover:text-blue-700 flex items-center gap-0.5">
-                  View Price
-                  <ChevronRight className="w-3.5 h-3.5 inline" />
-                </span>
-              </a>
-            </div>
           </div>
 
           {/* Hero Content Glassmorphism Box */}
@@ -337,10 +410,10 @@ export default function LLPRegistrationPage() {
               <div className="space-y-6">
                 <div>
                   <h2 className="text-xl sm:text-2xl md:text-3xl font-normal text-[#12023B] mb-2 sm:mb-3">
-                    Start Your LLP Registration
+                    Start Your LLP in India
                   </h2>
                   <p className="text-[13px] sm:text-[14px] font-light text-slate-600 leading-relaxed">
-                    Register your Limited Liability Partnership (LLP) in India with MCA filing, name approval, PAN, and Certificate of Incorporation to set up a compliant and flexible partnership business.
+                    Fast, reliable, and 100% online LLP registration for partners, startups, consultancies, and family businesses across India.
                   </p>
                 </div>
 
@@ -356,30 +429,34 @@ export default function LLPRegistrationPage() {
                         />
                       </svg>
                     </div>
-                    <span className="text-[13.5px] font-light text-slate-700">
-                      MCA Name Approval
-                    </span>
+                    <span className="text-[13.5px] font-light text-slate-700">MCA Name Approval (RUN-LLP)</span>
                   </li>
 
                   <li className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-full bg-white/80 border border-purple-200/50 shadow-xs flex items-center justify-center shrink-0">
-                      <svg
-                        className="w-4 h-4"
-                        fill="none"
-                        stroke="#6B4BFF"
-                        viewBox="0 0 24 24"
-                      >
+                      <svg className="w-4 h-4" fill="#6B4BFF" viewBox="0 0 20 20">
+                        <path
+                          fillRule="evenodd"
+                          d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span className="text-[13.5px] font-light text-slate-700">FiLLiP LLP Incorporation</span>
+                  </li>
+
+                  <li className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-white/80 border border-purple-200/50 shadow-xs flex items-center justify-center shrink-0">
+                      <svg className="w-4 h-4" fill="none" stroke="#6B4BFF" viewBox="0 0 24 24">
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
                           strokeWidth="2"
-                          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                         />
                       </svg>
                     </div>
-                    <span className="text-[13.5px] font-light text-slate-700">
-                      LLP Incorporation
-                    </span>
+                    <span className="text-[13.5px] font-light text-slate-700">Form 3 LLP Agreement Drafting</span>
                   </li>
 
                   <li className="flex items-center gap-3">
@@ -392,34 +469,12 @@ export default function LLPRegistrationPage() {
                         />
                       </svg>
                     </div>
-                    <span className="text-[13.5px] font-light text-slate-700">
-                      LLP Agreement Drafting
-                    </span>
+                    <span className="text-[13.5px] font-light text-slate-700">PAN &amp; TAN Registration</span>
                   </li>
 
                   <li className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-full bg-white/80 border border-purple-200/50 shadow-xs flex items-center justify-center shrink-0">
-                      <svg className="w-4 h-4" fill="#6B4BFF" viewBox="0 0 20 20">
-                        <path
-                          fillRule="evenodd"
-                          d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                    <span className="text-[13.5px] font-light text-slate-700">
-                      PAN &amp; TAN Registration
-                    </span>
-                  </li>
-
-                  <li className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-white/80 border border-purple-200/50 shadow-xs flex items-center justify-center shrink-0">
-                      <svg
-                        className="w-4 h-4"
-                        fill="none"
-                        stroke="#6B4BFF"
-                        viewBox="0 0 24 24"
-                      >
+                      <svg className="w-4 h-4" fill="none" stroke="#6B4BFF" viewBox="0 0 24 24">
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
@@ -429,7 +484,7 @@ export default function LLPRegistrationPage() {
                       </svg>
                     </div>
                     <a
-                      href="#documents-required"
+                      href="#documents-section"
                       className="text-[13.5px] font-semibold bg-gradient-to-r from-[#5D54FF] via-[#A767EC] to-[#F968E7] bg-clip-text text-transparent underline underline-offset-2 decoration-[#A767EC] hover:opacity-85 transition-opacity cursor-pointer"
                     >
                       Required Documents
@@ -438,18 +493,16 @@ export default function LLPRegistrationPage() {
                 </ul>
               </div>
 
-              {/* Right Column: Interactive Lead Generation Form */}
+              {/* Right Column: Lead Form */}
               <div className="bg-[#FAF8F5]/60 rounded-2xl p-5 sm:p-7 border border-[#E4E7EC]/70">
                 {formSubmitted ? (
                   <div className="text-center py-8 space-y-4">
-                    <div className="w-16 h-16 rounded-full bg-emerald-100 text-[#00A86B] flex items-center justify-center mx-auto">
-                      <Check className="w-8 h-8 stroke-[2.5]" />
+                    <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+                      <Check className="w-8 h-8" />
                     </div>
-                    <h3 className="text-xl font-bold text-[#111827]">
-                      Application Received!
-                    </h3>
+                    <h3 className="text-xl font-bold text-[#111827]">Application Received!</h3>
                     <p className="text-[14px] text-[#475467]">
-                      Thank you, <strong className="text-[#111827]">{formName}</strong>. A Senior LLP Corporate Legal Advisor from Merrafilings will contact you at <strong className="text-[#111827]">{formPhone}</strong> within 15 minutes.
+                      Thank you, <strong className="text-[#111827]">{formName}</strong>. Our senior LLP corporate legal advisor will contact you at <strong className="text-[#111827]">{formPhone}</strong> within 15 minutes.
                     </p>
                     <button
                       type="button"
@@ -464,11 +517,7 @@ export default function LLPRegistrationPage() {
                     {/* Continue with Google */}
                     <button
                       type="button"
-                      onClick={() =>
-                        alert(
-                          "Google Single Sign-On simulation. Please enter your details below."
-                        )
-                      }
+                      onClick={() => alert("Google Single Sign-On simulation. Please fill in the details below.")}
                       className="w-full flex items-center justify-center gap-3 py-2.5 px-4 bg-white hover:bg-[#F8FAFC] border border-[#D0D5DD] rounded-xl text-[14px] font-medium text-[#344054] shadow-xs transition-colors cursor-pointer"
                     >
                       <svg className="w-5 h-5" viewBox="0 0 24 24">
@@ -534,10 +583,9 @@ export default function LLPRegistrationPage() {
                         type="tel"
                         required
                         placeholder="Phone Number *"
-                        pattern="[0-9]{10}"
                         value={formPhone}
                         onChange={(e) => setFormPhone(e.target.value)}
-                        className="flex-1 min-w-0 px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-r-md text-[13.5px] font-normal text-slate-800 placeholder-slate-400 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all"
+                        className="w-full px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-r-md text-[13.5px] font-normal text-slate-800 placeholder-slate-400 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all"
                       />
                     </div>
 
@@ -547,18 +595,18 @@ export default function LLPRegistrationPage() {
                         required
                         value={formState}
                         onChange={(e) => setFormState(e.target.value)}
-                        className="w-full px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-md text-[13.5px] font-normal text-slate-700 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all cursor-pointer"
+                        className="w-full px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-md text-[13.5px] font-normal text-slate-800 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all"
                       >
                         <option value="">Select State *</option>
-                        {INDIAN_STATES.map((s) => (
-                          <option key={s} value={s}>
-                            {s}
+                        {INDIAN_STATES.map((st) => (
+                          <option key={st} value={st}>
+                            {st}
                           </option>
                         ))}
                       </select>
                     </div>
 
-                    {/* Continue Button */}
+                    {/* Submit Button */}
                     <div className="pt-2 flex justify-end">
                       <button
                         type="submit"
@@ -574,7 +622,7 @@ export default function LLPRegistrationPage() {
 
             {/* Trust Stats Cards with Hover Effects */}
             <div className="mt-8 pt-6 border-t border-slate-100/80 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4">
-              {/* Card 1: 4.8 Verified Reviews */}
+              {/* Card 1: 4.4 Verified Reviews */}
               <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-amber-200 hover:shadow-[0_8px_25px_rgba(245,158,11,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
                 <div className="w-11 h-11 rounded-2xl bg-[#FFF6E9] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-2 shadow-2xs">
                   <svg className="w-5 h-5 text-[#F04438] transition-colors" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
@@ -583,9 +631,13 @@ export default function LLPRegistrationPage() {
                 </div>
                 <div>
                   <div className="flex items-center gap-1.5 font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">
-                    <span>4.8</span>
+                    <span>4.4</span>
                     <div className="flex items-center text-amber-400 text-[11px] gap-0.5">
-                      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                      <span>★</span><span>★</span><span>★</span><span>★</span>
+                      <span className="relative inline-block text-slate-300">
+                        ★
+                        <span className="absolute inset-0 overflow-hidden w-[40%] text-amber-400">★</span>
+                      </span>
                     </div>
                   </div>
                   <p className="text-[11.5px] font-light text-slate-500">Verified Reviews</p>
@@ -606,29 +658,24 @@ export default function LLPRegistrationPage() {
               </div>
 
               {/* Card 3: 2 Lakh+ Customers */}
-              <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-orange-200 hover:shadow-[0_8px_25px_rgba(234,88,12,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
-                <div className="w-11 h-11 rounded-2xl bg-[#FFF4ED] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-2 shadow-2xs">
-                  <svg className="w-5 h-5 text-[#EA580C] transition-colors" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
-                  </svg>
+              <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-purple-200 hover:shadow-[0_8px_25px_rgba(107,75,255,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
+                <div className="w-11 h-11 rounded-2xl bg-[#F5F3FF] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-2 shadow-2xs">
+                  <Users className="w-5 h-5 text-[#6B4BFF] transition-colors" />
                 </div>
                 <div>
                   <p className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">2 Lakh+ Customers</p>
-                  <p className="text-[11.5px] font-light text-slate-500">Trusted across India</p>
+                  <p className="text-[11.5px] font-light text-slate-500">Served Across India</p>
                 </div>
               </div>
 
               {/* Card 4: App Tracking */}
-              <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-rose-200 hover:shadow-[0_8px_25px_rgba(240,68,56,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
-                <div className="w-11 h-11 rounded-2xl bg-[#FFF1F3] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-2 shadow-2xs">
-                  <svg className="w-5 h-5 text-[#F04438] transition-colors" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                  </svg>
+              <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-emerald-200 hover:shadow-[0_8px_25px_rgba(0,176,116,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
+                <div className="w-11 h-11 rounded-2xl bg-[#ECFDF5] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-2 shadow-2xs">
+                  <Smartphone className="w-5 h-5 text-[#00B074] transition-colors" />
                 </div>
                 <div>
                   <p className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">App Tracking</p>
-                  <p className="text-[11.5px] font-light text-slate-500">Live status updates</p>
+                  <p className="text-[11.5px] font-light text-slate-500">Live Status &amp; Alerts</p>
                 </div>
               </div>
             </div>
@@ -676,567 +723,930 @@ export default function LLPRegistrationPage() {
         </div>
       </section>
 
-      {/* Pricing Packages Section */}
-      <section id="pricing" className="py-12 sm:py-16 md:py-20 bg-[#FAF9F7]/70 border-b border-slate-100 scroll-mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-100/70 border border-purple-200/60 text-xs font-medium text-[#6B4BFF] mb-3">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Transparent MCA Incorporation Plans</span>
-            </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-[#12023B] tracking-tight">
-              Simple, Transparent Pricing for Your LLP
+      {/* Pricing Section (Matching exact Merrafilings design with Green Hover Border & Register Button) */}
+      <section id="pricing" className="py-14 sm:py-16 bg-white">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <h2 className="text-2xl sm:text-[28px] md:text-[32px] font-normal text-[#111827] leading-snug">
+              Simple packages. Transparent{" "}
+              <span className="bg-gradient-to-r from-[#7052FF] via-[#9E6AFF] to-[#E966DF] bg-clip-text text-transparent font-normal">
+                pricing.
+              </span>
             </h2>
-            <p className="mt-2 text-xs sm:text-sm md:text-base font-light text-slate-600">
-              Select the package that fits your firm. Complete filing support with zero hidden professional charges.
+            <div className="w-12 h-[2px] bg-gradient-to-r from-[#7052FF] to-[#E966DF] rounded-full mx-auto mt-2 mb-3" />
+            <p className="text-[13px] sm:text-[13.5px] font-light text-slate-500">
+              Transparent pricing and complete corporate support from name approval to executed agreement.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
-            {PRICING_TIERS.map((tier) => (
-              <div
-                key={tier.id}
-                className={`relative rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 ${
-                  tier.popular
-                    ? "bg-white border-2 border-[#6B4BFF] shadow-xl shadow-purple-900/5 -translate-y-1"
-                    : "bg-white/80 border border-slate-200/80 shadow-sm hover:shadow-md hover:-translate-y-0.5"
-                }`}
-              >
-                {tier.badge && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3.5 py-1 rounded-full bg-gradient-to-r from-[#594CF5] to-[#D946EF] text-white text-[11px] font-semibold tracking-wide uppercase shadow-sm">
-                    {tier.badge}
-                  </div>
-                )}
-
-                <div>
-                  <h3 className="text-lg sm:text-xl font-medium text-slate-900">{tier.name}</h3>
-                  <p className="text-xs font-light text-slate-500 mt-1 min-h-[36px]">{tier.description}</p>
-
-                  <div className="mt-4 pt-4 border-t border-slate-100">
-                    <div className="flex items-baseline gap-2">
-                      <span className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-slate-900">{tier.price}</span>
-                      <span className="text-xs text-slate-400 line-through">{tier.originalPrice}</span>
-                    </div>
-                    <p className="text-[11.5px] font-light text-slate-500 mt-1">{tier.gstNote}</p>
-                  </div>
-
-                  <ul className="mt-6 space-y-3 border-t border-slate-100 pt-6">
-                    {tier.features.map((feature, fIdx) => (
-                      <li key={fIdx} className="flex items-start gap-2.5 text-xs sm:text-[13px] text-slate-700 font-light">
-                        <CheckCircle2 className="w-4 h-4 text-[#00A86B] shrink-0 mt-0.5" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="mt-8 pt-6 border-t border-slate-100">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-7 items-stretch">
+            {/* Package 1: LLP Incorporation */}
+            <div className="group bg-white rounded-[22px] border-[1.5px] border-slate-200/90 hover:border-[#00B074] p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-[0_16px_36px_rgba(0,176,116,0.14)] hover:-translate-y-1.5 transition-all duration-300 ease-out cursor-pointer relative">
+              <div>
+                <h3 className="text-[17px] sm:text-[18px] font-normal text-[#111827] group-hover:text-emerald-950 transition-colors">
+                  LLP - Incorporation
+                </h3>
+                <p className="text-[12.5px] font-light text-slate-500 mt-2 leading-relaxed">
+                  Fast-track Limited Liability Partnership incorporation in 7–10 days. Online, paperless &amp; fully compliant...{" "}
                   <button
                     type="button"
-                    onClick={() => setIsContactOpen(true)}
-                    className={`w-full py-2.5 rounded-xl font-medium text-xs sm:text-sm transition-all cursor-pointer shadow-sm ${
-                      tier.popular
-                        ? "bg-gradient-to-r from-[#594CF5] to-[#D946EF] text-white hover:opacity-95"
-                        : "bg-slate-900 text-white hover:bg-slate-800"
-                    }`}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setExpandedCard(expandedCard === 1 ? null : 1);
+                    }}
+                    className="text-[#155EEF] font-normal hover:underline inline-flex items-center gap-0.5 cursor-pointer"
                   >
-                    Get Started with {tier.name}
+                    {expandedCard === 1 ? "Read less ⌃" : "Read more ⌵"}
+                  </button>
+                </p>
+                {expandedCard === 1 && (
+                  <p className="text-[12px] font-light text-slate-600 mt-2 bg-[#F8FAFC] p-3 rounded-lg border border-[#E4E7EC]">
+                    Includes RUN-LLP name reservation, Class-3 DSC for 2 designated partners, DPIN allotment, FiLLiP MCA filing, Certificate of Incorporation, and permanent PAN &amp; TAN cards.
+                  </p>
+                )}
+
+                <div className="mt-5 mb-5">
+                  <div className="text-[26px] sm:text-[28px] font-normal text-[#111827] tracking-tight">
+                    ₹2,999
+                  </div>
+                  <p className="text-[11.5px] font-light text-slate-400 mt-0.5">+ GST | Govt. fee &amp; DSC extra</p>
+                </div>
+
+                <div className="pt-2">
+                  <p className="text-[12.5px] font-light text-slate-500 mb-3">What&apos;s included:</p>
+                  <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
+                    <li className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
+                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>MCA Name Reservation (RUN-LLP)</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
+                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>Class 3 DSC for 2 Designated Partners</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
+                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>DPIN / DIN Allotment for 2 Partners</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
+                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>FiLLiP Incorporation Form Filing</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
+                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>Certificate of Incorporation (CIN) &amp; PAN/TAN</span>
+                    </li>
+                  </ul>
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setExpandedCard(expandedCard === 1 ? null : 1);
+                    }}
+                    className="text-[12px] font-normal text-[#00B074] hover:underline cursor-pointer mt-2 block"
+                  >
+                    +2 more
                   </button>
                 </div>
               </div>
-            ))}
+
+              <div className="mt-8 pt-2">
+                <button
+                  type="button"
+                  onClick={() => setIsContactOpen(true)}
+                  className="w-full py-2.5 px-4 rounded-xl font-medium text-[14.5px] text-[#00B074] bg-[#E8FAF2] group-hover:bg-[#00B074] group-hover:text-white hover:!bg-[#009B66] border border-[#00B074]/35 group-hover:border-[#00B074] transition-all duration-200 cursor-pointer shadow-xs group-hover:shadow-sm"
+                >
+                  Register Now
+                </button>
+              </div>
+            </div>
+
+            {/* Package 2: LLP - Incorporation + Agreement Drafting (Recommended) */}
+            <div className="group bg-white rounded-[22px] border-[2px] border-[#00B074] p-6 sm:p-7 flex flex-col justify-between shadow-md hover:shadow-[0_20px_40px_rgba(0,176,116,0.18)] hover:-translate-y-1.5 transition-all duration-300 ease-out cursor-pointer relative">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#00B074] text-white text-[11px] font-medium tracking-wide uppercase px-3 py-0.5 rounded-full shadow-2xs">
+                Most Popular
+              </div>
+
+              <div>
+                <h3 className="text-[17px] sm:text-[18px] font-normal text-[#111827] group-hover:text-emerald-950 transition-colors">
+                  LLP - Incorporation + Agreement
+                </h3>
+                <p className="text-[12.5px] font-light text-slate-500 mt-2 leading-relaxed">
+                  Complete incorporation bundled with customized LLP Agreement drafting on state judicial stamp paper and mandatory MCA Form 3 filing...{" "}
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setExpandedCard(expandedCard === 2 ? null : 2);
+                    }}
+                    className="text-[#155EEF] font-normal hover:underline inline-flex items-center gap-0.5 cursor-pointer"
+                  >
+                    {expandedCard === 2 ? "Read less ⌃" : "Read more ⌵"}
+                  </button>
+                </p>
+                {expandedCard === 2 && (
+                  <p className="text-[12px] font-light text-slate-600 mt-2 bg-[#F8FAFC] p-3 rounded-lg border border-[#E4E7EC]">
+                    Includes everything in Incorporation plan plus legally tailored partner profit-sharing clauses, non-compete terms, capital ratio deeds, state stamp paper notarisation, and Form 3 filing with ROC within 30 days.
+                  </p>
+                )}
+
+                <div className="mt-5 mb-5">
+                  <div className="text-[26px] sm:text-[28px] font-normal text-[#111827] tracking-tight">
+                    ₹5,999
+                  </div>
+                  <p className="text-[11.5px] font-light text-slate-400 mt-0.5">+ GST | Stamp duty at actuals</p>
+                </div>
+
+                <div className="pt-2">
+                  <p className="text-[12.5px] font-light text-slate-500 mb-3">What&apos;s included:</p>
+                  <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
+                    <li className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
+                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>Complete LLP Incorporation Package</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
+                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>Custom LLP Agreement Drafting</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
+                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>State Judicial Stamp Duty Coordination</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
+                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>MCA Form 3 Filing within 30 Days</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
+                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>Bank Current Account Opening Support</span>
+                    </li>
+                  </ul>
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setExpandedCard(expandedCard === 2 ? null : 2);
+                    }}
+                    className="text-[12px] font-normal text-[#00B074] hover:underline cursor-pointer mt-2 block"
+                  >
+                    +3 more
+                  </button>
+                </div>
+              </div>
+
+              <div className="mt-8 pt-2">
+                <button
+                  type="button"
+                  onClick={() => setIsContactOpen(true)}
+                  className="w-full py-2.5 px-4 rounded-xl font-medium text-[14.5px] text-white bg-[#00B074] hover:bg-[#009B66] transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md"
+                >
+                  Register Now
+                </button>
+              </div>
+            </div>
+
+            {/* Package 3: LLP - Complete Compliance Suite */}
+            <div className="group bg-white rounded-[22px] border-[1.5px] border-slate-200/90 hover:border-[#00B074] p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-[0_16px_36px_rgba(0,176,116,0.14)] hover:-translate-y-1.5 transition-all duration-300 ease-out cursor-pointer relative">
+              <div>
+                <h3 className="text-[17px] sm:text-[18px] font-normal text-[#111827] group-hover:text-emerald-950 transition-colors">
+                  LLP - Complete Compliance Suite
+                </h3>
+                <p className="text-[12.5px] font-light text-slate-500 mt-2 leading-relaxed">
+                  End-to-end incorporation, Form 3 agreement, GST setup, and 1 full year of statutory annual ROC compliances...{" "}
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setExpandedCard(expandedCard === 3 ? null : 3);
+                    }}
+                    className="text-[#155EEF] font-normal hover:underline inline-flex items-center gap-0.5 cursor-pointer"
+                  >
+                    {expandedCard === 3 ? "Read less ⌃" : "Read more ⌵"}
+                  </button>
+                </p>
+                {expandedCard === 3 && (
+                  <p className="text-[12px] font-light text-slate-600 mt-2 bg-[#F8FAFC] p-3 rounded-lg border border-[#E4E7EC]">
+                    Full package including incorporation, Form 3 agreement, government GST certificate, annual MCA Form 11, MCA Form 8 solvency statement, partner ITR-5 tax filing, and 1-year Merrafilings Ledgers cloud accounting software.
+                  </p>
+                )}
+
+                <div className="mt-5 mb-5">
+                  <div className="text-[26px] sm:text-[28px] font-normal text-[#111827] tracking-tight">
+                    ₹12,499
+                  </div>
+                  <p className="text-[11.5px] font-light text-slate-400 mt-0.5">+ GST | Full 1st Year Compliance</p>
+                </div>
+
+                <div className="pt-2">
+                  <p className="text-[12.5px] font-light text-slate-500 mb-3">What&apos;s included:</p>
+                  <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
+                    <li className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
+                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>Everything in Incorporation + Agreement</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
+                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>GST Registration Certificate</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
+                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>MCA Form 11 (Annual Return) Filing</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
+                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>MCA Form 8 (Statement of Solvency)</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
+                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>Annual ITR-5 Income Tax Return Filing</span>
+                    </li>
+                  </ul>
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setExpandedCard(expandedCard === 3 ? null : 3);
+                    }}
+                    className="text-[12px] font-normal text-[#00B074] hover:underline cursor-pointer mt-2 block"
+                  >
+                    +3 more
+                  </button>
+                </div>
+              </div>
+
+              <div className="mt-8 pt-2">
+                <button
+                  type="button"
+                  onClick={() => setIsContactOpen(true)}
+                  className="w-full py-2.5 px-4 rounded-xl font-medium text-[14.5px] text-[#00B074] bg-[#E8FAF2] group-hover:bg-[#00B074] group-hover:text-white hover:!bg-[#009B66] border border-[#00B074]/35 group-hover:border-[#00B074] transition-all duration-200 cursor-pointer shadow-xs group-hover:shadow-sm"
+                >
+                  Register Now
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Deep-Dive Knowledge Sections with Interactive Navigation Tabs */}
-      <section className="py-12 sm:py-16 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Navigation Bar */}
-          <div className="flex items-center gap-2 overflow-x-auto pb-4 scrollbar-none border-b border-slate-200/80 mb-10">
-            {[
-              { id: "overview", label: "Overview & Features" },
-              { id: "eligibility", label: "Eligibility & Partners" },
-              { id: "documents", label: "Documents Required" },
-              { id: "process", label: "Step-by-Step Process" },
-              { id: "comparison", label: "LLP vs Pvt Ltd vs Partnership" },
-              { id: "compliance", label: "Annual Compliances" },
-            ].map((tab) => (
-              <button
-                key={tab.id}
-                type="button"
-                onClick={() => setActiveTab(tab.id as any)}
-                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium whitespace-nowrap transition-all cursor-pointer ${
-                  activeTab === tab.id
-                    ? "bg-[#1F1646] text-white shadow-xs"
-                    : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
+      {/* Main Content & Sticky Sidebar Grid Section */}
+      <section id="overview-section" className="py-12 bg-[#FAF9F7]/50 border-t border-slate-100">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Breadcrumb Navigation */}
+          <nav className="flex items-center gap-2 text-[13px] font-light text-slate-500 mb-6 flex-wrap">
+            <a href="/" className="hover:text-[#155EEF] transition-colors">
+              Merrafilings
+            </a>
+            <span className="text-slate-300">/</span>
+            <a href="/startup" className="hover:text-[#155EEF] transition-colors">
+              Business Registration
+            </a>
+            <span className="text-slate-300">/</span>
+            <span className="text-[#00B074] font-normal">Limited Liability Partnership (LLP)</span>
+          </nav>
 
-          {/* Tab 1: Overview */}
-          {activeTab === "overview" && (
-            <div className="space-y-10 animate-fade-in">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                <div className="lg:col-span-8 space-y-4">
-                  <h2 className="text-xl sm:text-2xl md:text-3xl font-normal text-[#12023B]">
-                    What is a Limited Liability Partnership (LLP)?
-                  </h2>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-light">
-                    A <strong>Limited Liability Partnership (LLP)</strong> is an internationally recognized corporate structure governed by the <strong>Limited Liability Partnership Act, 2008</strong>. It grants the organizational freedom and operational flexibility of a partnership firm while providing the statutory <strong>separate legal identity</strong> and <strong>limited liability shield</strong> typical of a private limited company.
-                  </p>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-light">
-                    In an LLP, the liability of each partner is limited strictly to their agreed capital contribution in the firm. One partner is not responsible or liable for the independent misconduct, negligence, or debt obligations of another partner. This makes LLPs the corporate vehicle of choice for <strong>startups, consulting firms, technology practices, legal and CA firms, and creative agencies</strong> across India.
-                  </p>
-                </div>
-                <div className="lg:col-span-4 bg-[#FAF9F7] p-6 rounded-2xl border border-slate-200/80 space-y-3">
-                  <h3 className="text-sm font-medium text-[#1F1646] flex items-center gap-2">
-                    <ShieldCheck className="w-4 h-4 text-[#00A86B]" />
-                    <span>Key LLP Fast Facts</span>
-                  </h3>
-                  <ul className="space-y-2 text-xs font-light text-slate-600">
-                    <li className="flex justify-between border-b border-slate-200/60 pb-1.5">
-                      <span>Governing Act:</span>
-                      <strong className="text-slate-800">LLP Act, 2008</strong>
-                    </li>
-                    <li className="flex justify-between border-b border-slate-200/60 pb-1.5">
-                      <span>Regulatory Ministry:</span>
-                      <strong className="text-slate-800">Ministry of Corporate Affairs</strong>
-                    </li>
-                    <li className="flex justify-between border-b border-slate-200/60 pb-1.5">
-                      <span>Minimum Partners:</span>
-                      <strong className="text-slate-800">2 Partners (No upper limit)</strong>
-                    </li>
-                    <li className="flex justify-between border-b border-slate-200/60 pb-1.5">
-                      <span>Statutory Audit:</span>
-                      <strong className="text-slate-800">Exempt below ₹40L turnover</strong>
-                    </li>
-                    <li className="flex justify-between">
-                      <span>Minimum Capital:</span>
-                      <strong className="text-slate-800">No Minimum Prescribed</strong>
-                    </li>
-                  </ul>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+            {/* Left Column: Comprehensive Guide Content (8 cols) */}
+            <div className="lg:col-span-8 bg-white p-6 sm:p-8 md:p-10 rounded-2xl border border-slate-200/80 shadow-2xs space-y-10">
+              {/* Section 1: Overview */}
+              <div>
+                <h1 className="text-2xl sm:text-[26px] md:text-[28px] font-normal text-[#1F1646] text-center mb-6 leading-snug">
+                  Limited Liability Partnership (LLP) Registration Online in India
+                </h1>
+                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-3">
+                  A <strong className="font-medium text-slate-800">Limited Liability Partnership (LLP)</strong> is one of the most preferred corporate business vehicles in India for service providers, consultants, software agencies, and co-founded ventures. Introduced under the <strong className="font-medium text-slate-800">Limited Liability Partnership Act, 2008</strong>, an LLP combines the operational flexibility of a partnership with the limited liability protections of a private limited company.
+                </p>
+                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+                  Unlike traditional partnership firms, an LLP operates as a <strong className="font-medium text-slate-800">separate legal entity</strong>. The personal wealth and private assets of individual partners remain shielded from business liabilities, debts, or misdeeds of other partners. With <a href="/" className="text-[#00B074] hover:underline font-normal">Merrafilings</a>, you get transparent, end-to-end guidance from MCA name approval to stamp paper agreement execution.
+                </p>
+              </div>
+
+              {/* Section 2: Key Advantages of Choosing an LLP */}
+              <div className="border-t border-slate-100 pt-6">
+                <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
+                  Key Advantages of Registering an LLP in India
+                </h2>
+                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  Founders select the LLP structure over other legal entities due to distinctive advantages in tax, governance, and liability protection:
+                </p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[12.5px] font-light text-slate-700">
+                  <div className="p-3.5 rounded-xl border border-slate-200/80 bg-[#FAF9F7]/70">
+                    <strong className="font-medium text-slate-900 block mb-1">
+                      Limited Liability Protection
+                    </strong>
+                    Partners are only liable to the extent of their agreed capital contribution. Personal assets can never be attached for business debts.
+                  </div>
+                  <div className="p-3.5 rounded-xl border border-slate-200/80 bg-[#FAF9F7]/70">
+                    <strong className="font-medium text-slate-900 block mb-1">
+                      No Minimum Capital Required
+                    </strong>
+                    Incorporate your LLP with zero mandatory paid-up capital. You can begin with ₹1,000 or any nominal capital contribution.
+                  </div>
+                  <div className="p-3.5 rounded-xl border border-slate-200/80 bg-[#FAF9F7]/70">
+                    <strong className="font-medium text-slate-900 block mb-1">
+                      Audit Exemption up to ₹40 Lakhs
+                    </strong>
+                    LLPs are completely exempt from mandatory statutory audits until annual turnover exceeds ₹40 Lakhs or capital exceeds ₹25 Lakhs.
+                  </div>
+                  <div className="p-3.5 rounded-xl border border-slate-200/80 bg-[#FAF9F7]/70">
+                    <strong className="font-medium text-slate-900 block mb-1">
+                      No Dividend Distribution Tax (DDT)
+                    </strong>
+                    Profits distributed to partners are entirely tax-free in the hands of the partners once the LLP pays its corporate tax.
+                  </div>
                 </div>
               </div>
 
-              {/* 6 Key Benefits Cards */}
-              <div>
-                <h3 className="text-lg sm:text-xl font-medium text-[#12023B] mb-5">
-                  Core Advantages of Registering an LLP
-                </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {/* Section 3: Minimum Requirements Table */}
+              <div className="border-t border-slate-100 pt-6">
+                <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
+                  Minimum Statutory Requirements for LLP Incorporation
+                </h2>
+                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  Before applying for incorporation on the Ministry of Corporate Affairs (MCA) portal, ensure your founding team satisfies these legal conditions:
+                </p>
+
+                <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-4">
+                  <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                    <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
+                      <tr>
+                        <th className="py-3 px-4 font-normal">Requirement</th>
+                        <th className="py-3 px-4 font-normal text-[#00A86B]">Statutory Minimum Criteria</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-100">
+                      {LLP_MIN_REQUIREMENTS_TABLE.map((row, idx) => (
+                        <tr
+                          key={idx}
+                          className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default"
+                        >
+                          <td className="relative py-3 px-4 font-normal text-slate-800 group-hover:text-slate-900">
+                            <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                            {row.requirement}
+                          </td>
+                          <td className="py-3 px-4 text-slate-600">{row.criteria}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              {/* Section 4: Eligibility Criteria */}
+              <div className="border-t border-slate-100 pt-6">
+                <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
+                  Eligibility Criteria for Partners &amp; Designated Partners
+                </h2>
+                <div className="space-y-3 text-[13px] font-light text-slate-600">
+                  <div className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-emerald-100 text-[#00A86B] flex items-center justify-center shrink-0 mt-0.5 text-xs font-semibold">
+                      ✓
+                    </div>
+                    <div>
+                      <strong className="font-normal text-slate-800">Age &amp; Capacity:</strong> Any natural person aged 18 years or above with capacity to contract can become a partner. Corporate bodies can also become partners through designated nominees.
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-emerald-100 text-[#00A86B] flex items-center justify-center shrink-0 mt-0.5 text-xs font-semibold">
+                      ✓
+                    </div>
+                    <div>
+                      <strong className="font-normal text-slate-800">Designated Partner Residency:</strong> At least one designated partner must be an Indian resident, having resided in India for not less than 120 days during the financial year.
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-emerald-100 text-[#00A86B] flex items-center justify-center shrink-0 mt-0.5 text-xs font-semibold">
+                      ✓
+                    </div>
+                    <div>
+                      <strong className="font-normal text-slate-800">DPIN &amp; DSC:</strong> All designated partners must hold a valid Designated Partner Identification Number (DPIN/DIN) and Class-3 Digital Signature Certificate.
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-emerald-100 text-[#00A86B] flex items-center justify-center shrink-0 mt-0.5 text-xs font-semibold">
+                      ✓
+                    </div>
+                    <div>
+                      <strong className="font-normal text-slate-800">NRIs &amp; Foreign Nationals:</strong> 100% foreign direct investment (FDI) is permitted in LLPs under the automatic route for sectors where 100% FDI is allowed without conditions.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Section 5: Documents Required */}
+              <div id="documents-section" className="border-t border-slate-100 pt-6">
+                <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
+                  Documents Required for LLP Registration in India
+                </h2>
+                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  To ensure uninterrupted filing on the MCA portal, have clear scanned copies of these documents ready:
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {/* For Partners */}
+                  <div className="p-4 rounded-xl border border-slate-200/90 bg-[#FAF9F7]/60">
+                    <h3 className="font-medium text-slate-800 text-[13.5px] mb-2.5 flex items-center gap-2">
+                      <Users className="w-4 h-4 text-[#6B4BFF]" />
+                      <span>For All Partners &amp; Designated Partners</span>
+                    </h3>
+                    <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
+                      <li className="flex items-center gap-2">
+                        <Check className="w-3.5 h-3.5 text-[#00B074] shrink-0" />
+                        <span>Self-attested PAN Card (Passport for foreign citizens)</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Check className="w-3.5 h-3.5 text-[#00B074] shrink-0" />
+                        <span>Identity Proof: Aadhaar Card, Passport, or Voter ID</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Check className="w-3.5 h-3.5 text-[#00B074] shrink-0" />
+                        <span>Address Proof: Bank statement or utility bill (&lt; 2 months old)</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Check className="w-3.5 h-3.5 text-[#00B074] shrink-0" />
+                        <span>Recent passport size photograph</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* For Registered Office */}
+                  <div className="p-4 rounded-xl border border-slate-200/90 bg-[#FAF9F7]/60">
+                    <h3 className="font-medium text-slate-800 text-[13.5px] mb-2.5 flex items-center gap-2">
+                      <Building className="w-4 h-4 text-[#00A86B]" />
+                      <span>For Registered Office in India</span>
+                    </h3>
+                    <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
+                      <li className="flex items-center gap-2">
+                        <Check className="w-3.5 h-3.5 text-[#00B074] shrink-0" />
+                        <span>Electricity, water, or gas bill (&lt; 2 months old)</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Check className="w-3.5 h-3.5 text-[#00B074] shrink-0" />
+                        <span>No Objection Certificate (NOC) signed by property owner</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Check className="w-3.5 h-3.5 text-[#00B074] shrink-0" />
+                        <span>Rent / Lease agreement (if rented property)</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Check className="w-3.5 h-3.5 text-[#00B074] shrink-0" />
+                        <span>Residential premises are completely acceptable</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Section 6: Step-by-Step Incorporation Process */}
+              <div className="border-t border-slate-100 pt-6">
+                <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
+                  Step-by-Step LLP Incorporation Process
+                </h2>
+                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-5">
+                  At Merrafilings, we handle the entire lifecycle from preliminary document preparation to post-incorporation deed filings:
+                </p>
+
+                <div className="space-y-3.5">
                   {[
                     {
-                      icon: <ShieldCheck className="w-5 h-5 text-emerald-600" />,
-                      title: "Limited Liability Protection",
-                      desc: "Partners' personal properties and savings are 100% shielded from company liabilities, contractual losses, and commercial debts.",
+                      step: "Step 1",
+                      title: "Digital Signature & DPIN Allotment",
+                      desc: "Class-3 Digital Signature Certificates (DSC) are generated for the proposed designated partners to enable legal signing on the MCA portal.",
                     },
                     {
-                      icon: <Building className="w-5 h-5 text-purple-600" />,
-                      title: "Perpetual Succession",
-                      desc: "The LLP enjoys an uninterrupted legal existence. Admission, death, bankruptcy, or resignation of any partner does not dissolve the firm.",
+                      step: "Step 2",
+                      title: "LLP Name Reservation (RUN-LLP)",
+                      desc: "We submit two distinct name options reflecting your business objectives on the MCA RUN-LLP portal for official Central Registration Centre (CRC) approval.",
                     },
                     {
-                      icon: <Scale className="w-5 h-5 text-blue-600" />,
-                      title: "Audit Exemption Benefit",
-                      desc: "Save tens of thousands in statutory CA audit costs annually. Audits are mandatory only if turnover exceeds ₹40 Lakhs or contribution exceeds ₹25 Lakhs.",
+                      step: "Step 3",
+                      title: "FiLLiP Incorporation Filing",
+                      desc: "Upon name approval, the unified Form FiLLiP is submitted alongside subscriber sheets, registered office proofs, and consent forms for Certificate of Incorporation issuance.",
                     },
                     {
-                      icon: <BadgePercent className="w-5 h-5 text-amber-600" />,
-                      title: "No Dividend Distribution Tax",
-                      desc: "Profits distributed among partners after corporate tax payment are completely tax-free in the hands of the individual partners under Income Tax rules.",
+                      step: "Step 4",
+                      title: "Drafting & Filing Form 3 LLP Agreement",
+                      desc: "Within 30 days of incorporation, your customized LLP Agreement is printed on judicial stamp paper, notarised, signed, and filed with ROC in Form 3.",
                     },
-                    {
-                      icon: <FolderLock className="w-5 h-5 text-rose-600" />,
-                      title: "Operational Flexibility",
-                      desc: "Partners can customize management terms, internal profit sharing ratios, and voting mechanisms freely through the signed LLP Agreement.",
-                    },
-                    {
-                      icon: <Globe2 className="w-5 h-5 text-indigo-600" />,
-                      title: "100% Foreign Direct Investment (FDI)",
-                      desc: "LLPs are eligible for 100% foreign investment under the automatic route for sectors where 100% FDI is permitted without government approval.",
-                    },
-                  ].map((card, i) => (
-                    <div key={i} className="p-5 rounded-2xl bg-[#FAF9F7]/70 border border-slate-200/60 hover:bg-white hover:shadow-md transition-all">
-                      <div className="w-10 h-10 rounded-xl bg-white shadow-xs flex items-center justify-center mb-3">
-                        {card.icon}
+                  ].map((st, idx) => (
+                    <div
+                      key={idx}
+                      className="p-4 rounded-xl border border-slate-200/80 bg-white hover:border-[#00B074] transition-all flex items-start gap-4"
+                    >
+                      <span className="px-2.5 py-1 rounded-md bg-[#E8FAF2] text-[#00B074] text-xs font-semibold shrink-0">
+                        {st.step}
+                      </span>
+                      <div>
+                        <h4 className="font-medium text-slate-800 text-[13.5px] mb-1">{st.title}</h4>
+                        <p className="text-[12.5px] font-light text-slate-600 leading-relaxed">{st.desc}</p>
                       </div>
-                      <h4 className="text-[15px] font-medium text-slate-900">{card.title}</h4>
-                      <p className="text-xs font-light text-slate-600 mt-1.5 leading-relaxed">{card.desc}</p>
                     </div>
                   ))}
                 </div>
               </div>
-            </div>
-          )}
 
-          {/* Tab 2: Eligibility */}
-          {activeTab === "eligibility" && (
-            <div className="space-y-8 animate-fade-in">
-              <div>
-                <h2 className="text-xl sm:text-2xl font-normal text-[#12023B]">
-                  Eligibility Criteria for Registering an LLP
+              {/* Section 7: Comparison Table - LLP vs Pvt Ltd vs Partnership */}
+              <div className="border-t border-slate-100 pt-6">
+                <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
+                  Comparison: LLP vs. Private Limited vs. General Partnership
                 </h2>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1 font-light leading-relaxed">
-                  Before initiating the digital registration process, ensure your founding members fulfill the MCA statutory requirements.
+                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  Select the entity structure that corresponds accurately to your fundraising goals, compliance capability, and risk appetite:
                 </p>
-              </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="p-6 rounded-2xl bg-[#FAF9F7] border border-slate-200/70 space-y-4">
-                  <h3 className="text-base font-medium text-slate-900 flex items-center gap-2">
-                    <Users className="w-4 h-4 text-[#6B4BFF]" />
-                    <span>Partner &amp; Designated Partner Criteria</span>
-                  </h3>
-                  <ul className="space-y-3 text-xs sm:text-[13px] font-light text-slate-700">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#00A86B] shrink-0 mt-0.5" />
-                      <span><strong>Minimum 2 Partners:</strong> At least two individuals or corporate bodies must agree to form the LLP. No upper ceiling on total partners.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#00A86B] shrink-0 mt-0.5" />
-                      <span><strong>Designated Partners (DP):</strong> At least 2 designated partners must be natural persons, and at least one must be a Resident of India (stayed 120+ days in preceding FY).</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#00A86B] shrink-0 mt-0.5" />
-                      <span><strong>Age Requirement:</strong> All natural designated partners must be at least 18 years of age and legally competent to contract.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#00A86B] shrink-0 mt-0.5" />
-                      <span><strong>DPIN &amp; DSC:</strong> Every designated partner must hold a valid Digital Signature Certificate (Class-3 DSC) and DPIN/DIN.</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="p-6 rounded-2xl bg-[#FAF9F7] border border-slate-200/70 space-y-4">
-                  <h3 className="text-base font-medium text-slate-900 flex items-center gap-2">
-                    <Landmark className="w-4 h-4 text-[#6B4BFF]" />
-                    <span>Entity &amp; Registered Office Criteria</span>
-                  </h3>
-                  <ul className="space-y-3 text-xs sm:text-[13px] font-light text-slate-700">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#00A86B] shrink-0 mt-0.5" />
-                      <span><strong>Unique Proposed Name:</strong> Must end with "LLP" or "Limited Liability Partnership" and must not infringe existing registered trademarks or company names.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#00A86B] shrink-0 mt-0.5" />
-                      <span><strong>Registered Office in India:</strong> Must have an Indian physical commercial or residential address to receive official communications and legal notices from MCA.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#00A86B] shrink-0 mt-0.5" />
-                      <span><strong>Lawful Business Purpose:</strong> The business activities contemplated by the partners must be lawful and for profit. Not-for-profit LLPs are not permitted.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#00A86B] shrink-0 mt-0.5" />
-                      <span><strong>Capital Contribution:</strong> Any mutual capital amount agreed by partners; no fixed minimum capital required.</span>
-                    </li>
-                  </ul>
+                <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs">
+                  <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                    <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
+                      <tr>
+                        <th className="py-3 px-4 font-normal">Parameter</th>
+                        <th className="py-3 px-4 font-normal text-[#00A86B]">Limited Liability Partnership</th>
+                        <th className="py-3 px-4 font-normal">Private Limited Company</th>
+                        <th className="py-3 px-4 font-normal">Partnership Firm</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-100">
+                      {LLP_COMPARISON_TABLE.map((row, idx) => (
+                        <tr
+                          key={idx}
+                          className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default"
+                        >
+                          <td className="relative py-3 px-4 font-normal text-slate-800 group-hover:text-slate-900">
+                            <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                            {row.parameter}
+                          </td>
+                          <td className="py-3 px-4 font-medium text-[#00A86B]">{row.llp}</td>
+                          <td className="py-3 px-4 text-slate-600">{row.pvtLtd}</td>
+                          <td className="py-3 px-4 text-slate-600">{row.partnership}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
                 </div>
               </div>
-            </div>
-          )}
 
-          {/* Tab 3: Documents Required */}
-          {activeTab === "documents" && (
-            <div id="documents-required" className="space-y-8 animate-fade-in scroll-mt-24">
-              <div>
-                <h2 className="text-xl sm:text-2xl font-normal text-[#12023B]">
-                  Documents Required for LLP Registration in India
+              {/* Section 8: Mandatory Annual Compliances */}
+              <div className="border-t border-slate-100 pt-6">
+                <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
+                  Mandatory Compliances After LLP Registration
                 </h2>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1 font-light leading-relaxed">
-                  All documents can be submitted online as scanned PDFs or JPEGs. No physical visits to government offices needed.
+                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  LLPs enjoy straightforward compliances compared to private companies, but statutory deadlines must be honoured to avoid late penalties:
                 </p>
-              </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs space-y-4">
-                  <div className="flex items-center gap-2.5 text-[#12023B] font-medium text-base">
-                    <FileCheck className="w-5 h-5 text-[#6B4BFF]" />
-                    <span>1. Partner KYC Documentation</span>
-                  </div>
-                  <ul className="space-y-2.5 text-xs sm:text-[13px] font-light text-slate-700">
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#6B4BFF]" />
-                      <span><strong>PAN Card:</strong> Self-attested copy of PAN card for all Indian partners.</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#6B4BFF]" />
-                      <span><strong>Identity Proof:</strong> Self-attested copy of Aadhaar Card, Passport, or Voter ID.</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#6B4BFF]" />
-                      <span><strong>Address Proof:</strong> Bank Statement, Electricity Bill, or Telephone bill (less than 2 months old).</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#6B4BFF]" />
-                      <span><strong>Passport Photo:</strong> Recent passport-sized color photograph of each designated partner.</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#6B4BFF]" />
-                      <span><strong>For Foreign Partners:</strong> Notarized and apostilled passport and bank statement.</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs space-y-4">
-                  <div className="flex items-center gap-2.5 text-[#12023B] font-medium text-base">
-                    <Building className="w-5 h-5 text-[#6B4BFF]" />
-                    <span>2. Registered Office Premises Proof</span>
-                  </div>
-                  <ul className="space-y-2.5 text-xs sm:text-[13px] font-light text-slate-700">
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#6B4BFF]" />
-                      <span><strong>Utility Proof:</strong> Electricity bill, Gas bill, Water bill, or Property Tax receipt (less than 2 months old).</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#6B4BFF]" />
-                      <span><strong>No-Objection Certificate (NOC):</strong> Signed NOC from property owner consenting to office usage.</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#6B4BFF]" />
-                      <span><strong>Rent Agreement:</strong> Valid registered or notarized rent agreement if the premises are rented.</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#6B4BFF]" />
-                      <span><strong>Digital Signature Certificate:</strong> Class-3 DSC for document signing (arranged by Merrafilings).</span>
-                    </li>
-                  </ul>
+                <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-5">
+                  <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                    <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
+                      <tr>
+                        <th className="py-3 px-4 font-normal">Statutory Compliance</th>
+                        <th className="py-3 px-4 font-normal">Form / Filing</th>
+                        <th className="py-3 px-4 font-normal">Prescribed Due Date</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-100">
+                      <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
+                        <td className="relative py-3 px-4 font-normal text-slate-800">
+                          <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                          LLP Agreement Execution
+                        </td>
+                        <td className="py-3 px-4 text-slate-600">Form 3</td>
+                        <td className="py-3 px-4 text-slate-600">Within 30 days of incorporation</td>
+                      </tr>
+                      <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
+                        <td className="relative py-3 px-4 font-normal text-slate-800">
+                          <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                          Annual Return of LLP
+                        </td>
+                        <td className="py-3 px-4 text-slate-600">Form 11</td>
+                        <td className="py-3 px-4 text-slate-600">On or before 30th May every year</td>
+                      </tr>
+                      <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
+                        <td className="relative py-3 px-4 font-normal text-slate-800">
+                          <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                          Statement of Account &amp; Solvency
+                        </td>
+                        <td className="py-3 px-4 text-slate-600">Form 8</td>
+                        <td className="py-3 px-4 text-slate-600">On or before 30th October every year</td>
+                      </tr>
+                      <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
+                        <td className="relative py-3 px-4 font-normal text-slate-800">
+                          <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                          Income Tax Return Filing
+                        </td>
+                        <td className="py-3 px-4 text-slate-600">ITR-5</td>
+                        <td className="py-3 px-4 text-slate-600">31st July (non-audit) or 31st October (audit)</td>
+                      </tr>
+                      <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
+                        <td className="relative py-3 px-4 font-normal text-slate-800">
+                          <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                          DIR-3 KYC for Designated Partners
+                        </td>
+                        <td className="py-3 px-4 text-slate-600">DIR-3 KYC / Web KYC</td>
+                        <td className="py-3 px-4 text-slate-600">On or before 30th September annually</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
-            </div>
-          )}
 
-          {/* Tab 4: Step-by-Step Process */}
-          {activeTab === "process" && (
-            <div className="space-y-8 animate-fade-in">
-              <div>
-                <h2 className="text-xl sm:text-2xl font-normal text-[#12023B]">
-                  Step-by-Step LLP Registration Procedure
+              {/* Section 9: Why Choose Merrafilings */}
+              <div className="border-t border-slate-100 pt-6">
+                <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
+                  Why Choose Merrafilings for Your LLP Registration?
                 </h2>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1 font-light leading-relaxed">
-                  How Merrafilings incorporates your Limited Liability Partnership in 7 to 10 working days:
+                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  Merrafilings is India&apos;s premier corporate compliance platform, trusted by over 2 Lakh businesses nationwide:
                 </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                {[
-                  {
-                    step: "01",
-                    title: "DSC & DPIN Processing",
-                    desc: "We obtain Class-3 Digital Signature Certificates (DSC) with encryption tokens for designated partners and generate their DPINs on the MCA portal.",
-                  },
-                  {
-                    step: "02",
-                    title: "Name Reservation (RUN-LLP)",
-                    desc: "We submit up to 2 unique proposed names via the MCA RUN-LLP (Reserve Unique Name) online tool with appropriate business objective codes.",
-                  },
-                  {
-                    step: "03",
-                    title: "FiLLiP Form Filing",
-                    desc: "Upon name approval, our CA/CS team files Form FiLLiP (Form for incorporation of Limited Liability Partnership) along with registered office proofs and KYC.",
-                  },
-                  {
-                    step: "04",
-                    title: "Certificate of Incorporation",
-                    desc: "The Registrar of Companies (ROC) reviews the application and issues the Certificate of Incorporation (COI) containing the unique 7-digit LLPIN.",
-                  },
-                  {
-                    step: "05",
-                    title: "LLP Agreement Drafting",
-                    desc: "Our legal advocates draft your comprehensive LLP Agreement reflecting your exact partner equity, voting powers, and profit-sharing terms.",
-                  },
-                  {
-                    step: "06",
-                    title: "MCA Form 3 Filing & PAN/TAN",
-                    desc: "We stamp and file the executed LLP Agreement in MCA Form 3 within 30 days and deliver your firm's PAN, TAN, and bank account kit.",
-                  },
-                ].map((item, idx) => (
-                  <div key={idx} className="p-6 rounded-2xl bg-[#FAF9F7] border border-slate-200/70 relative space-y-2">
-                    <span className="text-xs font-mono font-bold text-[#6B4BFF] bg-purple-100/70 px-2 py-0.5 rounded">
-                      STEP {item.step}
-                    </span>
-                    <h3 className="text-base font-medium text-slate-900 pt-1">{item.title}</h3>
-                    <p className="text-xs font-light text-slate-600 leading-relaxed">{item.desc}</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[13px] font-light text-slate-700">
+                  <div className="flex items-center gap-2">
+                    <span className="text-[#00A86B] font-bold">✓</span>
+                    <span>Dedicated CA, CS &amp; Corporate Legal Advisor</span>
                   </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Tab 5: Comparison Table */}
-          {activeTab === "comparison" && (
-            <div className="space-y-8 animate-fade-in">
-              <div>
-                <h2 className="text-xl sm:text-2xl font-normal text-[#12023B]">
-                  Comparison: LLP vs Private Limited vs General Partnership
-                </h2>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1 font-light leading-relaxed">
-                  Understand the structural, tax, and compliance differences before choosing your corporate entity.
-                </p>
-              </div>
-
-              <div className="overflow-x-auto rounded-2xl border border-slate-200/80 shadow-xs bg-white">
-                <table className="w-full text-left text-xs sm:text-[13px] border-collapse min-w-[650px]">
-                  <thead>
-                    <tr className="bg-[#FAF9F7] border-b border-slate-200 text-slate-900 font-medium">
-                      <th className="p-3.5 sm:p-4">Key Parameter</th>
-                      <th className="p-3.5 sm:p-4 text-[#6B4BFF] font-semibold">Limited Liability Partnership</th>
-                      <th className="p-3.5 sm:p-4">Private Limited Company</th>
-                      <th className="p-3.5 sm:p-4">Traditional Partnership</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-100 font-light text-slate-700">
-                    <tr>
-                      <td className="p-3.5 sm:p-4 font-normal text-slate-900">Governing Act</td>
-                      <td className="p-3.5 sm:p-4 text-[#6B4BFF] font-medium">LLP Act, 2008</td>
-                      <td className="p-3.5 sm:p-4">Companies Act, 2013</td>
-                      <td className="p-3.5 sm:p-4">Indian Partnership Act, 1932</td>
-                    </tr>
-                    <tr>
-                      <td className="p-3.5 sm:p-4 font-normal text-slate-900">Partner/Member Liability</td>
-                      <td className="p-3.5 sm:p-4 text-[#00A86B] font-medium">Limited to capital contribution</td>
-                      <td className="p-3.5 sm:p-4 text-[#00A86B] font-medium">Limited to unpaid share value</td>
-                      <td className="p-3.5 sm:p-4 text-rose-600 font-medium">Unlimited joint personal liability</td>
-                    </tr>
-                    <tr>
-                      <td className="p-3.5 sm:p-4 font-normal text-slate-900">Separate Legal Entity</td>
-                      <td className="p-3.5 sm:p-4 text-[#00A86B] font-medium">Yes (Distinct legal person)</td>
-                      <td className="p-3.5 sm:p-4 text-[#00A86B] font-medium">Yes (Distinct legal person)</td>
-                      <td className="p-3.5 sm:p-4 text-rose-600">No separate legal existence</td>
-                    </tr>
-                    <tr>
-                      <td className="p-3.5 sm:p-4 font-normal text-slate-900">Mandatory Annual Audit</td>
-                      <td className="p-3.5 sm:p-4 text-[#00A86B] font-medium">Only if turnover &gt; ₹40 Lakhs</td>
-                      <td className="p-3.5 sm:p-4 text-rose-600">Mandatory from Year 1</td>
-                      <td className="p-3.5 sm:p-4">Only if turnover &gt; ₹1 Crore (Tax Audit)</td>
-                    </tr>
-                    <tr>
-                      <td className="p-3.5 sm:p-4 font-normal text-slate-900">Annual Compliance Costs</td>
-                      <td className="p-3.5 sm:p-4 text-[#00A86B] font-medium">Low to Moderate</td>
-                      <td className="p-3.5 sm:p-4 text-amber-700">Higher (Auditor, Board meetings, ROC forms)</td>
-                      <td className="p-3.5 sm:p-4">Very Low (Income tax filing only)</td>
-                    </tr>
-                    <tr>
-                      <td className="p-3.5 sm:p-4 font-normal text-slate-900">Venture Capital / Angel Funding</td>
-                      <td className="p-3.5 sm:p-4">Difficult (No shares/equity)</td>
-                      <td className="p-3.5 sm:p-4 text-[#00A86B] font-medium">Highly Preferred (Equity &amp; ESOPs)</td>
-                      <td className="p-3.5 sm:p-4 text-rose-600">Not possible</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          )}
-
-          {/* Tab 6: Annual Compliance */}
-          {activeTab === "compliance" && (
-            <div className="space-y-8 animate-fade-in">
-              <div>
-                <h2 className="text-xl sm:text-2xl font-normal text-[#12023B]">
-                  Statutory Annual Compliances for an Indian LLP
-                </h2>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1 font-light leading-relaxed">
-                  Keeping your LLP compliant avoids hefty MCA late penalties (₹100/day per form). Merrafilings assists with all mandatory filings:
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="p-6 rounded-2xl bg-[#FAF9F7] border border-slate-200/70 space-y-3">
-                  <div className="w-10 h-10 rounded-xl bg-purple-100 flex items-center justify-center text-[#6B4BFF]">
-                    <FileText className="w-5 h-5" />
+                  <div className="flex items-center gap-2">
+                    <span className="text-[#00A86B] font-bold">✓</span>
+                    <span>Transparent Pricing with zero hidden overheads</span>
                   </div>
-                  <h3 className="text-base font-medium text-slate-900">Form 11: Annual Return</h3>
-                  <p className="text-xs font-light text-slate-600 leading-relaxed">
-                    A summary of the management, partners, and changes in designated partners. Must be filed within 60 days from the close of the financial year.
-                  </p>
-                  <div className="pt-2">
-                    <span className="text-[11px] font-mono text-[#6B4BFF] bg-white px-2 py-1 rounded border border-purple-200">
-                      Due Date: On or before May 30th
-                    </span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[#00A86B] font-bold">✓</span>
+                    <span>Fast Turnaround: Registration in 7–10 working days</span>
                   </div>
-                </div>
-
-                <div className="p-6 rounded-2xl bg-[#FAF9F7] border border-slate-200/70 space-y-3">
-                  <div className="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-[#00A86B]">
-                    <Receipt className="w-5 h-5" />
-                  </div>
-                  <h3 className="text-base font-medium text-slate-900">Form 8: Statement of Account</h3>
-                  <p className="text-xs font-light text-slate-600 leading-relaxed">
-                    A declaration of financial status and solvency by designated partners along with statement of assets &amp; liabilities.
-                  </p>
-                  <div className="pt-2">
-                    <span className="text-[11px] font-mono text-[#00A86B] bg-white px-2 py-1 rounded border border-emerald-200">
-                      Due Date: On or before October 30th
-                    </span>
-                  </div>
-                </div>
-
-                <div className="p-6 rounded-2xl bg-[#FAF9F7] border border-slate-200/70 space-y-3">
-                  <div className="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center text-blue-600">
-                    <Landmark className="w-5 h-5" />
-                  </div>
-                  <h3 className="text-base font-medium text-slate-900">ITR-5: Income Tax Return</h3>
-                  <p className="text-xs font-light text-slate-600 leading-relaxed">
-                    Annual income tax return filed with the Income Tax Department. Tax rate is flat 30% plus applicable surcharge &amp; cess.
-                  </p>
-                  <div className="pt-2">
-                    <span className="text-[11px] font-mono text-blue-600 bg-white px-2 py-1 rounded border border-blue-200">
-                      Due Date: July 31st / Oct 31st
-                    </span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[#00A86B] font-bold">✓</span>
+                    <span>100% Online Paperless Process across all 28 states</span>
                   </div>
                 </div>
               </div>
             </div>
-          )}
-        </div>
-      </section>
 
-      {/* Frequently Asked Questions Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-[#FAF9F7]/70 border-t border-slate-100">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl font-normal text-[#12023B]">
-              Frequently Asked Questions on LLP Registration
-            </h2>
-            <p className="text-xs sm:text-sm font-light text-slate-500 mt-2">
-              Have questions about partners, tax, or legal filings? Here are the most common questions answered.
-            </p>
-          </div>
-
-          <div className="space-y-3">
-            {FAQS.map((faq, idx) => (
+            {/* Right Sticky Sidebar (4 cols) */}
+            <div className="lg:col-span-4 space-y-6 lg:sticky lg:top-24">
+              {/* Consult Experts Card with 3 Avatars */}
               <div
-                key={idx}
-                className="bg-white rounded-2xl border border-slate-200/70 overflow-hidden transition-all shadow-xs"
+                onClick={() => setIsContactOpen(true)}
+                className="bg-white rounded-2xl border border-slate-200/80 shadow-2xs hover:shadow-xs p-4 flex items-center justify-between transition-all cursor-pointer group"
               >
-                <button
-                  type="button"
-                  onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="w-full flex items-center justify-between p-4 sm:p-5 text-left text-xs sm:text-sm font-medium text-slate-900 hover:text-[#6B4BFF] transition-colors cursor-pointer gap-4"
-                >
-                  <span>{faq.q}</span>
-                  <ChevronDown
-                    className={`w-4 h-4 text-slate-400 shrink-0 transition-transform duration-200 ${
-                      openFaq === idx ? "rotate-180 text-[#6B4BFF]" : ""
-                    }`}
-                  />
-                </button>
-                {openFaq === idx && (
-                  <div className="px-4 pb-4 sm:px-5 sm:pb-5 text-xs sm:text-[13.5px] font-light text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
-                    {faq.a}
+                <div className="flex items-center gap-3">
+                  <div className="flex -space-x-2 overflow-hidden">
+                    <img
+                      className="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover"
+                      src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=faces"
+                      alt="Expert 1"
+                    />
+                    <img
+                      className="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover"
+                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=faces"
+                      alt="Expert 2"
+                    />
+                    <img
+                      className="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover"
+                      src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=faces"
+                      alt="Expert 3"
+                    />
+                  </div>
+                  <span className="text-[14px] font-normal text-slate-800">
+                    Consult <span className="text-[#155EEF] font-normal">Experts</span>
+                  </span>
+                </div>
+                <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-[#155EEF] transition-colors" />
+              </div>
+
+              {/* Related Guides Card */}
+              <div className="bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden border-t-2 border-t-emerald-400">
+                <div className="p-5">
+                  <h4 className="font-normal text-[14px] text-slate-800 mb-4">Related Guides</h4>
+                  <ul className="space-y-3.5 text-[12.5px] font-light text-slate-700">
+                    {[
+                      "Understanding the Limited Liability Partnership Structure",
+                      "How to Draft a Custom LLP Agreement (Form 3 Clauses)",
+                      "Difference Between LLP, Private Limited, and Partnership Firm",
+                      "Statutory Audit Exemption Limits for LLPs in India",
+                      "Step-by-Step Guide to Converting Partnership to LLP",
+                      "100% Foreign Direct Investment (FDI) in LLPs via Automatic Route",
+                    ].map((guide, idx) => (
+                      <li key={idx} className="border-b border-slate-100 pb-3 last:border-0 last:pb-0">
+                        <a
+                          href="#overview-section"
+                          className="flex items-start gap-2.5 text-slate-600 hover:text-[#155EEF] transition-colors group"
+                        >
+                          <span className="text-slate-400 group-hover:text-[#155EEF] shrink-0 text-[13px] leading-tight">→</span>
+                          <span className="line-clamp-2 leading-snug">{guide}</span>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              {/* LLP by State Directory */}
+              <div className="bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden border-t-2 border-t-emerald-400">
+                <div className="p-4 border-b border-slate-100 flex items-center justify-between">
+                  <span className="font-normal text-[14px] text-slate-800">LLP Registration by State</span>
+                  <button
+                    type="button"
+                    onClick={() => setStateListOpen(!stateListOpen)}
+                    className="p-1 text-slate-400 hover:text-slate-700 cursor-pointer"
+                  >
+                    {stateListOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                  </button>
+                </div>
+                {stateListOpen && (
+                  <div className="max-h-[380px] overflow-y-auto p-4 space-y-1.5 text-[12.5px] font-light">
+                    {INDIAN_STATES.slice(0, 18).map((st, idx) => (
+                      <a
+                        key={idx}
+                        href="#overview-section"
+                        className="flex items-center justify-between py-1.5 px-2 text-[#00B074] hover:text-emerald-700 hover:bg-emerald-50/50 rounded-lg transition-colors border-b border-slate-50 last:border-0"
+                      >
+                        <span>LLP Registration in {st}</span>
+                        <span className="text-slate-300 text-[11px]">→</span>
+                      </a>
+                    ))}
                   </div>
                 )}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <Footer />
+      {/* Frequently Asked Questions Section (Matching exact Merrafilings 2-column reference design) */}
+      <section className="py-14 sm:py-18 bg-white border-t border-[#E4E7EC]">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Top Green Accent Dash */}
+          <div className="w-10 h-[3px] bg-[#00A86B] mb-3.5 rounded-full" />
+
+          {/* Section Header */}
+          <h2 className="text-2xl sm:text-[28px] md:text-[32px] font-normal text-slate-900 tracking-tight leading-snug">
+            Frequently asked questions
+          </h2>
+          <p className="text-[13px] sm:text-[13.5px] font-light text-slate-500 mt-1.5 mb-8">
+            Common questions about Limited Liability Partnership Incorporation Starting at ₹2,999 in India.
+          </p>
+
+          {/* 2-Column FAQ Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+            {/* Column 1 */}
+            <div className="space-y-3.5">
+              {(showMoreFaqs ? [...FAQ_COL_1, ...FAQ_EXTRA_COL_1] : FAQ_COL_1).map((faq, idx) => {
+                const faqId = `c1-${idx}`;
+                const isOpen = openFaq === faqId;
+                return (
+                  <div
+                    key={idx}
+                    onClick={() => setOpenFaq(isOpen ? null : faqId)}
+                    className={`bg-white rounded-xl border transition-all duration-200 cursor-pointer overflow-hidden group ${
+                      isOpen
+                        ? "border-[#00B074] shadow-xs"
+                        : "border-slate-200/90 hover:border-[#00B074] hover:shadow-2xs"
+                    }`}
+                  >
+                    <div className="py-4 px-5 flex items-center justify-between gap-4">
+                      <span className="font-normal text-[13.5px] sm:text-[14px] text-slate-800 leading-snug group-hover:text-slate-900">
+                        {faq.q}
+                      </span>
+                      <ChevronDown
+                        className={`w-4 h-4 shrink-0 transition-transform duration-200 ${
+                          isOpen ? "rotate-180 text-[#00B074]" : "text-slate-400 group-hover:text-slate-600"
+                        }`}
+                      />
+                    </div>
+                    {isOpen && (
+                      <div className="px-5 pb-4.5 pt-1 text-[13px] font-light text-slate-600 leading-relaxed border-t border-slate-100">
+                        {faq.a}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Column 2 */}
+            <div className="space-y-3.5">
+              {(showMoreFaqs ? [...FAQ_COL_2, ...FAQ_EXTRA_COL_2] : FAQ_COL_2).map((faq, idx) => {
+                const faqId = `c2-${idx}`;
+                const isOpen = openFaq === faqId;
+                return (
+                  <div
+                    key={idx}
+                    onClick={() => setOpenFaq(isOpen ? null : faqId)}
+                    className={`bg-white rounded-xl border transition-all duration-200 cursor-pointer overflow-hidden group ${
+                      isOpen
+                        ? "border-[#00B074] shadow-xs"
+                        : "border-slate-200/90 hover:border-[#00B074] hover:shadow-2xs"
+                    }`}
+                  >
+                    <div className="py-4 px-5 flex items-center justify-between gap-4">
+                      <span className="font-normal text-[13.5px] sm:text-[14px] text-slate-800 leading-snug group-hover:text-slate-900">
+                        {faq.q}
+                      </span>
+                      <ChevronDown
+                        className={`w-4 h-4 shrink-0 transition-transform duration-200 ${
+                          isOpen ? "rotate-180 text-[#00B074]" : "text-slate-400 group-hover:text-slate-600"
+                        }`}
+                      />
+                    </div>
+                    {isOpen && (
+                      <div className="px-5 pb-4.5 pt-1 text-[13px] font-light text-slate-600 leading-relaxed border-t border-slate-100">
+                        {faq.a}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Load more questions button */}
+          <div className="text-center mt-9 mb-14">
+            <button
+              type="button"
+              onClick={() => setShowMoreFaqs(!showMoreFaqs)}
+              className="px-6 py-2.5 rounded-lg bg-[#00A86B] hover:bg-[#00925d] text-white text-[13.5px] font-medium transition-colors shadow-xs cursor-pointer inline-flex items-center gap-1.5"
+            >
+              <span>{showMoreFaqs ? "Show less questions" : "Load more questions"}</span>
+            </button>
+          </div>
+
+          {/* Related Services - Business Registration Card */}
+          <div className="bg-white rounded-2xl border border-slate-200/90 shadow-2xs p-5 sm:p-6 mb-6">
+            <h3 className="font-normal text-[15px] sm:text-[16px] text-slate-800 mb-4">
+              Related Services - Business Registration
+            </h3>
+            <div className="flex flex-wrap gap-2 sm:gap-2.5">
+              {RELATED_SERVICES_TAGS.map((tag, idx) => (
+                <a
+                  key={idx}
+                  href="#pricing"
+                  className="inline-flex items-center px-3.5 py-1.5 rounded-lg border border-slate-200/90 bg-white text-[12px] sm:text-[12.5px] font-light text-slate-600 hover:text-[#00A86B] hover:border-[#00A86B] transition-all shadow-3xs hover:shadow-2xs cursor-pointer"
+                >
+                  {tag}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Popular Searches Card */}
+          <div className="bg-white rounded-2xl border border-slate-200/90 shadow-2xs p-5 sm:p-6 mb-6">
+            <h3 className="font-normal text-[15px] sm:text-[16px] text-slate-800 mb-4">
+              Popular Searches
+            </h3>
+            <div className="flex flex-wrap gap-2 sm:gap-2.5">
+              {POPULAR_SEARCHES_TAGS.map((tag, idx) => (
+                <a
+                  key={idx}
+                  href="#pricing"
+                  className="inline-flex items-center px-3.5 py-1.5 rounded-lg border border-slate-200/90 bg-white text-[12px] sm:text-[12.5px] font-light text-slate-600 hover:text-[#00A86B] hover:border-[#00A86B] transition-all shadow-3xs hover:shadow-2xs cursor-pointer"
+                >
+                  {tag}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Floating Live Chat Button */}
       <div className="fixed bottom-6 right-6 z-40">
@@ -1254,7 +1664,7 @@ export default function LLPRegistrationPage() {
       <ContactModal
         isOpen={isContactOpen}
         onClose={() => setIsContactOpen(false)}
-        serviceTitle="LLP Registration Online in India"
+        serviceTitle="Limited Liability Partnership (LLP) Registration in India"
       />
 
       <ServiceSearchModal
@@ -1262,6 +1672,9 @@ export default function LLPRegistrationPage() {
         onClose={() => setIsSearchOpen(false)}
         onSelectService={() => setIsContactOpen(true)}
       />
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

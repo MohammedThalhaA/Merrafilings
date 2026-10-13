@@ -133,138 +133,202 @@ const CLIENT_MINI_CARDS = [
   },
 ];
 
-interface PricingTier {
-  id: string;
-  name: string;
-  badge?: string;
-  price: string;
-  originalPrice: string;
-  gstNote: string;
-  description: string;
-  features: string[];
-  popular?: boolean;
-}
-
-const PRICING_TIERS: PricingTier[] = [
+const PRODUCER_MIN_REQUIREMENTS_TABLE = [
   {
-    id: "basic",
-    name: "Producer Co. Incorporation",
-    price: "₹14,899",
-    originalPrice: "₹24,999",
-    gstNote: "+ Govt fees & Stamp Duty as applicable",
-    description: "Full statutory MCA registration for 10 individual farmers or 2 producer institutions.",
-    features: [
-      "SPICe+ Part A Name Reservation (Ending with Producer Company Limited)",
-      "Class-3 DSC for 5 Proposed Directors",
-      "DIN Allotment for 5 Directors",
-      "Drafting of Agricultural MOA & AOA (Schedule I compliant)",
-      "SPICe+ Part B Incorporation Filing with ROC",
-      "Certificate of Incorporation (CIN) Allotment",
-      "Company PAN, TAN & EPFO/ESIC Registration",
-      "Zero-balance Corporate Bank Account Opening Assistance",
-    ],
+    requirement: "Minimum Number of Members / Shareholders",
+    criteria: "Minimum 10 primary individual producers OR minimum 2 producer institutions (or a combination)",
   },
   {
-    id: "standard",
-    name: "Incorporation + Agri Licensing",
-    badge: "RECOMMENDED",
-    price: "₹24,899",
-    originalPrice: "₹38,999",
-    gstNote: "+ Govt fees & Stamp Duty as applicable",
-    popular: true,
-    description: "Complete incorporation along with essential post-setup agricultural business licenses.",
-    features: [
-      "Everything included in Producer Co. Incorporation",
-      "Custom Drafting of Farmer Share-Certificates & By-laws",
-      "GST Registration for agricultural processing & trading",
-      "FSSAI State/Central Food Safety Registration support",
-      "APMC Mandi Trading license documentation guidance",
-      "Udyam / MSME Registration for agri-infrastructure subsidies",
-      "Dedicated Corporate Secretarial Consultant for 6 Months",
-    ],
+    requirement: "Minimum Number of Directors",
+    criteria: "Minimum 5 directors (maximum up to 15 directors allowed)",
   },
   {
-    id: "comprehensive",
-    name: "FPO All-Inclusive + Subsidy Setup",
-    badge: "TOTAL FPO VALUE",
-    price: "₹39,899",
-    originalPrice: "₹65,000",
-    gstNote: "+ Govt fees as applicable",
-    description: "End-to-end institutional setup, SFAC equity grant advisory & 1-year compliance.",
-    features: [
-      "Everything in Incorporation + Agri Licensing plan",
-      "SFAC Equity Grant Scheme Advisory & Application dossier",
-      "NABARD Institutional Loan eligibility & project report framework",
-      "1-Year Mandatory Corporate Annual Filings (Form MGT-7, AOC-4)",
-      "Annual General Meeting (AGM) documentation drafting",
-      "Corporate Income Tax Return (ITR-6) Filing with 80PA Advisory",
-      "DIR-3 KYC for all 5 Directors",
-    ],
+    requirement: "Minimum Authorized Capital",
+    criteria: "₹5,00,000 recommended minimum authorized capital (divided into equity shares)",
+  },
+  {
+    requirement: "Producer Objective Verification",
+    criteria: "Objects must strictly relate to agriculture, horticulture, dairy, forestry, poultry, or primary allied produce",
+  },
+  {
+    requirement: "Producer Status Documentation",
+    criteria: "Primary producer proof for all members (e.g. 7/12 extract, Khasra-Khatauni, Patta, or Panchayat certificate)",
+  },
+  {
+    requirement: "Digital Signatures & DIN",
+    criteria: "Class 3 DSC for all proposed directors and DIN allotment via MCA SPICe+ portal",
+  },
+  {
+    requirement: "Constitutional Charter",
+    criteria: "Customized MOA & AOA drafted strictly adhering to Part IXA statutory clauses of the Companies Act",
   },
 ];
 
-interface FAQItem {
-  q: string;
-  a: string;
-}
+const PRODUCER_COMPARISON_TABLE = [
+  {
+    parameter: "Governing Law & Regulator",
+    producer: "Companies Act (Part IXA) under Central MCA",
+    cooperative: "State Cooperative Societies Act (State Registrar)",
+    pvtLtd: "Companies Act, 2013 (Central MCA)",
+  },
+  {
+    parameter: "Area of Operation",
+    producer: "All-India multi-state operations automatically allowed",
+    cooperative: "Restricted to state of registration (unless MSCS Act)",
+    pvtLtd: "All-India operations without territorial curbs",
+  },
+  {
+    parameter: "Political & Government Interference",
+    producer: "Strict corporate autonomy; zero political interference",
+    cooperative: "Subject to state government inspection & political control",
+    pvtLtd: "Complete private promoter autonomy",
+  },
+  {
+    parameter: "Voting Rights System",
+    producer: "Democratic: One member, one vote (irrespective of shares)",
+    cooperative: "One member, one vote (often subject to registrar)",
+    pvtLtd: "Proportional to number of equity shares held",
+  },
+  {
+    parameter: "Tax Benefits & Subsidies",
+    producer: "100% tax deduction under Sec 80PA + SFAC grant up to ₹15L",
+    cooperative: "Subject to Section 80P tax deduction rules",
+    pvtLtd: "Standard corporate tax (no Section 80PA benefits)",
+  },
+  {
+    parameter: "Institutional Credit (NABARD)",
+    producer: "Eligible for NABARD Credit Guarantee & Equity Grants",
+    cooperative: "Eligible for cooperative bank schemes",
+    pvtLtd: "Standard commercial bank debt and equity",
+  },
+];
 
-const FAQS: FAQItem[] = [
+const FAQ_COL_1 = [
   {
-    q: "What is a Producer Company under the Companies Act?",
-    a: "A Producer Company is a legally recognized corporate entity established under the Companies Act, 2013 (Part IXA) by primary producers—such as farmers, milk producers, artisans, and fishermen. It bridges the gap between traditional cooperative societies and private limited companies by giving farmers corporate legal identity, limited liability, and professional governance while maintaining the democratic cooperative principle of 'one member, one vote'.",
+    q: "What is a Producer Company (Farmer Producer Company / FPO)?",
+    a: "A Producer Company is a specialized hybrid legal corporate entity formed under Part IXA of the Companies Act. It combines the democratic ethos of a cooperative society with the professional governance, limited liability, and funding capabilities of a private limited company. It is established exclusively by primary producers such as farmers, milk producers, weavers, fishermen, and horticulturists.",
   },
   {
-    q: "What is the minimum membership required to form a Producer Company?",
-    a: "Under Section 378C of the Companies Act, a Producer Company can be formed by: (1) Any 10 or more individual primary producers, or (2) Any two or more producer institutions, or (3) A combination of 10 or more individuals and producer institutions. There is no maximum limit on the total number of members.",
+    q: "How many members are required to form a Producer Company?",
+    a: "Under Section 378C of the Companies Act, a Producer Company requires a minimum of 10 or more individual primary producers, OR two or more producer institutions, OR a combination of 10 individuals and producer institutions. There is no statutory upper limit on the maximum number of members.",
   },
   {
-    q: "How many directors are needed for a Producer Company?",
-    a: "Every Producer Company must have a minimum of 5 Directors and a maximum of 15 Directors. Directors must be primary producers elected by the members, and at least one director must be a resident of India. Merrafilings assists all 5 initial directors in obtaining Digital Signature Certificates (DSC) and Director Identification Numbers (DIN).",
+    q: "How many directors are required for a Producer Company?",
+    a: "A Producer Company must have a minimum of 5 directors and can appoint up to a maximum of 15 directors. All directors must be primary producers or representatives of producer institutions elected by the members.",
   },
   {
-    q: "What tax benefits are available to a Producer Company in India?",
-    a: "Producer Companies enjoy massive tax incentives under Section 80PA of the Income Tax Act, 1961. A 100% deduction of profits is available for Producer Companies with a total annual turnover up to ₹100 Crores derived from eligible businesses, such as marketing members' produce, processing agricultural goods, and manufacturing/supplying farming inputs.",
+    q: "What is the 100% tax exemption under Section 80PA?",
+    a: "Under Section 80PA of the Income Tax Act, a Producer Company with an annual turnover of up to ₹100 Crores is eligible for a 100% deduction on profits derived from the marketing of agricultural produce grown by its members, purchase of agricultural equipment, seeds, livestock, and processing activities for a period of 5 consecutive assessment years.",
   },
   {
-    q: "Are Producer Companies eligible for government grants and NABARD subsidies?",
-    a: "Yes! Producer Companies (FPOs) are the primary vehicle recognized by Central and State Governments for agricultural schemes. They are eligible for: (1) SFAC (Small Farmers' Agribusiness Consortium) Equity Grant matching up to ₹15 Lakhs, (2) SFAC Credit Guarantee Fund up to ₹2 Crores, (3) NABARD Producer Organization Development Fund (PODF), and (4) Agriculture Infrastructure Fund (AIF) interest subvention.",
+    q: "What is the SFAC Matching Equity Grant Scheme for FPOs?",
+    a: "The Small Farmers' Agri-Business Consortium (SFAC) provides a matching Equity Grant of up to ₹15 Lakhs to eligible Producer Companies. Under this scheme, the central government matches the equity contributed by farmer members up to ₹1,000 per farmer member, significantly strengthening the capital base of the FPO without dilution.",
+  },
+];
+
+const FAQ_COL_2 = [
+  {
+    q: "How does the voting system work in a Producer Company?",
+    a: "A Producer Company follows a strictly democratic governance model: 'One Member, One Vote'. Unlike standard commercial companies where voting power corresponds to the number of shares held, in a Producer Company, every primary producer member has exactly one vote, preventing concentration of power among wealthier shareholders.",
   },
   {
-    q: "Can a Producer Company sell goods in the open market and export?",
-    a: "Yes. Unlike societies that often face state boundary constraints, a Producer Company operates as a private company with national jurisdiction. It can process, brand, sell directly to FMCG retailers, participate in e-NAM (electronic National Agriculture Market), and engage in international exports under its own corporate brand name.",
+    q: "What is considered proof of being a 'Primary Producer'?",
+    a: "Primary producers are individuals engaged in agriculture, horticulture, animal husbandry, pisciculture, or forestry. Proof includes Revenue Land Records (such as 7/12 extract, Khasra, Khatauni, Patta, or Jamabandi in the farmer's name), or an official Farmer Certificate issued by the local Tehsildar, Village Panchayat Officer, or Agriculture Officer.",
   },
   {
-    q: "What is the voting rights structure in a Producer Company?",
-    a: "Producer Companies follow democratic cooperative principles. In a company comprising individual producers, every member has a single vote ('one member, one vote'), regardless of how many shares they hold. If the company consists of producer institutions, voting is based on patronage or produce delivered to the company.",
+    q: "Can a Producer Company sell products across state borders?",
+    a: "Yes! A Producer Company incorporated with the MCA enjoys nationwide operational jurisdiction right from day one. Unlike state cooperative societies that require complex Multi-State Cooperative licenses to trade across state borders, a Producer Company can purchase inputs, establish processing units, and sell produce across India freely.",
   },
   {
-    q: "What documents prove that the members are primary producers?",
-    a: "To prove primary producer status during ROC scrutiny, members must provide agricultural land ownership records (such as 7/12 extract, Khasra/Khatauni, Patta copy) or a certificate issued by the Village Tehsildar / Gram Panchayat Pradhan confirming active agricultural produce or dairy activities.",
+    q: "What is the credit guarantee fund offered by NABARD?",
+    a: "NABARD, through the Credit Guarantee Fund Trust for FPOs, provides credit guarantees up to 85% for collateral-free bank loans extended to eligible Farmer Producer Companies. This enables newly formed FPOs to secure institutional bank loans without pledging agricultural land.",
   },
   {
-    q: "How does a Producer Company differ from a Cooperative Society?",
-    a: "Cooperative societies are registered under state-specific Cooperative Societies Acts, often subject to bureaucratic government registrar interference and limited to one state. A Producer Company is registered under the Central Companies Act, enjoys nationwide operational freedom, has professional corporate governance, can raise institutional credit, and is completely free from political registrar control.",
+    q: "What are the mandatory annual filings for a Producer Company?",
+    a: "A Producer Company must hold its Annual General Meeting (AGM) within 90 days from the close of the financial year. It must file Form MGT-7 (Annual Return) and Form AOC-4 (Financial Statements) with the ROC within 60 and 30 days of the AGM respectively, undergo a mandatory statutory audit by a practicing CA, and file Corporate Income Tax Return (ITR-6).",
+  },
+];
+
+const FAQ_EXTRA_COL_1 = [
+  {
+    q: "Can a Producer Company distribute bonus shares or dividends?",
+    a: "Yes. A Producer Company can distribute patronage bonus to its members in proportion to their participation in business, and can also declare dividends out of surplus profits as approved in the Annual General Meeting, subject to statutory reserve allocations.",
   },
   {
-    q: "What is the mandatory annual compliance for a Producer Company?",
-    a: "A Producer Company must hold its Annual General Meeting (AGM) within 90 days from the close of the financial year. It must file Form MGT-7 (Annual Return) and Form AOC-4 (Financial Statements with ROC within 60 and 30 days of AGM respectively), undergo a statutory audit by a practicing Chartered Accountant, and file Corporate Income Tax Return (ITR-6) by September 30th.",
+    q: "Is an auditor mandatory for a Producer Company?",
+    a: "Yes. Every Producer Company must appoint an independent practicing Chartered Accountant as its statutory auditor. The auditor must prepare an audit report verifying internal controls, member loans, and asset valuations prior to each Annual General Meeting.",
   },
+];
+
+const FAQ_EXTRA_COL_2 = [
+  {
+    q: "Can non-farmers become shareholders in a Producer Company?",
+    a: "No. The law strictly reserves shareholding in a Producer Company exclusively for active primary producers and producer institutions. However, outside professionals and experts can be appointed as expert directors or chief executive officers (CEOs) to assist in management.",
+  },
+  {
+    q: "Why choose Merrafilings for Producer Company Incorporation?",
+    a: "Merrafilings is India's leading agribusiness compliance advisory. We handle farmer KYC collation, specialized agricultural MOA & AOA drafting, MCA incorporation, Section 80PA tax certifications, and SFAC grant documentation with dedicated Agri-CA support.",
+  },
+];
+
+const RELATED_SERVICES_TAGS = [
+  "Private Limited Company",
+  "One Person Company",
+  "Limited Liability Partnership",
+  "Section 8 Non-Profit Company",
+  "Trust Registration",
+  "Partnership Firm",
+  "FSSAI Food Business License",
+  "GST Registration for FPOs",
+  "SFAC Equity Grant Application",
+  "NABARD Credit Guarantee Support",
+  "AOC-4 & MGT-7 Annual Filing",
+  "Statutory CA Audit for FPOs",
+];
+
+const POPULAR_SEARCHES_TAGS = [
+  "Producer Company Registration Online",
+  "Farmer Producer Company FPO Setup",
+  "Companies Act Part IXA Producer Company",
+  "SFAC Equity Grant up to 15 Lakhs",
+  "Section 80PA Income Tax Exemption",
+  "FPO vs Cooperative Society Differences",
+  "Minimum 10 Farmers Producer Company",
+  "5 Directors DIN and DSC Allotment",
+  "Khasra Khatauni Farmer Land Records",
+  "NABARD Collateral Free Loan for FPO",
+  "Agricultural MOA AOA Drafting MCA",
+  "One Member One Vote Democracy",
+  "FPO Bank Account Opening Resolution",
+  "Patronage Bonus for Farmer Members",
+  "Form AOC-4 Financial Filing FPO",
+  "Form MGT-7 Annual Return ROC",
+  "Primary Producer Certificate Tehsildar",
+  "Producer Company Stamp Duty by State",
 ];
 
 export default function ProducerCompanyRegistrationPage() {
-  const [activeTab, setActiveTab] = useState<"overview" | "objectives" | "eligibility" | "documents" | "process" | "comparison" | "compliance">("overview");
-  const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
-  // Hero Lead Form State
+  // Form states
   const [formName, setFormName] = useState("");
   const [formEmail, setFormEmail] = useState("");
   const [formPhone, setFormPhone] = useState("");
   const [formState, setFormState] = useState("");
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  // Clients carousel scroll
+  // Pricing card expand states
+  const [expandedCard, setExpandedCard] = useState<number | null>(null);
+
+  // FAQ states
+  const [openFaq, setOpenFaq] = useState<string | null>("c1-0");
+  const [showMoreFaqs, setShowMoreFaqs] = useState(false);
+
+  // State list collapse in sidebar
+  const [stateListOpen, setStateListOpen] = useState(true);
+
+  // Client mini cards carousel scroll
   const clientScrollRef = useRef<HTMLDivElement>(null);
 
   const scrollClients = (direction: "left" | "right") => {
@@ -276,28 +340,47 @@ export default function ProducerCompanyRegistrationPage() {
 
   const handleHeroFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formName || !formEmail || !formPhone || !formState) {
-      alert("Please fill in all required fields.");
-      return;
-    }
+    if (!formName || !formEmail || !formPhone || !formState) return;
     setFormSubmitted(true);
   };
 
   return (
-    <div className="min-h-screen bg-[#FDFCFB] text-slate-800 font-sans antialiased selection:bg-[#6B4BFF]/10 selection:text-[#6B4BFF]">
+    <div className="min-h-screen bg-white font-sans text-slate-800 antialiased selection:bg-[#00A86B]/15 selection:text-[#00A86B]">
+      {/* Top Header Navigation */}
       <Navbar
         onOpenSearch={() => setIsSearchOpen(true)}
         onOpenContact={() => setIsContactOpen(true)}
       />
 
-      {/* Hero Section */}
-      <section className="relative pt-6 sm:pt-8 md:pt-10 pb-8 sm:pb-12 overflow-hidden bg-gradient-to-b from-[#FAF8F5] via-white to-white">
+      {/* Hero Section with Merrafilings Curved Radial Mesh Background */}
+      <section className="relative overflow-visible pt-6 sm:pt-8 md:pt-10 pb-16 bg-white">
+        {/* Curved gradient backdrop canvas */}
         <div
-          className="absolute inset-x-0 top-0 z-0 mx-auto w-full max-w-[1600px] h-[520px] pointer-events-none opacity-60"
+          className="absolute inset-x-0 top-0 z-0 mx-auto w-full rounded-b-[40px] sm:rounded-b-[52px] md:rounded-b-[64px] overflow-hidden pointer-events-none"
           style={{
+            height: "calc(100% - 90px)",
+            minHeight: "540px",
             background: `
-              radial-gradient(ellipse 70% 50% at 20% 20%, rgba(200, 190, 255, 0.35) 0%, transparent 70%),
-              radial-gradient(ellipse 60% 40% at 80% 25%, rgba(255, 210, 230, 0.35) 0%, transparent 70%)
+              radial-gradient(ellipse 65% 75% at 0% 75%, 
+                rgb(255, 215, 198) 0%,
+                rgba(255, 226, 213, 0.95) 25%,
+                rgba(255, 238, 230, 0.6) 50%,
+                rgba(255, 248, 244, 0.15) 75%,
+                transparent 85%
+              ),
+              radial-gradient(ellipse 65% 75% at 100% 75%,
+                rgb(192, 226, 236) 0%,
+                rgba(202, 232, 240, 0.95) 25%,
+                rgba(220, 240, 247, 0.6) 50%,
+                rgba(238, 248, 252, 0.15) 75%,
+                transparent 85%
+              ),
+              linear-gradient(180deg,
+                rgb(255, 255, 255) 0%,
+                rgb(250, 249, 248) 35%,
+                rgb(245, 243, 241) 70%,
+                rgb(239, 236, 232) 100%
+              )
             `,
           }}
           aria-hidden="true"
@@ -313,25 +396,8 @@ export default function ProducerCompanyRegistrationPage() {
               Registration in India
             </h1>
             <p className="mt-3 text-[13px] sm:text-[14.5px] font-light text-slate-600 max-w-2xl mx-auto leading-relaxed">
-              Incorporate a Farmer Producer Company (FPO/FPC) in India under the Companies Act. Empower farmers and agricultural producers with corporate identity, NABARD &amp; SFAC subsidies, Section 80PA tax benefits, and institutional funding.
+              Incorporate a Farmer Producer Company (FPO) under Part IXA of the Companies Act. Unlock 100% Section 80PA tax exemptions, SFAC matching equity grants up to ₹15 Lakhs, and NABARD credit guarantees.
             </p>
-
-            {/* Price Pill Banner */}
-            <div className="mt-4 flex items-center justify-center">
-              <a
-                href="#pricing"
-                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg border-2 border-blue-500 bg-white shadow-xs hover:shadow-md hover:bg-blue-50/50 transition-all cursor-pointer group"
-              >
-                <span className="text-xs sm:text-sm text-slate-700">
-                  Producer Company starting from{" "}
-                  <strong className="text-slate-900 font-semibold">₹14,899</strong>
-                </span>
-                <span className="text-xs sm:text-sm font-medium text-blue-600 underline group-hover:text-blue-700 flex items-center gap-0.5">
-                  View Price
-                  <ChevronRight className="w-3.5 h-3.5 inline" />
-                </span>
-              </a>
-            </div>
           </div>
 
           {/* Hero Content Glassmorphism Box */}
@@ -341,10 +407,10 @@ export default function ProducerCompanyRegistrationPage() {
               <div className="space-y-6">
                 <div>
                   <h2 className="text-xl sm:text-2xl md:text-3xl font-normal text-[#12023B] mb-2 sm:mb-3">
-                    Start Your Producer Company
+                    Start Your Producer Company (FPO)
                   </h2>
                   <p className="text-[13px] sm:text-[14px] font-light text-slate-600 leading-relaxed">
-                    Empower farmers and rural producers with collective bargaining, government agricultural grants, equity grants, and complete MCA corporate incorporation with Merrafilings expert CA/CS support.
+                    End-to-end corporate registration for farmers, milk unions, horticulturists, and primary producer clusters nationwide.
                   </p>
                 </div>
 
@@ -360,30 +426,34 @@ export default function ProducerCompanyRegistrationPage() {
                         />
                       </svg>
                     </div>
-                    <span className="text-[13.5px] font-light text-slate-700">
-                      MCA Name Reservation (Part A)
-                    </span>
+                    <span className="text-[13.5px] font-light text-slate-700">MCA Name Approval (RUN Portal)</span>
                   </li>
 
                   <li className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-full bg-white/80 border border-purple-200/50 shadow-xs flex items-center justify-center shrink-0">
-                      <svg
-                        className="w-4 h-4"
-                        fill="none"
-                        stroke="#6B4BFF"
-                        viewBox="0 0 24 24"
-                      >
+                      <svg className="w-4 h-4" fill="#6B4BFF" viewBox="0 0 20 20">
+                        <path
+                          fillRule="evenodd"
+                          d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span className="text-[13.5px] font-light text-slate-700">SPICe+ Part B Incorporation Filing</span>
+                  </li>
+
+                  <li className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-white/80 border border-purple-200/50 shadow-xs flex items-center justify-center shrink-0">
+                      <svg className="w-4 h-4" fill="none" stroke="#6B4BFF" viewBox="0 0 24 24">
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
                           strokeWidth="2"
-                          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                         />
                       </svg>
                     </div>
-                    <span className="text-[13.5px] font-light text-slate-700">
-                      SPICe+ Part B Incorporation Filing
-                    </span>
+                    <span className="text-[13.5px] font-light text-slate-700">Custom Agricultural MOA &amp; AOA Drafting</span>
                   </li>
 
                   <li className="flex items-center gap-3">
@@ -396,34 +466,12 @@ export default function ProducerCompanyRegistrationPage() {
                         />
                       </svg>
                     </div>
-                    <span className="text-[13.5px] font-light text-slate-700">
-                      Custom Agricultural MOA &amp; AOA Drafting
-                    </span>
+                    <span className="text-[13.5px] font-light text-slate-700">PAN, TAN &amp; Bank Account Setup</span>
                   </li>
 
                   <li className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-full bg-white/80 border border-purple-200/50 shadow-xs flex items-center justify-center shrink-0">
-                      <svg className="w-4 h-4" fill="#6B4BFF" viewBox="0 0 20 20">
-                        <path
-                          fillRule="evenodd"
-                          d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                    <span className="text-[13.5px] font-light text-slate-700">
-                      PAN, TAN &amp; Bank Account Setup
-                    </span>
-                  </li>
-
-                  <li className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-white/80 border border-purple-200/50 shadow-xs flex items-center justify-center shrink-0">
-                      <svg
-                        className="w-4 h-4"
-                        fill="none"
-                        stroke="#6B4BFF"
-                        viewBox="0 0 24 24"
-                      >
+                      <svg className="w-4 h-4" fill="none" stroke="#6B4BFF" viewBox="0 0 24 24">
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
@@ -433,7 +481,7 @@ export default function ProducerCompanyRegistrationPage() {
                       </svg>
                     </div>
                     <a
-                      href="#documents-required"
+                      href="#documents-section"
                       className="text-[13.5px] font-semibold bg-gradient-to-r from-[#5D54FF] via-[#A767EC] to-[#F968E7] bg-clip-text text-transparent underline underline-offset-2 decoration-[#A767EC] hover:opacity-85 transition-opacity cursor-pointer"
                     >
                       Required Documents
@@ -442,18 +490,16 @@ export default function ProducerCompanyRegistrationPage() {
                 </ul>
               </div>
 
-              {/* Right Column: Interactive Lead Generation Form */}
+              {/* Right Column: Lead Form */}
               <div className="bg-[#FAF8F5]/60 rounded-2xl p-5 sm:p-7 border border-[#E4E7EC]/70">
                 {formSubmitted ? (
                   <div className="text-center py-8 space-y-4">
-                    <div className="w-16 h-16 rounded-full bg-emerald-100 text-[#00A86B] flex items-center justify-center mx-auto">
-                      <Check className="w-8 h-8 stroke-[2.5]" />
+                    <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+                      <Check className="w-8 h-8" />
                     </div>
-                    <h3 className="text-xl font-bold text-[#111827]">
-                      Application Received!
-                    </h3>
+                    <h3 className="text-xl font-bold text-[#111827]">Application Received!</h3>
                     <p className="text-[14px] text-[#475467]">
-                      Thank you, <strong className="text-[#111827]">{formName}</strong>. A Senior FPO &amp; Agricultural Corporate Specialist from Merrafilings will contact you at <strong className="text-[#111827]">{formPhone}</strong> within 15 minutes.
+                      Thank you, <strong className="text-[#111827]">{formName}</strong>. Our senior FPO &amp; Agricultural Corporate Specialist will contact you at <strong className="text-[#111827]">{formPhone}</strong> within 15 minutes.
                     </p>
                     <button
                       type="button"
@@ -468,11 +514,7 @@ export default function ProducerCompanyRegistrationPage() {
                     {/* Continue with Google */}
                     <button
                       type="button"
-                      onClick={() =>
-                        alert(
-                          "Google Single Sign-On simulation. Please enter your details below."
-                        )
-                      }
+                      onClick={() => alert("Google Single Sign-On simulation. Please fill in the details below.")}
                       className="w-full flex items-center justify-center gap-3 py-2.5 px-4 bg-white hover:bg-[#F8FAFC] border border-[#D0D5DD] rounded-xl text-[14px] font-medium text-[#344054] shadow-xs transition-colors cursor-pointer"
                     >
                       <svg className="w-5 h-5" viewBox="0 0 24 24">
@@ -538,10 +580,9 @@ export default function ProducerCompanyRegistrationPage() {
                         type="tel"
                         required
                         placeholder="Phone Number *"
-                        pattern="[0-9]{10}"
                         value={formPhone}
                         onChange={(e) => setFormPhone(e.target.value)}
-                        className="flex-1 min-w-0 px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-r-md text-[13.5px] font-normal text-slate-800 placeholder-slate-400 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all"
+                        className="w-full px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-r-md text-[13.5px] font-normal text-slate-800 placeholder-slate-400 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all"
                       />
                     </div>
 
@@ -551,18 +592,18 @@ export default function ProducerCompanyRegistrationPage() {
                         required
                         value={formState}
                         onChange={(e) => setFormState(e.target.value)}
-                        className="w-full px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-md text-[13.5px] font-normal text-slate-700 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all cursor-pointer"
+                        className="w-full px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-md text-[13.5px] font-normal text-slate-800 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all"
                       >
                         <option value="">Select State *</option>
-                        {INDIAN_STATES.map((s) => (
-                          <option key={s} value={s}>
-                            {s}
+                        {INDIAN_STATES.map((st) => (
+                          <option key={st} value={st}>
+                            {st}
                           </option>
                         ))}
                       </select>
                     </div>
 
-                    {/* Continue Button */}
+                    {/* Submit Button */}
                     <div className="pt-2 flex justify-end">
                       <button
                         type="submit"
@@ -578,7 +619,7 @@ export default function ProducerCompanyRegistrationPage() {
 
             {/* Trust Stats Cards with Hover Effects */}
             <div className="mt-8 pt-6 border-t border-slate-100/80 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4">
-              {/* Card 1: 4.8 Verified Reviews */}
+              {/* Card 1: 4.4 Verified Reviews */}
               <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-amber-200 hover:shadow-[0_8px_25px_rgba(245,158,11,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
                 <div className="w-11 h-11 rounded-2xl bg-[#FFF6E9] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-2 shadow-2xs">
                   <svg className="w-5 h-5 text-[#F04438] transition-colors" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
@@ -587,9 +628,13 @@ export default function ProducerCompanyRegistrationPage() {
                 </div>
                 <div>
                   <div className="flex items-center gap-1.5 font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">
-                    <span>4.8</span>
+                    <span>4.4</span>
                     <div className="flex items-center text-amber-400 text-[11px] gap-0.5">
-                      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                      <span>★</span><span>★</span><span>★</span><span>★</span>
+                      <span className="relative inline-block text-slate-300">
+                        ★
+                        <span className="absolute inset-0 overflow-hidden w-[40%] text-amber-400">★</span>
+                      </span>
                     </div>
                   </div>
                   <p className="text-[11.5px] font-light text-slate-500">Verified Reviews</p>
@@ -610,29 +655,24 @@ export default function ProducerCompanyRegistrationPage() {
               </div>
 
               {/* Card 3: 2 Lakh+ Customers */}
-              <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-orange-200 hover:shadow-[0_8px_25px_rgba(234,88,12,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
-                <div className="w-11 h-11 rounded-2xl bg-[#FFF4ED] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-2 shadow-2xs">
-                  <svg className="w-5 h-5 text-[#EA580C] transition-colors" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
-                  </svg>
+              <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-purple-200 hover:shadow-[0_8px_25px_rgba(107,75,255,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
+                <div className="w-11 h-11 rounded-2xl bg-[#F5F3FF] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-2 shadow-2xs">
+                  <Users className="w-5 h-5 text-[#6B4BFF] transition-colors" />
                 </div>
                 <div>
                   <p className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">2 Lakh+ Customers</p>
-                  <p className="text-[11.5px] font-light text-slate-500">Trusted across India</p>
+                  <p className="text-[11.5px] font-light text-slate-500">Served Across India</p>
                 </div>
               </div>
 
               {/* Card 4: App Tracking */}
-              <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-rose-200 hover:shadow-[0_8px_25px_rgba(240,68,56,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
-                <div className="w-11 h-11 rounded-2xl bg-[#FFF1F3] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-2 shadow-2xs">
-                  <svg className="w-5 h-5 text-[#F04438] transition-colors" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                  </svg>
+              <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-[#FAF9F7]/70 hover:bg-white border border-slate-200/50 hover:border-emerald-200 hover:shadow-[0_8px_25px_rgba(0,176,116,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer group">
+                <div className="w-11 h-11 rounded-2xl bg-[#ECFDF5] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-2 shadow-2xs">
+                  <Smartphone className="w-5 h-5 text-[#00B074] transition-colors" />
                 </div>
                 <div>
                   <p className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#111827] transition-colors">App Tracking</p>
-                  <p className="text-[11.5px] font-light text-slate-500">Live status updates</p>
+                  <p className="text-[11.5px] font-light text-slate-500">Live Status &amp; Alerts</p>
                 </div>
               </div>
             </div>
@@ -680,629 +720,930 @@ export default function ProducerCompanyRegistrationPage() {
         </div>
       </section>
 
-      {/* Pricing Packages Section */}
-      <section id="pricing" className="py-12 sm:py-16 md:py-20 bg-[#FAF9F7]/70 border-b border-slate-100 scroll-mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100/70 border border-emerald-200/60 text-xs font-medium text-emerald-700 mb-3">
-              <Sprout className="w-3.5 h-3.5" />
-              <span>Dedicated Agricultural &amp; FPO Packages</span>
-            </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-[#12023B] tracking-tight">
-              Transparent Pricing for Producer Companies
+      {/* Pricing Section (Matching exact Merrafilings design with Green Hover Border & Register Button) */}
+      <section id="pricing" className="py-14 sm:py-16 bg-white">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <h2 className="text-2xl sm:text-[28px] md:text-[32px] font-normal text-[#111827] leading-snug">
+              Simple packages. Transparent{" "}
+              <span className="bg-gradient-to-r from-[#7052FF] via-[#9E6AFF] to-[#E966DF] bg-clip-text text-transparent font-normal">
+                pricing.
+              </span>
             </h2>
-            <p className="mt-2 text-xs sm:text-sm md:text-base font-light text-slate-600">
-              Clear corporate incorporation plans designed for farmers, rural collectives, and agricultural startups.
+            <div className="w-12 h-[2px] bg-gradient-to-r from-[#7052FF] to-[#E966DF] rounded-full mx-auto mt-2 mb-3" />
+            <p className="text-[13px] sm:text-[13.5px] font-light text-slate-500">
+              Transparent pricing and complete corporate support for farmer clusters and agribusiness promoters.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
-            {PRICING_TIERS.map((tier) => (
-              <div
-                key={tier.id}
-                className={`relative rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 ${
-                  tier.popular
-                    ? "bg-white border-2 border-[#6B4BFF] shadow-xl shadow-purple-900/5 -translate-y-1"
-                    : "bg-white/80 border border-slate-200/80 shadow-sm hover:shadow-md hover:-translate-y-0.5"
-                }`}
-              >
-                {tier.badge && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3.5 py-1 rounded-full bg-gradient-to-r from-[#594CF5] to-[#D946EF] text-white text-[11px] font-semibold tracking-wide uppercase shadow-sm">
-                    {tier.badge}
-                  </div>
-                )}
-
-                <div>
-                  <h3 className="text-lg sm:text-xl font-medium text-slate-900">{tier.name}</h3>
-                  <p className="text-xs font-light text-slate-500 mt-1 min-h-[36px]">{tier.description}</p>
-
-                  <div className="mt-4 pt-4 border-t border-slate-100">
-                    <div className="flex items-baseline gap-2">
-                      <span className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-slate-900">{tier.price}</span>
-                      <span className="text-xs text-slate-400 line-through">{tier.originalPrice}</span>
-                    </div>
-                    <p className="text-[11.5px] font-light text-slate-500 mt-1">{tier.gstNote}</p>
-                  </div>
-
-                  <ul className="mt-6 space-y-3 border-t border-slate-100 pt-6">
-                    {tier.features.map((feature, fIdx) => (
-                      <li key={fIdx} className="flex items-start gap-2.5 text-xs sm:text-[13px] text-slate-700 font-light">
-                        <CheckCircle2 className="w-4 h-4 text-[#00A86B] shrink-0 mt-0.5" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="mt-8 pt-6 border-t border-slate-100">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-7 items-stretch">
+            {/* Package 1: Producer Company Inception */}
+            <div className="group bg-white rounded-[22px] border-[1.5px] border-slate-200/90 hover:border-[#00B074] p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-[0_16px_36px_rgba(0,176,116,0.14)] hover:-translate-y-1.5 transition-all duration-300 ease-out cursor-pointer relative">
+              <div>
+                <h3 className="text-[17px] sm:text-[18px] font-normal text-[#111827] group-hover:text-emerald-950 transition-colors">
+                  Producer Company - Inception
+                </h3>
+                <p className="text-[12.5px] font-light text-slate-500 mt-2 leading-relaxed">
+                  Fast-track incorporation for Farmer Producer Companies (FPO) on MCA SPICe+ with 5 DSCs and DINs...{" "}
                   <button
                     type="button"
-                    onClick={() => setIsContactOpen(true)}
-                    className={`w-full py-2.5 rounded-xl font-medium text-xs sm:text-sm transition-all cursor-pointer shadow-sm ${
-                      tier.popular
-                        ? "bg-gradient-to-r from-[#594CF5] to-[#D946EF] text-white hover:opacity-95"
-                        : "bg-slate-900 text-white hover:bg-slate-800"
-                    }`}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setExpandedCard(expandedCard === 1 ? null : 1);
+                    }}
+                    className="text-[#155EEF] font-normal hover:underline inline-flex items-center gap-0.5 cursor-pointer"
                   >
-                    Get Started with {tier.name}
+                    {expandedCard === 1 ? "Read less ⌃" : "Read more ⌵"}
+                  </button>
+                </p>
+                {expandedCard === 1 && (
+                  <p className="text-[12px] font-light text-slate-600 mt-2 bg-[#F8FAFC] p-3 rounded-lg border border-[#E4E7EC]">
+                    Includes RUN name approval, Class 3 DSC for 5 founding directors, DIN allotment for 5 directors, custom Agricultural MOA &amp; AOA drafting, Certificate of Incorporation (CIN), and PAN/TAN cards.
+                  </p>
+                )}
+
+                <div className="mt-5 mb-5">
+                  <div className="text-[26px] sm:text-[28px] font-normal text-[#111827] tracking-tight">
+                    ₹14,899
+                  </div>
+                  <p className="text-[11.5px] font-light text-slate-400 mt-0.5">+ GST | Govt. fee &amp; stamp duty extra</p>
+                </div>
+
+                <div className="pt-2">
+                  <p className="text-[12.5px] font-light text-slate-500 mb-3">What&apos;s included:</p>
+                  <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
+                    <li className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
+                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>MCA Name Reservation (RUN Portal)</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
+                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>Class 3 DSC for 5 Proposed Directors</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
+                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>DIN Allotment for 5 Directors</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
+                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>Agricultural MOA &amp; AOA Drafting (Part IXA)</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
+                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>Certificate of Incorporation (CIN) &amp; PAN/TAN</span>
+                    </li>
+                  </ul>
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setExpandedCard(expandedCard === 1 ? null : 1);
+                    }}
+                    className="text-[12px] font-normal text-[#00B074] hover:underline cursor-pointer mt-2 block"
+                  >
+                    +2 more
                   </button>
                 </div>
               </div>
-            ))}
+
+              <div className="mt-8 pt-2">
+                <button
+                  type="button"
+                  onClick={() => setIsContactOpen(true)}
+                  className="w-full py-2.5 px-4 rounded-xl font-medium text-[14.5px] text-[#00B074] bg-[#E8FAF2] group-hover:bg-[#00B074] group-hover:text-white hover:!bg-[#009B66] border border-[#00B074]/35 group-hover:border-[#00B074] transition-all duration-200 cursor-pointer shadow-xs group-hover:shadow-sm"
+                >
+                  Register Now
+                </button>
+              </div>
+            </div>
+
+            {/* Package 2: Incorporation + Subsidies (Recommended) */}
+            <div className="group bg-white rounded-[22px] border-[2px] border-[#00B074] p-6 sm:p-7 flex flex-col justify-between shadow-md hover:shadow-[0_20px_40px_rgba(0,176,116,0.18)] hover:-translate-y-1.5 transition-all duration-300 ease-out cursor-pointer relative">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#00B074] text-white text-[11px] font-medium tracking-wide uppercase px-3 py-0.5 rounded-full shadow-2xs">
+                Most Popular
+              </div>
+
+              <div>
+                <h3 className="text-[17px] sm:text-[18px] font-normal text-[#111827] group-hover:text-emerald-950 transition-colors">
+                  Incorporation &amp; Subsidies
+                </h3>
+                <p className="text-[12.5px] font-light text-slate-500 mt-2 leading-relaxed">
+                  Full incorporation bundled with Form INC-20A, SFAC Equity Grant application prep (up to ₹15 Lakhs), and Section 80PA advisory...{" "}
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setExpandedCard(expandedCard === 2 ? null : 2);
+                    }}
+                    className="text-[#155EEF] font-normal hover:underline inline-flex items-center gap-0.5 cursor-pointer"
+                  >
+                    {expandedCard === 2 ? "Read less ⌃" : "Read more ⌵"}
+                  </button>
+                </p>
+                {expandedCard === 2 && (
+                  <p className="text-[12px] font-light text-slate-600 mt-2 bg-[#F8FAFC] p-3 rounded-lg border border-[#E4E7EC]">
+                    Includes everything in Inception package plus Form INC-20A Commencement of Business filing, SFAC matching equity grant preparation (up to ₹15L), NABARD credit guarantee documentation, Section 80PA tax certifications, and dedicated Agri-CA manager.
+                  </p>
+                )}
+
+                <div className="mt-5 mb-5">
+                  <div className="text-[26px] sm:text-[28px] font-normal text-[#111827] tracking-tight">
+                    ₹29,899
+                  </div>
+                  <p className="text-[11.5px] font-light text-slate-400 mt-0.5">+ GST | Includes Grant Preparation</p>
+                </div>
+
+                <div className="pt-2">
+                  <p className="text-[12.5px] font-light text-slate-500 mb-3">What&apos;s included:</p>
+                  <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
+                    <li className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
+                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>Complete Producer Company Incorporation</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
+                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>Commencement of Business (Form INC-20A)</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
+                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>SFAC Matching Equity Grant Dossier (up to ₹15L)</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
+                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>NABARD Credit Guarantee Scheme Dossier</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
+                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>Dedicated Senior Agribusiness CA Advisory</span>
+                    </li>
+                  </ul>
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setExpandedCard(expandedCard === 2 ? null : 2);
+                    }}
+                    className="text-[12px] font-normal text-[#00B074] hover:underline cursor-pointer mt-2 block"
+                  >
+                    +3 more
+                  </button>
+                </div>
+              </div>
+
+              <div className="mt-8 pt-2">
+                <button
+                  type="button"
+                  onClick={() => setIsContactOpen(true)}
+                  className="w-full py-2.5 px-4 rounded-xl font-medium text-[14.5px] text-white bg-[#00B074] hover:bg-[#009B66] transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md"
+                >
+                  Register Now
+                </button>
+              </div>
+            </div>
+
+            {/* Package 3: FPO Enterprise & Annual Suite */}
+            <div className="group bg-white rounded-[22px] border-[1.5px] border-slate-200/90 hover:border-[#00B074] p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-[0_16px_36px_rgba(0,176,116,0.14)] hover:-translate-y-1.5 transition-all duration-300 ease-out cursor-pointer relative">
+              <div>
+                <h3 className="text-[17px] sm:text-[18px] font-normal text-[#111827] group-hover:text-emerald-950 transition-colors">
+                  FPO Enterprise &amp; Annual Suite
+                </h3>
+                <p className="text-[12.5px] font-light text-slate-500 mt-2 leading-relaxed">
+                  The complete enterprise suite: incorporation, subsidies, first AGM documentation, and full 1st-year statutory ROC &amp; audit filings...{" "}
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setExpandedCard(expandedCard === 3 ? null : 3);
+                    }}
+                    className="text-[#155EEF] font-normal hover:underline inline-flex items-center gap-0.5 cursor-pointer"
+                  >
+                    {expandedCard === 3 ? "Read less ⌃" : "Read more ⌵"}
+                  </button>
+                </p>
+                {expandedCard === 3 && (
+                  <p className="text-[12px] font-light text-slate-600 mt-2 bg-[#F8FAFC] p-3 rounded-lg border border-[#E4E7EC]">
+                    Complete compliance suite including incorporation, subsidies, Form MGT-7, Form AOC-4, statutory CA audit preparation, farmer share certificates for all members, and 1-year Merrafilings Ledgers cloud accounting software.
+                  </p>
+                )}
+
+                <div className="mt-5 mb-5">
+                  <div className="text-[26px] sm:text-[28px] font-normal text-[#111827] tracking-tight">
+                    ₹48,999
+                  </div>
+                  <p className="text-[11.5px] font-light text-slate-400 mt-0.5">+ GST | Full 1st Year Compliance</p>
+                </div>
+
+                <div className="pt-2">
+                  <p className="text-[12.5px] font-light text-slate-500 mb-3">What&apos;s included:</p>
+                  <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
+                    <li className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
+                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>Everything in Incorporation &amp; Subsidies</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
+                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>First Statutory AGM Organization &amp; Minutes</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
+                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>Annual Return (Form MGT-7) ROC Filing</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
+                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>Financial Statements (Form AOC-4) Filing</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
+                        <path d="M5 8.2l2 2 4-4.4" stroke="#00B074" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>Annual Corporate Income Tax Return (ITR-6)</span>
+                    </li>
+                  </ul>
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setExpandedCard(expandedCard === 3 ? null : 3);
+                    }}
+                    className="text-[12px] font-normal text-[#00B074] hover:underline cursor-pointer mt-2 block"
+                  >
+                    +3 more
+                  </button>
+                </div>
+              </div>
+
+              <div className="mt-8 pt-2">
+                <button
+                  type="button"
+                  onClick={() => setIsContactOpen(true)}
+                  className="w-full py-2.5 px-4 rounded-xl font-medium text-[14.5px] text-[#00B074] bg-[#E8FAF2] group-hover:bg-[#00B074] group-hover:text-white hover:!bg-[#009B66] border border-[#00B074]/35 group-hover:border-[#00B074] transition-all duration-200 cursor-pointer shadow-xs group-hover:shadow-sm"
+                >
+                  Register Now
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Deep-Dive Knowledge Sections with Interactive Navigation Tabs */}
-      <section className="py-12 sm:py-16 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Navigation Bar */}
-          <div className="flex items-center gap-2 overflow-x-auto pb-4 scrollbar-none border-b border-slate-200/80 mb-10">
-            {[
-              { id: "overview", label: "Overview & Features" },
-              { id: "objectives", label: "Statutory Objectives" },
-              { id: "eligibility", label: "Eligibility & Members" },
-              { id: "documents", label: "Documents Required" },
-              { id: "process", label: "Step-by-Step Incorporation" },
-              { id: "comparison", label: "Producer Co. vs Society vs Pvt Ltd" },
-              { id: "compliance", label: "Annual Compliance" },
-            ].map((tab) => (
-              <button
-                key={tab.id}
-                type="button"
-                onClick={() => setActiveTab(tab.id as any)}
-                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium whitespace-nowrap transition-all cursor-pointer ${
-                  activeTab === tab.id
-                    ? "bg-[#1F1646] text-white shadow-xs"
-                    : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
+      {/* Main Content & Sticky Sidebar Grid Section */}
+      <section id="overview-section" className="py-12 bg-[#FAF9F7]/50 border-t border-slate-100">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Breadcrumb Navigation */}
+          <nav className="flex items-center gap-2 text-[13px] font-light text-slate-500 mb-6 flex-wrap">
+            <a href="/" className="hover:text-[#155EEF] transition-colors">
+              Merrafilings
+            </a>
+            <span className="text-slate-300">/</span>
+            <a href="/startup" className="hover:text-[#155EEF] transition-colors">
+              Business Registration
+            </a>
+            <span className="text-slate-300">/</span>
+            <span className="text-[#00B074] font-normal">Producer Company (FPO)</span>
+          </nav>
 
-          {/* Tab 1: Overview */}
-          {activeTab === "overview" && (
-            <div className="space-y-10 animate-fade-in">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                <div className="lg:col-span-8 space-y-4">
-                  <h2 className="text-xl sm:text-2xl md:text-3xl font-normal text-[#12023B]">
-                    What is a Producer Company in India?
-                  </h2>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-light">
-                    A <strong>Producer Company</strong> is a specialized corporate vehicle governed by <strong>Part IXA (Sections 378A to 378ZU) of the Companies Act, 2013</strong>. It is designed to empower agricultural producers, small farmers, horticulturists, and rural artisans by integrating the mutual-benefit principles of a cooperative society with the statutory protection, transparency, and operational efficiency of a private limited company.
-                  </p>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-light">
-                    The concept was introduced based on the recommendations of the eminent Dr. Y.K. Alagh Committee to overcome the political interference and bureaucratic constraints of the Cooperative Societies Act. A Producer Company functions as a full-fledged corporate entity with <strong>perpetual succession, limited liability, national operating jurisdiction, and the ability to access institutional finance</strong> from NABARD, SFAC, and commercial banks.
-                  </p>
-                </div>
-                <div className="lg:col-span-4 bg-[#FAF9F7] p-6 rounded-2xl border border-slate-200/80 space-y-3">
-                  <h3 className="text-sm font-medium text-[#1F1646] flex items-center gap-2">
-                    <Wheat className="w-4 h-4 text-emerald-600" />
-                    <span>Producer Company Key Highlights</span>
-                  </h3>
-                  <ul className="space-y-2 text-xs font-light text-slate-600">
-                    <li className="flex justify-between border-b border-slate-200/60 pb-1.5">
-                      <span>Governing Law:</span>
-                      <strong className="text-slate-800">Companies Act 2013 (Part IXA)</strong>
-                    </li>
-                    <li className="flex justify-between border-b border-slate-200/60 pb-1.5">
-                      <span>Minimum Members:</span>
-                      <strong className="text-slate-800">10 Producers / 2 Institutions</strong>
-                    </li>
-                    <li className="flex justify-between border-b border-slate-200/60 pb-1.5">
-                      <span>Minimum Directors:</span>
-                      <strong className="text-slate-800">5 Directors (Max 15)</strong>
-                    </li>
-                    <li className="flex justify-between border-b border-slate-200/60 pb-1.5">
-                      <span>Tax Exemption:</span>
-                      <strong className="text-[#00A86B] font-semibold">100% u/s 80PA (upto ₹100Cr)</strong>
-                    </li>
-                    <li className="flex justify-between">
-                      <span>SFAC Equity Grant:</span>
-                      <strong className="text-slate-800">Up to ₹15 Lakhs matching</strong>
-                    </li>
-                  </ul>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+            {/* Left Column: Comprehensive Guide Content (8 cols) */}
+            <div className="lg:col-span-8 bg-white p-6 sm:p-8 md:p-10 rounded-2xl border border-slate-200/80 shadow-2xs space-y-10">
+              {/* Section 1: Overview */}
+              <div>
+                <h1 className="text-2xl sm:text-[26px] md:text-[28px] font-normal text-[#1F1646] text-center mb-6 leading-snug">
+                  Producer Company Registration Online in India
+                </h1>
+                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-3">
+                  A <strong className="font-medium text-slate-800">Producer Company</strong> (commonly known as a Farmer Producer Organisation or FPO) is an innovative legal corporate structure introduced under Part IXA of the <strong className="font-medium text-slate-800">Companies Act</strong>. It empowers agriculturalists, milk producers, artisans, and rural entrepreneurs to pool their resources, achieve economies of scale, and access institutional markets without losing democratic autonomy.
+                </p>
+                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+                  Unlike traditional cooperative societies plagued by bureaucratic hurdles and political interference, a Producer Company operates under modern corporate law. It provides <strong className="font-medium text-slate-800">limited liability protection</strong>, nationwide business freedom, Section 80PA 100% tax benefits, and access to SFAC equity grants. At <a href="/" className="text-[#00B074] hover:underline font-normal">Merrafilings</a>, our agribusiness legal advisors guide your founding committee through every statutory requirement.
+                </p>
+              </div>
+
+              {/* Section 2: Key Benefits & Government Subsidies */}
+              <div className="border-t border-slate-100 pt-6">
+                <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
+                  Key Benefits &amp; Government Subsidies for Producer Companies
+                </h2>
+                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  The Government of India and state agencies have introduced high-impact financial incentives exclusively for registered Producer Companies:
+                </p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[12.5px] font-light text-slate-700">
+                  <div className="p-3.5 rounded-xl border border-slate-200/80 bg-[#FAF9F7]/70">
+                    <strong className="font-medium text-slate-900 block mb-1">
+                      100% Tax Exemption (Sec 80PA)
+                    </strong>
+                    Enjoy 100% tax deduction on corporate profits from agricultural produce marketing and input supplies for FPOs having turnover up to ₹100 Crores.
+                  </div>
+                  <div className="p-3.5 rounded-xl border border-slate-200/80 bg-[#FAF9F7]/70">
+                    <strong className="font-medium text-slate-900 block mb-1">
+                      SFAC Matching Equity Grant
+                    </strong>
+                    Receive matching equity grants up to ₹15 Lakhs from SFAC to strengthen paid-up capital without any dilution of farmer voting rights.
+                  </div>
+                  <div className="p-3.5 rounded-xl border border-slate-200/80 bg-[#FAF9F7]/70">
+                    <strong className="font-medium text-slate-900 block mb-1">
+                      NABARD Credit Guarantees
+                    </strong>
+                    Access collateral-free bank loans with up to 85% credit guarantee cover under the Credit Guarantee Fund Trust for FPOs.
+                  </div>
+                  <div className="p-3.5 rounded-xl border border-slate-200/80 bg-[#FAF9F7]/70">
+                    <strong className="font-medium text-slate-900 block mb-1">
+                      Democratic Governance
+                    </strong>
+                    Maintains 'One Member, One Vote' democracy, ensuring smallholders and marginal farmers retain equal control regardless of share size.
+                  </div>
                 </div>
               </div>
 
-              {/* 6 Key Benefits Cards */}
-              <div>
-                <h3 className="text-lg sm:text-xl font-medium text-[#12023B] mb-5">
-                  Core Advantages of a Producer Company (FPO/FPC)
-                </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {/* Section 3: Minimum Requirements Table */}
+              <div className="border-t border-slate-100 pt-6">
+                <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
+                  Statutory Minimum Requirements for Producer Company Incorporation
+                </h2>
+                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  To qualify for incorporation on the Central MCA portal under Part IXA, the promoter group must meet these criteria:
+                </p>
+
+                <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-4">
+                  <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                    <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
+                      <tr>
+                        <th className="py-3 px-4 font-normal">Requirement</th>
+                        <th className="py-3 px-4 font-normal text-[#00A86B]">Statutory Minimum Criteria</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-100">
+                      {PRODUCER_MIN_REQUIREMENTS_TABLE.map((row, idx) => (
+                        <tr
+                          key={idx}
+                          className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default"
+                        >
+                          <td className="relative py-3 px-4 font-normal text-slate-800 group-hover:text-slate-900">
+                            <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                            {row.requirement}
+                          </td>
+                          <td className="py-3 px-4 text-slate-600">{row.criteria}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              {/* Section 4: Eligibility Criteria */}
+              <div className="border-t border-slate-100 pt-6">
+                <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
+                  Eligibility Criteria for Farmer Members &amp; Directors
+                </h2>
+                <div className="space-y-3 text-[13px] font-light text-slate-600">
+                  <div className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-emerald-100 text-[#00A86B] flex items-center justify-center shrink-0 mt-0.5 text-xs font-semibold">
+                      ✓
+                    </div>
+                    <div>
+                      <strong className="font-normal text-slate-800">Primary Producer Qualification:</strong> Every shareholder must be an active primary producer producing crops, vegetables, milk, timber, handloom, or fisheries.
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-emerald-100 text-[#00A86B] flex items-center justify-center shrink-0 mt-0.5 text-xs font-semibold">
+                      ✓
+                    </div>
+                    <div>
+                      <strong className="font-normal text-slate-800">Director Board Composition:</strong> At least 5 directors must be appointed from among the primary producer members. Directors must hold active DINs and Class 3 DSCs.
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-emerald-100 text-[#00A86B] flex items-center justify-center shrink-0 mt-0.5 text-xs font-semibold">
+                      ✓
+                    </div>
+                    <div>
+                      <strong className="font-normal text-slate-800">Institutional Membership:</strong> Producer institutions (cooperative societies, self-help groups, societies) can become members or jointly promote the company.
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-emerald-100 text-[#00A86B] flex items-center justify-center shrink-0 mt-0.5 text-xs font-semibold">
+                      ✓
+                    </div>
+                    <div>
+                      <strong className="font-normal text-slate-800">Expert / Nominee Directors:</strong> The board may co-opt up to 1/5th of total directors as expert directors or agricultural specialists without voting rights.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Section 5: Documents Required */}
+              <div id="documents-section" className="border-t border-slate-100 pt-6">
+                <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
+                  Documents Required for Producer Company Registration
+                </h2>
+                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  We assist in collating and verifying farmer records to ensure frictionless approval from the Registrar of Companies:
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {/* For Members & Directors */}
+                  <div className="p-4 rounded-xl border border-slate-200/90 bg-[#FAF9F7]/60">
+                    <h3 className="font-medium text-slate-800 text-[13.5px] mb-2.5 flex items-center gap-2">
+                      <Users className="w-4 h-4 text-[#6B4BFF]" />
+                      <span>For 10+ Members &amp; 5 Directors</span>
+                    </h3>
+                    <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
+                      <li className="flex items-center gap-2">
+                        <Check className="w-3.5 h-3.5 text-[#00B074] shrink-0" />
+                        <span>Self-attested PAN Card of all members and directors</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Check className="w-3.5 h-3.5 text-[#00B074] shrink-0" />
+                        <span>Aadhaar Card or Voter ID / Passport for identity</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Check className="w-3.5 h-3.5 text-[#00B074] shrink-0" />
+                        <span>Agricultural Land Document (7/12, Khasra, Khatauni, Patta)</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Check className="w-3.5 h-3.5 text-[#00B074] shrink-0" />
+                        <span>Recent bank account statement (&lt; 2 months old)</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* For Registered Office */}
+                  <div className="p-4 rounded-xl border border-slate-200/90 bg-[#FAF9F7]/60">
+                    <h3 className="font-medium text-slate-800 text-[13.5px] mb-2.5 flex items-center gap-2">
+                      <Building className="w-4 h-4 text-[#00A86B]" />
+                      <span>For Registered Office in India</span>
+                    </h3>
+                    <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
+                      <li className="flex items-center gap-2">
+                        <Check className="w-3.5 h-3.5 text-[#00B074] shrink-0" />
+                        <span>Electricity, water, or telephone bill (&lt; 2 months old)</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Check className="w-3.5 h-3.5 text-[#00B074] shrink-0" />
+                        <span>No Objection Certificate (NOC) from property owner</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Check className="w-3.5 h-3.5 text-[#00B074] shrink-0" />
+                        <span>Rent agreement (if premises are leased)</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Check className="w-3.5 h-3.5 text-[#00B074] shrink-0" />
+                        <span>Rural or agricultural premises are completely valid</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Section 6: Step-by-Step Incorporation Process */}
+              <div className="border-t border-slate-100 pt-6">
+                <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
+                  Step-by-Step Producer Company Incorporation Process
+                </h2>
+                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-5">
+                  Our structured process ensures seamless registration on the Ministry of Corporate Affairs (MCA) portal:
+                </p>
+
+                <div className="space-y-3.5">
                   {[
                     {
-                      icon: <BadgePercent className="w-5 h-5 text-emerald-600" />,
-                      title: "100% Tax Exemption (Sec 80PA)",
-                      desc: "Eligible Producer Companies enjoy a complete 100% corporate tax deduction on agricultural profits for annual turnovers up to ₹100 Crores.",
+                      step: "Step 1",
+                      title: "Digital Signatures & Producer Verification",
+                      desc: "We generate Class 3 DSCs for all 5 directors and collate Revenue Land Records (7/12, Khasra) proving primary producer status for all 10+ founding shareholders.",
                     },
                     {
-                      icon: <Landmark className="w-5 h-5 text-purple-600" />,
-                      title: "SFAC & NABARD Equity Grants",
-                      desc: "Eligible for matching equity grants of up to ₹15 Lakhs per FPO from SFAC and credit guarantee cover of up to ₹2 Crores without collateral.",
+                      step: "Step 2",
+                      title: "Name Reservation (RUN Portal)",
+                      desc: "We file name options reflecting your agricultural mandate on the MCA RUN portal. The name must end with the mandatory suffix 'Producer Company Limited'.",
                     },
                     {
-                      icon: <ShieldCheck className="w-5 h-5 text-blue-600" />,
-                      title: "Limited Liability for Members",
-                      desc: "Farmer members are protected with limited liability. Personal agricultural land and assets cannot be attached for company business liabilities.",
+                      step: "Step 3",
+                      title: "Drafting Agricultural MOA & AOA",
+                      desc: "Our corporate lawyers draft customized Memorandum & Articles of Association incorporating Part IXA statutory clauses, voting rights, and patronage bonus rules.",
                     },
                     {
-                      icon: <Scale className="w-5 h-5 text-amber-600" />,
-                      title: "Democratic Member Governance",
-                      desc: "Operates strictly on the 'one member, one vote' cooperative principle, preventing hostile corporate takeovers by outside wealthy investors.",
+                      step: "Step 4",
+                      title: "SPICe+ Part B Filing & Certificate Issuance",
+                      desc: "We submit the SPICe+ Part B form to the Central Registration Centre (CRC). The Registrar issues the Certificate of Incorporation (CIN), PAN, and TAN.",
                     },
-                    {
-                      icon: <TrendingUp className="w-5 h-5 text-rose-600" />,
-                      title: "Enhanced Market Bargaining Power",
-                      desc: "Bulk purchasing of quality seeds and fertilizers lowers input costs by 20-30%, while collective grading and marketing ensures higher crop realization.",
-                    },
-                    {
-                      icon: <Globe2 className="w-5 h-5 text-indigo-600" />,
-                      title: "National & Global Market Access",
-                      desc: "Can trade across Indian state borders, establish direct corporate supply contracts with retail conglomerates, and export agri-produce internationally.",
-                    },
-                  ].map((card, i) => (
-                    <div key={i} className="p-5 rounded-2xl bg-[#FAF9F7]/70 border border-slate-200/60 hover:bg-white hover:shadow-md transition-all">
-                      <div className="w-10 h-10 rounded-xl bg-white shadow-xs flex items-center justify-center mb-3">
-                        {card.icon}
+                  ].map((st, idx) => (
+                    <div
+                      key={idx}
+                      className="p-4 rounded-xl border border-slate-200/80 bg-white hover:border-[#00B074] transition-all flex items-start gap-4"
+                    >
+                      <span className="px-2.5 py-1 rounded-md bg-[#E8FAF2] text-[#00B074] text-xs font-semibold shrink-0">
+                        {st.step}
+                      </span>
+                      <div>
+                        <h4 className="font-medium text-slate-800 text-[13.5px] mb-1">{st.title}</h4>
+                        <p className="text-[12.5px] font-light text-slate-600 leading-relaxed">{st.desc}</p>
                       </div>
-                      <h4 className="text-[15px] font-medium text-slate-900">{card.title}</h4>
-                      <p className="text-xs font-light text-slate-600 mt-1.5 leading-relaxed">{card.desc}</p>
                     </div>
                   ))}
                 </div>
               </div>
-            </div>
-          )}
 
-          {/* Tab 2: Objectives */}
-          {activeTab === "objectives" && (
-            <div className="space-y-8 animate-fade-in">
-              <div>
-                <h2 className="text-xl sm:text-2xl font-normal text-[#12023B]">
-                  Statutory Objectives of a Producer Company
+              {/* Section 7: Comparison Table - Producer Company vs Cooperative vs Private Ltd */}
+              <div className="border-t border-slate-100 pt-6">
+                <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
+                  Comparison: Producer Company vs. Cooperative Society vs. Private Ltd
                 </h2>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1 font-light leading-relaxed">
-                  Under Section 378B of the Companies Act, the Memorandum of Association (MOA) of a Producer Company must specify one or more of the following permitted statutory objectives:
+                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  Understand why Farmer Producer Companies have superseded traditional cooperatives across modern agricultural clusters:
                 </p>
+
+                <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs">
+                  <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                    <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
+                      <tr>
+                        <th className="py-3 px-4 font-normal">Parameter</th>
+                        <th className="py-3 px-4 font-normal text-[#00A86B]">Producer Company (FPO)</th>
+                        <th className="py-3 px-4 font-normal">Cooperative Society</th>
+                        <th className="py-3 px-4 font-normal">Private Limited Company</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-100">
+                      {PRODUCER_COMPARISON_TABLE.map((row, idx) => (
+                        <tr
+                          key={idx}
+                          className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default"
+                        >
+                          <td className="relative py-3 px-4 font-normal text-slate-800 group-hover:text-slate-900">
+                            <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                            {row.parameter}
+                          </td>
+                          <td className="py-3 px-4 font-medium text-[#00A86B]">{row.producer}</td>
+                          <td className="py-3 px-4 text-slate-600">{row.cooperative}</td>
+                          <td className="py-3 px-4 text-slate-600">{row.pvtLtd}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                {[
-                  {
-                    num: "1",
-                    title: "Production & Harvesting Activities",
-                    desc: "Production, harvesting, procurement, grading, pooling, handling, marketing, selling, and export of the primary produce of the members or import of goods or services for their benefit.",
-                  },
-                  {
-                    num: "2",
-                    title: "Processing & Value Addition",
-                    desc: "Processing including preserving, drying, distilling, brewing, venting, canning, packaging, and cold-storage of produce of its members to secure maximum value addition.",
-                  },
-                  {
-                    num: "3",
-                    title: "Manufacture & Supply of Farming Inputs",
-                    desc: "Manufacturing, sale, or supply of machinery, equipment, agricultural implements, certified seeds, fertilizers, organic pesticides, and animal fodder to member producers.",
-                  },
-                  {
-                    num: "4",
-                    title: "Education, Technical Advice & Training",
-                    desc: "Providing education on the mutual assistance principles to members and others, training in modern agronomic techniques, drip irrigation, organic farming, and farm mechanization.",
-                  },
-                  {
-                    num: "5",
-                    title: "Consultancy, Insurance & Testing Services",
-                    desc: "Rendering technical services, consultancy services, soil testing, lab certification, and insurance of primary produce, livestock, and member agricultural machinery.",
-                  },
-                  {
-                    num: "6",
-                    title: "Power Generation & Land Water Resource Management",
-                    desc: "Generation, transmission, and distribution of power, revitalization of land and water resources, their use, conservation, and communications relatable to primary produce.",
-                  },
-                ].map((item, idx) => (
-                  <div key={idx} className="p-6 rounded-2xl bg-[#FAF9F7] border border-slate-200/70 space-y-2">
-                    <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold flex items-center justify-center">
-                      {item.num}
-                    </span>
-                    <h3 className="text-base font-medium text-slate-900 pt-1">{item.title}</h3>
-                    <p className="text-xs font-light text-slate-600 leading-relaxed">{item.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Tab 3: Eligibility */}
-          {activeTab === "eligibility" && (
-            <div className="space-y-8 animate-fade-in">
-              <div>
-                <h2 className="text-xl sm:text-2xl font-normal text-[#12023B]">
-                  Eligibility Criteria for Registering a Producer Company
+              {/* Section 8: Mandatory Annual Compliances */}
+              <div className="border-t border-slate-100 pt-6">
+                <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
+                  Mandatory Compliances for Producer Companies
                 </h2>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1 font-light leading-relaxed">
-                  Members must fulfill the statutory legal definitions under Section 378C to form a Producer Company:
+                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  To safeguard company standing, protect director eligibility, and maintain Section 80PA benefits, these statutory deadlines must be honoured:
                 </p>
+
+                <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-5">
+                  <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                    <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
+                      <tr>
+                        <th className="py-3 px-4 font-normal">Statutory Compliance</th>
+                        <th className="py-3 px-4 font-normal">Form / Filing</th>
+                        <th className="py-3 px-4 font-normal">Prescribed Due Date</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-100">
+                      <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
+                        <td className="relative py-3 px-4 font-normal text-slate-800">
+                          <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                          Annual General Meeting (AGM)
+                        </td>
+                        <td className="py-3 px-4 text-slate-600">Member Meeting</td>
+                        <td className="py-3 px-4 text-slate-600">Within 90 days from financial year close</td>
+                      </tr>
+                      <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
+                        <td className="relative py-3 px-4 font-normal text-slate-800">
+                          <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                          Financial Statements Filing
+                        </td>
+                        <td className="py-3 px-4 text-slate-600">Form AOC-4</td>
+                        <td className="py-3 px-4 text-slate-600">Within 30 days of Annual General Meeting</td>
+                      </tr>
+                      <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
+                        <td className="relative py-3 px-4 font-normal text-slate-800">
+                          <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                          Annual Return of Company
+                        </td>
+                        <td className="py-3 px-4 text-slate-600">Form MGT-7</td>
+                        <td className="py-3 px-4 text-slate-600">Within 60 days of Annual General Meeting</td>
+                      </tr>
+                      <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
+                        <td className="relative py-3 px-4 font-normal text-slate-800">
+                          <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                          Corporate Income Tax Return
+                        </td>
+                        <td className="py-3 px-4 text-slate-600">ITR-6</td>
+                        <td className="py-3 px-4 text-slate-600">31st October every financial year</td>
+                      </tr>
+                      <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
+                        <td className="relative py-3 px-4 font-normal text-slate-800">
+                          <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#00A86B] opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none" />
+                          Director KYC Verification
+                        </td>
+                        <td className="py-3 px-4 text-slate-600">Form DIR-3 KYC</td>
+                        <td className="py-3 px-4 text-slate-600">On or before 30th September annually</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="p-6 rounded-2xl bg-[#FAF9F7] border border-slate-200/70 space-y-4">
-                  <h3 className="text-base font-medium text-slate-900 flex items-center gap-2">
-                    <Users className="w-4 h-4 text-[#6B4BFF]" />
-                    <span>Member &amp; Founder Requirements</span>
-                  </h3>
-                  <ul className="space-y-3 text-xs sm:text-[13px] font-light text-slate-700">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#00A86B] shrink-0 mt-0.5" />
-                      <span><strong>Minimum 10 Individuals:</strong> At least 10 individuals, each being a primary agricultural producer (farmer, dairy owner, artisan).</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#00A86B] shrink-0 mt-0.5" />
-                      <span><strong>OR 2 Producer Institutions:</strong> Two or more registered cooperative institutions or entities composed of primary producers.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#00A86B] shrink-0 mt-0.5" />
-                      <span><strong>Producer Status Proof:</strong> Every individual subscriber must produce proof of engaging in primary agriculture (Land 7/12 extract or Tehsildar certificate).</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#00A86B] shrink-0 mt-0.5" />
-                      <span><strong>Age Requirement:</strong> All individual members must be natural persons who have attained 18 years of age.</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="p-6 rounded-2xl bg-[#FAF9F7] border border-slate-200/70 space-y-4">
-                  <h3 className="text-base font-medium text-slate-900 flex items-center gap-2">
-                    <Building className="w-4 h-4 text-[#6B4BFF]" />
-                    <span>Director &amp; Board Requirements</span>
-                  </h3>
-                  <ul className="space-y-3 text-xs sm:text-[13px] font-light text-slate-700">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#00A86B] shrink-0 mt-0.5" />
-                      <span><strong>Minimum 5 Directors:</strong> At least 5 directors must be nominated on the initial board (maximum allowable is 15 directors).</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#00A86B] shrink-0 mt-0.5" />
-                      <span><strong>Resident Director:</strong> At least one director must have resided in India for not less than 182 days during the financial year.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#00A86B] shrink-0 mt-0.5" />
-                      <span><strong>DSC &amp; DIN:</strong> All 5 initial directors must obtain Class-3 Digital Signatures and Director Identification Numbers (arranged by Merrafilings).</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#00A86B] shrink-0 mt-0.5" />
-                      <span><strong>Name Mandate:</strong> The proposed name must strictly conclude with the words <em>"Producer Company Limited"</em>.</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Tab 4: Documents Required */}
-          {activeTab === "documents" && (
-            <div id="documents-required" className="space-y-8 animate-fade-in scroll-mt-24">
-              <div>
-                <h2 className="text-xl sm:text-2xl font-normal text-[#12023B]">
-                  Documents Required for Producer Company Registration
+              {/* Section 9: Why Choose Merrafilings */}
+              <div className="border-t border-slate-100 pt-6">
+                <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
+                  Why Choose Merrafilings for Producer Company Incorporation?
                 </h2>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1 font-light leading-relaxed">
-                  All documents can be submitted digitally as clear scans to our compliance portal:
+                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  Merrafilings is India&apos;s foremost agribusiness corporate platform, empowering thousands of farmer producer organizations:
                 </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs space-y-4">
-                  <div className="flex items-center gap-2.5 text-[#12023B] font-medium text-base">
-                    <FileCheck className="w-5 h-5 text-[#6B4BFF]" />
-                    <span>1. Member &amp; Director KYC Documents</span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[13px] font-light text-slate-700">
+                  <div className="flex items-center gap-2">
+                    <span className="text-[#00A86B] font-bold">✓</span>
+                    <span>Dedicated Agribusiness CA, CS &amp; Legal Specialists</span>
                   </div>
-                  <ul className="space-y-2.5 text-xs sm:text-[13px] font-light text-slate-700">
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#6B4BFF]" />
-                      <span><strong>PAN Card:</strong> Self-attested PAN copies for all 10+ members and 5 directors.</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#6B4BFF]" />
-                      <span><strong>Identity Proof:</strong> Self-attested copy of Aadhaar Card, Voter ID, or Passport.</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#6B4BFF]" />
-                      <span><strong>Address Proof:</strong> Bank passbook statement, Electricity bill, or Phone bill (less than 2 months old).</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#6B4BFF]" />
-                      <span><strong>Farmer Certificate / Land Document:</strong> 7/12 extract, Patta copy, or Gram Panchayat Pradhan verification.</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#6B4BFF]" />
-                      <span><strong>Passport Photos:</strong> Recent passport-sized color photos of all proposed directors.</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs space-y-4">
-                  <div className="flex items-center gap-2.5 text-[#12023B] font-medium text-base">
-                    <Building className="w-5 h-5 text-[#6B4BFF]" />
-                    <span>2. Registered Office &amp; Incorporation Proof</span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[#00A86B] font-bold">✓</span>
+                    <span>End-to-End SFAC Matching Equity Grant Filing Support</span>
                   </div>
-                  <ul className="space-y-2.5 text-xs sm:text-[13px] font-light text-slate-700">
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#6B4BFF]" />
-                      <span><strong>Utility Proof:</strong> Electricity bill, Property tax receipt, or Water bill of the registered office premises.</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#6B4BFF]" />
-                      <span><strong>NOC from Landlord:</strong> Signed No-Objection Certificate from the property owner.</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#6B4BFF]" />
-                      <span><strong>Rent Agreement:</strong> Valid registered or notarized rent agreement if the premises are rented.</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#6B4BFF]" />
-                      <span><strong>DIR-2 Consent:</strong> Formal signed consent from 5 proposed directors to act in that capacity.</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#6B4BFF]" />
-                      <span><strong>INC-9 Declaration:</strong> Affidavit &amp; declaration of non-conviction by all subscribers.</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Tab 5: Step-by-Step Process */}
-          {activeTab === "process" && (
-            <div className="space-y-8 animate-fade-in">
-              <div>
-                <h2 className="text-xl sm:text-2xl font-normal text-[#12023B]">
-                  Step-by-Step Incorporation Process for Producer Company
-                </h2>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1 font-light leading-relaxed">
-                  How Merrafilings incorporates your Producer Company through the MCA SPICe+ portal:
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                {[
-                  {
-                    step: "01",
-                    title: "DSC & DIN Generation",
-                    desc: "We process Class-3 Digital Signature Certificates (DSC) with USB tokens for all 5 initial directors and generate their Director Identification Numbers.",
-                  },
-                  {
-                    step: "02",
-                    title: "SPICe+ Part A Name Reservation",
-                    desc: "We submit two proposed names via MCA RUN/SPICe+ Part A ensuring the name reflects agricultural activities and ends with 'Producer Company Limited'.",
-                  },
-                  {
-                    step: "03",
-                    title: "MOA & AOA Drafting",
-                    desc: "Our legal advocates draft your specialized agricultural Memorandum & Articles of Association strictly incorporating mutual-benefit provisions under Section 378B.",
-                  },
-                  {
-                    step: "04",
-                    title: "SPICe+ Part B MCA Submission",
-                    desc: "We file SPICe+ Part B along with AGILE-PRO-S (EPFO, ESIC, Professional Tax, Bank Account) and all agricultural verification proofs.",
-                  },
-                  {
-                    step: "05",
-                    title: "ROC Scrutiny & Incorporation",
-                    desc: "The Registrar of Companies (ROC) reviews the agricultural credentials and issues the Certificate of Incorporation (CIN).",
-                  },
-                  {
-                    step: "06",
-                    title: "PAN, TAN & FPO Scheme Setup",
-                    desc: "We deliver the entity PAN, TAN, and Certificate of Incorporation, and assist with corporate bank opening and SFAC/NABARD scheme onboarding.",
-                  },
-                ].map((item, idx) => (
-                  <div key={idx} className="p-6 rounded-2xl bg-[#FAF9F7] border border-slate-200/70 relative space-y-2">
-                    <span className="text-xs font-mono font-bold text-[#6B4BFF] bg-purple-100/70 px-2 py-0.5 rounded">
-                      STEP {item.step}
-                    </span>
-                    <h3 className="text-base font-medium text-slate-900 pt-1">{item.title}</h3>
-                    <p className="text-xs font-light text-slate-600 leading-relaxed">{item.desc}</p>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[#00A86B] font-bold">✓</span>
+                    <span>NABARD Credit Guarantee Documentation Assistance</span>
                   </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Tab 6: Comparison Table */}
-          {activeTab === "comparison" && (
-            <div className="space-y-8 animate-fade-in">
-              <div>
-                <h2 className="text-xl sm:text-2xl font-normal text-[#12023B]">
-                  Comparison: Producer Company vs Cooperative Society vs Private Limited
-                </h2>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1 font-light leading-relaxed">
-                  Understand why modern farming groups and agritech founders prefer the Producer Company structure:
-                </p>
-              </div>
-
-              <div className="overflow-x-auto rounded-2xl border border-slate-200/80 shadow-xs bg-white">
-                <table className="w-full text-left text-xs sm:text-[13px] border-collapse min-w-[650px]">
-                  <thead>
-                    <tr className="bg-[#FAF9F7] border-b border-slate-200 text-slate-900 font-medium">
-                      <th className="p-3.5 sm:p-4">Parameter</th>
-                      <th className="p-3.5 sm:p-4 text-[#6B4BFF] font-semibold">Producer Company</th>
-                      <th className="p-3.5 sm:p-4">Cooperative Society</th>
-                      <th className="p-3.5 sm:p-4">Private Limited Company</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-100 font-light text-slate-700">
-                    <tr>
-                      <td className="p-3.5 sm:p-4 font-normal text-slate-900">Governing Act</td>
-                      <td className="p-3.5 sm:p-4 text-[#6B4BFF] font-medium">Companies Act, 2013 (Part IXA)</td>
-                      <td className="p-3.5 sm:p-4">State Cooperative Societies Act</td>
-                      <td className="p-3.5 sm:p-4">Companies Act, 2013</td>
-                    </tr>
-                    <tr>
-                      <td className="p-3.5 sm:p-4 font-normal text-slate-900">Government Interference</td>
-                      <td className="p-3.5 sm:p-4 text-[#00A86B] font-medium">Nil (Operates as corporate body)</td>
-                      <td className="p-3.5 sm:p-4 text-rose-600">High (State Registrar controls)</td>
-                      <td className="p-3.5 sm:p-4 text-[#00A86B]">Nil (Autonomous directors)</td>
-                    </tr>
-                    <tr>
-                      <td className="p-3.5 sm:p-4 font-normal text-slate-900">Geographic Jurisdiction</td>
-                      <td className="p-3.5 sm:p-4 text-[#00A86B] font-medium">All India &amp; Global Exports</td>
-                      <td className="p-3.5 sm:p-4 text-amber-700">Usually restricted to single state</td>
-                      <td className="p-3.5 sm:p-4 text-[#00A86B]">All India &amp; Global Exports</td>
-                    </tr>
-                    <tr>
-                      <td className="p-3.5 sm:p-4 font-normal text-slate-900">Voting Power</td>
-                      <td className="p-3.5 sm:p-4 text-[#6B4BFF] font-medium">One Member, One Vote (Democratic)</td>
-                      <td className="p-3.5 sm:p-4">One Member, One Vote</td>
-                      <td className="p-3.5 sm:p-4">Proportionate to Shares held</td>
-                    </tr>
-                    <tr>
-                      <td className="p-3.5 sm:p-4 font-normal text-slate-900">Tax Benefit (Sec 80PA)</td>
-                      <td className="p-3.5 sm:p-4 text-[#00A86B] font-semibold">100% Tax Exemption available</td>
-                      <td className="p-3.5 sm:p-4 text-amber-700">Limited Section 80P benefits</td>
-                      <td className="p-3.5 sm:p-4 text-rose-600">Standard Corporate Tax (22%-25%)</td>
-                    </tr>
-                    <tr>
-                      <td className="p-3.5 sm:p-4 font-normal text-slate-900">Institutional Grant (SFAC)</td>
-                      <td className="p-3.5 sm:p-4 text-[#00A86B] font-semibold">Eligible up to ₹15 Lakhs Grant</td>
-                      <td className="p-3.5 sm:p-4">Eligible under select schemes</td>
-                      <td className="p-3.5 sm:p-4 text-rose-600">Not eligible for FPO Grants</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          )}
-
-          {/* Tab 7: Annual Compliance */}
-          {activeTab === "compliance" && (
-            <div className="space-y-8 animate-fade-in">
-              <div>
-                <h2 className="text-xl sm:text-2xl font-normal text-[#12023B]">
-                  Mandatory Annual Compliances for a Producer Company
-                </h2>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1 font-light leading-relaxed">
-                  Producer Companies are subject to corporate compliance under the MCA. Merrafilings ensures timely filing to protect your company's good standing:
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="p-6 rounded-2xl bg-[#FAF9F7] border border-slate-200/70 space-y-3">
-                  <div className="w-10 h-10 rounded-xl bg-purple-100 flex items-center justify-center text-[#6B4BFF]">
-                    <Clock className="w-5 h-5" />
-                  </div>
-                  <h3 className="text-base font-medium text-slate-900">Annual General Meeting (AGM)</h3>
-                  <p className="text-xs font-light text-slate-600 leading-relaxed">
-                    Must be convened within 90 days from the close of the financial year. The annual audited accounts, board report, and patronage bonus are adopted.
-                  </p>
-                  <div className="pt-2">
-                    <span className="text-[11px] font-mono text-[#6B4BFF] bg-white px-2 py-1 rounded border border-purple-200">
-                      Due: Within 90 days of FY close
-                    </span>
-                  </div>
-                </div>
-
-                <div className="p-6 rounded-2xl bg-[#FAF9F7] border border-slate-200/70 space-y-3">
-                  <div className="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-[#00A86B]">
-                    <FileText className="w-5 h-5" />
-                  </div>
-                  <h3 className="text-base font-medium text-slate-900">ROC Forms MGT-7 &amp; AOC-4</h3>
-                  <p className="text-xs font-light text-slate-600 leading-relaxed">
-                    Filing of Annual Return (MGT-7) within 60 days of AGM and Financial Statements (AOC-4) with auditor's report within 30 days of AGM.
-                  </p>
-                  <div className="pt-2">
-                    <span className="text-[11px] font-mono text-[#00A86B] bg-white px-2 py-1 rounded border border-emerald-200">
-                      Due: Post-AGM ROC filing
-                    </span>
-                  </div>
-                </div>
-
-                <div className="p-6 rounded-2xl bg-[#FAF9F7] border border-slate-200/70 space-y-3">
-                  <div className="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center text-blue-600">
-                    <Receipt className="w-5 h-5" />
-                  </div>
-                  <h3 className="text-base font-medium text-slate-900">Income Tax Return (ITR-6)</h3>
-                  <p className="text-xs font-light text-slate-600 leading-relaxed">
-                    Mandatory corporate tax return filing with claim for Section 80PA agricultural profit deductions accompanied by tax audit report Form 3CA/3CD.
-                  </p>
-                  <div className="pt-2">
-                    <span className="text-[11px] font-mono text-blue-600 bg-white px-2 py-1 rounded border border-blue-200">
-                      Due: September 30th
-                    </span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[#00A86B] font-bold">✓</span>
+                    <span>Transparent Pricing with zero surprise charges</span>
                   </div>
                 </div>
               </div>
             </div>
-          )}
-        </div>
-      </section>
 
-      {/* Frequently Asked Questions Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-[#FAF9F7]/70 border-t border-slate-100">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl font-normal text-[#12023B]">
-              Frequently Asked Questions on Producer Companies
-            </h2>
-            <p className="text-xs sm:text-sm font-light text-slate-500 mt-2">
-              Common questions answered about FPO registration, subsidies, tax exemptions, and members.
-            </p>
-          </div>
-
-          <div className="space-y-3">
-            {FAQS.map((faq, idx) => (
+            {/* Right Sticky Sidebar (4 cols) */}
+            <div className="lg:col-span-4 space-y-6 lg:sticky lg:top-24">
+              {/* Consult Experts Card with 3 Avatars */}
               <div
-                key={idx}
-                className="bg-white rounded-2xl border border-slate-200/70 overflow-hidden transition-all shadow-xs"
+                onClick={() => setIsContactOpen(true)}
+                className="bg-white rounded-2xl border border-slate-200/80 shadow-2xs hover:shadow-xs p-4 flex items-center justify-between transition-all cursor-pointer group"
               >
-                <button
-                  type="button"
-                  onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="w-full flex items-center justify-between p-4 sm:p-5 text-left text-xs sm:text-sm font-medium text-slate-900 hover:text-[#6B4BFF] transition-colors cursor-pointer gap-4"
-                >
-                  <span>{faq.q}</span>
-                  <ChevronDown
-                    className={`w-4 h-4 text-slate-400 shrink-0 transition-transform duration-200 ${
-                      openFaq === idx ? "rotate-180 text-[#6B4BFF]" : ""
-                    }`}
-                  />
-                </button>
-                {openFaq === idx && (
-                  <div className="px-4 pb-4 sm:px-5 sm:pb-5 text-xs sm:text-[13.5px] font-light text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
-                    {faq.a}
+                <div className="flex items-center gap-3">
+                  <div className="flex -space-x-2 overflow-hidden">
+                    <img
+                      className="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover"
+                      src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=faces"
+                      alt="Expert 1"
+                    />
+                    <img
+                      className="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover"
+                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=faces"
+                      alt="Expert 2"
+                    />
+                    <img
+                      className="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover"
+                      src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=faces"
+                      alt="Expert 3"
+                    />
+                  </div>
+                  <span className="text-[14px] font-normal text-slate-800">
+                    Consult <span className="text-[#155EEF] font-normal">Experts</span>
+                  </span>
+                </div>
+                <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-[#155EEF] transition-colors" />
+              </div>
+
+              {/* Related Guides Card */}
+              <div className="bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden border-t-2 border-t-emerald-400">
+                <div className="p-5">
+                  <h4 className="font-normal text-[14px] text-slate-800 mb-4">Related Guides</h4>
+                  <ul className="space-y-3.5 text-[12.5px] font-light text-slate-700">
+                    {[
+                      "Understanding Farmer Producer Company (FPO) Structure",
+                      "How to Apply for SFAC Matching Equity Grant up to ₹15 Lakhs",
+                      "Section 80PA 100% Tax Exemption for Producer Companies",
+                      "Key Differences Between FPO and Cooperative Society",
+                      "NABARD Credit Guarantee Scheme for Farmer Producer Companies",
+                      "Primary Producer Proof: Khasra, 7/12 & Revenue Land Records",
+                    ].map((guide, idx) => (
+                      <li key={idx} className="border-b border-slate-100 pb-3 last:border-0 last:pb-0">
+                        <a
+                          href="#overview-section"
+                          className="flex items-start gap-2.5 text-slate-600 hover:text-[#155EEF] transition-colors group"
+                        >
+                          <span className="text-slate-400 group-hover:text-[#155EEF] shrink-0 text-[13px] leading-tight">→</span>
+                          <span className="line-clamp-2 leading-snug">{guide}</span>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              {/* Producer Company by State Directory */}
+              <div className="bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden border-t-2 border-t-emerald-400">
+                <div className="p-4 border-b border-slate-100 flex items-center justify-between">
+                  <span className="font-normal text-[14px] text-slate-800">Producer Company by State</span>
+                  <button
+                    type="button"
+                    onClick={() => setStateListOpen(!stateListOpen)}
+                    className="p-1 text-slate-400 hover:text-slate-700 cursor-pointer"
+                  >
+                    {stateListOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                  </button>
+                </div>
+                {stateListOpen && (
+                  <div className="max-h-[380px] overflow-y-auto p-4 space-y-1.5 text-[12.5px] font-light">
+                    {INDIAN_STATES.slice(0, 18).map((st, idx) => (
+                      <a
+                        key={idx}
+                        href="#overview-section"
+                        className="flex items-center justify-between py-1.5 px-2 text-[#00B074] hover:text-emerald-700 hover:bg-emerald-50/50 rounded-lg transition-colors border-b border-slate-50 last:border-0"
+                      >
+                        <span>Producer Company in {st}</span>
+                        <span className="text-slate-300 text-[11px]">→</span>
+                      </a>
+                    ))}
                   </div>
                 )}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <Footer />
+      {/* Frequently Asked Questions Section (Matching exact Merrafilings 2-column reference design) */}
+      <section className="py-14 sm:py-18 bg-white border-t border-[#E4E7EC]">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Top Green Accent Dash */}
+          <div className="w-10 h-[3px] bg-[#00A86B] mb-3.5 rounded-full" />
+
+          {/* Section Header */}
+          <h2 className="text-2xl sm:text-[28px] md:text-[32px] font-normal text-slate-900 tracking-tight leading-snug">
+            Frequently asked questions
+          </h2>
+          <p className="text-[13px] sm:text-[13.5px] font-light text-slate-500 mt-1.5 mb-8">
+            Common questions about Farmer Producer Company Incorporation Starting at ₹14,899 in India.
+          </p>
+
+          {/* 2-Column FAQ Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+            {/* Column 1 */}
+            <div className="space-y-3.5">
+              {(showMoreFaqs ? [...FAQ_COL_1, ...FAQ_EXTRA_COL_1] : FAQ_COL_1).map((faq, idx) => {
+                const faqId = `c1-${idx}`;
+                const isOpen = openFaq === faqId;
+                return (
+                  <div
+                    key={idx}
+                    onClick={() => setOpenFaq(isOpen ? null : faqId)}
+                    className={`bg-white rounded-xl border transition-all duration-200 cursor-pointer overflow-hidden group ${
+                      isOpen
+                        ? "border-[#00B074] shadow-xs"
+                        : "border-slate-200/90 hover:border-[#00B074] hover:shadow-2xs"
+                    }`}
+                  >
+                    <div className="py-4 px-5 flex items-center justify-between gap-4">
+                      <span className="font-normal text-[13.5px] sm:text-[14px] text-slate-800 leading-snug group-hover:text-slate-900">
+                        {faq.q}
+                      </span>
+                      <ChevronDown
+                        className={`w-4 h-4 shrink-0 transition-transform duration-200 ${
+                          isOpen ? "rotate-180 text-[#00B074]" : "text-slate-400 group-hover:text-slate-600"
+                        }`}
+                      />
+                    </div>
+                    {isOpen && (
+                      <div className="px-5 pb-4.5 pt-1 text-[13px] font-light text-slate-600 leading-relaxed border-t border-slate-100">
+                        {faq.a}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Column 2 */}
+            <div className="space-y-3.5">
+              {(showMoreFaqs ? [...FAQ_COL_2, ...FAQ_EXTRA_COL_2] : FAQ_COL_2).map((faq, idx) => {
+                const faqId = `c2-${idx}`;
+                const isOpen = openFaq === faqId;
+                return (
+                  <div
+                    key={idx}
+                    onClick={() => setOpenFaq(isOpen ? null : faqId)}
+                    className={`bg-white rounded-xl border transition-all duration-200 cursor-pointer overflow-hidden group ${
+                      isOpen
+                        ? "border-[#00B074] shadow-xs"
+                        : "border-slate-200/90 hover:border-[#00B074] hover:shadow-2xs"
+                    }`}
+                  >
+                    <div className="py-4 px-5 flex items-center justify-between gap-4">
+                      <span className="font-normal text-[13.5px] sm:text-[14px] text-slate-800 leading-snug group-hover:text-slate-900">
+                        {faq.q}
+                      </span>
+                      <ChevronDown
+                        className={`w-4 h-4 shrink-0 transition-transform duration-200 ${
+                          isOpen ? "rotate-180 text-[#00B074]" : "text-slate-400 group-hover:text-slate-600"
+                        }`}
+                      />
+                    </div>
+                    {isOpen && (
+                      <div className="px-5 pb-4.5 pt-1 text-[13px] font-light text-slate-600 leading-relaxed border-t border-slate-100">
+                        {faq.a}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Load more questions button */}
+          <div className="text-center mt-9 mb-14">
+            <button
+              type="button"
+              onClick={() => setShowMoreFaqs(!showMoreFaqs)}
+              className="px-6 py-2.5 rounded-lg bg-[#00A86B] hover:bg-[#00925d] text-white text-[13.5px] font-medium transition-colors shadow-xs cursor-pointer inline-flex items-center gap-1.5"
+            >
+              <span>{showMoreFaqs ? "Show less questions" : "Load more questions"}</span>
+            </button>
+          </div>
+
+          {/* Related Services - Business Registration Card */}
+          <div className="bg-white rounded-2xl border border-slate-200/90 shadow-2xs p-5 sm:p-6 mb-6">
+            <h3 className="font-normal text-[15px] sm:text-[16px] text-slate-800 mb-4">
+              Related Services - Business Registration
+            </h3>
+            <div className="flex flex-wrap gap-2 sm:gap-2.5">
+              {RELATED_SERVICES_TAGS.map((tag, idx) => (
+                <a
+                  key={idx}
+                  href="#pricing"
+                  className="inline-flex items-center px-3.5 py-1.5 rounded-lg border border-slate-200/90 bg-white text-[12px] sm:text-[12.5px] font-light text-slate-600 hover:text-[#00A86B] hover:border-[#00A86B] transition-all shadow-3xs hover:shadow-2xs cursor-pointer"
+                >
+                  {tag}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Popular Searches Card */}
+          <div className="bg-white rounded-2xl border border-slate-200/90 shadow-2xs p-5 sm:p-6 mb-6">
+            <h3 className="font-normal text-[15px] sm:text-[16px] text-slate-800 mb-4">
+              Popular Searches
+            </h3>
+            <div className="flex flex-wrap gap-2 sm:gap-2.5">
+              {POPULAR_SEARCHES_TAGS.map((tag, idx) => (
+                <a
+                  key={idx}
+                  href="#pricing"
+                  className="inline-flex items-center px-3.5 py-1.5 rounded-lg border border-slate-200/90 bg-white text-[12px] sm:text-[12.5px] font-light text-slate-600 hover:text-[#00A86B] hover:border-[#00A86B] transition-all shadow-3xs hover:shadow-2xs cursor-pointer"
+                >
+                  {tag}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Floating Live Chat Button */}
       <div className="fixed bottom-6 right-6 z-40">
@@ -1328,6 +1669,9 @@ export default function ProducerCompanyRegistrationPage() {
         onClose={() => setIsSearchOpen(false)}
         onSelectService={() => setIsContactOpen(true)}
       />
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
