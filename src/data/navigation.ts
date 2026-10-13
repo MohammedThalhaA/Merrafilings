@@ -60,7 +60,7 @@ export const NAV_CATEGORIES: NavCategory[] = [
       columns: [
         // Column 1 from Screenshot 2
         [
-          { title: "Startup India", href: "#startup-india" },
+          { title: "Startup India", href: "/start-up-india" },
           { title: "Trade License", href: "#trade-license" },
           { title: "FSSAI Registration", href: "#fssai-reg" },
           { title: "FSSAI License", href: "#fssai-lic" },
@@ -70,7 +70,7 @@ export const NAV_CATEGORIES: NavCategory[] = [
         ],
         // Column 2 from Screenshot 2
         [
-          { title: "Legal Entity Identifier Code", href: "#lei" },
+          { title: "Legal Entity Identifier Code", href: "/lei-code" },
           { title: "ISO Registration", href: "#iso" },
           { title: "PF Registration", href: "#pf" },
           { title: "ESI Registration", href: "#esi" },

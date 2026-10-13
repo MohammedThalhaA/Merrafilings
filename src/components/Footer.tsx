@@ -23,11 +23,12 @@ export default function Footer() {
     {
       title: "Government Licenses",
       links: [
+        { name: "Startup India DPIIT", href: "/start-up-india" },
+        { name: "LEI Code Registration", href: "/lei-code" },
         { name: "GST Registration", href: "#gst-reg" },
         { name: "Udyam / MSME Registration", href: "#msme" },
         { name: "FSSAI Food License", href: "#fssai" },
         { name: "Import Export Code (IEC)", href: "#iec" },
-        { name: "Startup India DPIIT", href: "#startup-india" },
         { name: "Shop & Establishment", href: "#shop" },
         { name: "Professional Tax (PT)", href: "#pt" },
       ],
