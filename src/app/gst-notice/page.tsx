@@ -153,24 +153,28 @@ const FAQ_COL_2 = [
 
 const RELATED_GUIDES = [
   {
-    title: "Understanding Your GST Tax Notice: Complete Compliance Guide",
-    href: "/gst-notice",
+    title: "GST Notice Received? Don't Panic. Here's What You Should Do",
+    href: "/gst-notice/gst-notice-received-guide",
   },
   {
-    title: "GST Return Filing by Accountants: Form GSTR-1, 3B & Reconciliation",
-    href: "/gst-return-filing",
+    title: "Understanding GST Tax Notice: A Guide to Compliance",
+    href: "/gst-notice/understanding-gst-tax-notice-a-compliance-guide",
+  },
+  {
+    title: "How to Avoid GST Tax Notice: Essential Tips",
+    href: "/gst-notice/avoiding-gst-tax-notices-essential-tips",
+  },
+  {
+    title: "Tax Notice Consultation: Expert Guidance",
+    href: "/gst-notice/tax-notice-consultation",
+  },
+  {
+    title: "How to Reply to a GST Notice Online: Step-by-Step Guide",
+    href: "/gst-notice/reply-to-a-gst-notice-online-stepbystep-guide",
   },
   {
     title: "GST Annual Return Filing (GSTR-9 & GSTR-9C) Complete Guide",
     href: "/gst-annual-return",
-  },
-  {
-    title: "GST Registration Online: Step-by-Step Procedure & Documentation",
-    href: "/gst-registration",
-  },
-  {
-    title: "GST Letter of Undertaking (LUT) Filing for Zero-Rated Exports",
-    href: "/gst-lut",
   },
   {
     title: "GST Registration for Foreigners & Non-Resident Taxable Persons",
