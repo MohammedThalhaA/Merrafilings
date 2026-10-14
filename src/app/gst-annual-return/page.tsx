@@ -152,24 +152,28 @@ const FAQ_COL_2 = [
 
 const RELATED_GUIDES = [
   {
-    title: "GST Annual Return Filing (GSTR-9 & GSTR-9C) Complete Guide",
-    href: "/gst-annual-return",
+    title: "GST Annual Return Filing GSTR-9 in 2026: A Comprehensive Guide",
+    href: "/gst-annual-return/gstr9-filing-guide-gst-annual-returns-2026",
   },
   {
-    title: "GST Return Filing by Accountants: Form GSTR-1, 3B & Reconciliation",
-    href: "/gst-return-filing",
+    title: "Why Timely Monthly GST Return Filing is Essential for Business Success",
+    href: "/gst-annual-return/importance-of-timely-monthly-gst-filing",
+  },
+  {
+    title: "Annual Return (GSTR-9) Filing: Comprehensive Guide",
+    href: "/gst-annual-return/annual-return-gstr9-filing-guide",
+  },
+  {
+    title: "Understanding GST Annual Return Filing: A Comprehensive Guide",
+    href: "/gst-annual-return/efficient-gst-annual-return-filing-guide",
+  },
+  {
+    title: "Understanding GSTR-9 Annual Return: Your Go-To Guide",
+    href: "/gst-annual-return/guide-to-gstr9-annual-return-your-essential-handbook",
   },
   {
     title: "GST Notice Reply & Legal Response Solutions in India",
     href: "/gst-notice",
-  },
-  {
-    title: "GST Registration Online: Step-by-Step Procedure & Documentation",
-    href: "/gst-registration",
-  },
-  {
-    title: "GST Letter of Undertaking (LUT) Filing for Zero-Rated Exports",
-    href: "/gst-lut",
   },
   {
     title: "GST Registration for Foreigners & Non-Resident Taxable Persons",
