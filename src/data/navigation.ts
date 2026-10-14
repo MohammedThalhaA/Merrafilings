@@ -85,13 +85,22 @@ export const NAV_CATEGORIES: NavCategory[] = [
     label: "Trademark",
     hasDropdown: true,
     columnLayout: {
-      columnsCount: 1,
-      width: "w-[280px]",
+      columnsCount: 2,
+      width: "w-[500px]",
       columns: [
+        // Core Trademark Filings
         [
           { title: "Trademark Registration", href: "/trademark-registration" },
           { title: "Trademark Objection", href: "/trademark-objection" },
           { title: "Trademark Renewal", href: "/trademark-renewal" },
+          { title: "Trademark Certificate", href: "#tm-certificate" },
+        ],
+        // IP & Brand Defense
+        [
+          { title: "Copyright Registration", href: "#copyright-registration" },
+          { title: "Patent Registration", href: "#patent-registration" },
+          { title: "Trademark Opposition", href: "#tm-opposition" },
+          { title: "Design Registration", href: "#design-registration" },
         ],
       ],
     },

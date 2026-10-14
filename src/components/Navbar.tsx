@@ -130,7 +130,7 @@ export default function Navbar({ onOpenSearch, onOpenContact }: NavbarProps) {
                           : cat.id === "registrations"
                           ? "left-[-40px]"
                           : cat.id === "trademark"
-                          ? "left-0"
+                          ? "left-[-40px]"
                           : cat.id === "gst"
                           ? "left-[-80px]"
                           : cat.id === "income-tax"
@@ -172,8 +172,8 @@ export default function Navbar({ onOpenSearch, onOpenContact }: NavbarProps) {
                           </div>
 
                           {/* Advisory Helper Banner at Bottom of Mega Menu */}
-                          <div className="mt-5 pt-3.5 border-t border-slate-100 flex items-center justify-between text-[12px] text-slate-500">
-                            <span className="flex items-center gap-1.5">
+                          <div className="mt-5 pt-3.5 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2 text-[12px] text-slate-600">
+                            <span className="flex items-center gap-1.5 shrink-0">
                               <ShieldCheck className="w-4 h-4 text-emerald-600" />
                               Govt. Certified Filing Platform
                             </span>
@@ -182,7 +182,7 @@ export default function Navbar({ onOpenSearch, onOpenContact }: NavbarProps) {
                                 setActiveDropdown(null);
                                 onOpenContact();
                               }}
-                              className="text-[#155EEF] hover:underline font-semibold flex items-center gap-1 cursor-pointer"
+                              className="text-[#155EEF] hover:underline font-semibold flex items-center gap-1 cursor-pointer shrink-0"
                             >
                               Talk to Expert Advisor &rarr;
                             </button>
