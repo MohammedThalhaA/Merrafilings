@@ -98,9 +98,9 @@ export const NAV_CATEGORIES: NavCategory[] = [
         // IP & Brand Defense
         [
           { title: "Copyright Registration", href: "/copyright-registration" },
-          { title: "Patent Registration", href: "#patent-registration" },
-          { title: "Trademark Opposition", href: "#tm-opposition" },
-          { title: "Design Registration", href: "#design-registration" },
+          { title: "Patent Registration", href: "/patent-registration" },
+          { title: "Trademark Opposition", href: "/trademark-opposition" },
+          { title: "Design Registration", href: "/design-registration" },
         ],
       ],
     },

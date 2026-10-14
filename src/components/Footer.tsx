@@ -54,12 +54,12 @@ export default function Footer() {
       links: [
         { name: "Trademark Registration", href: "/trademark-registration" },
         { name: "Trademark Objection Reply", href: "/trademark-objection" },
+        { name: "Trademark Opposition", href: "/trademark-opposition" },
         { name: "Trademark Renewal", href: "/trademark-renewal" },
         { name: "Trademark Certificate", href: "/trademark-registration-certificate" },
         { name: "Copyright Registration", href: "/copyright-registration" },
-        { name: "Design Registration", href: "#design" },
-        { name: "Provisional Patent", href: "#patent" },
-        { name: "Trademark Watch Service", href: "#tm-watch" },
+        { name: "Patent Registration", href: "/patent-registration" },
+        { name: "Design Registration", href: "/design-registration" },
       ],
     },
     {
