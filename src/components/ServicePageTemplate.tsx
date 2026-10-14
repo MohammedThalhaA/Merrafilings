@@ -39,6 +39,7 @@ import {
   Layers,
   AlertTriangle,
   FileSpreadsheet,
+  Landmark,
 } from "lucide-react";
 
 export interface SpotlightCardItem {
@@ -937,7 +938,181 @@ export function getServiceSpotlightData(breadcrumbCurrent: string, badgeText?: s
     };
   }
 
-  // 11. General Fallback
+  // 11. Udyam / MSME Registration
+  if (b.includes("udyam") || b.includes("msme")) {
+    return {
+      mandatoryTag: "MINISTRY OF MSME STATUTORY RECOGNITION",
+      mandatoryTitle: "Why Udyam (MSME) Registration is Vital for Business Growth",
+      mandatorySubtitle: "Official statutory registration with the Ministry of MSME unlocking priority credit lending, collateral-free loans, 45-day payment security, and government subsidies.",
+      dashboardMetric1: { label: "Certificate SLA", value: "1 - 2 Days" },
+      dashboardMetric2: { label: "Validity", value: "Lifetime Free" },
+      dashboardSteps: [
+        "Aadhaar & PAN Verification with NIC Code Mapping",
+        "National Udyam Portal Application Lodgement",
+        "Permanent Udyam Registration Certificate Issuance"
+      ],
+      mandatoryItems: [
+        {
+          icon: <Landmark className="w-5 h-5" />,
+          iconBg: "bg-emerald-50",
+          iconColor: "text-emerald-600",
+          hoverBorder: "hover:border-emerald-500",
+          title: "Priority Lending & Cheaper Loans",
+          desc: "Access collateral-free bank loans under CGTMSE and 1-2% interest rate subventions from scheduled banks."
+        },
+        {
+          icon: <ShieldCheck className="w-5 h-5" />,
+          iconBg: "bg-blue-50",
+          iconColor: "text-blue-600",
+          hoverBorder: "hover:border-blue-500",
+          title: "45-Day Payment Protection",
+          desc: "Under MSME Act Section 15 and IT Act Section 43B(h), buyers must clear dues within 45 days or face compounding interest."
+        },
+        {
+          icon: <BadgePercent className="w-5 h-5" />,
+          iconBg: "bg-purple-50",
+          iconColor: "text-purple-600",
+          hoverBorder: "hover:border-purple-500",
+          title: "50% Patent & Trademark Subsidies",
+          desc: "Enjoy 50% statutory fee concessions on trademark filings and up to 80% subsidies on government patent processing."
+        },
+        {
+          icon: <Award className="w-5 h-5" />,
+          iconBg: "bg-amber-50",
+          iconColor: "text-amber-600",
+          hoverBorder: "hover:border-amber-500",
+          title: "GeM Portal & Tender Waivers",
+          desc: "Exemption from Earnest Money Deposits (EMD) and tender fees in public procurement and GeM tenders."
+        }
+      ],
+      chooseTag: "THE MERRAFILINGS ADVANTAGE",
+      chooseTitle: "Why Choose Merrafilings for Udyam Registration?",
+      chooseSubtitle: "Merrafilings has empowered over 50,000+ micro, small, and medium enterprises to secure Udyam certification with zero hassles.",
+      chooseItems: [
+        {
+          icon: <FileText className="w-5 h-5" />,
+          iconBg: "bg-blue-50",
+          iconColor: "text-blue-600",
+          hoverBorder: "hover:border-blue-500",
+          title: "Accurate 5-Digit NIC Mapping",
+          desc: "Our regulatory specialists map up to 10 NIC activity codes to maximize eligibility across government schemes."
+        },
+        {
+          icon: <ShieldCheck className="w-5 h-5" />,
+          iconBg: "bg-emerald-50",
+          iconColor: "text-emerald-600",
+          hoverBorder: "hover:border-emerald-500",
+          title: "100% Error-Free Lodgement",
+          desc: "Flawless validation of GST, PAN, and investment parameters to ensure zero rejection or portal discrepancy flags."
+        },
+        {
+          icon: <TrendingUp className="w-5 h-5" />,
+          iconBg: "bg-purple-50",
+          iconColor: "text-purple-600",
+          hoverBorder: "hover:border-purple-500",
+          title: "GeM & TReDS Onboarding Support",
+          desc: "Seamless post-registration guidance for listing on the Government e-Marketplace and TReDS bill discounting platforms."
+        },
+        {
+          icon: <Clock className="w-5 h-5" />,
+          iconBg: "bg-amber-50",
+          iconColor: "text-amber-600",
+          hoverBorder: "hover:border-amber-500",
+          title: "Lifetime Certificate Locker",
+          desc: "Access your digital QR-coded Udyam certificate 24/7 with automated alerts for annual investment/turnover updates."
+        }
+      ]
+    };
+  }
+
+  // 12. Legal Name Change / Gazette
+  if (b.includes("name") || b.includes("gazette")) {
+    return {
+      mandatoryTag: "OFFICIAL GOVERNMENT GAZETTE PUBLICATION",
+      mandatoryTitle: "Why Formal Legal Name Change is Crucial in India",
+      mandatorySubtitle: "Statutory 3-step legal procedure required to update official identity records across Passport, PAN, Aadhaar, educational certificates, and banking credentials.",
+      dashboardMetric1: { label: "Central Gazette SLA", value: "3 - 4 Weeks" },
+      dashboardMetric2: { label: "Legal Standing", value: "100% Pan-India" },
+      dashboardSteps: [
+        "Notarized Name Change Affidavit Drafting",
+        "National Newspaper Advertisement Publication (English + Vernacular)",
+        "Official Central Government Gazette Notification & Delivery"
+      ],
+      mandatoryItems: [
+        {
+          icon: <FileText className="w-5 h-5" />,
+          iconBg: "bg-emerald-50",
+          iconColor: "text-emerald-600",
+          hoverBorder: "hover:border-emerald-500",
+          title: "Legally Binding Notarized Affidavit",
+          desc: "First mandatory step executed on non-judicial stamp paper stating old name, new name, and valid legal reason."
+        },
+        {
+          icon: <Globe2 className="w-5 h-5" />,
+          iconBg: "bg-blue-50",
+          iconColor: "text-blue-600",
+          hoverBorder: "hover:border-blue-500",
+          title: "Mandatory for Passport & Visa Reissue",
+          desc: "MEA and passport seva kendras strictly mandate Central Gazette publication for major name changes and adult identity updates."
+        },
+        {
+          icon: <CheckCircle2 className="w-5 h-5" />,
+          iconBg: "bg-purple-50",
+          iconColor: "text-purple-600",
+          hoverBorder: "hover:border-purple-500",
+          title: "Clean PAN & Aadhaar KYC Sync",
+          desc: "Eliminates name mismatch errors across banks, EPFO, mutual funds, property titles, and income tax records."
+        },
+        {
+          icon: <Scale className="w-5 h-5" />,
+          iconBg: "bg-amber-50",
+          iconColor: "text-amber-600",
+          hoverBorder: "hover:border-amber-500",
+          title: "Central Gazette Pan-India Recognition",
+          desc: "Published in the official Gazette of India (Department of Publication), serving as conclusive government legal proof."
+        }
+      ],
+      chooseTag: "THE MERRAFILINGS ADVANTAGE",
+      chooseTitle: "Why Choose Merrafilings for Legal Name Change?",
+      chooseSubtitle: "Merrafilings manages complete end-to-end name change procedures for individuals, married women, minors, and NRIs across all states.",
+      chooseItems: [
+        {
+          icon: <Award className="w-5 h-5" />,
+          iconBg: "bg-blue-50",
+          iconColor: "text-blue-600",
+          hoverBorder: "hover:border-blue-500",
+          title: "Legally Vetted Affidavit Drafting",
+          desc: "Customized legal affidavit tailored to your specific reason (marriage, divorce, spelling error, numerology, religion)."
+        },
+        {
+          icon: <Receipt className="w-5 h-5" />,
+          iconBg: "bg-emerald-50",
+          iconColor: "text-emerald-600",
+          hoverBorder: "hover:border-emerald-500",
+          title: "National Newspaper Ad Publication",
+          desc: "We coordinate statutory ad releases in leading English and state vernacular newspapers without you visiting press offices."
+        },
+        {
+          icon: <Building className="w-5 h-5" />,
+          iconBg: "bg-purple-50",
+          iconColor: "text-purple-600",
+          hoverBorder: "hover:border-purple-500",
+          title: "Direct Central Gazette Liaison",
+          desc: "Complete documentation submission and fee lodgement with the Department of Publication (Civil Lines, Delhi)."
+        },
+        {
+          icon: <Users className="w-5 h-5" />,
+          iconBg: "bg-amber-50",
+          iconColor: "text-amber-600",
+          hoverBorder: "hover:border-amber-500",
+          title: "Post-Gazette KYC Update Support",
+          desc: "Step-by-step guidance to update your new legal name across Aadhaar, PAN, Passport, driving license, and bank accounts."
+        }
+      ]
+    };
+  }
+
+  // 13. General Fallback
   return {
     mandatoryTag: "STATUTORY CORPORATE MANDATE",
     mandatoryTitle: `Why ${breadcrumbCurrent} is Essential for Your Business`,

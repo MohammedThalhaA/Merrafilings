@@ -74,8 +74,8 @@ export const NAV_CATEGORIES: NavCategory[] = [
         [
           { title: "Digital Signature", href: "/digital-signature" },
           { title: "Shop Act Registration", href: "/shop-establishment-act-registration" },
-          { title: "Udyam Registration", href: "#udyam" },
-          { title: "Legal Name Change", href: "#name-change" },
+          { title: "Udyam Registration", href: "/udyam-registration" },
+          { title: "Legal Name Change", href: "/name-change" },
         ],
       ],
     },
