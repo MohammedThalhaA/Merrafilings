@@ -414,28 +414,24 @@ const FAQ_COL_2 = [
 
 const RELATED_GUIDES = [
   {
-    title: "Online GST Return Filing by Accountants: Complete Guide",
-    href: "/gst-return-filing",
+    title: "Understanding the LUT Certificate for GST Compliance",
+    href: "/gst-lut/gst-lut-certificate-for-exporters-essential-guide",
   },
   {
-    title: "GST Registration Online: Process, Eligibility & Documents",
-    href: "/gst-registration",
+    title: "Understanding the GST LUT Form: An Essential Guide for Exporters",
+    href: "/gst-lut/understanding-the-gst-lut-form-a-guide-for-exporters",
   },
   {
-    title: "Import Export Code (IEC) Registration Online",
-    href: "/rcmc-registration",
+    title: "GST LUT Filing in 5 Steps: The Complete Exporter Guide",
+    href: "/gst-lut/gst-lut-filing-a-simple-5step-guide",
   },
   {
-    title: "Private Limited Company Registration Online",
-    href: "/company-registration",
+    title: "Introduction to the GST LUT Process",
+    href: "/gst-lut/introduction-to-the-gst-lut-process",
   },
   {
-    title: "Trademark Registration Online in India",
-    href: "/trademark-registration",
-  },
-  {
-    title: "Patent Registration in India: Comprehensive Guide",
-    href: "/patent-registration",
+    title: "Understanding GST LUT Form: A Comprehensive Guide",
+    href: "/gst-lut/understanding-the-gst-lut-form-key-insights",
   },
 ];
 
