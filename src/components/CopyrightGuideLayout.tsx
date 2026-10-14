@@ -16,9 +16,7 @@ import {
   Search,
   MessageCircle,
   ChevronRight,
-  Scale,
   ShieldCheck,
-  BookOpen,
 } from "lucide-react";
 
 export interface CopyrightGuideItem {
@@ -102,213 +100,221 @@ export default function CopyrightGuideLayout({
   };
 
   return (
-    <div className="min-h-screen bg-[#FBFBFC] text-slate-900 font-sans antialiased flex flex-col justify-between">
-      {/* 1. Navbar */}
-      <Navbar
-        onOpenSearch={() => setSearchOpen(true)}
-        onOpenContact={() => openContact("Copyright Advisory")}
-      />
+    <div className="min-h-screen bg-[#FDFBF9] text-[#111827] flex flex-col font-sans selection:bg-purple-100 selection:text-purple-900">
+      <Navbar onOpenSearch={() => setSearchOpen(true)} onOpenContact={() => openContact()} />
 
-      {/* Main Content Area */}
-      <main className="flex-1 pt-24 sm:pt-28 pb-16">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Breadcrumb Navigation */}
-          <nav className="flex items-center gap-2 text-xs sm:text-[13px] text-slate-500 mb-6 flex-wrap">
-            <Link href="/" className="hover:text-[#155EEF] transition-colors">
-              Home
-            </Link>
-            <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
-            <Link
-              href="/copyright-registration"
-              className="hover:text-[#155EEF] transition-colors"
-            >
-              Copyright Registration
-            </Link>
-            <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
-            <span className="text-slate-800 font-medium truncate max-w-[280px] sm:max-w-md">
+      {/* Main Container */}
+      <main className="flex-1 w-full max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
+        {/* Breadcrumb Navigation */}
+        <nav aria-label="Breadcrumb" className="mb-6">
+          <ol className="flex items-center gap-2 text-[12.5px] font-normal text-slate-700 flex-wrap">
+            <li>
+              <Link href="/" className="hover:text-[#155EEF] transition-colors">
+                Home
+              </Link>
+            </li>
+            <li className="text-slate-300">/</li>
+            <li>
+              <Link
+                href="/copyright-registration"
+                className="hover:text-[#155EEF] transition-colors font-medium text-slate-800"
+              >
+                Copyright Registration
+              </Link>
+            </li>
+            <li className="text-slate-300">/</li>
+            <li className="text-[#00B074] font-normal line-clamp-1 max-w-[320px] sm:max-w-none">
               {breadcrumbLabel || title}
-            </span>
-          </nav>
+            </li>
+          </ol>
+        </nav>
 
-          {/* 2-Column Responsive Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            {/* Left Column: Comprehensive Guide Content (8 cols) */}
-            <article className="lg:col-span-8 bg-white rounded-3xl border border-slate-200/90 shadow-xs p-6 sm:p-10 md:p-12 relative overflow-hidden">
-              {/* Subtle Decorative Gradient Bar */}
-              <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#594CF5] via-[#7B4CF5] to-[#D946EF]" />
-
-              {/* Header Details */}
-              <div className="border-b border-slate-100 pb-6 mb-8">
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-50 border border-purple-200/80 text-[11.5px] font-medium text-purple-800 mb-4">
-                  <BookOpen className="w-3.5 h-3.5 text-purple-600" />
-                  <span>Statutory Copyright Practice Guide</span>
+        {/* 2-Column Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+          {/* Left Column: Article Body */}
+          <article className="lg:col-span-8 bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-sm p-6 sm:p-10 lg:p-12">
+            {/* Meta Header */}
+            <div className="flex items-center gap-3 sm:gap-4 pb-6 border-b border-slate-100 flex-wrap text-xs text-slate-600">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-purple-600 to-indigo-600 text-white flex items-center justify-center font-semibold text-xs shadow-xs">
+                  <User className="w-4 h-4" />
                 </div>
-                <h1 className="text-2xl sm:text-3xl md:text-[34px] font-normal text-[#1F1646] leading-tight tracking-tight">
-                  {title}
-                </h1>
-
-                {/* Metadata Row */}
-                <div className="flex flex-wrap items-center gap-4 sm:gap-6 mt-5 text-xs text-slate-500">
-                  <div className="flex items-center gap-1.5">
-                    <User className="w-3.5 h-3.5 text-slate-400" />
-                    <span>{authorName}</span>
-                  </div>
-                  <div className="flex items-center gap-1.5">
-                    <Calendar className="w-3.5 h-3.5 text-slate-400" />
-                    <span>{metaPublishedDate}</span>
-                  </div>
-                  <div className="flex items-center gap-1.5">
-                    <Clock className="w-3.5 h-3.5 text-slate-400" />
-                    <span>{readingTime}</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Guide Content Body */}
-              <div className="space-y-8 text-slate-800 text-[14.5px] sm:text-[15px] leading-relaxed">
-                {children}
-              </div>
-
-              {/* Bottom Article Signoff / Help CTA */}
-              <div className="mt-12 pt-8 border-t border-slate-100 bg-gradient-to-br from-purple-50/60 to-slate-50 p-6 sm:p-8 rounded-2xl border border-purple-100/80">
-                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                  <div>
-                    <h3 className="text-base sm:text-lg font-semibold text-slate-950">
-                      Need Assistance with Copyright Registration?
-                    </h3>
-                    <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-1 leading-relaxed">
-                      Consult with our registered Intellectual Property Advocates for classification, source code formatting, and government filing.
-                    </p>
-                  </div>
-                  <button
-                    onClick={() => openContact(`Inquiry: ${title}`)}
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-medium text-xs sm:text-sm text-white bg-gradient-to-r from-[#594CF5] via-[#7B4CF5] to-[#D946EF] hover:brightness-105 shadow-md shadow-purple-500/20 hover:shadow-lg transition-all shrink-0 cursor-pointer"
-                  >
-                    <span>Talk to IP Advocate</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-            </article>
-
-            {/* Right Column: Sticky Sidebar matching Screenshot (4 cols) */}
-            <aside className="lg:col-span-4 space-y-6 lg:sticky lg:top-28">
-              {/* Card 1: Consult Experts (Direct match to screenshot) */}
-              <div className="bg-white rounded-2xl border border-slate-200/90 shadow-2xs p-5 sm:p-6 transition-all hover:shadow-sm">
-                <div className="flex items-center gap-3.5">
-                  <div className="flex -space-x-2.5 overflow-hidden shrink-0">
-                    <div className="inline-block h-10 w-10 rounded-full ring-2 ring-white bg-slate-200 flex items-center justify-center text-xs font-semibold text-slate-700">
-                      ADV
-                    </div>
-                    <div className="inline-block h-10 w-10 rounded-full ring-2 ring-white bg-blue-100 flex items-center justify-center text-xs font-semibold text-blue-700">
-                      IP
-                    </div>
-                    <div className="inline-block h-10 w-10 rounded-full ring-2 ring-white bg-purple-100 flex items-center justify-center text-xs font-semibold text-purple-700">
-                      LLM
-                    </div>
-                  </div>
-                  <div>
-                    <h4 className="text-sm sm:text-[15px] font-normal text-slate-800 leading-snug">
-                      Consult <span className="text-[#155EEF] font-semibold">Experts</span>
-                    </h4>
-                    <p className="text-xs text-slate-700 font-normal mt-0.5">
-                      Senior Intellectual Property Counsel
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mt-4 pt-3.5 border-t border-slate-100 flex items-center justify-between">
-                  <span className="text-xs text-slate-700 font-normal">
-                    Turnaround: <strong className="text-slate-900 font-semibold">Within 2 Hours</strong>
+                <div>
+                  <span className="font-medium text-slate-900">{authorName}</span>
+                  <span className="block text-[11px] text-emerald-600 font-normal">
+                    Verified IP Attorneys
                   </span>
-                  <button
-                    onClick={() => openContact("Consult Copyright Expert")}
-                    className="text-xs font-semibold text-[#155EEF] hover:underline cursor-pointer"
-                  >
-                    Connect Now &rarr;
-                  </button>
                 </div>
               </div>
+              <span className="text-slate-300">•</span>
+              <div className="flex items-center gap-1.5">
+                <Calendar className="w-3.5 h-3.5 text-slate-400" />
+                <span>Updated: {metaPublishedDate}</span>
+              </div>
+              <span className="text-slate-300">•</span>
+              <div className="flex items-center gap-1.5">
+                <Clock className="w-3.5 h-3.5 text-slate-400" />
+                <span>{readingTime}</span>
+              </div>
+            </div>
 
-              {/* Card 2: Related Guides List matching Screenshot */}
-              <div className="bg-white rounded-2xl border border-slate-200/90 shadow-2xs p-5 sm:p-6 transition-all hover:shadow-sm">
-                <div className="flex items-center justify-between mb-4 pb-2 border-b border-slate-100">
-                  <h3 className="text-base font-semibold text-slate-950">
-                    Related Guides
+            {/* Main Article Title */}
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-[#1F1646] tracking-tight mt-6 mb-6 leading-tight">
+              {title}
+            </h1>
+
+            {/* Article Children Content */}
+            <div className="prose prose-slate max-w-none text-slate-900 font-normal text-[14.5px] leading-relaxed space-y-6">
+              {children}
+            </div>
+
+            {/* Bottom In-Article Consultation Banner */}
+            <div className="mt-12 p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-[#1F1646] via-[#2A1E5C] to-[#401F78] text-white relative overflow-hidden shadow-lg">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl pointer-events-none" />
+              <div className="relative z-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                <div className="space-y-2">
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/10 text-emerald-300 text-xs font-medium">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    <span>Statutory Protection Under Copyright Act, 1957</span>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-normal text-white">
+                    Ready to Register Your Copyright in India?
                   </h3>
-                  <span className="text-[11px] font-medium text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full">
-                    7 Articles
-                  </span>
+                  <p className="text-xs sm:text-sm text-slate-200 font-normal max-w-xl">
+                    Protect your original software code, literary work, artistic designs, sound recordings, or video content. Same-day Form XIV drafting, IP advocate review, and government dairy number generation.
+                  </p>
                 </div>
+                <button
+                  type="button"
+                  onClick={() => openContact(`Copyright Registration - ${title}`)}
+                  className="px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-medium text-sm shadow-md hover:shadow-xl transition-all duration-200 shrink-0 cursor-pointer flex items-center gap-2 group"
+                >
+                  <span>Apply with Experts</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </div>
+            </div>
+          </article>
 
-                <ul className="space-y-2">
+          {/* Right Column: Clean Sidebar */}
+          <aside className="lg:col-span-4 space-y-6 lg:sticky lg:top-24">
+            {/* Widget 1: Consult Experts */}
+            <div
+              onClick={() => openContact("Copyright Expert Call")}
+              className="bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-300 p-5 cursor-pointer group hover:border-[#155EEF]"
+            >
+              <div className="flex items-center gap-4">
+                <div className="flex -space-x-3 overflow-hidden shrink-0">
+                  <img
+                    className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover group-hover:scale-105 transition-transform"
+                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=faces"
+                    alt="Copyright Expert 1"
+                  />
+                  <img
+                    className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover group-hover:scale-105 transition-transform"
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=faces"
+                    alt="Copyright Expert 2"
+                  />
+                  <img
+                    className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover group-hover:scale-105 transition-transform"
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=faces"
+                    alt="Copyright Expert 3"
+                  />
+                </div>
+                <div>
+                  <div className="text-[14.5px] font-medium text-slate-800 group-hover:text-[#155EEF] transition-colors">
+                    Consult <span className="text-[#155EEF]">Experts</span>
+                  </div>
+                  <div className="text-[11.5px] text-slate-500 font-light">
+                    Direct call with registered IP attorneys
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Widget 2: Related Guides (7 guides with active highlight & emerald top border) */}
+            <div className="bg-white rounded-2xl border border-slate-200/90 shadow-xs overflow-hidden border-t-2 border-t-emerald-500">
+              <div className="p-5">
+                <h3 className="font-semibold text-[15px] text-[#0F172A] mb-4 flex items-center justify-between">
+                  <span>Related Guides</span>
+                  <FileText className="w-4 h-4 text-emerald-600" />
+                </h3>
+                <ul className="space-y-2 text-[13px]">
                   {COPYRIGHT_RELATED_GUIDES.map((guide) => {
                     const isActive = guide.slug === currentSlug;
                     return (
-                      <li key={guide.slug}>
+                      <li key={guide.slug} className="border-b border-slate-100 pb-2.5 last:border-0 last:pb-0">
                         <Link
                           href={guide.href}
-                          className={`flex items-start gap-3 p-2.5 rounded-xl text-xs sm:text-[13px] transition-all duration-150 group ${
+                          className={`flex items-start gap-3 p-2 rounded-xl transition-all duration-200 group ${
                             isActive
-                              ? "bg-purple-50/80 border border-purple-200/80 text-purple-950 font-semibold shadow-2xs"
-                              : "hover:bg-slate-50 text-slate-800 font-medium hover:text-[#155EEF]"
+                              ? "bg-emerald-50/90 text-emerald-950 font-semibold border-l-2 border-emerald-600 pl-3 shadow-3xs"
+                              : "text-[#1E293B] font-medium hover:text-[#155EEF] hover:bg-[#F0F7FF] hover:pl-2.5"
                           }`}
                         >
                           <span
-                            className={`mt-0.5 transition-transform group-hover:translate-x-0.5 ${
-                              isActive ? "text-purple-700" : "text-slate-400 group-hover:text-[#155EEF]"
+                            className={`shrink-0 text-[14px] leading-tight font-semibold transition-transform duration-200 mt-0.5 ${
+                              isActive
+                                ? "text-emerald-700"
+                                : "text-[#155EEF] group-hover:translate-x-1"
                             }`}
                           >
                             &rarr;
                           </span>
-                          <span className="leading-snug">
-                            {guide.title}
-                          </span>
+                          <span className="leading-snug">{guide.title}</span>
                         </Link>
                       </li>
                     );
                   })}
                 </ul>
               </div>
+            </div>
 
-              {/* Card 3: Direct Action Banner */}
-              <div className="bg-gradient-to-br from-[#1F1646] to-[#2B1B6B] rounded-2xl p-6 text-white shadow-md">
-                <div className="flex items-center gap-2 text-purple-300 text-xs font-medium uppercase tracking-wider mb-2">
-                  <Sparkles className="w-3.5 h-3.5" />
-                  <span>Online Filing Portal</span>
-                </div>
-                <h4 className="text-base sm:text-lg font-normal tracking-tight">
-                  Register Your Copyright Online in India
+            {/* Widget 3: Quick Copyright Eligibility Check */}
+            <div className="bg-gradient-to-br from-white to-slate-50 rounded-2xl border border-slate-200/90 p-5 shadow-xs space-y-4">
+              <div className="flex items-center gap-2 text-purple-700 text-xs font-semibold uppercase tracking-wider">
+                <Search className="w-3.5 h-3.5" />
+                <span>Complimentary Advisory</span>
+              </div>
+              <div>
+                <h4 className="text-[15px] font-medium text-slate-900 leading-snug">
+                  Check Copyright Eligibility &amp; Classification
                 </h4>
-                <p className="text-xs text-slate-300 font-normal mt-2 leading-relaxed">
-                  Protect your literary, software, musical, or artistic assets under the Copyright Act, 1957.
+                <p className="text-[12px] text-slate-500 font-light mt-1">
+                  Ensure your source code, manuscript, or artistic creation meets originality criteria under the Copyright Act, 1957 before government submission.
                 </p>
-                <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between">
-                  <span className="text-xs text-purple-200">Starting at ₹1,999</span>
-                  <Link
-                    href="/copyright-registration"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white font-medium text-xs transition-colors"
-                  >
-                    <span>View Packages</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
+              </div>
+              <button
+                type="button"
+                onClick={() => openContact("Copyright Eligibility Review")}
+                className="w-full py-2.5 px-4 rounded-xl text-center text-xs font-medium text-white bg-[#155EEF] hover:bg-[#124bbf] shadow-xs hover:shadow-md transition-all cursor-pointer flex items-center justify-center gap-1.5"
+              >
+                <span>Request Free Work Assessment</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
+
+            {/* Widget 4: Live Chat Pill in Sidebar */}
+            <div
+              onClick={() => openContact("Live Chat Request - Copyright")}
+              className="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white rounded-2xl p-4 shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer flex items-center justify-between"
+            >
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center shrink-0">
+                  <MessageCircle className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <div className="text-sm font-medium leading-tight">Live chat with experts</div>
+                  <div className="text-[11px] text-emerald-100 font-light">Online &amp; available now</div>
                 </div>
               </div>
-            </aside>
-          </div>
+              <ChevronRight className="w-5 h-5 text-emerald-100" />
+            </div>
+          </aside>
         </div>
       </main>
 
-      {/* Floating Concierge Action */}
-      <div className="fixed bottom-6 right-6 z-40">
-        <button
-          onClick={() => openContact("Live Concierge Chat")}
-          className="inline-flex items-center gap-2 px-4.5 py-2.5 rounded-full bg-[#00BF72] hover:bg-[#00AB66] text-white font-medium text-[13.5px] shadow-md hover:shadow-xl hover:shadow-emerald-500/30 transition-all duration-200 hover:-translate-y-1 active:translate-y-0 cursor-pointer"
-        >
-          <MessageCircle className="w-4.5 h-4.5 fill-white text-[#00BF72]" />
-          <span>Live chat with experts</span>
-        </button>
-      </div>
+      <Footer />
 
       {/* Global Modals */}
       <ServiceSearchModal
@@ -321,9 +327,6 @@ export default function CopyrightGuideLayout({
         onClose={() => setModalOpen(false)}
         serviceTitle={modalTitle}
       />
-
-      {/* Footer */}
-      <Footer />
     </div>
   );
 }
