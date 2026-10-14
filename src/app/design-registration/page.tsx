@@ -101,12 +101,34 @@ const PACKAGES: PricingPackage[] = [
 ];
 
 const RELATED_GUIDES = [
-  "What is Design Registration in India: Eligibility & Requirements",
-  "Locarno Classification List (Classes 1 to 32) for Design Registration",
-  "Design Registration vs Patent vs Trademark: Key Differences Explained",
-  "How to Prepare 7-View Design Drawings According to Patent Office Rules",
-  "Step-by-Step Design Registration Procedure from Filing to Certificate",
-  "How to Extend Design Registration Validity from 10 to 15 Years",
+  {
+    title: "Design Registration: Essential Guide and Latest Insights",
+    href: "/design-registration/design-registration-essential-guide",
+  },
+  {
+    title: "Everything You Need to Know About Design Registration",
+    href: "/design-registration/importance-of-design-registration",
+  },
+  {
+    title: "Design Registration: Protect Your Original Creations & Essential Guidelines",
+    href: "/design-registration/design-registration-your-essential-guideline",
+  },
+  {
+    title: "Design Registration to Protect Your Original Creations",
+    href: "/design-registration/design-registration-protect-your-original-creations",
+  },
+  {
+    title: "Understanding Design Registration: A Complete Guide for Innovators",
+    href: "/design-registration/understanding-design-registration-complete-guide",
+  },
+  {
+    title: "Comprehensive Guide to Design Registration Services in India",
+    href: "/design-registration/guide-design-registration-services-in-india",
+  },
+  {
+    title: "Design Registration in India: A Comprehensive Guide to Legal Protection",
+    href: "/design-registration/design-registration-services-in-india",
+  },
 ];
 
 const RELATED_SERVICES_TAGS = [
