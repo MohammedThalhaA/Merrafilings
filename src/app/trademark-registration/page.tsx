@@ -292,12 +292,26 @@ const PACKAGES: PricingPackage[] = [
 ];
 
 const RELATED_GUIDES = [
-  "How to Conduct a Free Public Trademark Search on IP India Portal",
-  "Nice Classification: Guide to Choosing the Right Trademark Class",
-  "Difference Between ™ Symbol and ® Registered Trademark Symbol",
-  "How Long Does Trademark Registration Take in India: Full Timeline",
-  "What is a Trademark Objection and How to Respond Under Section 9 & 11",
-  "How to File for Trademark Renewal and Avoid Cancellation"
+  {
+    title: "How to Apply for Trademark Registration Online in India?",
+    href: "/trademark-registration/how-to-apply-for-trademark-registration",
+  },
+  {
+    title: "List of Classes for Trademark Registration in India",
+    href: "/trademark-registration/list-of-classes-for-trademark-registration",
+  },
+  {
+    title: "Trademark Registration in India Can Be Renewed After How Many Years?",
+    href: "/trademark-registration/trademark-registration-in-india-can-be-renewed-after",
+  },
+  {
+    title: "Trademark Registration Cost in India",
+    href: "/trademark-registration/trademark-registration-cost-in-india",
+  },
+  {
+    title: "Trademark Registration Process Flowchart",
+    href: "/trademark-registration/trademark-registration-process-flowchart",
+  },
 ];
 
 const RELATED_SERVICES_TAGS = [

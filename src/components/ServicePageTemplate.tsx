@@ -1,7 +1,7 @@
 "use client";
 
-// Touched for HMR rebuild
 import React, { useState, useRef } from "react";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactModal from "@/components/ContactModal";
@@ -1506,7 +1506,8 @@ export interface ServicePageTemplateProps {
   spotlight?: ServiceSpotlightData;
   guideTitle?: string;
   guideContent: React.ReactNode;
-  relatedGuides: string[];
+  relatedGuides: (string | { title: string; href: string })[];
+  relatedGuidesTitle?: string;
   faqCol1: FAQItem[];
   faqCol2: FAQItem[];
   faqExtraCol1?: FAQItem[];
@@ -1605,6 +1606,7 @@ export default function ServicePageTemplate({
   guideTitle,
   guideContent,
   relatedGuides,
+  relatedGuidesTitle = "Related Guides",
   faqCol1,
   faqCol2,
   faqExtraCol1 = [],
@@ -2494,21 +2496,39 @@ export default function ServicePageTemplate({
               {/* Card 2: Curated Related Guides */}
               <div className="bg-white rounded-2xl border border-slate-200/80 shadow-xs hover:border-slate-300 hover:shadow-md transition-all duration-300 overflow-hidden border-t-2 border-t-emerald-400">
                 <div className="p-5">
-                  <h4 className="font-normal text-[14px] text-slate-800 mb-4">Related Compliance Guides</h4>
+                  <h4 className="font-normal text-[14px] text-slate-800 mb-4">{relatedGuidesTitle}</h4>
                   <ul className="space-y-3.5 text-[12.5px] font-light text-slate-700">
-                    {relatedGuides.map((guide, idx) => (
-                      <li key={idx} className="border-b border-slate-100 pb-2.5 last:border-0 last:pb-0">
-                        <a
-                          href="#overview-section"
-                          className="flex items-start gap-2.5 text-slate-600 hover:text-[#155EEF] hover:bg-[#F0F7FF] p-2 rounded-lg transition-all duration-200 group hover:pl-3"
-                        >
-                          <span className="text-slate-400 group-hover:text-[#155EEF] group-hover:translate-x-0.5 shrink-0 text-[13px] leading-tight transition-transform duration-200">
-                            &rarr;
-                          </span>
-                          <span className="line-clamp-2 leading-snug">{guide}</span>
-                        </a>
-                      </li>
-                    ))}
+                    {relatedGuides.map((guide, idx) => {
+                      const title = typeof guide === "string" ? guide : guide.title;
+                      const href = typeof guide === "string" ? "#overview-section" : guide.href;
+                      const isExternal = typeof guide !== "string" && guide.href.startsWith("http");
+
+                      return (
+                        <li key={idx} className="border-b border-slate-100 pb-2.5 last:border-0 last:pb-0">
+                          {isExternal ? (
+                            <a
+                              href={href}
+                              className="flex items-start gap-2.5 text-slate-600 hover:text-[#155EEF] hover:bg-[#F0F7FF] p-2 rounded-lg transition-all duration-200 group hover:pl-3"
+                            >
+                              <span className="text-slate-400 group-hover:text-[#155EEF] group-hover:translate-x-0.5 shrink-0 text-[13px] leading-tight transition-transform duration-200">
+                                &rarr;
+                              </span>
+                              <span className="line-clamp-2 leading-snug">{title}</span>
+                            </a>
+                          ) : (
+                            <Link
+                              href={href}
+                              className="flex items-start gap-2.5 text-slate-600 hover:text-[#155EEF] hover:bg-[#F0F7FF] p-2 rounded-lg transition-all duration-200 group hover:pl-3"
+                            >
+                              <span className="text-slate-400 group-hover:text-[#155EEF] group-hover:translate-x-0.5 shrink-0 text-[13px] leading-tight transition-transform duration-200">
+                                &rarr;
+                              </span>
+                              <span className="line-clamp-2 leading-snug">{title}</span>
+                            </Link>
+                          )}
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               </div>
