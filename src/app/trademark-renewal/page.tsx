@@ -196,12 +196,34 @@ const PACKAGES: PricingPackage[] = [
 ];
 
 const RELATED_GUIDES = [
-  "Section 25 of Trade Marks Act: Trademark Renewal Rules & Timelines",
-  "What Happens When a Trademark Expires: Grace Period vs Restoration",
-  "How to Download Your Trademark Renewal Certificate Online",
-  "Difference Between Timely Renewal (TM-R) and Late Restoration",
-  "How to Transfer or Assign a Trademark During Renewal",
-  "Top 5 Reasons Why Businesses Lose Their Registered Trademarks"
+  {
+    title: "Understanding the Trademark Renewal Process: A Step-by-Step Guide",
+    href: "/trademark-renewal/trademark-renewal-process-guide-key-steps-explained",
+  },
+  {
+    title: "Understanding Cryptocurrency: A Beginner's Guide",
+    href: "/trademark-renewal/understanding-cryptocurrency-a-beginners-guide",
+  },
+  {
+    title: "Trademark Renewal: Secure Your Brand Identity",
+    href: "/trademark-renewal/secure-your-brand-trademark-renewal-guide",
+  },
+  {
+    title: "Common Mistakes to Avoid in Trademark Renewal",
+    href: "/trademark-renewal/avoiding-common-trademark-renewal-mistakes",
+  },
+  {
+    title: "Trademark Renewal: A Comprehensive Guide for Business Owners",
+    href: "/trademark-renewal/trademark-renewal-guide-for-business-owners",
+  },
+  {
+    title: "Trademark Renewal: A Comprehensive Guide",
+    href: "/trademark-renewal/trademark-renewal-your-comprehensive-guide",
+  },
+  {
+    title: "Trademark Renewal Guidelines in India",
+    href: "/trademark-renewal/trademark-renewal-guidline",
+  },
 ];
 
 const RELATED_SERVICES_TAGS = [
