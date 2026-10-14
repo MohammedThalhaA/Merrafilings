@@ -1112,7 +1112,268 @@ export function getServiceSpotlightData(breadcrumbCurrent: string, badgeText?: s
     };
   }
 
-  // 13. General Fallback
+  // 13. Trademark Objection
+  if (b.includes("objection")) {
+    return {
+      mandatoryTag: "TRADEMARK ACT 1999 STATUTORY EXAMINATION DEFENSE",
+      mandatoryTitle: "Why Timely Trademark Objection Reply is Mandatory",
+      mandatorySubtitle: "Failure to file a comprehensive legal reply within the statutory 30-day window results in your trademark being marked 'Abandoned' with complete loss of brand rights.",
+      dashboardMetric1: { label: "Statutory Deadline", value: "Strict 30 Days" },
+      dashboardMetric2: { label: "Success Rate", value: "97.6%" },
+      dashboardSteps: [
+        "Examination Report & Objection Grounds Scrutiny (Sec 9 & 11)",
+        "Legal Counter-Drafting with Case Law & Supporting Proof",
+        "IP India Portal Lodgement & Examiner Acceptance Tracking"
+      ],
+      mandatoryItems: [
+        {
+          icon: <Clock className="w-5 h-5" />,
+          iconBg: "bg-rose-50",
+          iconColor: "text-rose-600",
+          hoverBorder: "hover:border-rose-500",
+          title: "Strict 30-Day Statutory Limitation",
+          desc: "Section 21 and Trademark Rules mandate submitting a written rebuttal within 30 days of receiving the examination report."
+        },
+        {
+          icon: <Scale className="w-5 h-5" />,
+          iconBg: "bg-blue-50",
+          iconColor: "text-blue-600",
+          hoverBorder: "hover:border-blue-500",
+          title: "Overcome Section 9 Absolute Grounds",
+          desc: "Proves acquired distinctiveness and commercial recognition to defeat non-distinctive or descriptive objections."
+        },
+        {
+          icon: <ShieldCheck className="w-5 h-5" />,
+          iconBg: "bg-purple-50",
+          iconColor: "text-purple-600",
+          hoverBorder: "hover:border-purple-500",
+          title: "Overcome Section 11 Relative Conflicts",
+          desc: "Differentiates your mark from cited prior marks using phonetic, visual, and trade channel distinction precedents."
+        },
+        {
+          icon: <AlertTriangle className="w-5 h-5" />,
+          iconBg: "bg-amber-50",
+          iconColor: "text-amber-600",
+          hoverBorder: "hover:border-amber-500",
+          title: "Prevent Irreversible Abandonment",
+          desc: "Timely reply safeguards your application date, priority rights, and prevents third-party rivals from hijacking the mark."
+        }
+      ],
+      chooseTag: "THE MERRAFILINGS ADVANTAGE",
+      chooseTitle: "Why Choose Merrafilings for Trademark Objection?",
+      chooseSubtitle: "Handled by senior Intellectual Property attorneys with extensive citation libraries and high-court precedent mastery.",
+      chooseItems: [
+        {
+          icon: <Award className="w-5 h-5" />,
+          iconBg: "bg-blue-50",
+          iconColor: "text-blue-600",
+          hoverBorder: "hover:border-blue-500",
+          title: "Senior IP Attorneys & TM Agents",
+          desc: "Custom-drafted legal replies prepared by experienced trademark lawyers—never generic automated templates."
+        },
+        {
+          icon: <FileText className="w-5 h-5" />,
+          iconBg: "bg-emerald-50",
+          iconColor: "text-emerald-600",
+          hoverBorder: "hover:border-emerald-500",
+          title: "Robust Evidence & User Affidavit",
+          desc: "Compilation of invoices, turnover certificates, and marketing collaterals demonstrating continuous prior commercial use."
+        },
+        {
+          icon: <FileCheck className="w-5 h-5" />,
+          iconBg: "bg-purple-50",
+          iconColor: "text-purple-600",
+          hoverBorder: "hover:border-purple-500",
+          title: "Seamless E-Filing on IP India Portal",
+          desc: "Official digital submission under Form TM-M with real-time acknowledgment and status tracking till publication."
+        },
+        {
+          icon: <Users className="w-5 h-5" />,
+          iconBg: "bg-amber-50",
+          iconColor: "text-amber-600",
+          hoverBorder: "hover:border-amber-500",
+          title: "Dedicated Hearing Support",
+          desc: "Comprehensive preparation and legal advocacy if a show-cause hearing is scheduled before the Trademark Hearing Officer."
+        }
+      ]
+    };
+  }
+
+  // 14. Trademark Renewal
+  if (b.includes("renewal")) {
+    return {
+      mandatoryTag: "SECTION 25 TRADEMARK ACT STATUTORY RENEWAL",
+      mandatoryTitle: "Why Renewing Your Trademark Every 10 Years is Crucial",
+      mandatorySubtitle: "Statutory protection under the Trade Marks Act 1999 expires after 10 years; timely renewal preserves exclusive monopoly, brand equity, and prevents third-party trademark squatting.",
+      dashboardMetric1: { label: "Renewal Extension", value: "10 Years" },
+      dashboardMetric2: { label: "Grace Period", value: "6 Months" },
+      dashboardSteps: [
+        "Trademark Register Search & Form TM-R Preparation",
+        "Statutory Government Fee Lodgement & Portal Filing",
+        "Trademark Journal Notification & Renewal Certificate Grant"
+      ],
+      mandatoryItems: [
+        {
+          icon: <ShieldCheck className="w-5 h-5" />,
+          iconBg: "bg-emerald-50",
+          iconColor: "text-emerald-600",
+          hoverBorder: "hover:border-emerald-500",
+          title: "Preserve Exclusive Brand Monopoly",
+          desc: "Maintains perpetual ownership and legal protection to sue infringers under Section 29 of the Trade Marks Act 1999."
+        },
+        {
+          icon: <AlertTriangle className="w-5 h-5" />,
+          iconBg: "bg-rose-50",
+          iconColor: "text-rose-600",
+          hoverBorder: "hover:border-rose-500",
+          title: "Prevent Removal from Register (Sec 25)",
+          desc: "Non-renewal results in your mark being deleted from the official Register, allowing competitors to claim your brand name."
+        },
+        {
+          icon: <Receipt className="w-5 h-5" />,
+          iconBg: "bg-purple-50",
+          iconColor: "text-purple-600",
+          hoverBorder: "hover:border-purple-500",
+          title: "Avoid Heavier Restoration Surcharges",
+          desc: "Renewing within the primary window avoids expensive government restoration penalty fees applicable after expiration."
+        },
+        {
+          icon: <TrendingUp className="w-5 h-5" />,
+          iconBg: "bg-amber-50",
+          iconColor: "text-amber-600",
+          hoverBorder: "hover:border-amber-500",
+          title: "Protect Commercial Goodwill & Valuation",
+          desc: "An active trademark registration is essential for brand valuation, franchising, investor due diligence, and licensing deals."
+        }
+      ],
+      chooseTag: "THE MERRAFILINGS ADVANTAGE",
+      chooseTitle: "Why Choose Merrafilings for Trademark Renewal?",
+      chooseSubtitle: "Merrafilings manages renewal and portfolio maintenance for over 40,000+ registered trademarks across all 45 classes.",
+      chooseItems: [
+        {
+          icon: <Clock className="w-5 h-5" />,
+          iconBg: "bg-blue-50",
+          iconColor: "text-blue-600",
+          hoverBorder: "hover:border-blue-500",
+          title: "Automated 10-Year Expiry Tracking",
+          desc: "Proactive surveillance ensures Form TM-R is prepared and submitted well before the statutory deadline."
+        },
+        {
+          icon: <Zap className="w-5 h-5" />,
+          iconBg: "bg-emerald-50",
+          iconColor: "text-emerald-600",
+          hoverBorder: "hover:border-emerald-500",
+          title: "Zero Downtime Form TM-R Filing",
+          desc: "Instant paperless digital submission on the IP India gateway with immediate government fee challan delivery."
+        },
+        {
+          icon: <Scale className="w-5 h-5" />,
+          iconBg: "bg-purple-50",
+          iconColor: "text-purple-600",
+          hoverBorder: "hover:border-purple-500",
+          title: "Restoration & Late Renewal Handling",
+          desc: "Expert handling of restoration petitions for marks expired within the 6-month to 1-year statutory restoration window."
+        },
+        {
+          icon: <FileCheck className="w-5 h-5" />,
+          iconBg: "bg-amber-50",
+          iconColor: "text-amber-600",
+          hoverBorder: "hover:border-amber-500",
+          title: "Updated Digital Certificate Delivery",
+          desc: "Official Certificate of Renewal issued by the Registrar of Trade Marks delivered directly to your digital vault."
+        }
+      ]
+    };
+  }
+
+  // 15. Trademark Registration
+  if (b.includes("trademark")) {
+    return {
+      mandatoryTag: "CONTROLLER GENERAL OF PATENTS, DESIGNS & TRADEMARKS",
+      mandatoryTitle: "Why Trademark Registration is Essential for Your Brand",
+      mandatorySubtitle: "Legal ownership granting exclusive nationwide rights to use your brand name, logo, and slogan, with statutory power to stop counterfeiters and copycats.",
+      dashboardMetric1: { label: "Filing SLA", value: "Same Day (TM)" },
+      dashboardMetric2: { label: "Protection", value: "10-Year Validity" },
+      dashboardSteps: [
+        "Comprehensive Public Trademark Search & Nice Class Mapping",
+        "Form TM-A Filing on IP India Portal & Instant ™ Allotment",
+        "Examiner Clearance, Journal Publication & ® Certificate Grant"
+      ],
+      mandatoryItems: [
+        {
+          icon: <ShieldCheck className="w-5 h-5" />,
+          iconBg: "bg-emerald-50",
+          iconColor: "text-emerald-600",
+          hoverBorder: "hover:border-emerald-500",
+          title: "Exclusive Legal Monopoly",
+          desc: "Confers exclusive nationwide statutory rights to your brand name, symbol, logo, or tagline under the Trade Marks Act 1999."
+        },
+        {
+          icon: <Sparkles className="w-5 h-5" />,
+          iconBg: "bg-blue-50",
+          iconColor: "text-blue-600",
+          hoverBorder: "hover:border-blue-500",
+          title: "Immediate Right to Use ™ Symbol",
+          desc: "Use the ™ symbol immediately after filing Form TM-A to signal brand ownership and deter unauthorized imitators."
+        },
+        {
+          icon: <AlertTriangle className="w-5 h-5" />,
+          iconBg: "bg-purple-50",
+          iconColor: "text-purple-600",
+          hoverBorder: "hover:border-purple-500",
+          title: "Combat Infringers & Counterfeiters",
+          desc: "Empowers you to file civil and criminal infringement suits, claim damages, and seek commercial injunctions."
+        },
+        {
+          icon: <TrendingUp className="w-5 h-5" />,
+          iconBg: "bg-amber-50",
+          iconColor: "text-amber-600",
+          hoverBorder: "hover:border-amber-500",
+          title: "Valuable Intangible Business Asset",
+          desc: "Can be sold, franchised, licensed, or pledged, significantly boosting corporate valuation during funding rounds."
+        }
+      ],
+      chooseTag: "THE MERRAFILINGS ADVANTAGE",
+      chooseTitle: "Why Choose Merrafilings for Trademark Registration?",
+      chooseSubtitle: "Merrafilings is India's #1 IP legal platform, having filed and managed over 100,000+ trademark applications nationwide.",
+      chooseItems: [
+        {
+          icon: <Globe2 className="w-5 h-5" />,
+          iconBg: "bg-blue-50",
+          iconColor: "text-blue-600",
+          hoverBorder: "hover:border-blue-500",
+          title: "In-Depth Public Search & Analysis",
+          desc: "Multi-layered similarity search across phonetic, visual, and semantic registers to eliminate objection risks."
+        },
+        {
+          icon: <Zap className="w-5 h-5" />,
+          iconBg: "bg-emerald-50",
+          iconColor: "text-emerald-600",
+          hoverBorder: "hover:border-emerald-500",
+          title: "Same-Day Form TM-A E-Filing",
+          desc: "Rapid digital lodgement on the official IP India gateway with instant application number and TM receipt issuance."
+        },
+        {
+          icon: <Layers className="w-5 h-5" />,
+          iconBg: "bg-purple-50",
+          iconColor: "text-purple-600",
+          hoverBorder: "hover:border-purple-500",
+          title: "Accurate Nice Class Mapping (1 to 45)",
+          desc: "Precise classification of products and services under international Nice Classification to prevent misclassification."
+        },
+        {
+          icon: <Clock className="w-5 h-5" />,
+          iconBg: "bg-amber-50",
+          iconColor: "text-amber-600",
+          hoverBorder: "hover:border-amber-500",
+          title: "Continuous Lifecycle Monitoring",
+          desc: "Automated tracking through examination, opposition periods, journal publication, and final registration certificate issuance."
+        }
+      ]
+    };
+  }
+
+  // 16. General Fallback
   return {
     mandatoryTag: "STATUTORY CORPORATE MANDATE",
     mandatoryTitle: `Why ${breadcrumbCurrent} is Essential for Your Business`,

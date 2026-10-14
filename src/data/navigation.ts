@@ -90,8 +90,8 @@ export const NAV_CATEGORIES: NavCategory[] = [
       columns: [
         // Column 1 from Screenshot 1
         [
-          { title: "Trademark Registration", href: "#tm-reg" },
-          { title: "Trademark Objection", href: "#tm-objection" },
+          { title: "Trademark Registration", href: "/trademark-registration" },
+          { title: "Trademark Objection", href: "/trademark-objection" },
           { title: "Trademark Certificate", href: "#tm-certificate" },
           { title: "Trademark Opposition", href: "#tm-opposition" },
           { title: "Trademark Hearing", href: "#tm-hearing" },
@@ -100,7 +100,7 @@ export const NAV_CATEGORIES: NavCategory[] = [
         // Column 2 from Screenshot 1
         [
           { title: "TM Infringement Notice", href: "#tm-infringement" },
-          { title: "Trademark Renewal", href: "#tm-renewal" },
+          { title: "Trademark Renewal", href: "/trademark-renewal" },
           { title: "Trademark Transfer", href: "#tm-transfer" },
           { title: "Expedited TM Registration", href: "#tm-expedited" },
           { title: "Logo Designing", href: "#logo-design" },
