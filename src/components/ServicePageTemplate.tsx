@@ -1,5 +1,6 @@
 "use client";
 
+// Touched for HMR rebuild
 import React, { useState, useRef } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -36,6 +37,8 @@ import {
   Laptop,
   Store,
   Layers,
+  AlertTriangle,
+  FileSpreadsheet,
 } from "lucide-react";
 
 export interface SpotlightCardItem {
@@ -760,7 +763,181 @@ export function getServiceSpotlightData(breadcrumbCurrent: string, badgeText?: s
     };
   }
 
-  // 9. General Fallback
+  // 9. Digital Signature Certificate (DSC)
+  if (b.includes("digital") || b.includes("dsc") || b.includes("signature")) {
+    return {
+      mandatoryTag: "CCA AUTHORIZED ELECTRONIC IDENTIFICATION",
+      mandatoryTitle: "Why Class 3 Digital Signature Certificate (DSC) is Mandatory",
+      mandatorySubtitle: "Statutory cryptographic credential required for MCA ROC filings, Income Tax e-filing, GST returns, and government e-tenders under the IT Act 2000.",
+      dashboardMetric1: { label: "Issuance SLA", value: "30 - 60 Mins" },
+      dashboardMetric2: { label: "Legal Standing", value: "IT Act 2000" },
+      dashboardSteps: [
+        "Paperless Video KYC & Aadhaar / PAN Verification",
+        "Licensed Certifying Authority (eMudhra/Capricorn/NSDL) Approval",
+        "FIPS Level 2 Cryptographic USB Token Dispatch / Download"
+      ],
+      mandatoryItems: [
+        {
+          icon: <ShieldCheck className="w-5 h-5" />,
+          iconBg: "bg-emerald-50",
+          iconColor: "text-emerald-600",
+          hoverBorder: "hover:border-emerald-500",
+          title: "MCA, ROC & Company Incorporation",
+          desc: "Mandatory for all company directors and designated partners to sign SPICe+, DIN forms, and annual ROC returns."
+        },
+        {
+          icon: <Receipt className="w-5 h-5" />,
+          iconBg: "bg-blue-50",
+          iconColor: "text-blue-600",
+          hoverBorder: "hover:border-blue-500",
+          title: "Income Tax (ITR) & GST Portal e-Filing",
+          desc: "Statutorily mandated for corporate tax audits, high-turnover GST returns, and secure e-verification."
+        },
+        {
+          icon: <Briefcase className="w-5 h-5" />,
+          iconBg: "bg-purple-50",
+          iconColor: "text-purple-600",
+          hoverBorder: "hover:border-purple-500",
+          title: "e-Tendering & Govt e-Procurement",
+          desc: "Mandatory Signing + Encryption Class 3 DSC to bid on GeM, Indian Railways, CPWD, and state procurement portals."
+        },
+        {
+          icon: <Globe2 className="w-5 h-5" />,
+          iconBg: "bg-amber-50",
+          iconColor: "text-amber-600",
+          hoverBorder: "hover:border-amber-500",
+          title: "DGFT & Customs ICEGATE Clearance",
+          desc: "Enables secure transmission of shipping bills, bill of entry, and export incentive claims on the ICEGATE portal."
+        }
+      ],
+      chooseTag: "THE MERRAFILINGS ADVANTAGE",
+      chooseTitle: "Why Choose Merrafilings for Digital Signature Certificates?",
+      chooseSubtitle: "Merrafilings issues over 25,000+ Class 3 DSC tokens annually with instantaneous paperless verification and pan-India express courier delivery.",
+      chooseItems: [
+        {
+          icon: <Zap className="w-5 h-5" />,
+          iconBg: "bg-emerald-50",
+          iconColor: "text-emerald-600",
+          hoverBorder: "hover:border-emerald-500",
+          title: "Instant 30-Minute Paperless Video KYC",
+          desc: "Zero physical paperwork—complete quick Aadhaar OTP and 15-second video recording from your smartphone or laptop."
+        },
+        {
+          icon: <Award className="w-5 h-5" />,
+          iconBg: "bg-blue-50",
+          iconColor: "text-blue-600",
+          hoverBorder: "hover:border-blue-500",
+          title: "CCA Licensed Certifying Authorities",
+          desc: "Direct issuance from authorized CAs including eMudhra, Capricorn, and NSDL ensuring 100% legal compliance."
+        },
+        {
+          icon: <ShieldCheck className="w-5 h-5" />,
+          iconBg: "bg-purple-50",
+          iconColor: "text-purple-600",
+          hoverBorder: "hover:border-purple-500",
+          title: "Pre-Configured FIPS USB Token",
+          desc: "Shipped in genuine high-security FIPS Level 2 certified cryptographic USB tokens (HYP2003 / ProxKey) with password protection."
+        },
+        {
+          icon: <Laptop className="w-5 h-5" />,
+          iconBg: "bg-amber-50",
+          iconColor: "text-amber-600",
+          hoverBorder: "hover:border-amber-500",
+          title: "Free Remote Technical Driver Setup",
+          desc: "Our technical support team assists via remote screen share to configure token drivers and browser signing certificates."
+        }
+      ]
+    };
+  }
+
+  // 10. Shop and Establishment Act Registration
+  if (b.includes("shop") || b.includes("establishment")) {
+    return {
+      mandatoryTag: "STATE LABOUR DEPARTMENT STATUTORY MANDATE",
+      mandatoryTitle: "Why Shop & Establishment Act Registration is Mandatory",
+      mandatorySubtitle: "State municipal license establishing lawful commercial operation, commercial bank account eligibility, and statutory labor compliance.",
+      dashboardMetric1: { label: "Approval SLA", value: "2 - 5 Days" },
+      dashboardMetric2: { label: "State Coverage", value: "Pan-India 28 States" },
+      dashboardSteps: [
+        "Commercial Premises Proof & Entity KYC Scrutiny",
+        "State Labour Portal Digital Form Lodgement & Fee Payment",
+        "Labour Inspector Verification & Official Certificate Issuance"
+      ],
+      mandatoryItems: [
+        {
+          icon: <Store className="w-5 h-5" />,
+          iconBg: "bg-emerald-50",
+          iconColor: "text-emerald-600",
+          hoverBorder: "hover:border-emerald-500",
+          title: "Mandatory Commercial Premises License",
+          desc: "Compulsory for all commercial offices, retail shops, warehouses, software hubs, and restaurants within 30 days of opening."
+        },
+        {
+          icon: <Building className="w-5 h-5" />,
+          iconBg: "bg-blue-50",
+          iconColor: "text-blue-600",
+          hoverBorder: "hover:border-blue-500",
+          title: "Current Bank Account Proof",
+          desc: "Serves as authoritative legal proof of business establishment required by leading banks to open commercial current accounts."
+        },
+        {
+          icon: <Scale className="w-5 h-5" />,
+          iconBg: "bg-purple-50",
+          iconColor: "text-purple-600",
+          hoverBorder: "hover:border-purple-500",
+          title: "Employee Welfare & Working Hours",
+          desc: "Regulates statutory employment norms—daily working hours, overtime wages, mandatory weekly offs, and employee health safeguards."
+        },
+        {
+          icon: <AlertTriangle className="w-5 h-5" />,
+          iconBg: "bg-amber-50",
+          iconColor: "text-amber-600",
+          hoverBorder: "hover:border-amber-500",
+          title: "Shield Against Fines & Sealing",
+          desc: "Protects your enterprise against surprise municipal labor inspections, business closure notices, and compounding daily penalties."
+        }
+      ],
+      chooseTag: "THE MERRAFILINGS ADVANTAGE",
+      chooseTitle: "Why Choose Merrafilings for Shop Act Registration?",
+      chooseSubtitle: "Merrafilings manages state-specific labor registrations for over 30,000+ commercial establishments across all 28 states and union territories.",
+      chooseItems: [
+        {
+          icon: <Globe2 className="w-5 h-5" />,
+          iconBg: "bg-emerald-50",
+          iconColor: "text-emerald-600",
+          hoverBorder: "hover:border-emerald-500",
+          title: "Pan-India State Portal Expertise",
+          desc: "Tailored documentation and exact portal filing across Delhi, Maharashtra (Gumasta), Karnataka (e-Karmika), Tamil Nadu, and all states."
+        },
+        {
+          icon: <FileCheck className="w-5 h-5" />,
+          iconBg: "bg-blue-50",
+          iconColor: "text-blue-600",
+          hoverBorder: "hover:border-blue-500",
+          title: "100% Online Digital Filing",
+          desc: "Complete digital lodgement without visiting local municipal corporations or labor commissioner offices."
+        },
+        {
+          icon: <FileSpreadsheet className="w-5 h-5" />,
+          iconBg: "bg-purple-50",
+          iconColor: "text-purple-600",
+          hoverBorder: "hover:border-purple-500",
+          title: "Compliant Statutory Register Kits",
+          desc: "Complimentary digital templates for statutory wage registers, leave books, inspection registers, and accident registers."
+        },
+        {
+          icon: <Clock className="w-5 h-5" />,
+          iconBg: "bg-amber-50",
+          iconColor: "text-amber-600",
+          hoverBorder: "hover:border-amber-500",
+          title: "Renewal Alerts & Inspection Advisory",
+          desc: "Proactive tracking of validity periods and dedicated labor compliance advisory for handling official department queries."
+        }
+      ]
+    };
+  }
+
+  // 11. General Fallback
   return {
     mandatoryTag: "STATUTORY CORPORATE MANDATE",
     mandatoryTitle: `Why ${breadcrumbCurrent} is Essential for Your Business`,

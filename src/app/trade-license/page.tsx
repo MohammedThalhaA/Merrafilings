@@ -74,8 +74,8 @@ const FAQ_COL_1 = [
 
 const FAQ_COL_2 = [
   {
-    "q": "How does IndiaFilings help in obtaining a Trade License?",
-    "a": "IndiaFilings guides through the application process, ensures accurate document preparation, and liaises with authorities, simplifying the process for businesses."
+    "q": "How does Merrafilings help in obtaining a Trade License?",
+    "a": "Merrafilings guides through the application process, ensures accurate document preparation, and liaises with authorities, simplifying the process for businesses."
   },
   {
     "q": "Can I apply for a Trade License online?",
@@ -160,8 +160,8 @@ const FAQ_EXTRA_COL_1 = [
 
 const FAQ_EXTRA_COL_2 = [
   {
-    "q": "How does IndiaFilings help in obtaining a Trade License?",
-    "a": "IndiaFilings guides through the application process, ensures accurate document preparation, and liaises with authorities, simplifying the process for businesses."
+    "q": "How does Merrafilings help in obtaining a Trade License?",
+    "a": "Merrafilings guides through the application process, ensures accurate document preparation, and liaises with authorities, simplifying the process for businesses."
   },
   {
     "q": "Can I apply for a Trade License online?",

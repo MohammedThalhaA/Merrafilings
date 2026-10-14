@@ -113,7 +113,7 @@ const FAQ_EXTRA_COL_1 = [
   },
   {
     "q": "Can I apply for FSSAI Registration online?",
-    "a": "Yes, you can apply online through the official FoSCoS portal or use expert services like IndiaFilings to simplify the process."
+    "a": "Yes, you can apply online through the official FoSCoS portal or use expert services like Merrafilings to simplify the process."
   },
   {
     "q": "How much does FSSAI Registration cost?",
@@ -156,8 +156,8 @@ const FAQ_EXTRA_COL_1 = [
     "a": "No, FSSAI Registration is non-transferable. You must apply for a new registration if the business ownership or location changes."
   },
   {
-    "q": "Can IndiaFilings help me get my FSSAI Certificate?",
-    "a": "Yes, IndiaFilings provides end-to-end assistance in preparing, submitting, and following up on your FSSAI application to get your certificate smoothly."
+    "q": "Can Merrafilings help me get my FSSAI Certificate?",
+    "a": "Yes, Merrafilings provides end-to-end assistance in preparing, submitting, and following up on your FSSAI application to get your certificate smoothly."
   },
   {
     "q": "What is an FSSAI Certificate?",
@@ -236,7 +236,7 @@ const FAQ_EXTRA_COL_2 = [
   },
   {
     "q": "Can I apply for FSSAI Registration online?",
-    "a": "Yes, you can apply online through the official FoSCoS portal or use expert services like IndiaFilings to simplify the process."
+    "a": "Yes, you can apply online through the official FoSCoS portal or use expert services like Merrafilings to simplify the process."
   },
   {
     "q": "How much does FSSAI Registration cost?",
@@ -279,8 +279,8 @@ const FAQ_EXTRA_COL_2 = [
     "a": "No, FSSAI Registration is non-transferable. You must apply for a new registration if the business ownership or location changes."
   },
   {
-    "q": "Can IndiaFilings help me get my FSSAI Certificate?",
-    "a": "Yes, IndiaFilings provides end-to-end assistance in preparing, submitting, and following up on your FSSAI application to get your certificate smoothly."
+    "q": "Can Merrafilings help me get my FSSAI Certificate?",
+    "a": "Yes, Merrafilings provides end-to-end assistance in preparing, submitting, and following up on your FSSAI application to get your certificate smoothly."
   },
   {
     "q": "What is an FSSAI Certificate?",
