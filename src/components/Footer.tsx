@@ -32,9 +32,9 @@ export default function Footer() {
         { name: "ESI Registration", href: "/esi-registration" },
         { name: "Professional Tax Registration", href: "/professional-tax-registration" },
         { name: "GST Registration", href: "#gst-reg" },
-        { name: "Udyam / MSME Registration", href: "#msme" },
+        { name: "Udyam / MSME Registration", href: "/udyam-registration" },
         { name: "Import Export Code (IEC)", href: "#iec" },
-        { name: "Shop & Establishment", href: "#shop" },
+        { name: "Shop & Establishment", href: "/shop-establishment-act-registration" },
       ],
     },
     {
@@ -52,9 +52,9 @@ export default function Footer() {
     {
       title: "Trademarks & IP",
       links: [
-        { name: "Trademark Registration", href: "#tm" },
-        { name: "Trademark Objection Reply", href: "#tm-obj" },
-        { name: "Trademark Renewal", href: "#tm-renew" },
+        { name: "Trademark Registration", href: "/trademark-registration" },
+        { name: "Trademark Objection Reply", href: "/trademark-objection" },
+        { name: "Trademark Renewal", href: "/trademark-renewal" },
         { name: "Copyright Registration", href: "#copyright" },
         { name: "Design Registration", href: "#design" },
         { name: "Provisional Patent", href: "#patent" },

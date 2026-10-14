@@ -130,7 +130,7 @@ export default function Navbar({ onOpenSearch, onOpenContact }: NavbarProps) {
                           : cat.id === "registrations"
                           ? "left-[-40px]"
                           : cat.id === "trademark"
-                          ? "left-[-80px]"
+                          ? "left-0"
                           : cat.id === "gst"
                           ? "left-[-80px]"
                           : cat.id === "income-tax"
@@ -162,7 +162,7 @@ export default function Navbar({ onOpenSearch, onOpenContact }: NavbarProps) {
                                     key={linkIdx}
                                     href={link.href}
                                     onClick={() => setActiveDropdown(null)}
-                                    className="block py-1.5 px-2.5 text-[13.5px] font-medium text-slate-600 hover:text-[#155EEF] hover:bg-blue-50/70 hover:translate-x-1 rounded-lg transition-all leading-snug whitespace-nowrap"
+                                    className="block py-2 px-3 text-[13.5px] font-medium text-slate-800 hover:text-[#155EEF] hover:bg-blue-50/70 hover:translate-x-1 rounded-lg transition-all leading-snug whitespace-nowrap"
                                   >
                                     {link.title}
                                   </a>
@@ -375,7 +375,7 @@ export default function Navbar({ onOpenSearch, onOpenContact }: NavbarProps) {
                               key={lIdx}
                               href={link.href}
                               onClick={() => setMobileMenuOpen(false)}
-                              className="block py-1.5 px-2 text-[13.5px] font-medium text-slate-600 hover:text-[#155EEF] hover:bg-slate-50 rounded-lg"
+                              className="block py-1.5 px-2 text-[13.5px] font-medium text-slate-800 hover:text-[#155EEF] hover:bg-slate-50 rounded-lg"
                             >
                               {link.title}
                             </a>

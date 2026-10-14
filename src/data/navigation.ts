@@ -85,34 +85,13 @@ export const NAV_CATEGORIES: NavCategory[] = [
     label: "Trademark",
     hasDropdown: true,
     columnLayout: {
-      columnsCount: 3,
-      width: "w-[680px]",
+      columnsCount: 1,
+      width: "w-[280px]",
       columns: [
-        // Column 1 from Screenshot 1
         [
           { title: "Trademark Registration", href: "/trademark-registration" },
           { title: "Trademark Objection", href: "/trademark-objection" },
-          { title: "Trademark Certificate", href: "#tm-certificate" },
-          { title: "Trademark Opposition", href: "#tm-opposition" },
-          { title: "Trademark Hearing", href: "#tm-hearing" },
-          { title: "Trademark Rectification", href: "#tm-rectification" },
-        ],
-        // Column 2 from Screenshot 1
-        [
-          { title: "TM Infringement Notice", href: "#tm-infringement" },
           { title: "Trademark Renewal", href: "/trademark-renewal" },
-          { title: "Trademark Transfer", href: "#tm-transfer" },
-          { title: "Expedited TM Registration", href: "#tm-expedited" },
-          { title: "Logo Designing", href: "#logo-design" },
-          { title: "Design Registration", href: "#design-reg" },
-        ],
-        // Column 3 from Screenshot 1
-        [
-          { title: "Design Objection", href: "#design-objection" },
-          { title: "Copyright Registration", href: "#copyright-reg" },
-          { title: "Copyright Objection", href: "#copyright-objection" },
-          { title: "Patent Registration", href: "#patent-reg" },
-          { title: "Trademark Protection", href: "#tm-protection" },
         ],
       ],
     },
