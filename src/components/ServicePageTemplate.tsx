@@ -1706,7 +1706,7 @@ export default function ServicePageTemplate({
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-normal leading-tight text-[#12023B] tracking-tight">
                   {heroTitle}
                 </h1>
-                <p className="text-xs sm:text-sm md:text-base leading-relaxed text-slate-600 font-light max-w-2xl xl:max-w-3xl">
+                <p className="text-xs sm:text-sm md:text-base leading-relaxed text-slate-800 font-normal max-w-2xl xl:max-w-3xl">
                   {heroSubtitle}
                 </p>
               </div>
@@ -1734,7 +1734,7 @@ export default function ServicePageTemplate({
                             {feat.text}
                           </a>
                         ) : (
-                          <span className="text-xs sm:text-[13px] text-slate-700 font-light group-hover:text-slate-900 transition-colors">{feat.text}</span>
+                          <span className="text-xs sm:text-[13px] text-slate-800 font-medium group-hover:text-slate-950 transition-colors">{feat.text}</span>
                         )}
                       </div>
                     ))
@@ -1744,7 +1744,7 @@ export default function ServicePageTemplate({
                         <div className="w-8 h-8 rounded-lg bg-[#F5F3FF] text-[#6B4BFF] flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#EDE9FE] transition-all duration-200">
                           <Users className="w-4 h-4" />
                         </div>
-                        <span className="text-xs sm:text-[13px] text-slate-700 font-light">
+                        <span className="text-xs sm:text-[13px] text-slate-800 font-medium">
                           Eligibility Check &amp; Advisory
                         </span>
                       </div>
@@ -1752,7 +1752,7 @@ export default function ServicePageTemplate({
                         <div className="w-8 h-8 rounded-lg bg-[#F5F3FF] text-[#6B4BFF] flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#EDE9FE] transition-all duration-200">
                           <FileText className="w-4 h-4" />
                         </div>
-                        <span className="text-xs sm:text-[13px] text-slate-700 font-light">
+                        <span className="text-xs sm:text-[13px] text-slate-800 font-medium">
                           Document Review &amp; Drafting
                         </span>
                       </div>
@@ -1760,7 +1760,7 @@ export default function ServicePageTemplate({
                         <div className="w-8 h-8 rounded-lg bg-[#F5F3FF] text-[#6B4BFF] flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#EDE9FE] transition-all duration-200">
                           <Building className="w-4 h-4" />
                         </div>
-                        <span className="text-xs sm:text-[13px] text-slate-700 font-light">
+                        <span className="text-xs sm:text-[13px] text-slate-800 font-medium">
                           Government Portal Application Filing
                         </span>
                       </div>
@@ -1768,7 +1768,7 @@ export default function ServicePageTemplate({
                         <div className="w-8 h-8 rounded-lg bg-[#F5F3FF] text-[#6B4BFF] flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#EDE9FE] transition-all duration-200">
                           <ShieldCheck className="w-4 h-4" />
                         </div>
-                        <span className="text-xs sm:text-[13px] text-slate-700 font-light">
+                        <span className="text-xs sm:text-[13px] text-slate-800 font-medium">
                           Official Certificate Issuance
                         </span>
                       </div>
@@ -1795,7 +1795,7 @@ export default function ServicePageTemplate({
                     <span>4.4</span>
                     <span className="text-amber-400 text-xs">★★★★★</span>
                   </div>
-                  <div className="text-[11px] font-light text-slate-500 mt-0.5">Verified Reviews</div>
+                  <div className="text-[11px] font-normal text-slate-700 mt-0.5">Verified Reviews</div>
                 </div>
 
                 <div className="p-3 rounded-xl bg-white/90 border border-slate-200/70 shadow-3xs hover:border-[#155EEF] hover:shadow-md hover:shadow-blue-500/10 hover:-translate-y-1 hover:bg-white transition-all duration-200 cursor-pointer group">
@@ -1803,7 +1803,7 @@ export default function ServicePageTemplate({
                     <Award className="w-3.5 h-3.5 text-[#D97706]" />
                     <span>15+ Years</span>
                   </div>
-                  <div className="text-[11px] font-light text-slate-500 mt-0.5">Experience</div>
+                  <div className="text-[11px] font-normal text-slate-700 mt-0.5">Experience</div>
                 </div>
 
                 <div className="p-3 rounded-xl bg-white/90 border border-slate-200/70 shadow-3xs hover:border-[#155EEF] hover:shadow-md hover:shadow-blue-500/10 hover:-translate-y-1 hover:bg-white transition-all duration-200 cursor-pointer group">
@@ -1811,7 +1811,7 @@ export default function ServicePageTemplate({
                     <Users className="w-3.5 h-3.5 text-[#6B4BFF]" />
                     <span>2 Lakh+</span>
                   </div>
-                  <div className="text-[11px] font-light text-slate-500 mt-0.5">Customers Served</div>
+                  <div className="text-[11px] font-normal text-slate-700 mt-0.5">Customers Served</div>
                 </div>
 
                 <div className="p-3 rounded-xl bg-white/90 border border-slate-200/70 shadow-3xs hover:border-[#155EEF] hover:shadow-md hover:shadow-blue-500/10 hover:-translate-y-1 hover:bg-white transition-all duration-200 cursor-pointer group">
@@ -1819,7 +1819,7 @@ export default function ServicePageTemplate({
                     <Smartphone className="w-3.5 h-3.5 text-[#00B074]" />
                     <span>Live Tracking</span>
                   </div>
-                  <div className="text-[11px] font-light text-slate-500 mt-0.5">Status &amp; Alerts</div>
+                  <div className="text-[11px] font-normal text-slate-700 mt-0.5">Status &amp; Alerts</div>
                 </div>
               </div>
             </div>
@@ -1837,7 +1837,7 @@ export default function ServicePageTemplate({
                 </div>
 
                 <h2 className="text-lg sm:text-xl font-medium text-[#12023B] leading-snug">{formTitle}</h2>
-                <p className="mt-1 text-xs text-slate-500 font-light leading-relaxed mb-4">{formSubtitle}</p>
+                <p className="mt-1 text-xs text-slate-700 font-normal leading-relaxed mb-4">{formSubtitle}</p>
 
                 {formSubmitted ? (
                   <div className="text-center py-8 space-y-3">
@@ -2026,7 +2026,7 @@ export default function ServicePageTemplate({
               <h2 className="text-2xl sm:text-3xl font-normal text-[#111827]">
                 {spotlightData.mandatoryTitle}
               </h2>
-              <p className="mt-2 text-xs sm:text-sm text-slate-500 font-light max-w-2xl mx-auto">
+              <p className="mt-2 text-xs sm:text-sm text-slate-700 font-normal max-w-2xl mx-auto">
                 {spotlightData.mandatorySubtitle}
               </p>
             </div>
@@ -2127,11 +2127,11 @@ export default function ServicePageTemplate({
                         <h4 className="text-[14.5px] sm:text-[15px] font-medium text-[#111827] group-hover:text-slate-950 transition-colors">
                           {item.title}
                         </h4>
-                        <p className="text-[12.5px] sm:text-[13px] text-slate-600 font-light leading-relaxed mt-1.5">
+                        <p className="text-[12.5px] sm:text-[13px] text-slate-800 font-normal leading-relaxed mt-1.5">
                           {item.desc}
                         </p>
                       </div>
-                      <div className="mt-3.5 pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400 group-hover:text-slate-600">
+                      <div className="mt-3.5 pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 group-hover:text-slate-700">
                         <span className="text-[11px] font-medium uppercase tracking-wider">Statutory Mandate</span>
                         <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                       </div>
@@ -2148,7 +2148,7 @@ export default function ServicePageTemplate({
               <div className="w-full border-t border-slate-200/80" />
             </div>
             <div className="relative flex justify-center">
-              <span className="bg-white px-4 py-1 text-xs font-semibold uppercase tracking-wider text-slate-400 border border-slate-200/80 rounded-full shadow-2xs">
+              <span className="bg-white px-4 py-1 text-xs font-semibold uppercase tracking-wider text-slate-500 border border-slate-200/80 rounded-full shadow-2xs">
                 The Merrafilings Legal &amp; Compliance Advantage
               </span>
             </div>
@@ -2164,7 +2164,7 @@ export default function ServicePageTemplate({
               <h2 className="text-2xl sm:text-3xl font-normal text-[#111827]">
                 {spotlightData.chooseTitle}
               </h2>
-              <p className="mt-2 text-xs sm:text-sm text-slate-500 font-light max-w-2xl mx-auto">
+              <p className="mt-2 text-xs sm:text-sm text-slate-700 font-normal max-w-2xl mx-auto">
                 {spotlightData.chooseSubtitle}
               </p>
             </div>
@@ -2185,13 +2185,13 @@ export default function ServicePageTemplate({
                         <h4 className="text-[14.5px] sm:text-[15px] font-medium text-[#111827] group-hover:text-slate-950 transition-colors">
                           {item.title}
                         </h4>
-                        <p className="text-[12.5px] sm:text-[13px] text-slate-600 font-light leading-relaxed mt-1.5">
+                        <p className="text-[12.5px] sm:text-[13px] text-slate-800 font-normal leading-relaxed mt-1.5">
                           {item.desc}
                         </p>
                       </div>
-                      <div className="mt-3.5 pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400 group-hover:text-emerald-600">
+                      <div className="mt-3.5 pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 group-hover:text-emerald-700">
                         <span className="text-[11px] font-medium uppercase tracking-wider">Guaranteed Quality</span>
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
                       </div>
                     </div>
                   ))}
@@ -2284,7 +2284,7 @@ export default function ServicePageTemplate({
         <div className="w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10">
           <div className="text-center max-w-3xl xl:max-w-4xl mx-auto mb-12">
             <h2 className="text-2xl sm:text-3xl font-normal text-[#111827]">{pricingTitle}</h2>
-            <p className="mt-2 text-xs sm:text-sm text-slate-500 font-light">{pricingSubtitle}</p>
+            <p className="mt-2 text-xs sm:text-sm text-slate-700 font-normal">{pricingSubtitle}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 xl:gap-10 items-stretch">
@@ -2310,7 +2310,7 @@ export default function ServicePageTemplate({
                     <h3 className="text-[17px] sm:text-[18px] font-normal text-[#111827] group-hover:text-emerald-950 transition-colors">
                       {pkg.name}
                     </h3>
-                    <p className="text-[12.5px] font-light text-slate-500 mt-2 leading-relaxed">
+                    <p className="text-[12.5px] font-normal text-slate-700 mt-2 leading-relaxed">
                       {pkg.shortDesc}{" "}
                       {pkg.expandedDesc && (
                         <button
@@ -2327,7 +2327,7 @@ export default function ServicePageTemplate({
                     </p>
 
                     {pkg.expandedDesc && expandedCard === cardNum && (
-                      <p className="text-[12px] font-light text-slate-600 mt-2 bg-[#F8FAFC] p-3 rounded-lg border border-[#E4E7EC]">
+                      <p className="text-[12px] font-normal text-slate-800 mt-2 bg-[#F8FAFC] p-3 rounded-lg border border-[#E4E7EC]">
                         {pkg.expandedDesc}
                       </p>
                     )}
@@ -2336,12 +2336,12 @@ export default function ServicePageTemplate({
                       <div className="text-[26px] sm:text-[28px] font-normal text-[#111827] tracking-tight">
                         {pkg.price}
                       </div>
-                      <p className="text-[11.5px] font-light text-slate-400 mt-0.5">{pkg.priceSub}</p>
+                      <p className="text-[11.5px] font-normal text-slate-600 mt-0.5">{pkg.priceSub}</p>
                     </div>
 
                     <div className="pt-2">
-                      <p className="text-[12.5px] font-light text-slate-500 mb-3">What&apos;s included:</p>
-                      <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
+                      <p className="text-[12.5px] font-semibold text-slate-800 mb-3">What&apos;s included:</p>
+                      <ul className="space-y-2 text-[12.5px] font-normal text-slate-800">
                         {pkg.features.map((feat, fIdx) => (
                           <li key={fIdx} className="flex items-center gap-2">
                             <svg
@@ -2389,7 +2389,7 @@ export default function ServicePageTemplate({
       <section id="overview-section" className="py-14 sm:py-16 bg-white">
         <div className="w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10">
           {/* Breadcrumb Navigation */}
-          <nav className="flex items-center gap-2 text-[13px] font-light text-slate-500 mb-6 flex-wrap">
+          <nav className="flex items-center gap-2 text-[13px] font-normal text-slate-700 mb-6 flex-wrap">
             <a href="/" className="hover:text-[#155EEF] transition-colors">
               Merrafilings
             </a>
@@ -2578,7 +2578,7 @@ export default function ServicePageTemplate({
         <div className="w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10">
           <div className="w-12 h-[3px] bg-[#00A86B] mb-3" />
           <h2 className="text-2xl sm:text-[28px] font-normal text-[#111827]">Frequently asked questions</h2>
-          <p className="text-[13px] sm:text-[13.5px] font-light text-slate-500 mt-1.5 mb-8">
+          <p className="text-[13px] sm:text-[13.5px] font-normal text-slate-700 mt-1.5 mb-8">
             {faqSubtitle || `Common questions about ${breadcrumbCurrent} in India.`}
           </p>
 
@@ -2607,7 +2607,7 @@ export default function ServicePageTemplate({
                       />
                     </div>
                     {isOpen && (
-                      <div className="px-5 pb-4.5 pt-1 text-[13px] font-light text-slate-600 leading-relaxed border-t border-slate-100">
+                      <div className="px-5 pb-4.5 pt-1 text-[13.5px] font-normal text-slate-800 leading-relaxed border-t border-slate-100 bg-[#F8FAFC]/50">
                         {faq.a}
                       </div>
                     )}
@@ -2640,7 +2640,7 @@ export default function ServicePageTemplate({
                       />
                     </div>
                     {isOpen && (
-                      <div className="px-5 pb-4.5 pt-1 text-[13px] font-light text-slate-600 leading-relaxed border-t border-slate-100">
+                      <div className="px-5 pb-4.5 pt-1 text-[13.5px] font-normal text-slate-800 leading-relaxed border-t border-slate-100 bg-[#F8FAFC]/50">
                         {faq.a}
                       </div>
                     )}

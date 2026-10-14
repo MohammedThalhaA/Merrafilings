@@ -250,8 +250,8 @@ function TrademarkObjectionGuideContent() {
     <>
       {/* Intro */}
       <div>
-        <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
-          A <strong className="font-medium text-slate-800">Trademark Objection</strong> is a formal legal query raised by the Trademark Examiner during the substantive examination stage of your application under the Trade Marks Act, 1999. Published in an official <strong className="font-medium text-slate-800">Examination Report</strong>, an objection halts your application&apos;s progress toward registration. The applicant must mandatorily file a comprehensive, legally reasoned written reply within <strong className="font-medium text-slate-800">30 days</strong> of receiving the report. Failure to respond within this strict statutory deadline results in the Trademark Registry deeming the application <strong className="font-medium text-rose-700">&quot;Abandoned&quot;</strong>, causing permanent forfeiture of your priority date and brand investment.
+        <p className="text-[14.5px] font-normal text-slate-900 leading-relaxed">
+          A <strong className="font-semibold text-slate-950">Trademark Objection</strong> is a formal legal query raised by the Trademark Examiner during the substantive examination stage of your application under the Trade Marks Act, 1999. Published in an official <strong className="font-semibold text-slate-950">Examination Report</strong>, an objection halts your application&apos;s progress toward registration. The applicant must mandatorily file a comprehensive, legally reasoned written reply within <strong className="font-semibold text-slate-950">30 days</strong> of receiving the report. Failure to respond within this strict statutory deadline results in the Trademark Registry deeming the application <strong className="font-semibold text-rose-700">&quot;Abandoned&quot;</strong>, causing permanent forfeiture of your priority date and brand investment.
         </p>
       </div>
 
@@ -260,25 +260,25 @@ function TrademarkObjectionGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           1. What is a Trademark Objection in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-[14.5px] leading-relaxed text-slate-900 font-normal">
           An objection does not mean your trademark has been rejected. It is an administrative show-cause opportunity granted by the Examiner for you to explain why your mark complies with statutory requirements. Objections are raised primarily under two provisions:
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
           <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-            <h3 className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
+            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
               <Scale className="w-4 h-4 text-emerald-600 shrink-0" />
               <span>Section 9: Absolute Grounds for Refusal</span>
             </h3>
-            <p className="text-xs text-slate-500 font-light mt-1.5 leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-1.5 leading-relaxed">
               Raised when the Examiner believes the mark is non-distinctive, purely descriptive of the goods/services (e.g., &quot;Best Coffee&quot;), customary in the trade, or deceptive.
             </p>
           </div>
           <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-            <h3 className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
+            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-blue-600 shrink-0" />
               <span>Section 11: Relative Grounds for Refusal</span>
             </h3>
-            <p className="text-xs text-slate-500 font-light mt-1.5 leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-1.5 leading-relaxed">
               Raised when your mark is identical with or deceptively similar to an earlier registered trademark or pending prior application in the same or similar class.
             </p>
           </div>
@@ -290,14 +290,14 @@ function TrademarkObjectionGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           2. Trademark Status Progression &amp; Meanings
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-[14.5px] leading-relaxed text-slate-900 font-normal">
           When tracking your application on the IP India electronic portal, your status will reflect one of the following stages:
         </p>
 
         {/* Table 1: Status Codes */}
         <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm mt-3">
-          <table className="w-full text-left text-xs sm:text-sm text-slate-600">
-            <thead className="bg-[#1F1646] text-white uppercase text-[11px] tracking-wider font-medium">
+          <table className="w-full text-left text-xs sm:text-sm text-slate-900 font-normal">
+            <thead className="bg-[#1F1646] text-white uppercase text-[11px] tracking-wider font-semibold">
               <tr>
                 <th className="py-3 px-4">Application Status</th>
                 <th className="py-3 px-4">Statutory Meaning</th>
@@ -306,34 +306,34 @@ function TrademarkObjectionGuideContent() {
             </thead>
             <tbody className="divide-y divide-slate-100 bg-white">
               <tr className="hover:bg-slate-50 transition-colors">
-                <td className="py-3 px-4 font-medium text-slate-900">Formalities Chk Pass</td>
-                <td className="py-3 px-4 font-light">Application passed initial check; under substantive examination</td>
-                <td className="py-3 px-4 font-light text-slate-500">Wait for Examination Report</td>
+                <td className="py-3 px-4 font-semibold text-slate-950">Formalities Chk Pass</td>
+                <td className="py-3 px-4 font-normal text-slate-900">Application passed initial check; under substantive examination</td>
+                <td className="py-3 px-4 font-medium text-slate-900">Wait for Examination Report</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors bg-rose-50/40">
                 <td className="py-3 px-4 font-semibold text-rose-700">Objected</td>
-                <td className="py-3 px-4 font-light text-rose-900">Examination report issued citing Section 9 or 11 objections</td>
+                <td className="py-3 px-4 font-normal text-rose-950">Examination report issued citing Section 9 or 11 objections</td>
                 <td className="py-3 px-4 font-bold text-rose-700">File Legal Reply Within 30 Days</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
-                <td className="py-3 px-4 font-medium text-emerald-700">Accepted &amp; Advertised</td>
-                <td className="py-3 px-4 font-light">Reply accepted; published in Trademark Journal for 4 months</td>
-                <td className="py-3 px-4 font-light text-slate-500">Monitor for third-party opposition</td>
+                <td className="py-3 px-4 font-semibold text-emerald-800">Accepted &amp; Advertised</td>
+                <td className="py-3 px-4 font-normal text-slate-900">Reply accepted; published in Trademark Journal for 4 months</td>
+                <td className="py-3 px-4 font-medium text-slate-900">Monitor for third-party opposition</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
-                <td className="py-3 px-4 font-medium text-amber-700">Opposed</td>
-                <td className="py-3 px-4 font-light">Third party filed formal opposition notice (Form TM-O)</td>
-                <td className="py-3 px-4 font-light text-slate-500">File Counter-Statement within 2 months</td>
+                <td className="py-3 px-4 font-semibold text-amber-800">Opposed</td>
+                <td className="py-3 px-4 font-normal text-slate-900">Third party filed formal opposition notice (Form TM-O)</td>
+                <td className="py-3 px-4 font-medium text-slate-900">File Counter-Statement within 2 months</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
-                <td className="py-3 px-4 font-medium text-emerald-700">Registered</td>
-                <td className="py-3 px-4 font-light">Trademark approved and official ® certificate issued</td>
-                <td className="py-3 px-4 font-light text-slate-500">Download certificate &amp; maintain for 10 years</td>
+                <td className="py-3 px-4 font-semibold text-emerald-800">Registered</td>
+                <td className="py-3 px-4 font-normal text-slate-900">Trademark approved and official ® certificate issued</td>
+                <td className="py-3 px-4 font-medium text-slate-900">Download certificate &amp; maintain for 10 years</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors bg-slate-100">
-                <td className="py-3 px-4 font-semibold text-slate-500">Abandoned</td>
-                <td className="py-3 px-4 font-light text-slate-500">Application dismissed due to failure to reply within 30 days</td>
-                <td className="py-3 px-4 font-light text-rose-600">File restoration or re-apply fresh</td>
+                <td className="py-3 px-4 font-semibold text-slate-950">Abandoned</td>
+                <td className="py-3 px-4 font-normal text-slate-900">Application dismissed due to failure to reply within 30 days</td>
+                <td className="py-3 px-4 font-medium text-rose-700">File restoration or re-apply fresh</td>
               </tr>
             </tbody>
           </table>
@@ -345,8 +345,8 @@ function TrademarkObjectionGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           3. The Critical 30-Day Statutory Limitation Period
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
-          Under Rule 33 of the Trade Marks Rules, 2017, the applicant must respond to the examination report within <strong className="font-medium text-slate-800">one month (30 days)</strong> from the date of receipt. While extensions were granted in earlier decades, the Registry strictly enforces this 30-day timeline today. If a reply is delayed, the system triggers an automated abandonment order. Merrafilings ensures your response is drafted, vetted, and lodged on the IP India gateway within 3 to 5 business days of notification.
+        <p className="text-[14.5px] leading-relaxed text-slate-900 font-normal">
+          Under Rule 33 of the Trade Marks Rules, 2017, the applicant must respond to the examination report within <strong className="font-semibold text-slate-950">one month (30 days)</strong> from the date of receipt. While extensions were granted in earlier decades, the Registry strictly enforces this 30-day timeline today. If a reply is delayed, the system triggers an automated abandonment order. Merrafilings ensures your response is drafted, vetted, and lodged on the IP India gateway within 3 to 5 business days of notification.
         </p>
       </section>
 
@@ -359,8 +359,8 @@ function TrademarkObjectionGuideContent() {
           <div className="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
             <div className="w-6 h-6 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-semibold shrink-0 mt-0.5">1</div>
             <div>
-              <h3 className="text-xs sm:text-sm font-medium text-slate-900">Examination Report Forensic Analysis</h3>
-              <p className="text-xs text-slate-500 font-light mt-0.5 leading-relaxed">
+              <h3 className="text-xs sm:text-sm font-semibold text-slate-950">Examination Report Forensic Analysis</h3>
+              <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-0.5 leading-relaxed">
                 Deconstruct the Examiner&apos;s specific grounds—whether raised under Section 9(1)(a), Section 9(1)(b), or conflicting marks cited under Section 11(1).
               </p>
             </div>
@@ -368,8 +368,8 @@ function TrademarkObjectionGuideContent() {
           <div className="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
             <div className="w-6 h-6 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-semibold shrink-0 mt-0.5">2</div>
             <div>
-              <h3 className="text-xs sm:text-sm font-medium text-slate-900">Evidence of Commercial Prior Use Compilation</h3>
-              <p className="text-xs text-slate-500 font-light mt-0.5 leading-relaxed">
+              <h3 className="text-xs sm:text-sm font-semibold text-slate-950">Evidence of Commercial Prior Use Compilation</h3>
+              <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-0.5 leading-relaxed">
                 Compile invoices, GST returns, audited turnover, website screenshots, and marketing materials proving continuous commercial use under a notarized User Affidavit.
               </p>
             </div>
@@ -377,8 +377,8 @@ function TrademarkObjectionGuideContent() {
           <div className="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
             <div className="w-6 h-6 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-semibold shrink-0 mt-0.5">3</div>
             <div>
-              <h3 className="text-xs sm:text-sm font-medium text-slate-900">Judicial Case Law Rebuttal Drafting</h3>
-              <p className="text-xs text-slate-500 font-light mt-0.5 leading-relaxed">
+              <h3 className="text-xs sm:text-sm font-semibold text-slate-950">Judicial Case Law Rebuttal Drafting</h3>
+              <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-0.5 leading-relaxed">
                 Draft a persuasive legal counter-argument referencing Supreme Court and Delhi High Court IP precedents establishing phonetic disparity and absence of consumer confusion.
               </p>
             </div>
@@ -386,8 +386,8 @@ function TrademarkObjectionGuideContent() {
           <div className="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
             <div className="w-6 h-6 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-semibold shrink-0 mt-0.5">4</div>
             <div>
-              <h3 className="text-xs sm:text-sm font-medium text-slate-900">Electronic Lodgement on IP India Gateway</h3>
-              <p className="text-xs text-slate-500 font-light mt-0.5 leading-relaxed">
+              <h3 className="text-xs sm:text-sm font-semibold text-slate-950">Electronic Lodgement on IP India Gateway</h3>
+              <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-0.5 leading-relaxed">
                 Submit the reply formally under Form TM-M with supporting digital exhibits and receive instant electronic receipt and filing timestamp.
               </p>
             </div>
@@ -395,8 +395,8 @@ function TrademarkObjectionGuideContent() {
           <div className="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
             <div className="w-6 h-6 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-semibold shrink-0 mt-0.5">5</div>
             <div>
-              <h3 className="text-xs sm:text-sm font-medium text-slate-900">Show-Cause Hearing Representation (If Required)</h3>
-              <p className="text-xs text-slate-500 font-light mt-0.5 leading-relaxed">
+              <h3 className="text-xs sm:text-sm font-semibold text-slate-950">Show-Cause Hearing Representation (If Required)</h3>
+              <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-0.5 leading-relaxed">
                 If the Examiner is not fully convinced by written submissions, our registered Trademark Attorney attends the formal virtual hearing to advocate for acceptance.
               </p>
             </div>
@@ -409,14 +409,14 @@ function TrademarkObjectionGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           5. Trademark Objection Fee Structure in India
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-[14.5px] leading-relaxed text-slate-900 font-normal">
           Understanding the fee components involved in filing a trademark objection response:
         </p>
 
         {/* Table 2: Fees */}
         <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm mt-3">
-          <table className="w-full text-left text-xs sm:text-sm text-slate-600">
-            <thead className="bg-[#1F1646] text-white uppercase text-[11px] tracking-wider font-medium">
+          <table className="w-full text-left text-xs sm:text-sm text-slate-900 font-normal">
+            <thead className="bg-[#1F1646] text-white uppercase text-[11px] tracking-wider font-semibold">
               <tr>
                 <th className="py-3 px-4">Fee Component</th>
                 <th className="py-3 px-4">Statutory Details</th>
@@ -425,24 +425,24 @@ function TrademarkObjectionGuideContent() {
             </thead>
             <tbody className="divide-y divide-slate-100 bg-white">
               <tr className="hover:bg-slate-50 transition-colors">
-                <td className="py-3 px-4 font-medium text-slate-900">Government Portal Filing Fee</td>
-                <td className="py-3 px-4 font-light">There is NO government statutory fee to file an objection reply</td>
-                <td className="py-3 px-4 font-bold text-emerald-700">₹0 (Nil)</td>
+                <td className="py-3 px-4 font-semibold text-slate-950">Government Portal Filing Fee</td>
+                <td className="py-3 px-4 font-normal text-slate-900">There is NO government statutory fee to file an objection reply</td>
+                <td className="py-3 px-4 font-bold text-emerald-800">₹0 (Nil)</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
-                <td className="py-3 px-4 font-medium text-slate-900">Notarized User Affidavit</td>
-                <td className="py-3 px-4 font-light">Non-judicial stamp paper fee + public notary attestation</td>
-                <td className="py-3 px-4 font-light">₹200 – ₹500</td>
+                <td className="py-3 px-4 font-semibold text-slate-950">Notarized User Affidavit</td>
+                <td className="py-3 px-4 font-normal text-slate-900">Non-judicial stamp paper fee + public notary attestation</td>
+                <td className="py-3 px-4 font-normal text-slate-900">₹200 – ₹500</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
-                <td className="py-3 px-4 font-medium text-slate-900">Professional Legal Drafting Fee</td>
-                <td className="py-3 px-4 font-light">Drafted by registered Trademark Attorney with case law citations</td>
-                <td className="py-3 px-4 font-semibold text-purple-700">₹2,499 – ₹4,499 (Merrafilings)</td>
+                <td className="py-3 px-4 font-semibold text-slate-950">Professional Legal Drafting Fee</td>
+                <td className="py-3 px-4 font-normal text-slate-900">Drafted by registered Trademark Attorney with case law citations</td>
+                <td className="py-3 px-4 font-semibold text-purple-800">₹2,499 – ₹4,499 (Merrafilings)</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
-                <td className="py-3 px-4 font-medium text-slate-900">Formal Hearing Fee (If Scheduled)</td>
-                <td className="py-3 px-4 font-light">Virtual appearance and arguments by Senior IP Counsel</td>
-                <td className="py-3 px-4 font-light">Optional Retainer</td>
+                <td className="py-3 px-4 font-semibold text-slate-950">Formal Hearing Fee (If Scheduled)</td>
+                <td className="py-3 px-4 font-normal text-slate-900">Virtual appearance and arguments by Senior IP Counsel</td>
+                <td className="py-3 px-4 font-medium text-slate-900">Optional Retainer</td>
               </tr>
             </tbody>
           </table>
@@ -454,25 +454,25 @@ function TrademarkObjectionGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           6. Why Choose Merrafilings for Trademark Objection Replies?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-[14.5px] leading-relaxed text-slate-900 font-normal">
           A generic, copy-pasted objection reply is the leading reason trademarks get abandoned. Merrafilings pairs your case with specialized IP advocates:
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs font-light text-slate-700">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs sm:text-[13px] font-normal text-slate-900">
           <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="group-hover:text-slate-900 transition-colors">97.6% First-Instance Examiner Acceptance Rate</span>
+            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">97.6% First-Instance Examiner Acceptance Rate</span>
           </div>
           <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="group-hover:text-slate-900 transition-colors">Expedited 48-Hour Turnaround Within 30-Day Window</span>
+            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">Expedited 48-Hour Turnaround Within 30-Day Window</span>
           </div>
           <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="group-hover:text-slate-900 transition-colors">Extensive High Court &amp; Supreme Court IP Citation Library</span>
+            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">Extensive High Court &amp; Supreme Court IP Citation Library</span>
           </div>
           <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="group-hover:text-slate-900 transition-colors">Complete Post-Filing Tracking Until Journal Advertisement</span>
+            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">Complete Post-Filing Tracking Until Journal Advertisement</span>
           </div>
         </div>
 

@@ -108,7 +108,7 @@ export default function TrademarkObjectionGuideLayout({
       <main className="flex-1 w-full max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
         {/* Breadcrumb Navigation */}
         <nav aria-label="Breadcrumb" className="mb-6">
-          <ol className="flex items-center gap-2 text-[12.5px] font-light text-slate-500 flex-wrap">
+          <ol className="flex items-center gap-2 text-[12.5px] font-normal text-slate-700 flex-wrap">
             <li>
               <Link href="/" className="hover:text-[#155EEF] transition-colors">
                 Home
@@ -165,7 +165,7 @@ export default function TrademarkObjectionGuideLayout({
             </h1>
 
             {/* Article Children Content */}
-            <div className="prose prose-slate max-w-none text-slate-700 font-light text-[14.5px] leading-relaxed space-y-6">
+            <div className="prose prose-slate max-w-none text-slate-900 font-normal text-[14.5px] leading-relaxed space-y-6">
               {children}
             </div>
 
@@ -181,7 +181,7 @@ export default function TrademarkObjectionGuideLayout({
                   <h3 className="text-xl sm:text-2xl font-normal text-white">
                     Received a Trademark Examination Report?
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-300 font-light max-w-xl">
+                  <p className="text-xs sm:text-sm text-slate-200 font-normal max-w-xl">
                     Don&apos;t let your application get deemed &quot;Abandoned&quot;. Merrafilings senior IP attorneys draft compelling legal replies with judicial citations and user affidavits within 48 hours.
                   </p>
                 </div>

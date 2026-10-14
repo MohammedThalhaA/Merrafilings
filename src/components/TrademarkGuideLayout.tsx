@@ -94,7 +94,7 @@ export default function TrademarkGuideLayout({
       <main className="flex-1 w-full max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
         {/* Breadcrumb Navigation */}
         <nav aria-label="Breadcrumb" className="mb-6">
-          <ol className="flex items-center gap-2 text-[12.5px] font-light text-slate-500 flex-wrap">
+          <ol className="flex items-center gap-2 text-[12.5px] font-normal text-slate-700 flex-wrap">
             <li>
               <Link href="/" className="hover:text-[#155EEF] transition-colors">
                 Home
@@ -104,7 +104,7 @@ export default function TrademarkGuideLayout({
             <li>
               <Link
                 href="/trademark-registration"
-                className="hover:text-[#155EEF] transition-colors font-medium text-slate-700"
+                className="hover:text-[#155EEF] transition-colors font-medium text-slate-800"
               >
                 Trademark Registration
               </Link>
@@ -121,7 +121,7 @@ export default function TrademarkGuideLayout({
           {/* Left Column: Article Body */}
           <article className="lg:col-span-8 bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-sm p-6 sm:p-10 lg:p-12">
             {/* Meta Header */}
-            <div className="flex items-center gap-3 sm:gap-4 pb-6 border-b border-slate-100 flex-wrap text-xs text-slate-500">
+            <div className="flex items-center gap-3 sm:gap-4 pb-6 border-b border-slate-100 flex-wrap text-xs text-slate-600">
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-purple-600 to-indigo-600 text-white flex items-center justify-center font-semibold text-xs shadow-xs">
                   <User className="w-4 h-4" />
@@ -151,7 +151,7 @@ export default function TrademarkGuideLayout({
             </h1>
 
             {/* Article Children Content */}
-            <div className="prose prose-slate max-w-none text-slate-700 font-light text-[14.5px] leading-relaxed space-y-6">
+            <div className="prose prose-slate max-w-none text-slate-900 font-normal text-[14.5px] leading-relaxed space-y-6">
               {children}
             </div>
 
@@ -167,7 +167,7 @@ export default function TrademarkGuideLayout({
                   <h3 className="text-xl sm:text-2xl font-normal text-white">
                     Ready to Protect Your Brand Identity?
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-300 font-light max-w-xl">
+                  <p className="text-xs sm:text-sm text-slate-200 font-normal max-w-xl">
                     Get your trademark filed with the IP India registry today. Same-day Form TM-A drafting, Nice classification guidance, and MSME 50% fee rebate assistance.
                   </p>
                 </div>

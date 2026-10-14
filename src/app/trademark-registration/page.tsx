@@ -338,8 +338,8 @@ function TrademarkRegistrationGuideContent() {
     <>
       {/* Intro */}
       <div>
-        <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
-          <strong className="font-medium text-slate-800">Trademark Registration in India</strong> is governed by the <strong className="font-medium text-slate-800">Trade Marks Act, 1999</strong> and administered by the Controller General of Patents, Designs, and Trade Marks (CGPDTM), Ministry of Commerce and Industry. A registered trademark grants the applicant exclusive legal ownership and nationwide monopoly over their brand name, logo, slogan, label, sound mark, or shape of goods. Obtaining a trademark prevents unauthorized third parties, competitors, and counterfeiters from using deceptive, confusingly similar marks, while creating an intangible commercial asset that significantly elevates enterprise valuation during venture funding, franchising, and licensing deals.
+        <p className="text-[14.5px] font-normal text-slate-900 leading-relaxed">
+          <strong className="font-semibold text-slate-950">Trademark Registration in India</strong> is governed by the <strong className="font-semibold text-slate-950">Trade Marks Act, 1999</strong> and administered by the Controller General of Patents, Designs, and Trade Marks (CGPDTM), Ministry of Commerce and Industry. A registered trademark grants the applicant exclusive legal ownership and nationwide monopoly over their brand name, logo, slogan, label, sound mark, or shape of goods. Obtaining a trademark prevents unauthorized third parties, competitors, and counterfeiters from using deceptive, confusingly similar marks, while creating an intangible commercial asset that significantly elevates enterprise valuation during venture funding, franchising, and licensing deals.
         </p>
       </div>
 
@@ -348,7 +348,7 @@ function TrademarkRegistrationGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           1. What is Trademark Registration in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-[14.5px] leading-relaxed text-slate-900 font-normal">
           A trademark is any visual or distinctive sign capable of being represented graphically and capable of distinguishing the goods or services of one enterprise from those of others. Trademark registration confers statutory protection under Section 28 of the Trade Marks Act 1999, providing the registered proprietor the exclusive right to use the mark in relation to the goods or services for which it is registered and to obtain legal relief in respect of trademark infringement.
         </p>
       </section>
@@ -358,34 +358,34 @@ function TrademarkRegistrationGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           2. Who Needs Trademark Registration in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-[14.5px] leading-relaxed text-slate-900 font-normal">
           Any individual, startup, MSME, or corporation that sells products or delivers services under a unique commercial identity needs trademark registration:
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pt-2">
           <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-            <h3 className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
+            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
               <Store className="w-4 h-4 text-emerald-600 shrink-0" />
               <span>E-Commerce &amp; D2C Brands</span>
             </h3>
-            <p className="text-xs text-slate-500 font-light mt-1.5 leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-1.5 leading-relaxed">
               Mandatory to unlock Amazon Brand Registry, Flipkart Brand Protection, and prevent unauthorized sellers from hijacking product listings.
             </p>
           </div>
           <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-            <h3 className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
+            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
               <Zap className="w-4 h-4 text-blue-600 shrink-0" />
               <span>Startups &amp; Tech Ventures</span>
             </h3>
-            <p className="text-xs text-slate-500 font-light mt-1.5 leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-1.5 leading-relaxed">
               Protects proprietary software, mobile app names, domain trademarks, and creates valuable IP assets required for institutional venture funding.
             </p>
           </div>
           <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-            <h3 className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
+            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
               <Factory className="w-4 h-4 text-purple-600 shrink-0" />
               <span>Manufacturers &amp; Traders</span>
             </h3>
-            <p className="text-xs text-slate-500 font-light mt-1.5 leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-1.5 leading-relaxed">
               Shields packaging artwork, product names, FMCG brand identities, and dealer networks against cheap counterfeit copies.
             </p>
           </div>
@@ -397,12 +397,12 @@ function TrademarkRegistrationGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           3. Core Benefits of Trademark Registration
         </h2>
-        <ul className="space-y-2 text-xs sm:text-sm text-slate-600 font-light pl-4 list-disc">
-          <li><strong>Exclusive Legal Monopoly:</strong> Complete legal right to prevent competitors from using the same or deceptively similar name in your industry.</li>
-          <li><strong>Right to Use the ® Symbol:</strong> Only registered trademark owners can display the prestigious ® symbol, proving verified authenticity to customers.</li>
-          <li><strong>Legal Protection Against Infringement:</strong> Power to file civil and criminal suits in court, obtain immediate interim injunctions, and seize counterfeit stock.</li>
-          <li><strong>Global Brand Protection:</strong> A registered Indian trademark serves as the base application to seek international protection across 130+ countries under the Madrid Protocol.</li>
-          <li><strong>Transferable Commercial Asset:</strong> Trademarks can be licensed, franchised, or sold, generating consistent royalty revenue.</li>
+        <ul className="space-y-2 text-xs sm:text-[13.5px] text-slate-900 font-normal pl-4 list-disc">
+          <li><strong className="font-semibold text-slate-950">Exclusive Legal Monopoly:</strong> Complete legal right to prevent competitors from using the same or deceptively similar name in your industry.</li>
+          <li><strong className="font-semibold text-slate-950">Right to Use the ® Symbol:</strong> Only registered trademark owners can display the prestigious ® symbol, proving verified authenticity to customers.</li>
+          <li><strong className="font-semibold text-slate-950">Legal Protection Against Infringement:</strong> Power to file civil and criminal suits in court, obtain immediate interim injunctions, and seize counterfeit stock.</li>
+          <li><strong className="font-semibold text-slate-950">Global Brand Protection:</strong> A registered Indian trademark serves as the base application to seek international protection across 130+ countries under the Madrid Protocol.</li>
+          <li><strong className="font-semibold text-slate-950">Transferable Commercial Asset:</strong> Trademarks can be licensed, franchised, or sold, generating consistent royalty revenue.</li>
         </ul>
       </section>
 
@@ -411,21 +411,21 @@ function TrademarkRegistrationGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           4. Types of Trademarks That Can Be Registered in India
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1 text-xs font-light text-slate-700">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1 text-xs sm:text-[12.5px] font-normal text-slate-800">
           <div className="p-3 rounded-lg bg-slate-50 border border-slate-200/70 text-center hover:bg-white hover:border-[#155EEF] transition-all">
-            <strong className="block text-slate-900 font-medium mb-1">Word Mark</strong>
+            <strong className="block text-slate-950 font-semibold mb-1">Word Mark</strong>
             Brand names, words, or letters (e.g., Apple, Nike)
           </div>
           <div className="p-3 rounded-lg bg-slate-50 border border-slate-200/70 text-center hover:bg-white hover:border-[#155EEF] transition-all">
-            <strong className="block text-slate-900 font-medium mb-1">Device / Logo Mark</strong>
+            <strong className="block text-slate-950 font-semibold mb-1">Device / Logo Mark</strong>
             Visual logos, symbols, or graphic representations
           </div>
           <div className="p-3 rounded-lg bg-slate-50 border border-slate-200/70 text-center hover:bg-white hover:border-[#155EEF] transition-all">
-            <strong className="block text-slate-900 font-medium mb-1">Tagline / Slogan</strong>
+            <strong className="block text-slate-950 font-semibold mb-1">Tagline / Slogan</strong>
             Catchy brand catchphrases (e.g., &quot;Just Do It&quot;)
           </div>
           <div className="p-3 rounded-lg bg-slate-50 border border-slate-200/70 text-center hover:bg-white hover:border-[#155EEF] transition-all">
-            <strong className="block text-slate-900 font-medium mb-1">Sound / 3D Mark</strong>
+            <strong className="block text-slate-950 font-semibold mb-1">Sound / 3D Mark</strong>
             Audio tunes, jingles, and distinctive product shapes
           </div>
         </div>
@@ -436,19 +436,19 @@ function TrademarkRegistrationGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           5. Trademark Search &amp; Nice Classification (Classes 1 to 45)
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
-          Before submitting an application, conducting an exhaustive search on the IP India database is mandatory to avoid objections under Section 11 (similarity with existing marks). Trademarks are filed under the international <strong className="font-medium text-slate-800">Nice Classification</strong> comprising 45 classes:
+        <p className="text-[14.5px] leading-relaxed text-slate-900 font-normal">
+          Before submitting an application, conducting an exhaustive search on the IP India database is mandatory to avoid objections under Section 11 (similarity with existing marks). Trademarks are filed under the international <strong className="font-semibold text-slate-950">Nice Classification</strong> comprising 45 classes:
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-xs font-light text-slate-700">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-xs sm:text-[13px] font-normal text-slate-800">
           <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
-            <h3 className="font-medium text-slate-900 text-xs sm:text-sm">Classes 1 to 34: Goods &amp; Manufactured Products</h3>
-            <p className="text-slate-500 mt-1 leading-relaxed">
+            <h3 className="font-semibold text-slate-950 text-xs sm:text-sm">Classes 1 to 34: Goods &amp; Manufactured Products</h3>
+            <p className="text-slate-800 mt-1 leading-relaxed">
               Covers chemicals, pharmaceuticals, electronics, textiles, apparel, jewelry, packaged food, beverages, and cosmetics.
             </p>
           </div>
           <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
-            <h3 className="font-medium text-slate-900 text-xs sm:text-sm">Classes 35 to 45: Commercial Services</h3>
-            <p className="text-slate-500 mt-1 leading-relaxed">
+            <h3 className="font-semibold text-slate-950 text-xs sm:text-sm">Classes 35 to 45: Commercial Services</h3>
+            <p className="text-slate-800 mt-1 leading-relaxed">
               Covers retail/wholesale trading, advertising, software &amp; IT development, banking, education, hospitality, and legal services.
             </p>
           </div>
@@ -460,14 +460,14 @@ function TrademarkRegistrationGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           6. The 8-Stage Trademark Registration Process in India
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-[14.5px] leading-relaxed text-slate-900 font-normal">
           The registration journey progresses through defined statutory milestones administered by the Trade Marks Registry:
         </p>
 
         {/* Table 1: Process */}
         <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm mt-3">
-          <table className="w-full text-left text-xs sm:text-sm text-slate-600">
-            <thead className="bg-[#1F1646] text-white uppercase text-[11px] tracking-wider font-medium">
+          <table className="w-full text-left text-xs sm:text-sm text-slate-900 font-normal">
+            <thead className="bg-[#1F1646] text-white uppercase text-[11px] tracking-wider font-semibold">
               <tr>
                 <th className="py-3 px-4">Stage</th>
                 <th className="py-3 px-4">Statutory Description</th>
@@ -477,43 +477,43 @@ function TrademarkRegistrationGuideContent() {
             <tbody className="divide-y divide-slate-100 bg-white">
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-bold text-[#594CF5]">1. Application Preparation</td>
-                <td className="py-3 px-4 font-medium text-slate-900">Document collation &amp; class mapping</td>
-                <td className="py-3 px-4 font-light">Audit logo artwork, draft goods/services list, execute Form TM-48 power of attorney</td>
+                <td className="py-3 px-4 font-semibold text-slate-950">Document collation &amp; class mapping</td>
+                <td className="py-3 px-4 font-normal text-slate-900">Audit logo artwork, draft goods/services list, execute Form TM-48 power of attorney</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-bold text-[#594CF5]">2. Online E-Filing</td>
-                <td className="py-3 px-4 font-medium text-slate-900">Submission on IP India gateway</td>
-                <td className="py-3 px-4 font-light">Form TM-A lodged, statutory fee paid, instant application number and ™ right generated</td>
+                <td className="py-3 px-4 font-semibold text-slate-950">Submission on IP India gateway</td>
+                <td className="py-3 px-4 font-normal text-slate-900">Form TM-A lodged, statutory fee paid, instant application number and ™ right generated</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-bold text-[#594CF5]">3. Formalities Check Pass</td>
-                <td className="py-3 px-4 font-medium text-slate-900">Administrative scrutiny</td>
-                <td className="py-3 px-4 font-light">Registry checks basic documents, user affidavit, fee concession eligibility (MSME/Startup)</td>
+                <td className="py-3 px-4 font-semibold text-slate-950">Administrative scrutiny</td>
+                <td className="py-3 px-4 font-normal text-slate-900">Registry checks basic documents, user affidavit, fee concession eligibility (MSME/Startup)</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-bold text-[#594CF5]">4. Substantive Examination</td>
-                <td className="py-3 px-4 font-medium text-slate-900">Examination by Examiner</td>
-                <td className="py-3 px-4 font-light">Searches existing database for conflicts under Section 9 (distinctiveness) and Section 11 (similarity)</td>
+                <td className="py-3 px-4 font-semibold text-slate-950">Examination by Examiner</td>
+                <td className="py-3 px-4 font-normal text-slate-900">Searches existing database for conflicts under Section 9 (distinctiveness) and Section 11 (similarity)</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-bold text-[#594CF5]">5. Journal Publication</td>
-                <td className="py-3 px-4 font-medium text-slate-900">Advertisement in TM Journal</td>
-                <td className="py-3 px-4 font-light">If accepted, published in the official weekly Trademark Journal for public notice</td>
+                <td className="py-3 px-4 font-semibold text-slate-950">Advertisement in TM Journal</td>
+                <td className="py-3 px-4 font-normal text-slate-900">If accepted, published in the official weekly Trademark Journal for public notice</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-bold text-[#594CF5]">6. 4-Month Opposition Window</td>
-                <td className="py-3 px-4 font-medium text-slate-900">Statutory public opposition</td>
-                <td className="py-3 px-4 font-light">Third parties can file opposition within 120 days; if opposed, counter-statement filed</td>
+                <td className="py-3 px-4 font-semibold text-slate-950">Statutory public opposition</td>
+                <td className="py-3 px-4 font-normal text-slate-900">Third parties can file opposition within 120 days; if opposed, counter-statement filed</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-bold text-[#594CF5]">7. Final Registration Approval</td>
-                <td className="py-3 px-4 font-medium text-slate-900">Clearance post-opposition</td>
-                <td className="py-3 px-4 font-light">Upon completion of opposition period without objections, mark moves to certificate stage</td>
+                <td className="py-3 px-4 font-semibold text-slate-950">Clearance post-opposition</td>
+                <td className="py-3 px-4 font-normal text-slate-900">Upon completion of opposition period without objections, mark moves to certificate stage</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors bg-purple-50/40">
                 <td className="py-3 px-4 font-bold text-purple-700">8. ® Certificate Grant</td>
-                <td className="py-3 px-4 font-semibold text-slate-900">Official Registration Certificate</td>
-                <td className="py-3 px-4 font-light text-slate-800">Digitally signed, QR-coded Certificate issued with 10-year validity</td>
+                <td className="py-3 px-4 font-semibold text-slate-950">Official Registration Certificate</td>
+                <td className="py-3 px-4 font-medium text-slate-900">Digitally signed, QR-coded Certificate issued with 10-year validity</td>
               </tr>
             </tbody>
           </table>
@@ -525,14 +525,14 @@ function TrademarkRegistrationGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           7. Typical Trademark Registration Timelines in India
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-[14.5px] leading-relaxed text-slate-900 font-normal">
           While you obtain the legal right to use the ™ symbol on the very day of filing, the complete progression to the ® symbol typically spans:
         </p>
 
         {/* Table 2: Timeline */}
         <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm mt-3">
-          <table className="w-full text-left text-xs sm:text-sm text-slate-600">
-            <thead className="bg-[#1F1646] text-white uppercase text-[11px] tracking-wider font-medium">
+          <table className="w-full text-left text-xs sm:text-sm text-slate-900 font-normal">
+            <thead className="bg-[#1F1646] text-white uppercase text-[11px] tracking-wider font-semibold">
               <tr>
                 <th className="py-3 px-4">Registration Milestone</th>
                 <th className="py-3 px-4">Standard Estimated Duration</th>
@@ -540,24 +540,24 @@ function TrademarkRegistrationGuideContent() {
             </thead>
             <tbody className="divide-y divide-slate-100 bg-white">
               <tr className="hover:bg-slate-50 transition-colors">
-                <td className="py-3 px-4 font-medium text-slate-900">Filing Form TM-A &amp; ™ Symbol Right</td>
-                <td className="py-3 px-4 font-semibold text-emerald-700">Same Day (Within 24 Hours)</td>
+                <td className="py-3 px-4 font-semibold text-slate-950">Filing Form TM-A &amp; ™ Symbol Right</td>
+                <td className="py-3 px-4 font-semibold text-emerald-800">Same Day (Within 24 Hours)</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
-                <td className="py-3 px-4 font-medium text-slate-900">Formalities Check &amp; Examination Report</td>
-                <td className="py-3 px-4 font-light">1 to 3 Months</td>
+                <td className="py-3 px-4 font-semibold text-slate-950">Formalities Check &amp; Examination Report</td>
+                <td className="py-3 px-4 font-normal text-slate-900">1 to 3 Months</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
-                <td className="py-3 px-4 font-medium text-slate-900">Advertisement in Trademark Journal</td>
-                <td className="py-3 px-4 font-light">2 to 4 Weeks Post-Acceptance</td>
+                <td className="py-3 px-4 font-semibold text-slate-950">Advertisement in Trademark Journal</td>
+                <td className="py-3 px-4 font-normal text-slate-900">2 to 4 Weeks Post-Acceptance</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
-                <td className="py-3 px-4 font-medium text-slate-900">Statutory Public Opposition Window</td>
-                <td className="py-3 px-4 font-light">4 Months (Mandatory by Law)</td>
+                <td className="py-3 px-4 font-semibold text-slate-950">Statutory Public Opposition Window</td>
+                <td className="py-3 px-4 font-normal text-slate-900">4 Months (Mandatory by Law)</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
-                <td className="py-3 px-4 font-medium text-slate-900">Final ® Certificate Generation</td>
-                <td className="py-3 px-4 font-light">2 to 4 Weeks Post-Opposition</td>
+                <td className="py-3 px-4 font-semibold text-slate-950">Final ® Certificate Generation</td>
+                <td className="py-3 px-4 font-normal text-slate-900">2 to 4 Weeks Post-Opposition</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors bg-purple-50/40">
                 <td className="py-3 px-4 font-bold text-purple-700">Total Turnaround (Uncontested Mark)</td>
@@ -573,19 +573,19 @@ function TrademarkRegistrationGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           8. Statutory Government Fees &amp; 50% Startup Concessions
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-[14.5px] leading-relaxed text-slate-900 font-normal">
           The Trade Marks Rules, 2017 offer generous government fee rebates to promote startups and micro enterprises:
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-xs font-light text-slate-700">
-          <div className="p-3.5 rounded-xl bg-emerald-50/50 border border-emerald-200/60">
-            <h3 className="font-semibold text-emerald-900 text-xs sm:text-sm">Individuals, Startups &amp; MSMEs: ₹4,500 / Class</h3>
-            <p className="text-emerald-800 mt-1 leading-relaxed">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-xs sm:text-[13px] font-normal text-slate-800">
+          <div className="p-3.5 rounded-xl bg-emerald-50/60 border border-emerald-200/80">
+            <h3 className="font-semibold text-emerald-950 text-xs sm:text-sm">Individuals, Startups &amp; MSMEs: ₹4,500 / Class</h3>
+            <p className="text-emerald-900 mt-1 leading-relaxed">
               Proprietorships, individuals, DPIIT recognized startups, and Udyam-registered enterprises pay 50% discounted government fee of ₹4,500 per class (e-filing).
             </p>
           </div>
-          <div className="p-3.5 rounded-xl bg-blue-50/50 border border-blue-200/60">
-            <h3 className="font-semibold text-blue-900 text-xs sm:text-sm">Corporates &amp; Non-MSMEs: ₹9,000 / Class</h3>
-            <p className="text-blue-800 mt-1 leading-relaxed">
+          <div className="p-3.5 rounded-xl bg-blue-50/60 border border-blue-200/80">
+            <h3 className="font-semibold text-blue-950 text-xs sm:text-sm">Corporates &amp; Non-MSMEs: ₹9,000 / Class</h3>
+            <p className="text-blue-900 mt-1 leading-relaxed">
               Private Limited companies, Public Limited, LLPs, and foreign corporate entities without MSME/Startup certificates pay the standard ₹9,000 per class.
             </p>
           </div>
@@ -598,29 +598,29 @@ function TrademarkRegistrationGuideContent() {
           9. Mandatory Documents for Trademark Registration
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] transition-all">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span className="text-xs text-slate-700 font-light">Brand Name, Slogan, or High-Resolution Logo Artwork</span>
+            <span className="text-xs sm:text-[13px] text-slate-900 font-medium">Brand Name, Slogan, or High-Resolution Logo Artwork</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] transition-all">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span className="text-xs text-slate-700 font-light">PAN &amp; Aadhaar / Passport of the applicant</span>
+            <span className="text-xs sm:text-[13px] text-slate-900 font-medium">PAN &amp; Aadhaar / Passport of the applicant</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] transition-all">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span className="text-xs text-slate-700 font-light">Certificate of Incorporation / Partnership Deed (if company)</span>
+            <span className="text-xs sm:text-[13px] text-slate-900 font-medium">Certificate of Incorporation / Partnership Deed (if company)</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] transition-all">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span className="text-xs text-slate-700 font-light">Udyam Registration Certificate (for 50% fee concession)</span>
+            <span className="text-xs sm:text-[13px] text-slate-900 font-medium">Udyam Registration Certificate (for 50% fee concession)</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] transition-all">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span className="text-xs text-slate-700 font-light">Signed Form TM-48 (Legal Power of Attorney)</span>
+            <span className="text-xs sm:text-[13px] text-slate-900 font-medium">Signed Form TM-48 (Legal Power of Attorney)</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] transition-all">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span className="text-xs text-slate-700 font-light">User Affidavit with proof of prior usage date (if mark in use)</span>
+            <span className="text-xs sm:text-[13px] text-slate-900 font-medium">User Affidavit with proof of prior usage date (if mark in use)</span>
           </div>
         </div>
       </section>
@@ -630,25 +630,25 @@ function TrademarkRegistrationGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           10. Why Choose Merrafilings for Trademark Registration?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-[14.5px] leading-relaxed text-slate-900 font-normal">
           Merrafilings is India&apos;s leading Intellectual Property firm, managing trademark filings for over 100,000+ businesses with the highest first-time grant rate:
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs font-light text-slate-700">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs sm:text-[13px] font-normal text-slate-900">
           <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="group-hover:text-slate-900 transition-colors">Same-Day Filing &amp; Instant Application Number</span>
+            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">Same-Day Filing &amp; Instant Application Number</span>
           </div>
           <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="group-hover:text-slate-900 transition-colors">Dedicated Trademark Attorneys &amp; Registered IP Agents</span>
+            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">Dedicated Trademark Attorneys &amp; Registered IP Agents</span>
           </div>
           <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="group-hover:text-slate-900 transition-colors">Complimentary Multi-Layered Conflict Search</span>
+            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">Complimentary Multi-Layered Conflict Search</span>
           </div>
           <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="group-hover:text-slate-900 transition-colors">Full 10-Year Validity Tracking &amp; Certificate Vault</span>
+            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">Full 10-Year Validity Tracking &amp; Certificate Vault</span>
           </div>
         </div>
 
