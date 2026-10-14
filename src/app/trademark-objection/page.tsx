@@ -196,12 +196,34 @@ const PACKAGES: PricingPackage[] = [
 ];
 
 const RELATED_GUIDES = [
-  "Understanding Section 9 vs Section 11 Trademark Objections",
-  "How to Respond to a Trademark Examination Report Within 30 Days",
-  "How to Draft a User Affidavit with Invoices for Trademark Defense",
-  "What Happens If You Do Not Respond to a Trademark Objection in Time",
-  "How to Check Trademark Application Status on IP India Portal",
-  "Difference Between Trademark Objection and Trademark Opposition"
+  {
+    title: "Trademark Objection Guidelines: A Comprehensive Guide",
+    href: "/trademark-objection/trademark-objection-guidelines-a-comprehensive-guide",
+  },
+  {
+    title: "Apply Trademark Objection: Step-by-Step Guide",
+    href: "/trademark-objection/apply-trademark-objection-stepbystep-guide",
+  },
+  {
+    title: "Trademark Objection Required Documents: Complete Guide",
+    href: "/trademark-objection/trademark-objection-required-documents-guide",
+  },
+  {
+    title: "Unlock the Power of Trademark Registration in India",
+    href: "/trademark-objection/unlock-the-power-of-trademark-registration-in-india",
+  },
+  {
+    title: "Understanding Trademark Objection: A Complete Guide",
+    href: "/trademark-objection/understanding-trademark-objection-a-complete-guide",
+  },
+  {
+    title: "Trademark Objection in India: Complete Guide",
+    href: "/trademark-objection/trademark-objection-in-india-complete-guide",
+  },
+  {
+    title: "Documents Required for Trademark Objection",
+    href: "/trademark-objection/documents-required-for-trademark-objection",
+  },
 ];
 
 const RELATED_SERVICES_TAGS = [
