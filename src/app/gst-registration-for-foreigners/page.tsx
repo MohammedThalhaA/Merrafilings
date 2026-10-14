@@ -153,28 +153,28 @@ const FAQ_COL_2 = [
 
 const RELATED_GUIDES = [
   {
-    title: "GST Registration for Foreigners: Complete Step-by-Step Guide",
-    href: "/gst-registration-for-foreigners",
+    title: "GST Registration for Foreigners: 5 Easy Steps",
+    href: "/gst-registration-for-foreigners/gst-registration-for-foreigners-5-easy-steps",
   },
   {
-    title: "GST Registration Online: Process, Eligibility & Documentation",
-    href: "/gst-registration",
+    title: "Understanding GST Registration for Foreigners: A Complete Guide",
+    href: "/gst-registration-for-foreigners/gst-registration-for-foreigners-simplified",
   },
   {
-    title: "GST Return Filing by Accountants: Form GSTR-1, 3B & GSTR-5",
-    href: "/gst-return-filing",
+    title: "Comprehensive Guide to GST Registration for NRI Businesses in India",
+    href: "/gst-registration-for-foreigners/gst-registration-for-nri-businesses-in-india",
   },
   {
-    title: "GST Annual Return Filing (GSTR-9 & GSTR-9C) Complete Guide",
-    href: "/gst-annual-return",
-  },
-  {
-    title: "GST Letter of Undertaking (LUT) Filing for Zero-Rated Exports",
-    href: "/gst-lut",
+    title: "GST Registration for Foreigners in India: Legal Compliance",
+    href: "/gst-registration-for-foreigners/gst-registration-for-foreigners-in-india-new",
   },
   {
     title: "GST Notice Reply & Legal Response Solutions in India",
     href: "/gst-notice",
+  },
+  {
+    title: "GST Annual Return Filing (GSTR-9 & GSTR-9C) Complete Guide",
+    href: "/gst-annual-return",
   },
 ];
 
