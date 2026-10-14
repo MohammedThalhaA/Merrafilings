@@ -115,9 +115,9 @@ export const NAV_CATEGORIES: NavCategory[] = [
       columns: [
         // Column 1 from Screenshot 1
         [
-          { title: "GST Registration", href: "#gst-reg" },
-          { title: "GST Return Filing by Accountant", href: "#gst-returns" },
-          { title: "GST LUT Form", href: "#gst-lut" },
+          { title: "GST Registration", href: "/gst-registration" },
+          { title: "GST Return Filing by Accountant", href: "/gst-return-filing" },
+          { title: "GST LUT Form", href: "/gst-lut" },
           { title: "GST Notice", href: "#gst-notice" },
           { title: "GST Annual Return Filing (GSTR-9)", href: "#gstr-9" },
         ],
