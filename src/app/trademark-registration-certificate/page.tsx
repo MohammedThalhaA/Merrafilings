@@ -147,12 +147,34 @@ const PACKAGES: PricingPackage[] = [
 ];
 
 const RELATED_GUIDES = [
-  "How to Download Trademark Certificate Online from IP India",
-  "Understanding Form RG-2: Trademark Certificate Components",
-  "When Can You Legally Use the Registered (R) Symbol?",
-  "How to Correct Spelling or Address Errors in Trademark Certificate",
-  "How to Get a Certified True Copy of Trademark for Court Disputes",
-  "Trademark Renewal vs Certificate Re-issuance: Key Differences",
+  {
+    title: "Trademark Certificate Brand Monitoring Guides",
+    href: "/trademark-registration-certificate/trademark-certificate-brand-monitoring-guides",
+  },
+  {
+    title: "Trademark Certificate Brand Monitoring Guide",
+    href: "/trademark-registration-certificate/trademark-certificate-brand-monitoring-guide",
+  },
+  {
+    title: "Trademark Certificate Brand Monitoring Guide (Legal & Evidence)",
+    href: "/trademark-registration-certificate/trademark-certificate--brand-monitoring-guide",
+  },
+  {
+    title: "Trademark Registration Certificate",
+    href: "/trademark-registration-certificate/tm-registration-certificate",
+  },
+  {
+    title: "How to Download Trademark Certificate?",
+    href: "/trademark-registration-certificate/how-to-download-trademark-certificate",
+  },
+  {
+    title: "What is the Trademark Certificate Number?",
+    href: "/trademark-registration-certificate/what-is-the-trademark-certificate-number",
+  },
+  {
+    title: "Certificate of Origin (CoO) – DGFT CoO",
+    href: "/trademark-registration-certificate/certificate-of-origin-coo-dgft-coo",
+  },
 ];
 
 const RELATED_SERVICES_TAGS = [
