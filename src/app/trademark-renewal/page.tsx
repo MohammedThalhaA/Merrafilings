@@ -228,8 +228,8 @@ function TrademarkRenewalGuideContent() {
     <>
       {/* Intro */}
       <div>
-        <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
-          In India, a registered trademark is valid for a period of <strong className="font-medium text-slate-800">10 years</strong> from the original application filing date. Under <strong className="font-medium text-slate-800">Section 25 of the Trade Marks Act, 1999</strong>, the trademark can be renewed perpetually for consecutive blocks of 10 years by filing <strong className="font-medium text-slate-800">Form TM-R</strong> along with the prescribed statutory government fees. Renewing your trademark ensures that your exclusive monopoly over the brand name, logo, and slogan remains unbroken, safeguarding multi-year brand equity, customer trust, and corporate valuation while preventing third-party rivals from legally claiming your lapsed mark.
+        <p className="text-[14.5px] font-normal text-slate-900 leading-relaxed">
+          In India, a registered trademark is valid for a period of <strong className="font-semibold text-slate-950">10 years</strong> from the original application filing date. Under <strong className="font-semibold text-slate-950">Section 25 of the Trade Marks Act, 1999</strong>, the trademark can be renewed perpetually for consecutive blocks of 10 years by filing <strong className="font-semibold text-slate-950">Form TM-R</strong> along with the prescribed statutory government fees. Renewing your trademark ensures that your exclusive monopoly over the brand name, logo, and slogan remains unbroken, safeguarding multi-year brand equity, customer trust, and corporate valuation while preventing third-party rivals from legally claiming your lapsed mark.
         </p>
       </div>
 
@@ -238,23 +238,23 @@ function TrademarkRenewalGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           1. Statutory Renewal Framework Under Section 25 of Trade Marks Act
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
-          Section 25 provides that the Registrar of Trade Marks shall renew the registration of a trademark for a period of 10 years from the expiration of the original registration or of the last renewal. An application for renewal can be filed as early as <strong className="font-medium text-slate-800">six months to one year prior</strong> to the expiry date.
+        <p className="text-[14.5px] leading-relaxed text-slate-900 font-normal">
+          Section 25 provides that the Registrar of Trade Marks shall renew the registration of a trademark for a period of 10 years from the expiration of the original registration or of the last renewal. An application for renewal can be filed as early as <strong className="font-semibold text-slate-950">six months to one year prior</strong> to the expiry date.
         </p>
       </section>
 
       {/* Section 2: Deletion of Mark Due to Non-Renewal */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
-          2. Deletion of Registered Trademark Due to Non-Renewal
+          2. Deletion of Registered Trademark Due to Non-Renewal (Section 25)
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
-          If an application for renewal is not filed before the expiry date, the Registrar sends a notice in <strong className="font-medium text-slate-800">Form RG-3</strong> intimating the proprietor of the impending expiration. If the trademark remains unrenewed within the 6-month grace period, the Registrar is statutorily authorized to <strong className="font-medium text-rose-700">remove the trademark from the Register of Trade Marks</strong>. Once removed:
+        <p className="text-[14.5px] leading-relaxed text-slate-900 font-normal">
+          If an application for renewal is not filed before the expiry date, the Registrar sends a notice in <strong className="font-semibold text-slate-950">Form RG-3</strong> intimating the proprietor of the impending expiration. If the trademark remains unrenewed within the 6-month grace period, the Registrar is statutorily authorized to <strong className="font-semibold text-rose-700">remove the trademark from the Register of Trade Marks</strong>. Once removed:
         </p>
-        <ul className="space-y-2 text-xs sm:text-sm text-slate-600 font-light pl-4 list-disc">
-          <li>You instantly lose the legal right to use the ® symbol on your packaging and marketing materials.</li>
-          <li>You forfeit the right to institute infringement suits under Section 29, being relegated to the difficult burden of proving passing off.</li>
-          <li>Competitors, squatters, or counterfeiters can immediately apply to register your identical brand name.</li>
+        <ul className="space-y-2 text-xs sm:text-sm text-slate-900 font-normal pl-4 list-disc">
+          <li>You instantly lose the legal right to use the ® symbol on your packaging, digital storefronts, and marketing materials.</li>
+          <li>You forfeit the right to institute statutory infringement suits under Section 29, being relegated to the difficult and expensive burden of proving common law passing off.</li>
+          <li>Competitors, squatters, or counterfeiters can immediately apply to register your identical brand name without initial opposition.</li>
         </ul>
       </section>
 
@@ -265,68 +265,76 @@ function TrademarkRenewalGuideContent() {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pt-2">
           <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-            <h3 className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
+            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
               <span>Perpetual Legal Monopoly</span>
             </h3>
-            <p className="text-xs text-slate-500 font-light mt-1.5 leading-relaxed">
-              Unlike patents or designs which enter the public domain, a trademark can be owned forever through timely 10-year renewals.
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-1.5 leading-relaxed">
+              Unlike patents or designs which irrevocably enter the public domain after 20 years, a trademark can be owned forever through timely 10-year renewals.
             </p>
           </div>
           <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-            <h3 className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
+            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
               <TrendingUp className="w-4 h-4 text-blue-600 shrink-0" />
               <span>Brand Goodwill &amp; Valuation</span>
             </h3>
-            <p className="text-xs text-slate-500 font-light mt-1.5 leading-relaxed">
-              Preserves the intangible asset value on your corporate balance sheet, critical for investor diligence, franchising, and M&amp;A.
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-1.5 leading-relaxed">
+              Preserves intangible enterprise goodwill on your balance sheet, critical for investor due diligence, franchising agreements, and corporate M&amp;A.
             </p>
           </div>
           <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-            <h3 className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
+            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
               <Scale className="w-4 h-4 text-purple-600 shrink-0" />
               <span>Deter Infringers &amp; Fakes</span>
             </h3>
-            <p className="text-xs text-slate-500 font-light mt-1.5 leading-relaxed">
-              Active registration discourages imitators and enables swift customs border enforcement against counterfeit import shipments.
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-1.5 leading-relaxed">
+              Active registration discourages imitators and enables swift customs border enforcement against counterfeit import shipments under IPR Border Rules.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Section 4: Filing Deadlines - Timely vs Grace vs Restoration */}
+      {/* Section 4: Filing Deadlines & Fees Table */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
-          4. Trademark Renewal Filing Deadlines &amp; Grace Periods
+          4. Trademark Renewal Timelines, Form Types &amp; Statutory Fees
         </h2>
-        <div className="space-y-3 pt-1">
-          <div className="flex items-start gap-3 p-3.5 rounded-xl bg-emerald-50/50 border border-emerald-200/60">
-            <div className="w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-semibold shrink-0 mt-0.5">1</div>
-            <div>
-              <h3 className="text-xs sm:text-sm font-semibold text-emerald-950">Timely Renewal (Within 1 Year Prior to Expiry)</h3>
-              <p className="text-xs text-emerald-800 font-light mt-0.5 leading-relaxed">
-                Standard window: filed at any time up to six months or one year before the due date. Standard government fee applies with zero surcharge.
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start gap-3 p-3.5 rounded-xl bg-amber-50/50 border border-amber-200/60">
-            <div className="w-6 h-6 rounded-full bg-amber-600 text-white flex items-center justify-center text-xs font-semibold shrink-0 mt-0.5">2</div>
-            <div>
-              <h3 className="text-xs sm:text-sm font-semibold text-amber-950">Late Renewal (Within 6 Months Post-Expiry Grace Period)</h3>
-              <p className="text-xs text-amber-800 font-light mt-0.5 leading-relaxed">
-                If the deadline passes, you have a 6-month grace period to file Form TM-R along with the prescribed late renewal surcharge.
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start gap-3 p-3.5 rounded-xl bg-purple-50/50 border border-purple-200/60">
-            <div className="w-6 h-6 rounded-full bg-purple-600 text-white flex items-center justify-center text-xs font-semibold shrink-0 mt-0.5">3</div>
-            <div>
-              <h3 className="text-xs sm:text-sm font-semibold text-purple-950">Restoration Period (Between 6 Months to 1 Year Post-Expiry)</h3>
-              <p className="text-xs text-purple-800 font-light mt-0.5 leading-relaxed">
-                If the mark has been removed from the register, you can apply for restoration and renewal under Section 25(4) with an explanatory affidavit of reasons for delay.
-              </p>
-            </div>
-          </div>
+        <p className="text-[14.5px] leading-relaxed text-slate-900 font-normal">
+          The Trade Marks Rules, 2017 classify renewal proceedings into three distinct time windows:
+        </p>
+
+        {/* Table 1: Renewal Windows & Fees */}
+        <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm mt-3">
+          <table className="w-full text-left text-xs sm:text-sm text-slate-900 font-normal">
+            <thead className="bg-[#1F1646] text-white uppercase text-[11px] tracking-wider font-semibold">
+              <tr>
+                <th className="py-3 px-4">Renewal Window</th>
+                <th className="py-3 px-4">Statutory Form</th>
+                <th className="py-3 px-4">Government Fee (Per Class)</th>
+                <th className="py-3 px-4">Remarks &amp; Conditions</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-100 bg-white">
+              <tr className="hover:bg-slate-50 transition-colors">
+                <td className="py-3 px-4 font-semibold text-slate-950">Standard Timely Renewal</td>
+                <td className="py-3 px-4 font-medium text-slate-900">Form TM-R</td>
+                <td className="py-3 px-4 font-semibold text-emerald-800">₹9,000 (Online E-Filing)</td>
+                <td className="py-3 px-4 font-normal text-slate-900">Filed within 1 year to 6 months prior to expiry date. Zero late penalty.</td>
+              </tr>
+              <tr className="hover:bg-slate-50 transition-colors">
+                <td className="py-3 px-4 font-semibold text-slate-950">Late Renewal (Grace Period)</td>
+                <td className="py-3 px-4 font-medium text-slate-900">Form TM-R + Late Surcharge</td>
+                <td className="py-3 px-4 font-semibold text-amber-800">₹9,000 + ₹4,500 Surcharge</td>
+                <td className="py-3 px-4 font-normal text-slate-900">Available up to 6 months following expiry date. Prevents removal from register.</td>
+              </tr>
+              <tr className="hover:bg-slate-50 transition-colors">
+                <td className="py-3 px-4 font-semibold text-slate-950">Restoration &amp; Renewal</td>
+                <td className="py-3 px-4 font-medium text-slate-900">Form TM-R + Section 25(4) Petition</td>
+                <td className="py-3 px-4 font-semibold text-rose-800">₹9,000 + ₹9,000 Restoration Surcharge</td>
+                <td className="py-3 px-4 font-normal text-slate-900">Filed between 6 months and 1 year post-expiry. Requires explanatory User Affidavit.</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
 
@@ -339,36 +347,36 @@ function TrademarkRenewalGuideContent() {
           <div className="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
             <div className="w-6 h-6 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-semibold shrink-0 mt-0.5">1</div>
             <div>
-              <h3 className="text-xs sm:text-sm font-medium text-slate-900">Step 1: Application Drafting (Form TM-R)</h3>
-              <p className="text-xs text-slate-500 font-light mt-0.5 leading-relaxed">
-                Audit existing trademark details on the IP India database, confirm owner identity and registered classes, and prepare Form TM-R.
+              <h3 className="text-xs sm:text-sm font-semibold text-slate-950">Application Drafting (Form TM-R)</h3>
+              <p className="text-xs sm:text-[13px] text-slate-900 font-normal mt-0.5 leading-relaxed">
+                Audit existing trademark details on the IP India database, confirm owner identity, registered goods/services classes, and prepare Form TM-R with or without alterations.
               </p>
             </div>
           </div>
           <div className="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
             <div className="w-6 h-6 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-semibold shrink-0 mt-0.5">2</div>
             <div>
-              <h3 className="text-xs sm:text-sm font-medium text-slate-900">Step 2: Electronic Portal Submission &amp; Fee Lodgement</h3>
-              <p className="text-xs text-slate-500 font-light mt-0.5 leading-relaxed">
-                File Form TM-R electronically on the IP India gateway with statutory government renewal fees and receive instant timestamped receipt.
+              <h3 className="text-xs sm:text-sm font-semibold text-slate-950">Electronic Portal Submission &amp; Fee Lodgement</h3>
+              <p className="text-xs sm:text-[13px] text-slate-900 font-normal mt-0.5 leading-relaxed">
+                File Form TM-R electronically on the IP India gateway using Class 3 digital signature certificates, deposit statutory fees, and obtain instant CBR receipt.
               </p>
             </div>
           </div>
           <div className="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
             <div className="w-6 h-6 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-semibold shrink-0 mt-0.5">3</div>
             <div>
-              <h3 className="text-xs sm:text-sm font-medium text-slate-900">Step 3: Trademark Journal Renewal Announcement</h3>
-              <p className="text-xs text-slate-500 font-light mt-0.5 leading-relaxed">
-                The Registry reviews the submission and advertises the renewal in the official Trademark Journal confirming the 10-year term extension.
+              <h3 className="text-xs sm:text-sm font-semibold text-slate-950">Trademark Journal Renewal Publication</h3>
+              <p className="text-xs sm:text-[13px] text-slate-900 font-normal mt-0.5 leading-relaxed">
+                The Trademark Registry examines the filing, validates proprietor status, and advertises the renewal in the official weekly Trademark Journal.
               </p>
             </div>
           </div>
           <div className="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
             <div className="w-6 h-6 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-semibold shrink-0 mt-0.5">4</div>
             <div>
-              <h3 className="text-xs sm:text-sm font-medium text-slate-900">Step 4: Grant of Official Renewal Certificate</h3>
-              <p className="text-xs text-slate-500 font-light mt-0.5 leading-relaxed">
-                The Registrar issues the official digital Certificate of Renewal, updating the public register with your new 10-year expiration date.
+              <h3 className="text-xs sm:text-sm font-semibold text-slate-950">Issuance of Official Renewal Certificate</h3>
+              <p className="text-xs sm:text-[13px] text-slate-900 font-normal mt-0.5 leading-relaxed">
+                The Registrar issues the official digital Certificate of Renewal, updating the public register with your extended 10-year validity milestone.
               </p>
             </div>
           </div>
@@ -380,25 +388,25 @@ function TrademarkRenewalGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           6. Streamline Trademark Renewal with Merrafilings
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-[14.5px] leading-relaxed text-slate-900 font-normal">
           Missing a renewal deadline can permanently destroy a decade of brand equity. Merrafilings provides proactive, automated trademark management:
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs font-light text-slate-700">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs sm:text-[13px] font-normal text-slate-900">
           <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="group-hover:text-slate-900 transition-colors">Automated 10-Year Expiry Surveillance &amp; Alerts</span>
+            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">Automated 10-Year Expiry Surveillance &amp; Timely Reminders</span>
           </div>
           <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="group-hover:text-slate-900 transition-colors">Same-Day Form TM-R Digital Lodgement</span>
+            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">Same-Day Form TM-R Digital Lodgement by IP Attorneys</span>
           </div>
           <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="group-hover:text-slate-900 transition-colors">Specialized Grace Period &amp; Restoration Support</span>
+            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">Specialized Grace Period &amp; Restoration Petition Advocacy</span>
           </div>
           <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="group-hover:text-slate-900 transition-colors">Official Renewal Certificate Delivery &amp; Cloud Vault</span>
+            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">Official Renewal Certificate Delivery &amp; Cloud Document Vault</span>
           </div>
         </div>
 
