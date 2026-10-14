@@ -26,6 +26,14 @@ import {
   HelpCircle,
   Layers,
   Globe2,
+  CheckSquare2,
+  AlertTriangle,
+  Coins,
+  History,
+  FileCheck,
+  TrendingUp,
+  XCircle,
+  BookOpen,
 } from "lucide-react";
 
 const FORM_FEATURES = [
@@ -127,157 +135,545 @@ function PatentRegistrationGuideContent() {
       {/* Intro */}
       <div>
         <p className="text-[14.5px] font-normal text-slate-900 leading-relaxed">
-          A <strong className="font-semibold text-slate-950">Patent</strong> is an exclusive legal monopoly granted by the Government of India through the <strong className="font-semibold text-slate-950">Office of the Controller General of Patents, Designs and Trade Marks (CGPDTM)</strong> under the <strong className="font-semibold text-slate-950">Patents Act, 1970</strong>. A granted patent gives an inventor the statutory authority to exclude others from making, using, offering for sale, selling, or importing the patented invention for a period of <strong className="font-semibold text-slate-950">20 years</strong> across the entirety of India.
+          A <strong className="font-semibold text-slate-950">Patent</strong> is an exclusive legal monopoly granted by the Government of India through the <strong className="font-semibold text-slate-950">Office of the Controller General of Patents, Designs and Trade Marks (CGPDTM)</strong> under the <strong className="font-semibold text-slate-950">Patents Act, 1970</strong>. A granted patent gives an inventor the statutory authority to exclude competitors, counterfeiters, and third parties from making, using, offering for sale, selling, or importing the patented invention for a term of <strong className="font-semibold text-slate-950">20 years</strong> across the entirety of India.
         </p>
         <p className="text-[14.5px] font-normal text-slate-900 leading-relaxed mt-3">
-          Whether you are an individual inventor, an R&amp;D-driven startup, or an enterprise engineering novel hardware or formulations, patent protection transforms technological innovations into defensible balance-sheet assets, enabling licensing royalties, market dominance, and premium corporate valuation.
+          Patent registration documents your technical invention and establishes you as the legal owner with public priority. Whether you are an independent inventor, a high-tech startup, or an enterprise engineering novel hardware, formulations, or industrial systems, patent protection secures your market moat, enables licensing royalties, deters copycats, and drastically elevates company valuation during venture funding or acquisitions.
         </p>
       </div>
 
-      {/* Section 1: Statutory Eligibility Criteria */}
+      {/* Pre-Filing Checklist */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
-          1. The 3 Core Statutory Criteria for Patentability in India
+          1. Comprehensive Pre-Filing Checklist for Patent Registration
         </h2>
         <p className="text-[14.5px] leading-relaxed text-slate-900 font-normal">
-          Under Section 2(1)(j) of the Patents Act, 1970, an invention must satisfy three cumulative tests to qualify for patent grant:
+          Before lodging an application with the Indian Patent Office, thorough pre-filing preparation ensures your application is robust and minimizes procedural delays or office objections:
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-          <div className="p-4.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-            <div className="flex items-center gap-2 text-indigo-700 font-semibold text-sm">
-              <Lightbulb className="w-4.5 h-4.5" />
-              <span>1. Novelty (Newness)</span>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-3">
+            <CheckSquare2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+            <div>
+              <h3 className="text-sm font-semibold text-slate-950">1. Conduct Prior-Art Search</h3>
+              <p className="text-xs text-slate-800 font-normal mt-0.5 leading-relaxed">
+                Audit Indian and international patent databases (InPASS, USPTO, Espacenet, WIPO) and scientific literature to confirm global novelty.
+              </p>
             </div>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
-              The invention must not have been anticipated by prior art in any public domain, published document, or commercial usage globally before the filing date.
-            </p>
           </div>
 
-          <div className="p-4.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-            <div className="flex items-center gap-2 text-purple-700 font-semibold text-sm">
-              <Cpu className="w-4.5 h-4.5" />
-              <span>2. Inventive Step (Non-Obviousness)</span>
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-3">
+            <CheckSquare2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+            <div>
+              <h3 className="text-sm font-semibold text-slate-950">2. Document Technical Description</h3>
+              <p className="text-xs text-slate-800 font-normal mt-0.5 leading-relaxed">
+                Prepare comprehensive technical write-ups detailing the problem solved, structural parts, materials, and method of working.
+              </p>
             </div>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
-              The invention must feature a technical advancement or economic significance that is not obvious to a person skilled in the relevant art (PSITA).
-            </p>
           </div>
 
-          <div className="p-4.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-            <div className="flex items-center gap-2 text-emerald-700 font-semibold text-sm">
-              <Microscope className="w-4.5 h-4.5" />
-              <span>3. Industrial Applicability</span>
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-3">
+            <CheckSquare2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+            <div>
+              <h3 className="text-sm font-semibold text-slate-950">3. Compile Proof of Inventorship</h3>
+              <p className="text-xs text-slate-800 font-normal mt-0.5 leading-relaxed">
+                Maintain lab notebooks, engineering logs, prototype photos, test results, and dated records establishing the true inventors.
+              </p>
             </div>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
-              The invention must have practical utility and be capable of being made or used in an industry or manufacturing process.
-            </p>
+          </div>
+
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-3">
+            <CheckSquare2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+            <div>
+              <h3 className="text-sm font-semibold text-slate-950">4. Formulate Strategic Patent Claims</h3>
+              <p className="text-xs text-slate-800 font-normal mt-0.5 leading-relaxed">
+                Define the legal perimeter of protection by articulating independent claims (broad scope) and dependent claims (specific embodiments).
+              </p>
+            </div>
+          </div>
+
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-3">
+            <CheckSquare2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+            <div>
+              <h3 className="text-sm font-semibold text-slate-950">5. Prepare High-Resolution Drawings</h3>
+              <p className="text-xs text-slate-800 font-normal mt-0.5 leading-relaxed">
+                Create clear black-and-white technical schematics, flowcharts, or chemical formulas with numbered reference indicators.
+              </p>
+            </div>
+          </div>
+
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-3">
+            <CheckSquare2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+            <div>
+              <h3 className="text-sm font-semibold text-slate-950">6. Determine Application Type</h3>
+              <p className="text-xs text-slate-800 font-normal mt-0.5 leading-relaxed">
+                Choose between a fast Provisional Application (locks 12-month priority for prototypes) or a Complete Specification filing.
+              </p>
+            </div>
+          </div>
+
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-3">
+            <CheckSquare2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+            <div>
+              <h3 className="text-sm font-semibold text-slate-950">7. Verify Section 3 Exclusions</h3>
+              <p className="text-xs text-slate-800 font-normal mt-0.5 leading-relaxed">
+                Ensure the subject matter is not barred under Section 3 (e.g. computer programs per se, mathematical algorithms, or frivolous ideas).
+              </p>
+            </div>
+          </div>
+
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-3">
+            <CheckSquare2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+            <div>
+              <h3 className="text-sm font-semibold text-slate-950">8. Plan Official Statutory Budget</h3>
+              <p className="text-xs text-slate-800 font-normal mt-0.5 leading-relaxed">
+                Claim MSME / DPIIT Startup subsidies (80% fee discount) to drastically reduce filing, examination, and maintenance expenditures.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Section 2: Non-Patentable Inventions (Section 3 Exclusions) */}
+      {/* Statutory Eligibility Criteria Table */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
-          2. What Inventions Cannot Be Patented? (Section 3 Exclusions)
+          2. Statutory Eligibility Criteria for Patent Registration in India
         </h2>
         <p className="text-[14.5px] leading-relaxed text-slate-900 font-normal">
-          The Indian Patents Act explicitly bars certain categories of discoveries and algorithms under Section 3:
+          To qualify for patent grant under Section 2(1)(j) of the Patents Act, 1970, your invention must meet the following mandatory benchmarks:
         </p>
 
         <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm mt-3">
           <table className="w-full text-left border-collapse text-xs sm:text-[13px]">
             <thead className="bg-slate-50 text-slate-950 font-semibold border-b border-slate-200">
               <tr>
-                <th className="py-3 px-4">Section</th>
-                <th className="py-3 px-4">Excluded Category</th>
-                <th className="py-3 px-4">Statutory Rationale</th>
+                <th className="py-3 px-4">Eligibility Criteria</th>
+                <th className="py-3 px-4">Statutory Requirements</th>
+                <th className="py-3 px-4">Detailed Legal Explanation</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
               <tr className="hover:bg-slate-50/70 transition-colors">
-                <td className="py-3.5 px-4 font-semibold text-slate-950">Section 3(a)</td>
-                <td className="py-3.5 px-4">Frivolous inventions or against natural laws</td>
-                <td className="py-3.5 px-4">Perpetual motion machines without scientific basis</td>
+                <td className="py-3.5 px-4 font-semibold text-slate-950">Novelty (Newness)</td>
+                <td className="py-3.5 px-4">Must not be anticipated by prior art anywhere in the world</td>
+                <td className="py-3.5 px-4">The invention must not exist in public domain, published technical papers, commercial use, or patent filings globally before the priority date.</td>
               </tr>
               <tr className="hover:bg-slate-50/70 transition-colors">
-                <td className="py-3.5 px-4 font-semibold text-slate-950">Section 3(b)</td>
-                <td className="py-3.5 px-4">Contrary to public order, morality, or health</td>
-                <td className="py-3.5 px-4">Inventions causing serious prejudice to human, animal, or plant life</td>
+                <td className="py-3.5 px-4 font-semibold text-slate-950">Inventive Step (Non-Obviousness)</td>
+                <td className="py-3.5 px-4">Technical advancement or economic significance not obvious to an expert</td>
+                <td className="py-3.5 px-4">A person skilled in the relevant art (PSITA) would not be able to easily combine existing technologies to arrive at your invention without creative effort.</td>
               </tr>
               <tr className="hover:bg-slate-50/70 transition-colors">
-                <td className="py-3.5 px-4 font-semibold text-slate-950">Section 3(d)</td>
-                <td className="py-3.5 px-4">Mere discovery of a new form of known substance</td>
-                <td className="py-3.5 px-4">Anti-evergreening clause; requires proven enhancement of therapeutic efficacy</td>
+                <td className="py-3.5 px-4 font-semibold text-slate-950">Industrial Applicability</td>
+                <td className="py-3.5 px-4">Capable of practical utility and repeatable industrial manufacturing</td>
+                <td className="py-3.5 px-4">The invention must have concrete practical utility and be capable of being made, produced, or used in an industry or manufacturing trade.</td>
               </tr>
               <tr className="hover:bg-slate-50/70 transition-colors">
-                <td className="py-3.5 px-4 font-semibold text-slate-950">Section 3(k)</td>
-                <td className="py-3.5 px-4">Mathematical methods, business methods, or computer programs per se</td>
-                <td className="py-3.5 px-4">Pure software/algorithms are protected by Copyright; requires technical effect/hardware integration</td>
+                <td className="py-3.5 px-4 font-semibold text-slate-950">Enablement &amp; Disclosure</td>
+                <td className="py-3.5 px-4">Complete technical disclosure enabling replication</td>
+                <td className="py-3.5 px-4">The patent specification must clearly disclose the best mode of performing the invention so that another engineer can recreate it without undue experimentation.</td>
               </tr>
               <tr className="hover:bg-slate-50/70 transition-colors">
-                <td className="py-3.5 px-4 font-semibold text-slate-950">Section 3(p)</td>
-                <td className="py-3.5 px-4">Traditional knowledge or aggregation of known properties</td>
-                <td className="py-3.5 px-4">Preserves indigenous Ayurvedic and herbal heritage</td>
+                <td className="py-3.5 px-4 font-semibold text-slate-950">Patentable Subject Matter</td>
+                <td className="py-3.5 px-4">Must fall outside the statutory negative list of Section 3 &amp; 4</td>
+                <td className="py-3.5 px-4">The invention cannot be a mere scientific principle, mathematical method, abstract software per se, frivolous gadget, or contrary to natural physical laws.</td>
               </tr>
             </tbody>
           </table>
         </div>
       </section>
 
-      {/* Section 3: Statutory Fee Schedule */}
+      {/* What Can Be Patented */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
-          3. Official Government Fee Schedule (First Schedule of Patent Rules)
+          3. What Inventions Can Be Patented in India?
         </h2>
         <p className="text-[14.5px] leading-relaxed text-slate-900 font-normal">
-          The Patent Rules provide an 80% statutory fee discount for natural persons (individuals), DPIIT-recognized startups, educational institutions, and MSMEs:
+          Inventions qualifying for patent protection span diverse sectors of science and engineering, provided they deliver tangible technical outcomes:
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 pt-2">
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1">
+            <h3 className="text-xs font-semibold text-slate-950 flex items-center gap-1.5">
+              <Cpu className="w-3.5 h-3.5 text-indigo-600" />
+              Mechanical &amp; Hardware
+            </h3>
+            <p className="text-[12px] text-slate-800 leading-relaxed font-normal">
+              Innovative machines, robotic arms, consumer devices, tools, mechanical linkages, and automated apparatus.
+            </p>
+          </div>
+
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1">
+            <h3 className="text-xs font-semibold text-slate-950 flex items-center gap-1.5">
+              <Microscope className="w-3.5 h-3.5 text-purple-600" />
+              Chemical &amp; Materials
+            </h3>
+            <p className="text-[12px] text-slate-800 leading-relaxed font-normal">
+              Novel chemical compounds, polymers, composites, coatings, industrial purification processes, and synthetic methods.
+            </p>
+          </div>
+
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1">
+            <h3 className="text-xs font-semibold text-slate-950 flex items-center gap-1.5">
+              <Lightbulb className="w-3.5 h-3.5 text-amber-600" />
+              Software with Technical Effect
+            </h3>
+            <p className="text-[12px] text-slate-800 leading-relaxed font-normal">
+              Computer-implemented inventions (CII), IoT sensor firmware, encryption engines, and AI algorithms tied to hardware.
+            </p>
+          </div>
+
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1">
+            <h3 className="text-xs font-semibold text-slate-950 flex items-center gap-1.5">
+              <Award className="w-3.5 h-3.5 text-emerald-600" />
+              Pharmaceuticals &amp; Biotech
+            </h3>
+            <p className="text-[12px] text-slate-800 leading-relaxed font-normal">
+              New drug formulations demonstrating enhanced therapeutic efficacy (Section 3(d)), diagnostic kits, and bioreactors.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Types of Patents */}
+      <section className="space-y-4 pt-6 border-t border-slate-100">
+        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+          4. Categories and Types of Patent Filings in India
+        </h2>
+        <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm mt-3">
+          <table className="w-full text-left border-collapse text-xs sm:text-[13px]">
+            <thead className="bg-slate-50 text-slate-950 font-semibold border-b border-slate-200">
+              <tr>
+                <th className="py-3 px-4">Patent Category</th>
+                <th className="py-3 px-4">Scope &amp; Description</th>
+                <th className="py-3 px-4">Typical Product Examples</th>
+                <th className="py-3 px-4">Protection Duration</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
+              <tr className="hover:bg-slate-50/70 transition-colors">
+                <td className="py-3.5 px-4 font-semibold text-slate-950">Utility Patents (Standard)</td>
+                <td className="py-3.5 px-4">Protects the structural, mechanical, or functional working of an invention</td>
+                <td className="py-3.5 px-4">Automotive engines, EV battery packs, manufacturing machines</td>
+                <td className="py-3.5 px-4 font-semibold text-emerald-700">20 Years from Filing Date</td>
+              </tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
+                <td className="py-3.5 px-4 font-semibold text-slate-950">Industrial Design Patents</td>
+                <td className="py-3.5 px-4">Protects ornamental or aesthetic visual shape under Designs Act 2000</td>
+                <td className="py-3.5 px-4">Smartphone contour, furniture profile, bottle shapes</td>
+                <td className="py-3.5 px-4 font-semibold text-blue-700">15 Years (10 + 5 renewal)</td>
+              </tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
+                <td className="py-3.5 px-4 font-semibold text-slate-950">Software &amp; Computer Inventions</td>
+                <td className="py-3.5 px-4">Protects software demonstrating a measurable technical effect</td>
+                <td className="py-3.5 px-4">AI computer vision pipelines, cryptographic network protocols</td>
+                <td className="py-3.5 px-4 font-semibold text-emerald-700">20 Years from Filing Date</td>
+              </tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
+                <td className="py-3.5 px-4 font-semibold text-slate-950">Chemical &amp; Pharma Patents</td>
+                <td className="py-3.5 px-4">Protects novel synthesized compounds, therapeutic molecules, and alloys</td>
+                <td className="py-3.5 px-4">Active pharmaceutical ingredients (APIs), nano-coatings</td>
+                <td className="py-3.5 px-4 font-semibold text-emerald-700">20 Years from Filing Date</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* Documents Required */}
+      <section className="space-y-4 pt-6 border-t border-slate-100">
+        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+          5. Mandatory Documents and Statutory Forms for Patent Filing
+        </h2>
+        <p className="text-[14.5px] leading-relaxed text-slate-900 font-normal">
+          Preparing the correct techno-legal documents and filing the requisite forms under the Patent Rules, 2003 is crucial to pass formality examination:
         </p>
 
         <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm mt-3">
           <table className="w-full text-left border-collapse text-xs sm:text-[13px]">
             <thead className="bg-slate-50 text-slate-950 font-semibold border-b border-slate-200">
               <tr>
-                <th className="py-3 px-4">Stage / Form</th>
-                <th className="py-3 px-4">Individual / Natural Person</th>
-                <th className="py-3 px-4">Startup / MSME / University</th>
-                <th className="py-3 px-4">Large Corporate / Others</th>
+                <th className="py-3 px-4">Statutory Form / Doc</th>
+                <th className="py-3 px-4">Document Category</th>
+                <th className="py-3 px-4">Statutory Purpose &amp; Details</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
               <tr className="hover:bg-slate-50/70 transition-colors">
-                <td className="py-3.5 px-4 font-semibold text-slate-950">Form 1 (Application Filing)</td>
+                <td className="py-3.5 px-4 font-semibold text-slate-950">Form 1</td>
+                <td className="py-3.5 px-4">Application for Grant</td>
+                <td className="py-3.5 px-4">Official petition establishing applicant details, inventor names, priority claims, and declarations.</td>
+              </tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
+                <td className="py-3.5 px-4 font-semibold text-slate-950">Form 2</td>
+                <td className="py-3.5 px-4">Patent Specification</td>
+                <td className="py-3.5 px-4">Provisional or Complete specification describing background, summary, detailed drawings, and claims.</td>
+              </tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
+                <td className="py-3.5 px-4 font-semibold text-slate-950">Form 3</td>
+                <td className="py-3.5 px-4">Statement &amp; Undertaking</td>
+                <td className="py-3.5 px-4">Statutory disclosure under Section 8 regarding corresponding foreign patent applications filed.</td>
+              </tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
+                <td className="py-3.5 px-4 font-semibold text-slate-950">Form 5</td>
+                <td className="py-3.5 px-4">Declaration of Inventorship</td>
+                <td className="py-3.5 px-4">Declaration signed by true and first inventors assigning rights to the applicant company or institution.</td>
+              </tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
+                <td className="py-3.5 px-4 font-semibold text-slate-950">Form 18 / 18A</td>
+                <td className="py-3.5 px-4">Request for Examination</td>
+                <td className="py-3.5 px-4">Mandatory request filed within 48 months (Form 18) or expedited request for Startups/women (Form 18A).</td>
+              </tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
+                <td className="py-3.5 px-4 font-semibold text-slate-950">Form 26</td>
+                <td className="py-3.5 px-4">Power of Attorney</td>
+                <td className="py-3.5 px-4">Legal authorization authorizing registered Patent Agents / Advocates to represent the applicant.</td>
+              </tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
+                <td className="py-3.5 px-4 font-semibold text-slate-950">Drawings &amp; Abstract</td>
+                <td className="py-3.5 px-4">Technical Representation</td>
+                <td className="py-3.5 px-4">A4 black-and-white CAD drawings with numbered callouts and a concise 150-word technical abstract.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* Official Fee Schedule */}
+      <section className="space-y-4 pt-6 border-t border-slate-100">
+        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+          6. Official Government Fee Schedule (First Schedule of Patent Rules)
+        </h2>
+        <p className="text-[14.5px] leading-relaxed text-slate-900 font-normal">
+          The Patent Rules provide an 80% statutory fee subsidy for natural persons (individuals), DPIIT-recognized startups, educational institutions, and MSMEs:
+        </p>
+
+        <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm mt-3">
+          <table className="w-full text-left border-collapse text-xs sm:text-[13px]">
+            <thead className="bg-slate-50 text-slate-950 font-semibold border-b border-slate-200">
+              <tr>
+                <th className="py-3 px-4">Service / Form Number</th>
+                <th className="py-3 px-4">Individual Applicant</th>
+                <th className="py-3 px-4">Startup / MSME / University</th>
+                <th className="py-3 px-4">Large Corporation / Others</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
+              <tr className="hover:bg-slate-50/70 transition-colors">
+                <td className="py-3.5 px-4 font-semibold text-slate-950">Form 1: Application Filing (Up to 30 pages &amp; 10 claims)</td>
                 <td className="py-3.5 px-4 text-emerald-700 font-semibold">₹1,600</td>
                 <td className="py-3.5 px-4 text-emerald-700 font-semibold">₹1,600</td>
                 <td className="py-3.5 px-4 font-semibold text-slate-900">₹8,000</td>
               </tr>
               <tr className="hover:bg-slate-50/70 transition-colors">
-                <td className="py-3.5 px-4 font-semibold text-slate-950">Form 9 (Early Publication - Optional)</td>
+                <td className="py-3.5 px-4 font-semibold text-slate-950">Form 9: Early Publication Request (Optional, within 1 mo.)</td>
                 <td className="py-3.5 px-4 text-emerald-700 font-semibold">₹2,500</td>
                 <td className="py-3.5 px-4 text-emerald-700 font-semibold">₹2,500</td>
                 <td className="py-3.5 px-4 font-semibold text-slate-900">₹12,500</td>
               </tr>
               <tr className="hover:bg-slate-50/70 transition-colors">
-                <td className="py-3.5 px-4 font-semibold text-slate-950">Form 18 (Request for Examination - RFE)</td>
+                <td className="py-3.5 px-4 font-semibold text-slate-950">Form 18: Request for Examination (RFE)</td>
                 <td className="py-3.5 px-4 text-emerald-700 font-semibold">₹4,000</td>
                 <td className="py-3.5 px-4 text-emerald-700 font-semibold">₹4,000</td>
                 <td className="py-3.5 px-4 font-semibold text-slate-900">₹20,000</td>
               </tr>
               <tr className="hover:bg-slate-50/70 transition-colors">
-                <td className="py-3.5 px-4 font-semibold text-slate-950">Form 18A (Expedited Examination - Startups/Women)</td>
+                <td className="py-3.5 px-4 font-semibold text-slate-950">Form 18A: Expedited Examination (Startups/Female Inventors)</td>
                 <td className="py-3.5 px-4 text-emerald-700 font-semibold">₹8,000</td>
                 <td className="py-3.5 px-4 text-emerald-700 font-semibold">₹8,000</td>
                 <td className="py-3.5 px-4 font-semibold text-slate-900">₹60,000</td>
+              </tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
+                <td className="py-3.5 px-4 font-semibold text-slate-950">Total Baseline Govt Filing + Standard Examination</td>
+                <td className="py-3.5 px-4 text-emerald-700 font-bold">₹5,600</td>
+                <td className="py-3.5 px-4 text-emerald-700 font-bold">₹5,600</td>
+                <td className="py-3.5 px-4 font-bold text-slate-950">₹28,000</td>
               </tr>
             </tbody>
           </table>
         </div>
       </section>
 
-      {/* Section 4: Patent vs Copyright vs Trademark */}
+      {/* Patent Validity & Annual Renewal Schedule */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
-          4. Comparison: Patent vs Trademark vs Copyright
+          7. Patent Validity &amp; Annual Maintenance Renewal Fee Schedule
+        </h2>
+        <p className="text-[14.5px] leading-relaxed text-slate-900 font-normal">
+          Under Section 53 of the Patents Act, 1970, patent protection lasts for a term of <strong className="font-semibold text-slate-950">20 years</strong> from the application filing date. To keep the patent in force, statutory renewal maintenance fees must be paid annually starting from the 3rd year onwards:
+        </p>
+
+        <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm mt-3">
+          <table className="w-full text-left border-collapse text-xs sm:text-[13px]">
+            <thead className="bg-slate-50 text-slate-950 font-semibold border-b border-slate-200">
+              <tr>
+                <th className="py-3 px-4">Patent Lifetime Period</th>
+                <th className="py-3 px-4">Annual Fee (Natural Person / Startup)</th>
+                <th className="py-3 px-4">Annual Fee (Large Entity / Corporate)</th>
+                <th className="py-3 px-4">Statutory Action Required</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
+              <tr className="hover:bg-slate-50/70 transition-colors">
+                <td className="py-3.5 px-4 font-semibold text-slate-950">Years 1 &amp; 2</td>
+                <td className="py-3.5 px-4 text-emerald-700 font-medium">No Renewal Fee Payable</td>
+                <td className="py-3.5 px-4 text-slate-700 font-medium">No Renewal Fee Payable</td>
+                <td className="py-3.5 px-4">Covered by initial filing and grant processing</td>
+              </tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
+                <td className="py-3.5 px-4 font-semibold text-slate-950">Years 3 to 6</td>
+                <td className="py-3.5 px-4 text-emerald-700 font-semibold">₹800 / year</td>
+                <td className="py-3.5 px-4 font-semibold text-slate-900">₹4,000 / year</td>
+                <td className="py-3.5 px-4">Pay before expiry of preceding year (or pay accumulated at grant)</td>
+              </tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
+                <td className="py-3.5 px-4 font-semibold text-slate-950">Years 7 to 10</td>
+                <td className="py-3.5 px-4 text-emerald-700 font-semibold">₹2,400 / year</td>
+                <td className="py-3.5 px-4 font-semibold text-slate-900">₹12,000 / year</td>
+                <td className="py-3.5 px-4">Maintain continuous commercial monopoly in India</td>
+              </tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
+                <td className="py-3.5 px-4 font-semibold text-slate-950">Years 11 to 15</td>
+                <td className="py-3.5 px-4 text-emerald-700 font-semibold">₹4,800 / year</td>
+                <td className="py-3.5 px-4 font-semibold text-slate-900">₹24,000 / year</td>
+                <td className="py-3.5 px-4">Mid-lifecycle patent maintenance</td>
+              </tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
+                <td className="py-3.5 px-4 font-semibold text-slate-950">Years 16 to 20</td>
+                <td className="py-3.5 px-4 text-emerald-700 font-semibold">₹8,000 / year</td>
+                <td className="py-3.5 px-4 font-semibold text-slate-950">₹40,000 / year</td>
+                <td className="py-3.5 px-4">Final 5-year commercial monopoly term</td>
+              </tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
+                <td className="py-3.5 px-4 font-semibold text-rose-700">Post-20 Years</td>
+                <td className="py-3.5 px-4" colSpan={2}>
+                  <strong className="text-rose-700 font-semibold">Public Domain:</strong> Non-renewable under statutory law. Freely usable by all.
+                </td>
+                <td className="py-3.5 px-4">Patent permanently expires</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-xs text-slate-800 leading-relaxed font-normal pt-1">
+          * <strong className="font-semibold text-slate-950">Lapse &amp; Restoration:</strong> If renewal fees are unpaid, the patent lapses. It can be restored under Section 60 within 18 months from the date of lapse upon filing Form 15 and paying overdue fees with restoration penalties.
+        </p>
+      </section>
+
+      {/* End-to-End Filing Procedure */}
+      <section className="space-y-4 pt-6 border-t border-slate-100">
+        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+          8. End-to-End Patent Filing Procedure &amp; Examination Timeline
+        </h2>
+        <div className="space-y-3 pt-2">
+          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
+            <div className="flex items-center justify-between">
+              <h3 className="text-sm font-semibold text-slate-950">Stage 1: Novelty Search &amp; Pre-Filing Audit (Days 1–7)</h3>
+              <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200/60">Phase 1</span>
+            </div>
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-1 leading-relaxed">
+              Exhaustive search on InPASS, WIPO Patentscope, Espacenet, and Google Patents to ensure zero prior disclosures exist.
+            </p>
+          </div>
+
+          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
+            <div className="flex items-center justify-between">
+              <h3 className="text-sm font-semibold text-slate-950">Stage 2: Provisional Specification (Form 2) Filing (Day 8)</h3>
+              <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-purple-50 text-purple-700 border border-purple-200/60">Phase 2</span>
+            </div>
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-1 leading-relaxed">
+              Filing Form 1, Form 2, and Form 3 on the IP India portal. Grants immediate official application number, CBR receipt, and locks priority for 12 months.
+            </p>
+          </div>
+
+          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
+            <div className="flex items-center justify-between">
+              <h3 className="text-sm font-semibold text-slate-950">Stage 3: Complete Specification with Claims (Within 12 Months)</h3>
+              <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200/60">Phase 3</span>
+            </div>
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-1 leading-relaxed">
+              Techno-legal drafting of Complete Specification, independent/dependent claims, formal drawings, and Form 5 Declaration of Inventorship.
+            </p>
+          </div>
+
+          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
+            <div className="flex items-center justify-between">
+              <h3 className="text-sm font-semibold text-slate-950">Stage 4: Journal Publication &amp; Form 18 Examination (18 Months)</h3>
+              <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200/60">Phase 4</span>
+            </div>
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-1 leading-relaxed">
+              Automatic publication in the Patent Office Journal at 18 months (or 1 month via Form 9 early publication). Substantive examination initiated via Form 18.
+            </p>
+          </div>
+
+          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
+            <div className="flex items-center justify-between">
+              <h3 className="text-sm font-semibold text-slate-950">Stage 5: First Examination Report (FER) &amp; Grant (24–36 Months)</h3>
+              <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/60">Phase 5</span>
+            </div>
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-1 leading-relaxed">
+              Examiner issues FER citing novelty or Section 3 objections. Our patent agents submit formal written rebuttals and attend hearings to secure final Patent Grant Certificate.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Patent Opposition & Objections */}
+      <section className="space-y-4 pt-6 border-t border-slate-100">
+        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+          9. Handling Patent Objections &amp; Opposition Proceedings
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
+            <h3 className="text-sm font-semibold text-slate-950 flex items-center gap-1.5">
+              <AlertCircle className="w-4 h-4 text-amber-600" />
+              Pre-Grant Opposition (Section 25(1))
+            </h3>
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+              Any person can file a Pre-Grant Opposition in writing with the Controller at any time after publication in the Patent Journal but before the patent is granted. Grounds include lack of novelty, prior publication, insufficient disclosure, or non-patentability under Section 3.
+            </p>
+          </div>
+
+          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
+            <h3 className="text-sm font-semibold text-slate-950 flex items-center gap-1.5">
+              <Scale className="w-4 h-4 text-purple-600" />
+              Post-Grant Opposition (Section 25(2))
+            </h3>
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+              Any &apos;person interested&apos; (competitor, commercial operator) can file a Post-Grant Opposition on Form 7 within 12 months from the date of publication of the grant. The Controller constitutes an Opposition Board to examine evidence and hold oral hearings.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Common Reasons Patents Get Rejected */}
+      <section className="space-y-4 pt-6 border-t border-slate-100">
+        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+          10. Top Reasons Patent Applications Get Rejected in India
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+          <div className="p-3.5 rounded-xl bg-rose-50/50 border border-rose-200/70 text-xs sm:text-[13px] text-slate-900 font-normal">
+            <strong className="font-semibold text-rose-950 block mb-1">1. Anticipation by Prior Art:</strong>
+            Examiners discover identical or closely analogous scientific publications or global patents published prior to your filing date.
+          </div>
+          <div className="p-3.5 rounded-xl bg-rose-50/50 border border-rose-200/70 text-xs sm:text-[13px] text-slate-900 font-normal">
+            <strong className="font-semibold text-rose-950 block mb-1">2. Barred by Section 3 Statutory Exclusions:</strong>
+            Claiming computer programs per se (Section 3(k)), mere discovery of living substances (Section 3(j)), or non-efficacious pharma tweaks (Section 3(d)).
+          </div>
+          <div className="p-3.5 rounded-xl bg-rose-50/50 border border-rose-200/70 text-xs sm:text-[13px] text-slate-900 font-normal">
+            <strong className="font-semibold text-rose-950 block mb-1">3. Insufficient Enablement / Vague Claims:</strong>
+            Failing to describe the best working mode or drafting overly broad claims that fail to clearly specify what the inventor actually constructed.
+          </div>
+          <div className="p-3.5 rounded-xl bg-rose-50/50 border border-rose-200/70 text-xs sm:text-[13px] text-slate-900 font-normal">
+            <strong className="font-semibold text-rose-950 block mb-1">4. Non-Unity of Invention:</strong>
+            Attempting to bundle multiple distinct, unrelated inventions under a single application without a single overarching inventive concept.
+          </div>
+        </div>
+      </section>
+
+      {/* Patent vs Copyright vs Trademark */}
+      <section className="space-y-4 pt-6 border-t border-slate-100">
+        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+          11. Comparison: Patent vs Trademark vs Copyright in India
         </h2>
         <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm mt-3">
           <table className="w-full text-left border-collapse text-xs sm:text-[13px]">
@@ -292,7 +688,7 @@ function PatentRegistrationGuideContent() {
             <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
               <tr className="hover:bg-slate-50/70 transition-colors">
                 <td className="py-3.5 px-4 font-semibold text-slate-950">Subject Matter</td>
-                <td className="py-3.5 px-4">Inventions, functional devices &amp; chemical processes</td>
+                <td className="py-3.5 px-4">Technical inventions, machines, processes &amp; formulations</td>
                 <td className="py-3.5 px-4">Brand names, logos, slogans &amp; trade dress</td>
                 <td className="py-3.5 px-4">Original literary, artistic, musical &amp; source code works</td>
               </tr>
@@ -308,45 +704,42 @@ function PatentRegistrationGuideContent() {
                 <td className="py-3.5 px-4">Recommended (Common law passing off exists)</td>
                 <td className="py-3.5 px-4">Automatic upon creation; registration provides prima facie proof</td>
               </tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
+                <td className="py-3.5 px-4 font-semibold text-slate-950">Enforcement Action</td>
+                <td className="py-3.5 px-4">District / High Court patent infringement suit</td>
+                <td className="py-3.5 px-4">Civil infringement suit &amp; criminal seizure</td>
+                <td className="py-3.5 px-4">Civil copyright suit &amp; police seizure of copies</td>
+              </tr>
             </tbody>
           </table>
         </div>
       </section>
 
-      {/* Section 5: Step-by-Step Filing Roadmap */}
+      {/* Why Choose Merrafilings */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
-          5. End-to-End Patent Filing Procedure in India
+          12. Why Choose Merrafilings for Patent Filing &amp; Prosecution?
         </h2>
-        <div className="space-y-3 pt-2">
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
-            <h3 className="text-sm font-semibold text-slate-950">Step 1: Prior-Art Novelty Search</h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-1 leading-relaxed">
-              Conduct an exhaustive search to ensure your invention has not been previously published or disclosed anywhere in the world.
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
+            <Award className="w-5 h-5 text-indigo-600" />
+            <h3 className="text-sm font-semibold text-slate-950">Registered Patent Attorneys</h3>
+            <p className="text-xs text-slate-800 font-normal leading-relaxed">
+              Every techno-legal specification and claim set is personally drafted by certified patent agents registered with the CGPDTM.
             </p>
           </div>
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
-            <h3 className="text-sm font-semibold text-slate-950">Step 2: Provisional Specification (Form 2)</h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-1 leading-relaxed">
-              If the invention is in the prototype or development phase, file a provisional specification to secure an immediate priority date for 12 months.
+          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
+            <Globe2 className="w-5 h-5 text-purple-600" />
+            <h3 className="text-sm font-semibold text-slate-950">Global Prior-Art Intelligence</h3>
+            <p className="text-xs text-slate-800 font-normal leading-relaxed">
+              Comprehensive searches across Indian InPASS, USPTO, WIPO, and Espacenet ensure zero surprises during substantive examination.
             </p>
           </div>
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
-            <h3 className="text-sm font-semibold text-slate-950">Step 3: Complete Specification with Claims</h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-1 leading-relaxed">
-              File the complete specification within 12 months, detailing the full technical disclosure, best mode of operation, and legal patent claims.
-            </p>
-          </div>
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
-            <h3 className="text-sm font-semibold text-slate-950">Step 4: Publication &amp; Examination Request</h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-1 leading-relaxed">
-              The application is published in the Patent Journal at 18 months (or 1 month via Form 9 Early Publication). File Form 18 to trigger substantive examination.
-            </p>
-          </div>
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
-            <h3 className="text-sm font-semibold text-slate-950">Step 5: Responding to First Examination Report (FER) &amp; Grant</h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-1 leading-relaxed">
-              Our registered patent agent drafts legal and technical replies to examiner objections within 6 months. Upon satisfaction, the Patent Certificate is granted.
+          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
+            <Coins className="w-5 h-5 text-emerald-600" />
+            <h3 className="text-sm font-semibold text-slate-950">80% Government Rebate Guarantee</h3>
+            <p className="text-xs text-slate-800 font-normal leading-relaxed">
+              We seamlessly link your DPIIT startup registration or MSME Udyam to secure the maximum 80% statutory fee discount on filing and FERs.
             </p>
           </div>
         </div>
