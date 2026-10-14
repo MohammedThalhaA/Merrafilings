@@ -393,28 +393,24 @@ const FAQ_COL_2 = [
 
 const RELATED_GUIDES = [
   {
-    title: "GST Registration Online: Process, Eligibility & Documents",
-    href: "/gst-registration",
+    title: "GSTR-1A: What Is It and How Does It Help Correct GSTR-1?",
+    href: "/gst-return-filing/gstr-1a-explained",
   },
   {
-    title: "GST Letter of Undertaking (LUT) Filing for Exporters",
-    href: "/gst-lut",
+    title: "The Comprehensive Guide to Types of GST in India: CGST, SGST, IGST, UTGST",
+    href: "/gst-return-filing/types-of-gst-in-india-cgst-sgst-igst-utgst",
   },
   {
-    title: "TDS Return Filing Online: Form 24Q, 26Q & 27Q",
-    href: "/income-tax",
+    title: "GSTR-3B Process: A Comprehensive Guide to GST Return Filing",
+    href: "/gst-return-filing/gstr3b-filing-process-quick-easy-guide",
   },
   {
-    title: "Private Limited Company ROC Annual Compliance",
-    href: "/company-registration",
+    title: "GST Return Filings: A Comprehensive Guide for Businesses",
+    href: "/gst-return-filing/comprehensive-guide-to-gst-return-filings",
   },
   {
-    title: "LLP Form 11 and Form 8 Annual Filing Guide",
-    href: "/llp-registration",
-  },
-  {
-    title: "Udyam MSME Certificate Registration & Benefits",
-    href: "/udyam-registration",
+    title: "Understanding GSTR-2 (Deferred Return) Simplified",
+    href: "/gst-return-filing/understanding-gstr2-deferred-return-simplified",
   },
 ];
 
