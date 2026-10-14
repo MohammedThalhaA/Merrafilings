@@ -158,12 +158,34 @@ const PACKAGES: PricingPackage[] = [
 ];
 
 const RELATED_GUIDES = [
-  "How to Register Copyright for Software Code in India",
-  "Copyright vs Trademark: Differences, Benefits, and Protection",
-  "Documents Required for Copyright Registration in India",
-  "Understanding Lifetime + 60 Years Copyright Duration",
-  "How to Handle Copyright Examination Discrepancy Letters",
-  "Berne Convention: How Indian Copyrights Protect You Globally",
+  {
+    title: "Understanding Copyright Registration Fees in Tamilnadu",
+    href: "/copyright-registration/copyright-registration-fees-in-tamilnadu-guide",
+  },
+  {
+    title: "Copyright Registration Guide: Essential Insights & Steps",
+    href: "/copyright-registration/copyright-registration-guide-key-insights-steps",
+  },
+  {
+    title: "Understanding the Copyright Registration Process in India: Key Steps & Benefits",
+    href: "/copyright-registration/copyright-registration-in-india-key-steps-benefits",
+  },
+  {
+    title: "Copyrights Registration Required Documents: A Comprehensive Guide",
+    href: "/copyright-registration/copyrights-registration-required-documents-guide",
+  },
+  {
+    title: "Understanding Copyright Registration: A Comprehensive Guide",
+    href: "/copyright-registration/understanding-copyright-registration-a-comprehensive-guide",
+  },
+  {
+    title: "Register Your Copyright Online with Merrafilings: Protect Your Rights",
+    href: "/copyright-registration/protect-your-rights-register-copyright-online",
+  },
+  {
+    title: "Copyright Registration in Tamil Nadu: A Comprehensive Guide",
+    href: "/copyright-registration/copyright-registration-tamil-nadu-guide",
+  },
 ];
 
 const RELATED_SERVICES_TAGS = [
