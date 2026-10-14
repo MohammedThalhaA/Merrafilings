@@ -152,80 +152,96 @@ function PatentRegistrationGuideContent() {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-3">
-            <CheckSquare2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+          <div className="p-3.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group flex items-start gap-3">
+            <div className="w-8 h-8 rounded-lg bg-indigo-50 border border-indigo-100/70 text-indigo-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#5C3BFF] group-hover:text-white group-hover:border-[#5C3BFF] transition-all duration-200">
+              <CheckSquare2 className="w-4.5 h-4.5" />
+            </div>
             <div>
-              <h3 className="text-sm font-semibold text-slate-950">1. Conduct Prior-Art Search</h3>
+              <h3 className="text-sm font-semibold text-slate-950 group-hover:text-indigo-950 transition-colors">1. Conduct Prior-Art Search</h3>
               <p className="text-xs text-slate-800 font-normal mt-0.5 leading-relaxed">
                 Audit Indian and international patent databases (InPASS, USPTO, Espacenet, WIPO) and scientific literature to confirm global novelty.
               </p>
             </div>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-3">
-            <CheckSquare2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+          <div className="p-3.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group flex items-start gap-3">
+            <div className="w-8 h-8 rounded-lg bg-indigo-50 border border-indigo-100/70 text-indigo-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#5C3BFF] group-hover:text-white group-hover:border-[#5C3BFF] transition-all duration-200">
+              <CheckSquare2 className="w-4.5 h-4.5" />
+            </div>
             <div>
-              <h3 className="text-sm font-semibold text-slate-950">2. Document Technical Description</h3>
+              <h3 className="text-sm font-semibold text-slate-950 group-hover:text-indigo-950 transition-colors">2. Document Technical Description</h3>
               <p className="text-xs text-slate-800 font-normal mt-0.5 leading-relaxed">
                 Prepare comprehensive technical write-ups detailing the problem solved, structural parts, materials, and method of working.
               </p>
             </div>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-3">
-            <CheckSquare2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+          <div className="p-3.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group flex items-start gap-3">
+            <div className="w-8 h-8 rounded-lg bg-indigo-50 border border-indigo-100/70 text-indigo-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#5C3BFF] group-hover:text-white group-hover:border-[#5C3BFF] transition-all duration-200">
+              <CheckSquare2 className="w-4.5 h-4.5" />
+            </div>
             <div>
-              <h3 className="text-sm font-semibold text-slate-950">3. Compile Proof of Inventorship</h3>
+              <h3 className="text-sm font-semibold text-slate-950 group-hover:text-indigo-950 transition-colors">3. Compile Proof of Inventorship</h3>
               <p className="text-xs text-slate-800 font-normal mt-0.5 leading-relaxed">
                 Maintain lab notebooks, engineering logs, prototype photos, test results, and dated records establishing the true inventors.
               </p>
             </div>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-3">
-            <CheckSquare2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+          <div className="p-3.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group flex items-start gap-3">
+            <div className="w-8 h-8 rounded-lg bg-indigo-50 border border-indigo-100/70 text-indigo-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#5C3BFF] group-hover:text-white group-hover:border-[#5C3BFF] transition-all duration-200">
+              <CheckSquare2 className="w-4.5 h-4.5" />
+            </div>
             <div>
-              <h3 className="text-sm font-semibold text-slate-950">4. Formulate Strategic Patent Claims</h3>
+              <h3 className="text-sm font-semibold text-slate-950 group-hover:text-indigo-950 transition-colors">4. Formulate Strategic Patent Claims</h3>
               <p className="text-xs text-slate-800 font-normal mt-0.5 leading-relaxed">
                 Define the legal perimeter of protection by articulating independent claims (broad scope) and dependent claims (specific embodiments).
               </p>
             </div>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-3">
-            <CheckSquare2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+          <div className="p-3.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group flex items-start gap-3">
+            <div className="w-8 h-8 rounded-lg bg-indigo-50 border border-indigo-100/70 text-indigo-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#5C3BFF] group-hover:text-white group-hover:border-[#5C3BFF] transition-all duration-200">
+              <CheckSquare2 className="w-4.5 h-4.5" />
+            </div>
             <div>
-              <h3 className="text-sm font-semibold text-slate-950">5. Prepare High-Resolution Drawings</h3>
+              <h3 className="text-sm font-semibold text-slate-950 group-hover:text-indigo-950 transition-colors">5. Prepare High-Resolution Drawings</h3>
               <p className="text-xs text-slate-800 font-normal mt-0.5 leading-relaxed">
                 Create clear black-and-white technical schematics, flowcharts, or chemical formulas with numbered reference indicators.
               </p>
             </div>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-3">
-            <CheckSquare2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+          <div className="p-3.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group flex items-start gap-3">
+            <div className="w-8 h-8 rounded-lg bg-indigo-50 border border-indigo-100/70 text-indigo-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#5C3BFF] group-hover:text-white group-hover:border-[#5C3BFF] transition-all duration-200">
+              <CheckSquare2 className="w-4.5 h-4.5" />
+            </div>
             <div>
-              <h3 className="text-sm font-semibold text-slate-950">6. Determine Application Type</h3>
+              <h3 className="text-sm font-semibold text-slate-950 group-hover:text-indigo-950 transition-colors">6. Determine Application Type</h3>
               <p className="text-xs text-slate-800 font-normal mt-0.5 leading-relaxed">
                 Choose between a fast Provisional Application (locks 12-month priority for prototypes) or a Complete Specification filing.
               </p>
             </div>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-3">
-            <CheckSquare2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+          <div className="p-3.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group flex items-start gap-3">
+            <div className="w-8 h-8 rounded-lg bg-indigo-50 border border-indigo-100/70 text-indigo-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#5C3BFF] group-hover:text-white group-hover:border-[#5C3BFF] transition-all duration-200">
+              <CheckSquare2 className="w-4.5 h-4.5" />
+            </div>
             <div>
-              <h3 className="text-sm font-semibold text-slate-950">7. Verify Section 3 Exclusions</h3>
+              <h3 className="text-sm font-semibold text-slate-950 group-hover:text-indigo-950 transition-colors">7. Verify Section 3 Exclusions</h3>
               <p className="text-xs text-slate-800 font-normal mt-0.5 leading-relaxed">
                 Ensure the subject matter is not barred under Section 3 (e.g. computer programs per se, mathematical algorithms, or frivolous ideas).
               </p>
             </div>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-3">
-            <CheckSquare2 className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+          <div className="p-3.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group flex items-start gap-3">
+            <div className="w-8 h-8 rounded-lg bg-indigo-50 border border-indigo-100/70 text-indigo-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#5C3BFF] group-hover:text-white group-hover:border-[#5C3BFF] transition-all duration-200">
+              <CheckSquare2 className="w-4.5 h-4.5" />
+            </div>
             <div>
-              <h3 className="text-sm font-semibold text-slate-950">8. Plan Official Statutory Budget</h3>
+              <h3 className="text-sm font-semibold text-slate-950 group-hover:text-indigo-950 transition-colors">8. Plan Official Statutory Budget</h3>
               <p className="text-xs text-slate-800 font-normal mt-0.5 leading-relaxed">
                 Claim MSME / DPIIT Startup subsidies (80% fee discount) to drastically reduce filing, examination, and maintenance expenditures.
               </p>
@@ -293,9 +309,11 @@ function PatentRegistrationGuideContent() {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 pt-2">
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1">
-            <h3 className="text-xs font-semibold text-slate-950 flex items-center gap-1.5">
-              <Cpu className="w-3.5 h-3.5 text-indigo-600" />
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-2.5">
+            <div className="w-8 h-8 rounded-lg bg-indigo-50 border border-indigo-100/70 text-indigo-600 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#5C3BFF] group-hover:text-white group-hover:border-[#5C3BFF] transition-all duration-200 shadow-2xs">
+              <Cpu className="w-4 h-4" />
+            </div>
+            <h3 className="text-xs font-semibold text-slate-950 group-hover:text-indigo-950 transition-colors">
               Mechanical &amp; Hardware
             </h3>
             <p className="text-[12px] text-slate-800 leading-relaxed font-normal">
@@ -303,9 +321,11 @@ function PatentRegistrationGuideContent() {
             </p>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1">
-            <h3 className="text-xs font-semibold text-slate-950 flex items-center gap-1.5">
-              <Microscope className="w-3.5 h-3.5 text-purple-600" />
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#7052FF] hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-2.5">
+            <div className="w-8 h-8 rounded-lg bg-purple-50 border border-purple-100/70 text-purple-600 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#7052FF] group-hover:text-white group-hover:border-[#7052FF] transition-all duration-200 shadow-2xs">
+              <Microscope className="w-4 h-4" />
+            </div>
+            <h3 className="text-xs font-semibold text-slate-950 group-hover:text-purple-950 transition-colors">
               Chemical &amp; Materials
             </h3>
             <p className="text-[12px] text-slate-800 leading-relaxed font-normal">
@@ -313,9 +333,11 @@ function PatentRegistrationGuideContent() {
             </p>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1">
-            <h3 className="text-xs font-semibold text-slate-950 flex items-center gap-1.5">
-              <Lightbulb className="w-3.5 h-3.5 text-amber-600" />
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-amber-500 hover:shadow-lg hover:shadow-amber-500/10 hover:-translate-y-1.5 hover:bg-[#FFFDF7] transition-all duration-300 cursor-pointer group space-y-2.5">
+            <div className="w-8 h-8 rounded-lg bg-amber-50 border border-amber-100/70 text-amber-600 flex items-center justify-center group-hover:scale-110 group-hover:bg-amber-600 group-hover:text-white group-hover:border-amber-600 transition-all duration-200 shadow-2xs">
+              <Lightbulb className="w-4 h-4" />
+            </div>
+            <h3 className="text-xs font-semibold text-slate-950 group-hover:text-amber-950 transition-colors">
               Software with Technical Effect
             </h3>
             <p className="text-[12px] text-slate-800 leading-relaxed font-normal">
@@ -323,9 +345,11 @@ function PatentRegistrationGuideContent() {
             </p>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1">
-            <h3 className="text-xs font-semibold text-slate-950 flex items-center gap-1.5">
-              <Award className="w-3.5 h-3.5 text-emerald-600" />
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#00B074] hover:shadow-lg hover:shadow-emerald-500/10 hover:-translate-y-1.5 hover:bg-[#F2FBF7] transition-all duration-300 cursor-pointer group space-y-2.5">
+            <div className="w-8 h-8 rounded-lg bg-emerald-50 border border-emerald-100/70 text-emerald-600 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#00B074] group-hover:text-white group-hover:border-[#00B074] transition-all duration-200 shadow-2xs">
+              <Award className="w-4 h-4" />
+            </div>
+            <h3 className="text-xs font-semibold text-slate-950 group-hover:text-emerald-950 transition-colors">
               Pharmaceuticals &amp; Biotech
             </h3>
             <p className="text-[12px] text-slate-800 leading-relaxed font-normal">
@@ -623,9 +647,11 @@ function PatentRegistrationGuideContent() {
           9. Handling Patent Objections &amp; Opposition Proceedings
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-            <h3 className="text-sm font-semibold text-slate-950 flex items-center gap-1.5">
-              <AlertCircle className="w-4 h-4 text-amber-600" />
+          <div className="p-4.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-2.5">
+            <div className="w-9 h-9 rounded-lg bg-amber-50 border border-amber-100/70 text-amber-600 flex items-center justify-center group-hover:scale-110 group-hover:bg-amber-600 group-hover:text-white group-hover:border-amber-600 transition-all duration-200 shadow-2xs">
+              <AlertCircle className="w-5 h-5" />
+            </div>
+            <h3 className="text-sm font-semibold text-slate-950 group-hover:text-amber-950 transition-colors">
               Pre-Grant Opposition (Section 25(1))
             </h3>
             <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
@@ -633,9 +659,11 @@ function PatentRegistrationGuideContent() {
             </p>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-            <h3 className="text-sm font-semibold text-slate-950 flex items-center gap-1.5">
-              <Scale className="w-4 h-4 text-purple-600" />
+          <div className="p-4.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#7052FF] hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-2.5">
+            <div className="w-9 h-9 rounded-lg bg-purple-50 border border-purple-100/70 text-purple-600 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#7052FF] group-hover:text-white group-hover:border-[#7052FF] transition-all duration-200 shadow-2xs">
+              <Scale className="w-5 h-5" />
+            </div>
+            <h3 className="text-sm font-semibold text-slate-950 group-hover:text-purple-950 transition-colors">
               Post-Grant Opposition (Section 25(2))
             </h3>
             <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
@@ -651,19 +679,19 @@ function PatentRegistrationGuideContent() {
           10. Top Reasons Patent Applications Get Rejected in India
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-          <div className="p-3.5 rounded-xl bg-rose-50/50 border border-rose-200/70 text-xs sm:text-[13px] text-slate-900 font-normal">
+          <div className="p-4 rounded-xl bg-white border border-rose-200/80 shadow-2xs hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-1 hover:bg-rose-50/20 transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
             <strong className="font-semibold text-rose-950 block mb-1">1. Anticipation by Prior Art:</strong>
             Examiners discover identical or closely analogous scientific publications or global patents published prior to your filing date.
           </div>
-          <div className="p-3.5 rounded-xl bg-rose-50/50 border border-rose-200/70 text-xs sm:text-[13px] text-slate-900 font-normal">
+          <div className="p-4 rounded-xl bg-white border border-rose-200/80 shadow-2xs hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-1 hover:bg-rose-50/20 transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
             <strong className="font-semibold text-rose-950 block mb-1">2. Barred by Section 3 Statutory Exclusions:</strong>
             Claiming computer programs per se (Section 3(k)), mere discovery of living substances (Section 3(j)), or non-efficacious pharma tweaks (Section 3(d)).
           </div>
-          <div className="p-3.5 rounded-xl bg-rose-50/50 border border-rose-200/70 text-xs sm:text-[13px] text-slate-900 font-normal">
+          <div className="p-4 rounded-xl bg-white border border-rose-200/80 shadow-2xs hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-1 hover:bg-rose-50/20 transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
             <strong className="font-semibold text-rose-950 block mb-1">3. Insufficient Enablement / Vague Claims:</strong>
             Failing to describe the best working mode or drafting overly broad claims that fail to clearly specify what the inventor actually constructed.
           </div>
-          <div className="p-3.5 rounded-xl bg-rose-50/50 border border-rose-200/70 text-xs sm:text-[13px] text-slate-900 font-normal">
+          <div className="p-4 rounded-xl bg-white border border-rose-200/80 shadow-2xs hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-1 hover:bg-rose-50/20 transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
             <strong className="font-semibold text-rose-950 block mb-1">4. Non-Unity of Invention:</strong>
             Attempting to bundle multiple distinct, unrelated inventions under a single application without a single overarching inventive concept.
           </div>
@@ -721,23 +749,31 @@ function PatentRegistrationGuideContent() {
           12. Why Choose Merrafilings for Patent Filing &amp; Prosecution?
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-            <Award className="w-5 h-5 text-indigo-600" />
-            <h3 className="text-sm font-semibold text-slate-950">Registered Patent Attorneys</h3>
+          <div className="p-4.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-100/80 text-indigo-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#5C3BFF] group-hover:text-white group-hover:border-[#5C3BFF] transition-all duration-200 shadow-2xs">
+              <Award className="w-5 h-5" />
+            </div>
+            <h3 className="text-sm font-semibold text-slate-950 group-hover:text-indigo-950 transition-colors">Registered Patent Attorneys</h3>
             <p className="text-xs text-slate-800 font-normal leading-relaxed">
               Every techno-legal specification and claim set is personally drafted by certified patent agents registered with the CGPDTM.
             </p>
           </div>
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-            <Globe2 className="w-5 h-5 text-purple-600" />
-            <h3 className="text-sm font-semibold text-slate-950">Global Prior-Art Intelligence</h3>
+
+          <div className="p-4.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#7052FF] hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-purple-50 border border-purple-100/80 text-purple-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#7052FF] group-hover:text-white group-hover:border-[#7052FF] transition-all duration-200 shadow-2xs">
+              <Globe2 className="w-5 h-5" />
+            </div>
+            <h3 className="text-sm font-semibold text-slate-950 group-hover:text-purple-950 transition-colors">Global Prior-Art Intelligence</h3>
             <p className="text-xs text-slate-800 font-normal leading-relaxed">
               Comprehensive searches across Indian InPASS, USPTO, WIPO, and Espacenet ensure zero surprises during substantive examination.
             </p>
           </div>
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-            <Coins className="w-5 h-5 text-emerald-600" />
-            <h3 className="text-sm font-semibold text-slate-950">80% Government Rebate Guarantee</h3>
+
+          <div className="p-4.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#00B074] hover:shadow-lg hover:shadow-emerald-500/10 hover:-translate-y-1.5 hover:bg-[#F2FBF7] transition-all duration-300 cursor-pointer group space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-100/80 text-emerald-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#00B074] group-hover:text-white group-hover:border-[#00B074] transition-all duration-200 shadow-2xs">
+              <Coins className="w-5 h-5" />
+            </div>
+            <h3 className="text-sm font-semibold text-slate-950 group-hover:text-emerald-950 transition-colors">80% Government Rebate Guarantee</h3>
             <p className="text-xs text-slate-800 font-normal leading-relaxed">
               We seamlessly link your DPIIT startup registration or MSME Udyam to secure the maximum 80% statutory fee discount on filing and FERs.
             </p>

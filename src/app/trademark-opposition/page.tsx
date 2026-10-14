@@ -143,9 +143,11 @@ function TrademarkOppositionGuideContent() {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1">
-            <h3 className="text-xs font-semibold text-slate-950 flex items-center gap-1.5">
-              <UserCheck className="w-4 h-4 text-indigo-600" />
+          <div className="p-3.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-1.5">
+            <div className="w-8 h-8 rounded-lg bg-indigo-50 border border-indigo-100/70 text-indigo-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#5C3BFF] group-hover:text-white group-hover:border-[#5C3BFF] transition-all duration-200 shadow-3xs">
+              <UserCheck className="w-4 h-4" />
+            </div>
+            <h3 className="text-xs font-semibold text-slate-950 group-hover:text-indigo-950 transition-colors">
               &quot;Any Person&quot; May File Opposition
             </h3>
             <p className="text-xs text-slate-800 leading-relaxed font-normal">
@@ -153,9 +155,11 @@ function TrademarkOppositionGuideContent() {
             </p>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1">
-            <h3 className="text-xs font-semibold text-slate-950 flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-purple-600" />
+          <div className="p-3.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#7052FF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-1.5">
+            <div className="w-8 h-8 rounded-lg bg-purple-50 border border-purple-100/70 text-purple-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#7052FF] group-hover:text-white group-hover:border-[#7052FF] transition-all duration-200 shadow-3xs">
+              <ShieldCheck className="w-4 h-4" />
+            </div>
+            <h3 className="text-xs font-semibold text-slate-950 group-hover:text-purple-950 transition-colors">
               Prior Registered Mark Not Mandatory
             </h3>
             <p className="text-xs text-slate-800 leading-relaxed font-normal">
@@ -163,9 +167,11 @@ function TrademarkOppositionGuideContent() {
             </p>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1">
-            <h3 className="text-xs font-semibold text-slate-950 flex items-center gap-1.5">
-              <AlertCircle className="w-4 h-4 text-amber-600" />
+          <div className="p-3.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-amber-500 hover:shadow-md hover:shadow-amber-500/10 hover:-translate-y-1 hover:bg-[#FFFDF7] transition-all duration-300 cursor-pointer group space-y-1.5">
+            <div className="w-8 h-8 rounded-lg bg-amber-50 border border-amber-100/70 text-amber-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-amber-600 group-hover:text-white group-hover:border-amber-600 transition-all duration-200 shadow-3xs">
+              <AlertCircle className="w-4 h-4" />
+            </div>
+            <h3 className="text-xs font-semibold text-slate-950 group-hover:text-amber-950 transition-colors">
               Public Interest &amp; Consumer Protection
             </h3>
             <p className="text-xs text-slate-800 leading-relaxed font-normal">
@@ -173,9 +179,11 @@ function TrademarkOppositionGuideContent() {
             </p>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1">
-            <h3 className="text-xs font-semibold text-slate-950 flex items-center gap-1.5">
-              <Scale className="w-4 h-4 text-emerald-600" />
+          <div className="p-3.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#00B074] hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-1 hover:bg-[#F2FBF7] transition-all duration-300 cursor-pointer group space-y-1.5">
+            <div className="w-8 h-8 rounded-lg bg-emerald-50 border border-emerald-100/70 text-emerald-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#00B074] group-hover:text-white group-hover:border-[#00B074] transition-all duration-200 shadow-3xs">
+              <Scale className="w-4 h-4" />
+            </div>
+            <h3 className="text-xs font-semibold text-slate-950 group-hover:text-emerald-950 transition-colors">
               Jurisdiction &amp; Registry Filing
             </h3>
             <p className="text-xs text-slate-800 leading-relaxed font-normal">
@@ -196,10 +204,12 @@ function TrademarkOppositionGuideContent() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
           {/* Section 9 */}
-          <div className="p-4.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-            <div className="flex items-center gap-2 text-indigo-700 font-semibold text-sm">
-              <Scale className="w-4.5 h-4.5" />
-              <span>Section 9: Absolute Grounds for Refusal</span>
+          <div className="p-5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-3">
+            <div className="flex items-center gap-2.5 text-indigo-700 font-semibold text-sm">
+              <div className="w-8 h-8 rounded-lg bg-indigo-50 border border-indigo-100/70 text-indigo-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#5C3BFF] group-hover:text-white group-hover:border-[#5C3BFF] transition-all duration-200 shadow-3xs">
+                <Scale className="w-4.5 h-4.5" />
+              </div>
+              <span className="group-hover:text-indigo-950 transition-colors">Section 9: Absolute Grounds for Refusal</span>
             </div>
             <ul className="space-y-1.5 text-xs sm:text-[13px] text-slate-800 font-normal">
               <li>• <strong className="font-semibold text-slate-950">Descriptive Mark:</strong> The mark indicates the kind, quality, quantity, values, or geographical origin of goods.</li>
@@ -211,10 +221,12 @@ function TrademarkOppositionGuideContent() {
           </div>
 
           {/* Section 11 */}
-          <div className="p-4.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-            <div className="flex items-center gap-2 text-purple-700 font-semibold text-sm">
-              <ShieldAlert className="w-4.5 h-4.5" />
-              <span>Section 11: Relative Grounds for Refusal</span>
+          <div className="p-5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#7052FF] hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-3">
+            <div className="flex items-center gap-2.5 text-purple-700 font-semibold text-sm">
+              <div className="w-8 h-8 rounded-lg bg-purple-50 border border-purple-100/70 text-purple-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#7052FF] group-hover:text-white group-hover:border-[#7052FF] transition-all duration-200 shadow-3xs">
+                <ShieldAlert className="w-4.5 h-4.5" />
+              </div>
+              <span className="group-hover:text-purple-950 transition-colors">Section 11: Relative Grounds for Refusal</span>
             </div>
             <ul className="space-y-1.5 text-xs sm:text-[13px] text-slate-800 font-normal">
               <li>• <strong className="font-semibold text-slate-950">Identical / Similar Mark:</strong> Conflicting with an earlier registered trademark or prior pending application.</li>
@@ -377,9 +389,11 @@ function TrademarkOppositionGuideContent() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1">
-            <h3 className="text-xs font-semibold text-slate-950 flex items-center gap-1.5">
-              <XCircle className="w-4 h-4 text-rose-600" />
+          <div className="p-4 rounded-xl bg-white border border-rose-200/80 shadow-2xs hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-1 hover:bg-rose-50/20 transition-all duration-300 cursor-pointer group space-y-1.5">
+            <div className="w-8 h-8 rounded-lg bg-rose-50 border border-rose-100/70 text-rose-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-rose-600 group-hover:text-white group-hover:border-rose-600 transition-all duration-200 shadow-3xs">
+              <XCircle className="w-4 h-4" />
+            </div>
+            <h3 className="text-xs font-semibold text-slate-950 group-hover:text-rose-950 transition-colors">
               Abandonment of Opposition (Opponent Default)
             </h3>
             <p className="text-xs text-slate-800 leading-relaxed font-normal">
@@ -387,9 +401,11 @@ function TrademarkOppositionGuideContent() {
             </p>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1">
-            <h3 className="text-xs font-semibold text-slate-950 flex items-center gap-1.5">
-              <XCircle className="w-4 h-4 text-rose-600" />
+          <div className="p-4 rounded-xl bg-white border border-rose-200/80 shadow-2xs hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-1 hover:bg-rose-50/20 transition-all duration-300 cursor-pointer group space-y-1.5">
+            <div className="w-8 h-8 rounded-lg bg-rose-50 border border-rose-100/70 text-rose-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-rose-600 group-hover:text-white group-hover:border-rose-600 transition-all duration-200 shadow-3xs">
+              <XCircle className="w-4 h-4" />
+            </div>
+            <h3 className="text-xs font-semibold text-slate-950 group-hover:text-rose-950 transition-colors">
               Abandonment of Application (Applicant Default)
             </h3>
             <p className="text-xs text-slate-800 leading-relaxed font-normal">
@@ -409,9 +425,11 @@ function TrademarkOppositionGuideContent() {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1">
-            <h3 className="text-xs font-semibold text-slate-950 flex items-center gap-1.5">
-              <Handshake className="w-4 h-4 text-indigo-600" />
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-2">
+            <div className="w-8 h-8 rounded-lg bg-indigo-50 border border-indigo-100/70 text-indigo-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#5C3BFF] group-hover:text-white group-hover:border-[#5C3BFF] transition-all duration-200 shadow-3xs">
+              <Handshake className="w-4 h-4" />
+            </div>
+            <h3 className="text-xs font-semibold text-slate-950 group-hover:text-indigo-950 transition-colors">
               Coexistence Agreements
             </h3>
             <p className="text-[12px] text-slate-800 leading-relaxed font-normal">
@@ -419,9 +437,11 @@ function TrademarkOppositionGuideContent() {
             </p>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1">
-            <h3 className="text-xs font-semibold text-slate-950 flex items-center gap-1.5">
-              <FileSpreadsheet className="w-4 h-4 text-purple-600" />
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#7052FF] hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-2">
+            <div className="w-8 h-8 rounded-lg bg-purple-50 border border-purple-100/70 text-purple-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#7052FF] group-hover:text-white group-hover:border-[#7052FF] transition-all duration-200 shadow-3xs">
+              <FileSpreadsheet className="w-4 h-4" />
+            </div>
+            <h3 className="text-xs font-semibold text-slate-950 group-hover:text-purple-950 transition-colors">
               Specification Amendment (TM-M)
             </h3>
             <p className="text-[12px] text-slate-800 leading-relaxed font-normal">
@@ -429,9 +449,11 @@ function TrademarkOppositionGuideContent() {
             </p>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1">
-            <h3 className="text-xs font-semibold text-slate-950 flex items-center gap-1.5">
-              <Check className="w-4 h-4 text-emerald-600" />
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#00B074] hover:shadow-lg hover:shadow-emerald-500/10 hover:-translate-y-1.5 hover:bg-[#F2FBF7] transition-all duration-300 cursor-pointer group space-y-2">
+            <div className="w-8 h-8 rounded-lg bg-emerald-50 border border-emerald-100/70 text-emerald-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#00B074] group-hover:text-white group-hover:border-[#00B074] transition-all duration-200 shadow-3xs">
+              <Check className="w-4 h-4" />
+            </div>
+            <h3 className="text-xs font-semibold text-slate-950 group-hover:text-emerald-950 transition-colors">
               Voluntary TM-O Withdrawal
             </h3>
             <p className="text-[12px] text-slate-800 leading-relaxed font-normal">
@@ -469,23 +491,31 @@ function TrademarkOppositionGuideContent() {
           8. Why Choose Merrafilings for Trademark Opposition &amp; Defense?
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-            <Award className="w-5 h-5 text-indigo-600" />
-            <h3 className="text-sm font-semibold text-slate-950">Senior Trademark Advocates</h3>
+          <div className="p-4.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-100/80 text-indigo-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#5C3BFF] group-hover:text-white group-hover:border-[#5C3BFF] transition-all duration-200 shadow-2xs">
+              <Award className="w-5 h-5" />
+            </div>
+            <h3 className="text-sm font-semibold text-slate-950 group-hover:text-indigo-950 transition-colors">Senior Trademark Advocates</h3>
             <p className="text-xs text-slate-800 font-normal leading-relaxed">
               Every TM-O notice, counter-statement, and evidentiary affidavit is prepared and argued by seasoned IP litigators.
             </p>
           </div>
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-            <Clock className="w-5 h-5 text-purple-600" />
-            <h3 className="text-sm font-semibold text-slate-950">Zero-Default Deadline Guarantee</h3>
+
+          <div className="p-4.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#7052FF] hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-purple-50 border border-purple-100/80 text-purple-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#7052FF] group-hover:text-white group-hover:border-[#7052FF] transition-all duration-200 shadow-2xs">
+              <Clock className="w-5 h-5" />
+            </div>
+            <h3 className="text-sm font-semibold text-slate-950 group-hover:text-purple-950 transition-colors">Zero-Default Deadline Guarantee</h3>
             <p className="text-xs text-slate-800 font-normal leading-relaxed">
               Our automated milestone tracking ensures your 2-month counter-statement and Rule 45/46 evidence are filed well ahead of statutory cutoffs.
             </p>
           </div>
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-            <Gavel className="w-5 h-5 text-emerald-600" />
-            <h3 className="text-sm font-semibold text-slate-950">Registry Hearing Representation</h3>
+
+          <div className="p-4.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#00B074] hover:shadow-lg hover:shadow-emerald-500/10 hover:-translate-y-1.5 hover:bg-[#F2FBF7] transition-all duration-300 cursor-pointer group space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-100/80 text-emerald-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#00B074] group-hover:text-white group-hover:border-[#00B074] transition-all duration-200 shadow-2xs">
+              <Gavel className="w-5 h-5" />
+            </div>
+            <h3 className="text-sm font-semibold text-slate-950 group-hover:text-emerald-950 transition-colors">Registry Hearing Representation</h3>
             <p className="text-xs text-slate-800 font-normal leading-relaxed">
               Complete oral advocacy before Hearing Officers across all 5 branches (Delhi, Mumbai, Chennai, Kolkata, Ahmedabad) and virtual hearings.
             </p>

@@ -148,9 +148,11 @@ function DesignRegistrationGuideContent() {
           1. Why is Industrial Design Registration Crucial for Businesses?
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1">
-            <h3 className="text-xs font-semibold text-slate-950 flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-indigo-600" />
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-2">
+            <div className="w-8 h-8 rounded-lg bg-indigo-50 border border-indigo-100/70 text-indigo-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#5C3BFF] group-hover:text-white group-hover:border-[#5C3BFF] transition-all duration-200 shadow-3xs">
+              <ShieldCheck className="w-4 h-4" />
+            </div>
+            <h3 className="text-xs font-semibold text-slate-950 group-hover:text-indigo-950 transition-colors">
               15-Year Nationwide Market Exclusivity
             </h3>
             <p className="text-xs text-slate-800 leading-relaxed font-normal">
@@ -158,9 +160,11 @@ function DesignRegistrationGuideContent() {
             </p>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1">
-            <h3 className="text-xs font-semibold text-slate-950 flex items-center gap-1.5">
-              <Gavel className="w-4 h-4 text-purple-600" />
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#7052FF] hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-2">
+            <div className="w-8 h-8 rounded-lg bg-purple-50 border border-purple-100/70 text-purple-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#7052FF] group-hover:text-white group-hover:border-[#7052FF] transition-all duration-200 shadow-3xs">
+              <Gavel className="w-4 h-4" />
+            </div>
+            <h3 className="text-xs font-semibold text-slate-950 group-hover:text-purple-950 transition-colors">
               Anti-Piracy Enforcement under Section 22
             </h3>
             <p className="text-xs text-slate-800 leading-relaxed font-normal">
@@ -168,9 +172,11 @@ function DesignRegistrationGuideContent() {
             </p>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1">
-            <h3 className="text-xs font-semibold text-slate-950 flex items-center gap-1.5">
-              <TrendingUp className="w-4 h-4 text-emerald-600" />
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#00B074] hover:shadow-lg hover:shadow-emerald-500/10 hover:-translate-y-1.5 hover:bg-[#F2FBF7] transition-all duration-300 cursor-pointer group space-y-2">
+            <div className="w-8 h-8 rounded-lg bg-emerald-50 border border-emerald-100/70 text-emerald-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#00B074] group-hover:text-white group-hover:border-[#00B074] transition-all duration-200 shadow-3xs">
+              <TrendingUp className="w-4 h-4" />
+            </div>
+            <h3 className="text-xs font-semibold text-slate-950 group-hover:text-emerald-950 transition-colors">
               Balance-Sheet IP Asset &amp; Licensing Income
             </h3>
             <p className="text-xs text-slate-800 leading-relaxed font-normal">
@@ -178,9 +184,11 @@ function DesignRegistrationGuideContent() {
             </p>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1">
-            <h3 className="text-xs font-semibold text-slate-950 flex items-center gap-1.5">
-              <Award className="w-4 h-4 text-amber-600" />
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-amber-500 hover:shadow-lg hover:shadow-amber-500/10 hover:-translate-y-1.5 hover:bg-[#FFFDF7] transition-all duration-300 cursor-pointer group space-y-2">
+            <div className="w-8 h-8 rounded-lg bg-amber-50 border border-amber-100/70 text-amber-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-amber-600 group-hover:text-white group-hover:border-amber-600 transition-all duration-200 shadow-3xs">
+              <Award className="w-4 h-4" />
+            </div>
+            <h3 className="text-xs font-semibold text-slate-950 group-hover:text-amber-950 transition-colors">
               Fast-Track Grant in 3 to 6 Months
             </h3>
             <p className="text-xs text-slate-800 leading-relaxed font-normal">
@@ -200,20 +208,24 @@ function DesignRegistrationGuideContent() {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-          <div className="p-4.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-            <div className="flex items-center gap-2 text-indigo-700 font-semibold text-sm">
-              <Palette className="w-4.5 h-4.5" />
-              <span>Three-Dimensional (3D) Features</span>
+          <div className="p-5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-2.5">
+            <div className="flex items-center gap-2.5 text-indigo-700 font-semibold text-sm">
+              <div className="w-8 h-8 rounded-lg bg-indigo-50 border border-indigo-100/70 text-indigo-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#5C3BFF] group-hover:text-white group-hover:border-[#5C3BFF] transition-all duration-200 shadow-3xs">
+                <Palette className="w-4.5 h-4.5" />
+              </div>
+              <span className="group-hover:text-indigo-950 transition-colors">Three-Dimensional (3D) Features</span>
             </div>
             <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
               Unique physical shapes and configurations: ergonomic furniture, consumer gadget contours, distinctive bottle structures, automobile curves, footwear soles, and jewelry models.
             </p>
           </div>
 
-          <div className="p-4.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-            <div className="flex items-center gap-2 text-purple-700 font-semibold text-sm">
-              <Sparkle className="w-4.5 h-4.5" />
-              <span>Two-Dimensional (2D) Features</span>
+          <div className="p-5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#7052FF] hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-2.5">
+            <div className="flex items-center gap-2.5 text-purple-700 font-semibold text-sm">
+              <div className="w-8 h-8 rounded-lg bg-purple-50 border border-purple-100/70 text-purple-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#7052FF] group-hover:text-white group-hover:border-[#7052FF] transition-all duration-200 shadow-3xs">
+                <Sparkle className="w-4.5 h-4.5" />
+              </div>
+              <span className="group-hover:text-purple-950 transition-colors">Two-Dimensional (2D) Features</span>
             </div>
             <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
               Ornamental patterns, surface prints, wallpaper motifs, textile prints, graphic engravings, and color arrangements applied to packaging boxes or fabrics.
@@ -395,14 +407,14 @@ function DesignRegistrationGuideContent() {
         </p>
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-xs text-slate-800 font-normal pt-1">
-          <div className="p-3 bg-slate-50 rounded-xl border border-slate-200/80 text-center font-medium">1. Perspective 3D View</div>
-          <div className="p-3 bg-slate-50 rounded-xl border border-slate-200/80 text-center font-medium">2. Front Elevation</div>
-          <div className="p-3 bg-slate-50 rounded-xl border border-slate-200/80 text-center font-medium">3. Rear Elevation</div>
-          <div className="p-3 bg-slate-50 rounded-xl border border-slate-200/80 text-center font-medium">4. Top Plan View</div>
-          <div className="p-3 bg-slate-50 rounded-xl border border-slate-200/80 text-center font-medium">5. Bottom Plan View</div>
-          <div className="p-3 bg-slate-50 rounded-xl border border-slate-200/80 text-center font-medium">6. Left Side Elevation</div>
-          <div className="p-3 bg-slate-50 rounded-xl border border-slate-200/80 text-center font-medium">7. Right Side Elevation</div>
-          <div className="p-3 bg-purple-50 text-purple-900 rounded-xl border border-purple-200/80 text-center font-semibold">Clean White Background</div>
+          <div className="p-3 bg-white hover:bg-[#FAF9FF] hover:border-[#5C3BFF] hover:shadow-md hover:-translate-y-1 transition-all duration-200 cursor-pointer rounded-xl border border-slate-200/80 text-center font-medium">1. Perspective 3D View</div>
+          <div className="p-3 bg-white hover:bg-[#FAF9FF] hover:border-[#5C3BFF] hover:shadow-md hover:-translate-y-1 transition-all duration-200 cursor-pointer rounded-xl border border-slate-200/80 text-center font-medium">2. Front Elevation</div>
+          <div className="p-3 bg-white hover:bg-[#FAF9FF] hover:border-[#5C3BFF] hover:shadow-md hover:-translate-y-1 transition-all duration-200 cursor-pointer rounded-xl border border-slate-200/80 text-center font-medium">3. Rear Elevation</div>
+          <div className="p-3 bg-white hover:bg-[#FAF9FF] hover:border-[#5C3BFF] hover:shadow-md hover:-translate-y-1 transition-all duration-200 cursor-pointer rounded-xl border border-slate-200/80 text-center font-medium">4. Top Plan View</div>
+          <div className="p-3 bg-white hover:bg-[#FAF9FF] hover:border-[#5C3BFF] hover:shadow-md hover:-translate-y-1 transition-all duration-200 cursor-pointer rounded-xl border border-slate-200/80 text-center font-medium">5. Bottom Plan View</div>
+          <div className="p-3 bg-white hover:bg-[#FAF9FF] hover:border-[#5C3BFF] hover:shadow-md hover:-translate-y-1 transition-all duration-200 cursor-pointer rounded-xl border border-slate-200/80 text-center font-medium">6. Left Side Elevation</div>
+          <div className="p-3 bg-white hover:bg-[#FAF9FF] hover:border-[#5C3BFF] hover:shadow-md hover:-translate-y-1 transition-all duration-200 cursor-pointer rounded-xl border border-slate-200/80 text-center font-medium">7. Right Side Elevation</div>
+          <div className="p-3 bg-purple-50/80 hover:bg-purple-100/70 hover:border-purple-400 hover:shadow-md hover:-translate-y-1 transition-all duration-200 cursor-pointer text-purple-900 rounded-xl border border-purple-200/80 text-center font-semibold">Clean White Background</div>
         </div>
 
         <p className="text-xs text-slate-800 leading-relaxed font-normal pt-1">
@@ -416,36 +428,36 @@ function DesignRegistrationGuideContent() {
           7. Step-by-Step 5-Phase Design Registration Procedure
         </h2>
         <div className="space-y-3 pt-2">
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
-            <h3 className="text-sm font-semibold text-slate-950">Phase 1: Pre-Filing Preparation &amp; Novelty Search (Weeks 1–2)</h3>
+          <div className="p-4 rounded-xl bg-white border border-slate-200/80 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:-translate-y-0.5 hover:bg-[#FAF9FF] transition-all duration-200 cursor-pointer group">
+            <h3 className="text-sm font-semibold text-slate-950 group-hover:text-indigo-950 transition-colors">Phase 1: Pre-Filing Preparation &amp; Novelty Search (Weeks 1–2)</h3>
             <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-1 leading-relaxed">
               Exhaustive novelty audit on the IP India Design Registry database to verify no prior identical or confusingly similar designs have been published globally.
             </p>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
-            <h3 className="text-sm font-semibold text-slate-950">Phase 2: Online Application Lodgment (Form 1) (Day 1)</h3>
+          <div className="p-4 rounded-xl bg-white border border-slate-200/80 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:-translate-y-0.5 hover:bg-[#FAF9FF] transition-all duration-200 cursor-pointer group">
+            <h3 className="text-sm font-semibold text-slate-950 group-hover:text-indigo-950 transition-colors">Phase 2: Online Application Lodgment (Form 1) (Day 1)</h3>
             <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-1 leading-relaxed">
               Filing Form 1, drafting Statement of Novelty and disclaimers, uploading standard 7-angle technical representations, and generating official Application Number.
             </p>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
-            <h3 className="text-sm font-semibold text-slate-950">Phase 3: Formality Check &amp; Substantive Examination (Months 1–3)</h3>
+          <div className="p-4 rounded-xl bg-white border border-slate-200/80 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:-translate-y-0.5 hover:bg-[#FAF9FF] transition-all duration-200 cursor-pointer group">
+            <h3 className="text-sm font-semibold text-slate-950 group-hover:text-indigo-950 transition-colors">Phase 3: Formality Check &amp; Substantive Examination (Months 1–3)</h3>
             <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-1 leading-relaxed">
               The Kolkata Design Office verifies document formalities (2–4 weeks) and conducts substantive examination for novelty and individual character against existing designs.
             </p>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
-            <h3 className="text-sm font-semibold text-slate-950">Phase 4: Design Journal Publication &amp; Opposition Period (Month 4)</h3>
+          <div className="p-4 rounded-xl bg-white border border-slate-200/80 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:-translate-y-0.5 hover:bg-[#FAF9FF] transition-all duration-200 cursor-pointer group">
+            <h3 className="text-sm font-semibold text-slate-950 group-hover:text-indigo-950 transition-colors">Phase 4: Design Journal Publication &amp; Opposition Period (Month 4)</h3>
             <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-1 leading-relaxed">
               The accepted design is published in the official Design Journal. Interested parties have a statutory window to file objections based on prior publication.
             </p>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
-            <h3 className="text-sm font-semibold text-slate-950">Phase 5: Registration &amp; Official Certificate Issuance (Month 5–6)</h3>
+          <div className="p-4 rounded-xl bg-white border border-slate-200/80 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:-translate-y-0.5 hover:bg-[#FAF9FF] transition-all duration-200 cursor-pointer group">
+            <h3 className="text-sm font-semibold text-slate-950 group-hover:text-indigo-950 transition-colors">Phase 5: Registration &amp; Official Certificate Issuance (Month 5–6)</h3>
             <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-1 leading-relaxed">
               The Controller General issues the official Design Registration Certificate. Protection takes retroactive effect from the original filing date for 10 years.
             </p>
@@ -555,20 +567,20 @@ function DesignRegistrationGuideContent() {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 text-xs sm:text-[13px] text-slate-900 font-normal">
-            <strong className="font-semibold text-slate-950 block mb-1">1. Lack of Novelty:</strong>
+          <div className="p-4 rounded-xl bg-white border border-rose-200/80 shadow-2xs hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-1 hover:bg-rose-50/20 transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
+            <strong className="font-semibold text-rose-950 block mb-1">1. Lack of Novelty:</strong>
             The design was previously registered in India or disclosed anywhere in the world prior to the filing date.
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 text-xs sm:text-[13px] text-slate-900 font-normal">
-            <strong className="font-semibold text-slate-950 block mb-1">2. Prior Publication:</strong>
+          <div className="p-4 rounded-xl bg-white border border-rose-200/80 shadow-2xs hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-1 hover:bg-rose-50/20 transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
+            <strong className="font-semibold text-rose-950 block mb-1">2. Prior Publication:</strong>
             The design was published in catalogs, advertisements, or public exhibitions before the application priority date.
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 text-xs sm:text-[13px] text-slate-900 font-normal">
-            <strong className="font-semibold text-slate-950 block mb-1">3. Not Registrable under the Act:</strong>
+          <div className="p-4 rounded-xl bg-white border border-rose-200/80 shadow-2xs hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-1 hover:bg-rose-50/20 transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
+            <strong className="font-semibold text-rose-950 block mb-1">3. Not Registrable under the Act:</strong>
             The design is purely functional, non-distinctive, or scandalous/contrary to public order.
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 text-xs sm:text-[13px] text-slate-900 font-normal">
-            <strong className="font-semibold text-slate-950 block mb-1">4. Ownership Fraud:</strong>
+          <div className="p-4 rounded-xl bg-white border border-rose-200/80 shadow-2xs hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-1 hover:bg-rose-50/20 transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
+            <strong className="font-semibold text-rose-950 block mb-1">4. Ownership Fraud:</strong>
             The registrant was not the true author or lawful assignee of the original industrial design.
           </div>
         </div>
@@ -670,20 +682,20 @@ function DesignRegistrationGuideContent() {
           13. Designs Excluded from the Scope of Registration
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 text-xs sm:text-[13px] text-slate-900 font-normal">
-            <strong className="font-semibold text-slate-950 block mb-1">• Purely Functional Features:</strong>
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-1 hover:bg-rose-50/20 transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
+            <strong className="font-semibold text-rose-950 block mb-1">• Purely Functional Features:</strong>
             Designs serving only a mechanical or structural function without aesthetic value (e.g. screws, nuts, bolts, internal machine gears).
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 text-xs sm:text-[13px] text-slate-900 font-normal">
-            <strong className="font-semibold text-slate-950 block mb-1">• Non-Product &amp; Abstract Concepts:</strong>
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-1 hover:bg-rose-50/20 transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
+            <strong className="font-semibold text-rose-950 block mb-1">• Non-Product &amp; Abstract Concepts:</strong>
             Computer algorithms, abstract concepts, architectural layouts, or designs not applied to a physical article.
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 text-xs sm:text-[13px] text-slate-900 font-normal">
-            <strong className="font-semibold text-slate-950 block mb-1">• Protected Emblems &amp; National Insignia:</strong>
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-1 hover:bg-rose-50/20 transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
+            <strong className="font-semibold text-rose-950 block mb-1">• Protected Emblems &amp; National Insignia:</strong>
             Designs incorporating national flags, official government emblems, or symbols barred under the Emblems and Names Act, 1950.
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 text-xs sm:text-[13px] text-slate-900 font-normal">
-            <strong className="font-semibold text-slate-950 block mb-1">• Commonly Known Shapes:</strong>
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-1 hover:bg-rose-50/20 transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
+            <strong className="font-semibold text-rose-950 block mb-1">• Commonly Known Shapes:</strong>
             Generic geometric forms or everyday configurations widely used across industry lacking individual character.
           </div>
         </div>
@@ -695,23 +707,31 @@ function DesignRegistrationGuideContent() {
           14. Why Choose Merrafilings for Industrial Design Registration?
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-            <Award className="w-5 h-5 text-indigo-600" />
-            <h3 className="text-sm font-semibold text-slate-950">Expert CAD 7-View Drafting</h3>
+          <div className="p-4.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-100/80 text-indigo-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#5C3BFF] group-hover:text-white group-hover:border-[#5C3BFF] transition-all duration-200 shadow-2xs">
+              <Award className="w-5 h-5" />
+            </div>
+            <h3 className="text-sm font-semibold text-slate-950 group-hover:text-indigo-950 transition-colors">Expert CAD 7-View Drafting</h3>
             <p className="text-xs text-slate-800 font-normal leading-relaxed">
               Our in-house IP draughtsmen format your product images into flawless standard orthographic views complying with Patent Office standards.
             </p>
           </div>
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-            <Clock className="w-5 h-5 text-purple-600" />
-            <h3 className="text-sm font-semibold text-slate-950">Fast-Track Kolkata Prosecution</h3>
+
+          <div className="p-4.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#7052FF] hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-purple-50 border border-purple-100/80 text-purple-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#7052FF] group-hover:text-white group-hover:border-[#7052FF] transition-all duration-200 shadow-2xs">
+              <Clock className="w-5 h-5" />
+            </div>
+            <h3 className="text-sm font-semibold text-slate-950 group-hover:text-purple-950 transition-colors">Fast-Track Kolkata Prosecution</h3>
             <p className="text-xs text-slate-800 font-normal leading-relaxed">
               Direct liaison with the central Design Wing in Kolkata ensures immediate clearance of formality defects and rapid certificate issuance.
             </p>
           </div>
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-            <Gavel className="w-5 h-5 text-emerald-600" />
-            <h3 className="text-sm font-semibold text-slate-950">Section 22 Litigation Readiness</h3>
+
+          <div className="p-4.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#00B074] hover:shadow-lg hover:shadow-emerald-500/10 hover:-translate-y-1.5 hover:bg-[#F2FBF7] transition-all duration-300 cursor-pointer group space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-100/80 text-emerald-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#00B074] group-hover:text-white group-hover:border-[#00B074] transition-all duration-200 shadow-2xs">
+              <Gavel className="w-5 h-5" />
+            </div>
+            <h3 className="text-sm font-semibold text-slate-950 group-hover:text-emerald-950 transition-colors">Section 22 Litigation Readiness</h3>
             <p className="text-xs text-slate-800 font-normal leading-relaxed">
               We provide Form 23 certified true copies and draft formal cease-and-desist notices to protect your designs against market copycats.
             </p>
