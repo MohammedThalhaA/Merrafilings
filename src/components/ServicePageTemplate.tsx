@@ -2494,36 +2494,43 @@ export default function ServicePageTemplate({
               </div>
 
               {/* Card 2: Curated Related Guides */}
-              <div className="bg-white rounded-2xl border border-slate-200/80 shadow-xs hover:border-slate-300 hover:shadow-md transition-all duration-300 overflow-hidden border-t-2 border-t-emerald-400">
+              <div className="bg-white rounded-2xl border border-slate-200/80 shadow-xs hover:border-slate-300 hover:shadow-md transition-all duration-300 overflow-hidden border-t-2 border-t-emerald-500">
                 <div className="p-5">
-                  <h4 className="font-normal text-[14px] text-slate-800 mb-4">{relatedGuidesTitle}</h4>
-                  <ul className="space-y-3.5 text-[12.5px] font-light text-slate-700">
+                  <h4 className="font-semibold text-[15px] text-[#0F172A] mb-4">
+                    {relatedGuidesTitle}
+                  </h4>
+                  <ul className="space-y-2.5 text-[13px]">
                     {relatedGuides.map((guide, idx) => {
                       const title = typeof guide === "string" ? guide : guide.title;
                       const href = typeof guide === "string" ? "#overview-section" : guide.href;
                       const isExternal = typeof guide !== "string" && guide.href.startsWith("http");
+
+                      const linkContent = (
+                        <>
+                          <span className="text-[#155EEF] font-semibold group-hover:translate-x-1 shrink-0 text-[14px] leading-tight transition-transform duration-200 mt-0.5">
+                            &rarr;
+                          </span>
+                          <span className="line-clamp-2 leading-snug text-[#1E293B] group-hover:text-[#155EEF] font-medium transition-colors">
+                            {title}
+                          </span>
+                        </>
+                      );
 
                       return (
                         <li key={idx} className="border-b border-slate-100 pb-2.5 last:border-0 last:pb-0">
                           {isExternal ? (
                             <a
                               href={href}
-                              className="flex items-start gap-2.5 text-slate-600 hover:text-[#155EEF] hover:bg-[#F0F7FF] p-2 rounded-lg transition-all duration-200 group hover:pl-3"
+                              className="flex items-start gap-3 p-2 rounded-xl hover:bg-[#F0F7FF] transition-all duration-200 group hover:pl-2.5"
                             >
-                              <span className="text-slate-400 group-hover:text-[#155EEF] group-hover:translate-x-0.5 shrink-0 text-[13px] leading-tight transition-transform duration-200">
-                                &rarr;
-                              </span>
-                              <span className="line-clamp-2 leading-snug">{title}</span>
+                              {linkContent}
                             </a>
                           ) : (
                             <Link
                               href={href}
-                              className="flex items-start gap-2.5 text-slate-600 hover:text-[#155EEF] hover:bg-[#F0F7FF] p-2 rounded-lg transition-all duration-200 group hover:pl-3"
+                              className="flex items-start gap-3 p-2 rounded-xl hover:bg-[#F0F7FF] transition-all duration-200 group hover:pl-2.5"
                             >
-                              <span className="text-slate-400 group-hover:text-[#155EEF] group-hover:translate-x-0.5 shrink-0 text-[13px] leading-tight transition-transform duration-200">
-                                &rarr;
-                              </span>
-                              <span className="line-clamp-2 leading-snug">{title}</span>
+                              {linkContent}
                             </Link>
                           )}
                         </li>

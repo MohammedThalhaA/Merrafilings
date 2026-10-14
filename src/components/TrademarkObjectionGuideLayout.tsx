@@ -234,30 +234,30 @@ export default function TrademarkObjectionGuideLayout({
             </div>
 
             {/* Widget 2: Related Guides (7 objection guides with active highlight) */}
-            <div className="bg-white rounded-2xl border border-slate-200/90 shadow-xs overflow-hidden border-t-2 border-t-emerald-400">
+            <div className="bg-white rounded-2xl border border-slate-200/90 shadow-xs overflow-hidden border-t-2 border-t-emerald-500">
               <div className="p-5">
-                <h3 className="font-medium text-[15px] text-slate-900 mb-4 flex items-center justify-between">
+                <h3 className="font-semibold text-[15px] text-[#0F172A] mb-4 flex items-center justify-between">
                   <span>Related Guides</span>
                   <FileText className="w-4 h-4 text-emerald-600" />
                 </h3>
-                <ul className="space-y-2 text-[12.5px] font-light">
+                <ul className="space-y-2 text-[13px]">
                   {TRADEMARK_OBJECTION_GUIDES.map((guide) => {
                     const isActive = guide.slug === currentSlug;
                     return (
-                      <li key={guide.slug} className="border-b border-slate-100 pb-2 last:border-0 last:pb-0">
+                      <li key={guide.slug} className="border-b border-slate-100 pb-2.5 last:border-0 last:pb-0">
                         <Link
                           href={guide.href}
-                          className={`flex items-start gap-2.5 p-2 rounded-lg transition-all duration-200 group ${
+                          className={`flex items-start gap-3 p-2 rounded-xl transition-all duration-200 group ${
                             isActive
-                              ? "bg-emerald-50 text-emerald-800 font-medium border-l-2 border-emerald-500 pl-2.5"
-                              : "text-slate-600 hover:text-[#155EEF] hover:bg-slate-50 hover:pl-3"
+                              ? "bg-emerald-50/90 text-emerald-950 font-semibold border-l-2 border-emerald-600 pl-3 shadow-3xs"
+                              : "text-[#1E293B] font-medium hover:text-[#155EEF] hover:bg-[#F0F7FF] hover:pl-2.5"
                           }`}
                         >
                           <span
-                            className={`shrink-0 text-[13px] leading-tight transition-transform duration-200 ${
+                            className={`shrink-0 text-[14px] leading-tight font-semibold transition-transform duration-200 mt-0.5 ${
                               isActive
-                                ? "text-emerald-600"
-                                : "text-slate-400 group-hover:text-[#155EEF] group-hover:translate-x-0.5"
+                                ? "text-emerald-700"
+                                : "text-[#155EEF] group-hover:translate-x-1"
                             }`}
                           >
                             &rarr;
