@@ -101,12 +101,34 @@ const PACKAGES: PricingPackage[] = [
 ];
 
 const RELATED_GUIDES = [
-  "What Inventions Can Be Patented in India: Section 3 Exclusions",
-  "Provisional vs Complete Patent Specification: Strategic Differences",
-  "How to Conduct a Prior Art Patent Search on InPASS",
-  "Patent Registration Process in India: Timelines from Filing to Grant",
-  "Understanding Patent Claims: Independent vs Dependent Claims",
-  "PCT International Patent Application: Extending Protection to 157 Countries",
+  {
+    title: "Understanding Indian Patent Application and Easy PCT Application Process",
+    href: "/patent-registration/indian-patent-application-easy-pct-process",
+  },
+  {
+    title: "Easy to Register Patent: Simplifying Your Path to Innovation",
+    href: "/patent-registration/easy-patent-registration-simplifying-your-path",
+  },
+  {
+    title: "Patent Registration: Your Complete Guide to Securing Your Invention and Protecting Your Ideas",
+    href: "/patent-registration/patent-registration-guide-protect-your-invention",
+  },
+  {
+    title: "Understanding Patent Registration: Key Steps and Essential Insights",
+    href: "/patent-registration/patent-registration-key-steps-and-insights",
+  },
+  {
+    title: "Patent Registration: Your Essential Guide to IP Protection",
+    href: "/patent-registration/patent-registration-essential-guide-to-ip-protection",
+  },
+  {
+    title: "Patent Registration in Chennai: The Essential Guide for Innovators & Startups",
+    href: "/patent-registration/patent-registration-in-chennai-essential-guide",
+  },
+  {
+    title: "Understanding Patents: A Comprehensive Guide to Protecting Inventions",
+    href: "/patent-registration/understanding-patents-a-comprehensive-guide",
+  },
 ];
 
 const RELATED_SERVICES_TAGS = [
