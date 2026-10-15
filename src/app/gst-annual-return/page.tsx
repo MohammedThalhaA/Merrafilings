@@ -225,17 +225,17 @@ function GstAnnualReturnGuideContent() {
           <span>GST Annual Return Regulatory Benchmarks</span>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-normal text-slate-900">
-          <div className="p-3 bg-white rounded-xl border border-indigo-50 shadow-3xs">
-            <span className="block text-slate-500 text-[11px] mb-1">Mandatory Threshold (GSTR-9)</span>
-            <strong className="font-semibold text-slate-950 text-[13px]">Turnover &gt; ₹2.00 Crores</strong>
+          <div className="p-3.5 bg-white rounded-xl border border-indigo-100/80 shadow-3xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <span className="block text-slate-500 text-[11px] mb-1 group-hover:text-indigo-900 transition-colors">Mandatory Threshold (GSTR-9)</span>
+            <strong className="font-semibold text-slate-950 text-[13px] group-hover:text-[#5C3BFF] transition-colors">Turnover &gt; ₹2.00 Crores</strong>
           </div>
-          <div className="p-3 bg-white rounded-xl border border-indigo-50 shadow-3xs">
-            <span className="block text-slate-500 text-[11px] mb-1">Reconciliation Threshold (GSTR-9C)</span>
-            <strong className="font-semibold text-slate-950 text-[13px]">Turnover &gt; ₹5.00 Crores</strong>
+          <div className="p-3.5 bg-white rounded-xl border border-indigo-100/80 shadow-3xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <span className="block text-slate-500 text-[11px] mb-1 group-hover:text-indigo-900 transition-colors">Reconciliation Threshold (GSTR-9C)</span>
+            <strong className="font-semibold text-slate-950 text-[13px] group-hover:text-[#5C3BFF] transition-colors">Turnover &gt; ₹5.00 Crores</strong>
           </div>
-          <div className="p-3 bg-white rounded-xl border border-indigo-50 shadow-3xs">
-            <span className="block text-slate-500 text-[11px] mb-1">Statutory Annual Due Date</span>
-            <strong className="font-semibold text-emerald-600 text-[13px]">31st December Post-FY</strong>
+          <div className="p-3.5 bg-white rounded-xl border border-indigo-100/80 shadow-3xs hover:border-[#00B074] hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-1 hover:bg-emerald-50/20 transition-all duration-300 cursor-pointer group">
+            <span className="block text-slate-500 text-[11px] mb-1 group-hover:text-emerald-900 transition-colors">Statutory Annual Due Date</span>
+            <strong className="font-semibold text-emerald-600 text-[13px] group-hover:text-emerald-800 transition-colors">31st December Post-FY</strong>
           </div>
         </div>
       </div>

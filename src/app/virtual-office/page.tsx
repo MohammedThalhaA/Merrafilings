@@ -226,17 +226,17 @@ function VirtualOfficeGuideContent() {
           <span>Virtual Office Strategic Business Advantages</span>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-normal text-slate-900">
-          <div className="p-3 bg-white rounded-xl border border-indigo-50 shadow-3xs">
-            <span className="block text-slate-500 text-[11px] mb-1">Overhead Cost Savings</span>
-            <strong className="font-semibold text-emerald-600 text-[13px]">Save 90%+ vs Physical Lease</strong>
+          <div className="p-3.5 bg-white rounded-xl border border-indigo-100/80 shadow-3xs hover:border-[#00B074] hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-1 hover:bg-emerald-50/20 transition-all duration-300 cursor-pointer group">
+            <span className="block text-slate-500 text-[11px] mb-1 group-hover:text-emerald-900 transition-colors">Overhead Cost Savings</span>
+            <strong className="font-semibold text-emerald-600 text-[13px] group-hover:text-emerald-800 transition-colors">Save 90%+ vs Physical Lease</strong>
           </div>
-          <div className="p-3 bg-white rounded-xl border border-indigo-50 shadow-3xs">
-            <span className="block text-slate-500 text-[11px] mb-1">Document Delivery Speed</span>
-            <strong className="font-semibold text-slate-950 text-[13px]">Active within 24 to 48 Hours</strong>
+          <div className="p-3.5 bg-white rounded-xl border border-indigo-100/80 shadow-3xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <span className="block text-slate-500 text-[11px] mb-1 group-hover:text-indigo-900 transition-colors">Document Delivery Speed</span>
+            <strong className="font-semibold text-slate-950 text-[13px] group-hover:text-[#5C3BFF] transition-colors">Active within 24 to 48 Hours</strong>
           </div>
-          <div className="p-3 bg-white rounded-xl border border-indigo-50 shadow-3xs">
-            <span className="block text-slate-500 text-[11px] mb-1">Statutory Acceptance</span>
-            <strong className="font-semibold text-slate-950 text-[13px]">100% MCA &amp; GSTIN Compliant</strong>
+          <div className="p-3.5 bg-white rounded-xl border border-indigo-100/80 shadow-3xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <span className="block text-slate-500 text-[11px] mb-1 group-hover:text-indigo-900 transition-colors">Statutory Acceptance</span>
+            <strong className="font-semibold text-slate-950 text-[13px] group-hover:text-[#5C3BFF] transition-colors">100% MCA &amp; GSTIN Compliant</strong>
           </div>
         </div>
       </div>
@@ -251,22 +251,26 @@ function VirtualOfficeGuideContent() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-[13px] text-slate-800">
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-            <strong className="text-slate-950 font-semibold block text-sm flex items-center gap-1.5">
-              <Receipt className="w-4 h-4 text-indigo-600" />
+          <div className="p-4.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-2">
+            <strong className="text-slate-950 font-semibold block text-sm flex items-center gap-2.5 group-hover:text-[#5C3BFF] transition-colors">
+              <div className="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#5C3BFF] group-hover:text-white transition-all duration-200">
+                <Receipt className="w-4 h-4" />
+              </div>
               <span>GST Department Recognition (PPoB &amp; APoB)</span>
             </strong>
-            <p className="text-slate-700 leading-relaxed">
+            <p className="text-slate-700 leading-relaxed font-normal">
               Under the CGST Act, 2017, the GST portal allows taxpayers to register any legitimate commercial premises as their Principal Place of Business (PPoB) or Additional Place of Business (APoB), provided valid tenancy deeds, owner NOCs, and utility bills are uploaded.
             </p>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-            <strong className="text-slate-950 font-semibold block text-sm flex items-center gap-1.5">
-              <Building2 className="w-4 h-4 text-indigo-600" />
+          <div className="p-4.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-2">
+            <strong className="text-slate-950 font-semibold block text-sm flex items-center gap-2.5 group-hover:text-[#5C3BFF] transition-colors">
+              <div className="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#5C3BFF] group-hover:text-white transition-all duration-200">
+                <Building2 className="w-4 h-4" />
+              </div>
               <span>Ministry of Corporate Affairs (MCA) Compliance</span>
             </strong>
-            <p className="text-slate-700 leading-relaxed">
+            <p className="text-slate-700 leading-relaxed font-normal">
               Under Section 12 of the Companies Act, 2013, every incorporated company must maintain a registered office capable of receiving official communications. A virtual office with registered tenancy agreements fulfills all RoC requirements during SPICe+ filing.
             </p>
           </div>
@@ -292,32 +296,32 @@ function VirtualOfficeGuideContent() {
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">
-              <tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-950">Annual Cost</td>
                 <td className="py-3 px-4 bg-emerald-50/30 text-emerald-700 font-semibold">₹10,000 – ₹15,000 / Year</td>
                 <td className="py-3 px-4 text-slate-700">₹3,00,000 – ₹15,00,000+ / Year</td>
               </tr>
-              <tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-950">Security Deposit</td>
                 <td className="py-3 px-4 bg-emerald-50/30 text-emerald-700 font-semibold">₹0 (Zero Security Deposit)</td>
                 <td className="py-3 px-4 text-slate-700">3 to 10 Months Rent Advance</td>
               </tr>
-              <tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-950">Setup Time</td>
                 <td className="py-3 px-4 bg-emerald-50/30 text-emerald-700 font-semibold">24 to 48 Hours</td>
                 <td className="py-3 px-4 text-slate-700">3 to 8 Weeks</td>
               </tr>
-              <tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-950">GST &amp; MCA Validity</td>
                 <td className="py-3 px-4 bg-emerald-50/30 text-emerald-700 font-semibold">100% Accepted with NOC &amp; Deed</td>
                 <td className="py-3 px-4 text-slate-700">100% Accepted with Lease Deed</td>
               </tr>
-              <tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-950">Multi-State Scaling</td>
                 <td className="py-3 px-4 bg-emerald-50/30 text-emerald-700 font-semibold">Effortless pan-India expansion</td>
                 <td className="py-3 px-4 text-slate-700">Very costly &amp; administratively heavy</td>
               </tr>
-              <tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-950">Meeting Room Access</td>
                 <td className="py-3 px-4 bg-emerald-50/30 text-emerald-700 font-semibold">Pay-per-use or free quarterly credits</td>
                 <td className="py-3 px-4 text-slate-700">Requires dedicated square footage</td>
@@ -336,30 +340,30 @@ function VirtualOfficeGuideContent() {
           Merrafilings furnishes a complete, legally vetted documentation package to guarantee instant government approvals:
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-[13px] text-slate-800">
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
-            <strong className="text-slate-950 font-semibold block mb-0.5">1. No Objection Certificate (NOC):</strong>
-            Official authorization executed by the commercial property owner authorizing business registration.
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-[13px] text-slate-800">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <strong className="text-slate-950 font-semibold block mb-1 group-hover:text-[#5C3BFF] transition-colors">1. No Objection Certificate (NOC):</strong>
+            <span className="text-slate-700 font-normal">Official authorization executed by the commercial property owner authorizing business registration.</span>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
-            <strong className="text-slate-950 font-semibold block mb-0.5">2. Leave &amp; Licence Agreement:</strong>
-            12-month commercial tenancy agreement with clear commercial terms and business name.
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <strong className="text-slate-950 font-semibold block mb-1 group-hover:text-[#5C3BFF] transition-colors">2. Leave &amp; Licence Agreement:</strong>
+            <span className="text-slate-700 font-normal">12-month commercial tenancy agreement with clear commercial terms and business name.</span>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
-            <strong className="text-slate-950 font-semibold block mb-0.5">3. Latest Utility / Electricity Bill:</strong>
-            Original paid electricity bill (under 2 months old) verifying the exact premises address.
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <strong className="text-slate-950 font-semibold block mb-1 group-hover:text-[#5C3BFF] transition-colors">3. Latest Utility / Electricity Bill:</strong>
+            <span className="text-slate-700 font-normal">Original paid electricity bill (under 2 months old) verifying the exact premises address.</span>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
-            <strong className="text-slate-950 font-semibold block mb-0.5">4. Municipal Property Tax Receipt:</strong>
-            Paid municipal tax assessment receipt for states requiring municipal ownership validation.
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <strong className="text-slate-950 font-semibold block mb-1 group-hover:text-[#5C3BFF] transition-colors">4. Municipal Property Tax Receipt:</strong>
+            <span className="text-slate-700 font-normal">Paid municipal tax assessment receipt for states requiring municipal ownership validation.</span>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
-            <strong className="text-slate-950 font-semibold block mb-0.5">5. Physical Signboard Display:</strong>
-            Prominent business signage installed at the hub for officer inspection and verification.
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <strong className="text-slate-950 font-semibold block mb-1 group-hover:text-[#5C3BFF] transition-colors">5. Physical Signboard Display:</strong>
+            <span className="text-slate-700 font-normal">Prominent business signage installed at the hub for officer inspection and verification.</span>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
-            <strong className="text-slate-950 font-semibold block mb-0.5">6. Dedicated On-Site Desk Representation:</strong>
-            Front-desk officers present during tax authority field visits to endorse your registration.
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <strong className="text-slate-950 font-semibold block mb-1 group-hover:text-[#5C3BFF] transition-colors">6. Dedicated On-Site Desk Representation:</strong>
+            <span className="text-slate-700 font-normal">Front-desk officers present during tax authority field visits to endorse your registration.</span>
           </div>
         </div>
       </section>
@@ -369,18 +373,18 @@ function VirtualOfficeGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           4. Who Should Use a Virtual Office in India?
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-[13px] text-slate-800">
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs space-y-1">
-            <strong className="text-indigo-950 font-semibold block text-sm">Startups &amp; Founders:</strong>
-            <p className="text-slate-600">Establish a prime commercial identity in Bengaluru, Mumbai, or Delhi from day one without burning early angel capital on physical rent.</p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 text-xs sm:text-[13px] text-slate-800">
+          <div className="p-4.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#00B074] hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1.5 hover:bg-emerald-50/20 transition-all duration-300 cursor-pointer group space-y-2">
+            <strong className="text-indigo-950 font-semibold block text-sm group-hover:text-emerald-950 transition-colors">Startups &amp; Founders:</strong>
+            <p className="text-slate-600 font-normal leading-relaxed">Establish a prime commercial identity in Bengaluru, Mumbai, or Delhi from day one without burning early angel capital on physical rent.</p>
           </div>
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs space-y-1">
-            <strong className="text-indigo-950 font-semibold block text-sm">E-Commerce Sellers:</strong>
-            <p className="text-slate-600">Obtain mandatory state GSTINs to enroll in Amazon FBA and Flipkart Fulfillment Centers across Maharashtra, Karnataka, Delhi, and Haryana.</p>
+          <div className="p-4.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#00B074] hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1.5 hover:bg-emerald-50/20 transition-all duration-300 cursor-pointer group space-y-2">
+            <strong className="text-indigo-950 font-semibold block text-sm group-hover:text-emerald-950 transition-colors">E-Commerce Sellers:</strong>
+            <p className="text-slate-600 font-normal leading-relaxed">Obtain mandatory state GSTINs to enroll in Amazon FBA and Flipkart Fulfillment Centers across Maharashtra, Karnataka, Delhi, and Haryana.</p>
           </div>
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs space-y-1">
-            <strong className="text-indigo-950 font-semibold block text-sm">Freelancers &amp; Consultants:</strong>
-            <p className="text-slate-600">Protect residential privacy while displaying a prestigious commercial address on invoices, proposals, and official contracts.</p>
+          <div className="p-4.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#00B074] hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1.5 hover:bg-emerald-50/20 transition-all duration-300 cursor-pointer group space-y-2">
+            <strong className="text-indigo-950 font-semibold block text-sm group-hover:text-emerald-950 transition-colors">Freelancers &amp; Consultants:</strong>
+            <p className="text-slate-600 font-normal leading-relaxed">Protect residential privacy while displaying a prestigious commercial address on invoices, proposals, and official contracts.</p>
           </div>
         </div>
       </section>

@@ -161,7 +161,7 @@ export default function GstNoticeGuideLayout({
           <aside className="space-y-6 lg:sticky lg:top-24">
             
             {/* Widget 1: Consult Experts (Avatars + Call button) */}
-            <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md transition-shadow">
+            <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-[#155EEF] hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1 transition-all duration-300 group">
               <div className="flex items-center gap-3 mb-3">
                 <div className="flex -space-x-2">
                   <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-600 border-2 border-white flex items-center justify-center text-white text-xs font-bold shadow-xs">
@@ -175,7 +175,7 @@ export default function GstNoticeGuideLayout({
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold text-slate-900">
+                  <h3 className="text-sm font-semibold text-slate-900 group-hover:text-[#155EEF] transition-colors">
                     Consult <span className="text-[#155EEF]">GST Experts</span>
                   </h3>
                   <div className="flex items-center gap-1 text-[11px] text-slate-500">
@@ -189,18 +189,18 @@ export default function GstNoticeGuideLayout({
               </p>
               <button
                 onClick={() => openContact("Schedule GST Notice Evaluation Call")}
-                className="w-full py-2.5 px-4 rounded-xl bg-slate-900 text-white hover:bg-slate-800 text-xs font-medium transition-colors shadow-xs"
+                className="w-full py-2.5 px-4 rounded-xl bg-slate-900 text-white hover:bg-[#155EEF] text-xs font-medium transition-all duration-200 shadow-xs hover:shadow-md hover:-translate-y-0.5 cursor-pointer"
               >
                 Schedule 15-Min Case Evaluation
               </button>
             </div>
 
             {/* Widget 2: Related Guides (With Emerald Accent & Live Chat Button matching Screenshot) */}
-            <div className="relative rounded-2xl bg-white border border-slate-200/80 shadow-xs p-5 overflow-hidden">
+            <div className="relative rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-[#10B981] hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1 p-5 overflow-hidden transition-all duration-300 group">
               {/* Emerald Accent Top Bar */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-[#10B981]" />
 
-              <h3 className="text-sm font-bold text-slate-900 tracking-tight mb-4 pt-1">
+              <h3 className="text-sm font-bold text-slate-900 tracking-tight mb-4 pt-1 group-hover:text-[#10B981] transition-colors">
                 Related Guides
               </h3>
 
@@ -211,15 +211,15 @@ export default function GstNoticeGuideLayout({
                     <Link
                       key={item.slug}
                       href={item.href}
-                      className={`group flex items-start gap-3 py-3 text-xs leading-snug transition-colors ${
+                      className={`group/link flex items-start gap-3 py-3 text-xs leading-snug transition-colors ${
                         isActive
                           ? "text-[#10B981] font-semibold"
                           : "text-slate-700 hover:text-[#10B981] font-medium"
                       }`}
                     >
                       <ArrowRight
-                        className={`w-3.5 h-3.5 shrink-0 mt-0.5 transition-transform group-hover:translate-x-1 ${
-                          isActive ? "text-[#10B981]" : "text-slate-400 group-hover:text-[#10B981]"
+                        className={`w-3.5 h-3.5 shrink-0 mt-0.5 transition-transform group-hover/link:translate-x-1 ${
+                          isActive ? "text-[#10B981]" : "text-slate-400 group-hover/link:text-[#10B981]"
                         }`}
                       />
                       <span className="flex-1">{item.title}</span>
@@ -232,7 +232,7 @@ export default function GstNoticeGuideLayout({
               <div className="mt-4 pt-3 border-t border-slate-100 flex justify-end">
                 <button
                   onClick={() => openContact("Live Chat with GST Notice Specialist")}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#10B981] hover:bg-[#059669] text-white text-xs font-semibold shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#10B981] hover:bg-[#059669] text-white text-xs font-semibold shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 cursor-pointer"
                 >
                   <MessageCircle className="w-4 h-4 fill-white" />
                   <span>Live chat with experts</span>
@@ -241,9 +241,9 @@ export default function GstNoticeGuideLayout({
             </div>
 
             {/* Widget 3: Statutory Notice Compliance Tracker */}
-            <div className="p-5 rounded-2xl bg-gradient-to-br from-indigo-50/50 via-white to-purple-50/40 border border-indigo-100/80 shadow-xs space-y-3">
-              <div className="flex items-center gap-2 text-indigo-950 font-semibold text-xs">
-                <Scale className="w-4 h-4 text-indigo-600" />
+            <div className="p-5 rounded-2xl bg-gradient-to-br from-indigo-50/50 via-white to-purple-50/40 border border-indigo-100/80 shadow-xs hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1 transition-all duration-300 space-y-3 group">
+              <div className="flex items-center gap-2 text-indigo-950 font-semibold text-xs group-hover:text-[#5C3BFF] transition-colors">
+                <Scale className="w-4 h-4 text-indigo-600 group-hover:scale-110 transition-transform" />
                 <span>Statutory Notice Deadlines</span>
               </div>
               <ul className="space-y-2 text-xs text-slate-600">

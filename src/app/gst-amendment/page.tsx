@@ -223,17 +223,17 @@ function GstAmendmentGuideContent() {
           <span>GST Amendment Statutory Benchmarks</span>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-normal text-slate-900">
-          <div className="p-3 bg-white rounded-xl border border-indigo-50 shadow-3xs">
-            <span className="block text-slate-500 text-[11px] mb-1">Statutory Application Deadline</span>
-            <strong className="font-semibold text-slate-950 text-[13px]">Within 15 Days of Change</strong>
+          <div className="p-3.5 bg-white rounded-xl border border-indigo-100/80 shadow-3xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <span className="block text-slate-500 text-[11px] mb-1 group-hover:text-indigo-900 transition-colors">Statutory Application Deadline</span>
+            <strong className="font-semibold text-slate-950 text-[13px] group-hover:text-[#5C3BFF] transition-colors">Within 15 Days of Change</strong>
           </div>
-          <div className="p-3 bg-white rounded-xl border border-indigo-50 shadow-3xs">
-            <span className="block text-slate-500 text-[11px] mb-1">Officer Approval Window (Core)</span>
-            <strong className="font-semibold text-slate-950 text-[13px]">15 Working Days (REG-15)</strong>
+          <div className="p-3.5 bg-white rounded-xl border border-indigo-100/80 shadow-3xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <span className="block text-slate-500 text-[11px] mb-1 group-hover:text-indigo-900 transition-colors">Officer Approval Window (Core)</span>
+            <strong className="font-semibold text-slate-950 text-[13px] group-hover:text-[#5C3BFF] transition-colors">15 Working Days (REG-15)</strong>
           </div>
-          <div className="p-3 bg-white rounded-xl border border-indigo-50 shadow-3xs">
-            <span className="block text-slate-500 text-[11px] mb-1">Non-Core Approval Speed</span>
-            <strong className="font-semibold text-emerald-600 text-[13px]">Instant Auto-Approval</strong>
+          <div className="p-3.5 bg-white rounded-xl border border-indigo-100/80 shadow-3xs hover:border-[#00B074] hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-1 hover:bg-emerald-50/20 transition-all duration-300 cursor-pointer group">
+            <span className="block text-slate-500 text-[11px] mb-1 group-hover:text-emerald-900 transition-colors">Non-Core Approval Speed</span>
+            <strong className="font-semibold text-emerald-600 text-[13px] group-hover:text-emerald-800 transition-colors">Instant Auto-Approval</strong>
           </div>
         </div>
       </div>
@@ -257,32 +257,32 @@ function GstAmendmentGuideContent() {
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">
-              <tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-950">Regular GST Taxpayers</td>
                 <td className="py-3 px-4 text-emerald-700 font-semibold">✅ Yes</td>
                 <td className="py-3 px-4 bg-emerald-50/30">Section 28 &amp; Rule 19 (Form GST REG-14)</td>
               </tr>
-              <tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-950">Composition Scheme Taxpayers</td>
                 <td className="py-3 px-4 text-emerald-700 font-semibold">✅ Yes</td>
                 <td className="py-3 px-4 bg-emerald-50/30">Section 10 &amp; Rule 19</td>
               </tr>
-              <tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-950">Non-Resident Taxable Persons (NRTP)</td>
                 <td className="py-3 px-4 text-emerald-700 font-semibold">✅ Yes</td>
                 <td className="py-3 px-4 bg-emerald-50/30">Rule 19 within 90-day validity window</td>
               </tr>
-              <tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-950">Input Service Distributors (ISD)</td>
                 <td className="py-3 px-4 text-emerald-700 font-semibold">✅ Yes</td>
                 <td className="py-3 px-4 bg-emerald-50/30">Rule 19 for ISD office address &amp; signatories</td>
               </tr>
-              <tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-950">TDS / TCS Deductors</td>
                 <td className="py-3 px-4 text-emerald-700 font-semibold">✅ Yes</td>
                 <td className="py-3 px-4 bg-emerald-50/30">Section 51 / 52 drawing authority changes</td>
               </tr>
-              <tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-950">Cancelled GST Registration</td>
                 <td className="py-3 px-4 text-rose-700 font-semibold">❌ No</td>
                 <td className="py-3 px-4 bg-rose-50/30">Must apply for GST Revocation (REG-21) first</td>
@@ -311,32 +311,32 @@ function GstAmendmentGuideContent() {
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">
-              <tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-950">Tax Officer Approval</td>
                 <td className="py-3 px-4 font-semibold text-amber-700">Required (Mandatory scrutiny)</td>
                 <td className="py-3 px-4 bg-indigo-50/30 font-semibold text-emerald-700">Not Required (Auto-Approved)</td>
               </tr>
-              <tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-950">Processing Timeline</td>
                 <td className="py-3 px-4">Up to 15 working days</td>
                 <td className="py-3 px-4 bg-indigo-50/30">Instant upon electronic verification</td>
               </tr>
-              <tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-950">Form Used</td>
                 <td className="py-3 px-4">Form GST REG-14</td>
                 <td className="py-3 px-4 bg-indigo-50/30">Form GST REG-14</td>
               </tr>
-              <tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-950">Illustrative Fields</td>
                 <td className="py-3 px-4">Legal name, business address, partners/directors</td>
                 <td className="py-3 px-4 bg-indigo-50/30">Mobile, email, bank details, HSN/SAC codes</td>
               </tr>
-              <tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-950">Supporting Documents</td>
                 <td className="py-3 px-4">Mandatory (Title deeds, rent agreement, NOC, photo)</td>
                 <td className="py-3 px-4 bg-indigo-50/30">Minimal / Cancelled cheque for bank update</td>
               </tr>
-              <tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-950">Rejection Possibility</td>
                 <td className="py-3 px-4 text-amber-700 font-medium">Yes — officer may issue REG-03 or reject</td>
                 <td className="py-3 px-4 bg-indigo-50/30 text-emerald-700 font-medium">Zero rejection risk</td>
@@ -356,48 +356,56 @@ function GstAmendmentGuideContent() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-[13px] text-slate-800">
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-            <strong className="text-slate-950 font-semibold block text-sm flex items-center gap-1.5">
-              <MapPin className="w-4 h-4 text-indigo-600" />
+          <div className="p-4.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-2">
+            <strong className="text-slate-950 font-semibold block text-sm flex items-center gap-2.5 group-hover:text-[#5C3BFF] transition-colors">
+              <div className="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#5C3BFF] group-hover:text-white transition-all duration-200">
+                <MapPin className="w-4 h-4" />
+              </div>
               <span>Change in Principal / Additional Place of Business</span>
             </strong>
-            <ul className="space-y-1 list-disc pl-4 text-slate-700">
+            <ul className="space-y-1 list-disc pl-5 text-slate-700 font-normal">
               <li>Ownership proof (Electricity Bill / Municipal Tax receipt not older than 2 months)</li>
               <li>Registered Rent / Lease Agreement if premises are rented</li>
               <li>No Objection Certificate (NOC) from the property owner</li>
             </ul>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-            <strong className="text-slate-950 font-semibold block text-sm flex items-center gap-1.5">
-              <Users className="w-4 h-4 text-indigo-600" />
+          <div className="p-4.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-2">
+            <strong className="text-slate-950 font-semibold block text-sm flex items-center gap-2.5 group-hover:text-[#5C3BFF] transition-colors">
+              <div className="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#5C3BFF] group-hover:text-white transition-all duration-200">
+                <Users className="w-4 h-4" />
+              </div>
               <span>Addition or Deletion of Partners / Directors</span>
             </strong>
-            <ul className="space-y-1 list-disc pl-4 text-slate-700">
+            <ul className="space-y-1 list-disc pl-5 text-slate-700 font-normal">
               <li>PAN card and Aadhaar card of the incoming partner/director</li>
               <li>Passport-sized photograph of the incoming official</li>
               <li>Board Resolution / Amended Partnership Deed evidencing appointment or resignation</li>
             </ul>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-            <strong className="text-slate-950 font-semibold block text-sm flex items-center gap-1.5">
-              <Building2 className="w-4 h-4 text-indigo-600" />
+          <div className="p-4.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-2">
+            <strong className="text-slate-950 font-semibold block text-sm flex items-center gap-2.5 group-hover:text-[#5C3BFF] transition-colors">
+              <div className="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#5C3BFF] group-hover:text-white transition-all duration-200">
+                <Building2 className="w-4 h-4" />
+              </div>
               <span>Change in Legal Name or Trade Name</span>
             </strong>
-            <ul className="space-y-1 list-disc pl-4 text-slate-700">
+            <ul className="space-y-1 list-disc pl-5 text-slate-700 font-normal">
               <li>Fresh Certificate of Incorporation issued by MCA (for corporate name change)</li>
               <li>Amended Partnership Deed / Trade License / Shops Act license</li>
               <li>PAN card reflecting the revised legal entity name</li>
             </ul>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-            <strong className="text-slate-950 font-semibold block text-sm flex items-center gap-1.5">
-              <Briefcase className="w-4 h-4 text-indigo-600" />
+          <div className="p-4.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-2">
+            <strong className="text-slate-950 font-semibold block text-sm flex items-center gap-2.5 group-hover:text-[#5C3BFF] transition-colors">
+              <div className="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#5C3BFF] group-hover:text-white transition-all duration-200">
+                <Briefcase className="w-4 h-4" />
+              </div>
               <span>Change in Constitution of Business</span>
             </strong>
-            <ul className="space-y-1 list-disc pl-4 text-slate-700">
+            <ul className="space-y-1 list-disc pl-5 text-slate-700 font-normal">
               <li>Amended constitutional charters (MOA, AOA, or Partnership Deed)</li>
               <li>Asset transfer deed and Form GST ITC-02 for transferring unutilized credit</li>
               <li>Note: Conversion involving PAN change requires fresh registration</li>
@@ -416,51 +424,51 @@ function GstAmendmentGuideContent() {
         </p>
 
         <div className="space-y-3">
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs">
-            <strong className="text-indigo-950 font-semibold block text-sm mb-1">Step 1 — Login to GST Portal:</strong>
-            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <strong className="text-indigo-950 font-semibold block text-sm mb-1 group-hover:text-[#5C3BFF] transition-colors">Step 1 — Login to GST Portal:</strong>
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal">
               Visit <code className="text-indigo-600">www.gst.gov.in</code> and log in using your valid username and password credentials.
             </p>
           </div>
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs">
-            <strong className="text-indigo-950 font-semibold block text-sm mb-1">Step 2 — Navigate to Amendment Section:</strong>
-            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <strong className="text-indigo-950 font-semibold block text-sm mb-1 group-hover:text-[#5C3BFF] transition-colors">Step 2 — Navigate to Amendment Section:</strong>
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal">
               Navigate to <strong>Services &gt; Registration &gt; Amendment of Registration Core Fields</strong> or <strong>Amendment of Registration Non-Core Fields</strong>.
             </p>
           </div>
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs">
-            <strong className="text-indigo-950 font-semibold block text-sm mb-1">Step 3 — Select Relevant Modification Tab:</strong>
-            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <strong className="text-indigo-950 font-semibold block text-sm mb-1 group-hover:text-[#5C3BFF] transition-colors">Step 3 — Select Relevant Modification Tab:</strong>
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal">
               Choose the specific tab to amend (Business Details, Principal Place of Business, Additional Places, Promoters/Partners, Bank Accounts, or Goods/Services).
             </p>
           </div>
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs">
-            <strong className="text-indigo-950 font-semibold block text-sm mb-1">Step 4 — Update Fields &amp; State Reason for Amendment:</strong>
-            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <strong className="text-indigo-950 font-semibold block text-sm mb-1 group-hover:text-[#5C3BFF] transition-colors">Step 4 — Update Fields &amp; State Reason for Amendment:</strong>
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal">
               Input the revised particulars, provide the date of amendment, and specify the legal justification for the modification.
             </p>
           </div>
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs">
-            <strong className="text-indigo-950 font-semibold block text-sm mb-1">Step 5 — Upload Certified Supporting Documents:</strong>
-            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <strong className="text-indigo-950 font-semibold block text-sm mb-1 group-hover:text-[#5C3BFF] transition-colors">Step 5 — Upload Certified Supporting Documents:</strong>
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal">
               Upload clear PDF/JPEG copies of rent agreements, utility bills, NOCs, PAN cards, or board resolutions within portal size limits (under 1 MB).
             </p>
           </div>
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs">
-            <strong className="text-indigo-950 font-semibold block text-sm mb-1">Step 6 — Electronic Verification &amp; Submission:</strong>
-            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <strong className="text-indigo-950 font-semibold block text-sm mb-1 group-hover:text-[#5C3BFF] transition-colors">Step 6 — Electronic Verification &amp; Submission:</strong>
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal">
               Digitally authenticate Form GST REG-14 using Class 3 Digital Signature Certificate (DSC) for companies/LLPs or Aadhaar EVC OTP for proprietorships.
             </p>
           </div>
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs">
-            <strong className="text-indigo-950 font-semibold block text-sm mb-1">Step 7 — ARN Generation &amp; Status Tracking:</strong>
-            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <strong className="text-indigo-950 font-semibold block text-sm mb-1 group-hover:text-[#5C3BFF] transition-colors">Step 7 — ARN Generation &amp; Status Tracking:</strong>
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal">
               The system issues an Application Reference Number (ARN) via email and SMS to monitor application processing in real time.
             </p>
           </div>
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs">
-            <strong className="text-indigo-950 font-semibold block text-sm mb-1">Step 8 — Tax Officer Review (Core Fields Only):</strong>
-            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <strong className="text-indigo-950 font-semibold block text-sm mb-1 group-hover:text-[#5C3BFF] transition-colors">Step 8 — Tax Officer Review (Core Fields Only):</strong>
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal">
               The proper tax officer reviews the paperwork within 15 working days. If documents are in order, approval order Form GST REG-15 is issued.
             </p>
           </div>
@@ -476,12 +484,12 @@ function GstAmendmentGuideContent() {
           If the proper officer detects discrepancies or seeks additional clarification during core field scrutiny, they will issue a show-cause notice in <strong className="font-semibold text-slate-950">Form GST REG-03</strong> within 15 working days:
         </p>
 
-        <div className="p-5 rounded-2xl bg-amber-50/70 border border-amber-200/90 space-y-3">
-          <div className="flex items-center gap-2 text-amber-900 font-semibold text-sm">
-            <AlertTriangle className="w-4 h-4 text-amber-600" />
+        <div className="p-5 rounded-2xl bg-amber-50/70 border border-amber-200/90 shadow-2xs hover:border-amber-400 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 cursor-pointer group space-y-3">
+          <div className="flex items-center gap-2 text-amber-900 font-semibold text-sm group-hover:text-amber-950 transition-colors">
+            <AlertTriangle className="w-4 h-4 text-amber-600 group-hover:scale-110 transition-transform" />
             <span>Strict 7-Day Statutory Response Window (Rule 19(3))</span>
           </div>
-          <p className="text-xs sm:text-[13px] text-slate-800 leading-relaxed">
+          <p className="text-xs sm:text-[13px] text-slate-800 leading-relaxed font-normal">
             The taxpayer must submit their written clarification and upload rectified documents in <strong className="font-semibold text-slate-950">Form GST REG-04</strong> within <strong className="font-semibold text-slate-950">7 working days</strong> from the receipt of Form GST REG-03. Failing to reply within 7 days results in rejection under Form GST REG-05.
           </p>
           <div className="pt-1">

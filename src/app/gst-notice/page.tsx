@@ -226,17 +226,17 @@ function GstNoticeGuideContent() {
           <span>GST Notice Compliance &amp; Litigation Benchmarks</span>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-normal text-slate-900">
-          <div className="p-3 bg-white rounded-xl border border-indigo-50 shadow-3xs">
-            <span className="block text-slate-500 text-[11px] mb-1">Standard Reply Window</span>
-            <strong className="font-semibold text-slate-950 text-[13px]">30 Days from Service Date</strong>
+          <div className="p-3.5 bg-white rounded-xl border border-indigo-100/80 shadow-3xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <span className="block text-slate-500 text-[11px] mb-1 group-hover:text-indigo-900 transition-colors">Standard Reply Window</span>
+            <strong className="font-semibold text-slate-950 text-[13px] group-hover:text-[#5C3BFF] transition-colors">30 Days from Service Date</strong>
           </div>
-          <div className="p-3 bg-white rounded-xl border border-indigo-50 shadow-3xs">
-            <span className="block text-slate-500 text-[11px] mb-1">Normal Cases Limitation</span>
-            <strong className="font-semibold text-slate-950 text-[13px]">3 Years (Section 73)</strong>
+          <div className="p-3.5 bg-white rounded-xl border border-indigo-100/80 shadow-3xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <span className="block text-slate-500 text-[11px] mb-1 group-hover:text-indigo-900 transition-colors">Normal Cases Limitation</span>
+            <strong className="font-semibold text-slate-950 text-[13px] group-hover:text-[#5C3BFF] transition-colors">3 Years (Section 73)</strong>
           </div>
-          <div className="p-3 bg-white rounded-xl border border-indigo-50 shadow-3xs">
-            <span className="block text-slate-500 text-[11px] mb-1">Fraud / Misstatement Limitation</span>
-            <strong className="font-semibold text-rose-700 text-[13px]">5 Years (Section 74)</strong>
+          <div className="p-3.5 bg-white rounded-xl border border-indigo-100/80 shadow-3xs hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-1 hover:bg-rose-50/20 transition-all duration-300 cursor-pointer group">
+            <span className="block text-slate-500 text-[11px] mb-1 group-hover:text-rose-900 transition-colors">Fraud / Misstatement Limitation</span>
+            <strong className="font-semibold text-rose-700 text-[13px] group-hover:text-rose-800 transition-colors">5 Years (Section 74)</strong>
           </div>
         </div>
       </div>
@@ -420,9 +420,9 @@ function GstNoticeGuideContent() {
           If the adjudicating officer rejects your reply and confirms an adverse tax demand by issuing an assessment order on <strong className="font-semibold text-slate-950">Form GST DRC-07</strong>, you are not without remedy. Taxpayers have the statutory right under <strong className="font-semibold text-slate-950">Section 107 of the CGST Act</strong> to file an appeal before the First Appellate Authority:
         </p>
 
-        <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/90 space-y-3">
-          <div className="flex items-center gap-2 text-indigo-950 font-semibold text-sm">
-            <Gavel className="w-4 h-4 text-indigo-600" />
+        <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-3">
+          <div className="flex items-center gap-2 text-indigo-950 font-semibold text-sm group-hover:text-[#5C3BFF] transition-colors">
+            <Gavel className="w-4 h-4 text-indigo-600 group-hover:scale-110 transition-transform" />
             <span>Appellate Roadmap (Form GST APL-01)</span>
           </div>
           <ul className="space-y-2 text-xs sm:text-[13px] text-slate-900 font-normal">

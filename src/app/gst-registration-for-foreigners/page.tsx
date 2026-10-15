@@ -222,17 +222,17 @@ function GstForeignersGuideContent() {
           <span>Non-Resident Taxable Person (NRTP) Regulatory Benchmarks</span>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-normal text-slate-900">
-          <div className="p-3 bg-white rounded-xl border border-indigo-50 shadow-3xs">
-            <span className="block text-slate-500 text-[11px] mb-1">Registration Form</span>
-            <strong className="font-semibold text-slate-950 text-[13px]">Form GST REG-09</strong>
+          <div className="p-3.5 bg-white rounded-xl border border-indigo-100/80 shadow-3xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <span className="block text-slate-500 text-[11px] mb-1 group-hover:text-indigo-900 transition-colors">Registration Form</span>
+            <strong className="font-semibold text-slate-950 text-[13px] group-hover:text-[#5C3BFF] transition-colors">Form GST REG-09</strong>
           </div>
-          <div className="p-3 bg-white rounded-xl border border-indigo-50 shadow-3xs">
-            <span className="block text-slate-500 text-[11px] mb-1">Initial Validity Window</span>
-            <strong className="font-semibold text-emerald-600 text-[13px]">90 Days (Extendable by 90 Days)</strong>
+          <div className="p-3.5 bg-white rounded-xl border border-indigo-100/80 shadow-3xs hover:border-[#00B074] hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-1 hover:bg-emerald-50/20 transition-all duration-300 cursor-pointer group">
+            <span className="block text-slate-500 text-[11px] mb-1 group-hover:text-emerald-900 transition-colors">Initial Validity Window</span>
+            <strong className="font-semibold text-emerald-600 text-[13px] group-hover:text-emerald-800 transition-colors">90 Days (Extendable by 90 Days)</strong>
           </div>
-          <div className="p-3 bg-white rounded-xl border border-indigo-50 shadow-3xs">
-            <span className="block text-slate-500 text-[11px] mb-1">Tax Exemption Threshold</span>
-            <strong className="font-semibold text-rose-700 text-[13px]">Nil (Mandatory from Re. 1)</strong>
+          <div className="p-3.5 bg-white rounded-xl border border-indigo-100/80 shadow-3xs hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-1 hover:bg-rose-50/20 transition-all duration-300 cursor-pointer group">
+            <span className="block text-slate-500 text-[11px] mb-1 group-hover:text-rose-900 transition-colors">Tax Exemption Threshold</span>
+            <strong className="font-semibold text-rose-700 text-[13px] group-hover:text-rose-800 transition-colors">Nil (Mandatory from Re. 1)</strong>
           </div>
         </div>
       </div>

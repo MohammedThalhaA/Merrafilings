@@ -156,21 +156,21 @@ export default function GstForeignersGuideLayout({
           <aside className="space-y-6 lg:sticky lg:top-24">
             
             {/* Widget 1: Consult Experts (Avatars + Call button) */}
-            <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md transition-shadow">
+            <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-[#155EEF] hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
               <div className="flex items-center gap-3 mb-3">
                 <div className="flex -space-x-2">
-                  <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-600 border-2 border-white flex items-center justify-center text-white text-xs font-bold shadow-xs">
+                  <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-600 border-2 border-white flex items-center justify-center text-white text-xs font-bold shadow-xs group-hover:scale-105 transition-transform">
                     CA
                   </div>
-                  <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-600 border-2 border-white flex items-center justify-center text-white text-xs font-bold shadow-xs">
+                  <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-600 border-2 border-white flex items-center justify-center text-white text-xs font-bold shadow-xs group-hover:scale-105 transition-transform">
                     CS
                   </div>
-                  <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-amber-500 to-orange-600 border-2 border-white flex items-center justify-center text-white text-xs font-bold shadow-xs">
+                  <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-amber-500 to-orange-600 border-2 border-white flex items-center justify-center text-white text-xs font-bold shadow-xs group-hover:scale-105 transition-transform">
                     JD
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold text-slate-900">
+                  <h3 className="text-sm font-semibold text-slate-900 group-hover:text-blue-950 transition-colors">
                     Consult <span className="text-[#155EEF]">Experts</span>
                   </h3>
                   <div className="flex items-center gap-1 text-[11px] text-slate-500">
@@ -184,17 +184,14 @@ export default function GstForeignersGuideLayout({
               </p>
               <button
                 onClick={() => openContact("Schedule Foreign GST Consultation")}
-                className="w-full py-2.5 px-4 rounded-xl bg-slate-900 text-white hover:bg-slate-800 text-xs font-medium transition-colors shadow-xs"
+                className="w-full py-2.5 px-4 rounded-xl bg-slate-900 text-white hover:bg-[#155EEF] text-xs font-medium transition-colors shadow-xs cursor-pointer"
               >
                 Schedule Consultation Call
               </button>
             </div>
 
             {/* Widget 2: Related Guides (With Emerald Accent & Live Chat Button matching Screenshot) */}
-            <div className="relative rounded-2xl bg-white border border-slate-200/80 shadow-xs p-5 overflow-hidden">
-              {/* Emerald Accent Top Bar */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-[#10B981]" />
-
+            <div className="relative rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-slate-300 hover:shadow-md transition-all duration-300 p-5 overflow-hidden border-t-2 border-t-[#10B981]">
               <h3 className="text-sm font-bold text-slate-900 tracking-tight mb-4 pt-1">
                 Related Guides
               </h3>
@@ -227,7 +224,7 @@ export default function GstForeignersGuideLayout({
               <div className="mt-4 pt-3 border-t border-slate-100 flex justify-end">
                 <button
                   onClick={() => openContact("Live Chat with Foreign GST Specialist")}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#10B981] hover:bg-[#059669] text-white text-xs font-semibold shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#10B981] hover:bg-[#059669] text-white text-xs font-semibold shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 cursor-pointer"
                 >
                   <MessageCircle className="w-4 h-4 fill-white" />
                   <span>Live chat with experts</span>
@@ -236,9 +233,9 @@ export default function GstForeignersGuideLayout({
             </div>
 
             {/* Widget 3: NRTP Statutory Compliance Checklist */}
-            <div className="p-5 rounded-2xl bg-gradient-to-br from-indigo-50/50 via-white to-purple-50/40 border border-indigo-100/80 shadow-xs space-y-3">
-              <div className="flex items-center gap-2 text-indigo-950 font-semibold text-xs">
-                <Globe2 className="w-4 h-4 text-indigo-600" />
+            <div className="p-5 rounded-2xl bg-gradient-to-br from-indigo-50/50 via-white to-purple-50/40 border border-indigo-100/80 shadow-xs hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1 transition-all duration-300 space-y-3 group">
+              <div className="flex items-center gap-2 text-indigo-950 font-semibold text-xs group-hover:text-[#5C3BFF] transition-colors">
+                <Globe2 className="w-4 h-4 text-indigo-600 group-hover:scale-110 transition-transform" />
                 <span>NRTP Statutory Mandates</span>
               </div>
               <ul className="space-y-2 text-xs text-slate-600">

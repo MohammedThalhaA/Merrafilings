@@ -224,17 +224,17 @@ function Gstr10GuideContent() {
           <span>GSTR-10 Final Return Compliance Benchmarks</span>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-normal text-slate-900">
-          <div className="p-3 bg-white rounded-xl border border-indigo-50 shadow-3xs">
-            <span className="block text-slate-500 text-[11px] mb-1">Statutory Filing Deadline</span>
-            <strong className="font-semibold text-slate-950 text-[13px]">Within 3 Months of Order</strong>
+          <div className="p-3.5 bg-white rounded-xl border border-indigo-100/80 shadow-3xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <span className="block text-slate-500 text-[11px] mb-1 group-hover:text-indigo-900 transition-colors">Statutory Filing Deadline</span>
+            <strong className="font-semibold text-slate-950 text-[13px] group-hover:text-[#5C3BFF] transition-colors">Within 3 Months of Order</strong>
           </div>
-          <div className="p-3 bg-white rounded-xl border border-indigo-50 shadow-3xs">
-            <span className="block text-slate-500 text-[11px] mb-1">Statutory Daily Late Fee</span>
-            <strong className="font-semibold text-rose-600 text-[13px]">₹200 per Day (₹100 + ₹100)</strong>
+          <div className="p-3.5 bg-white rounded-xl border border-indigo-100/80 shadow-3xs hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-1 hover:bg-rose-50/30 transition-all duration-300 cursor-pointer group">
+            <span className="block text-slate-500 text-[11px] mb-1 group-hover:text-rose-900 transition-colors">Statutory Daily Late Fee</span>
+            <strong className="font-semibold text-rose-600 text-[13px] group-hover:text-rose-700 transition-colors">₹200 per Day (₹100 + ₹100)</strong>
           </div>
-          <div className="p-3 bg-white rounded-xl border border-indigo-50 shadow-3xs">
-            <span className="block text-slate-500 text-[11px] mb-1">Legal Reversal Mandate</span>
-            <strong className="font-semibold text-slate-950 text-[13px]">Section 29(5) &amp; Rule 44</strong>
+          <div className="p-3.5 bg-white rounded-xl border border-indigo-100/80 shadow-3xs hover:border-[#00B074] hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-1 hover:bg-emerald-50/20 transition-all duration-300 cursor-pointer group">
+            <span className="block text-slate-500 text-[11px] mb-1 group-hover:text-emerald-900 transition-colors">Legal Reversal Mandate</span>
+            <strong className="font-semibold text-slate-950 text-[13px] group-hover:text-emerald-800 transition-colors">Section 29(5) &amp; Rule 44</strong>
           </div>
         </div>
       </div>
@@ -258,32 +258,32 @@ function Gstr10GuideContent() {
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">
-              <tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-950">Regular Taxpayers (Suo-Moto Cancelled by Officer)</td>
                 <td className="py-3 px-4 text-emerald-700 font-semibold">✅ Yes — Compulsory</td>
                 <td className="py-3 px-4 bg-emerald-50/30">Section 45 &amp; Rule 81</td>
               </tr>
-              <tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-950">Taxpayers who Voluntarily Surrendered GSTIN</td>
                 <td className="py-3 px-4 text-emerald-700 font-semibold">✅ Yes — Compulsory</td>
                 <td className="py-3 px-4 bg-emerald-50/30">Section 45 &amp; Rule 81</td>
               </tr>
-              <tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-950">Composition Scheme Taxpayers (Section 10)</td>
                 <td className="py-3 px-4 text-slate-500 font-semibold">❌ No — Exempt</td>
                 <td className="py-3 px-4 bg-slate-50">Exempted under Section 45</td>
               </tr>
-              <tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-950">Non-Resident Taxable Persons (NRTP)</td>
                 <td className="py-3 px-4 text-slate-500 font-semibold">❌ No — Exempt</td>
                 <td className="py-3 px-4 bg-slate-50">Exempted under Section 45</td>
               </tr>
-              <tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-950">Input Service Distributors (ISD)</td>
                 <td className="py-3 px-4 text-slate-500 font-semibold">❌ No — Exempt</td>
                 <td className="py-3 px-4 bg-slate-50">Exempted under Section 45</td>
               </tr>
-              <tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-950">TDS Deductors (Sec 51) &amp; TCS Collectors (Sec 52)</td>
                 <td className="py-3 px-4 text-slate-500 font-semibold">❌ No — Exempt</td>
                 <td className="py-3 px-4 bg-slate-50">Exempted under Section 45</td>
@@ -303,26 +303,26 @@ function Gstr10GuideContent() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-[13px] text-slate-800">
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1.5">
-            <span className="text-slate-500 text-[11px] block">Daily Late Fee Accumulation</span>
-            <strong className="text-rose-700 font-semibold text-sm">₹200 / Day (₹100 CGST + ₹100 SGST)</strong>
-            <p className="text-slate-600 leading-relaxed">
+          <div className="p-4.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-rose-400 hover:shadow-xl hover:shadow-rose-500/10 hover:-translate-y-1.5 hover:bg-rose-50/20 transition-all duration-300 cursor-pointer group space-y-2">
+            <span className="text-slate-500 text-[11px] block group-hover:text-rose-900 transition-colors">Daily Late Fee Accumulation</span>
+            <strong className="text-rose-700 font-semibold text-sm block">₹200 / Day (₹100 CGST + ₹100 SGST)</strong>
+            <p className="text-slate-600 leading-relaxed font-normal">
               Late fee starts accumulating automatically from the day immediately following the 3-month deadline until the return is successfully filed.
             </p>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1.5">
-            <span className="text-slate-500 text-[11px] block">Form GSTR-3A Notice</span>
-            <strong className="text-amber-800 font-semibold text-sm">15-Day Final Notice</strong>
-            <p className="text-slate-600 leading-relaxed">
+          <div className="p-4.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-amber-400 hover:shadow-xl hover:shadow-amber-500/10 hover:-translate-y-1.5 hover:bg-amber-50/20 transition-all duration-300 cursor-pointer group space-y-2">
+            <span className="text-slate-500 text-[11px] block group-hover:text-amber-900 transition-colors">Form GSTR-3A Notice</span>
+            <strong className="text-amber-800 font-semibold text-sm block">15-Day Final Notice</strong>
+            <p className="text-slate-600 leading-relaxed font-normal">
               If GSTR-10 is not submitted within 3 months, the department issues Form GSTR-3A under Section 46, requiring submission within 15 days.
             </p>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1.5">
-            <span className="text-slate-500 text-[11px] block">Section 62 Assessment</span>
-            <strong className="text-slate-950 font-semibold text-sm">Best Judgement Assessment</strong>
-            <p className="text-slate-600 leading-relaxed">
+          <div className="p-4.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-2">
+            <span className="text-slate-500 text-[11px] block group-hover:text-indigo-900 transition-colors">Section 62 Assessment</span>
+            <strong className="text-slate-950 font-semibold text-sm block group-hover:text-[#5C3BFF] transition-colors">Best Judgement Assessment</strong>
+            <p className="text-slate-600 leading-relaxed font-normal">
               If the taxpayer fails to respond to Form GSTR-3A, the officer assesses closing stock unilaterally and issues a demand order with interest and 100% penalty.
             </p>
           </div>
@@ -338,14 +338,14 @@ function Gstr10GuideContent() {
           Under Section 29(5) of the CGST Act, every registered person whose registration is cancelled must pay an amount calculated as follows:
         </p>
 
-        <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs space-y-3">
+        <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-3">
           <div className="text-xs sm:text-[13px] text-slate-700 space-y-2">
-            <div className="p-3 bg-slate-50 rounded-xl border border-slate-100">
-              <strong className="text-slate-950 font-semibold block mb-0.5">A. For Inputs, Semi-Finished Goods &amp; Finished Goods:</strong>
+            <div className="p-3.5 bg-slate-50 group-hover:bg-white rounded-xl border border-slate-200/80 group-hover:border-[#5C3BFF]/40 transition-all duration-200">
+              <strong className="text-slate-950 font-semibold block mb-0.5 group-hover:text-[#5C3BFF] transition-colors">A. For Inputs, Semi-Finished Goods &amp; Finished Goods:</strong>
               Pay the higher of: (1) The Input Tax Credit availed on such inputs; OR (2) The output tax payable on the open market value of such goods on the effective cancellation date.
             </div>
-            <div className="p-3 bg-slate-50 rounded-xl border border-slate-100">
-              <strong className="text-slate-950 font-semibold block mb-0.5">B. For Capital Goods and Plant &amp; Machinery (Rule 44):</strong>
+            <div className="p-3.5 bg-slate-50 group-hover:bg-white rounded-xl border border-slate-200/80 group-hover:border-[#5C3BFF]/40 transition-all duration-200">
+              <strong className="text-slate-950 font-semibold block mb-0.5 group-hover:text-[#5C3BFF] transition-colors">B. For Capital Goods and Plant &amp; Machinery (Rule 44):</strong>
               Pay the higher of: (1) The Input Tax Credit availed on such capital goods reduced by <strong>5 percentage points for every quarter</strong> of use (assuming a 5-year useful life); OR (2) The tax on the transaction value of such capital goods sold under Section 15.
             </div>
           </div>
@@ -358,39 +358,39 @@ function Gstr10GuideContent() {
           4. Step-by-Step GSTR-10 Online Filing Procedure
         </h2>
         <div className="space-y-3">
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs">
-            <strong className="text-indigo-950 font-semibold block text-sm mb-1">Step 1 — Login to GST Portal:</strong>
-            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#00B074] hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-1 hover:bg-emerald-50/20 transition-all duration-300 cursor-pointer group">
+            <strong className="text-indigo-950 font-semibold block text-sm mb-1 group-hover:text-emerald-950 transition-colors">Step 1 — Login to GST Portal:</strong>
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal">
               Visit <code className="text-indigo-600">www.gst.gov.in</code> and log in using your cancelled GSTIN credentials.
             </p>
           </div>
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs">
-            <strong className="text-indigo-950 font-semibold block text-sm mb-1">Step 2 — Navigate to Final Return:</strong>
-            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#00B074] hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-1 hover:bg-emerald-50/20 transition-all duration-300 cursor-pointer group">
+            <strong className="text-indigo-950 font-semibold block text-sm mb-1 group-hover:text-emerald-950 transition-colors">Step 2 — Navigate to Final Return:</strong>
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal">
               Go to <strong>Services &gt; Returns &gt; Final Return</strong>. Click on <strong>Prepare Online</strong> under Form GSTR-10.
             </p>
           </div>
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs">
-            <strong className="text-indigo-950 font-semibold block text-sm mb-1">Step 3 — Verify Auto-Populated Particulars:</strong>
-            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#00B074] hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-1 hover:bg-emerald-50/20 transition-all duration-300 cursor-pointer group">
+            <strong className="text-indigo-950 font-semibold block text-sm mb-1 group-hover:text-emerald-950 transition-colors">Step 3 — Verify Auto-Populated Particulars:</strong>
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal">
               The portal auto-populates legal name, trade name, cancellation order number, and effective cancellation date. Verify these details.
             </p>
           </div>
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs">
-            <strong className="text-indigo-950 font-semibold block text-sm mb-1">Step 4 — Enter Closing Stock Details (Table 8):</strong>
-            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#00B074] hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-1 hover:bg-emerald-50/20 transition-all duration-300 cursor-pointer group">
+            <strong className="text-indigo-950 font-semibold block text-sm mb-1 group-hover:text-emerald-950 transition-colors">Step 4 — Enter Closing Stock Details (Table 8):</strong>
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal">
               Declare itemized details of inputs held in stock, inputs contained in semi-finished/finished goods, and capital goods (with invoice numbers, HSN, quantity, and credit availed).
             </p>
           </div>
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs">
-            <strong className="text-indigo-950 font-semibold block text-sm mb-1">Step 5 — Settle Tax Liability &amp; Late Fees:</strong>
-            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#00B074] hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-1 hover:bg-emerald-50/20 transition-all duration-300 cursor-pointer group">
+            <strong className="text-indigo-950 font-semibold block text-sm mb-1 group-hover:text-emerald-950 transition-colors">Step 5 — Settle Tax Liability &amp; Late Fees:</strong>
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal">
               Review Table 9 tax liabilities and Table 10 late fees. Pay through the Electronic Cash Ledger or utilize available Electronic Credit Ledger balances via challan.
             </p>
           </div>
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs">
-            <strong className="text-indigo-950 font-semibold block text-sm mb-1">Step 6 — Authenticate &amp; Generate ARN:</strong>
-            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#00B074] hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-1 hover:bg-emerald-50/20 transition-all duration-300 cursor-pointer group">
+            <strong className="text-indigo-950 font-semibold block text-sm mb-1 group-hover:text-emerald-950 transition-colors">Step 6 — Authenticate &amp; Generate ARN:</strong>
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal">
               Digitally sign using Class 3 DSC or Aadhaar EVC OTP. The portal issues an Application Reference Number (ARN) confirming permanent closure.
             </p>
           </div>

@@ -223,17 +223,17 @@ function GstRevocationGuideContent() {
           <span>GST Revocation Statutory Compliance Benchmarks</span>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-normal text-slate-900">
-          <div className="p-3 bg-white rounded-xl border border-indigo-50 shadow-3xs">
-            <span className="block text-slate-500 text-[11px] mb-1">Standard Application Window</span>
-            <strong className="font-semibold text-slate-950 text-[13px]">90 Days from Cancellation Order</strong>
+          <div className="p-3.5 bg-white rounded-xl border border-indigo-100/80 shadow-3xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <span className="block text-slate-500 text-[11px] mb-1 group-hover:text-indigo-900 transition-colors">Standard Application Window</span>
+            <strong className="font-semibold text-slate-950 text-[13px] group-hover:text-[#5C3BFF] transition-colors">90 Days from Cancellation Order</strong>
           </div>
-          <div className="p-3 bg-white rounded-xl border border-indigo-50 shadow-3xs">
-            <span className="block text-slate-500 text-[11px] mb-1">Maximum Extended Window</span>
-            <strong className="font-semibold text-slate-950 text-[13px]">Up to 270 Days (Commissioner)</strong>
+          <div className="p-3.5 bg-white rounded-xl border border-indigo-100/80 shadow-3xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <span className="block text-slate-500 text-[11px] mb-1 group-hover:text-indigo-900 transition-colors">Maximum Extended Window</span>
+            <strong className="font-semibold text-slate-950 text-[13px] group-hover:text-[#5C3BFF] transition-colors">Up to 270 Days (Commissioner)</strong>
           </div>
-          <div className="p-3 bg-white rounded-xl border border-indigo-50 shadow-3xs">
-            <span className="block text-slate-500 text-[11px] mb-1">Mandatory Officer Decision</span>
-            <strong className="font-semibold text-emerald-600 text-[13px]">Within 30 Days (REG-22)</strong>
+          <div className="p-3.5 bg-white rounded-xl border border-indigo-100/80 shadow-3xs hover:border-[#00B074] hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-1 hover:bg-emerald-50/20 transition-all duration-300 cursor-pointer group">
+            <span className="block text-slate-500 text-[11px] mb-1 group-hover:text-emerald-900 transition-colors">Mandatory Officer Decision</span>
+            <strong className="font-semibold text-emerald-600 text-[13px] group-hover:text-emerald-800 transition-colors">Within 30 Days (REG-22)</strong>
           </div>
         </div>
       </div>
@@ -257,27 +257,27 @@ function GstRevocationGuideContent() {
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">
-              <tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-950">Non-filing of returns for 6 consecutive months (or 2 quarters)</td>
                 <td className="py-3 px-4 font-semibold text-indigo-700">Suo Moto (Tax Officer)</td>
                 <td className="py-3 px-4 bg-emerald-50/30 text-emerald-700 font-semibold">✅ Yes — upon filing all pending returns</td>
               </tr>
-              <tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-950">Non-commencement of business within 6 months of registration</td>
                 <td className="py-3 px-4 font-semibold text-indigo-700">Suo Moto (Tax Officer)</td>
                 <td className="py-3 px-4 bg-emerald-50/30 text-emerald-700 font-semibold">✅ Yes — upon providing proof of business</td>
               </tr>
-              <tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-950">Alleged fraud, willful misstatement, or suppression of facts</td>
                 <td className="py-3 px-4 font-semibold text-indigo-700">Suo Moto (Tax Officer)</td>
                 <td className="py-3 px-4 bg-emerald-50/30 text-emerald-700 font-semibold">✅ Yes — with comprehensive legal justification</td>
               </tr>
-              <tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-950">Business permanently discontinued or closed down</td>
                 <td className="py-3 px-4 font-semibold text-slate-600">Voluntary (Taxpayer)</td>
                 <td className="py-3 px-4 bg-rose-50/30 text-rose-700 font-semibold">❌ No — file GSTR-10 Final Return instead</td>
               </tr>
-              <tr>
+              <tr className="hover:bg-slate-50/70 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-950">Turnover fell below mandatory threshold limit</td>
                 <td className="py-3 px-4 font-semibold text-slate-600">Voluntary (Taxpayer)</td>
                 <td className="py-3 px-4 bg-rose-50/30 text-rose-700 font-semibold">❌ No — voluntary cancellations cannot be revoked</td>
@@ -297,26 +297,26 @@ function GstRevocationGuideContent() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-[13px] text-slate-800">
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-            <span className="px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-100 text-emerald-800">Tier 1: Standard Window</span>
-            <strong className="text-slate-950 font-semibold block text-sm">Within 90 Days</strong>
-            <p className="text-slate-700 leading-relaxed">
+          <div className="p-4.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-2">
+            <span className="px-2.5 py-1 rounded-md text-[11px] font-semibold bg-emerald-100 text-emerald-800 inline-block">Tier 1: Standard Window</span>
+            <strong className="text-slate-950 font-semibold block text-sm group-hover:text-[#5C3BFF] transition-colors">Within 90 Days</strong>
+            <p className="text-slate-700 leading-relaxed font-normal">
               Taxpayers can file Form GST REG-21 directly on the GST portal without needing special condonation orders, provided all pending returns and taxes are paid.
             </p>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-            <span className="px-2 py-0.5 rounded text-[11px] font-semibold bg-indigo-100 text-indigo-800">Tier 2: Joint / Addl. Commissioner</span>
-            <strong className="text-slate-950 font-semibold block text-sm">90 to 180 Days</strong>
-            <p className="text-slate-700 leading-relaxed">
+          <div className="p-4.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-2">
+            <span className="px-2.5 py-1 rounded-md text-[11px] font-semibold bg-indigo-100 text-indigo-800 inline-block">Tier 2: Joint / Addl. Commissioner</span>
+            <strong className="text-slate-950 font-semibold block text-sm group-hover:text-[#5C3BFF] transition-colors">90 to 180 Days</strong>
+            <p className="text-slate-700 leading-relaxed font-normal">
               If the 90-day window is breached, an application for condonation of delay must be submitted to the Joint or Additional Commissioner demonstrating sufficient cause.
             </p>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-            <span className="px-2 py-0.5 rounded text-[11px] font-semibold bg-purple-100 text-purple-800">Tier 3: Principal Commissioner</span>
-            <strong className="text-slate-950 font-semibold block text-sm">180 to 270 Days</strong>
-            <p className="text-slate-700 leading-relaxed">
+          <div className="p-4.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-2">
+            <span className="px-2.5 py-1 rounded-md text-[11px] font-semibold bg-purple-100 text-purple-800 inline-block">Tier 3: Principal Commissioner</span>
+            <strong className="text-slate-950 font-semibold block text-sm group-hover:text-[#5C3BFF] transition-colors">180 to 270 Days</strong>
+            <p className="text-slate-700 leading-relaxed font-normal">
               For delays between 180 and 270 days, power resides with the Commissioner / Principal Commissioner. Comprehensive legal grounds and hardship justifications are required.
             </p>
           </div>
@@ -328,30 +328,30 @@ function GstRevocationGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           3. Documents Required for GST Revocation (Form GST REG-21)
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-[13px] text-slate-800">
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
-            <strong className="text-slate-950 font-semibold block mb-0.5">Cancellation Order Copy:</strong>
-            Form GST REG-19 or Form GST REG-17 show-cause notice issued by the officer.
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-[13px] text-slate-800">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <strong className="text-slate-950 font-semibold block mb-1 group-hover:text-[#5C3BFF] transition-colors">Cancellation Order Copy:</strong>
+            <span className="text-slate-700 font-normal">Form GST REG-19 or Form GST REG-17 show-cause notice issued by the officer.</span>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
-            <strong className="text-slate-950 font-semibold block mb-0.5">Proof of Filed Returns:</strong>
-            Filing acknowledgments of all overdue GSTR-1 and GSTR-3B monthly returns.
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <strong className="text-slate-950 font-semibold block mb-1 group-hover:text-[#5C3BFF] transition-colors">Proof of Filed Returns:</strong>
+            <span className="text-slate-700 font-normal">Filing acknowledgments of all overdue GSTR-1 and GSTR-3B monthly returns.</span>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
-            <strong className="text-slate-950 font-semibold block mb-0.5">Tax, Interest &amp; Late Fee Challans:</strong>
-            Receipts confirming full discharge of tax liabilities and Section 50 interest.
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <strong className="text-slate-950 font-semibold block mb-1 group-hover:text-[#5C3BFF] transition-colors">Tax, Interest &amp; Late Fee Challans:</strong>
+            <span className="text-slate-700 font-normal">Receipts confirming full discharge of tax liabilities and Section 50 interest.</span>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
-            <strong className="text-slate-950 font-semibold block mb-0.5">Written Justification Letter:</strong>
-            Detailed affidavit/letter explaining the bona fide reasons for the non-compliance.
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <strong className="text-slate-950 font-semibold block mb-1 group-hover:text-[#5C3BFF] transition-colors">Written Justification Letter:</strong>
+            <span className="text-slate-700 font-normal">Detailed affidavit/letter explaining the bona fide reasons for the non-compliance.</span>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
-            <strong className="text-slate-950 font-semibold block mb-0.5">Updated Address &amp; Business Proof:</strong>
-            Recent electricity bill, NOC, or rent agreement confirming active premises.
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <strong className="text-slate-950 font-semibold block mb-1 group-hover:text-[#5C3BFF] transition-colors">Updated Address &amp; Business Proof:</strong>
+            <span className="text-slate-700 font-normal">Recent electricity bill, NOC, or rent agreement confirming active premises.</span>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
-            <strong className="text-slate-950 font-semibold block mb-0.5">Authorized Signatory Credentials:</strong>
-            Class 3 Digital Signature Certificate (DSC) or Aadhaar EVC credentials.
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
+            <strong className="text-slate-950 font-semibold block mb-1 group-hover:text-[#5C3BFF] transition-colors">Authorized Signatory Credentials:</strong>
+            <span className="text-slate-700 font-normal">Class 3 Digital Signature Certificate (DSC) or Aadhaar EVC credentials.</span>
           </div>
         </div>
       </section>
@@ -362,33 +362,33 @@ function GstRevocationGuideContent() {
           4. Step-by-Step Revocation Procedure on the GST Portal
         </h2>
         <div className="space-y-3">
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs">
-            <strong className="text-indigo-950 font-semibold block text-sm mb-1">Step 1 — Clear All Overdue Returns &amp; Tax Liabilities:</strong>
-            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#00B074] hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-1 hover:bg-emerald-50/20 transition-all duration-300 cursor-pointer group">
+            <strong className="text-indigo-950 font-semibold block text-sm mb-1 group-hover:text-emerald-950 transition-colors">Step 1 — Clear All Overdue Returns &amp; Tax Liabilities:</strong>
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal">
               Log in to the portal and file every overdue GSTR-1 and GSTR-3B return from the date of default up to the cancellation date, paying all interest and late fees via challan.
             </p>
           </div>
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs">
-            <strong className="text-indigo-950 font-semibold block text-sm mb-1">Step 2 — Access Application for Revocation of Cancelled Registration:</strong>
-            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#00B074] hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-1 hover:bg-emerald-50/20 transition-all duration-300 cursor-pointer group">
+            <strong className="text-indigo-950 font-semibold block text-sm mb-1 group-hover:text-emerald-950 transition-colors">Step 2 — Access Application for Revocation of Cancelled Registration:</strong>
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal">
               Navigate to <strong>Services &gt; Registration &gt; Application for Revocation of Cancelled Registration</strong> on <code className="text-indigo-600">gst.gov.in</code>.
             </p>
           </div>
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs">
-            <strong className="text-indigo-950 font-semibold block text-sm mb-1">Step 3 — Complete Form GST REG-21 &amp; State Grounds:</strong>
-            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#00B074] hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-1 hover:bg-emerald-50/20 transition-all duration-300 cursor-pointer group">
+            <strong className="text-indigo-950 font-semibold block text-sm mb-1 group-hover:text-emerald-950 transition-colors">Step 3 — Complete Form GST REG-21 &amp; State Grounds:</strong>
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal">
               Enter the cancellation order details, input the date of order service, state the comprehensive grounds for revocation, and attach supporting proofs.
             </p>
           </div>
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs">
-            <strong className="text-indigo-950 font-semibold block text-sm mb-1">Step 4 — Digital Signature Authentication &amp; ARN Generation:</strong>
-            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#00B074] hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-1 hover:bg-emerald-50/20 transition-all duration-300 cursor-pointer group">
+            <strong className="text-indigo-950 font-semibold block text-sm mb-1 group-hover:text-emerald-950 transition-colors">Step 4 — Digital Signature Authentication &amp; ARN Generation:</strong>
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal">
               Submit using Class 3 DSC (for companies/LLPs) or EVC OTP (for proprietorships). Save the generated Application Reference Number (ARN) for tracking.
             </p>
           </div>
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs">
-            <strong className="text-indigo-950 font-semibold block text-sm mb-1">Step 5 — Officer Scrutiny &amp; Issuance of Order:</strong>
-            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#00B074] hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-1 hover:bg-emerald-50/20 transition-all duration-300 cursor-pointer group">
+            <strong className="text-indigo-950 font-semibold block text-sm mb-1 group-hover:text-emerald-950 transition-colors">Step 5 — Officer Scrutiny &amp; Issuance of Order:</strong>
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal">
               The proper officer has 30 days to review the application. If satisfied, an approval order in <strong>Form GST REG-22</strong> is issued, instantly restoring your GSTIN to active status.
             </p>
           </div>
@@ -403,9 +403,9 @@ function GstRevocationGuideContent() {
         <p className="text-[14.5px] leading-relaxed text-slate-900 font-normal">
           If the proper officer requires further information, they will issue a show-cause notice in <strong className="font-semibold text-slate-950">Form GST REG-23</strong>. The taxpayer must respond within <strong className="font-semibold text-slate-950">7 working days</strong> using <strong className="font-semibold text-slate-950">Form GST REG-24</strong>.
         </p>
-        <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/90 space-y-3">
-          <h3 className="text-sm font-semibold text-slate-950">What If the Revocation is Rejected under Form GST REG-05?</h3>
-          <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed">
+        <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-3">
+          <h3 className="text-sm font-semibold text-slate-950 group-hover:text-[#5C3BFF] transition-colors">What If the Revocation is Rejected under Form GST REG-05?</h3>
+          <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal">
             If the officer rejects the revocation application, you have the right to file an appeal before the First Appellate Authority (Joint Commissioner Appeals) under <strong className="font-semibold text-slate-950">Section 107 of the CGST Act</strong> within 3 months using <strong className="font-semibold text-slate-950">Form GST APL-01</strong>, supported by established High Court rulings mandating business restoration upon tax recovery.
           </p>
           <div className="pt-1">
