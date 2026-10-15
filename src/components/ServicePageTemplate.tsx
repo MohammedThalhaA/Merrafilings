@@ -2459,10 +2459,10 @@ export default function ServicePageTemplate({
                 <div
                   key={idx}
                   data-reveal
-                  className={`group rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 ease-out cursor-pointer relative text-left ${
+                  className={`pricing-card-lift group rounded-3xl p-6 sm:p-8 flex flex-col justify-between cursor-pointer relative text-left ${
                     isPopular
-                      ? "bg-gradient-to-b from-emerald-50/40 via-white to-white border-2 border-emerald-500 shadow-[0_16px_40px_rgba(5,150,105,0.14)] hover:shadow-[0_24px_50px_rgba(5,150,105,0.22)] md:-translate-y-2 hover:-translate-y-3 ring-1 ring-emerald-500/20"
-                      : "bg-white border border-slate-200/90 hover:border-slate-300 shadow-2xs hover:shadow-xl hover:-translate-y-1.5"
+                      ? "is-popular-card bg-gradient-to-b from-emerald-50/40 via-white to-white border-2 border-emerald-500 shadow-[0_16px_40px_rgba(5,150,105,0.14)] ring-1 ring-emerald-500/20"
+                      : "bg-white border border-slate-200/90 hover:border-emerald-500/70 shadow-2xs"
                   } stagger-${idx + 1}`}
                 >
                   {isPopular && (
@@ -2543,7 +2543,7 @@ export default function ServicePageTemplate({
                       <ul className="space-y-3 text-xs sm:text-[13px] font-medium text-slate-700">
                         {pkg.features.map((feat, fIdx) => (
                           <li key={fIdx} className="flex items-start gap-2.5">
-                            <div className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100/90 flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-110 transition-transform">
+                            <div className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100/90 flex items-center justify-center shrink-0 mt-0.5">
                               <Check className="w-3 h-3 stroke-[2.5]" />
                             </div>
                             <span className="leading-snug text-slate-700 font-normal">{feat}</span>

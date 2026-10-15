@@ -61,7 +61,7 @@ export default function ComplianceComparison({ onGetStarted }: ComplianceCompari
   ];
 
   return (
-    <section className="py-10 md:py-14 bg-[#FAFBFB] border-b border-slate-200/80 font-sans relative overflow-hidden" id="comparison">
+    <section data-reveal className="py-10 md:py-14 bg-[#FAFBFB] border-b border-slate-200/80 font-sans relative overflow-hidden" id="comparison">
       {/* Dynamic ambient bloom */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[750px] h-[350px] bg-emerald-100/25 blur-3xl rounded-full pointer-events-none" />
 

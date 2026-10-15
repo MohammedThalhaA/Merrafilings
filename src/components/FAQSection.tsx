@@ -52,7 +52,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="py-10 md:py-14 bg-white border-b border-slate-200/80" id="faqs">
+    <section data-reveal className="py-10 md:py-14 bg-white border-b border-slate-200/80" id="faqs">
       <div className="w-full max-w-[1400px] 2xl:max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-[960px] mx-auto">
         

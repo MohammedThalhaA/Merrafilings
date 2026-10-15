@@ -110,7 +110,7 @@ export default function AIComplianceCloud({ onExplore, onBookDemo }: AIComplianc
   const Icon = current.icon;
 
   return (
-    <section className="py-10 md:py-14 bg-[#FAFAFA] border-b border-slate-200/80 font-sans relative overflow-hidden" id="compliance-care">
+    <section data-reveal className="py-10 md:py-14 bg-[#FAFAFA] border-b border-slate-200/80 font-sans relative overflow-hidden" id="compliance-care">
       {/* Subtle ambient light bloom */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-r from-emerald-100/30 via-teal-100/20 to-blue-100/30 blur-3xl pointer-events-none rounded-full" />
 

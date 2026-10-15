@@ -23,7 +23,7 @@ export default function FinalCTA({ onFormSubmit }: FinalCTAProps) {
   };
 
   return (
-    <section className="py-10 md:py-14 bg-white border-b border-slate-200/80" id="contact">
+    <section data-reveal className="py-10 md:py-14 bg-white border-b border-slate-200/80" id="contact">
       <div className="w-full max-w-[1400px] 2xl:max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-[#FAF9F6] rounded-3xl border border-slate-200/90 p-8 sm:p-12 md:p-16 relative overflow-hidden">
           

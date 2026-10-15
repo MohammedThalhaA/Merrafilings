@@ -128,7 +128,7 @@ export default function IndustrySolutionsGrid({ onSelectIndustry }: IndustrySolu
     : industries.filter((item) => item.category === activeTab);
 
   return (
-    <section className="py-10 md:py-14 bg-[#FAFBFB] border-b border-slate-200/80 font-sans relative overflow-hidden" id="industries">
+    <section data-reveal className="py-10 md:py-14 bg-[#FAFBFB] border-b border-slate-200/80 font-sans relative overflow-hidden" id="industries">
       {/* Decorative ambient bloom */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-emerald-100/20 blur-3xl rounded-full pointer-events-none" />
 

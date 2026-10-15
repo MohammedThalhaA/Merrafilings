@@ -190,7 +190,7 @@ export default function DashboardShowcase({ onOpenPortal }: DashboardShowcasePro
   };
 
   return (
-    <section className="py-10 md:py-14 bg-white border-b border-slate-200/80 font-sans relative overflow-hidden" id="vault">
+    <section data-reveal className="py-10 md:py-14 bg-white border-b border-slate-200/80 font-sans relative overflow-hidden" id="vault">
       {/* Dynamic ambient blooms */}
       <div className="absolute top-1/4 right-10 w-[500px] h-[350px] bg-emerald-100/30 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 left-10 w-[450px] h-[300px] bg-blue-100/20 rounded-full blur-3xl pointer-events-none" />

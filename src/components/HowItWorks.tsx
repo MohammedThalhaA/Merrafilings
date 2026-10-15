@@ -50,7 +50,7 @@ export default function HowItWorks({ onStartProcess }: HowItWorksProps) {
   ];
 
   return (
-    <section className="py-10 md:py-14 bg-[#FBFBFA] border-b border-slate-200/80 font-sans relative overflow-hidden" id="how-it-works">
+    <section data-reveal className="py-10 md:py-14 bg-[#FBFBFA] border-b border-slate-200/80 font-sans relative overflow-hidden" id="how-it-works">
       <div className="w-full max-w-[1400px] 2xl:max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

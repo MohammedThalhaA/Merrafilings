@@ -167,12 +167,18 @@ table tbody tr:hover td {
 /* ==========================================================================
    Global Interactive Button & Card Hover Transitions
    ========================================================================== */
+/* ==========================================================================
+   Global Interactive Button & Card Hover Transitions
+   ========================================================================== */
 .card-hover-effect {
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, background-color 0.2s ease;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, background-color 0.2s ease;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .card-hover-effect:hover {
-  transform: translateY(-4px);
+  transform: translate3d(0, -5px, 0);
   box-shadow: 0 16px 32px -8px rgba(15, 23, 42, 0.1), 0 4px 12px -2px rgba(15, 23, 42, 0.05);
 }
 
@@ -289,29 +295,56 @@ a:not([class*="bg-clip-text"])[class*="from-[#5C3BFF]"] {
    ========================================================================== */
 .reveal-on-scroll,
 [data-reveal],
-section:not(.hero-section):not(.no-reveal) {
+.reveal-init {
   opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translate3d(0, 24px, 0);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
 .reveal-on-scroll.is-revealed,
 [data-reveal].is-revealed,
-section:not(.hero-section):not(.no-reveal).is-revealed,
-section.hero-section,
-section.no-reveal {
+.reveal-init.is-revealed {
   opacity: 1 !important;
-  transform: translateY(0) !important;
+  transform: translate3d(0, 0, 0);
 }
 
 /* Stagger delay utilities for grids and lists */
-.stagger-1 { transition-delay: 70ms !important; }
-.stagger-2 { transition-delay: 140ms !important; }
-.stagger-3 { transition-delay: 210ms !important; }
-.stagger-4 { transition-delay: 280ms !important; }
-.stagger-5 { transition-delay: 350ms !important; }
-.stagger-6 { transition-delay: 420ms !important; }
+.stagger-1 { transition-delay: 60ms !important; }
+.stagger-2 { transition-delay: 120ms !important; }
+.stagger-3 { transition-delay: 180ms !important; }
+.stagger-4 { transition-delay: 240ms !important; }
+.stagger-5 { transition-delay: 300ms !important; }
+.stagger-6 { transition-delay: 360ms !important; }
+
+/* ==========================================================================
+   Butter-Smooth Card Hover Physics
+   ========================================================================== */
+.pricing-card-lift {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease !important;
+  will-change: transform, box-shadow;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.pricing-card-lift:hover {
+  transform: translate3d(0, -6px, 0) !important;
+  box-shadow: 0 20px 38px -8px rgba(15, 23, 42, 0.12), 0 8px 16px -4px rgba(15, 23, 42, 0.06) !important;
+}
+
+@media (min-width: 768px) {
+  .pricing-card-lift.is-popular-card {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+.pricing-card-lift.is-popular-card:hover {
+  transform: translate3d(0, -10px, 0) !important;
+  box-shadow: 0 24px 44px -8px rgba(5, 150, 105, 0.22), 0 10px 20px -4px rgba(5, 150, 105, 0.12) !important;
+}
 
 /* ==========================================================================
    Editorial Content & High-Contrast Dark Typography

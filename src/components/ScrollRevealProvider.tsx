@@ -11,35 +11,55 @@ export default function ScrollRevealProvider({ children }: { children?: React.Re
       return;
     }
 
+    let activeObserver: IntersectionObserver | null = null;
+
     const setupObserver = () => {
-      // Find all sections and data-reveal elements
-      const targets = document.querySelectorAll<HTMLElement>(
-        "section, [data-reveal], .reveal-on-scroll, .pricing-card, .bento-card"
+      // Collect explicit targets as well as standard page sections and card grids
+      const explicitTargets = Array.from(
+        document.querySelectorAll<HTMLElement>(
+          "[data-reveal], .reveal-on-scroll, .pricing-card-lift, [data-reveal-card], .reveal-init"
+        )
       );
 
-      const observer = new IntersectionObserver(
+      // Major semantic sections (excluding hero and navbar)
+      const sectionTargets = Array.from(
+        document.querySelectorAll<HTMLElement>(
+          "main > section:not(.hero-section):not(.no-reveal):not(#hero)"
+        )
+      );
+
+      // Major cards inside grid sections (solutions, features, comparisons, testimonials)
+      const cardTargets = Array.from(
+        document.querySelectorAll<HTMLElement>(
+          "main section:not(.hero-section) .grid > div:not(.no-reveal)"
+        )
+      );
+
+      // Combine unique targets
+      const allTargets = Array.from(
+        new Set([...explicitTargets, ...sectionTargets, ...cardTargets])
+      );
+
+      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+      activeObserver = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               const el = entry.target as HTMLElement;
               el.classList.add("is-revealed");
-              // Cascade reveal any children with data-reveal or stagger classes
-              const children = el.querySelectorAll<HTMLElement>("[data-reveal]");
-              children.forEach((child) => child.classList.add("is-revealed"));
-              observer.unobserve(el);
+              activeObserver?.unobserve(el);
             }
           });
         },
         {
-          threshold: 0.05,
-          rootMargin: "0px 0px -40px 0px",
+          threshold: 0.06, // Trigger as soon as top 6% of the element enters the viewport
+          rootMargin: "0px 0px -30px 0px", // Trigger smoothly just before it clears the bottom
         }
       );
 
-      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-
-      targets.forEach((target) => {
-        // Exclude hero section, no-reveal elements, and header/navbar
+      allTargets.forEach((target) => {
+        // Exclude navigation, header, and explicit no-reveal elements
         if (
           target.classList.contains("hero-section") ||
           target.classList.contains("no-reveal") ||
@@ -50,24 +70,45 @@ export default function ScrollRevealProvider({ children }: { children?: React.Re
           return;
         }
 
+        // Apply reveal base class if not already tagged
+        if (
+          !target.hasAttribute("data-reveal") &&
+          !target.classList.contains("reveal-on-scroll") &&
+          !target.classList.contains("pricing-card-lift")
+        ) {
+          target.classList.add("reveal-init");
+        }
+
+        // Add automatic stagger index to cards within grids
+        if (target.parentElement && target.parentElement.classList.contains("grid")) {
+          const siblings = Array.from(target.parentElement.children);
+          const index = siblings.indexOf(target);
+          if (index >= 0 && index < 6 && !target.classList.contains(`stagger-${index + 1}`)) {
+            target.classList.add(`stagger-${(index % 4) + 1}`);
+          }
+        }
+
         const rect = target.getBoundingClientRect();
-        // If element is already in initial view (or above fold), reveal immediately
-        if (rect.top < windowHeight * 0.95) {
+        // If element is already in the viewport on initial load (above the fold), reveal immediately
+        if (rect.top < windowHeight * 0.85 && rect.bottom > 0) {
           target.classList.add("is-revealed");
         } else {
-          observer.observe(target);
+          // Keep element unrevealed until scrolled to
+          target.classList.remove("is-revealed");
+          activeObserver?.observe(target);
         }
       });
-
-      return observer;
     };
 
-    const timer = setTimeout(() => {
-      const observer = setupObserver();
-      return () => observer?.disconnect();
-    }, 40);
+    // Allow DOM to stabilize after Next.js page transition
+    const timer = setTimeout(setupObserver, 80);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      if (activeObserver) {
+        activeObserver.disconnect();
+      }
+    };
   }, [pathname]);
 
   return <>{children}</>;

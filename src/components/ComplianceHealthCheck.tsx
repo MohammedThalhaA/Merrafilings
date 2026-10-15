@@ -113,7 +113,7 @@ export default function ComplianceHealthCheck({ onBookAudit }: ComplianceHealthC
   const StatusIcon = status.icon;
 
   return (
-    <section className="py-10 md:py-14 bg-white border-b border-slate-200/80 font-sans relative overflow-hidden" id="diagnostic">
+    <section data-reveal className="py-10 md:py-14 bg-white border-b border-slate-200/80 font-sans relative overflow-hidden" id="diagnostic">
       {/* Background glow blooms */}
       <div className="absolute top-1/3 -left-20 w-[450px] h-[350px] bg-emerald-100/30 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 right-0 w-[400px] h-[300px] bg-teal-100/30 rounded-full blur-3xl pointer-events-none" />

@@ -139,7 +139,7 @@ export default function BusinessSolutionsGrid({ onSelectSolution }: BusinessSolu
     : solutions.filter((s) => s.category === activeFilter);
 
   return (
-    <section className="py-10 md:py-14 bg-white border-b border-slate-200/80 font-sans" id="solutions">
+    <section data-reveal className="py-10 md:py-14 bg-white border-b border-slate-200/80 font-sans" id="solutions">
       <div className="w-full max-w-[1400px] 2xl:max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

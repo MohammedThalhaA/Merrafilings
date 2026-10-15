@@ -79,7 +79,7 @@ export default function RegulatoryGazetteRadar({ onConsultUpdate }: RegulatoryGa
     : circulars.filter((c) => c.category === activeFilter);
 
   return (
-    <section className="py-10 md:py-14 bg-white border-b border-slate-200/80 font-sans relative overflow-hidden" id="gazette">
+    <section data-reveal className="py-10 md:py-14 bg-white border-b border-slate-200/80 font-sans relative overflow-hidden" id="gazette">
       {/* Background glow blooms */}
       <div className="absolute top-1/2 right-1/4 w-[500px] h-[350px] bg-emerald-100/20 rounded-full blur-3xl pointer-events-none" />
 

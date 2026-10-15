@@ -110,7 +110,7 @@ export default function CustomerStories() {
     : stories.filter((s) => s.category === activeIndustry);
 
   return (
-    <section className="py-10 md:py-14 bg-[#FBFBFA] border-b border-slate-200/80">
+    <section data-reveal className="py-10 md:py-14 bg-[#FBFBFA] border-b border-slate-200/80">
       <div className="w-full max-w-[1400px] 2xl:max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Editorial Section Header */}

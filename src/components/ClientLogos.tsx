@@ -21,7 +21,7 @@ export default function ClientLogos() {
   ];
 
   return (
-    <section className="py-8 sm:py-10 bg-[#FBFBFA] border-y border-slate-200/70 font-sans">
+    <section data-reveal className="py-8 sm:py-10 bg-[#FBFBFA] border-y border-slate-200/70 font-sans">
       <div className="w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10">
         
         {/* Section Header */}
