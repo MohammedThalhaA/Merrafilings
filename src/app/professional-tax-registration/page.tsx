@@ -297,10 +297,10 @@ function PTGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           1. What is Professional Tax Registration in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           <strong className="text-slate-800 font-medium">Professional Tax (PT)</strong> is a state-level direct tax levied on individuals earning income through any profession, trade, calling, or employment in India. Empowered under <strong className="text-slate-800 font-medium">Article 276 of the Constitution of India</strong>, state governments and municipal corporations are constitutionally authorized to levy and collect this tax, subject to a strict statutory ceiling of <strong className="text-slate-800 font-medium">₹2,500 per person per financial year</strong>.
         </p>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Unlike Central Income Tax, Professional Tax is governed by respective state enactments (such as the Maharashtra State Tax on Professions, Trades, Callings and Employments Act, 1975, or the Karnataka Tax on Professions Act, 1976). Revenue collected through professional tax is utilized by state governments to fund civic municipal infrastructure, public health, and urban amenities.
         </p>
 
@@ -309,7 +309,7 @@ function PTGuideContent() {
             <Receipt className="w-5 h-5 text-emerald-600" />
             <span>100% Tax Deductibility Under Section 16(iii) of the Income Tax Act</span>
           </div>
-          <p className="text-xs text-slate-600 leading-relaxed font-light">
+          <p className="text-xs text-slate-600 leading-relaxed font-normal">
             An essential financial advantage of paying Professional Tax is that the entire amount paid is <strong>fully deductible from gross taxable salary</strong> under Section 16(iii) of the Income Tax Act, 1961. This deduction lowers the employee&apos;s taxable salary baseline before computing their final Central Income Tax liability.
           </p>
         </div>
@@ -320,7 +320,7 @@ function PTGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           2. Professional Tax vs. Income Tax: Key Differences
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Understanding the constitutional boundaries between State Professional Tax and Central Income Tax clarifies why both registrations are independently mandatory:
         </p>
 
@@ -334,7 +334,7 @@ function PTGuideContent() {
                 <th className="py-3 px-4 text-[#155EEF]">Central Income Tax</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 font-light text-slate-600">
+            <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
               {TABLE_1_PT_VS_IT.map((row, idx) => (
                 <tr key={idx} className="transition-colors">
                   <td className="py-3 px-4 font-medium text-slate-800">{row.parameter}</td>
@@ -352,7 +352,7 @@ function PTGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           3. What Are the Two Types of Professional Tax Certificates? (PTRC vs. PTEC)
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           State commercial tax departments issue two distinct types of certificates based on whether you are paying tax on your own earnings or collecting it from your employees:
         </p>
 
@@ -365,10 +365,10 @@ function PTGuideContent() {
             <h3 className="text-base font-medium text-slate-900 mb-1.5 group-hover:text-blue-700 transition-colors">
               PTRC – Professional Tax Registration Certificate
             </h3>
-            <p className="text-xs text-slate-600 font-light leading-relaxed mb-3">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed mb-3">
               Mandatory for any employer (company, partnership, LLP, factory, or shop) that employs staff earning above the state threshold. Authorizes the employer to deduct PT from wages and remit it to the state.
             </p>
-            <ul className="text-xs text-slate-600 space-y-1.5 font-light">
+            <ul className="text-xs text-slate-600 space-y-1.5 font-normal">
               <li>• Applied by: The Employer Entity</li>
               <li>• Obligation: Deduct monthly &amp; file periodic returns</li>
               <li>• Timeline: Within 30 days of hiring first eligible employee</li>
@@ -383,10 +383,10 @@ function PTGuideContent() {
             <h3 className="text-base font-medium text-slate-900 mb-1.5 group-hover:text-emerald-700 transition-colors">
               PTEC – Professional Tax Enrolment Certificate
             </h3>
-            <p className="text-xs text-slate-600 font-light leading-relaxed mb-3">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed mb-3">
               Required for self-employed professionals (doctors, lawyers, CAs, architects, consultants), sole proprietors, partners, and company directors paying personal professional tax directly to the government.
             </p>
-            <ul className="text-xs text-slate-600 space-y-1.5 font-light">
+            <ul className="text-xs text-slate-600 space-y-1.5 font-normal">
               <li>• Applied by: Individual Professional / Entity</li>
               <li>• Obligation: Annual direct tax payment (due by 30th June)</li>
               <li>• Timeline: Within 30 days of commencing practice / trade</li>
@@ -408,7 +408,7 @@ function PTGuideContent() {
                   <th className="py-3 px-4 text-emerald-700">PTEC (Enrolment Certificate)</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100 font-light text-slate-600">
+              <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
                 {TABLE_3_PTRC_VS_PTEC.map((row, idx) => (
                   <tr key={idx} className="transition-colors">
                     <td className="py-3 px-4 font-medium text-slate-800">{row.parameter}</td>
@@ -427,7 +427,7 @@ function PTGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           4. Who Needs to Register for Professional Tax in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Professional Tax applies across a diverse spectrum of corporate entities and independent professionals:
         </p>
 
@@ -435,7 +435,7 @@ function PTGuideContent() {
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-blue-500 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <Building className="w-5 h-5 text-blue-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-medium text-slate-900 mb-1">Corporate Employers &amp; Startups</h4>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Private Limited companies, public companies, LLPs, and partnership firms employing staff on payroll.
             </p>
           </div>
@@ -443,7 +443,7 @@ function PTGuideContent() {
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-rose-500 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <HeartPulse className="w-5 h-5 text-rose-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-medium text-slate-900 mb-1">Doctors &amp; Medical Practitioners</h4>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Independent medical consultants, surgeons, dentists, nursing home owners, and diagnostic lab directors.
             </p>
           </div>
@@ -451,7 +451,7 @@ function PTGuideContent() {
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-indigo-500 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <Scale className="w-5 h-5 text-indigo-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-medium text-slate-900 mb-1">CAs, CSs, ICWAs &amp; Advocates</h4>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Practicing Chartered Accountants, Company Secretaries, legal advocates, and corporate legal advisors.
             </p>
           </div>
@@ -459,7 +459,7 @@ function PTGuideContent() {
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-amber-500 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <Cpu className="w-5 h-5 text-amber-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-medium text-slate-900 mb-1">Engineers, Architects &amp; Surveyors</h4>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Consulting civil/mechanical engineers, licensed structural architects, interior designers, and urban planners.
             </p>
           </div>
@@ -467,7 +467,7 @@ function PTGuideContent() {
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-purple-500 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <Briefcase className="w-5 h-5 text-purple-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-medium text-slate-900 mb-1">Freelancers &amp; IT Contractors</h4>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Independent software developers, digital marketing consultants, business coaches, and media professionals.
             </p>
           </div>
@@ -475,7 +475,7 @@ function PTGuideContent() {
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <Store className="w-5 h-5 text-emerald-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-medium text-slate-900 mb-1">Sole Proprietors &amp; Traders</h4>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Retail merchants, wholesalers, contractors, commission agents, and commercial establishment operators.
             </p>
           </div>
@@ -487,7 +487,7 @@ function PTGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           5. State-Wise Professional Tax Slabs &amp; Rates in India
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Because Professional Tax is a state-subject levy, every state legislature drafts its own wage thresholds and slab structures (never exceeding ₹2,500/year):
         </p>
 
@@ -501,7 +501,7 @@ function PTGuideContent() {
                 <th className="py-3 px-4 text-emerald-700">Max Annual Tax</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 font-light text-slate-600">
+            <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
               {TABLE_4_STATE_SLABS.map((row, idx) => (
                 <tr key={idx} className="transition-colors">
                   <td className="py-3 px-4 font-medium text-slate-800 whitespace-nowrap">{row.state}</td>
@@ -519,10 +519,10 @@ function PTGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           6. Who is Exempted from Professional Tax in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Specific categories of citizens and workers are granted complete statutory exemption under state Professional Tax acts:
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-slate-700 font-light">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-slate-700 font-normal">
           <div className="flex items-center gap-2 p-3 rounded-xl bg-slate-50 border border-slate-200/80">
             <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0" />
             <span>Senior citizens aged 65 years and above (varies by state)</span>
@@ -555,7 +555,7 @@ function PTGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           7. What Documents Are Required for Professional Tax Registration?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           The documentation requirements depend on the applicant&apos;s corporate entity classification:
         </p>
 
@@ -568,7 +568,7 @@ function PTGuideContent() {
                 <th className="py-3 px-4">Statutory &amp; Identity Documents Required</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 font-light text-slate-600">
+            <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
               {TABLE_5_DOCUMENTS.map((row, idx) => (
                 <tr key={idx} className="transition-colors">
                   <td className="py-3 px-4 font-medium text-slate-800 whitespace-nowrap">{row.entity}</td>
@@ -585,7 +585,7 @@ function PTGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           8. Step-by-Step Professional Tax Registration Process Online
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Merrafilings manages the entire filing across state commercial tax portals (e.g., Mahagst, Commercial Taxes Karnataka, CTD Telangana):
         </p>
 
@@ -594,7 +594,7 @@ function PTGuideContent() {
             <span className="w-7 h-7 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">1</span>
             <div>
               <h3 className="text-sm font-medium text-slate-900">Jurisdiction &amp; Certificate Classification Audit</h3>
-              <p className="text-xs text-slate-600 mt-1 font-light leading-relaxed">
+              <p className="text-xs text-slate-600 mt-1 font-normal leading-relaxed">
                 We review your business operations to determine whether you require PTRC (employer deduction), PTEC (director/proprietor enrolment), or both.
               </p>
             </div>
@@ -604,7 +604,7 @@ function PTGuideContent() {
             <span className="w-7 h-7 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">2</span>
             <div>
               <h3 className="text-sm font-medium text-slate-900">State Commercial Tax Portal User Profile Creation</h3>
-              <p className="text-xs text-slate-600 mt-1 font-light leading-relaxed">
+              <p className="text-xs text-slate-600 mt-1 font-normal leading-relaxed">
                 We set up your verified account on the state commercial tax department portal, linking your PAN, GSTIN, and business address credentials.
               </p>
             </div>
@@ -614,7 +614,7 @@ function PTGuideContent() {
             <span className="w-7 h-7 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">3</span>
             <div>
               <h3 className="text-sm font-medium text-slate-900">Application Lodgement &amp; Supporting Document Upload</h3>
-              <p className="text-xs text-slate-600 mt-1 font-light leading-relaxed">
+              <p className="text-xs text-slate-600 mt-1 font-normal leading-relaxed">
                 Our specialists draft the statutory registration petition, attach entity KYC, property lease proofs, director lists, and submit online.
               </p>
             </div>
@@ -624,7 +624,7 @@ function PTGuideContent() {
             <span className="w-7 h-7 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">4</span>
             <div>
               <h3 className="text-sm font-medium text-slate-900">Scrutiny &amp; Verification by Commercial Tax Officer (CTO)</h3>
-              <p className="text-xs text-slate-600 mt-1 font-light leading-relaxed">
+              <p className="text-xs text-slate-600 mt-1 font-normal leading-relaxed">
                 The jurisdictional tax officer evaluates your application. We coordinate any clarification notices to ensure rapid sign-off.
               </p>
             </div>
@@ -634,7 +634,7 @@ function PTGuideContent() {
             <span className="w-7 h-7 rounded-full bg-[#00B074] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">5</span>
             <div>
               <h3 className="text-sm font-medium text-slate-900">Certificate Issuance &amp; E-Challan Setup</h3>
-              <p className="text-xs text-slate-600 mt-1 font-light leading-relaxed">
+              <p className="text-xs text-slate-600 mt-1 font-normal leading-relaxed">
                 Upon approval, your official PTRC / PTEC registration certificate is issued, and we configure your monthly/annual payment challan system.
               </p>
             </div>
@@ -647,7 +647,7 @@ function PTGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           9. What is the Professional Tax Registration Fee &amp; Timeline?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           State commercial tax registration fees and timelines vary by jurisdiction:
         </p>
 
@@ -662,7 +662,7 @@ function PTGuideContent() {
                 <th className="py-3 px-4 text-blue-700">Estimated Turnaround</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 font-light text-slate-600">
+            <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
               {TABLE_6_FEES_TIMELINE.map((row, idx) => (
                 <tr key={idx} className="transition-colors">
                   <td className="py-3 px-4 font-medium text-slate-800">{row.service}</td>
@@ -681,7 +681,7 @@ function PTGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           10. What Are the Penalties for Non-Compliance with Professional Tax?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Failing to enroll or delaying tax remittances triggers statutory penalties under state acts:
         </p>
 
@@ -694,7 +694,7 @@ function PTGuideContent() {
                 <th className="py-3 px-4 text-rose-700">Prescribed Legal Penalty &amp; Interest</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 font-light text-slate-600">
+            <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
               {TABLE_7_PENALTIES.map((row, idx) => (
                 <tr key={idx} className="transition-colors">
                   <td className="py-3 px-4 font-medium text-slate-800">{row.defaultType}</td>
@@ -711,7 +711,7 @@ function PTGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           11. Why Choose Merrafilings for Professional Tax Registration?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Merrafilings is India&apos;s leading corporate taxation platform. We eliminate municipal bureaucracy:
         </p>
 

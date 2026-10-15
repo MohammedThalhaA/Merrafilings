@@ -303,10 +303,10 @@ function ESIGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           1. What is ESI Registration Online in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           <strong className="text-slate-800 font-medium">ESI Registration</strong> (Employees&apos; State Insurance Registration) is a mandatory statutory social security scheme governed by the <strong className="text-slate-800 font-medium">Employees&apos; State Insurance Act, 1948</strong>. Administered by the Employees&apos; State Insurance Corporation (ESIC), an autonomous statutory body under the Ministry of Labour and Employment, the scheme provides holistic healthcare and financial protection to Indian workers against health hazards, temporary or permanent disablement, occupational disease, maternity, and employment injury.
         </p>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Upon successful online registration, the employer is allotted an official <strong className="text-slate-800 font-medium">17-digit unique Employer Identification Code</strong>. Every enrolled employee is provided an individual Insurance Number and an <strong className="text-slate-800 font-medium">ESIC Pehchan Card</strong>, granting cash-less medical treatment across more than 150+ ESIC Model Hospitals, 1,400+ dispensaries, and thousands of empaneled private multi-specialty hospitals across India.
         </p>
 
@@ -315,7 +315,7 @@ function ESIGuideContent() {
             <ShieldCheck className="w-5 h-5 text-emerald-600" />
             <span>The Statutory Mandate: Who Must Register Under the ESI Act?</span>
           </div>
-          <p className="text-xs text-slate-600 leading-relaxed font-light">
+          <p className="text-xs text-slate-600 leading-relaxed font-normal">
             Under the ESI Act, registration is legally compulsory for any factory or commercial establishment employing <strong>10 or more workers</strong> where employees earn a monthly gross wage of up to <strong>₹21,000 per month</strong> (or ₹25,000 per month for employees with certified disabilities). Failing to register within 15 days of becoming eligible triggers steep financial damages, attachment of bank accounts, and criminal prosecution under Section 85 of the Act.
           </p>
         </div>
@@ -326,7 +326,7 @@ function ESIGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           2. Who is Covered Under the ESI Scheme in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           The ESI Scheme extends to various categories of establishments across all Indian states and Union Territories. Both power-operated factories and non-power commercial business units fall within its statutory ambit:
         </p>
 
@@ -340,7 +340,7 @@ function ESIGuideContent() {
                 <th className="py-3 px-4">Wage Ceiling for Coverage</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 font-light text-slate-600">
+            <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
               {TABLE_1_COVERAGE.map((row, idx) => (
                 <tr key={idx} className="transition-colors">
                   <td className="py-3 px-4 font-medium text-slate-800">{row.establishment}</td>
@@ -358,7 +358,7 @@ function ESIGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           3. How Are ESI Contribution Rates Calculated?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           The ESI contribution is a joint statutory contribution funded by both the employer and the eligible employee. The rates were reduced by the Government of India to promote formal employment and ease compliance burdens:
         </p>
 
@@ -372,7 +372,7 @@ function ESIGuideContent() {
                 <th className="py-3 px-4">Basis of Calculation</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 font-light text-slate-600">
+            <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
               {TABLE_2_RATES.map((row, idx) => (
                 <tr key={idx} className="transition-colors">
                   <td className="py-3 px-4 font-medium text-slate-800">{row.contributor}</td>
@@ -399,7 +399,7 @@ function ESIGuideContent() {
                   <th className="py-3 px-4 font-semibold text-slate-900">Total Monthly Contribution</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100 font-light text-slate-600">
+              <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
                 {TABLE_3_CALCULATION.map((row, idx) => (
                   <tr key={idx} className="transition-colors">
                     <td className="py-3 px-4 font-medium text-slate-800">{row.gross}</td>
@@ -419,7 +419,7 @@ function ESIGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           4. What Are the Benefits of ESI Registration?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           The ESI scheme provides comprehensive social security protection, shielding workers from medical crises while safeguarding employers from crippling workplace accident liabilities:
         </p>
 
@@ -430,7 +430,7 @@ function ESIGuideContent() {
               <span className="p-1.5 rounded-lg bg-rose-50 text-rose-600"><HeartPulse className="w-4 h-4" /></span>
               <h3 className="text-sm font-medium text-slate-900 group-hover:text-rose-600 transition-colors">Comprehensive Medical Care</h3>
             </div>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Full medical care from day one of insurable employment for the worker and family members with no expenditure ceiling in ESIC dispensaries and empaneled private hospitals.
             </p>
           </div>
@@ -441,7 +441,7 @@ function ESIGuideContent() {
               <span className="p-1.5 rounded-lg bg-amber-50 text-amber-600"><Calendar className="w-4 h-4" /></span>
               <h3 className="text-sm font-medium text-slate-900 group-hover:text-amber-600 transition-colors">Sickness &amp; Extended Cash Benefit</h3>
             </div>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Cash compensation at 70% of average daily wages for up to 91 days in any two consecutive benefit periods during certified sickness, extending to 80% for chronic illnesses.
             </p>
           </div>
@@ -452,7 +452,7 @@ function ESIGuideContent() {
               <span className="p-1.5 rounded-lg bg-purple-50 text-purple-600"><Award className="w-4 h-4" /></span>
               <h3 className="text-sm font-medium text-slate-900 group-hover:text-purple-600 transition-colors">Maternity Benefit (26 Weeks)</h3>
             </div>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               100% of average daily wages paid for 26 weeks (extendable by 1 month on medical advice) for confinement, miscarriage, or sickness arising out of pregnancy.
             </p>
           </div>
@@ -463,7 +463,7 @@ function ESIGuideContent() {
               <span className="p-1.5 rounded-lg bg-blue-50 text-blue-600"><ShieldCheck className="w-4 h-4" /></span>
               <h3 className="text-sm font-medium text-slate-900 group-hover:text-blue-600 transition-colors">Disablement &amp; Injury Pension</h3>
             </div>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Temporary disablement benefit at 90% of wages until recovery; permanent disablement is paid as a monthly pension for life based on loss of earning capacity.
             </p>
           </div>
@@ -474,7 +474,7 @@ function ESIGuideContent() {
               <span className="p-1.5 rounded-lg bg-indigo-50 text-indigo-600"><Users className="w-4 h-4" /></span>
               <h3 className="text-sm font-medium text-slate-900 group-hover:text-indigo-600 transition-colors">Dependants Benefit &amp; Funeral Expenses</h3>
             </div>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Monthly pension distributed to surviving widow and children in case of death due to employment injury; funeral expenses of ₹15,000 paid to the eldest surviving member.
             </p>
           </div>
@@ -485,7 +485,7 @@ function ESIGuideContent() {
               <span className="p-1.5 rounded-lg bg-emerald-50 text-emerald-600"><Scale className="w-4 h-4" /></span>
               <h3 className="text-sm font-medium text-slate-900 group-hover:text-emerald-600 transition-colors">Employer Legal Immunity</h3>
             </div>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Under Section 53 of the ESI Act, registered employers are completely insulated from tort damages, Employee Compensation Act lawsuits, and civil damage claims.
             </p>
           </div>
@@ -497,7 +497,7 @@ function ESIGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           5. What Documents Are Required for ESI Registration in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           The documentation is divided into establishment documents and employee master records:
         </p>
 
@@ -506,7 +506,7 @@ function ESIGuideContent() {
             <h3 className="text-sm font-medium text-slate-900 flex items-center gap-2">
               <Building className="w-4 h-4 text-[#155EEF]" /> Establishment &amp; Business Documents
             </h3>
-            <ul className="text-xs text-slate-600 space-y-1.5 font-light">
+            <ul className="text-xs text-slate-600 space-y-1.5 font-normal">
               <li>• Certificate of Incorporation / Partnership Deed / Trust Registration</li>
               <li>• PAN Card of the Business Entity &amp; GST Registration Certificate</li>
               <li>• Memorandum of Association (MOA) &amp; Articles of Association (AOA)</li>
@@ -521,7 +521,7 @@ function ESIGuideContent() {
             <h3 className="text-sm font-medium text-slate-900 flex items-center gap-2">
               <UserCheck className="w-4 h-4 text-emerald-600" /> Employee Master Roster Records
             </h3>
-            <ul className="text-xs text-slate-600 space-y-1.5 font-light">
+            <ul className="text-xs text-slate-600 space-y-1.5 font-normal">
               <li>• Complete list of all employees with designation and date of joining</li>
               <li>• Monthly gross wage / salary breakdown for each employee</li>
               <li>• Aadhaar Card &amp; PAN Card copies of eligible employees</li>
@@ -538,7 +538,7 @@ function ESIGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           6. Step-by-Step ESI Registration Procedure Online
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Merrafilings manages the complete registration lifecycle on the unified Shram Suvidha and ESIC portals:
         </p>
 
@@ -547,7 +547,7 @@ function ESIGuideContent() {
             <span className="w-7 h-7 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">1</span>
             <div>
               <h3 className="text-sm font-medium text-slate-900">Establishment Profile &amp; Shram Suvidha Account Creation</h3>
-              <p className="text-xs text-slate-600 mt-1 font-light leading-relaxed">
+              <p className="text-xs text-slate-600 mt-1 font-normal leading-relaxed">
                 We register your commercial entity on the Ministry of Labour&apos;s Shram Suvidha portal, linking your PAN, GST, and business coordinates.
               </p>
             </div>
@@ -557,7 +557,7 @@ function ESIGuideContent() {
             <span className="w-7 h-7 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">2</span>
             <div>
               <h3 className="text-sm font-medium text-slate-900">Statutory Form 1 Drafting &amp; Document Upload</h3>
-              <p className="text-xs text-slate-600 mt-1 font-light leading-relaxed">
+              <p className="text-xs text-slate-600 mt-1 font-normal leading-relaxed">
                 Our labor compliance experts draft Form 1 (Employer Registration Form), attaching your property lease, incorporation charter, partner/director KYC, and bank verification.
               </p>
             </div>
@@ -567,7 +567,7 @@ function ESIGuideContent() {
             <span className="w-7 h-7 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">3</span>
             <div>
               <h3 className="text-sm font-medium text-slate-900">Digital Signature Authentication &amp; Final Lodgement</h3>
-              <p className="text-xs text-slate-600 mt-1 font-light leading-relaxed">
+              <p className="text-xs text-slate-600 mt-1 font-normal leading-relaxed">
                 The application is authenticated via the authorized signatory&apos;s Class-3 Digital Signature Certificate (DSC) and submitted directly to the ESIC central server.
               </p>
             </div>
@@ -577,7 +577,7 @@ function ESIGuideContent() {
             <span className="w-7 h-7 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">4</span>
             <div>
               <h3 className="text-sm font-medium text-slate-900">Allotment of 17-Digit Employer Code</h3>
-              <p className="text-xs text-slate-600 mt-1 font-light leading-relaxed">
+              <p className="text-xs text-slate-600 mt-1 font-normal leading-relaxed">
                 Upon automated scrutiny, ESIC issues the official 17-digit Employer Code Certificate along with login credentials to the ESIC Employer Portal.
               </p>
             </div>
@@ -587,7 +587,7 @@ function ESIGuideContent() {
             <span className="w-7 h-7 rounded-full bg-[#00B074] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">5</span>
             <div>
               <h3 className="text-sm font-medium text-slate-900">Employee Master Enrollment &amp; Pehchan Card Delivery</h3>
-              <p className="text-xs text-slate-600 mt-1 font-light leading-relaxed">
+              <p className="text-xs text-slate-600 mt-1 font-normal leading-relaxed">
                 We upload your employee roster, generate individual Insurance Numbers, and download downloadable Pehchan smart identity cards for your workforce.
               </p>
             </div>
@@ -600,7 +600,7 @@ function ESIGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           7. What Are the Due Dates for ESI Payment and Return Filing?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Maintaining post-registration compliance is critical to avoid punitive interest and inspection audits:
         </p>
 
@@ -615,7 +615,7 @@ function ESIGuideContent() {
                 <th className="py-3 px-4 text-rose-700">Non-Compliance Penalty</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 font-light text-slate-600">
+            <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
               {TABLE_4_CALENDAR.map((row, idx) => (
                 <tr key={idx} className="transition-colors">
                   <td className="py-3 px-4 font-medium text-slate-800">{row.activity}</td>
@@ -634,7 +634,7 @@ function ESIGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           8. Penalties for Non-Payment or Late Payment of ESI Contributions
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           The ESI Act treats non-payment of employee deductions as criminal breach of trust. Penalties escalate rapidly:
         </p>
 
@@ -647,7 +647,7 @@ function ESIGuideContent() {
                 <th className="py-3 px-4 text-rose-700">Prescribed Penalty &amp; Damages</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 font-light text-slate-600">
+            <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
               {TABLE_5_PENALTIES.map((row, idx) => (
                 <tr key={idx} className="transition-colors">
                   <td className="py-3 px-4 font-medium text-slate-800">{row.defaultNature}</td>
@@ -664,7 +664,7 @@ function ESIGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           9. How Does ESI Registration Differ from EPF Registration?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           While both schemes operate under the Ministry of Labour, their core functions, contribution bases, and coverage ceilings differ markedly:
         </p>
 
@@ -678,7 +678,7 @@ function ESIGuideContent() {
                 <th className="py-3 px-4 text-[#155EEF]">EPF Registration (Retirement)</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 font-light text-slate-600">
+            <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
               {TABLE_7_ESI_VS_EPF.map((row, idx) => (
                 <tr key={idx} className="transition-colors">
                   <td className="py-3 px-4 font-medium text-slate-800">{row.parameter}</td>
@@ -696,7 +696,7 @@ function ESIGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           10. Cost of ESI Registration Online in India
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           The Government of India levies zero portal registration fees for issuing the 17-digit code. Professional charges cover end-to-end documentation, portal filing, and worker onboarding:
         </p>
 
@@ -710,7 +710,7 @@ function ESIGuideContent() {
                 <th className="py-3 px-4">Professional Charges</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 font-light text-slate-600">
+            <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
               {TABLE_8_FEES.map((row, idx) => (
                 <tr key={idx} className="transition-colors">
                   <td className="py-3 px-4 font-medium text-slate-800">{row.component}</td>
@@ -728,7 +728,7 @@ function ESIGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           11. Why Choose Merrafilings for ESI Registration Services?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Merrafilings is India&apos;s leading regulatory and labor compliance platform. We ensure fast, penalty-free employer onboarding:
         </p>
 

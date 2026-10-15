@@ -413,7 +413,7 @@ function OpcGuideContent() {
                 <h2 className="text-[22px] sm:text-[24px] font-normal text-[#1F1646] mb-3">
                   One Person Company Registration Online in India
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed">
                   One Person Company (OPC) registration in India allows a solo entrepreneur to establish a corporate business entity with full limited liability protection and an independent corporate personality. Governed by the Ministry of Corporate Affairs (MCA) under the Companies Act, 2013, an OPC eliminates the need for finding a co-founder while providing the credibility, corporate banking access, and succession advantages previously reserved solely for multi-shareholder companies.
                 </p>
               </div>
@@ -423,10 +423,10 @@ function OpcGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   What is a One Person Company?
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-3">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-3">
                   Under Section 2(62) of the Companies Act, 2013, a One Person Company is defined as a company which has only one person as a member. The corporate structure features:
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[13px] font-light text-slate-700">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[13px] font-normal text-slate-900">
                   <div className="p-3.5 rounded-xl border border-slate-200/80 bg-[#FAF9F7]/60">
                     <strong className="font-normal text-slate-900 block mb-1">
                       Single Shareholder
@@ -459,10 +459,10 @@ function OpcGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Who Can Start an OPC in India?
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   The Companies Act sets straightforward eligibility criteria for entrepreneurs planning to incorporate an OPC:
                 </p>
-                <div className="space-y-3 text-[13px] font-light text-slate-600">
+                <div className="space-y-3 text-[13px] font-normal text-slate-900">
                   <div className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full bg-emerald-100 text-[#00A86B] flex items-center justify-center shrink-0 mt-0.5 text-xs font-semibold">
                       ✓
@@ -503,12 +503,12 @@ function OpcGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Documents Required for OPC Registration
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   All documents must be self-attested by the proposed director and nominee prior to electronic filing on the MCA V3 portal:
                 </p>
 
                 <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-4">
-                  <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                  <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                     <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                       <tr>
                         <th className="py-3 px-4 font-normal">Document Required</th>
@@ -540,7 +540,7 @@ function OpcGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Step-by-Step OPC Registration Process via SPICe+
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   The Ministry of Corporate Affairs streamlined company incorporation through the integrated web-form SPICe+ (INC-32). Here are the 6 stages:
                 </p>
 
@@ -553,7 +553,7 @@ function OpcGuideContent() {
                       <h4 className="text-[14px] font-normal text-slate-800">
                         Check Name Availability &amp; File SPICe+ Part A
                       </h4>
-                      <p className="text-[12.5px] font-light text-slate-600 mt-0.5 leading-relaxed">
+                      <p className="text-[12.5px] font-normal text-slate-900 mt-0.5 leading-relaxed">
                         Submit 2 proposed names on the MCA portal complying with naming guidelines. The approved name will end with the statutory suffix "(OPC) Private Limited".
                       </p>
                     </div>
@@ -567,7 +567,7 @@ function OpcGuideContent() {
                       <h4 className="text-[14px] font-normal text-slate-800">
                         Obtain Class-3 Digital Signature Certificate (DSC)
                       </h4>
-                      <p className="text-[12.5px] font-light text-slate-600 mt-0.5 leading-relaxed">
+                      <p className="text-[12.5px] font-normal text-slate-900 mt-0.5 leading-relaxed">
                         Procure Class-3 DSC with e-Token for the proposed director. All electronic forms on the MCA V3 portal must be digitally signed.
                       </p>
                     </div>
@@ -581,7 +581,7 @@ function OpcGuideContent() {
                       <h4 className="text-[14px] font-normal text-slate-800">
                         Draft e-MOA (INC-33), e-AOA (INC-34) &amp; Form INC-3
                       </h4>
-                      <p className="text-[12.5px] font-light text-slate-600 mt-0.5 leading-relaxed">
+                      <p className="text-[12.5px] font-normal text-slate-900 mt-0.5 leading-relaxed">
                         Draft electronic Memorandum and Articles of Association specifying the business objects. Secure the nominee's formal consent in Form INC-3.
                       </p>
                     </div>
@@ -595,7 +595,7 @@ function OpcGuideContent() {
                       <h4 className="text-[14px] font-normal text-slate-800">
                         File SPICe+ Part B &amp; AGILE-PRO-S Integrated Form
                       </h4>
-                      <p className="text-[12.5px] font-light text-slate-600 mt-0.5 leading-relaxed">
+                      <p className="text-[12.5px] font-normal text-slate-900 mt-0.5 leading-relaxed">
                         Submit director details, registered office proof, DIN application, PAN, TAN, EPFO, ESIC, Profession Tax, and bank opening preference in one single filing.
                       </p>
                     </div>
@@ -609,7 +609,7 @@ function OpcGuideContent() {
                       <h4 className="text-[14px] font-normal text-slate-800">
                         Central Registration Centre (CRC) Verification
                       </h4>
-                      <p className="text-[12.5px] font-light text-slate-600 mt-0.5 leading-relaxed">
+                      <p className="text-[12.5px] font-normal text-slate-900 mt-0.5 leading-relaxed">
                         The Registrar of Companies (CRC Manesar) examines the submitted application and declarations. Queries or re-submissions (if any) are handled within 24 hours.
                       </p>
                     </div>
@@ -623,7 +623,7 @@ function OpcGuideContent() {
                       <h4 className="text-[14px] font-normal text-slate-800">
                         Certificate of Incorporation (COI) &amp; CIN Issuance
                       </h4>
-                      <p className="text-[12.5px] font-light text-slate-600 mt-0.5 leading-relaxed">
+                      <p className="text-[12.5px] font-normal text-slate-900 mt-0.5 leading-relaxed">
                         Upon approval, the ROC issues the Certificate of Incorporation containing the unique 21-digit Corporate Identification Number (CIN), permanent PAN, and TAN.
                       </p>
                     </div>
@@ -636,12 +636,12 @@ function OpcGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   How Much Does OPC Registration Cost in India?
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   Here is the transparent cost structure including MCA government charges, state stamp duty, and professional service fees:
                 </p>
 
                 <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-4">
-                  <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                  <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                     <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                       <tr>
                         <th className="py-3 px-4 font-normal">Service Component</th>
@@ -673,12 +673,12 @@ function OpcGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   How Long Does OPC Registration Take?
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   Detailed timeline breakdown across each procedural stage of incorporation:
                 </p>
 
                 <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-4">
-                  <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                  <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                     <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                       <tr>
                         <th className="py-3 px-4 font-normal">Registration Stage</th>
@@ -710,12 +710,12 @@ function OpcGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Mandatory Annual Compliances for OPC
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   To keep the corporate status active and prevent statutory ROC penalties or DIN deactivations, every OPC must fulfill the following annual filings:
                 </p>
 
                 <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-4">
-                  <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                  <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                     <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                       <tr>
                         <th className="py-3 px-4 font-normal">Compliance Type</th>
@@ -747,12 +747,12 @@ function OpcGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   OPC vs Private Limited Company vs LLP Comparison
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   Evaluating different business structures before incorporation ensures you select the model that best matches your investment, liability, and scaling goals:
                 </p>
 
                 <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs">
-                  <table className="w-full text-left text-[12px] font-light text-slate-700">
+                  <table className="w-full text-left text-[12px] font-normal text-slate-900">
                     <thead className="bg-[#FAF9F7] text-slate-800 font-normal border-b border-slate-200">
                       <tr>
                         <th className="py-2.5 px-3 font-normal">Feature</th>
@@ -793,7 +793,7 @@ function OpcGuideContent() {
                     <h4 className="text-[14px] font-medium text-slate-900 mb-1">
                       Dedicated CA &amp; CS Oversight
                     </h4>
-                    <p className="text-[12.5px] font-light text-slate-600 leading-relaxed">
+                    <p className="text-[12.5px] font-normal text-slate-900 leading-relaxed">
                       Every application is thoroughly drafted and verified by senior corporate compliance professionals, guaranteeing zero rejections.
                     </p>
                   </div>
@@ -801,7 +801,7 @@ function OpcGuideContent() {
                     <h4 className="text-[14px] font-medium text-slate-900 mb-1">
                       100% Online &amp; Paperless
                     </h4>
-                    <p className="text-[12.5px] font-light text-slate-600 leading-relaxed">
+                    <p className="text-[12.5px] font-normal text-slate-900 leading-relaxed">
                       Submit your documents securely from home. We handle digital signature procurement, MCA filings, and courier documents directly.
                     </p>
                   </div>
@@ -809,7 +809,7 @@ function OpcGuideContent() {
                     <h4 className="text-[14px] font-medium text-slate-900 mb-1">
                       Zero Hidden Fees Guarantee
                     </h4>
-                    <p className="text-[12.5px] font-light text-slate-600 leading-relaxed">
+                    <p className="text-[12.5px] font-normal text-slate-900 leading-relaxed">
                       Transparent quotation with exact breakdowns of MCA fees, stamp duty, and legal fees. No surprise charges mid-process.
                     </p>
                   </div>
@@ -817,7 +817,7 @@ function OpcGuideContent() {
                     <h4 className="text-[14px] font-medium text-slate-900 mb-1">
                       Post-Incorporation Compliance
                     </h4>
-                    <p className="text-[12.5px] font-light text-slate-600 leading-relaxed">
+                    <p className="text-[12.5px] font-normal text-slate-900 leading-relaxed">
                       From GST registration to annual ROC filing and accounting support, we stay with your business for the long haul.
                     </p>
                   </div>

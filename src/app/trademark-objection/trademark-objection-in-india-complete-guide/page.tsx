@@ -32,7 +32,7 @@ export default function TrademarkObjectionInIndiaCompleteGuidePage() {
         <p className="text-[15px] leading-relaxed text-slate-700">
           The procedural handling of a <strong className="font-semibold text-slate-900">Trademark Objection in India</strong> operates under the regulatory supervision of the Controller General of Patents, Designs and Trade Marks (CGPDTM), Ministry of Commerce and Industry. With 5 regional Trade Marks Registries located in Mumbai, Delhi, Kolkata, Chennai, and Ahmedabad, applications are subjected to uniform scrutiny under the Trade Marks Act, 1999 and the Trade Marks Rules, 2017.
         </p>
-        <p className="text-[14.5px] leading-relaxed text-slate-600 font-light">
+        <p className="text-[14.5px] leading-relaxed text-slate-600 font-normal">
           When an Examination Report is issued, resolving the objection is purely a matter of legal advocacy and factual presentation. This complete guide provides legal practitioners and business owners with the authoritative framework needed to draft winning replies, cite binding judicial precedents, and navigate Show Cause Hearings successfully.
         </p>
       </div>
@@ -42,11 +42,11 @@ export default function TrademarkObjectionInIndiaCompleteGuidePage() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           Trademark Registry Jurisdictions in India
         </h2>
-        <p className="text-sm text-slate-600 font-light">
+        <p className="text-sm text-slate-600 font-normal">
           Objections are administered by the territorial Registry corresponding to the principal place of business of the applicant:
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 pt-2 text-xs font-light text-slate-700">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 pt-2 text-xs font-normal text-slate-900">
           <div className="p-3.5 rounded-xl bg-white border border-slate-200/80 shadow-3xs space-y-1">
             <strong className="text-slate-900 font-medium block">Delhi TMR Branch</strong>
             <span className="text-slate-500">Delhi, Haryana, Punjab, Himachal Pradesh, J&amp;K, Ladakh, Chandigarh, UP, Uttarakhand.</span>
@@ -79,12 +79,12 @@ export default function TrademarkObjectionInIndiaCompleteGuidePage() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           Legal Drafting Blueprint for Trademark Objection Reply
         </h2>
-        <p className="text-sm text-slate-600 font-light">
+        <p className="text-sm text-slate-600 font-normal">
           An objection reply must adhere strictly to established legal conventions to withstand Examiner scrutiny:
         </p>
 
         <div className="overflow-x-auto rounded-2xl border border-slate-200/80 shadow-xs">
-          <table className="w-full text-left border-collapse text-xs sm:text-sm font-light">
+          <table className="w-full text-left border-collapse text-xs sm:text-sm font-normal">
             <thead>
               <tr className="bg-slate-50/80 border-b border-slate-200/80 text-slate-800 font-medium">
                 <th className="p-3.5 sm:p-4">Drafting Section</th>
@@ -129,11 +129,11 @@ export default function TrademarkObjectionInIndiaCompleteGuidePage() {
           Navigating the Trademark Show-Cause Hearing in India
         </h2>
         <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs space-y-3">
-          <p className="text-xs sm:text-sm text-slate-600 font-light leading-relaxed">
+          <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed">
             If the written response does not resolve the Examiner&apos;s doubts entirely, the application is marked <strong className="font-semibold text-slate-900">&quot;Ready for Show Cause Hearing&quot;</strong>. Under the modernized digital hearing system, hearings are conducted via video conferencing before an Assistant Registrar or Hearing Officer:
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-xs text-slate-600 font-light">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-xs text-slate-600 font-normal">
             <div className="p-3 rounded-xl bg-slate-50 border border-slate-100">
               <strong className="text-slate-900 block font-medium mb-1">Digital Hearing Notice (Rule 33)</strong>
               <span>Hearing notice issued online with link and scheduled time slot; typically provided 15 to 30 days in advance.</span>

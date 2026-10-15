@@ -284,7 +284,7 @@ export default function GstReturnGuideLayout({
                   <Calculator className="w-4 h-4 text-indigo-600" />
                   <span>GST Compliance Fast Checklist</span>
                 </div>
-                <p className="text-slate-600 leading-relaxed font-light text-[11.5px]">
+                <p className="text-slate-600 leading-relaxed font-normal text-[11.5px]">
                   Ensure 100% compliant filings without late fees:
                 </p>
                 <div className="space-y-1.5 text-slate-700 font-normal text-[11px]">

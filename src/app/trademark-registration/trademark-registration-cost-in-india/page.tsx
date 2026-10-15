@@ -41,7 +41,7 @@ export default function TrademarkRegistrationCostPage() {
             <Calculator className="w-4 h-4 text-blue-600" />
             <span>Essential Cost Takeaways</span>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 text-xs text-slate-700 font-light">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 text-xs text-slate-700 font-normal">
             <div className="p-3 bg-white rounded-xl border border-blue-50 shadow-3xs">
               <span className="text-slate-400 block text-[11px] mb-0.5">MSMEs / Startups Govt Fee</span>
               <strong className="text-emerald-600 text-sm font-semibold">₹4,500 / class</strong>
@@ -66,12 +66,12 @@ export default function TrademarkRegistrationCostPage() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           1. Statutory Government Trademark Filing Fees (Form TM-A)
         </h2>
-        <p className="text-sm text-slate-600 font-light">
+        <p className="text-sm text-slate-600 font-normal">
           Government fees are codified under the First Schedule of the Trade Marks Rules, 2017. Filing electronically saves 10% compared to physical paper submissions:
         </p>
 
         <div className="overflow-x-auto rounded-2xl border border-slate-200/80 shadow-xs">
-          <table className="w-full text-left border-collapse text-xs sm:text-sm font-light">
+          <table className="w-full text-left border-collapse text-xs sm:text-sm font-normal">
             <thead>
               <tr className="bg-slate-50/80 border-b border-slate-200/80 text-slate-800 font-medium">
                 <th className="p-3.5 sm:p-4">Applicant Category</th>
@@ -115,12 +115,12 @@ export default function TrademarkRegistrationCostPage() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           2. Trademark Cost by Number of Classes
         </h2>
-        <p className="text-sm text-slate-600 font-light">
+        <p className="text-sm text-slate-600 font-normal">
           Government fees apply on a per-class basis. Below is the exact matrix for single vs multi-class filings:
         </p>
 
         <div className="overflow-x-auto rounded-2xl border border-slate-200/80 shadow-xs">
-          <table className="w-full text-left border-collapse text-xs sm:text-sm font-light">
+          <table className="w-full text-left border-collapse text-xs sm:text-sm font-normal">
             <thead>
               <tr className="bg-slate-50/80 border-b border-slate-200/80 text-slate-800 font-medium">
                 <th className="p-3.5 sm:p-4">Filing Scope</th>
@@ -164,12 +164,12 @@ export default function TrademarkRegistrationCostPage() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           3. Total Cost Breakdown: Mandatory vs. Contingent Expenses
         </h2>
-        <p className="text-sm text-slate-600 font-light">
+        <p className="text-sm text-slate-600 font-normal">
           Understanding which cost components are mandatory at inception versus contingent upon subsequent Registry reports prevents unforeseen financial surprises:
         </p>
 
         <div className="overflow-x-auto rounded-2xl border border-slate-200/80 shadow-xs">
-          <table className="w-full text-left border-collapse text-xs sm:text-sm font-light">
+          <table className="w-full text-left border-collapse text-xs sm:text-sm font-normal">
             <thead>
               <tr className="bg-slate-50/80 border-b border-slate-200/80 text-slate-800 font-medium">
                 <th className="p-3.5 sm:p-4">Cost Component</th>
@@ -223,7 +223,7 @@ export default function TrademarkRegistrationCostPage() {
           <p className="text-sm font-medium text-slate-900">
             No. The trademark registration fee is NOT an annual recurring charge.
           </p>
-          <p className="text-xs sm:text-sm text-slate-600 font-light leading-relaxed">
+          <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed">
             When you pay the Form TM-A registration fee, your statutory monopoly remains legally protected for a continuous span of <strong className="font-semibold text-slate-900">10 full years</strong>. No maintenance fees, annual compliance dues, or retainer payments are legally mandated by the Trade Marks Registry during this decade. The next statutory fee is only payable at Year 10 when filing Form TM-R for renewal.
           </p>
         </div>
@@ -234,7 +234,7 @@ export default function TrademarkRegistrationCostPage() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           How to Legally Reduce Trademark Registration Cost
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 text-xs sm:text-sm font-light text-slate-700">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 text-xs sm:text-sm font-normal text-slate-900">
           <div className="p-4 rounded-xl bg-white border border-slate-200/80 shadow-3xs space-y-1.5">
             <span className="font-semibold text-emerald-700 block">1. Obtain Udyam MSME Registration</span>
             <p className="text-slate-500 text-xs">

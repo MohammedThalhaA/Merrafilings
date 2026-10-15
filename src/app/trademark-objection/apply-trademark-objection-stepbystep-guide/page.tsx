@@ -33,7 +33,7 @@ export default function ApplyTrademarkObjectionStepByStepPage() {
         <p className="text-[15px] leading-relaxed text-slate-700">
           When your trademark application status changes to <strong className="font-semibold text-rose-700">&quot;Objected&quot;</strong> on the IP India electronic portal, filing a structured, legally sound response is imperative. Applying for a trademark objection reply involves far more than submitting a routine explanation—it is a formal legal submission presented to the Assistant Registrar of Trade Marks rebutting statutory grounds raised under <strong className="font-semibold text-slate-900">Section 9 or Section 11</strong> of the Trade Marks Act, 1999.
         </p>
-        <p className="text-[14.5px] leading-relaxed text-slate-600 font-light">
+        <p className="text-[14.5px] leading-relaxed text-slate-600 font-normal">
           This authoritative step-by-step roadmap walks you through every stage from downloading the official Examination Report to drafting factual defenses, compiling evidentiary exhibits, and e-filing your reply within the mandatory <strong className="font-semibold text-slate-900">30-day statutory window</strong>.
         </p>
       </div>
@@ -44,7 +44,7 @@ export default function ApplyTrademarkObjectionStepByStepPage() {
           <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
             The 8-Step Process to File a Trademark Objection Reply
           </h2>
-          <p className="text-sm text-slate-600 font-light mt-1">
+          <p className="text-sm text-slate-600 font-normal mt-1">
             Follow these systematic steps to successfully overcome Registry objections:
           </p>
         </div>
@@ -60,7 +60,7 @@ export default function ApplyTrademarkObjectionStepByStepPage() {
                 <h3 className="font-medium text-slate-900 text-sm sm:text-base">
                   Step 1: Check Trademark Application Status on IP India Portal
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed">
                   Regularly track your application number on the official Trade Marks Registry electronic status module. The moment the status transitions from &quot;Formalities Chk Pass&quot; or &quot;Marked for Exam&quot; to &quot;Objected&quot;, initiate immediate response preparations.
                 </p>
               </div>
@@ -77,7 +77,7 @@ export default function ApplyTrademarkObjectionStepByStepPage() {
                 <h3 className="font-medium text-slate-900 text-sm sm:text-base">
                   Step 2: Download &amp; Scrutinize the Official Examination Report
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed">
                   Click on &quot;View Examination Report&quot; on the portal to download the official PDF. Check the dispatch date stamped on the document to calculate your exact 30-day filing cutoff deadline.
                 </p>
               </div>
@@ -94,7 +94,7 @@ export default function ApplyTrademarkObjectionStepByStepPage() {
                 <h3 className="font-medium text-slate-900 text-sm sm:text-base">
                   Step 3: Analyze the Exact Statutory Grounds of Objection
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed">
                   Determine whether the objection is founded upon Section 9 (distinctiveness / descriptive mark), Section 11 (conflicting prior registered marks cited in the search report annexure), or procedural deficiencies (such as invalid power of attorney or vague item descriptions).
                 </p>
               </div>
@@ -111,7 +111,7 @@ export default function ApplyTrademarkObjectionStepByStepPage() {
                 <h3 className="font-medium text-slate-900 text-sm sm:text-base">
                   Step 4: Conduct In-Depth Legal Research on Cited Marks
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed">
                   For Section 11 objections, research every cited conflicting mark on the public register. Check whether the cited marks are currently abandoned, removed, expired, or registered for completely different goods. If a cited mark has lapsed, this forms a conclusive defense.
                 </p>
               </div>
@@ -128,7 +128,7 @@ export default function ApplyTrademarkObjectionStepByStepPage() {
                 <h3 className="font-medium text-slate-900 text-sm sm:text-base">
                   Step 5: Assemble Commercial Evidentiary Exhibits
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed">
                   Collate documentary proof substantiating your prior commercial presence: earliest tax invoices, audited turnover certificates, packaging photographs, domain registration WHOIS details, and marketing expenses establishing acquired distinctiveness.
                 </p>
               </div>
@@ -145,7 +145,7 @@ export default function ApplyTrademarkObjectionStepByStepPage() {
                 <h3 className="font-medium text-slate-900 text-sm sm:text-base">
                   Step 6: Draft the Comprehensive Legal Rebuttal
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed">
                   Structure your written legal reply with professional formatting: factual background of the applicant, paragraph-by-paragraph refutation of examiner observations, application of the Anti-Dissection Rule, and citations of landmark Supreme Court and High Court precedents.
                 </p>
               </div>
@@ -162,7 +162,7 @@ export default function ApplyTrademarkObjectionStepByStepPage() {
                 <h3 className="font-medium text-slate-900 text-sm sm:text-base">
                   Step 7: E-File Reply via Digital Signature on IP India Portal
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed">
                   Submit the written reply and affidavit exhibits through the official IP India comprehensive e-filing gateway under the &quot;Reply to Examination Report&quot; tab. Secure the digital submission timestamp and filing acknowledgement receipt.
                 </p>
               </div>
@@ -179,7 +179,7 @@ export default function ApplyTrademarkObjectionStepByStepPage() {
                 <h3 className="font-medium text-emerald-950 text-sm sm:text-base">
                   Step 8: Monitor Application Status Progression
                 </h3>
-                <p className="text-xs sm:text-sm text-emerald-900/90 font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-emerald-900/90 font-normal leading-relaxed">
                   Following reply submission, the Examiner reviews your response. If satisfied, the status progresses directly to &quot;Accepted &amp; Advertised&quot;. If additional clarifications are required, the status moves to &quot;Ready for Show Cause Hearing&quot;, where Merrafilings attorneys represent you before the Hearing Officer.
                 </p>
               </div>
@@ -193,7 +193,7 @@ export default function ApplyTrademarkObjectionStepByStepPage() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           Essential Components of an Effective Trademark Objection Reply
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-xs sm:text-sm font-light text-slate-700">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-xs sm:text-sm font-normal text-slate-900">
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1.5">
             <span className="font-medium text-slate-900 block">1. Formal Caption &amp; Title</span>
             <p className="text-slate-500 text-xs">

@@ -33,7 +33,7 @@ export default function UnlockTrademarkPowerPage() {
         <p className="text-[15px] leading-relaxed text-slate-700">
           In India&apos;s hyper-competitive digital economy, a brand name is no longer just a business label—it is an invaluable <strong className="font-semibold text-slate-900">commercial asset</strong> that drives enterprise valuation, consumer trust, and exclusive market share. Securing trademark registration under the <strong className="font-semibold text-slate-900">Trade Marks Act, 1999</strong> confers statutory ownership, enabling you to build, scale, and monetize your intellectual property without fear of counterfeit copycats.
         </p>
-        <p className="text-[14.5px] leading-relaxed text-slate-600 font-light">
+        <p className="text-[14.5px] leading-relaxed text-slate-600 font-normal">
           Even when an application encounters procedural roadblocks such as a Trademark Examination Objection, understanding the profound commercial advantages of registration reinforces why overcoming objections promptly is an essential investment for any ambitious business.
         </p>
       </div>
@@ -43,7 +43,7 @@ export default function UnlockTrademarkPowerPage() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           The 5 Strategic Pillars of Registered Trademarks
         </h2>
-        <p className="text-sm text-slate-600 font-light">
+        <p className="text-sm text-slate-600 font-normal">
           Explore how a registered trademark elevates your brand from an unprotected business concept into an intellectual property powerhouse:
         </p>
 
@@ -56,7 +56,7 @@ export default function UnlockTrademarkPowerPage() {
             <h3 className="font-medium text-slate-900 text-sm sm:text-base">
               1. Statutory Monopoly &amp; Exclusive Rights
             </h3>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Under Section 28, registration confers the nationwide exclusive right to use the mark. You can initiate statutory infringement lawsuits (Section 29) and obtain civil injunctions and damages against infringers.
             </p>
           </div>
@@ -69,7 +69,7 @@ export default function UnlockTrademarkPowerPage() {
             <h3 className="font-medium text-slate-900 text-sm sm:text-base">
               2. Commercial Valuation &amp; Asset Creation
             </h3>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               A registered trademark is an intangible corporate asset recorded on your balance sheet. It significantly boosts venture capital valuations, enables brand licensing, and facilitates profitable franchising agreements.
             </p>
           </div>
@@ -82,7 +82,7 @@ export default function UnlockTrademarkPowerPage() {
             <h3 className="font-medium text-slate-900 text-sm sm:text-base">
               3. The Prestige of the ® Registered Symbol
             </h3>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Affixing the official <strong className="font-semibold text-slate-900">®</strong> mark instantly projects corporate credibility and quality assurance, establishing immediate consumer trust and deterring unauthorized copycats.
             </p>
           </div>
@@ -95,7 +95,7 @@ export default function UnlockTrademarkPowerPage() {
             <h3 className="font-medium text-slate-900 text-sm sm:text-base">
               4. E-Commerce &amp; Brand Registry Gates
             </h3>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Global online platforms (Amazon Brand Registry, Flipkart Brand Store) require registered trademarks to grant brand gatekeeping powers, enabling instant takedowns of fraudulent reseller listings.
             </p>
           </div>
@@ -108,7 +108,7 @@ export default function UnlockTrademarkPowerPage() {
             <h3 className="font-medium text-slate-900 text-sm sm:text-base">
               5. Perpetual 10-Year Generational Validity
             </h3>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Unlike patents that lapse in 20 years, a trademark can be renewed perpetually every 10 years via Form TM-R, creating a brand monopoly that endures indefinitely across generations.
             </p>
           </div>
@@ -121,7 +121,7 @@ export default function UnlockTrademarkPowerPage() {
             <h3 className="font-medium text-slate-900 text-sm sm:text-base">
               6. Global Expansion via Madrid Protocol
             </h3>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               A domestic Indian trademark application serves as the home base for filing international trademark applications across 130+ countries under WIPO&apos;s Madrid System via a single consolidated filing.
             </p>
           </div>
@@ -133,11 +133,11 @@ export default function UnlockTrademarkPowerPage() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           How Overcoming Trademark Objections Unlocks Brand Protection
         </h2>
-        <p className="text-sm text-slate-600 font-light leading-relaxed">
+        <p className="text-sm text-slate-600 font-normal leading-relaxed">
           More than 60% of trademark applications in India face an initial Examination Objection under Section 9 or Section 11. Far from being a fatal setback, resolving an objection through a rigorous legal response is the exact proving ground where statutory protection is forged:
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1 text-xs sm:text-sm text-slate-700 font-light">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1 text-xs sm:text-sm text-slate-700 font-normal">
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1.5">
             <span className="font-medium text-slate-900 block">Clarifies Exclusive Scope of Monopoly</span>
             <p className="text-slate-500 text-xs">

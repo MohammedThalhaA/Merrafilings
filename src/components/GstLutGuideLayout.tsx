@@ -285,7 +285,7 @@ export default function GstLutGuideLayout({
                   <FileSignature className="w-4 h-4 text-indigo-600" />
                   <span>Exporter Statutory Checklist</span>
                 </div>
-                <p className="text-slate-600 leading-relaxed font-light text-[11.5px]">
+                <p className="text-slate-600 leading-relaxed font-normal text-[11.5px]">
                   Mandatory criteria for 0% IGST export clearance:
                 </p>
                 <div className="space-y-1.5 text-slate-700 font-normal text-[11px]">

@@ -310,10 +310,10 @@ function ProducerGuideContent() {
                 <h1 className="text-2xl sm:text-[26px] md:text-[28px] font-normal text-[#1F1646] text-center mb-6 leading-snug">
                   Producer Company Registration Online in India
                 </h1>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-3">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-3">
                   A <strong className="font-medium text-slate-800">Producer Company</strong> (commonly known as a Farmer Producer Organisation or FPO) is an innovative legal corporate structure introduced under Part IXA of the <strong className="font-medium text-slate-800">Companies Act</strong>. It empowers agriculturalists, milk producers, artisans, and rural entrepreneurs to pool their resources, achieve economies of scale, and access institutional markets without losing democratic autonomy.
                 </p>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed">
                   Unlike traditional cooperative societies plagued by bureaucratic hurdles and political interference, a Producer Company operates under modern corporate law. It provides <strong className="font-medium text-slate-800">limited liability protection</strong>, nationwide business freedom, Section 80PA 100% tax benefits, and access to SFAC equity grants. At <a href="/" className="text-[#00B074] hover:underline font-normal">Merrafilings</a>, our agribusiness legal advisors guide your founding committee through every statutory requirement.
                 </p>
               </div>
@@ -323,11 +323,11 @@ function ProducerGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Key Benefits &amp; Government Subsidies for Producer Companies
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   The Government of India and state agencies have introduced high-impact financial incentives exclusively for registered Producer Companies:
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[12.5px] font-light text-slate-700">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[12.5px] font-normal text-slate-900">
                   <div className="p-3.5 rounded-xl border border-slate-200/80 bg-[#FAF9F7]/70">
                     <strong className="font-medium text-slate-900 block mb-1">
                       100% Tax Exemption (Sec 80PA)
@@ -360,12 +360,12 @@ function ProducerGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Statutory Minimum Requirements for Producer Company Incorporation
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   To qualify for incorporation on the Central MCA portal under Part IXA, the promoter group must meet these criteria:
                 </p>
 
                 <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-4">
-                  <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                  <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                     <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                       <tr>
                         <th className="py-3 px-4 font-normal">Requirement</th>
@@ -395,7 +395,7 @@ function ProducerGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Eligibility Criteria for Farmer Members &amp; Directors
                 </h2>
-                <div className="space-y-3 text-[13px] font-light text-slate-600">
+                <div className="space-y-3 text-[13px] font-normal text-slate-900">
                   <div className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full bg-emerald-100 text-[#00A86B] flex items-center justify-center shrink-0 mt-0.5 text-xs font-semibold">
                       ✓
@@ -436,7 +436,7 @@ function ProducerGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Documents Required for Producer Company Registration
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   We assist in collating and verifying farmer records to ensure frictionless approval from the Registrar of Companies:
                 </p>
 
@@ -447,7 +447,7 @@ function ProducerGuideContent() {
                       <Users className="w-4 h-4 text-[#6B4BFF]" />
                       <span>For 10+ Members &amp; 5 Directors</span>
                     </h3>
-                    <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
+                    <ul className="space-y-2 text-[12.5px] font-normal text-slate-900">
                       <li className="flex items-center gap-2">
                         <Check className="w-3.5 h-3.5 text-[#00B074] shrink-0" />
                         <span>Self-attested PAN Card of all members and directors</span>
@@ -473,7 +473,7 @@ function ProducerGuideContent() {
                       <Building className="w-4 h-4 text-[#00A86B]" />
                       <span>For Registered Office in India</span>
                     </h3>
-                    <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
+                    <ul className="space-y-2 text-[12.5px] font-normal text-slate-900">
                       <li className="flex items-center gap-2">
                         <Check className="w-3.5 h-3.5 text-[#00B074] shrink-0" />
                         <span>Electricity, water, or telephone bill (&lt; 2 months old)</span>
@@ -500,7 +500,7 @@ function ProducerGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Step-by-Step Producer Company Incorporation Process
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-5">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-5">
                   Our structured process ensures seamless registration on the Ministry of Corporate Affairs (MCA) portal:
                 </p>
 
@@ -536,7 +536,7 @@ function ProducerGuideContent() {
                       </span>
                       <div>
                         <h4 className="font-medium text-slate-800 text-[13.5px] mb-1">{st.title}</h4>
-                        <p className="text-[12.5px] font-light text-slate-600 leading-relaxed">{st.desc}</p>
+                        <p className="text-[12.5px] font-normal text-slate-900 leading-relaxed">{st.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -548,12 +548,12 @@ function ProducerGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Comparison: Producer Company vs. Cooperative Society vs. Private Ltd
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   Understand why Farmer Producer Companies have superseded traditional cooperatives across modern agricultural clusters:
                 </p>
 
                 <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs">
-                  <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                  <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                     <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                       <tr>
                         <th className="py-3 px-4 font-normal">Parameter</th>
@@ -587,12 +587,12 @@ function ProducerGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Mandatory Compliances for Producer Companies
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   To safeguard company standing, protect director eligibility, and maintain Section 80PA benefits, these statutory deadlines must be honoured:
                 </p>
 
                 <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-5">
-                  <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                  <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                     <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                       <tr>
                         <th className="py-3 px-4 font-normal">Statutory Compliance</th>
@@ -651,10 +651,10 @@ function ProducerGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Why Choose Merrafilings for Producer Company Incorporation?
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   Merrafilings is India&apos;s foremost agribusiness corporate platform, empowering thousands of farmer producer organizations:
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[13px] font-light text-slate-700">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[13px] font-normal text-slate-900">
                   <div className="flex items-center gap-2">
                     <span className="text-[#00A86B] font-bold">✓</span>
                     <span>Dedicated Agribusiness CA, CS &amp; Legal Specialists</span>
@@ -683,7 +683,7 @@ export default function ProducerCompanyRegistrationPage() {
       badgeText="Empowering Farmers & Primary Producers"
       heroTitle={
         <>
-          <span className="bg-gradient-to-r from-[#5C3BFF] via-[#7052FF] to-[#FF4ED0] bg-clip-text text-transparent font-light">
+          <span className="bg-gradient-to-r from-[#5C3BFF] via-[#7052FF] to-[#FF4ED0] bg-clip-text text-transparent font-normal">
             Producer Company
           </span>{" "}
           Registration in India

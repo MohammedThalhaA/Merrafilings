@@ -241,7 +241,7 @@ function BarcodeGuideContent() {
     <>
       {/* Intro */}
       <div>
-        <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+        <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed">
           <strong className="font-medium text-slate-800">GS1 Barcode Registration</strong> is the universal standard for product identification and automated supply chain operations across India and 150+ countries worldwide. Administered officially by <strong className="font-medium text-slate-800">GS1 India</strong> (an autonomous standards body established by the Ministry of Commerce and Industry alongside apex industry chambers like CII, FICCI, and ASSOCHAM), an official barcode embeds your unique manufacturer prefix into every SKU. Whether you sell on e-commerce marketplaces like <strong className="font-medium text-slate-800">Amazon and Flipkart</strong>, quick commerce apps like <strong className="font-medium text-slate-800">Blinkit and Zepto</strong>, or through modern supermarket cash registers, authentic GS1 barcode registration is a non-negotiable operational necessity.
         </p>
       </div>
@@ -251,7 +251,7 @@ function BarcodeGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           1. What is a Barcode &amp; How Does it Work?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           A barcode is a machine-readable optical representation of numbers and characters encoded in a visual sequence of parallel black bars and white spaces (or a 2D matrix of dots). When an optical scanner illuminates the code, the light reflected from the spaces is converted into digital signals, instantly retrieving the product&apos;s verified record from database systems.
         </p>
 
@@ -259,17 +259,17 @@ function BarcodeGuideContent() {
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/90 hover:bg-white hover:border-emerald-500 hover:shadow-md transition-all duration-200 cursor-pointer group">
             <Barcode className="w-5 h-5 text-emerald-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-semibold text-slate-900">EAN-13 / GTIN Standard</h4>
-            <p className="text-xs text-slate-600 font-light mt-1">13-digit global standard used across retail and point-of-sale scanning.</p>
+            <p className="text-xs text-slate-600 font-normal mt-1">13-digit global standard used across retail and point-of-sale scanning.</p>
           </div>
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/90 hover:bg-white hover:border-blue-500 hover:shadow-md transition-all duration-200 cursor-pointer group">
             <ScanLine className="w-5 h-5 text-blue-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-semibold text-slate-900">Zero Scanning Errors</h4>
-            <p className="text-xs text-slate-600 font-light mt-1">Eliminates manual cashier entry errors and speeds up checkout by 90%.</p>
+            <p className="text-xs text-slate-600 font-normal mt-1">Eliminates manual cashier entry errors and speeds up checkout by 90%.</p>
           </div>
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/90 hover:bg-white hover:border-purple-500 hover:shadow-md transition-all duration-200 cursor-pointer group">
             <Globe2 className="w-5 h-5 text-purple-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-semibold text-slate-900">150+ Countries Compatible</h4>
-            <p className="text-xs text-slate-600 font-light mt-1">Authentic GS1 numbers work seamlessly across domestic and international borders.</p>
+            <p className="text-xs text-slate-600 font-normal mt-1">Authentic GS1 numbers work seamlessly across domestic and international borders.</p>
           </div>
         </div>
       </section>
@@ -279,7 +279,7 @@ function BarcodeGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           2. Types of Barcodes Used in India: 1D vs 2D
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Barcodes in commercial use fall into two broad technological categories: Linear One-Dimensional (1D) barcodes and Matrix Two-Dimensional (2D) barcodes. Understanding the difference is vital for selecting the right code for your packaging:
         </p>
 
@@ -328,10 +328,10 @@ function BarcodeGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           3. What is GS1 Barcode Registration &amp; What is GS1 India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           <strong>GS1 India</strong> is a standards organization set up by the Ministry of Commerce &amp; Industry, Government of India along with premier trade bodies (CII, FICCI, ASSOCHAM, FIEO, Spices Board, and APEDA). It is the sole authorized organization in India for assigning globally unique, authentic barcode numbers.
         </p>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           When you register with GS1 India, your business is allocated a dedicated <strong>GS1 Company Prefix (GCP)</strong>. This prefix forms the foundation of all your product barcodes (GTIN - Global Trade Item Number), ensuring that no other company anywhere in the world can ever share or duplicate your numbers.
         </p>
       </section>
@@ -345,25 +345,25 @@ function BarcodeGuideContent() {
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/90 hover:bg-white hover:border-emerald-500 hover:shadow-md transition-all duration-200 cursor-pointer group">
             <ShoppingCart className="w-5 h-5 text-emerald-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-[14px] font-semibold text-slate-900">Mandatory E-Commerce Listing</h4>
-            <p className="text-xs text-slate-600 font-light mt-1">Amazon, Flipkart, Nykaa, and Tata CliQ mandate authentic GS1 barcodes to map ASINs and activate Brand Registry.</p>
+            <p className="text-xs text-slate-600 font-normal mt-1">Amazon, Flipkart, Nykaa, and Tata CliQ mandate authentic GS1 barcodes to map ASINs and activate Brand Registry.</p>
           </div>
 
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/90 hover:bg-white hover:border-blue-500 hover:shadow-md transition-all duration-200 cursor-pointer group">
             <Store className="w-5 h-5 text-blue-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-[14px] font-semibold text-slate-900">Modern Retail Shelf Access</h4>
-            <p className="text-xs text-slate-600 font-light mt-1">Supermarket retail chains like Reliance Smart, D-Mart, Spencer&apos;s, and Nature&apos;s Basket require GS1 barcodes for POS optical scanning.</p>
+            <p className="text-xs text-slate-600 font-normal mt-1">Supermarket retail chains like Reliance Smart, D-Mart, Spencer&apos;s, and Nature&apos;s Basket require GS1 barcodes for POS optical scanning.</p>
           </div>
 
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/90 hover:bg-white hover:border-purple-500 hover:shadow-md transition-all duration-200 cursor-pointer group">
             <Layers className="w-5 h-5 text-purple-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-[14px] font-semibold text-slate-900">Quick Commerce Delivery</h4>
-            <p className="text-xs text-slate-600 font-light mt-1">Instant delivery apps (Blinkit, Zepto, Swiggy Instamart) require barcoded SKUs for high-speed dark store scanning.</p>
+            <p className="text-xs text-slate-600 font-normal mt-1">Instant delivery apps (Blinkit, Zepto, Swiggy Instamart) require barcoded SKUs for high-speed dark store scanning.</p>
           </div>
 
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/90 hover:bg-white hover:border-amber-500 hover:shadow-md transition-all duration-200 cursor-pointer group">
             <ShieldCheck className="w-5 h-5 text-amber-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-[14px] font-semibold text-slate-900">Counterfeit Prevention</h4>
-            <p className="text-xs text-slate-600 font-light mt-1">Authentic barcodes registered in the GS1 Global Data Hub protect your brand identity from counterfeit imitations.</p>
+            <p className="text-xs text-slate-600 font-normal mt-1">Authentic barcodes registered in the GS1 Global Data Hub protect your brand identity from counterfeit imitations.</p>
           </div>
         </div>
       </section>
@@ -373,7 +373,7 @@ function BarcodeGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           5. Documents Required for GS1 Barcode Registration
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           To register your products with GS1 India, the following statutory records must be furnished for identity, tax compliance, and turnover bracket verification:
         </p>
 
@@ -427,7 +427,7 @@ function BarcodeGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           6. Step-by-Step Barcode Registration Process with Merrafilings
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Merrafilings manages the complete registration lifecycle on the GS1 India portal:
         </p>
 
@@ -436,7 +436,7 @@ function BarcodeGuideContent() {
             <div className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs shrink-0">1</div>
             <div>
               <h4 className="text-sm font-semibold text-slate-900">SKU Count &amp; Turnover Analysis</h4>
-              <p className="text-xs text-slate-600 font-light mt-0.5">Determine the right barcode allocation batch (100, 1,000, 10,000) and verify your turnover documents to ensure lowest possible statutory fees.</p>
+              <p className="text-xs text-slate-600 font-normal mt-0.5">Determine the right barcode allocation batch (100, 1,000, 10,000) and verify your turnover documents to ensure lowest possible statutory fees.</p>
             </div>
           </div>
 
@@ -444,7 +444,7 @@ function BarcodeGuideContent() {
             <div className="w-7 h-7 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs shrink-0">2</div>
             <div>
               <h4 className="text-sm font-semibold text-slate-900">GS1 India Application Lodgement</h4>
-              <p className="text-xs text-slate-600 font-light mt-0.5">Prepare the statutory application and upload verified entity documents on the official GS1 India portal with digital authorization.</p>
+              <p className="text-xs text-slate-600 font-normal mt-0.5">Prepare the statutory application and upload verified entity documents on the official GS1 India portal with digital authorization.</p>
             </div>
           </div>
 
@@ -452,7 +452,7 @@ function BarcodeGuideContent() {
             <div className="w-7 h-7 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-xs shrink-0">3</div>
             <div>
               <h4 className="text-sm font-semibold text-slate-900">Prefix Allocation &amp; Certificate Delivery</h4>
-              <p className="text-xs text-slate-600 font-light mt-0.5">GS1 issues your official GS1 Company Prefix (GCP) and formal Registration Allocation Letter with global GTIN authorization.</p>
+              <p className="text-xs text-slate-600 font-normal mt-0.5">GS1 issues your official GS1 Company Prefix (GCP) and formal Registration Allocation Letter with global GTIN authorization.</p>
             </div>
           </div>
 
@@ -460,7 +460,7 @@ function BarcodeGuideContent() {
             <div className="w-7 h-7 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xs shrink-0">4</div>
             <div>
               <h4 className="text-sm font-semibold text-slate-900">Barcode Graphic Generation (EPS, PNG, PDF)</h4>
-              <p className="text-xs text-slate-600 font-light mt-0.5">Receive high-resolution, print-ready vector barcode artwork ready for your packaging manufacturer, graphic designer, or sticker printer.</p>
+              <p className="text-xs text-slate-600 font-normal mt-0.5">Receive high-resolution, print-ready vector barcode artwork ready for your packaging manufacturer, graphic designer, or sticker printer.</p>
             </div>
           </div>
         </div>
@@ -471,7 +471,7 @@ function BarcodeGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           7. GS1 Barcodes vs Non-GS1 Barcodes &amp; Free Generators
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Many new businesses consider using free barcode generator websites to save money. However, free barcodes carry immense legal and commercial risks:
         </p>
 
@@ -520,7 +520,7 @@ function BarcodeGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           8. Why Choose Merrafilings for Barcode Registration?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Merrafilings is India&apos;s leading business licensing and packaging compliance platform. We ensure fast, guaranteed GS1 registration:
         </p>
 

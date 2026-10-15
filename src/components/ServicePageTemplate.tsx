@@ -24,6 +24,7 @@ import {
   Globe2,
   Lock,
   ArrowUpRight,
+  ArrowRight,
   CheckCircle2,
   Scale,
   Receipt,
@@ -1588,6 +1589,85 @@ const CLIENT_MINI_CARDS = [
   },
 ];
 
+const DELIVERABLE_THEMES = [
+  {
+    // Indigo / Violet (Matches Screenshot Card 1)
+    iconBox: "bg-indigo-50 text-indigo-600 border-indigo-100/90 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-600",
+    hoverBorder: "hover:border-indigo-500",
+    hoverShadow: "hover:shadow-indigo-500/15",
+    hoverBg: "hover:bg-indigo-50/15",
+    linkText: "text-indigo-700 hover:text-indigo-800",
+  },
+  {
+    // Purple (Matches Screenshot Card 2 active/hover effect)
+    iconBox: "bg-purple-50 text-purple-600 border-purple-100/90 group-hover:bg-purple-600 group-hover:text-white group-hover:border-purple-600",
+    hoverBorder: "hover:border-purple-500",
+    hoverShadow: "hover:shadow-purple-500/15",
+    hoverBg: "hover:bg-purple-50/15",
+    linkText: "text-purple-700 hover:text-purple-800",
+  },
+  {
+    // Blue / Corporate
+    iconBox: "bg-blue-50 text-blue-600 border-blue-100/90 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600",
+    hoverBorder: "hover:border-blue-500",
+    hoverShadow: "hover:shadow-blue-500/15",
+    hoverBg: "hover:bg-blue-50/15",
+    linkText: "text-blue-700 hover:text-blue-800",
+  },
+  {
+    // Teal
+    iconBox: "bg-teal-50 text-teal-600 border-teal-100/90 group-hover:bg-teal-600 group-hover:text-white group-hover:border-teal-600",
+    hoverBorder: "hover:border-teal-500",
+    hoverShadow: "hover:shadow-teal-500/15",
+    hoverBg: "hover:bg-teal-50/15",
+    linkText: "text-teal-700 hover:text-teal-800",
+  },
+  {
+    // Emerald / Forest
+    iconBox: "bg-emerald-50 text-emerald-600 border-emerald-100/90 group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600",
+    hoverBorder: "hover:border-emerald-500",
+    hoverShadow: "hover:shadow-emerald-500/15",
+    hoverBg: "hover:bg-emerald-50/15",
+    linkText: "text-emerald-700 hover:text-emerald-800",
+  },
+  {
+    // Amber / Bronze
+    iconBox: "bg-amber-50 text-amber-600 border-amber-100/90 group-hover:bg-amber-600 group-hover:text-white group-hover:border-amber-600",
+    hoverBorder: "hover:border-amber-500",
+    hoverShadow: "hover:shadow-amber-500/15",
+    hoverBg: "hover:bg-amber-50/15",
+    linkText: "text-amber-700 hover:text-amber-800",
+  },
+];
+
+function getSpotlightCardColorClasses(item: SpotlightCardItem) {
+  const border = item.hoverBorder || "hover:border-emerald-500";
+  let shadow = "hover:shadow-emerald-500/10";
+  let groupHoverText = "group-hover:text-emerald-700";
+
+  if (border.includes("blue")) {
+    shadow = "hover:shadow-blue-500/10";
+    groupHoverText = "group-hover:text-blue-700";
+  } else if (border.includes("amber")) {
+    shadow = "hover:shadow-amber-500/10";
+    groupHoverText = "group-hover:text-amber-700";
+  } else if (border.includes("indigo")) {
+    shadow = "hover:shadow-indigo-500/10";
+    groupHoverText = "group-hover:text-indigo-700";
+  } else if (border.includes("purple")) {
+    shadow = "hover:shadow-purple-500/10";
+    groupHoverText = "group-hover:text-purple-700";
+  } else if (border.includes("teal")) {
+    shadow = "hover:shadow-teal-500/10";
+    groupHoverText = "group-hover:text-teal-700";
+  } else if (border.includes("rose") || border.includes("red")) {
+    shadow = "hover:shadow-rose-500/10";
+    groupHoverText = "group-hover:text-rose-700";
+  }
+
+  return { border, shadow, groupHoverText };
+}
+
 export default function ServicePageTemplate({
   badgeText = "Fast-Track Government & Corporate Filing",
   heroTitle,
@@ -1686,101 +1766,113 @@ export default function ServicePageTemplate({
         {/* 1. Header Navigation */}
         <Navbar onOpenSearch={() => setSearchOpen(true)} onOpenContact={() => openServiceModal()} />
 
-      {/* 2. Redesigned Modern Hero: Asymmetric Command Center */}
-      <section className="relative pt-8 sm:pt-12 md:pt-14 pb-12 sm:pb-16 bg-gradient-to-b from-[#F8FAFC] via-[#FAF9F7]/70 to-white border-b border-slate-100 overflow-hidden">
-        {/* Subtle geometric pattern backdrop */}
-        <div className="absolute inset-0 bg-[radial-gradient(#CBD5E1_1px,transparent_1px)] [background-size:24px_24px] opacity-35 pointer-events-none" />
+      {/* 2. Redesigned Editorial Hero: Asymmetric Command Center */}
+      <section className="hero-section no-reveal is-revealed relative pt-10 sm:pt-14 md:pt-16 pb-12 sm:pb-16 bg-white border-b border-slate-200/80 overflow-hidden font-sans">
+        {/* Dynamic ambient floating light blooms */}
+        <div className="absolute top-0 left-1/4 w-[500px] h-[350px] bg-gradient-to-tr from-emerald-100/35 via-teal-100/20 to-transparent blur-3xl pointer-events-none rounded-full animate-pulse" />
+        <div className="absolute top-10 right-1/4 w-[450px] h-[300px] bg-gradient-to-bl from-blue-100/25 via-slate-100/30 to-transparent blur-3xl pointer-events-none rounded-full" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FBFBFA]/60 via-white to-white pointer-events-none" />
 
-        <div className="relative w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10">
+        <div className="relative w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10 z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-14 items-start">
             {/* Left Column (7 Cols): Headline, Value Matrix & Trust Badges */}
-            <div className="lg:col-span-7 space-y-6">
+            <div className="lg:col-span-7 space-y-6 text-left">
               {/* Category Pill with Live Pulse Dot */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 shadow-2xs">
-                <span className="w-2 h-2 rounded-full bg-[#00B074] animate-pulse" />
-                <span className="text-[12.5px] font-medium text-slate-700">{badgeText}</span>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200/90 text-slate-700 text-xs font-medium tracking-tight shadow-xs hover:border-slate-300 transition-colors">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-600"></span>
+                </span>
+                <span>{badgeText}</span>
+                <span className="text-slate-300">•</span>
+                <span className="text-emerald-700 font-semibold">Dual CA/CS Vetted</span>
               </div>
 
               {/* Main Headline */}
               <div className="space-y-3">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-normal leading-tight text-[#12023B] tracking-tight">
+                <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[46px] font-normal leading-[1.15] text-[#0F172A] tracking-tight">
                   {heroTitle}
                 </h1>
-                <p className="text-xs sm:text-sm md:text-base leading-relaxed text-slate-800 font-normal max-w-2xl xl:max-w-3xl">
+                <p className="text-sm sm:text-base md:text-lg leading-relaxed text-slate-600 font-normal max-w-2xl xl:max-w-3xl">
                   {heroSubtitle}
                 </p>
               </div>
 
-              {/* Interactive Deliverables / Features Grid (Replacing the cramped old bullet list) */}
+              {/* Interactive Deliverables / Features Grid */}
               <div className="pt-2">
-                <div className="text-[12px] font-semibold text-slate-400 uppercase tracking-wider mb-3">
-                  Service Inclusions &amp; Workflow
+                <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-3">
+                  Standard Service Inclusions &amp; Workflow
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {formFeatures ? (
-                    formFeatures.map((feat, idx) => (
-                      <div
-                        key={idx}
-                        className="flex items-center gap-3 p-3.5 rounded-xl bg-white border border-slate-200/80 shadow-2xs hover:border-[#6B4BFF] hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group"
-                      >
-                        <div className="w-8 h-8 rounded-lg bg-[#F5F3FF] text-[#6B4BFF] flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#EDE9FE] transition-all duration-200">
-                          {feat.icon || <Check className="w-4 h-4" />}
+                    formFeatures.map((feat, idx) => {
+                      const theme = DELIVERABLE_THEMES[idx % DELIVERABLE_THEMES.length];
+                      return (
+                        <div
+                          key={idx}
+                          className={`flex items-center gap-3 p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs ${theme.hoverBorder} ${theme.hoverShadow} ${theme.hoverBg} hover:-translate-y-1 transition-all duration-300 cursor-pointer group`}
+                        >
+                          <div className={`w-8 h-8 rounded-xl ${theme.iconBox} flex items-center justify-center shrink-0 transition-all duration-200`}>
+                            {feat.icon || <Check className="w-4 h-4" />}
+                          </div>
+                          {feat.isLink ? (
+                            <a
+                              href={feat.href || "#documents-required"}
+                              className={`text-xs sm:text-[13px] font-semibold ${theme.linkText} flex items-center gap-1.5 group-hover:translate-x-1 transition-transform`}
+                            >
+                              <span>{feat.text}</span>
+                            </a>
+                          ) : (
+                            <span className="text-xs sm:text-[13px] text-slate-800 font-medium group-hover:text-slate-950 transition-colors">
+                              {feat.text}
+                            </span>
+                          )}
                         </div>
-                        {feat.isLink ? (
-                          <a
-                            href={feat.href || "#documents-required"}
-                            className="text-xs sm:text-[13px] font-medium bg-gradient-to-r from-[#5C3BFF] via-[#7052FF] to-[#FF4ED0] bg-clip-text text-transparent hover:opacity-80 transition-opacity"
-                          >
-                            {feat.text}
-                          </a>
-                        ) : (
-                          <span className="text-xs sm:text-[13px] text-slate-800 font-medium group-hover:text-slate-950 transition-colors">{feat.text}</span>
-                        )}
-                      </div>
-                    ))
+                      );
+                    })
                   ) : (
                     <>
-                      <div className="flex items-center gap-3 p-3.5 rounded-xl bg-white border border-slate-200/80 shadow-2xs hover:border-[#6B4BFF] hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
-                        <div className="w-8 h-8 rounded-lg bg-[#F5F3FF] text-[#6B4BFF] flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#EDE9FE] transition-all duration-200">
+                      <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-emerald-500 hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
+                        <div className="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-100/90 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-200">
                           <Users className="w-4 h-4" />
                         </div>
-                        <span className="text-xs sm:text-[13px] text-slate-800 font-medium">
+                        <span className="text-xs sm:text-[13px] text-slate-800 font-medium group-hover:text-emerald-900 transition-colors">
                           Eligibility Check &amp; Advisory
                         </span>
                       </div>
-                      <div className="flex items-center gap-3 p-3.5 rounded-xl bg-white border border-slate-200/80 shadow-2xs hover:border-[#6B4BFF] hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
-                        <div className="w-8 h-8 rounded-lg bg-[#F5F3FF] text-[#6B4BFF] flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#EDE9FE] transition-all duration-200">
+                      <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-blue-500 hover:shadow-blue-500/10 hover:bg-blue-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
+                        <div className="w-8 h-8 rounded-xl bg-blue-50 text-blue-600 border border-blue-100/90 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-200">
                           <FileText className="w-4 h-4" />
                         </div>
-                        <span className="text-xs sm:text-[13px] text-slate-800 font-medium">
+                        <span className="text-xs sm:text-[13px] text-slate-800 font-medium group-hover:text-blue-900 transition-colors">
                           Document Review &amp; Drafting
                         </span>
                       </div>
-                      <div className="flex items-center gap-3 p-3.5 rounded-xl bg-white border border-slate-200/80 shadow-2xs hover:border-[#6B4BFF] hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
-                        <div className="w-8 h-8 rounded-lg bg-[#F5F3FF] text-[#6B4BFF] flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#EDE9FE] transition-all duration-200">
+                      <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-teal-500 hover:shadow-teal-500/10 hover:bg-teal-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
+                        <div className="w-8 h-8 rounded-xl bg-teal-50 text-teal-600 border border-teal-100/90 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-teal-600 group-hover:text-white transition-all duration-200">
                           <Building className="w-4 h-4" />
                         </div>
-                        <span className="text-xs sm:text-[13px] text-slate-800 font-medium">
+                        <span className="text-xs sm:text-[13px] text-slate-800 font-medium group-hover:text-teal-900 transition-colors">
                           Government Portal Application Filing
                         </span>
                       </div>
-                      <div className="flex items-center gap-3 p-3.5 rounded-xl bg-white border border-slate-200/80 shadow-2xs hover:border-[#6B4BFF] hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group">
-                        <div className="w-8 h-8 rounded-lg bg-[#F5F3FF] text-[#6B4BFF] flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#EDE9FE] transition-all duration-200">
+                      <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-indigo-500 hover:shadow-indigo-500/10 hover:bg-indigo-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
+                        <div className="w-8 h-8 rounded-xl bg-indigo-50 text-indigo-600 border border-indigo-100/90 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-200">
                           <ShieldCheck className="w-4 h-4" />
                         </div>
-                        <span className="text-xs sm:text-[13px] text-slate-800 font-medium">
+                        <span className="text-xs sm:text-[13px] text-slate-800 font-medium group-hover:text-indigo-900 transition-colors">
                           Official Certificate Issuance
                         </span>
                       </div>
-                      <div className="flex items-center gap-3 p-3.5 rounded-xl bg-white border border-slate-200/80 shadow-2xs hover:border-[#6B4BFF] hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group sm:col-span-2">
-                        <div className="w-8 h-8 rounded-lg bg-[#F5F3FF] text-[#6B4BFF] flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#EDE9FE] transition-all duration-200">
+                      <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-purple-500 hover:shadow-purple-500/10 hover:bg-purple-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer group sm:col-span-2">
+                        <div className="w-8 h-8 rounded-xl bg-purple-50 text-purple-600 border border-purple-100/90 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-purple-600 group-hover:text-white transition-all duration-200">
                           <Sparkles className="w-4 h-4" />
                         </div>
                         <a
                           href="#documents-required"
-                          className="text-xs sm:text-[13px] font-medium bg-gradient-to-r from-[#5C3BFF] via-[#7052FF] to-[#FF4ED0] bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+                          className="text-xs sm:text-[13px] font-semibold text-purple-700 hover:text-purple-800 flex items-center gap-1.5 group-hover:translate-x-1 transition-transform"
                         >
-                          Required Documents Checklist &rarr;
+                          <span>Required Documents Checklist &rarr;</span>
                         </a>
                       </div>
                     </>
@@ -1789,69 +1881,74 @@ export default function ServicePageTemplate({
               </div>
 
               {/* Streamlined Live Trust Metrics Strip */}
-              <div className="pt-2 grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-                <div className="p-3 rounded-xl bg-white/90 border border-slate-200/70 shadow-3xs hover:border-[#155EEF] hover:shadow-md hover:shadow-blue-500/10 hover:-translate-y-1 hover:bg-white transition-all duration-200 cursor-pointer group">
+              <div className="pt-3 grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
+                <div className="p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-amber-400 hover:shadow-md hover:shadow-amber-500/10 hover:bg-amber-50/15 hover:-translate-y-1 transition-all duration-200 cursor-pointer group">
                   <div className="flex items-center gap-1 font-semibold text-[13px] text-slate-900">
-                    <span>4.4</span>
+                    <span>4.9</span>
                     <span className="text-amber-400 text-xs">★★★★★</span>
                   </div>
-                  <div className="text-[11px] font-normal text-slate-700 mt-0.5">Verified Reviews</div>
+                  <div className="text-[11px] font-normal text-slate-500 mt-0.5">Verified Reviews</div>
                 </div>
 
-                <div className="p-3 rounded-xl bg-white/90 border border-slate-200/70 shadow-3xs hover:border-[#155EEF] hover:shadow-md hover:shadow-blue-500/10 hover:-translate-y-1 hover:bg-white transition-all duration-200 cursor-pointer group">
+                <div className="p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-amber-500 hover:shadow-md hover:shadow-amber-500/10 hover:bg-amber-50/15 hover:-translate-y-1 transition-all duration-200 cursor-pointer group">
                   <div className="font-semibold text-[13px] text-slate-900 flex items-center gap-1">
                     <Award className="w-3.5 h-3.5 text-[#D97706]" />
                     <span>15+ Years</span>
                   </div>
-                  <div className="text-[11px] font-normal text-slate-700 mt-0.5">Experience</div>
+                  <div className="text-[11px] font-normal text-slate-500 mt-0.5">CA Track Record</div>
                 </div>
 
-                <div className="p-3 rounded-xl bg-white/90 border border-slate-200/70 shadow-3xs hover:border-[#155EEF] hover:shadow-md hover:shadow-blue-500/10 hover:-translate-y-1 hover:bg-white transition-all duration-200 cursor-pointer group">
+                <div className="p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-200 cursor-pointer group">
                   <div className="font-semibold text-[13px] text-slate-900 flex items-center gap-1">
-                    <Users className="w-3.5 h-3.5 text-[#6B4BFF]" />
-                    <span>2 Lakh+</span>
+                    <Users className="w-3.5 h-3.5 text-emerald-600" />
+                    <span>250,000+</span>
                   </div>
-                  <div className="text-[11px] font-normal text-slate-700 mt-0.5">Customers Served</div>
+                  <div className="text-[11px] font-normal text-slate-500 mt-0.5">Clients Served</div>
                 </div>
 
-                <div className="p-3 rounded-xl bg-white/90 border border-slate-200/70 shadow-3xs hover:border-[#155EEF] hover:shadow-md hover:shadow-blue-500/10 hover:-translate-y-1 hover:bg-white transition-all duration-200 cursor-pointer group">
-                  <div className="font-semibold text-[13px] text-slate-900 flex items-center gap-1">
-                    <Smartphone className="w-3.5 h-3.5 text-[#00B074]" />
+                <div className="p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-200 cursor-pointer group">
+                  <div className="font-semibold text-[13px] text-slate-900 flex items-center gap-1.5">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                     <span>Live Tracking</span>
                   </div>
-                  <div className="text-[11px] font-normal text-slate-700 mt-0.5">Status &amp; Alerts</div>
+                  <div className="text-[11px] font-normal text-slate-500 mt-0.5">MCA &amp; GST Sync</div>
                 </div>
               </div>
             </div>
 
             {/* Right Column (5 Cols): The "Smart Registration Desk" Intake Portal */}
             <div className="lg:col-span-5">
-              <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 p-6 sm:p-7 shadow-xl shadow-slate-900/5 relative hover:border-slate-300 transition-colors duration-200">
+              <div className="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-8 shadow-sm relative hover:border-slate-300 hover:shadow-md transition-all duration-300 text-left">
                 {/* Security Tag */}
                 <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-100 text-xs text-slate-500">
                   <div className="flex items-center gap-1.5 text-emerald-700 font-medium">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
                     <Lock className="w-3.5 h-3.5" />
-                    <span>256-Bit SSL Secured</span>
+                    <span>256-Bit Bank-Grade SSL</span>
                   </div>
-                  <span>ISO 27001 Certified</span>
+                  <span className="text-[11px] text-slate-400">Dual CA/CS Assigned</span>
                 </div>
 
-                <h2 className="text-lg sm:text-xl font-medium text-[#12023B] leading-snug">{formTitle}</h2>
-                <p className="mt-1 text-xs text-slate-700 font-normal leading-relaxed mb-4">{formSubtitle}</p>
+                <h2 className="font-serif text-xl sm:text-2xl font-normal text-slate-900 leading-snug">
+                  {formTitle}
+                </h2>
+                <p className="mt-1 text-xs text-slate-600 font-normal leading-relaxed mb-5">
+                  {formSubtitle}
+                </p>
 
                 {formSubmitted ? (
                   <div className="text-center py-8 space-y-3">
                     <div className="w-14 h-14 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
                       <Check className="w-7 h-7" />
                     </div>
-                    <h3 className="text-lg font-bold text-[#111827]">Application Received!</h3>
-                    <p className="text-[13px] text-[#475467]">
-                      Thank you, <strong className="text-[#111827]">{formName}</strong>. Our corporate advisory team
-                      will call you at <strong className="text-[#111827]">{formPhone}</strong> within 15 minutes.
+                    <h3 className="text-lg font-bold text-slate-900">Application Received!</h3>
+                    <p className="text-[13px] text-slate-600">
+                      Thank you, <strong className="text-slate-900">{formName}</strong>. Our corporate advisory team
+                      will call you at <strong className="text-slate-900">{formPhone}</strong> within 15 minutes.
                     </p>
                     <button
                       onClick={() => setFormSubmitted(false)}
-                      className="px-4 py-2 text-[13px] font-medium text-[#155EEF] hover:underline cursor-pointer"
+                      className="px-4 py-2 text-[13px] font-medium text-emerald-700 hover:underline cursor-pointer"
                     >
                       Submit another query
                     </button>
@@ -1862,7 +1959,7 @@ export default function ServicePageTemplate({
                     <button
                       type="button"
                       onClick={() => alert("Google Single Sign-On simulation. Please fill in the details below.")}
-                      className="w-full flex items-center justify-center gap-3 py-2.5 px-4 bg-white hover:bg-[#F8FAFC] border border-[#D0D5DD] hover:border-[#155EEF] hover:text-[#111827] rounded-xl text-[13.5px] font-medium text-[#344054] shadow-3xs hover:shadow-md hover:shadow-blue-500/10 hover:-translate-y-1 active:translate-y-0 transition-all duration-200 cursor-pointer"
+                      className="w-full flex items-center justify-center gap-3 py-2.5 px-4 bg-white hover:bg-slate-50 border border-slate-200 hover:border-slate-300 rounded-xl text-[13px] font-medium text-slate-700 shadow-2xs hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 cursor-pointer"
                     >
                       <svg className="w-4 h-4" viewBox="0 0 24 24">
                         <path
@@ -1887,8 +1984,8 @@ export default function ServicePageTemplate({
 
                     {/* Divider */}
                     <div className="relative flex items-center justify-center my-2">
-                      <div className="border-t border-[#D0D5DD] w-full" />
-                      <span className="bg-white px-2.5 text-[11px] font-semibold text-[#98A2B3] uppercase tracking-wider absolute">
+                      <div className="border-t border-slate-200 w-full" />
+                      <span className="bg-white px-2.5 text-[10.5px] font-semibold text-slate-400 uppercase tracking-wider absolute">
                         OR
                       </span>
                     </div>
@@ -1901,7 +1998,7 @@ export default function ServicePageTemplate({
                         placeholder="Full Name *"
                         value={formName}
                         onChange={(e) => setFormName(e.target.value)}
-                        className="w-full px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-lg text-[13px] font-normal text-slate-800 placeholder-slate-400 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all"
+                        className="w-full px-4 py-2.5 bg-slate-50/70 border border-slate-200 rounded-xl text-[13px] font-normal text-slate-800 placeholder-slate-400 focus:bg-white focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-none transition-all"
                       />
                     </div>
 
@@ -1913,13 +2010,13 @@ export default function ServicePageTemplate({
                         placeholder="Official Email *"
                         value={formEmail}
                         onChange={(e) => setFormEmail(e.target.value)}
-                        className="w-full px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-lg text-[13px] font-normal text-slate-800 placeholder-slate-400 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all"
+                        className="w-full px-4 py-2.5 bg-slate-50/70 border border-slate-200 rounded-xl text-[13px] font-normal text-slate-800 placeholder-slate-400 focus:bg-white focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-none transition-all"
                       />
                     </div>
 
                     {/* Phone with Flag */}
                     <div className="flex">
-                      <span className="inline-flex items-center gap-1 px-3 py-2.5 bg-[#F8FAFC] border border-r-0 border-[#D0D5DD] rounded-l-lg text-[12.5px] text-slate-600 font-normal select-none">
+                      <span className="inline-flex items-center gap-1 px-3 py-2.5 bg-slate-100 border border-r-0 border-slate-200 rounded-l-xl text-[12.5px] text-slate-600 font-normal select-none">
                         <span>🇮🇳</span>
                         <span>+91</span>
                       </span>
@@ -1930,7 +2027,7 @@ export default function ServicePageTemplate({
                         pattern="[0-9]{10}"
                         value={formPhone}
                         onChange={(e) => setFormPhone(e.target.value)}
-                        className="flex-1 min-w-0 px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-r-lg text-[13px] font-normal text-slate-800 placeholder-slate-400 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all"
+                        className="flex-1 min-w-0 px-4 py-2.5 bg-slate-50/70 border border-slate-200 rounded-r-xl text-[13px] font-normal text-slate-800 placeholder-slate-400 focus:bg-white focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-none transition-all"
                       />
                     </div>
 
@@ -1940,9 +2037,9 @@ export default function ServicePageTemplate({
                         required
                         value={formState}
                         onChange={(e) => setFormState(e.target.value)}
-                        className="w-full px-3.5 py-2.5 bg-white border border-[#D0D5DD] rounded-lg text-[13px] font-normal text-slate-700 focus:border-[#6B4BFF] focus:ring-2 focus:ring-[#6B4BFF]/20 focus:outline-none transition-all cursor-pointer"
+                        className="w-full px-4 py-2.5 bg-slate-50/70 border border-slate-200 rounded-xl text-[13px] font-normal text-slate-700 focus:bg-white focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-none transition-all cursor-pointer"
                       >
-                        <option value="">Select State *</option>
+                        <option value="">Select Operating State *</option>
                         {INDIAN_STATES.map((s) => (
                           <option key={s} value={s}>
                             {s}
@@ -1955,10 +2052,14 @@ export default function ServicePageTemplate({
                     <div className="pt-2">
                       <button
                         type="submit"
-                        className="w-full py-2.5 px-6 rounded-xl font-medium text-[14px] text-white bg-gradient-to-r from-[#594CF5] via-[#7B4CF5] to-[#D946EF] hover:brightness-105 shadow-md shadow-purple-500/20 hover:shadow-xl hover:shadow-purple-500/40 hover:-translate-y-1 active:translate-y-0 hover:scale-[1.01] transition-all duration-200 cursor-pointer"
+                        className="w-full py-3.5 px-6 rounded-full font-medium text-xs sm:text-sm text-white bg-slate-900 hover:bg-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 cursor-pointer flex items-center justify-center gap-2 group"
                       >
-                        Continue &rarr;
+                        <span>Continue Application</span>
+                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                       </button>
+                      <p className="text-[11px] text-slate-400 text-center mt-2 font-medium">
+                        100% Free Initial Assessment • Zero Hidden Costs
+                      </p>
                     </div>
                   </form>
                 )}
@@ -1968,8 +2069,51 @@ export default function ServicePageTemplate({
         </div>
       </section>
 
+      {/* 2.5 Live Statutory Approvals Marquee Ribbon */}
+      <div className="bg-[#FAFBFB] border-b border-slate-200/80 py-2.5 overflow-hidden font-sans select-none relative">
+        <div className="flex items-center gap-4">
+          <div className="shrink-0 flex items-center gap-2 pl-4 sm:pl-6 z-20 bg-[#FAFBFB] pr-3 border-r border-slate-200/90">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-600"></span>
+            </span>
+            <span className="text-[11px] font-semibold text-slate-800 uppercase tracking-wider whitespace-nowrap">
+              Live Approvals
+            </span>
+          </div>
+          <div className="overflow-hidden flex-1">
+            <div className="animate-marquee hover:[animation-play-state:paused] flex items-center gap-3">
+              {[
+                { title: "Pvt Ltd Approved", city: "Bengaluru, KA", sla: "SLA: 3 Days" },
+                { title: "Trademark TM-A Registered", city: "Mumbai, MH", sla: "Direct e-Filing" },
+                { title: "GSTR-3B Tax Return Filed", city: "Delhi NCR", sla: "100% ITC Matched" },
+                { title: "Udyam MSME Certificate Issued", city: "Chennai, TN", sla: "Instant Allotment" },
+                { title: "FSSAI Central License Granted", city: "Ahmedabad, GJ", sla: "5-Year Term" },
+                { title: "DIR-3 KYC Director DIN Authenticated", city: "Pune, MH", sla: "Zero Late Fee" },
+                { title: "Pvt Ltd Approved", city: "Bengaluru, KA", sla: "SLA: 3 Days" },
+                { title: "Trademark TM-A Registered", city: "Mumbai, MH", sla: "Direct e-Filing" },
+                { title: "GSTR-3B Tax Return Filed", city: "Delhi NCR", sla: "100% ITC Matched" },
+              ].map((item, idx) => (
+                <div
+                  key={idx}
+                  className="shrink-0 flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200/80 text-xs text-slate-700 font-medium"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <span className="font-semibold text-slate-900">{item.title}</span>
+                  <span className="text-slate-400">•</span>
+                  <span className="text-slate-500">{item.city}</span>
+                  <span className="text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-100">
+                    {item.sla}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* 3. Social Proof Strip (Single-Row Logo Marquee) */}
-      <section className="py-7 border-b border-slate-100 bg-white overflow-hidden">
+      <section data-reveal className="py-7 border-b border-slate-100 bg-white overflow-hidden">
         <div className="w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-xs font-medium text-slate-400 uppercase tracking-wider shrink-0">
@@ -2014,81 +2158,80 @@ export default function ServicePageTemplate({
       </section>
 
       {/* 3.5. Service Strategic Spotlight: Why Mandatory & Why Choose Merrafilings */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white via-slate-50/40 to-[#FAF9F7]/70 border-b border-slate-100">
-        <div className="w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10 space-y-20 lg:space-y-24">
+      <section data-reveal className="py-16 sm:py-20 lg:py-24 bg-white border-b border-slate-200/80 font-sans relative overflow-hidden">
+        {/* Subtle ambient bloom */}
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-emerald-100/25 blur-3xl rounded-full pointer-events-none" />
+
+        <div className="w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10 space-y-16 lg:space-y-20 relative z-10">
           {/* Part 1: Why Mandatory */}
-          <div className="space-y-10 sm:space-y-12">
-            <div className="text-center max-w-3xl xl:max-w-4xl mx-auto mb-12">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200/60 text-[#155EEF] text-[11px] sm:text-xs font-medium uppercase tracking-wider mb-3">
-                <ShieldCheck className="w-3.5 h-3.5" />
-                {spotlightData.mandatoryTag}
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-normal text-[#111827]">
+          <div className="space-y-8 sm:space-y-10">
+            <div className="text-center max-w-3xl xl:max-w-4xl mx-auto mb-10">
+              <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-800 text-[11px] sm:text-xs font-semibold uppercase tracking-wider mb-3 shadow-2xs">
+                <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+                <span>{spotlightData.mandatoryTag}</span>
+              </div>
+              <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-normal text-slate-900 leading-snug">
                 {spotlightData.mandatoryTitle}
               </h2>
-              <p className="mt-2 text-xs sm:text-sm text-slate-700 font-normal max-w-2xl mx-auto">
+              <p className="mt-2 text-xs sm:text-sm md:text-base text-slate-600 font-normal max-w-2xl mx-auto leading-relaxed">
                 {spotlightData.mandatorySubtitle}
               </p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
-              {/* Left Column: Interactive Compliance Cloud Showcase Card */}
-              <div className="lg:col-span-5 flex flex-col">
-                <div className="bg-slate-900 rounded-2xl sm:rounded-3xl p-6 sm:p-7 text-white shadow-xl shadow-slate-900/10 flex flex-col justify-between border border-slate-800 relative overflow-hidden h-full group">
-                  {/* Subtle Background Glow */}
-                  <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl -z-10 group-hover:bg-emerald-500/15 transition-all duration-500" />
-                  <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -z-10 group-hover:bg-blue-500/15 transition-all duration-500" />
-
-                  {/* Top Bar */}
+              {/* Left Column: Interactive Statutory Gateway Card */}
+              <div className="lg:col-span-5 flex flex-col text-left">
+                <div className="bg-white rounded-3xl p-6 sm:p-7 text-slate-900 shadow-sm flex flex-col justify-between border border-slate-200/90 relative overflow-hidden h-full group hover:border-slate-300 hover:shadow-md transition-all duration-300">
+                  {/* Top Bar with Live Ping */}
                   <div>
-                    <div className="flex items-center justify-between border-b border-slate-800 pb-4 mb-5">
+                    <div className="flex items-center justify-between border-b border-slate-100 pb-4 mb-5">
                       <div className="flex items-center gap-2">
                         <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80" />
                         <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
                         <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
-                        <span className="text-[11px] font-mono text-slate-400 ml-2">merrafilings.gov-sync</span>
+                        <span className="text-[11px] font-mono text-slate-400 ml-2">gov-gateway.merrafilings</span>
                       </div>
-                      <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10.5px] font-medium">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                        Live Registry
+                      <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 text-[11px] font-semibold">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping" />
+                        Live Registry Synced
                       </div>
                     </div>
 
                     {/* Service Name Chip */}
                     <div className="mb-4">
-                      <span className="text-[10px] font-semibold tracking-wider uppercase text-emerald-400 block mb-1">
+                      <span className="text-[10px] font-semibold tracking-wider uppercase text-emerald-700 block mb-1">
                         Active Statutory Flow
                       </span>
-                      <h3 className="text-base sm:text-lg font-semibold text-white">
+                      <h3 className="font-serif text-xl sm:text-2xl font-normal text-slate-900">
                         {breadcrumbCurrent} Gateway
                       </h3>
                     </div>
 
                     {/* Progress Checklist */}
-                    <div className="space-y-2.5 my-5 bg-slate-800/50 p-4 rounded-xl border border-slate-800/80">
+                    <div className="space-y-2.5 my-5 bg-slate-50/80 p-4 rounded-2xl border border-slate-100">
                       {spotlightData.dashboardSteps.map((step, sIdx) => (
-                        <div key={sIdx} className="flex items-start gap-2.5 text-xs text-slate-300">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                          <span className="font-light">{step}</span>
+                        <div key={sIdx} className="flex items-start gap-2.5 text-xs text-slate-700 leading-snug">
+                          <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                          <span className="font-medium">{step}</span>
                         </div>
                       ))}
                     </div>
 
                     {/* Live Metrics Grid */}
                     <div className="grid grid-cols-2 gap-3 mb-6">
-                      <div className="bg-slate-800/60 p-3 rounded-xl border border-slate-800">
-                        <span className="text-[10.5px] text-slate-400 font-light block">
+                      <div className="bg-slate-50/70 p-3.5 rounded-2xl border border-slate-100">
+                        <span className="text-[10.5px] text-slate-500 font-medium block">
                           {spotlightData.dashboardMetric1.label}
                         </span>
-                        <span className="text-sm font-semibold text-white tracking-tight mt-0.5 block">
+                        <span className="text-base font-semibold text-slate-900 tracking-tight mt-0.5 block">
                           {spotlightData.dashboardMetric1.value}
                         </span>
                       </div>
-                      <div className="bg-slate-800/60 p-3 rounded-xl border border-slate-800">
-                        <span className="text-[10.5px] text-slate-400 font-light block">
+                      <div className="bg-slate-50/70 p-3.5 rounded-2xl border border-slate-100">
+                        <span className="text-[10.5px] text-slate-500 font-medium block">
                           {spotlightData.dashboardMetric2.label}
                         </span>
-                        <span className="text-sm font-semibold text-emerald-400 tracking-tight mt-0.5 block">
+                        <span className="text-base font-semibold text-emerald-700 tracking-tight mt-0.5 block">
                           {spotlightData.dashboardMetric2.value}
                         </span>
                       </div>
@@ -2100,49 +2243,52 @@ export default function ServicePageTemplate({
                     <button
                       type="button"
                       onClick={() => openServiceModal(breadcrumbCurrent)}
-                      className="w-full py-3 px-5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-500 hover:brightness-110 shadow-lg shadow-emerald-600/25 hover:shadow-emerald-600/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer"
+                      className="w-full py-3.5 px-5 rounded-full text-xs sm:text-sm font-medium text-white bg-slate-900 hover:bg-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer group"
                     >
-                      <span>File Online with Expert Assistance</span>
-                      <ArrowUpRight className="w-4 h-4" />
+                      <span>File Online with Chartered Accountants</span>
+                      <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                     </button>
-                    <p className="text-[11px] text-slate-400 text-center mt-2.5 font-light">
-                      Toll-Free Helpline: <span className="text-slate-300 font-medium">1800 123 4567</span> • Zero Physical Visits
+                    <p className="text-[11px] text-slate-400 text-center mt-2.5 font-medium">
+                      Dual CA/CS Verification Included • Zero Physical Visits Required
                     </p>
                   </div>
                 </div>
               </div>
 
               {/* Right Column: 4 Strategic Mandate Feature Cards */}
-              <div className="lg:col-span-7 flex flex-col justify-center">
+              <div className="lg:col-span-7 flex flex-col justify-center text-left">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
-                  {spotlightData.mandatoryItems.map((item, idx) => (
-                    <div
-                      key={idx}
-                      className={`p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:shadow-md hover:-translate-y-1 transition-all duration-200 cursor-pointer group flex flex-col justify-between ${item.hoverBorder}`}
-                    >
-                      <div>
-                        <div className={`w-10 h-10 rounded-xl ${item.iconBg} ${item.iconColor} flex items-center justify-center shrink-0 mb-3.5 group-hover:scale-105 transition-transform`}>
-                          {item.icon}
+                  {spotlightData.mandatoryItems.map((item, idx) => {
+                    const colorStyle = getSpotlightCardColorClasses(item);
+                    return (
+                      <div
+                        key={idx}
+                        className={`p-5 sm:p-6 rounded-3xl bg-[#FAFBFB] border border-slate-200/90 shadow-2xs hover:shadow-xl hover:-translate-y-1.5 ${colorStyle.border} ${colorStyle.shadow} transition-all duration-300 cursor-pointer group flex flex-col justify-between`}
+                      >
+                        <div>
+                          <div className={`w-10 h-10 rounded-xl ${item.iconBg} ${item.iconColor} border border-slate-200/60 flex items-center justify-center shrink-0 mb-3.5 group-hover:scale-110 transition-transform`}>
+                            {item.icon}
+                          </div>
+                          <h4 className={`text-[14.5px] sm:text-[15px] font-semibold text-slate-900 ${colorStyle.groupHoverText} transition-colors`}>
+                            {item.title}
+                          </h4>
+                          <p className="text-[12.5px] sm:text-[13px] text-slate-600 font-normal leading-relaxed mt-1.5">
+                            {item.desc}
+                          </p>
                         </div>
-                        <h4 className="text-[14.5px] sm:text-[15px] font-medium text-[#111827] group-hover:text-slate-950 transition-colors">
-                          {item.title}
-                        </h4>
-                        <p className="text-[12.5px] sm:text-[13px] text-slate-800 font-normal leading-relaxed mt-1.5">
-                          {item.desc}
-                        </p>
+                        <div className={`mt-4 pt-3 border-t border-slate-200/80 flex items-center justify-between text-xs text-slate-500 ${colorStyle.groupHoverText}`}>
+                          <span className="text-[11px] font-medium uppercase tracking-wider">Statutory Mandate</span>
+                          <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                        </div>
                       </div>
-                      <div className="mt-3.5 pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 group-hover:text-slate-700">
-                        <span className="text-[11px] font-medium uppercase tracking-wider">Statutory Mandate</span>
-                        <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                      </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Subtle Decorative Section Divider */}
+          {/* Section Divider */}
           <div className="relative">
             <div className="absolute inset-0 flex items-center" aria-hidden="true">
               <div className="w-full border-t border-slate-200/80" />
@@ -2155,105 +2301,108 @@ export default function ServicePageTemplate({
           </div>
 
           {/* Part 2: Why Choose Merrafilings */}
-          <div className="space-y-10 sm:space-y-12">
-            <div className="text-center max-w-3xl xl:max-w-4xl mx-auto mb-12">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/60 text-[#15803D] text-[11px] sm:text-xs font-medium uppercase tracking-wider mb-3">
-                <Award className="w-3.5 h-3.5" />
-                {spotlightData.chooseTag}
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-normal text-[#111827]">
+          <div className="space-y-8 sm:space-y-10">
+            <div className="text-center max-w-3xl xl:max-w-4xl mx-auto mb-10">
+              <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-800 text-[11px] sm:text-xs font-semibold uppercase tracking-wider mb-3 shadow-2xs">
+                <Award className="w-3.5 h-3.5 text-emerald-600" />
+                <span>{spotlightData.chooseTag}</span>
+              </div>
+              <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-normal text-slate-900 leading-snug">
                 {spotlightData.chooseTitle}
               </h2>
-              <p className="mt-2 text-xs sm:text-sm text-slate-700 font-normal max-w-2xl mx-auto">
+              <p className="mt-2 text-xs sm:text-sm md:text-base text-slate-600 font-normal max-w-2xl mx-auto leading-relaxed">
                 {spotlightData.chooseSubtitle}
               </p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
               {/* Left Column: 4 Value Pillar Cards */}
-              <div className="lg:col-span-7 flex flex-col justify-center order-2 lg:order-1">
+              <div className="lg:col-span-7 flex flex-col justify-center order-2 lg:order-1 text-left">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
-                  {spotlightData.chooseItems.map((item, idx) => (
-                    <div
-                      key={idx}
-                      className={`p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:shadow-md hover:-translate-y-1 transition-all duration-200 cursor-pointer group flex flex-col justify-between ${item.hoverBorder}`}
-                    >
-                      <div>
-                        <div className={`w-10 h-10 rounded-xl ${item.iconBg} ${item.iconColor} flex items-center justify-center shrink-0 mb-3.5 group-hover:scale-105 transition-transform`}>
-                          {item.icon}
+                  {spotlightData.chooseItems.map((item, idx) => {
+                    const colorStyle = getSpotlightCardColorClasses(item);
+                    return (
+                      <div
+                        key={idx}
+                        className={`p-5 sm:p-6 rounded-3xl bg-[#FAFBFB] border border-slate-200/90 shadow-2xs hover:shadow-xl hover:-translate-y-1.5 ${colorStyle.border} ${colorStyle.shadow} transition-all duration-300 cursor-pointer group flex flex-col justify-between`}
+                      >
+                        <div>
+                          <div className={`w-10 h-10 rounded-xl ${item.iconBg} ${item.iconColor} border border-slate-200/60 flex items-center justify-center shrink-0 mb-3.5 group-hover:scale-110 transition-transform`}>
+                            {item.icon}
+                          </div>
+                          <h4 className={`text-[14.5px] sm:text-[15px] font-semibold text-slate-900 ${colorStyle.groupHoverText} transition-colors`}>
+                            {item.title}
+                          </h4>
+                          <p className="text-[12.5px] sm:text-[13px] text-slate-600 font-normal leading-relaxed mt-1.5">
+                            {item.desc}
+                          </p>
                         </div>
-                        <h4 className="text-[14.5px] sm:text-[15px] font-medium text-[#111827] group-hover:text-slate-950 transition-colors">
-                          {item.title}
-                        </h4>
-                        <p className="text-[12.5px] sm:text-[13px] text-slate-800 font-normal leading-relaxed mt-1.5">
-                          {item.desc}
-                        </p>
+                        <div className={`mt-4 pt-3 border-t border-slate-200/80 flex items-center justify-between text-xs text-slate-500 ${colorStyle.groupHoverText}`}>
+                          <span className="text-[11px] font-medium uppercase tracking-wider">Guaranteed Quality</span>
+                          <CheckCircle2 className="w-3.5 h-3.5" />
+                        </div>
                       </div>
-                      <div className="mt-3.5 pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 group-hover:text-emerald-700">
-                        <span className="text-[11px] font-medium uppercase tracking-wider">Guaranteed Quality</span>
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                      </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
 
               {/* Right Column: Enterprise Credibility & Assurance Showcase Card */}
-              <div className="lg:col-span-5 flex flex-col order-1 lg:order-2">
-                <div className="bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] rounded-2xl sm:rounded-3xl p-6 sm:p-7 text-white shadow-xl shadow-slate-900/10 flex flex-col justify-between border border-slate-700/80 relative overflow-hidden h-full group">
-                  {/* Background Glow */}
-                  <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -z-10 group-hover:bg-blue-500/15 transition-all duration-500" />
-                  <div className="absolute bottom-0 left-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl -z-10 group-hover:bg-emerald-500/15 transition-all duration-500" />
+              <div className="lg:col-span-5 flex flex-col order-1 lg:order-2 text-left">
+                <div className="bg-white rounded-3xl p-6 sm:p-7 text-slate-900 shadow-sm border border-slate-200/90 hover:border-emerald-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden h-full group">
+                  {/* Subtle Background Glow */}
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-50/50 rounded-full blur-3xl -z-10 group-hover:bg-emerald-100/50 transition-all duration-500" />
+                  <div className="absolute bottom-0 left-0 w-64 h-64 bg-teal-50/50 rounded-full blur-3xl -z-10 group-hover:bg-teal-100/50 transition-all duration-500" />
 
                   {/* Top Stats */}
                   <div>
-                    <div className="flex items-center justify-between border-b border-slate-800 pb-4 mb-5">
-                      <div className="flex items-center gap-1.5 text-amber-400 text-xs font-semibold">
+                    <div className="flex items-center justify-between border-b border-slate-100 pb-4 mb-5">
+                      <div className="flex items-center gap-1.5 text-amber-500 text-xs font-semibold">
                         <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
                         <span>4.9 / 5 Rated Platform</span>
                       </div>
-                      <span className="text-[11px] text-slate-400 font-mono">100,000+ Filings</span>
+                      <span className="text-[11px] text-slate-500 font-mono">100,000+ Filings</span>
                     </div>
 
                     <div className="grid grid-cols-3 gap-2.5 mb-5 text-center">
-                      <div className="bg-slate-800/60 p-2.5 rounded-xl border border-slate-800">
-                        <span className="text-base sm:text-lg font-bold text-white block">100k+</span>
-                        <span className="text-[10px] text-slate-400 block mt-0.5">Enterprises</span>
+                      <div className="bg-[#FAFBFB] p-2.5 rounded-2xl border border-slate-200/80">
+                        <span className="text-base sm:text-lg font-bold text-slate-900 block">100k+</span>
+                        <span className="text-[10px] text-slate-500 block mt-0.5">Enterprises</span>
                       </div>
-                      <div className="bg-slate-800/60 p-2.5 rounded-xl border border-slate-800">
-                        <span className="text-base sm:text-lg font-bold text-emerald-400 block">28</span>
-                        <span className="text-[10px] text-slate-400 block mt-0.5">States &amp; UTs</span>
+                      <div className="bg-[#FAFBFB] p-2.5 rounded-2xl border border-slate-200/80">
+                        <span className="text-base sm:text-lg font-bold text-emerald-700 block">28</span>
+                        <span className="text-[10px] text-slate-500 block mt-0.5">States &amp; UTs</span>
                       </div>
-                      <div className="bg-slate-800/60 p-2.5 rounded-xl border border-slate-800">
-                        <span className="text-base sm:text-lg font-bold text-blue-400 block">99.8%</span>
-                        <span className="text-[10px] text-slate-400 block mt-0.5">Pass SLA</span>
+                      <div className="bg-[#FAFBFB] p-2.5 rounded-2xl border border-slate-200/80">
+                        <span className="text-base sm:text-lg font-bold text-teal-700 block">99.8%</span>
+                        <span className="text-[10px] text-slate-500 block mt-0.5">Pass SLA</span>
                       </div>
                     </div>
 
                     {/* Trust Badges */}
-                    <div className="space-y-2 mb-5">
-                      <div className="flex items-center gap-2 text-xs text-slate-300">
-                        <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+                    <div className="space-y-2.5 mb-5">
+                      <div className="flex items-center gap-2 text-xs text-slate-700">
+                        <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
                         <span>ISO 27001 Certified Bank-Grade Data Vault</span>
                       </div>
-                      <div className="flex items-center gap-2 text-xs text-slate-300">
-                        <Award className="w-4 h-4 text-blue-400 shrink-0" />
-                        <span>Bar Council &amp; ICAI Regulated Practitioners</span>
+                      <div className="flex items-center gap-2 text-xs text-slate-700">
+                        <Award className="w-4 h-4 text-emerald-600 shrink-0" />
+                        <span>ICAI &amp; Bar Council Regulated Practitioners</span>
                       </div>
-                      <div className="flex items-center gap-2 text-xs text-slate-300">
-                        <Clock className="w-4 h-4 text-amber-400 shrink-0" />
+                      <div className="flex items-center gap-2 text-xs text-slate-700">
+                        <Clock className="w-4 h-4 text-teal-600 shrink-0" />
                         <span>Real-Time Government Portal Sync &amp; Challan Storage</span>
                       </div>
                     </div>
 
                     {/* Verified Endorsement */}
-                    <div className="p-3.5 rounded-xl bg-slate-800/50 border border-slate-800/80 mb-5">
-                      <p className="text-[11.5px] text-slate-300 italic leading-relaxed">
+                    <div className="p-4 rounded-2xl bg-[#FAFBFB] border border-slate-200/80 mb-5">
+                      <p className="text-[12px] text-slate-700 italic leading-relaxed">
                         &ldquo;Merrafilings took complete ownership of our corporate filings. Transparent pricing, zero hidden charges, and certificates delivered well ahead of schedule.&rdquo;
                       </p>
-                      <div className="mt-2 text-[10.5px] text-slate-400 flex items-center justify-between">
-                        <span className="font-medium text-slate-200">Vikram Singhania, Founder</span>
-                        <span className="text-emerald-400 font-semibold">&check; Verified Client</span>
+                      <div className="mt-2.5 text-[11px] text-slate-500 flex items-center justify-between">
+                        <span className="font-semibold text-slate-900">Vikram Singhania, Founder</span>
+                        <span className="text-emerald-700 font-semibold">&check; Verified Client</span>
                       </div>
                     </div>
                   </div>
@@ -2263,12 +2412,12 @@ export default function ServicePageTemplate({
                     <button
                       type="button"
                       onClick={() => openServiceModal(breadcrumbCurrent)}
-                      className="w-full py-3 px-5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-[#155EEF] via-[#2563EB] to-[#4F46E5] hover:brightness-110 shadow-lg shadow-blue-600/25 hover:shadow-blue-600/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer"
+                      className="w-full py-3.5 px-5 rounded-full text-xs sm:text-sm font-medium text-white bg-slate-900 hover:bg-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer group/btn"
                     >
                       <span>Speak to a Senior Specialist</span>
-                      <ArrowUpRight className="w-4 h-4" />
+                      <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
                     </button>
-                    <p className="text-[11px] text-slate-400 text-center mt-2.5 font-light">
+                    <p className="text-[11px] text-slate-400 text-center mt-2 font-medium">
                       Instant Callback Within 15 Minutes • Confidential &amp; Protected
                     </p>
                   </div>
@@ -2280,37 +2429,61 @@ export default function ServicePageTemplate({
       </section>
 
       {/* 4. Redesigned Pricing Studio: Structured Tier Comparison */}
-      <section id="pricing" className="py-16 sm:py-20 bg-[#FAF9F7]/70 border-b border-slate-100">
+      <section id="pricing" data-reveal className="py-16 sm:py-20 bg-[#FAFBFB] border-b border-slate-200/80 font-sans">
         <div className="w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10">
-          <div className="text-center max-w-3xl xl:max-w-4xl mx-auto mb-12">
-            <h2 className="text-2xl sm:text-3xl font-normal text-[#111827]">{pricingTitle}</h2>
-            <p className="mt-2 text-xs sm:text-sm text-slate-700 font-normal">{pricingSubtitle}</p>
+          <div className="text-center max-w-3xl xl:max-w-4xl mx-auto mb-12 sm:mb-14">
+            <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-800 text-[11px] sm:text-xs font-semibold uppercase tracking-wider mb-3 shadow-2xs">
+              <Receipt className="w-3.5 h-3.5 text-emerald-600" />
+              <span>Transparent Statutory Fees</span>
+            </div>
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-normal text-slate-900 leading-snug">
+              {pricingTitle}
+            </h2>
+            <p className="mt-2 text-xs sm:text-sm md:text-base text-slate-600 font-normal max-w-2xl mx-auto leading-relaxed">
+              {pricingSubtitle}
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 xl:gap-10 items-stretch">
             {packages.map((pkg, idx) => {
               const cardNum = idx + 1;
               const isPopular = pkg.popular || idx === 1;
+              const tierLabel = idx === 0 ? "Starter Tier" : isPopular ? "Flagship Package" : "Complete Coverage";
+              const tierChipColor = idx === 0
+                ? "bg-slate-100 text-slate-700 border-slate-200/80"
+                : isPopular
+                ? "bg-emerald-100 text-emerald-800 border-emerald-200/80"
+                : "bg-blue-50 text-blue-700 border-blue-200/80";
+
               return (
                 <div
                   key={idx}
-                  className={`group bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 ease-out cursor-pointer relative ${
+                  data-reveal
+                  className={`group rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 ease-out cursor-pointer relative text-left ${
                     isPopular
-                      ? "border-[2px] border-[#00B074] shadow-[0_12px_32px_rgba(0,176,116,0.12)] hover:shadow-[0_20px_42px_rgba(0,176,116,0.25)] -translate-y-1 hover:-translate-y-2.5"
-                      : "border border-slate-200/90 hover:border-[#00B074] shadow-xs hover:shadow-xl hover:shadow-slate-900/10 hover:-translate-y-2"
-                  }`}
+                      ? "bg-gradient-to-b from-emerald-50/40 via-white to-white border-2 border-emerald-500 shadow-[0_16px_40px_rgba(5,150,105,0.14)] hover:shadow-[0_24px_50px_rgba(5,150,105,0.22)] md:-translate-y-2 hover:-translate-y-3 ring-1 ring-emerald-500/20"
+                      : "bg-white border border-slate-200/90 hover:border-slate-300 shadow-2xs hover:shadow-xl hover:-translate-y-1.5"
+                  } stagger-${idx + 1}`}
                 >
                   {isPopular && (
-                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#00B074] text-white text-[11px] font-semibold uppercase tracking-wider py-1 px-4 rounded-full shadow-sm">
-                      {pkg.badge || "Most Popular"}
+                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-600 text-white text-[11px] font-bold uppercase tracking-wider py-1 px-4 rounded-full shadow-md shadow-emerald-600/30">
+                      <Sparkles className="w-3.5 h-3.5 text-emerald-100" />
+                      <span>{pkg.badge || "Most Popular • Best Value"}</span>
                     </div>
                   )}
 
                   <div>
-                    <h3 className="text-[17px] sm:text-[18px] font-normal text-[#111827] group-hover:text-emerald-950 transition-colors">
+                    {/* Tier Chip */}
+                    <div className={`inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-bold tracking-wider uppercase border mb-3 ${tierChipColor}`}>
+                      {isPopular && <Zap className="w-3 h-3 text-emerald-600" />}
+                      {idx === 2 && <ShieldCheck className="w-3 h-3 text-blue-600" />}
+                      <span>{tierLabel}</span>
+                    </div>
+
+                    <h3 className="font-serif text-xl sm:text-2xl font-normal text-slate-900 group-hover:text-emerald-800 transition-colors">
                       {pkg.name}
                     </h3>
-                    <p className="text-[12.5px] font-normal text-slate-700 mt-2 leading-relaxed">
+                    <p className="text-xs sm:text-[13px] font-normal text-slate-600 mt-2 leading-relaxed">
                       {pkg.shortDesc}{" "}
                       {pkg.expandedDesc && (
                         <button
@@ -2319,7 +2492,7 @@ export default function ServicePageTemplate({
                             e.stopPropagation();
                             setExpandedCard(expandedCard === cardNum ? null : cardNum);
                           }}
-                          className="text-[#155EEF] font-normal hover:underline inline-flex items-center gap-0.5 cursor-pointer"
+                          className="text-emerald-700 font-semibold hover:underline inline-flex items-center gap-0.5 cursor-pointer ml-1"
                         >
                           {expandedCard === cardNum ? "Read less ⌃" : "Read more ⌵"}
                         </button>
@@ -2327,56 +2500,76 @@ export default function ServicePageTemplate({
                     </p>
 
                     {pkg.expandedDesc && expandedCard === cardNum && (
-                      <p className="text-[12px] font-normal text-slate-800 mt-2 bg-[#F8FAFC] p-3 rounded-lg border border-[#E4E7EC]">
+                      <p className="text-xs font-normal text-slate-700 mt-2.5 bg-slate-50 p-3.5 rounded-xl border border-slate-200 leading-relaxed animate-fadeIn">
                         {pkg.expandedDesc}
                       </p>
                     )}
 
-                    <div className="mt-5 mb-5">
-                      <div className="text-[26px] sm:text-[28px] font-normal text-[#111827] tracking-tight">
-                        {pkg.price}
+                    {/* Price Header Strip */}
+                    <div className="mt-5 mb-5 pb-5 border-b border-slate-100">
+                      <div className="flex items-baseline gap-1">
+                        <span className="font-serif text-3xl sm:text-[38px] font-normal text-slate-900 tracking-tight">
+                          {pkg.price}
+                        </span>
                       </div>
-                      <p className="text-[11.5px] font-normal text-slate-600 mt-0.5">{pkg.priceSub}</p>
+                      <p className="text-[11.5px] font-medium text-slate-500 mt-0.5">
+                        {pkg.priceSub}
+                      </p>
+
+                      {/* Assurance Chip */}
+                      {isPopular ? (
+                        <div className="mt-2.5 text-[11px] font-semibold text-emerald-800 bg-emerald-50/90 px-2.5 py-1 rounded-lg border border-emerald-200/80 inline-flex items-center gap-1.5">
+                          <Zap className="w-3.5 h-3.5 text-emerald-600" />
+                          <span>Fast-Track Express Filing Included</span>
+                        </div>
+                      ) : idx === 0 ? (
+                        <div className="mt-2.5 text-[11px] font-medium text-slate-600 bg-slate-100/80 px-2.5 py-1 rounded-lg border border-slate-200/80 inline-flex items-center gap-1.5">
+                          <ShieldCheck className="w-3.5 h-3.5 text-slate-500" />
+                          <span>Statutory Government Portal Lodgement</span>
+                        </div>
+                      ) : (
+                        <div className="mt-2.5 text-[11px] font-semibold text-blue-800 bg-blue-50/90 px-2.5 py-1 rounded-lg border border-blue-200/80 inline-flex items-center gap-1.5">
+                          <Award className="w-3.5 h-3.5 text-blue-600" />
+                          <span>Dual CA &amp; Legal Advisory Sign-Off</span>
+                        </div>
+                      )}
                     </div>
 
-                    <div className="pt-2">
-                      <p className="text-[12.5px] font-semibold text-slate-800 mb-3">What&apos;s included:</p>
-                      <ul className="space-y-2 text-[12.5px] font-normal text-slate-800">
+                    {/* Feature Inclusions Checklist */}
+                    <div className="pt-1">
+                      <p className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-3.5">
+                        What&apos;s included in this plan:
+                      </p>
+                      <ul className="space-y-3 text-xs sm:text-[13px] font-medium text-slate-700">
                         {pkg.features.map((feat, fIdx) => (
-                          <li key={fIdx} className="flex items-center gap-2">
-                            <svg
-                              className="w-3.5 h-3.5 text-[#00B074] shrink-0 group-hover:scale-110 transition-transform duration-200"
-                              viewBox="0 0 16 16"
-                              fill="none"
-                            >
-                              <circle cx="8" cy="8" r="7" stroke="#00B074" strokeWidth="1.2" />
-                              <path
-                                d="M5 8.2l2 2 4-4.4"
-                                stroke="#00B074"
-                                strokeWidth="1.4"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              />
-                            </svg>
-                            <span>{feat}</span>
+                          <li key={fIdx} className="flex items-start gap-2.5">
+                            <div className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100/90 flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-110 transition-transform">
+                              <Check className="w-3 h-3 stroke-[2.5]" />
+                            </div>
+                            <span className="leading-snug text-slate-700 font-normal">{feat}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
                   </div>
 
-                  <div className="mt-8 pt-2">
+                  {/* Clean Action Button */}
+                  <div className="mt-8 pt-5 border-t border-slate-100">
                     <button
                       type="button"
                       onClick={() => openServiceModal(pkg.name)}
-                      className={`w-full py-2.5 px-4 rounded-xl font-medium text-[14px] transition-all duration-200 cursor-pointer shadow-xs hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 ${
+                      className={`w-full py-3.5 px-6 rounded-full font-medium text-xs sm:text-sm transition-all duration-200 cursor-pointer shadow-sm hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2 group/btn ${
                         isPopular
-                          ? "text-white bg-[#00B074] hover:bg-[#009B66] shadow-sm hover:shadow-emerald-500/25"
-                          : "text-[#00B074] bg-[#E8FAF2] group-hover:bg-[#00B074] group-hover:text-white border border-[#00B074]/35 hover:shadow-emerald-500/20"
+                          ? "text-white bg-slate-900 hover:bg-emerald-600 hover:shadow-emerald-600/25"
+                          : "text-slate-800 bg-slate-100 hover:bg-slate-200 hover:text-slate-950"
                       }`}
                     >
-                      Register Now
+                      <span>{isPopular ? "Get Started Now" : "Select Package"}</span>
+                      <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
                     </button>
+                    <p className="text-[11px] text-slate-400 text-center mt-2.5 font-medium">
+                      Zero Hidden Costs • Instant Filing Setup
+                    </p>
                   </div>
                 </div>
               );
@@ -2386,45 +2579,47 @@ export default function ServicePageTemplate({
       </section>
 
       {/* 5. Comprehensive Knowledge Hub: Editorial Workspace + Intelligence Rail */}
-      <section id="overview-section" className="py-14 sm:py-16 bg-white">
+      <section id="overview-section" data-reveal className="py-14 sm:py-16 bg-white font-sans">
         <div className="w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10">
           {/* Breadcrumb Navigation */}
-          <nav className="flex items-center gap-2 text-[13px] font-normal text-slate-700 mb-6 flex-wrap">
-            <a href="/" className="hover:text-[#155EEF] transition-colors">
-              Merrafilings
+          <nav className="flex items-center gap-2 text-xs sm:text-[13px] font-medium text-slate-500 mb-6 flex-wrap">
+            <a href="/" className="hover:text-slate-900 transition-colors">
+              Home
             </a>
             <span className="text-slate-300">/</span>
-            <a href="/registrations" className="hover:text-[#155EEF] transition-colors">
+            <a href="/registrations" className="hover:text-slate-900 transition-colors">
               Registrations
             </a>
             <span className="text-slate-300">/</span>
-            <span className="text-[#00B074] font-normal">{breadcrumbCurrent}</span>
+            <span className="text-emerald-700 font-semibold">{breadcrumbCurrent}</span>
           </nav>
 
           {/* Quick-Jump Floating Navigation Strip */}
-          <div className="mb-8 p-2 rounded-2xl bg-[#F8FAFC] border border-slate-200/80 flex items-center gap-2 overflow-x-auto scrollbar-none text-[12.5px]">
-            <span className="text-slate-400 px-2 font-medium shrink-0">Quick Jump:</span>
+          <div className="mb-8 p-1.5 rounded-2xl bg-slate-100/90 border border-slate-200/80 flex items-center gap-2 overflow-x-auto scrollbar-none text-xs">
+            <span className="text-slate-400 px-3 font-semibold uppercase tracking-wider shrink-0 text-[11px]">
+              Quick Jump:
+            </span>
             <a
               href="#overview-section"
-              className="px-3 py-1.5 rounded-lg bg-white border border-slate-200/80 text-slate-700 hover:text-[#00B074] hover:border-[#00B074] shadow-3xs transition-all whitespace-nowrap"
+              className="px-3 py-1.5 rounded-xl bg-white text-slate-700 hover:text-emerald-700 border border-slate-200/80 shadow-2xs transition-all whitespace-nowrap font-medium"
             >
               Overview &amp; Guide
             </a>
             <a
               href="#documents-required"
-              className="px-3 py-1.5 rounded-lg bg-white border border-slate-200/80 text-slate-700 hover:text-[#00B074] hover:border-[#00B074] shadow-3xs transition-all whitespace-nowrap"
+              className="px-3 py-1.5 rounded-xl bg-white text-slate-700 hover:text-emerald-700 border border-slate-200/80 shadow-2xs transition-all whitespace-nowrap font-medium"
             >
               Documents Required
             </a>
             <a
               href="#pricing"
-              className="px-3 py-1.5 rounded-lg bg-white border border-slate-200/80 text-slate-700 hover:text-[#00B074] hover:border-[#00B074] shadow-3xs transition-all whitespace-nowrap"
+              className="px-3 py-1.5 rounded-xl bg-white text-slate-700 hover:text-emerald-700 border border-slate-200/80 shadow-2xs transition-all whitespace-nowrap font-medium"
             >
               Fee &amp; Packages
             </a>
             <a
               href="#faqs"
-              className="px-3 py-1.5 rounded-lg bg-white border border-slate-200/80 text-slate-700 hover:text-[#00B074] hover:border-[#00B074] shadow-3xs transition-all whitespace-nowrap"
+              className="px-3 py-1.5 rounded-xl bg-white text-slate-700 hover:text-emerald-700 border border-slate-200/80 shadow-2xs transition-all whitespace-nowrap font-medium"
             >
               FAQs
             </a>
@@ -2433,13 +2628,30 @@ export default function ServicePageTemplate({
           {/* Asymmetric Reading Architecture (8 Cols Editorial + 4 Cols Rail) */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
             {/* Main Editorial Workspace (8 Cols) */}
-            <div className="lg:col-span-8">
-              <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/80 p-6 sm:p-10 shadow-xs border-t-4 border-t-emerald-500">
-                <article className="max-w-none space-y-8">
+            <div className="lg:col-span-8 text-left">
+              <div className="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-10 shadow-xs border-t-4 border-t-emerald-600">
+                {/* Verified CA Author Header */}
+                <div className="flex flex-wrap items-center justify-between pb-6 mb-8 border-b border-slate-100 gap-3 text-xs text-slate-500">
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-8 h-8 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-700 font-bold text-xs">
+                      CA
+                    </div>
+                    <div>
+                      <span className="font-semibold text-slate-900 block">Reviewed by CA Regulatory Desk</span>
+                      <span className="text-[11px] text-slate-400">Statutory Compliance Verified • Updated FY 2024–25</span>
+                    </div>
+                  </div>
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-50 border border-slate-200/60 font-medium text-slate-600 text-[11px]">
+                    <Clock className="w-3.5 h-3.5 text-slate-400" />
+                    4 Min Read
+                  </span>
+                </div>
+
+                <article className="max-w-none space-y-8 text-[#0F172A] font-normal">
                   {/* Title */}
                   {guideTitle && (
                     <div>
-                      <h1 className="text-2xl sm:text-[26px] md:text-[28px] font-normal text-[#1F1646] text-center mb-6 leading-snug">
+                      <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl font-normal text-slate-900 text-left mb-6 leading-snug">
                         {guideTitle}
                       </h1>
                     </div>
@@ -2452,18 +2664,18 @@ export default function ServicePageTemplate({
             </div>
 
             {/* Right Intelligence Rail (4 Cols) - Sticky */}
-            <div className="lg:col-span-4 space-y-6 lg:sticky lg:top-24">
+            <div className="lg:col-span-4 space-y-6 lg:sticky lg:top-24 text-left">
               {/* Card 1: Consult Experts Concierge */}
               <div
                 onClick={() => openServiceModal()}
-                className="bg-white rounded-2xl border border-slate-200/80 shadow-xs hover:border-[#155EEF] hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1.5 p-5 transition-all duration-300 cursor-pointer group"
+                className="bg-white rounded-3xl border border-slate-200/90 shadow-2xs hover:border-emerald-300 hover:shadow-xl hover:-translate-y-1.5 p-5 transition-all duration-300 cursor-pointer group"
               >
                 <div className="flex items-center justify-between mb-3">
-                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full group-hover:bg-emerald-100 transition-colors">
+                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-full group-hover:bg-emerald-100 transition-colors">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                     3 Advisors Online
                   </span>
-                  <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-[#155EEF] group-hover:translate-x-0.5 transition-all" />
+                  <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-emerald-700 group-hover:translate-x-0.5 transition-all" />
                 </div>
 
                 <div className="flex items-center gap-3">
@@ -2485,21 +2697,21 @@ export default function ServicePageTemplate({
                     />
                   </div>
                   <div>
-                    <div className="text-[14px] font-medium text-slate-800 group-hover:text-blue-950 transition-colors">
-                      Consult <span className="text-[#155EEF]">Specialists</span>
+                    <div className="text-xs sm:text-[13.5px] font-semibold text-slate-900 group-hover:text-emerald-800 transition-colors">
+                      Consult Advisory Desk
                     </div>
-                    <div className="text-[11.5px] text-slate-500 font-light">Free 15-min assessment call</div>
+                    <div className="text-[11px] text-slate-500 font-normal">Free 15-min assessment call</div>
                   </div>
                 </div>
               </div>
 
               {/* Card 2: Curated Related Guides */}
-              <div className="bg-white rounded-2xl border border-slate-200/80 shadow-xs hover:border-slate-300 hover:shadow-md transition-all duration-300 overflow-hidden border-t-2 border-t-emerald-500">
+              <div className="bg-white rounded-3xl border border-slate-200/90 shadow-2xs hover:border-slate-300 hover:shadow-md transition-all duration-300 overflow-hidden border-t-2 border-t-emerald-600">
                 <div className="p-5">
-                  <h4 className="font-semibold text-[15px] text-[#0F172A] mb-4">
+                  <h4 className="font-semibold text-xs sm:text-[14px] text-slate-900 mb-4 uppercase tracking-wider text-slate-500">
                     {relatedGuidesTitle}
                   </h4>
-                  <ul className="space-y-2.5 text-[13px]">
+                  <ul className="space-y-2 text-xs sm:text-[13px]">
                     {relatedGuides.map((guide, idx) => {
                       const title = typeof guide === "string" ? guide : guide.title;
                       const href = typeof guide === "string" ? "#overview-section" : guide.href;
@@ -2507,10 +2719,10 @@ export default function ServicePageTemplate({
 
                       const linkContent = (
                         <>
-                          <span className="text-[#155EEF] font-semibold group-hover:translate-x-1 shrink-0 text-[14px] leading-tight transition-transform duration-200 mt-0.5">
+                          <span className="text-emerald-700 font-semibold group-hover:translate-x-1 shrink-0 text-sm leading-tight transition-transform duration-200 mt-0.5">
                             &rarr;
                           </span>
-                          <span className="line-clamp-2 leading-snug text-[#1E293B] group-hover:text-[#155EEF] font-medium transition-colors">
+                          <span className="line-clamp-2 leading-snug text-slate-800 group-hover:text-emerald-700 font-medium transition-colors">
                             {title}
                           </span>
                         </>
@@ -2521,14 +2733,14 @@ export default function ServicePageTemplate({
                           {isExternal ? (
                             <a
                               href={href}
-                              className="flex items-start gap-3 p-2 rounded-xl hover:bg-[#F0F7FF] transition-all duration-200 group hover:pl-2.5"
+                              className="flex items-start gap-2.5 p-1.5 rounded-xl hover:bg-slate-50 transition-all duration-200 group hover:pl-2"
                             >
                               {linkContent}
                             </a>
                           ) : (
                             <Link
                               href={href}
-                              className="flex items-start gap-3 p-2 rounded-xl hover:bg-[#F0F7FF] transition-all duration-200 group hover:pl-2.5"
+                              className="flex items-start gap-2.5 p-1.5 rounded-xl hover:bg-slate-50 transition-all duration-200 group hover:pl-2"
                             >
                               {linkContent}
                             </Link>
@@ -2541,9 +2753,9 @@ export default function ServicePageTemplate({
               </div>
 
               {/* Card 3: State Directory Drawer */}
-              <div className="bg-white rounded-2xl border border-slate-200/80 shadow-xs hover:border-slate-300 hover:shadow-md transition-all duration-300 overflow-hidden border-t-2 border-t-emerald-400">
+              <div className="bg-white rounded-3xl border border-slate-200/90 shadow-2xs hover:border-slate-300 hover:shadow-md transition-all duration-300 overflow-hidden border-t-2 border-t-emerald-500">
                 <div className="p-4 border-b border-slate-100 flex items-center justify-between">
-                  <span className="font-normal text-[14px] text-slate-800">Registration by State</span>
+                  <span className="font-semibold text-xs sm:text-[13.5px] text-slate-900">Registration by State</span>
                   <button
                     onClick={() => setStateListOpen(!stateListOpen)}
                     className="p-1 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md transition-colors cursor-pointer"
@@ -2552,12 +2764,12 @@ export default function ServicePageTemplate({
                   </button>
                 </div>
                 {stateListOpen && (
-                  <div className="max-h-[360px] overflow-y-auto p-4 space-y-1.5 text-[12.5px] font-light">
+                  <div className="max-h-[360px] overflow-y-auto p-4 space-y-1.5 text-xs font-normal">
                     {INDIAN_STATES.slice(0, 18).map((st, idx) => (
                       <a
                         key={idx}
                         href="#overview-section"
-                        className="flex items-center justify-between py-2 px-2.5 text-[#00B074] hover:text-emerald-700 hover:bg-emerald-50 rounded-lg transition-all duration-200 hover:pl-3.5 border-b border-slate-50 last:border-0"
+                        className="flex items-center justify-between py-2 px-2.5 text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/60 rounded-xl transition-all duration-200 hover:pl-3 border-b border-slate-50 last:border-0"
                       >
                         <span>
                           {breadcrumbCurrent} in {st}
@@ -2574,11 +2786,13 @@ export default function ServicePageTemplate({
       </section>
 
       {/* 6. Redesigned FAQ Hub */}
-      <section id="faqs" className="py-16 sm:py-20 bg-white border-t border-slate-100">
-        <div className="w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10">
-          <div className="w-12 h-[3px] bg-[#00A86B] mb-3" />
-          <h2 className="text-2xl sm:text-[28px] font-normal text-[#111827]">Frequently asked questions</h2>
-          <p className="text-[13px] sm:text-[13.5px] font-normal text-slate-700 mt-1.5 mb-8">
+      <section id="faqs" data-reveal className="py-16 sm:py-20 bg-[#FAFBFB] border-t border-slate-200/80 font-sans">
+        <div className="w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10 text-left">
+          <div className="w-12 h-1 bg-emerald-600 rounded-full mb-3" />
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-normal text-slate-900">
+            Frequently asked questions
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-600 font-normal mt-1.5 mb-8">
             {faqSubtitle || `Common questions about ${breadcrumbCurrent} in India.`}
           </p>
 
@@ -2592,22 +2806,22 @@ export default function ServicePageTemplate({
                   <div
                     key={idx}
                     onClick={() => setOpenFaq(isOpen ? null : faqId)}
-                    className={`bg-white rounded-xl border transition-all duration-200 cursor-pointer overflow-hidden group ${
-                      isOpen ? "border-[#00B074] shadow-xs" : "border-slate-200/90 hover:border-[#00B074] hover:shadow-md hover:-translate-y-0.5"
+                    className={`bg-white rounded-2xl border transition-all duration-200 cursor-pointer overflow-hidden group ${
+                      isOpen ? "border-emerald-600 shadow-xs" : "border-slate-200/90 hover:border-emerald-300 hover:shadow-md hover:-translate-y-0.5"
                     }`}
                   >
                     <div className="py-4 px-5 flex items-center justify-between gap-4">
-                      <span className="font-normal text-[13.5px] sm:text-[14px] text-slate-800 leading-snug group-hover:text-slate-900">
+                      <span className="font-medium text-xs sm:text-[14px] text-slate-900 leading-snug group-hover:text-emerald-800">
                         {faq.q}
                       </span>
                       <ChevronDown
                         className={`w-4 h-4 shrink-0 transition-transform duration-200 ${
-                          isOpen ? "rotate-180 text-[#00B074]" : "text-slate-400 group-hover:text-slate-600"
+                          isOpen ? "rotate-180 text-emerald-600" : "text-slate-400 group-hover:text-slate-600"
                         }`}
                       />
                     </div>
                     {isOpen && (
-                      <div className="px-5 pb-4.5 pt-1 text-[13.5px] font-normal text-slate-800 leading-relaxed border-t border-slate-100 bg-[#F8FAFC]/50">
+                      <div className="px-5 pb-4 pt-1 text-xs sm:text-[13px] font-normal text-slate-600 leading-relaxed border-t border-slate-100 bg-slate-50/50">
                         {faq.a}
                       </div>
                     )}
@@ -2625,22 +2839,22 @@ export default function ServicePageTemplate({
                   <div
                     key={idx}
                     onClick={() => setOpenFaq(isOpen ? null : faqId)}
-                    className={`bg-white rounded-xl border transition-all duration-200 cursor-pointer overflow-hidden group ${
-                      isOpen ? "border-[#00B074] shadow-xs" : "border-slate-200/90 hover:border-[#00B074] hover:shadow-md hover:-translate-y-0.5"
+                    className={`bg-white rounded-2xl border transition-all duration-200 cursor-pointer overflow-hidden group ${
+                      isOpen ? "border-emerald-600 shadow-xs" : "border-slate-200/90 hover:border-emerald-300 hover:shadow-md hover:-translate-y-0.5"
                     }`}
                   >
                     <div className="py-4 px-5 flex items-center justify-between gap-4">
-                      <span className="font-normal text-[13.5px] sm:text-[14px] text-slate-800 leading-snug group-hover:text-slate-900">
+                      <span className="font-medium text-xs sm:text-[14px] text-slate-900 leading-snug group-hover:text-emerald-800">
                         {faq.q}
                       </span>
                       <ChevronDown
                         className={`w-4 h-4 shrink-0 transition-transform duration-200 ${
-                          isOpen ? "rotate-180 text-[#00B074]" : "text-slate-400 group-hover:text-slate-600"
+                          isOpen ? "rotate-180 text-emerald-600" : "text-slate-400 group-hover:text-slate-600"
                         }`}
                       />
                     </div>
                     {isOpen && (
-                      <div className="px-5 pb-4.5 pt-1 text-[13.5px] font-normal text-slate-800 leading-relaxed border-t border-slate-100 bg-[#F8FAFC]/50">
+                      <div className="px-5 pb-4 pt-1 text-xs sm:text-[13px] font-normal text-slate-600 leading-relaxed border-t border-slate-100 bg-slate-50/50">
                         {faq.a}
                       </div>
                     )}
@@ -2656,7 +2870,7 @@ export default function ServicePageTemplate({
               <button
                 type="button"
                 onClick={() => setShowMoreFaqs(!showMoreFaqs)}
-                className="px-6 py-2.5 rounded-lg bg-[#00A86B] hover:bg-[#00925d] text-white text-[13.5px] font-medium transition-all duration-200 shadow-xs hover:shadow-lg hover:shadow-emerald-500/25 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer inline-flex items-center gap-1.5"
+                className="px-6 py-2.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white text-xs sm:text-sm font-medium transition-all duration-200 shadow-xs hover:shadow-md hover:-translate-y-0.5 cursor-pointer inline-flex items-center gap-1.5"
               >
                 <span>{showMoreFaqs ? "Show less questions" : "Load more questions"}</span>
               </button>
@@ -2664,16 +2878,16 @@ export default function ServicePageTemplate({
           )}
 
           {/* Related Services Discovery */}
-          <div className="bg-white rounded-2xl border border-slate-200/90 shadow-2xs p-5 sm:p-6 mb-6">
-            <h3 className="font-normal text-[15px] sm:text-[16px] text-slate-800 mb-4">
-              Related Services - Business &amp; Corporate Registration
+          <div className="bg-white rounded-3xl border border-slate-200/90 shadow-2xs p-6 mb-6">
+            <h3 className="font-semibold text-xs sm:text-[14px] text-slate-900 mb-4 uppercase tracking-wider text-slate-400">
+              Related Corporate Services
             </h3>
-            <div className="flex flex-wrap gap-2 sm:gap-2.5">
+            <div className="flex flex-wrap gap-2">
               {relatedServicesTags.map((tag, idx) => (
                 <a
                   key={idx}
                   href="#pricing"
-                  className="inline-flex items-center px-3.5 py-1.5 rounded-lg border border-slate-200/90 bg-white text-[12px] sm:text-[12.5px] font-light text-slate-600 hover:text-[#00A86B] hover:border-[#00A86B] hover:bg-emerald-50/50 hover:shadow-xs hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
+                  className="inline-flex items-center px-3.5 py-1.5 rounded-full border border-slate-200/90 bg-white text-xs font-medium text-slate-600 hover:text-emerald-700 hover:border-emerald-300 hover:bg-emerald-50/50 hover:shadow-xs hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
                 >
                   {tag}
                 </a>
@@ -2682,14 +2896,16 @@ export default function ServicePageTemplate({
           </div>
 
           {/* Popular Searches */}
-          <div className="bg-white rounded-2xl border border-slate-200/90 shadow-2xs p-5 sm:p-6 mb-6">
-            <h3 className="font-normal text-[15px] sm:text-[16px] text-slate-800 mb-4">Popular Searches</h3>
-            <div className="flex flex-wrap gap-2 sm:gap-2.5">
+          <div className="bg-white rounded-3xl border border-slate-200/90 shadow-2xs p-6 mb-6">
+            <h3 className="font-semibold text-xs sm:text-[14px] text-slate-900 mb-4 uppercase tracking-wider text-slate-400">
+              Popular Regulatory Searches
+            </h3>
+            <div className="flex flex-wrap gap-2">
               {popularSearchesTags.map((tag, idx) => (
                 <a
                   key={idx}
                   href="#pricing"
-                  className="inline-flex items-center px-3.5 py-1.5 rounded-lg border border-slate-200/90 bg-white text-[12px] sm:text-[12.5px] font-light text-slate-600 hover:text-[#00A86B] hover:border-[#00A86B] hover:bg-emerald-50/50 hover:shadow-xs hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
+                  className="inline-flex items-center px-3.5 py-1.5 rounded-full border border-slate-200/90 bg-white text-xs font-medium text-slate-600 hover:text-emerald-700 hover:border-emerald-300 hover:bg-emerald-50/50 hover:shadow-xs hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
                 >
                   {tag}
                 </a>

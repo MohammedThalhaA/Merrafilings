@@ -316,10 +316,10 @@ function CompanyGuideContent() {
                 <h1 className="text-2xl sm:text-[26px] md:text-[28px] font-normal text-[#1F1646] text-center mb-6 leading-snug">
                   Private Limited Company Registration Online in India
                 </h1>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-3">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-3">
                   A <strong className="font-medium text-slate-800">Private Limited Company</strong> is India&apos;s most sought-after and respected corporate structure for entrepreneurs, startups, and growing enterprises. Regulated by the <strong className="font-medium text-slate-800">Companies Act, 2013</strong> and the Ministry of Corporate Affairs (MCA), it grants limited liability protection, a separate legal personality, and an established framework for raising venture capital and equity funding.
                 </p>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed">
                   With a Private Limited Company, shareholders are not personally liable for company debts beyond their subscribed share capital. At <a href="/" className="text-[#00B074] hover:underline font-normal">Merrafilings</a>, our team of dedicated Chartered Accountants and corporate lawyers manage your entire incorporation process—from RUN name reservation to Certificate of Incorporation and post-incorporation commencement filings.
                 </p>
               </div>
@@ -329,11 +329,11 @@ function CompanyGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Why Should You Register a Private Limited Company?
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   Entrepreneurs choose the Private Limited corporate structure because it provides the strongest institutional foundation for business expansion:
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[12.5px] font-light text-slate-700">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[12.5px] font-normal text-slate-900">
                   <div className="p-3.5 rounded-xl border border-slate-200/80 bg-[#FAF9F7]/70">
                     <strong className="font-medium text-slate-900 block mb-1">
                       Investor Ready &amp; Easy Equity Funding
@@ -366,12 +366,12 @@ function CompanyGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Statutory Minimum Requirements for Company Registration
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   Before applying on the MCA SPICe+ portal, verify that your founding group satisfies these corporate standards:
                 </p>
 
                 <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-4">
-                  <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                  <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                     <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                       <tr>
                         <th className="py-3 px-4 font-normal">Requirement</th>
@@ -401,7 +401,7 @@ function CompanyGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Eligibility Criteria for Directors &amp; Shareholders
                 </h2>
-                <div className="space-y-3 text-[13px] font-light text-slate-600">
+                <div className="space-y-3 text-[13px] font-normal text-slate-900">
                   <div className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full bg-emerald-100 text-[#00A86B] flex items-center justify-center shrink-0 mt-0.5 text-xs font-semibold">
                       ✓
@@ -442,7 +442,7 @@ function CompanyGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Documents Required for Company Registration in India
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   Keep clear digital scanned copies of the following documents ready for frictionless MCA filing:
                 </p>
 
@@ -453,7 +453,7 @@ function CompanyGuideContent() {
                       <Users className="w-4 h-4 text-[#6B4BFF]" />
                       <span>For All Directors &amp; Shareholders</span>
                     </h3>
-                    <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
+                    <ul className="space-y-2 text-[12.5px] font-normal text-slate-900">
                       <li className="flex items-center gap-2">
                         <Check className="w-3.5 h-3.5 text-[#00B074] shrink-0" />
                         <span>Self-attested PAN Card (Passport for foreign citizens)</span>
@@ -479,7 +479,7 @@ function CompanyGuideContent() {
                       <Building className="w-4 h-4 text-[#00A86B]" />
                       <span>For Registered Office in India</span>
                     </h3>
-                    <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
+                    <ul className="space-y-2 text-[12.5px] font-normal text-slate-900">
                       <li className="flex items-center gap-2">
                         <Check className="w-3.5 h-3.5 text-[#00B074] shrink-0" />
                         <span>Electricity, water, or gas bill (&lt; 2 months old)</span>
@@ -506,7 +506,7 @@ function CompanyGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Step-by-Step Company Incorporation Process
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-5">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-5">
                   Our structured process on the MCA portal ensures zero delays and maximum approval speed:
                 </p>
 
@@ -542,7 +542,7 @@ function CompanyGuideContent() {
                       </span>
                       <div>
                         <h4 className="font-medium text-slate-800 text-[13.5px] mb-1">{st.title}</h4>
-                        <p className="text-[12.5px] font-light text-slate-600 leading-relaxed">{st.desc}</p>
+                        <p className="text-[12.5px] font-normal text-slate-900 leading-relaxed">{st.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -554,12 +554,12 @@ function CompanyGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Comparison: Private Limited vs. LLP vs. One Person Company
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   Compare the major parameters before finalizing your company structure:
                 </p>
 
                 <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs">
-                  <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                  <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                     <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                       <tr>
                         <th className="py-3 px-4 font-normal">Parameter</th>
@@ -593,12 +593,12 @@ function CompanyGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Mandatory Compliances After Company Registration
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   Post-incorporation, every Private Limited Company must fulfill these statutory MCA and Income Tax compliances:
                 </p>
 
                 <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-5">
-                  <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                  <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                     <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                       <tr>
                         <th className="py-3 px-4 font-normal">Statutory Compliance</th>
@@ -665,10 +665,10 @@ function CompanyGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Why Choose Merrafilings for Company Registration?
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   Merrafilings is India&apos;s leading tech-driven corporate services platform, trusted by over 2 Lakh businesses nationwide:
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[13px] font-light text-slate-700">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[13px] font-normal text-slate-900">
                   <div className="flex items-center gap-2">
                     <span className="text-[#00A86B] font-bold">✓</span>
                     <span>Dedicated CA, CS &amp; Senior Legal Advisor</span>

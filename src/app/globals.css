@@ -189,3 +189,172 @@ table tbody tr:hover td {
   transform: translateY(0);
 }
 
+/* ==========================================================================
+   Continuous Marquee & Dynamic Page Animations
+   ========================================================================== */
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee-slow {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 45s linear infinite;
+}
+
+.animate-marquee-slow:hover {
+  animation-play-state: paused;
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float-slow {
+  animation: floatGentle 4s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px -3px rgba(16, 185, 129, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px 2px rgba(16, 185, 129, 0.4);
+  }
+}
+
+.animate-glow-pulse {
+  animation: glowPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes shimmerSweep {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-active {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
+  background-size: 200% 100%;
+  animation: shimmerSweep 2.5s infinite;
+}
+
+/* ==========================================================================
+   Minimal Theme Gradient Text for Service Page Headlines
+   ========================================================================== */
+.theme-gradient-text,
+.gradient-text-theme,
+.bg-clip-text[class*="from-[#5C3BFF]"],
+span[class*="from-[#5C3BFF]"],
+h1 [class*="from-[#5C3BFF]"],
+h2 [class*="from-[#5C3BFF]"] {
+  background-image: linear-gradient(135deg, #059669 0%, #0D9488 45%, #0F172A 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+/* Button & container backgrounds that used legacy purple gradient */
+button[class*="from-[#5C3BFF]"],
+div:not([class*="bg-clip-text"])[class*="from-[#5C3BFF]"],
+a:not([class*="bg-clip-text"])[class*="from-[#5C3BFF]"] {
+  background-image: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
+}
+
+/* ==========================================================================
+   Universal Scroll Reveal Animation System
+   ========================================================================== */
+.reveal-on-scroll,
+[data-reveal],
+section:not(.hero-section):not(.no-reveal) {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed,
+[data-reveal].is-revealed,
+section:not(.hero-section):not(.no-reveal).is-revealed,
+section.hero-section,
+section.no-reveal {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Stagger delay utilities for grids and lists */
+.stagger-1 { transition-delay: 70ms !important; }
+.stagger-2 { transition-delay: 140ms !important; }
+.stagger-3 { transition-delay: 210ms !important; }
+.stagger-4 { transition-delay: 280ms !important; }
+.stagger-5 { transition-delay: 350ms !important; }
+.stagger-6 { transition-delay: 420ms !important; }
+
+/* ==========================================================================
+   Editorial Content & High-Contrast Dark Typography
+   Makes all article text, paragraphs, descriptions, and lists clearly visible with rich dark color
+   ========================================================================== */
+article,
+article p,
+article li,
+article ul,
+article ol,
+article p *,
+article li *,
+.guide-content p,
+.guide-content li,
+.prose p,
+.prose li {
+  color: #0F172A !important; /* Deep Dark Slate 900 / Near-Black for maximum contrast */
+  font-weight: 400 !important;
+}
+
+article .font-light,
+article [class*="font-light"],
+.font-light {
+  font-weight: 400 !important;
+}
+
+article .text-slate-600,
+article .text-slate-500,
+article [class*="text-slate-600"],
+article [class*="text-slate-500"] {
+  color: #0F172A !important;
+}
+
+article strong,
+article b,
+.prose strong,
+.prose b {
+  color: #000000 !important;
+  font-weight: 600 !important;
+}
+
+.text-slate-600 {
+  color: #1E293B !important; /* Rich Dark Slate 800 */
+}
+
+

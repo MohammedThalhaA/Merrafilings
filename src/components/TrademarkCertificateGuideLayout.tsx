@@ -226,7 +226,7 @@ export default function TrademarkCertificateGuideLayout({
                   <div className="text-[14.5px] font-medium text-slate-800 group-hover:text-[#155EEF] transition-colors">
                     Consult <span className="text-[#155EEF]">Experts</span>
                   </div>
-                  <div className="text-[11.5px] text-slate-500 font-light">
+                  <div className="text-[11.5px] text-slate-500 font-normal">
                     Direct call with registered trademark attorneys
                   </div>
                 </div>
@@ -281,7 +281,7 @@ export default function TrademarkCertificateGuideLayout({
                 <h4 className="text-[15px] font-medium text-slate-900 leading-snug">
                   Track Trademark Certificate Status
                 </h4>
-                <p className="text-[12px] text-slate-500 font-light mt-1">
+                <p className="text-[12px] text-slate-500 font-normal mt-1">
                   Have an application pending or recently registered? Get a complimentary audit on whether your Form RG-2 certificate is ready for download.
                 </p>
               </div>
@@ -306,7 +306,7 @@ export default function TrademarkCertificateGuideLayout({
                 </div>
                 <div>
                   <div className="text-sm font-medium leading-tight">Live chat with experts</div>
-                  <div className="text-[11px] text-emerald-100 font-light">Online &amp; available now</div>
+                  <div className="text-[11px] text-emerald-100 font-normal">Online &amp; available now</div>
                 </div>
               </div>
               <ChevronRight className="w-5 h-5 text-emerald-100" />

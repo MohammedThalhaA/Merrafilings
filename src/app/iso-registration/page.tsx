@@ -475,10 +475,10 @@ function ISOGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           1. What is ISO Certification in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           <strong className="text-slate-800 font-medium">ISO Certification</strong> is a globally recognized seal of approval that certifies that an organization conforms to the international operational and quality benchmarks established by the <strong className="text-slate-800 font-medium">International Organization for Standardization (ISO)</strong>. Headquartered in Geneva, Switzerland, ISO is an independent, non-governmental international federation of national standards bodies across 168+ member countries, with the Bureau of Indian Standards (BIS) serving as India&apos;s national member body.
         </p>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           In India, ISO certification is not issued directly by ISO itself; rather, it is awarded by accredited third-party <strong className="text-slate-800 font-medium">Certification Bodies (CBs)</strong> that are recognized by accreditation authorities such as the <strong className="text-slate-800 font-medium">National Accreditation Board for Certification Bodies (NABCB)</strong> in India or international equivalents like UKAS (United Kingdom) and DAkkS (Germany) under the <strong className="text-slate-800 font-medium">International Accreditation Forum (IAF)</strong> multilateral recognition arrangement.
         </p>
 
@@ -487,7 +487,7 @@ function ISOGuideContent() {
             <Award className="w-5 h-5 text-emerald-600" />
             <span>The Strategic Distinction: Audited vs. Fast-Track Non-Audited ISO Certification</span>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1 text-xs text-slate-600 font-light">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1 text-xs text-slate-600 font-normal">
             <div className="p-3.5 rounded-xl bg-white border border-slate-200">
               <span className="font-semibold text-slate-800 block text-sm mb-1 text-[#155EEF]">Accredited Audited Certification (IAF / NABCB)</span>
               <p className="leading-relaxed">
@@ -509,7 +509,7 @@ function ISOGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           2. Why is ISO Certification Important for Businesses in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Whether you run an industrial manufacturing plant, an IT services firm, or a healthcare establishment, ISO certification transforms internal operations while opening lucrative commercial gateways:
         </p>
 
@@ -517,7 +517,7 @@ function ISOGuideContent() {
           <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-2xs hover:border-indigo-500 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <Landmark className="w-5 h-5 text-indigo-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-medium text-slate-900 mb-1">Government &amp; GeM Tenders</h4>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Most central and state government e-tenders and GeM portal bids mandate active ISO 9001 and ISO 14001 certification as non-negotiable pre-qualification criteria.
             </p>
           </div>
@@ -525,7 +525,7 @@ function ISOGuideContent() {
           <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-2xs hover:border-emerald-500 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <Globe2 className="w-5 h-5 text-emerald-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-medium text-slate-900 mb-1">Global Export Acceptance</h4>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               International clients in the US, Europe, and Middle East require IAF-recognized ISO certification before signing offshore supply agreements or outsourcing contracts.
             </p>
           </div>
@@ -533,7 +533,7 @@ function ISOGuideContent() {
           <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-2xs hover:border-blue-500 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <Scale className="w-5 h-5 text-blue-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-medium text-slate-900 mb-1">Operational Consistency</h4>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Standardized processes and clear SOPs minimize manufacturing defects, eliminate redundant tasks, reduce scrap, and drastically reduce operational overheads.
             </p>
           </div>
@@ -541,7 +541,7 @@ function ISOGuideContent() {
           <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-2xs hover:border-purple-500 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <ShieldCheck className="w-5 h-5 text-purple-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-medium text-slate-900 mb-1">Customer Credibility</h4>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Showcasing the prestigious ISO badge on marketing collateral, product packaging, and corporate profiles signals uncompromising quality and reliability.
             </p>
           </div>
@@ -553,7 +553,7 @@ function ISOGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           3. What are the Key Types of ISO Certifications in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           ISO has published over 24,000 international standards. The most widely adopted certifications in the Indian corporate landscape include:
         </p>
 
@@ -563,7 +563,7 @@ function ISOGuideContent() {
               <span className="p-1.5 rounded-lg bg-emerald-50 text-emerald-700"><Award className="w-4 h-4" /></span>
               <h3 className="text-sm font-medium text-slate-900 group-hover:text-emerald-700 transition-colors">ISO 9001:2015 - Quality Management (QMS)</h3>
             </div>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               The world&apos;s benchmark quality standard. Focuses on customer satisfaction, consistent product quality, process optimization, and leadership governance across manufacturing and service sectors.
             </p>
           </div>
@@ -573,7 +573,7 @@ function ISOGuideContent() {
               <span className="p-1.5 rounded-lg bg-emerald-50 text-emerald-700"><Leaf className="w-4 h-4" /></span>
               <h3 className="text-sm font-medium text-slate-900 group-hover:text-emerald-700 transition-colors">ISO 14001:2015 - Environmental Management (EMS)</h3>
             </div>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Specifies requirements for establishing an environmental management framework. Helps companies reduce industrial waste, minimize carbon footprint, comply with pollution boards, and achieve sustainability.
             </p>
           </div>
@@ -583,7 +583,7 @@ function ISOGuideContent() {
               <span className="p-1.5 rounded-lg bg-blue-50 text-blue-700"><Lock className="w-4 h-4" /></span>
               <h3 className="text-sm font-medium text-slate-900 group-hover:text-blue-700 transition-colors">ISO 27001:2022 - Information Security (ISMS)</h3>
             </div>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               The international benchmark for cyber risk management and data protection. Mandatory for SaaS platforms, fintechs, cloud software vendors, and BPO organizations handling sensitive user data.
             </p>
           </div>
@@ -593,7 +593,7 @@ function ISOGuideContent() {
               <span className="p-1.5 rounded-lg bg-purple-50 text-purple-700"><HeartPulse className="w-4 h-4" /></span>
               <h3 className="text-sm font-medium text-slate-900 group-hover:text-purple-700 transition-colors">ISO 45001:2018 - Occupational Health &amp; Safety (OHSMS)</h3>
             </div>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Designed to mitigate workplace health risks, reduce on-site industrial injuries, and create safe operational environments across construction sites, chemical plants, and heavy engineering factories.
             </p>
           </div>
@@ -603,7 +603,7 @@ function ISOGuideContent() {
               <span className="p-1.5 rounded-lg bg-amber-50 text-amber-700"><UtensilsCrossed className="w-4 h-4" /></span>
               <h3 className="text-sm font-medium text-slate-900 group-hover:text-amber-700 transition-colors">ISO 22000:2018 - Food Safety Management (FSMS)</h3>
             </div>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Integrates HACCP principles with ISO quality control. Tailored for commercial food processors, packaging manufacturers, cold chain logistics, catering firms, and restaurants aiming for global food safety.
             </p>
           </div>
@@ -613,7 +613,7 @@ function ISOGuideContent() {
               <span className="p-1.5 rounded-lg bg-indigo-50 text-indigo-700"><Cpu className="w-4 h-4" /></span>
               <h3 className="text-sm font-medium text-slate-900 group-hover:text-indigo-700 transition-colors">ISO 13485:2016 - Medical Devices Quality</h3>
             </div>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Mandatory comprehensive quality management system standard for manufacturers, assemblers, and distributors of diagnostic equipment and medical devices seeking CDSCO and international clearances.
             </p>
           </div>
@@ -625,10 +625,10 @@ function ISOGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           4. What are the Specific Benefits of ISO Certification for SMEs in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Small and Medium Enterprises (MSMEs) form the backbone of the Indian industrial economy. For MSMEs, achieving ISO certification offers decisive growth catalysts:
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-xs text-slate-700 font-light">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-xs text-slate-700 font-normal">
           <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-2.5">
             <CheckCircle2 className="w-4 h-4 text-[#00B074] shrink-0 mt-0.5" />
             <div>
@@ -665,39 +665,39 @@ function ISOGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           5. Who Should Apply for ISO Certification in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           ISO standards are universally applicable across every industry vertical, company size, and organizational structure:
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5 pt-1 text-center text-xs">
           <div className="p-3 rounded-xl bg-white border border-slate-200 hover:border-indigo-500 hover:shadow-sm hover:-translate-y-0.5 transition-all">
             <Factory className="w-5 h-5 text-indigo-600 mx-auto mb-1.5" />
             <span className="font-medium text-slate-900 block">Manufacturing</span>
-            <span className="text-[11px] text-slate-500 font-light">ISO 9001 / 14001</span>
+            <span className="text-[11px] text-slate-500 font-normal">ISO 9001 / 14001</span>
           </div>
           <div className="p-3 rounded-xl bg-white border border-slate-200 hover:border-blue-500 hover:shadow-sm hover:-translate-y-0.5 transition-all">
             <Cpu className="w-5 h-5 text-blue-600 mx-auto mb-1.5" />
             <span className="font-medium text-slate-900 block">IT &amp; Software</span>
-            <span className="text-[11px] text-slate-500 font-light">ISO 27001 / 20000</span>
+            <span className="text-[11px] text-slate-500 font-normal">ISO 27001 / 20000</span>
           </div>
           <div className="p-3 rounded-xl bg-white border border-slate-200 hover:border-amber-500 hover:shadow-sm hover:-translate-y-0.5 transition-all">
             <Building className="w-5 h-5 text-amber-600 mx-auto mb-1.5" />
             <span className="font-medium text-slate-900 block">Construction</span>
-            <span className="text-[11px] text-slate-500 font-light">ISO 45001 / 9001</span>
+            <span className="text-[11px] text-slate-500 font-normal">ISO 45001 / 9001</span>
           </div>
           <div className="p-3 rounded-xl bg-white border border-slate-200 hover:border-rose-500 hover:shadow-sm hover:-translate-y-0.5 transition-all">
             <HeartPulse className="w-5 h-5 text-rose-600 mx-auto mb-1.5" />
             <span className="font-medium text-slate-900 block">Healthcare</span>
-            <span className="text-[11px] text-slate-500 font-light">ISO 13485 / 15189</span>
+            <span className="text-[11px] text-slate-500 font-normal">ISO 13485 / 15189</span>
           </div>
           <div className="p-3 rounded-xl bg-white border border-slate-200 hover:border-emerald-500 hover:shadow-sm hover:-translate-y-0.5 transition-all">
             <UtensilsCrossed className="w-5 h-5 text-emerald-600 mx-auto mb-1.5" />
             <span className="font-medium text-slate-900 block">Food &amp; Agro</span>
-            <span className="text-[11px] text-slate-500 font-light">ISO 22000 / HACCP</span>
+            <span className="text-[11px] text-slate-500 font-normal">ISO 22000 / HACCP</span>
           </div>
           <div className="p-3 rounded-xl bg-white border border-slate-200 hover:border-purple-500 hover:shadow-sm hover:-translate-y-0.5 transition-all">
             <Truck className="w-5 h-5 text-purple-600 mx-auto mb-1.5" />
             <span className="font-medium text-slate-900 block">Logistics</span>
-            <span className="text-[11px] text-slate-500 font-light">ISO 28000 / 9001</span>
+            <span className="text-[11px] text-slate-500 font-normal">ISO 28000 / 9001</span>
           </div>
         </div>
       </section>
@@ -707,10 +707,10 @@ function ISOGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           6. What is the Eligibility Criteria for ISO Certificate Registration in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Any commercial, non-profit, or government entity can apply for ISO certification provided the following baseline operational pre-requisites are fulfilled:
         </p>
-        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-slate-700 font-light">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-slate-700 font-normal">
           <li className="flex items-center gap-2 p-3 rounded-xl bg-slate-50 border border-slate-200/80">
             <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0" />
             <span>Valid Legal Entity Status (Pvt Ltd, LLP, Partnership, Proprietorship, Trust)</span>
@@ -735,10 +735,10 @@ function ISOGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           7. Legal Framework Governing ISO Certification in India
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Understanding the regulatory hierarchy behind ISO accreditation ensures you invest in certificates that carry authentic legal authority:
         </p>
-        <div className="bg-[#FAF9F7] p-4.5 rounded-2xl border border-slate-200/80 space-y-2 text-xs text-slate-600 leading-relaxed font-light">
+        <div className="bg-[#FAF9F7] p-4.5 rounded-2xl border border-slate-200/80 space-y-2 text-xs text-slate-600 leading-relaxed font-normal">
           <p>
             <strong className="text-slate-800 font-medium">Quality Council of India (QCI) &amp; NABCB:</strong> The National Accreditation Board for Certification Bodies (NABCB) is a constituent board of QCI, established under the Department for Promotion of Industry and Internal Trade (DPIIT), Ministry of Commerce and Industry. NABCB accredits third-party certification bodies in India according to ISO/IEC 17021 standards.
           </p>
@@ -753,7 +753,7 @@ function ISOGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           8. What are the Compliance Requirements for ISO Certification in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           All modern ISO management system standards follow the High-Level Structure (Annex SL) rooted in the proven <strong className="text-slate-800 font-medium">Plan-Do-Check-Act (PDCA) cycle</strong>:
         </p>
 
@@ -761,7 +761,7 @@ function ISOGuideContent() {
           <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-2xs">
             <span className="w-6 h-6 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs mb-2">1</span>
             <h4 className="text-sm font-medium text-slate-900 mb-1">Plan: Policy &amp; Objectives</h4>
-            <p className="text-slate-600 font-light leading-relaxed">
+            <p className="text-slate-600 font-normal leading-relaxed">
               Formulate quality objectives, identify contextual business risks, outline stakeholder requirements, and define procedural roadmaps.
             </p>
           </div>
@@ -769,7 +769,7 @@ function ISOGuideContent() {
           <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-2xs">
             <span className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs mb-2">2</span>
             <h4 className="text-sm font-medium text-slate-900 mb-1">Do: Implementation &amp; SOPs</h4>
-            <p className="text-slate-600 font-light leading-relaxed">
+            <p className="text-slate-600 font-normal leading-relaxed">
               Execute documented workflows, train operating personnel, maintain evidence logs, and ensure strict process control across operations.
             </p>
           </div>
@@ -777,7 +777,7 @@ function ISOGuideContent() {
           <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-2xs">
             <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xs mb-2">3</span>
             <h4 className="text-sm font-medium text-slate-900 mb-1">Check: Internal Audit &amp; MRM</h4>
-            <p className="text-slate-600 font-light leading-relaxed">
+            <p className="text-slate-600 font-normal leading-relaxed">
               Conduct periodic internal audits to spot non-conformances, track operational KPIs, and convene formal Management Review Meetings.
             </p>
           </div>
@@ -785,7 +785,7 @@ function ISOGuideContent() {
           <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-2xs">
             <span className="w-6 h-6 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-xs mb-2">4</span>
             <h4 className="text-sm font-medium text-slate-900 mb-1">Act: Corrective Action (CAPA)</h4>
-            <p className="text-slate-600 font-light leading-relaxed">
+            <p className="text-slate-600 font-normal leading-relaxed">
               Implement Corrective and Preventive Actions (CAPA) to eradicate root causes of recurring errors, driving perpetual business excellence.
             </p>
           </div>
@@ -797,7 +797,7 @@ function ISOGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           9. What are the Documents Required for ISO Certification in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           The baseline statutory entity documents depend on your organization&apos;s corporate structure:
         </p>
 
@@ -810,7 +810,7 @@ function ISOGuideContent() {
                 <th className="py-3 px-4">Statutory &amp; Operational Documents Required</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 font-light text-slate-600">
+            <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
               {TABLE_1_DOCUMENTS.map((row, idx) => (
                 <tr key={idx} className="transition-colors">
                   <td className="py-3 px-4 font-medium text-slate-800">
@@ -831,7 +831,7 @@ function ISOGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           10. How to Apply for ISO Certification in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Merrafilings manages the complete certification workflow through a structured 5-step digital process:
         </p>
 
@@ -840,7 +840,7 @@ function ISOGuideContent() {
             <span className="w-7 h-7 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">1</span>
             <div>
               <h3 className="text-sm font-medium text-slate-900">Standard Selection &amp; Diagnostic Consultation</h3>
-              <p className="text-xs text-slate-600 mt-1 font-light leading-relaxed">
+              <p className="text-xs text-slate-600 mt-1 font-normal leading-relaxed">
                 Our ISO lead consultant assesses your business scope, tender objectives, and client mandates to identify the optimal ISO standard (e.g., ISO 9001, 14001, 27001) and accreditation level.
               </p>
             </div>
@@ -850,7 +850,7 @@ function ISOGuideContent() {
             <span className="w-7 h-7 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">2</span>
             <div>
               <h3 className="text-sm font-medium text-slate-900">Customized Documentation &amp; SOP Formulation</h3>
-              <p className="text-xs text-slate-600 mt-1 font-light leading-relaxed">
+              <p className="text-xs text-slate-600 mt-1 font-normal leading-relaxed">
                 We draft your bespoke Quality Manual, Quality Policy, Work Instructions, and department-wise Standard Operating Procedures (SOPs), aligning them precisely with ISO clauses.
               </p>
             </div>
@@ -860,7 +860,7 @@ function ISOGuideContent() {
             <span className="w-7 h-7 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">3</span>
             <div>
               <h3 className="text-sm font-medium text-slate-900">System Implementation &amp; Internal Audit Preparation</h3>
-              <p className="text-xs text-slate-600 mt-1 font-light leading-relaxed">
+              <p className="text-xs text-slate-600 mt-1 font-normal leading-relaxed">
                 We assist your team in deploying newly documented procedures, maintaining record logs, conducting mock internal audits, and convening formal Management Review Meetings (MRM).
               </p>
             </div>
@@ -870,7 +870,7 @@ function ISOGuideContent() {
             <span className="w-7 h-7 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">4</span>
             <div>
               <h3 className="text-sm font-medium text-slate-900">Stage 1 &amp; Stage 2 External Registrar Audit</h3>
-              <p className="text-xs text-slate-600 mt-1 font-light leading-relaxed">
+              <p className="text-xs text-slate-600 mt-1 font-normal leading-relaxed">
                 An accredited certification body conducts the Stage 1 document review followed by the Stage 2 implementation assessment. We coordinate auditor queries and Non-Conformance (NC) closures.
               </p>
             </div>
@@ -880,7 +880,7 @@ function ISOGuideContent() {
             <span className="w-7 h-7 rounded-full bg-[#00B074] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">5</span>
             <div>
               <h3 className="text-sm font-medium text-slate-900">Formal Certificate Grant &amp; Online Registry Verification</h3>
-              <p className="text-xs text-slate-600 mt-1 font-light leading-relaxed">
+              <p className="text-xs text-slate-600 mt-1 font-normal leading-relaxed">
                 Upon final approval, your official ISO certificate with accreditation body logos (IAF / NABCB / UKAS) and QR-code verification is issued, valid for 3 years.
               </p>
             </div>
@@ -898,7 +898,7 @@ function ISOGuideContent() {
             <h3 className="text-sm font-medium text-slate-900 flex items-center gap-2">
               <FileCheck className="w-4 h-4 text-[#155EEF]" /> Stage 1 External Audit: Readiness Review
             </h3>
-            <ul className="text-xs text-slate-600 space-y-1.5 font-light">
+            <ul className="text-xs text-slate-600 space-y-1.5 font-normal">
               <li>• Review of Quality Manual, Policy, and process flow documentation</li>
               <li>• Verification that organizational scope accurately reflects operations</li>
               <li>• Assessment of internal audit results and management review meeting records</li>
@@ -910,7 +910,7 @@ function ISOGuideContent() {
             <h3 className="text-sm font-medium text-slate-900 flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-600" /> Stage 2 External Audit: Implementation
             </h3>
-            <ul className="text-xs text-slate-600 space-y-1.5 font-light">
+            <ul className="text-xs text-slate-600 space-y-1.5 font-normal">
               <li>• On-site or remote evaluation of actual daily operational practices</li>
               <li>• Interviews with departmental managers, supervisors, and operating staff</li>
               <li>• Random sampling of quality inspection sheets, calibration, and training logs</li>
@@ -925,7 +925,7 @@ function ISOGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           12. How to Choose an Accredited ISO Certification Body in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Selecting a respected, accredited certification body ensures your certificate will be universally accepted by government tender committees and international corporate buyers:
         </p>
 
@@ -939,7 +939,7 @@ function ISOGuideContent() {
                 <th className="py-3 px-4">Commonly Certified Standards</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 font-light text-slate-600">
+            <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
               {TABLE_2_BODIES.map((row, idx) => (
                 <tr key={idx} className="transition-colors">
                   <td className="py-3 px-4 font-medium text-slate-800">{row.body}</td>
@@ -957,7 +957,7 @@ function ISOGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           13. What is the Timeline Involved in the ISO Certification Process?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           While fast-track non-audited certificates can be delivered within 3-5 working days, a comprehensive audited certification process spans several milestone phases:
         </p>
 
@@ -971,7 +971,7 @@ function ISOGuideContent() {
                 <th className="py-3 px-4">Estimated Duration</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 font-light text-slate-600">
+            <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
               {TABLE_3_TIMELINE.map((row, idx) => (
                 <tr key={idx} className="transition-colors">
                   <td className="py-3 px-4 font-medium text-slate-800">{row.phase}</td>
@@ -989,7 +989,7 @@ function ISOGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           14. Common Challenges &amp; Solutions in ISO Certification
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Navigating ISO implementation requires proactive management of common operational bottlenecks:
         </p>
 
@@ -1003,7 +1003,7 @@ function ISOGuideContent() {
                 <th className="py-3 px-4">Recommended Solution</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 font-light text-slate-600">
+            <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
               {TABLE_4_CHALLENGES.map((row, idx) => (
                 <tr key={idx} className="transition-colors">
                   <td className="py-3 px-4 font-medium text-slate-800">{row.challenge}</td>
@@ -1021,7 +1021,7 @@ function ISOGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           15. What is the ISO Certification Fee Structure in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           ISO certification costs comprise consultancy, documentation, and statutory certification body audit fees:
         </p>
 
@@ -1035,7 +1035,7 @@ function ISOGuideContent() {
                 <th className="py-3 px-4">Pricing Notes</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 font-light text-slate-600">
+            <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
               {TABLE_5_COST.map((row, idx) => (
                 <tr key={idx} className="transition-colors">
                   <td className="py-3 px-4 font-medium text-slate-800">{row.component}</td>
@@ -1053,28 +1053,28 @@ function ISOGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           16. Validity, Surveillance Audits &amp; Certificate Renewal
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Accredited ISO certificates are issued with a <strong className="text-slate-800 font-medium">3-year validity cycle</strong>. However, active validity is contingent on passing mandatory annual surveillance audits:
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
           <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-2xs">
             <span className="text-xs font-semibold text-[#155EEF] block mb-1">Year 1: Initial Certification</span>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Successful completion of Stage 1 and Stage 2 audits grants formal certificate issuance, valid for 3 years.
             </p>
           </div>
 
           <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-2xs">
             <span className="text-xs font-semibold text-amber-700 block mb-1">Years 1 &amp; 2: Surveillance Audits</span>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Mandatory external audits conducted at Month 12 and Month 24 to verify continued system maintenance.
             </p>
           </div>
 
           <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-2xs">
             <span className="text-xs font-semibold text-[#00B074] block mb-1">Year 3: Recertification Audit</span>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Prior to month 36 expiration, a full recertification audit renews the certificate for an additional 3-year term.
             </p>
           </div>
@@ -1086,7 +1086,7 @@ function ISOGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           17. How to Verify ISO Certification Online via IAF CertSearch?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Government tender evaluators and corporate procurement heads verify authentic ISO certificates via global databases:
         </p>
 
@@ -1095,7 +1095,7 @@ function ISOGuideContent() {
             <h3 className="text-sm font-medium text-slate-900 mb-2 flex items-center gap-2">
               <Search className="w-4 h-4 text-[#155EEF]" /> Global IAF CertSearch Verification
             </h3>
-            <ol className="list-decimal pl-4 space-y-1.5 text-xs text-slate-600 font-light">
+            <ol className="list-decimal pl-4 space-y-1.5 text-xs text-slate-600 font-normal">
               <li>Visit the official global portal at <strong>iafcertsearch.org</strong></li>
               <li>Enter your registered legal entity name or ISO certificate registration number.</li>
               <li>View active certificate validity, accredited certification body name, and certified scope.</li>
@@ -1106,7 +1106,7 @@ function ISOGuideContent() {
             <h3 className="text-sm font-medium text-slate-900 mb-2 flex items-center gap-2">
               <Download className="w-4 h-4 text-emerald-600" /> Registrar QR-Code Validation
             </h3>
-            <ol className="list-decimal pl-4 space-y-1.5 text-xs text-slate-600 font-light">
+            <ol className="list-decimal pl-4 space-y-1.5 text-xs text-slate-600 font-normal">
               <li>Scan the secure QR code printed directly on your official ISO certificate document.</li>
               <li>The QR code resolves to the certification body&apos;s direct registry record.</li>
               <li>Instantly confirm active status, surveillance audit clearance, and validity dates.</li>
@@ -1120,7 +1120,7 @@ function ISOGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           18. Why Choose Merrafilings for ISO Certification in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Merrafilings is India&apos;s premier corporate compliance network. We take the complexity out of ISO certification:
         </p>
 

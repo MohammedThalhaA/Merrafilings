@@ -227,7 +227,7 @@ export default function PatentGuideLayout({
                   <div className="text-[14.5px] font-medium text-slate-800 group-hover:text-[#155EEF] transition-colors">
                     Consult <span className="text-[#155EEF]">Experts</span>
                   </div>
-                  <div className="text-[11.5px] text-slate-500 font-light">
+                  <div className="text-[11.5px] text-slate-500 font-normal">
                     Direct call with registered patent attorneys
                   </div>
                 </div>
@@ -281,7 +281,7 @@ export default function PatentGuideLayout({
                     </div>
                     <div>
                       <div className="text-xs font-semibold leading-tight">Live chat with experts</div>
-                      <div className="text-[10.5px] text-emerald-100 font-light">Online &amp; available now</div>
+                      <div className="text-[10.5px] text-emerald-100 font-normal">Online &amp; available now</div>
                     </div>
                   </div>
                   <ChevronRight className="w-4 h-4 text-emerald-100 group-hover:translate-x-0.5 transition-transform" />
@@ -299,7 +299,7 @@ export default function PatentGuideLayout({
                 <h4 className="text-[15px] font-medium text-slate-900 leading-snug">
                   Novelty &amp; Prior-Art Pre-Check
                 </h4>
-                <p className="text-[12px] text-slate-500 font-light mt-1">
+                <p className="text-[12px] text-slate-500 font-normal mt-1">
                   Have a novel invention or technical software workflow? Our patent agents screen Indian InPASS, USPTO, and WIPO databases for potential blocking patents.
                 </p>
               </div>

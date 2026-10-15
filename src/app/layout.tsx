@@ -17,9 +17,9 @@ const newsreader = Newsreader({
 });
 
 export const metadata: Metadata = {
-  title: "MerraFilings | India's Largest AI-Powered Corporate Services & Compliance Platform",
+  title: "MerraFilings | India's Leading Corporate Services & CA Compliance Advisory",
   description:
-    "Join millions who trust MerraFilings to simplify MCA, GST, and Income Tax compliance with AI automation, expert support, paperless workflows, and secure cloud storage.",
+    "Join thousands of entrepreneurs who trust MerraFilings for company registration, GST return filing, MCA secretarial compliance, and trademark protection handled by certified Chartered Accountants and Company Secretaries.",
   keywords: [
     "company registration",
     "private limited company",
@@ -30,8 +30,11 @@ export const metadata: Metadata = {
     "trademark registration",
     "MCA compliance",
     "ROC filings",
+    "chartered accountant services",
   ],
 };
+
+import ScrollRevealProvider from "@/components/ScrollRevealProvider";
 
 export default function RootLayout({
   children,
@@ -41,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={`${inter.variable} ${newsreader.variable} scroll-smooth`}>
       <body suppressHydrationWarning className="min-h-screen bg-white text-[#111827] font-sans antialiased selection:bg-[#155EEF]/10 selection:text-[#155EEF]">
-        {children}
+        <ScrollRevealProvider>{children}</ScrollRevealProvider>
       </body>
     </html>
   );

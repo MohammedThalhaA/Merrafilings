@@ -95,7 +95,7 @@ export default function ListOfClassesTrademarkPage() {
         <p className="text-[15px] leading-relaxed text-slate-700">
           When applying for trademark registration in India, identifying the precise <strong className="font-semibold text-slate-900">Trademark Class</strong> is mandatory. India conforms strictly to the international <strong className="font-semibold text-slate-900">Nice Classification System</strong>, established under the Nice Agreement (1957) and updated periodically by the World Intellectual Property Organization (WIPO).
         </p>
-        <p className="text-[14.5px] leading-relaxed text-slate-600 font-light">
+        <p className="text-[14.5px] leading-relaxed text-slate-600 font-normal">
           The Nice Classification system groups commercial activities into <strong className="font-medium text-slate-800">45 distinct classes</strong>. Classes 1 through 34 encompass physical goods and tangible commodities, while Classes 35 through 45 cover commercial and professional services. Trademark rights in India are strictly class-specific: securing a trademark in Class 25 (Apparel) does not inherently protect you against a business using the same mark in Class 43 (Restaurants) unless your mark qualifies as a &quot;Well-Known Trademark&quot; under Section 11(6) of the Trade Marks Act 1999.
         </p>
       </div>
@@ -107,7 +107,7 @@ export default function ListOfClassesTrademarkPage() {
             <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
               Complete Directory of All 45 Trademark Classes
             </h2>
-            <p className="text-xs sm:text-sm text-slate-500 font-light mt-0.5">
+            <p className="text-xs sm:text-sm text-slate-500 font-normal mt-0.5">
               Search or filter through the complete Nice Classification catalogue:
             </p>
           </div>
@@ -188,7 +188,7 @@ export default function ListOfClassesTrademarkPage() {
                   </div>
                   <span className="text-[11px] text-slate-400">Nice Classification</span>
                 </div>
-                <p className="text-xs sm:text-[13px] text-slate-600 font-light leading-relaxed">
+                <p className="text-xs sm:text-[13px] text-slate-600 font-normal leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -202,12 +202,12 @@ export default function ListOfClassesTrademarkPage() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           Single-Class vs. Multi-Class Trademark Applications
         </h2>
-        <p className="text-sm text-slate-600 font-light">
+        <p className="text-sm text-slate-600 font-normal">
           Applicants operating across multiple commercial categories can choose between submitting multiple single-class Form TM-A filings or lodging a consolidated multi-class application:
         </p>
 
         <div className="overflow-x-auto rounded-2xl border border-slate-200/80 shadow-xs">
-          <table className="w-full text-left border-collapse text-xs sm:text-sm font-light">
+          <table className="w-full text-left border-collapse text-xs sm:text-sm font-normal">
             <thead>
               <tr className="bg-slate-50/80 border-b border-slate-200/80 text-slate-800 font-medium">
                 <th className="p-3.5 sm:p-4">Key Dimension</th>
@@ -250,7 +250,7 @@ export default function ListOfClassesTrademarkPage() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           Strategic Roadmap: How to Select the Right Classes for Your Brand
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm font-light text-slate-700">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm font-normal text-slate-900">
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1.5">
             <span className="font-medium text-slate-900 block">1. Analyze Core vs. Auxiliary Revenue</span>
             <p className="text-slate-500 text-xs">
@@ -283,12 +283,12 @@ export default function ListOfClassesTrademarkPage() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           Government Fees by Number of Classes
         </h2>
-        <p className="text-sm text-slate-600 font-light">
+        <p className="text-sm text-slate-600 font-normal">
           Government statutory e-filing fees multiply linearly by the number of classes designated:
         </p>
 
         <div className="overflow-x-auto rounded-2xl border border-slate-200/80 shadow-xs">
-          <table className="w-full text-left border-collapse text-xs sm:text-sm font-light">
+          <table className="w-full text-left border-collapse text-xs sm:text-sm font-normal">
             <thead>
               <tr className="bg-slate-50/80 border-b border-slate-200/80 text-slate-800 font-medium">
                 <th className="p-3.5 sm:p-4">Number of Classes</th>

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { X, CheckCircle2, ShieldCheck, Phone, ArrowRight } from "lucide-react";
+import { X, CheckCircle2, ShieldCheck, ArrowRight } from "lucide-react";
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -28,37 +28,37 @@ export default function ContactModal({ isOpen, onClose, serviceTitle }: ContactM
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-black/55 backdrop-blur-xs flex items-center justify-center p-4 animate-in fade-in duration-200"
+      className="fixed inset-0 z-50 bg-slate-900/40 backdrop-blur-xs flex items-center justify-center p-4 animate-in fade-in duration-200"
       onClick={onClose}
     >
       <div
-        className="bg-white rounded-3xl w-full max-w-[520px] shadow-2xl border border-[#E4E7EC] overflow-hidden relative animate-in zoom-in-95 duration-200"
+        className="bg-white rounded-2xl w-full max-w-[500px] shadow-2xl border border-slate-200 overflow-hidden relative animate-in zoom-in-95 duration-200"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-[#F8FAFC] hover:bg-[#E4E7EC] text-[#111827] flex items-center justify-center transition-colors cursor-pointer"
+          className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-900 flex items-center justify-center transition-colors cursor-pointer"
         >
-          <X className="w-5 h-5" />
+          <X className="w-4 h-4" />
         </button>
 
         {submitted ? (
           <div className="p-8 sm:p-10 text-center space-y-4">
-            <div className="w-14 h-14 rounded-full bg-[#ECFDF3] text-[#15803D] flex items-center justify-center mx-auto">
-              <CheckCircle2 className="w-8 h-8" />
+            <div className="w-12 h-12 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 flex items-center justify-center mx-auto">
+              <CheckCircle2 className="w-6 h-6" />
             </div>
-            <h3 className="text-[22px] font-bold text-[#111827]">Consultation Booked!</h3>
-            <p className="text-[14px] text-[#475467] leading-relaxed max-w-[380px] mx-auto">
-              Thank you, <span className="font-semibold text-[#111827]">{formData.name}</span>. An authorized corporate CA/CS will contact you shortly at <span className="font-semibold text-[#111827]">+91 {formData.phone}</span> regarding {serviceTitle || "your business inquiry"}.
+            <h3 className="font-serif text-2xl font-normal text-slate-900">Consultation Booked</h3>
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-[360px] mx-auto">
+              Thank you, <span className="font-semibold text-slate-900">{formData.name}</span>. An authorized corporate CA/CS will contact you shortly at <span className="font-semibold text-slate-900">+91 {formData.phone}</span> regarding {serviceTitle || "your business inquiry"}.
             </p>
-            <div className="pt-4">
+            <div className="pt-2">
               <button
                 onClick={() => {
                   setSubmitted(false);
                   onClose();
                 }}
-                className="px-6 py-2.5 text-[14px] font-semibold text-white bg-[#155EEF] hover:bg-[#1849A9] rounded-xl cursor-pointer"
+                className="px-5 py-2.5 text-xs font-medium text-white bg-slate-900 hover:bg-slate-800 rounded-xl cursor-pointer"
               >
                 Done
               </button>
@@ -67,20 +67,20 @@ export default function ContactModal({ isOpen, onClose, serviceTitle }: ContactM
         ) : (
           <div className="p-6 sm:p-8">
             <div className="mb-6">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-[#155EEF]">
+              <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-emerald-800 bg-emerald-50/80 border border-emerald-100/90 px-3 py-1 rounded-full mb-2">
                 Quick Consultation
               </span>
-              <h3 className="text-[22px] font-bold text-[#111827] mt-1">
-                {serviceTitle ? `Get Started with ${serviceTitle}` : "Talk with a Corporate Advisor"}
+              <h3 className="font-serif text-xl sm:text-2xl font-normal text-slate-900">
+                {serviceTitle ? `Get Started: ${serviceTitle}` : "Speak with a Corporate Advisor"}
               </h3>
-              <p className="text-[13.5px] text-[#475467] mt-1">
-                Submit your details and get an instant transparent quote and filing checklist.
+              <p className="text-xs sm:text-sm text-slate-500 mt-1">
+                Submit your details to receive an instant statutory checklist and transparent fee schedule.
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-3.5">
               <div>
-                <label className="block text-[12.5px] font-medium text-[#344054] mb-1">
+                <label className="block text-xs font-medium text-slate-700 mb-1">
                   Full Name
                 </label>
                 <input
@@ -89,16 +89,16 @@ export default function ContactModal({ isOpen, onClose, serviceTitle }: ContactM
                   placeholder="e.g. Ananya Patel"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#D0D5DD] text-[14px] text-[#111827] focus:outline-hidden focus:border-[#155EEF]"
+                  className="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-sm text-slate-900 placeholder-slate-400 focus:outline-hidden focus:border-slate-800 bg-white"
                 />
               </div>
 
               <div>
-                <label className="block text-[12.5px] font-medium text-[#344054] mb-1">
+                <label className="block text-xs font-medium text-slate-700 mb-1">
                   Mobile Number
                 </label>
                 <div className="flex">
-                  <span className="inline-flex items-center px-3 rounded-l-xl border border-r-0 border-[#D0D5DD] bg-[#F8FAFC] text-[13px] text-[#475467] font-medium">
+                  <span className="inline-flex items-center px-3 rounded-l-xl border border-r-0 border-slate-200 bg-slate-50 text-xs text-slate-600 font-medium">
                     +91
                   </span>
                   <input
@@ -107,13 +107,13 @@ export default function ContactModal({ isOpen, onClose, serviceTitle }: ContactM
                     placeholder="9876543210"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-r-xl border border-[#D0D5DD] text-[14px] text-[#111827] focus:outline-hidden focus:border-[#155EEF]"
+                    className="w-full px-3.5 py-2 rounded-r-xl border border-slate-200 text-sm text-slate-900 placeholder-slate-400 focus:outline-hidden focus:border-slate-800 bg-white"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-[12.5px] font-medium text-[#344054] mb-1">
+                <label className="block text-xs font-medium text-slate-700 mb-1">
                   Email Address
                 </label>
                 <input
@@ -122,18 +122,18 @@ export default function ContactModal({ isOpen, onClose, serviceTitle }: ContactM
                   placeholder="name@company.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#D0D5DD] text-[14px] text-[#111827] focus:outline-hidden focus:border-[#155EEF]"
+                  className="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-sm text-slate-900 placeholder-slate-400 focus:outline-hidden focus:border-slate-800 bg-white"
                 />
               </div>
 
               <div>
-                <label className="block text-[12.5px] font-medium text-[#344054] mb-1">
+                <label className="block text-xs font-medium text-slate-700 mb-1">
                   State of Registration
                 </label>
                 <select
                   value={formData.state}
                   onChange={(e) => setFormData({ ...formData, state: e.target.value })}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#D0D5DD] text-[14px] text-[#111827] focus:outline-hidden focus:border-[#155EEF] bg-white"
+                  className="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-sm text-slate-900 focus:outline-hidden focus:border-slate-800 bg-white"
                 >
                   <option value="Karnataka">Karnataka</option>
                   <option value="Maharashtra">Maharashtra</option>
@@ -149,16 +149,16 @@ export default function ContactModal({ isOpen, onClose, serviceTitle }: ContactM
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full py-3 px-4 rounded-xl text-[14px] font-semibold text-white bg-[#155EEF] hover:bg-[#1849A9] shadow-xs transition-colors flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full py-2.5 px-4 rounded-xl text-xs sm:text-sm font-medium text-white bg-slate-900 hover:bg-slate-800 shadow-xs transition-colors flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <span>Request Callback &amp; Quotation</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-3.5 h-3.5" />
                 </button>
               </div>
 
-              <div className="flex items-center justify-center gap-2 text-[11.5px] text-[#15803D] pt-1">
+              <div className="flex items-center justify-center gap-1.5 text-xs text-emerald-700 pt-1">
                 <ShieldCheck className="w-3.5 h-3.5" />
-                <span>Zero spam, 100% confidential CA consultation</span>
+                <span>Zero spam. 100% confidential CA consultation</span>
               </div>
             </form>
           </div>

@@ -325,7 +325,7 @@ function ProprietorGuideContent() {
                   <h1 className="text-2xl sm:text-[26px] md:text-[28px] font-normal text-[#1F1646] text-center mb-6 leading-snug">
                     Solo Proprietorship Firm Registration Online in India
                   </h1>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed">
                     Starting a business as a <strong className="font-normal text-slate-900">sole proprietor</strong> offers simplicity and complete control over your individual business registration. Whether you are an entrepreneur looking to establish your presence or planning to expand your business ventures, understanding the nuances of <a href="#pricing" className="text-[#155EEF] hover:underline font-normal">proprietorship registration online</a> is crucial. This comprehensive guide covers everything you need to know about registering a sole proprietorship in India, from eligibility criteria to the final registration process. Our experts at <a href="/" className="text-[#00B074] hover:underline font-normal">Merrafilings</a> provide seamless solutions for self-employed registration and business establishment with affordable fees.
                   </p>
                 </div>
@@ -335,14 +335,14 @@ function ProprietorGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646]">
                     What is a Sole Proprietorship in India
                   </h2>
-                  <p className="mt-3 text-[13.5px] font-light text-slate-600 leading-relaxed">
+                  <p className="mt-3 text-[13.5px] font-normal text-slate-900 leading-relaxed">
                     A <a href="#overview" className="text-[#00B074] hover:underline font-normal">sole proprietorship</a> is the simplest form of business structure where an individual operates a business under their own name or a registered business name. The proprietor has complete authority over all business decisions and is personally responsible for all business liabilities. This one-person business model requires minimal formalities compared to other business structures, making it an attractive option for entrepreneurs.
                   </p>
 
                   <h3 className="text-[15px] font-normal text-[#1F1646] mt-5 mb-3">
                     Key Characteristics of a Sole Proprietorship
                   </h3>
-                  <ul className="space-y-2.5 text-[13px] font-light text-slate-600">
+                  <ul className="space-y-2.5 text-[13px] font-normal text-slate-900">
                     {[
                       "Single individual ownership and management",
                       "Unlimited personal liability",
@@ -367,14 +367,14 @@ function ProprietorGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646]">
                     Key Features of a Sole Proprietorship in India
                   </h2>
-                  <p className="mt-3 text-[13.5px] font-light text-slate-600 leading-relaxed">
+                  <p className="mt-3 text-[13.5px] font-normal text-slate-900 leading-relaxed">
                     Understanding the distinctive features of a sole proprietorship helps entrepreneurs make informed decisions. A proprietor registration provides numerous operational advantages that appeal to independent business owners. The proprietor maintains complete autonomy in business operations, which enables rapid adaptation to market changes. Unlike partnerships or companies, a sole proprietorship does not require approval from multiple stakeholders for critical business decisions.
                   </p>
 
                   <h3 className="text-[15px] font-normal text-[#1F1646] mt-5 mb-3">
                     Operational Advantages
                   </h3>
-                  <ul className="space-y-2.5 text-[13px] font-light text-slate-600">
+                  <ul className="space-y-2.5 text-[13px] font-normal text-slate-900">
                     {[
                       "Complete control over business operations and strategy",
                       "Simplified decision-making without board approvals",
@@ -399,14 +399,14 @@ function ProprietorGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646]">
                     Is Proprietorship Registration Mandatory in India
                   </h2>
-                  <p className="mt-3 text-[13.5px] font-light text-slate-600 leading-relaxed">
+                  <p className="mt-3 text-[13.5px] font-normal text-slate-900 leading-relaxed">
                     The question of whether proprietorship registration is mandatory depends on various business factors and regulatory requirements. While a sole proprietorship does not have a single dedicated governing act, obtaining statutory registrations (GST, Udyam MSME, and Local Shop Act) makes your enterprise legally compliant.
                   </p>
 
                   <h3 className="text-[15px] font-normal text-[#1F1646] mt-5 mb-3">
                     When Registration Becomes Mandatory
                   </h3>
-                  <ul className="space-y-2.5 text-[13px] font-light text-slate-600">
+                  <ul className="space-y-2.5 text-[13px] font-normal text-slate-900">
                     {[
                       "Manufacturing or trading businesses with turnover exceeding ₹40 lakhs (₹20 lakhs for services)",
                       "Professional services requiring regulatory licensing and invoicing",
@@ -431,7 +431,7 @@ function ProprietorGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646]">
                     Documents Required for Sole Proprietorship Registration in India
                   </h2>
-                  <p className="mt-3 text-[13.5px] font-light text-slate-600 leading-relaxed">
+                  <p className="mt-3 text-[13.5px] font-normal text-slate-900 leading-relaxed">
                     Gathering the required documents streamlines the proprietorship registration process significantly. Your Aadhaar card serves as primary identity and residential proof for online proprietorship registration. A PAN certificate issued by the income tax department is mandatory for all business operations.
                   </p>
 
@@ -446,7 +446,7 @@ function ProprietorGuideContent() {
                     ].map((doc, idx) => (
                       <div key={idx} className="p-3 bg-[#FAF9F7]/70 rounded-xl border border-slate-200/60">
                         <p className="font-normal text-[13.5px] text-[#111827]">{doc.title}</p>
-                        <p className="text-[12px] font-light text-slate-500 mt-0.5">{doc.desc}</p>
+                        <p className="text-[12px] font-normal text-slate-900 mt-0.5">{doc.desc}</p>
                       </div>
                     ))}
                   </div>
@@ -454,7 +454,7 @@ function ProprietorGuideContent() {
 
                 {/* Section 6: Additional Registration Requirements Table (Exact Match to User Reference Screenshot) */}
                 <div className="border-t border-slate-100 pt-6">
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     annual turnover exceeds specified thresholds, enabling you to collect and remit goods and services tax. <a href="#pricing" className="text-[#00A86B] underline underline-offset-2 hover:text-[#008f5a] font-normal">Udyam registration</a> provides government recognition for micro, small, and medium enterprises, unlocking access to various subsidies and schemes.
                   </p>
 
@@ -499,10 +499,10 @@ function ProprietorGuideContent() {
                                 </span>
                               )}
                             </td>
-                            <td className="py-3.5 px-4 border-r border-slate-200/80 font-light text-slate-600">
+                            <td className="py-3.5 px-4 border-r border-slate-200/80 font-normal text-slate-900">
                               {row.requirement}
                             </td>
-                            <td className="py-3.5 px-4 font-light text-slate-600">
+                            <td className="py-3.5 px-4 font-normal text-slate-900">
                               {row.when}
                             </td>
                           </tr>
@@ -517,7 +517,7 @@ function ProprietorGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646]">
                     Advantages of a Sole Proprietorship in India
                   </h2>
-                  <p className="mt-3 text-[13.5px] font-light text-slate-600 leading-relaxed">
+                  <p className="mt-3 text-[13.5px] font-normal text-slate-900 leading-relaxed">
                     Operating as a sole proprietor offers numerous advantages that make this business structure attractive for entrepreneurs. Complete autonomy allows you to make all business decisions independently without consulting partners or board members. <a href="#pricing" className="text-[#00A86B] underline underline-offset-2 hover:text-[#008f5a] font-normal">Sole proprietorship advantages</a> include simplified business structure with minimal legal formalities and compliance requirements. Tax efficiency emerges through various deduction options available to self-employed professionals and business owners.
                   </p>
                 </div>
@@ -527,7 +527,7 @@ function ProprietorGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646]">
                     How to Register a Sole Proprietorship Firm in India
                   </h2>
-                  <ol className="mt-4 space-y-3 list-decimal list-inside text-[13.5px] font-light text-slate-600 leading-relaxed">
+                  <ol className="mt-4 space-y-3 list-decimal list-inside text-[13.5px] font-normal text-slate-900 leading-relaxed">
                     <li className="pl-1"><strong className="font-normal text-slate-900">Select a Unique Business Name:</strong> Pick a distinctive trading name that reflects your activity and doesn&apos;t infringe existing trademarks.</li>
                     <li className="pl-1"><strong className="font-normal text-slate-900">Document Verification:</strong> Organize PAN, Aadhaar, bank statements, and business address electricity bills.</li>
                     <li className="pl-1"><strong className="font-normal text-slate-900">Apply for Udyam MSME Registration:</strong> Register on the government portal using Aadhaar OTP verification to obtain your official MSME certificate.</li>
@@ -542,25 +542,25 @@ function ProprietorGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646]">
                     Government Schemes for Sole Proprietorship in India
                   </h2>
-                  <p className="mt-3 text-[13.5px] font-light text-slate-600 leading-relaxed">
+                  <p className="mt-3 text-[13.5px] font-normal text-slate-900 leading-relaxed">
                     The Indian government offers multiple flagship credit and subsidy schemes specifically crafted for sole proprietor micro-enterprises:
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
                     <div className="p-4 bg-[#FAF9F7]/70 rounded-xl border border-slate-200/60">
                       <h4 className="font-normal text-slate-900 text-[14px]">Pradhan Mantri MUDRA Yojana</h4>
-                      <p className="text-[12px] font-light text-slate-500 mt-1">Collateral-free business loans up to ₹10 Lakhs under Shishu, Kishore, and Tarun schemes for working capital.</p>
+                      <p className="text-[12px] font-normal text-slate-900 mt-1">Collateral-free business loans up to ₹10 Lakhs under Shishu, Kishore, and Tarun schemes for working capital.</p>
                     </div>
                     <div className="p-4 bg-[#FAF9F7]/70 rounded-xl border border-slate-200/60">
                       <h4 className="font-normal text-slate-900 text-[14px]">Credit Guarantee Fund (CGTMSE)</h4>
-                      <p className="text-[12px] font-light text-slate-500 mt-1">Guarantees collateral-free credit facilities up to ₹2 Crore for new and existing micro-enterprises.</p>
+                      <p className="text-[12px] font-normal text-slate-900 mt-1">Guarantees collateral-free credit facilities up to ₹2 Crore for new and existing micro-enterprises.</p>
                     </div>
                     <div className="p-4 bg-[#FAF9F7]/70 rounded-xl border border-slate-200/60">
                       <h4 className="font-normal text-slate-900 text-[14px]">Stand-Up India Scheme</h4>
-                      <p className="text-[12px] font-light text-slate-500 mt-1">Bank loans between ₹10 Lakhs and ₹1 Crore for greenfield enterprises set up by SC/ST or women proprietors.</p>
+                      <p className="text-[12px] font-normal text-slate-900 mt-1">Bank loans between ₹10 Lakhs and ₹1 Crore for greenfield enterprises set up by SC/ST or women proprietors.</p>
                     </div>
                     <div className="p-4 bg-[#FAF9F7]/70 rounded-xl border border-slate-200/60">
                       <h4 className="font-normal text-slate-900 text-[14px]">PMEGP Subsidy</h4>
-                      <p className="text-[12px] font-light text-slate-500 mt-1">Government subsidy ranging from 15% to 35% on project cost for setting up new micro manufacturing and service units.</p>
+                      <p className="text-[12px] font-normal text-slate-900 mt-1">Government subsidy ranging from 15% to 35% on project cost for setting up new micro manufacturing and service units.</p>
                     </div>
                   </div>
                 </div>
@@ -570,10 +570,10 @@ function ProprietorGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646]">
                     Why Choose MerraFilings for Proprietorship Registration in India?
                   </h2>
-                  <p className="mt-3 text-[13.5px] font-light text-slate-600 leading-relaxed">
+                  <p className="mt-3 text-[13.5px] font-normal text-slate-900 leading-relaxed">
                     MerraFilings brings specialized expertise in guiding proprietors through the complete registration process with precision and efficiency. Our experienced team understands the nuances of proprietorship registration across all Indian states, providing personalized end-to-end guidance from document drafting to GST and bank setup.
                   </p>
-                  <p className="mt-3 text-[13.5px] font-light text-slate-600 leading-relaxed">
+                  <p className="mt-3 text-[13.5px] font-normal text-slate-900 leading-relaxed">
                     With zero hidden costs, instant transparent pricing, dedicated compliance managers, and our integrated LEDGERS accounting software, thousands of sole proprietors across India trust us every month.
                   </p>
                 </div>
@@ -587,10 +587,10 @@ export default function ProprietorshipPage() {
       badgeText="Simplest Business Model for Solo Entrepreneurs"
       heroTitle={
         <>
-          <span className="bg-gradient-to-r from-[#5C3BFF] via-[#7052FF] to-[#FF4ED0] bg-clip-text text-transparent font-light">
+          <span className="bg-gradient-to-r from-[#5C3BFF] via-[#7052FF] to-[#FF4ED0] bg-clip-text text-transparent font-normal">
             Proprietorship
           </span>{" "}
-          <span className="font-light text-[#12023B]">Registration in India</span>
+          <span className="font-normal text-[#12023B]">Registration in India</span>
         </>
       }
       heroSubtitle="Launch your solo business in India fast and affordably. 100% online setup with GST registration, Udyam MSME certification, and dedicated bank account support."

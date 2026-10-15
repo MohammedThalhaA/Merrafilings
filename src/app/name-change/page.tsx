@@ -212,7 +212,7 @@ function NameChangeGuideContent() {
     <>
       {/* Intro */}
       <div>
-        <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+        <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed">
           <strong className="font-medium text-slate-800">Legal Name Change in India</strong> is a formal statutory procedure governed by the Indian Evidence Act, the Department of Publication (Ministry of Housing and Urban Affairs), and passport guidelines issued by the Ministry of External Affairs. Whether prompted by marriage, divorce, astrological preferences, spelling rectifications, or personal choice, changing your legal name requires a mandatory three-step legal protocol: executing a <strong className="font-medium text-slate-800">notarized affidavit</strong>, publishing a <strong className="font-medium text-slate-800">public notice in two newspapers</strong>, and notifying the change in the <strong className="font-medium text-slate-800">Gazette of India (Central or State Gazette)</strong>. A gazetted name change serves as conclusive legal proof to update identity across Passport, PAN, Aadhaar, educational certificates, and property titles.
         </p>
       </div>
@@ -222,7 +222,7 @@ function NameChangeGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           1. What is Legal Name Change in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           A legal name change is the lawful process of adopting a new name, altering an existing first name, modifying a middle name, or changing a surname. In India, a person cannot simply begin using a new name on official records without completing the prescribed legal procedure. The government requires public announcement through newspapers and an official gazette entry to prevent identity fraud, debt evasion, or criminal impersonation while conferring unquestionable legal legitimacy upon the individual&apos;s new identity.
         </p>
       </section>
@@ -232,7 +232,7 @@ function NameChangeGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           2. Common Reasons for Legal Name Change in India
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Under Indian jurisprudence, an adult citizen has the fundamental right to change their name for any lawful reason, including:
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pt-2">
@@ -241,7 +241,7 @@ function NameChangeGuideContent() {
               <Users className="w-4 h-4 text-emerald-600 shrink-0" />
               <span>Marriage &amp; Divorce</span>
             </h3>
-            <p className="text-xs text-slate-500 font-light mt-1.5 leading-relaxed">
+            <p className="text-xs text-slate-500 font-normal mt-1.5 leading-relaxed">
               Adopting spouse&apos;s surname after marriage, hyphenating last names, or reverting to maiden surname following a divorce decree.
             </p>
           </div>
@@ -250,7 +250,7 @@ function NameChangeGuideContent() {
               <FileCheck className="w-4 h-4 text-blue-600 shrink-0" />
               <span>Spelling Corrections</span>
             </h3>
-            <p className="text-xs text-slate-500 font-light mt-1.5 leading-relaxed">
+            <p className="text-xs text-slate-500 font-normal mt-1.5 leading-relaxed">
               Rectifying clerical spelling discrepancies between 10th marksheet, birth certificate, Aadhaar, and PAN records.
             </p>
           </div>
@@ -259,7 +259,7 @@ function NameChangeGuideContent() {
               <Sparkles className="w-4 h-4 text-purple-600 shrink-0" />
               <span>Astrology &amp; Numerology</span>
             </h3>
-            <p className="text-xs text-slate-500 font-light mt-1.5 leading-relaxed">
+            <p className="text-xs text-slate-500 font-normal mt-1.5 leading-relaxed">
               Modifying letter spellings or adopting a brand-new name based on numerological, astrological, or spiritual guidance.
             </p>
           </div>
@@ -268,7 +268,7 @@ function NameChangeGuideContent() {
               <Globe2 className="w-4 h-4 text-indigo-600 shrink-0" />
               <span>Religious Conversion</span>
             </h3>
-            <p className="text-xs text-slate-500 font-light mt-1.5 leading-relaxed">
+            <p className="text-xs text-slate-500 font-normal mt-1.5 leading-relaxed">
               Adopting a new identity aligned with faith following voluntary religious conversion, supported by conversion deed.
             </p>
           </div>
@@ -277,7 +277,7 @@ function NameChangeGuideContent() {
               <Scale className="w-4 h-4 text-amber-600 shrink-0" />
               <span>Minor Child Name Change</span>
             </h3>
-            <p className="text-xs text-slate-500 font-light mt-1.5 leading-relaxed">
+            <p className="text-xs text-slate-500 font-normal mt-1.5 leading-relaxed">
               Changing child&apos;s name during school admissions, adoption, or parental surname alignment executed by legal guardians.
             </p>
           </div>
@@ -286,7 +286,7 @@ function NameChangeGuideContent() {
               <Award className="w-4 h-4 text-rose-600 shrink-0" />
               <span>Personal Preference</span>
             </h3>
-            <p className="text-xs text-slate-500 font-light mt-1.5 leading-relaxed">
+            <p className="text-xs text-slate-500 font-normal mt-1.5 leading-relaxed">
               Simplifying a lengthy name, changing gender identity, or removing caste-indicating surnames to establish personal identity.
             </p>
           </div>
@@ -298,7 +298,7 @@ function NameChangeGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           3. Mandatory 3-Step Procedure for Name Change in India
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Under government regulations, a legally recognized name change requires completing three consecutive procedural stages, followed by document updating:
         </p>
 
@@ -317,26 +317,26 @@ function NameChangeGuideContent() {
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-bold text-[#594CF5]">Step 1</td>
                 <td className="py-3 px-4 font-medium text-slate-900">Affidavit Preparation &amp; Notarization</td>
-                <td className="py-3 px-4 font-light">First Class Judicial Magistrate / Public Notary</td>
-                <td className="py-3 px-4 font-light text-slate-800">Notarized Stamp Paper Affidavit</td>
+                <td className="py-3 px-4 font-normal">First Class Judicial Magistrate / Public Notary</td>
+                <td className="py-3 px-4 font-normal text-slate-900">Notarized Stamp Paper Affidavit</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-bold text-[#594CF5]">Step 2</td>
                 <td className="py-3 px-4 font-medium text-slate-900">Newspaper Advertisement Publication</td>
-                <td className="py-3 px-4 font-light">1 English National Daily + 1 Regional Daily</td>
-                <td className="py-3 px-4 font-light text-slate-800">Original Published Newspaper Clippings</td>
+                <td className="py-3 px-4 font-normal">1 English National Daily + 1 Regional Daily</td>
+                <td className="py-3 px-4 font-normal text-slate-900">Original Published Newspaper Clippings</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-bold text-[#594CF5]">Step 3</td>
                 <td className="py-3 px-4 font-medium text-slate-900">Gazette Notification Publication</td>
-                <td className="py-3 px-4 font-light">Department of Publication, Govt of India</td>
-                <td className="py-3 px-4 font-light text-emerald-700 font-medium">Official Gazette Notification (Part IV)</td>
+                <td className="py-3 px-4 font-normal">Department of Publication, Govt of India</td>
+                <td className="py-3 px-4 font-normal text-emerald-700 font-medium">Official Gazette Notification (Part IV)</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors bg-purple-50/40">
                 <td className="py-3 px-4 font-bold text-purple-700">Step 4</td>
                 <td className="py-3 px-4 font-medium text-slate-900">Identity Document Records Update</td>
-                <td className="py-3 px-4 font-light">UIDAI, Income Tax Dept, Passport Office, Banks</td>
-                <td className="py-3 px-4 font-light text-slate-800">Updated Passport, PAN, Aadhaar &amp; Passbook</td>
+                <td className="py-3 px-4 font-normal">UIDAI, Income Tax Dept, Passport Office, Banks</td>
+                <td className="py-3 px-4 font-normal text-slate-900">Updated Passport, PAN, Aadhaar &amp; Passbook</td>
               </tr>
             </tbody>
           </table>
@@ -348,10 +348,10 @@ function NameChangeGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           4. Affidavit Drafting &amp; Notarization Guidelines
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           The name change affidavit is the primary sworn legal document executed on non-judicial stamp paper (typically ₹10 to ₹100 denomination based on state stamp duty acts). It must contain:
         </p>
-        <ul className="space-y-2 text-xs sm:text-sm text-slate-600 font-light pl-4 list-disc">
+        <ul className="space-y-2 text-xs sm:text-sm text-slate-600 font-normal pl-4 list-disc">
           <li><strong>Applicant Details:</strong> Full current legal name, father&apos;s/husband&apos;s name, and complete residential address.</li>
           <li><strong>The Declaration:</strong> Clear statement declaring the abandonment of the old name and absolute adoption of the new name.</li>
           <li><strong>The Reason:</strong> Specific declaration of the reason for name change (marriage, divorce, spelling, numerology, etc.).</li>
@@ -365,24 +365,24 @@ function NameChangeGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           5. Newspaper Advertisement Guidelines (Dual Publication)
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Once the affidavit is notarized, government regulations mandate publishing a public notice in two newspapers circulating in your home district:
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
           <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
             <h3 className="font-medium text-xs sm:text-sm text-slate-900">1. Leading English National Daily</h3>
-            <p className="text-xs text-slate-500 font-light mt-1 leading-relaxed">
+            <p className="text-xs text-slate-500 font-normal mt-1 leading-relaxed">
               Published in a recognized national newspaper circulating widely in your state (e.g., Times of India, Indian Express, Hindustan Times, Financial Express).
             </p>
           </div>
           <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
             <h3 className="font-medium text-xs sm:text-sm text-slate-900">2. Regional State Vernacular Daily</h3>
-            <p className="text-xs text-slate-500 font-light mt-1 leading-relaxed">
+            <p className="text-xs text-slate-500 font-normal mt-1 leading-relaxed">
               Published in the primary official regional language newspaper of your resident state (e.g., Hindi, Marathi, Tamil, Kannada, Bengali, Telugu, Gujarati).
             </p>
           </div>
         </div>
-        <p className="text-xs text-slate-500 font-light italic pt-1">
+        <p className="text-xs text-slate-500 font-normal italic pt-1">
           *Important: Always retain at least 4 to 5 full original newspaper copies (not just clippings) as the Department of Publication requires original unclipped newspapers with date lines visible.
         </p>
       </section>
@@ -392,7 +392,7 @@ function NameChangeGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           6. Is Gazette Notification Mandatory for Every Name Change?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           While simple surname updates after marriage can sometimes be handled for Aadhaar using a marriage certificate, government authorities, the Passport Office, banks, and educational boards mandate a formal Gazette notification in the majority of circumstances:
         </p>
 
@@ -410,27 +410,27 @@ function NameChangeGuideContent() {
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-900">Passport Reissue / Major Name Change</td>
                 <td className="py-3 px-4 font-semibold text-rose-600">Strictly Mandatory</td>
-                <td className="py-3 px-4 font-light">Ministry of External Affairs Passport Rules mandate Central Gazette copy.</td>
+                <td className="py-3 px-4 font-normal">Ministry of External Affairs Passport Rules mandate Central Gazette copy.</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-900">Government Employees &amp; Defense Personnel</td>
                 <td className="py-3 px-4 font-semibold text-rose-600">Strictly Mandatory</td>
-                <td className="py-3 px-4 font-light">Service book records, pension records, and EPF can only be updated via Gazette.</td>
+                <td className="py-3 px-4 font-normal">Service book records, pension records, and EPF can only be updated via Gazette.</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-900">Educational Certificate Alignment</td>
                 <td className="py-3 px-4 font-semibold text-rose-600">Strictly Mandatory</td>
-                <td className="py-3 px-4 font-light">Universities require Gazette entry to recognize old marksheet under new identity.</td>
+                <td className="py-3 px-4 font-normal">Universities require Gazette entry to recognize old marksheet under new identity.</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-900">Post-Divorce Surname Reversion</td>
                 <td className="py-3 px-4 font-medium text-amber-600">Highly Recommended</td>
-                <td className="py-3 px-4 font-light">Eliminates conflicts across passport, visa, and corporate employment records.</td>
+                <td className="py-3 px-4 font-normal">Eliminates conflicts across passport, visa, and corporate employment records.</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-900">Marriage Surname Update (Aadhaar &amp; PAN only)</td>
-                <td className="py-3 px-4 font-light text-slate-600">Not Mandatory (Marriage Certificate Sufficient)</td>
-                <td className="py-3 px-4 font-light">Registrar marriage certificate is accepted for basic domestic identity documents.</td>
+                <td className="py-3 px-4 font-normal text-slate-900">Not Mandatory (Marriage Certificate Sufficient)</td>
+                <td className="py-3 px-4 font-normal">Registrar marriage certificate is accepted for basic domestic identity documents.</td>
               </tr>
             </tbody>
           </table>
@@ -442,7 +442,7 @@ function NameChangeGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           7. Central Gazette vs State Gazette for Name Change
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Understanding the distinction between the Central Gazette and a State Gazette is critical before filing your petition:
         </p>
 
@@ -459,28 +459,28 @@ function NameChangeGuideContent() {
             <tbody className="divide-y divide-slate-100 bg-white">
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-900">Publishing Authority</td>
-                <td className="py-3 px-4 font-light">Controller of Publications, Government of India (Delhi)</td>
-                <td className="py-3 px-4 font-light">Director of Government Printing, State Government Press</td>
+                <td className="py-3 px-4 font-normal">Controller of Publications, Government of India (Delhi)</td>
+                <td className="py-3 px-4 font-normal">Director of Government Printing, State Government Press</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-900">Legal Jurisdiction</td>
                 <td className="py-3 px-4 font-medium text-emerald-700">Universal Pan-India &amp; International Recognition</td>
-                <td className="py-3 px-4 font-light">Primarily valid within that specific resident state</td>
+                <td className="py-3 px-4 font-normal">Primarily valid within that specific resident state</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-900">Passport Office Acceptance</td>
                 <td className="py-3 px-4 font-semibold text-emerald-700">100% Accepted by all Regional Passport Offices (RPO)</td>
-                <td className="py-3 px-4 font-light text-amber-700">May face scrutiny or rejection by RPOs outside state</td>
+                <td className="py-3 px-4 font-normal text-amber-700">May face scrutiny or rejection by RPOs outside state</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-900">Processing Time</td>
-                <td className="py-3 px-4 font-light">3 to 5 Weeks</td>
-                <td className="py-3 px-4 font-light">2 to 4 Weeks (varies by state infrastructure)</td>
+                <td className="py-3 px-4 font-normal">3 to 5 Weeks</td>
+                <td className="py-3 px-4 font-normal">2 to 4 Weeks (varies by state infrastructure)</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-900">Merrafilings Recommendation</td>
                 <td className="py-3 px-4 font-semibold text-[#594CF5]">Strongly Recommended for All Indian Citizens &amp; NRIs</td>
-                <td className="py-3 px-4 font-light">Suitable only for local state utility and schooling records</td>
+                <td className="py-3 px-4 font-normal">Suitable only for local state utility and schooling records</td>
               </tr>
             </tbody>
           </table>
@@ -492,7 +492,7 @@ function NameChangeGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           8. Legal Name Change Cost Breakdown in India
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           The cumulative expense for completing a name change depends on stamp paper rates, newspaper circulation sizes, and official government gazette printing charges:
         </p>
 
@@ -509,28 +509,28 @@ function NameChangeGuideContent() {
             <tbody className="divide-y divide-slate-100 bg-white">
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-900">Affidavit Drafting &amp; Notarization</td>
-                <td className="py-3 px-4 font-light">₹200 – ₹500</td>
-                <td className="py-3 px-4 font-light">Stamp paper fee + Public Notary attestation</td>
+                <td className="py-3 px-4 font-normal">₹200 – ₹500</td>
+                <td className="py-3 px-4 font-normal">Stamp paper fee + Public Notary attestation</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-900">Newspaper Advertisements (English + Vernacular)</td>
-                <td className="py-3 px-4 font-light">₹500 – ₹1,500</td>
-                <td className="py-3 px-4 font-light">Classified public notice in two circulated newspapers</td>
+                <td className="py-3 px-4 font-normal">₹500 – ₹1,500</td>
+                <td className="py-3 px-4 font-normal">Classified public notice in two circulated newspapers</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-900">State Gazette Notification Fee</td>
-                <td className="py-3 px-4 font-light">₹1,000 – ₹2,500</td>
-                <td className="py-3 px-4 font-light">Official government press printing fee (State portal)</td>
+                <td className="py-3 px-4 font-normal">₹1,000 – ₹2,500</td>
+                <td className="py-3 px-4 font-normal">Official government press printing fee (State portal)</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-900">Central Gazette Notification (Govt Fee)</td>
-                <td className="py-3 px-4 font-light">₹1,100 – ₹2,500</td>
-                <td className="py-3 px-4 font-light">Department of Publication Bharatkosh portal fee</td>
+                <td className="py-3 px-4 font-normal">₹1,100 – ₹2,500</td>
+                <td className="py-3 px-4 font-normal">Department of Publication Bharatkosh portal fee</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors bg-purple-50/40">
                 <td className="py-3 px-4 font-semibold text-slate-900">Merrafilings End-to-End Package</td>
                 <td className="py-3 px-4 font-bold text-purple-700">₹4,999 (All Inclusive)</td>
-                <td className="py-3 px-4 font-light text-slate-800">Affidavit + 2 Newspapers + Central Gazette + Full Legal Support</td>
+                <td className="py-3 px-4 font-normal text-slate-900">Affidavit + 2 Newspapers + Central Gazette + Full Legal Support</td>
               </tr>
             </tbody>
           </table>
@@ -542,33 +542,33 @@ function NameChangeGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           9. Mandatory Dossier Checklist for Central Gazette Submission
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           When submitting your petition to the Department of Publication in New Delhi, the following statutory dossier must be compiled:
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
           <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span className="text-xs text-slate-700 font-light">Original Notarized Name Change Affidavit</span>
+            <span className="text-xs text-slate-700 font-normal">Original Notarized Name Change Affidavit</span>
           </div>
           <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span className="text-xs text-slate-700 font-light">Original Newspaper Sheets (English + Vernacular dailies)</span>
+            <span className="text-xs text-slate-700 font-normal">Original Newspaper Sheets (English + Vernacular dailies)</span>
           </div>
           <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span className="text-xs text-slate-700 font-light">Prescribed Gazette Application Proforma duly signed</span>
+            <span className="text-xs text-slate-700 font-normal">Prescribed Gazette Application Proforma duly signed</span>
           </div>
           <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span className="text-xs text-slate-700 font-light">Digital Compact Disc (CD) containing soft copy (.docx)</span>
+            <span className="text-xs text-slate-700 font-normal">Digital Compact Disc (CD) containing soft copy (.docx)</span>
           </div>
           <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span className="text-xs text-slate-700 font-light">Self-attested identity proof (Aadhaar, Voter ID, or PAN)</span>
+            <span className="text-xs text-slate-700 font-normal">Self-attested identity proof (Aadhaar, Voter ID, or PAN)</span>
           </div>
           <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span className="text-xs text-slate-700 font-light">Two recent passport-size photographs signed on the back</span>
+            <span className="text-xs text-slate-700 font-normal">Two recent passport-size photographs signed on the back</span>
           </div>
         </div>
       </section>
@@ -578,7 +578,7 @@ function NameChangeGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           10. Step-by-Step Identity Document Updates Post Gazette
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Once your e-Gazette notification is published and downloaded, follow this sequential order to update your identity records smoothly:
         </p>
         <div className="space-y-3 pt-2">
@@ -586,7 +586,7 @@ function NameChangeGuideContent() {
             <div className="w-6 h-6 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-semibold shrink-0 mt-0.5">1</div>
             <div>
               <h3 className="text-xs sm:text-sm font-medium text-slate-900">Update Aadhaar Card (First Priority)</h3>
-              <p className="text-xs text-slate-500 font-light mt-0.5 leading-relaxed">
+              <p className="text-xs text-slate-500 font-normal mt-0.5 leading-relaxed">
                 Visit any Aadhaar Seva Kendra with the Gazette notification copy and affidavit. UIDAI updates your demographic name in 2 to 5 days, providing the foundation for subsequent document updates.
               </p>
             </div>
@@ -595,7 +595,7 @@ function NameChangeGuideContent() {
             <div className="w-6 h-6 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-semibold shrink-0 mt-0.5">2</div>
             <div>
               <h3 className="text-xs sm:text-sm font-medium text-slate-900">Update PAN Card Online via NSDL / Protean</h3>
-              <p className="text-xs text-slate-500 font-light mt-0.5 leading-relaxed">
+              <p className="text-xs text-slate-500 font-normal mt-0.5 leading-relaxed">
                 Submit a PAN change request form using your updated Aadhaar. The Income Tax Department updates your name while retaining your existing 10-character PAN number.
               </p>
             </div>
@@ -604,7 +604,7 @@ function NameChangeGuideContent() {
             <div className="w-6 h-6 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-semibold shrink-0 mt-0.5">3</div>
             <div>
               <h3 className="text-xs sm:text-sm font-medium text-slate-900">Apply for Passport Reissue with New Name</h3>
-              <p className="text-xs text-slate-500 font-light mt-0.5 leading-relaxed">
+              <p className="text-xs text-slate-500 font-normal mt-0.5 leading-relaxed">
                 Book an appointment at your Regional Passport Seva Kendra (PSK) submitting the Gazette notification, newspaper advertisements, and updated Aadhaar/PAN.
               </p>
             </div>
@@ -613,7 +613,7 @@ function NameChangeGuideContent() {
             <div className="w-6 h-6 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-semibold shrink-0 mt-0.5">4</div>
             <div>
               <h3 className="text-xs sm:text-sm font-medium text-slate-900">Bank Accounts, Driving License, Property &amp; Mutual Funds</h3>
-              <p className="text-xs text-slate-500 font-light mt-0.5 leading-relaxed">
+              <p className="text-xs text-slate-500 font-normal mt-0.5 leading-relaxed">
                 Submit self-attested copies of your Gazette notification and updated PAN/Aadhaar to your bank branch, RTO, registrar of properties, and CAMS/KFintech for full KYC synchronization.
               </p>
             </div>
@@ -626,10 +626,10 @@ function NameChangeGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           11. Why Choose Merrafilings for Legal Name Change?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Navigating notary drafting, formatting newspaper ad text, creating CD soft copies in exact government specifications, and coordinating with the Department of Publication in New Delhi can be overwhelming. Merrafilings handles the entire journey:
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs font-light text-slate-700">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs font-normal text-slate-900">
           <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
             <span className="group-hover:text-slate-900 transition-colors">100% Online Paperless Process – No Visits to Delhi Needed</span>

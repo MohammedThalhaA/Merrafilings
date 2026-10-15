@@ -310,10 +310,10 @@ function SubsidiaryGuideContent() {
                 <h1 className="text-2xl sm:text-[26px] md:text-[28px] font-normal text-[#1F1646] text-center mb-6 leading-snug">
                   Indian Subsidiary Company Registration for Foreign Companies
                 </h1>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-3">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-3">
                   Setting up an <strong className="font-medium text-slate-800">Indian Subsidiary Company</strong> is the most dependable and legally sound avenue for multinational corporations and foreign startups to establish an operational foothold in India. Regulated under Section 2(87) of the <strong className="font-medium text-slate-800">Companies Act, 2013</strong>, an Indian subsidiary operates as a domestic private limited company where more than 50% (or 100% in a Wholly Owned Subsidiary) of the equity capital is held by the overseas parent company.
                 </p>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed">
                   As an independent domestic legal entity, an Indian Subsidiary enjoys lower corporate tax rates, limited liability protection, full commercial trading rights, and access to India&apos;s fast-growing market. At <a href="/" className="text-[#00B074] hover:underline font-normal">Merrafilings</a>, our cross-border corporate team coordinates foreign document apostilles, MCA incorporation, and RBI FEMA compliance smoothly.
                 </p>
               </div>
@@ -323,11 +323,11 @@ function SubsidiaryGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Why Should Foreign Companies Choose an Indian Subsidiary?
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   Compared to restrictive branch offices or liaison offices, an Indian Subsidiary offers unmatched operational freedom:
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[12.5px] font-light text-slate-700">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[12.5px] font-normal text-slate-900">
                   <div className="p-3.5 rounded-xl border border-slate-200/80 bg-[#FAF9F7]/70">
                     <strong className="font-medium text-slate-900 block mb-1">
                       100% Foreign Direct Investment (FDI)
@@ -360,12 +360,12 @@ function SubsidiaryGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Statutory Minimum Requirements for Indian Subsidiary Setup
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   To establish an Indian Subsidiary on the MCA portal, ensure the following corporate conditions are satisfied:
                 </p>
 
                 <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-4">
-                  <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                  <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                     <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                       <tr>
                         <th className="py-3 px-4 font-normal">Requirement</th>
@@ -395,7 +395,7 @@ function SubsidiaryGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Eligibility Criteria for Foreign Promoters &amp; Directors
                 </h2>
-                <div className="space-y-3 text-[13px] font-light text-slate-600">
+                <div className="space-y-3 text-[13px] font-normal text-slate-900">
                   <div className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full bg-emerald-100 text-[#00A86B] flex items-center justify-center shrink-0 mt-0.5 text-xs font-semibold">
                       ✓
@@ -436,7 +436,7 @@ function SubsidiaryGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Documents Required for Indian Subsidiary Registration
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   All foreign corporate documents must be apostilled or consular notarized in the parent company&apos;s home jurisdiction:
                 </p>
 
@@ -447,7 +447,7 @@ function SubsidiaryGuideContent() {
                       <Globe2 className="w-4 h-4 text-[#6B4BFF]" />
                       <span>For Foreign Parent Company</span>
                     </h3>
-                    <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
+                    <ul className="space-y-2 text-[12.5px] font-normal text-slate-900">
                       <li className="flex items-center gap-2">
                         <Check className="w-3.5 h-3.5 text-[#00B074] shrink-0" />
                         <span>Apostilled Certificate of Incorporation / Business Charter</span>
@@ -473,7 +473,7 @@ function SubsidiaryGuideContent() {
                       <Building className="w-4 h-4 text-[#00A86B]" />
                       <span>For Directors &amp; Registered Office</span>
                     </h3>
-                    <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
+                    <ul className="space-y-2 text-[12.5px] font-normal text-slate-900">
                       <li className="flex items-center gap-2">
                         <Check className="w-3.5 h-3.5 text-[#00B074] shrink-0" />
                         <span>Foreign Director: Apostilled Passport copy &amp; address proof</span>
@@ -500,7 +500,7 @@ function SubsidiaryGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Step-by-Step Indian Subsidiary Incorporation Process
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-5">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-5">
                   Our international corporate desk manages every phase with precision:
                 </p>
 
@@ -536,7 +536,7 @@ function SubsidiaryGuideContent() {
                       </span>
                       <div>
                         <h4 className="font-medium text-slate-800 text-[13.5px] mb-1">{st.title}</h4>
-                        <p className="text-[12.5px] font-light text-slate-600 leading-relaxed">{st.desc}</p>
+                        <p className="text-[12.5px] font-normal text-slate-900 leading-relaxed">{st.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -548,12 +548,12 @@ function SubsidiaryGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Comparison: Wholly Owned Subsidiary vs. Branch Office vs. Liaison Office
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   Understand why an Indian Subsidiary is the most advantageous investment route for foreign corporations:
                 </p>
 
                 <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs">
-                  <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                  <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                     <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                       <tr>
                         <th className="py-3 px-4 font-normal">Parameter</th>
@@ -587,12 +587,12 @@ function SubsidiaryGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Mandatory Post-Incorporation &amp; Annual Compliances
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   An Indian Subsidiary must fulfill both domestic corporate and RBI FEMA regulatory filings:
                 </p>
 
                 <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-5">
-                  <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                  <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                     <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                       <tr>
                         <th className="py-3 px-4 font-normal">Regulatory Compliance</th>
@@ -659,10 +659,10 @@ function SubsidiaryGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Why Choose Merrafilings for Your Indian Subsidiary?
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   Merrafilings is trusted by multinational firms, overseas funds, and global enterprises worldwide:
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[13px] font-light text-slate-700">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[13px] font-normal text-slate-900">
                   <div className="flex items-center gap-2">
                     <span className="text-[#00A86B] font-bold">✓</span>
                     <span>Dedicated Cross-Border CA &amp; FEMA Legal Desk</span>
@@ -691,7 +691,7 @@ export default function IndianSubsidiaryPage() {
       badgeText="FDI & Cross-Border Corporate Formation"
       heroTitle={
         <>
-          <span className="bg-gradient-to-r from-[#5C3BFF] via-[#7052FF] to-[#FF4ED0] bg-clip-text text-transparent font-light">
+          <span className="bg-gradient-to-r from-[#5C3BFF] via-[#7052FF] to-[#FF4ED0] bg-clip-text text-transparent font-normal">
             Indian Subsidiary Company
           </span>{" "}
           Registration for Foreign Companies

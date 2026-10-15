@@ -343,10 +343,10 @@ function TradeLicenseGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           1. What is a Trade License in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           A <strong className="text-slate-800 font-medium">Trade License</strong> is an official permit granted by a municipal corporation, municipality, or local administrative body authorizing an individual or commercial enterprise to conduct a specific trade, manufacturing, or service activity within a designated municipal jurisdiction.
         </p>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Unlike one-time company incorporations, a trade license is a location-specific and time-bound operating permit. It must be renewed annually before the beginning of each municipal financial year. The primary objective is to verify that the commercial activity is operated in conformity with local public health, environmental safety, fire security, and urban zoning regulations.
         </p>
         <div className="bg-[#FAF9F7] p-4.5 rounded-2xl border border-slate-200/80 flex items-start gap-3">
@@ -363,7 +363,7 @@ function TradeLicenseGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           2. Why Trade License Important for Your Business in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Securing a trade license is an indispensable milestone for any operating business. Beyond meeting statutory mandates, it confers concrete operational advantages:
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 pt-1">
@@ -374,7 +374,7 @@ function TradeLicenseGuideContent() {
               </div>
               <span>Legal Immunity &amp; Business Legitimacy</span>
             </h3>
-            <p className="text-xs text-slate-600 leading-relaxed font-light pl-10.5">
+            <p className="text-xs text-slate-600 leading-relaxed font-normal pl-10.5">
               Protects business owners against unannounced municipal raids, stop-work notices, and sealing of premises by municipal enforcement inspectors.
             </p>
           </div>
@@ -385,7 +385,7 @@ function TradeLicenseGuideContent() {
               </div>
               <span>Consumer &amp; Neighborhood Trust</span>
             </h3>
-            <p className="text-xs text-slate-600 leading-relaxed font-light pl-10.5">
+            <p className="text-xs text-slate-600 leading-relaxed font-normal pl-10.5">
               Proves to customers, neighboring residents, and landlords that your operations comply with ethical health, sound, and waste sanitation norms.
             </p>
           </div>
@@ -396,7 +396,7 @@ function TradeLicenseGuideContent() {
               </div>
               <span>Banking &amp; Credit Facilities</span>
             </h3>
-            <p className="text-xs text-slate-600 leading-relaxed font-light pl-10.5">
+            <p className="text-xs text-slate-600 leading-relaxed font-normal pl-10.5">
               Banks and non-banking financial institutions (NBFCs) mandatorily examine active municipal trade certificates before sanctioning business loans or overdrafts.
             </p>
           </div>
@@ -407,7 +407,7 @@ function TradeLicenseGuideContent() {
               </div>
               <span>Government Tenders &amp; Subsidies</span>
             </h3>
-            <p className="text-xs text-slate-600 leading-relaxed font-light pl-10.5">
+            <p className="text-xs text-slate-600 leading-relaxed font-normal pl-10.5">
               Required for onboarding onto the Government e-Marketplace (GeM) and qualifying for state industrial incentive schemes.
             </p>
           </div>
@@ -419,10 +419,10 @@ function TradeLicenseGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           3. What are the Main Objectives of a Trade License?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Municipal licensing systems were introduced to balance commercial growth with civic order. The four core objectives include:
         </p>
-        <ul className="space-y-2.5 text-xs sm:text-sm text-slate-600 font-light">
+        <ul className="space-y-2.5 text-xs sm:text-sm text-slate-600 font-normal">
           <li className="flex items-start gap-2.5">
             <Check className="w-4 h-4 text-[#00B074] shrink-0 mt-0.5" />
             <span><strong className="text-slate-800 font-medium">Controlling Public Nuisance:</strong> Ensuring that high-noise, air-polluting, or effluent-generating activities are confined to designated industrial zones away from residential clusters.</span>
@@ -447,7 +447,7 @@ function TradeLicenseGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           4. Who Can Issue a Trade License in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Trade licenses in India are administered strictly at the local government level under State Municipal Corporation Acts. The issuing authority depends directly on the location of your commercial premises:
         </p>
 
@@ -459,7 +459,7 @@ function TradeLicenseGuideContent() {
                 <th className="py-3 px-4">Applicable Area &amp; Jurisdiction</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 font-light text-slate-600">
+            <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
               {ISSUING_AUTHORITIES_TABLE.map((row, idx) => (
                 <tr key={idx} className="hover:bg-slate-50/60 transition-colors">
                   <td className="py-3 px-4 font-medium text-slate-800">{row.authority}</td>
@@ -476,7 +476,7 @@ function TradeLicenseGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           5. Different Categories of Trade License in India
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Municipal bylaws categorize commercial activities based on potential hazards and environmental impact. Identifying your proper category is essential to ensure accurate fee calculation and documentation:
         </p>
 
@@ -489,7 +489,7 @@ function TradeLicenseGuideContent() {
                 <th className="py-3 px-4">Specific NOC Mandates</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 font-light text-slate-600">
+            <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
               {TRADE_CATEGORIES_TABLE.map((row, idx) => (
                 <tr key={idx} className="hover:bg-slate-50/60 transition-colors">
                   <td className="py-3 px-4 font-medium text-slate-800">{row.category}</td>
@@ -512,7 +512,7 @@ function TradeLicenseGuideContent() {
             <h3 className="text-[14px] font-medium text-emerald-950 mb-2 flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-600" /> Eligibility Checklist
             </h3>
-            <ul className="space-y-1.5 text-xs text-slate-700 font-light">
+            <ul className="space-y-1.5 text-xs text-slate-700 font-normal">
               <li>• Applicant must be at least 18 years of age and legally competent to enter contracts.</li>
               <li>• The enterprise must be engaged in an activity permissible under Indian law.</li>
               <li>• Applicant must possess valid legal possession of commercial property (Ownership or Lease).</li>
@@ -523,7 +523,7 @@ function TradeLicenseGuideContent() {
             <h3 className="text-[14px] font-medium text-red-950 mb-2 flex items-center gap-2">
               <AlertTriangle className="w-4 h-4 text-red-600" /> Grounds for Immediate Rejection
             </h3>
-            <ul className="space-y-1.5 text-xs text-slate-700 font-light">
+            <ul className="space-y-1.5 text-xs text-slate-700 font-normal">
               <li>• Commercial operations conducted on unregularized residential-only premises.</li>
               <li>• Properties with unpaid municipal property tax dues or pending court litigation.</li>
               <li>• Unauthorized building extensions lacking a valid Sanctioned Building Plan.</li>
@@ -538,7 +538,7 @@ function TradeLicenseGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           7. Documents Required for Trade License Registration
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Submitting clear, valid, and properly attested documentation prevents inspection queries and ward delays. Prepare the following checklist:
         </p>
 
@@ -550,7 +550,7 @@ function TradeLicenseGuideContent() {
                 <th className="py-3 px-4">Statutory Purpose</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 font-light text-slate-600">
+            <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
               {DOCUMENTS_REQUIRED_TABLE.map((row, idx) => (
                 <tr key={idx} className="hover:bg-slate-50/60 transition-colors">
                   <td className="py-3 px-4 font-medium text-slate-800">{row.document}</td>
@@ -567,7 +567,7 @@ function TradeLicenseGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           8. Step-by-Step Procedure for Trade License in India
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Merrafilings manages the complete administrative lifecycle to ensure your certificate is issued smoothly without visiting municipal offices:
         </p>
 
@@ -576,7 +576,7 @@ function TradeLicenseGuideContent() {
             <span className="w-7 h-7 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-200">1</span>
             <div>
               <h3 className="text-sm font-medium text-slate-900 group-hover:text-blue-900 transition-colors">Jurisdiction &amp; Authority Identification</h3>
-              <p className="text-xs text-slate-600 mt-1 font-light leading-relaxed">
+              <p className="text-xs text-slate-600 mt-1 font-normal leading-relaxed">
                 We pinpoint your exact municipal corporation zone, ward number, and applicable municipal schedule based on your pin code and trade category.
               </p>
             </div>
@@ -586,7 +586,7 @@ function TradeLicenseGuideContent() {
             <span className="w-7 h-7 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-200">2</span>
             <div>
               <h3 className="text-sm font-medium text-slate-900 group-hover:text-blue-900 transition-colors">Application Drafting &amp; Document Scrutiny</h3>
-              <p className="text-xs text-slate-600 mt-1 font-light leading-relaxed">
+              <p className="text-xs text-slate-600 mt-1 font-normal leading-relaxed">
                 Our CA/CS team reviews your lease deed, property tax receipt, and structural plans to ensure zero discrepancy prior to submission on the state portal.
               </p>
             </div>
@@ -596,7 +596,7 @@ function TradeLicenseGuideContent() {
             <span className="w-7 h-7 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-200">3</span>
             <div>
               <h3 className="text-sm font-medium text-slate-900 group-hover:text-blue-900 transition-colors">Filing &amp; Statutory Fee Payment</h3>
-              <p className="text-xs text-slate-600 mt-1 font-light leading-relaxed">
+              <p className="text-xs text-slate-600 mt-1 font-normal leading-relaxed">
                 The application is submitted to the Revenue &amp; Health licensing department along with prescribed municipal statutory challan fees.
               </p>
             </div>
@@ -606,7 +606,7 @@ function TradeLicenseGuideContent() {
             <span className="w-7 h-7 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-200">4</span>
             <div>
               <h3 className="text-sm font-medium text-slate-900 group-hover:text-blue-900 transition-colors">Ward Inspection &amp; Scrutiny Coordination</h3>
-              <p className="text-xs text-slate-600 mt-1 font-light leading-relaxed">
+              <p className="text-xs text-slate-600 mt-1 font-normal leading-relaxed">
                 If the municipal officer requires a physical site verification, our local field network coordinates inspection protocols and resolves questions.
               </p>
             </div>
@@ -616,7 +616,7 @@ function TradeLicenseGuideContent() {
             <span className="w-7 h-7 rounded-full bg-[#00B074] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-200">5</span>
             <div>
               <h3 className="text-sm font-medium text-slate-900 group-hover:text-emerald-900 transition-colors">Certificate Generation &amp; Digital Delivery</h3>
-              <p className="text-xs text-slate-600 mt-1 font-light leading-relaxed">
+              <p className="text-xs text-slate-600 mt-1 font-normal leading-relaxed">
                 Upon final approval, the digitally signed Trade License Certificate with official QR code is issued and stored permanently in your Merrafilings dashboard.
               </p>
             </div>
@@ -638,7 +638,7 @@ function TradeLicenseGuideContent() {
                 <th className="py-3 px-4 text-slate-500">Offline Process</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 font-light text-slate-600">
+            <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
               {ONLINE_VS_OFFLINE_TABLE.map((row, idx) => (
                 <tr key={idx} className="hover:bg-slate-50/60 transition-colors">
                   <td className="py-3 px-4 font-medium text-slate-800">{row.parameter}</td>
@@ -656,7 +656,7 @@ function TradeLicenseGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           10. Fees Structure for Trade License Registration
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Municipal trade license statutory fees differ across states and cities. Key determinants include carpet area, commercial property tax slab, and machinery horsepower:
         </p>
 
@@ -669,7 +669,7 @@ function TradeLicenseGuideContent() {
                 <th className="py-3 px-4">Fee Determining Factor</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 font-light text-slate-600">
+            <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
               {FEES_STRUCTURE_TABLE.map((row, idx) => (
                 <tr key={idx} className="hover:bg-slate-50/60 transition-colors">
                   <td className="py-3 px-4 font-medium text-slate-800">{row.category}</td>
@@ -687,25 +687,25 @@ function TradeLicenseGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           11. Penalties for Operating Without a Trade License
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Municipal enforcement squads conduct periodic audits. Operating without a valid trade license or failing to renew triggers severe statutory penalties:
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
           <div className="p-4 rounded-xl bg-rose-50/50 border border-rose-200/70">
             <h3 className="text-xs font-semibold text-rose-900 uppercase tracking-wider mb-1">Financial Fines</h3>
-            <p className="text-xs text-slate-600 font-light">
+            <p className="text-xs text-slate-600 font-normal">
               Fines ranging from ₹2,000 to ₹50,000 plus an additional daily penalty of up to ₹500 per day until rectified.
             </p>
           </div>
           <div className="p-4 rounded-xl bg-rose-50/50 border border-rose-200/70">
             <h3 className="text-xs font-semibold text-rose-900 uppercase tracking-wider mb-1">Shop Sealing</h3>
-            <p className="text-xs text-slate-600 font-light">
+            <p className="text-xs text-slate-600 font-normal">
               Immediate physical closure, locks, and municipal seals placed on the commercial establishment without prior notice.
             </p>
           </div>
           <div className="p-4 rounded-xl bg-rose-50/50 border border-rose-200/70">
             <h3 className="text-xs font-semibold text-rose-900 uppercase tracking-wider mb-1">Utility Disconnection</h3>
-            <p className="text-xs text-slate-600 font-light">
+            <p className="text-xs text-slate-600 font-normal">
               Revocation of commercial water and electricity connections under the Municipal Corporation Act.
             </p>
           </div>
@@ -717,10 +717,10 @@ function TradeLicenseGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           12. How to Download &amp; Verify Your Trade License Certificate
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Once your license is approved by the municipal executive officer, follow these steps to download and verify the certificate:
         </p>
-        <ol className="list-decimal pl-5 space-y-2 text-xs sm:text-sm text-slate-600 font-light">
+        <ol className="list-decimal pl-5 space-y-2 text-xs sm:text-sm text-slate-600 font-normal">
           <li>Visit your respective municipal corporation portal (e.g., e-Nagar, BBMP Citizen Portal, Greater Chennai e-Services).</li>
           <li>Navigate to the <strong className="text-slate-800 font-medium">Trade License &gt; Check Status / Download</strong> module.</li>
           <li>Enter your unique <strong className="text-slate-800 font-medium">Application Reference Number (ARN)</strong> or Trade License ID.</li>
@@ -734,7 +734,7 @@ function TradeLicenseGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           13. Why Choose Merrafilings for Trade License Services?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Navigating municipal bureaucracy can be cumbersome and time-consuming. Merrafilings makes municipal licensing completely digital and worry-free:
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-xs text-slate-700">

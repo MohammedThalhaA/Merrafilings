@@ -400,7 +400,7 @@ function TrustGuideContent() {
                 <h2 className="text-[22px] sm:text-[24px] font-normal text-[#1F1646] mb-3">
                   Trust Registration Online in India
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed">
                   Registering a trust in India provides a strong legal foundation for managing charitable, religious, or private objectives. Whether you aim to serve society or protect family assets, trust registration in India ensures transparency, legal recognition, and tax benefits under the Indian Trusts Act, 1882 and relevant state-specific statutes.
                 </p>
               </div>
@@ -410,15 +410,15 @@ function TrustGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   What is a Trust and Why is it Registered in India?
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   A trust is a legal arrangement where one party (the settlor) transfers property or assets to another party (the trustee) for the benefit of a third party (the beneficiary). In India, trusts are primarily governed by the Indian Trusts Act, 1882 for private trusts, while public and charitable trusts are regulated by state-specific legislation.
                 </p>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   Registering a trust gives it a legal identity, enabling it to own property, enter into contracts, open bank accounts, and avail tax exemptions. Charitable trust registration is especially important for NGOs and non-profit organisations seeking government recognition and donor credibility.
                 </p>
 
                 {/* 3 Key Parties in a Trust */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-[13px] font-light text-slate-700 mb-6">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-[13px] font-normal text-slate-900 mb-6">
                   <div className="p-4 rounded-xl border border-slate-200/80 bg-[#FAF9F7]/70">
                     <strong className="font-medium text-slate-900 block mb-1">
                       1. The Settlor / Author
@@ -443,7 +443,7 @@ function TrustGuideContent() {
                 <h3 className="text-[15px] font-medium text-slate-900 mb-2.5">
                   Key Objectives of Trust Registration
                 </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-[12.5px] font-light text-slate-600">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-[12.5px] font-normal text-slate-900">
                   <div className="flex items-center gap-2 p-2.5 rounded-lg bg-slate-50 border border-slate-200/60">
                     <CheckCircle2 className="w-4 h-4 text-[#00A86B] shrink-0" />
                     <span>Legal recognition &amp; distinct identity for the trust entity</span>
@@ -472,12 +472,12 @@ function TrustGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   What are the Types of Trusts in India?
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   India recognises several types of trusts based on their purpose, structure, and beneficiaries. Understanding the type of trust best suited to your objectives is the first step in the online trust registration process:
                 </p>
 
                 <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-4">
-                  <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                  <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                     <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                       <tr>
                         <th className="py-3 px-4 font-normal">Type of Trust</th>
@@ -509,10 +509,10 @@ function TrustGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   What are the Characteristics of Trust Registration in India?
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   A registered trust in India carries several defining characteristics that distinguish it from other non-profit structures such as societies or Section 8 companies:
                 </p>
-                <div className="space-y-3 text-[13px] font-light text-slate-600">
+                <div className="space-y-3 text-[13px] font-normal text-slate-900">
                   <div className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full bg-emerald-100 text-[#00A86B] flex items-center justify-center shrink-0 mt-0.5 text-xs font-semibold">
                       ✓
@@ -577,14 +577,14 @@ function TrustGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   What is a Trust Deed and Why is it Important?
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   A trust deed is the foundational legal charter that defines the structure, purpose, powers, and rules of the trust. It is executed on non-judicial stamp paper and signed by the settlor and trustees in the presence of two independent witnesses. Without a registered trust deed, formal legal recognition and tax exemptions are impossible.
                 </p>
 
                 <h3 className="text-[15px] font-medium text-slate-900 mb-3">
                   What Should a Trust Deed Contain?
                 </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[12.5px] font-light text-slate-700">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[12.5px] font-normal text-slate-900">
                   <div className="p-3 rounded-lg border border-slate-200/80 bg-[#FAF9F7]/70">
                     <strong className="font-medium text-slate-900 block mb-0.5">1. Name and Registered Address</strong>
                     Clear, distinct trust name and physical jurisdictional address.
@@ -625,12 +625,12 @@ function TrustGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   What are the Documents Required for Trust Registration?
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   Preparing the correct documentation is essential for smooth Sub-Registrar execution. The following authenticated documents are required:
                 </p>
 
                 <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-4">
-                  <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                  <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                     <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                       <tr>
                         <th className="py-3 px-4 font-normal">Document Required</th>
@@ -662,7 +662,7 @@ function TrustGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   What is the Step-by-Step Procedure for Trust Registration in India?
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   The trust registration procedure in India involves several critical steps to establish full legal recognition:
                 </p>
 
@@ -675,7 +675,7 @@ function TrustGuideContent() {
                       <h4 className="text-[13.5px] font-medium text-slate-800">
                         Choose the Type of Trust &amp; Settle Name
                       </h4>
-                      <p className="text-[12px] font-light text-slate-600 leading-relaxed">
+                      <p className="text-[12px] font-normal text-slate-900 leading-relaxed">
                         Decide whether to establish a public charitable, religious, or private trust. Ensure the proposed name complies with the Emblems and Names Act.
                       </p>
                     </div>
@@ -689,7 +689,7 @@ function TrustGuideContent() {
                       <h4 className="text-[13.5px] font-medium text-slate-800">
                         Draft the Comprehensive Trust Deed
                       </h4>
-                      <p className="text-[12px] font-light text-slate-600 leading-relaxed">
+                      <p className="text-[12px] font-normal text-slate-900 leading-relaxed">
                         Prepare the formal constitutional deed with aims, trustee powers, voting quorum, meeting guidelines, and perpetual succession clauses.
                       </p>
                     </div>
@@ -703,7 +703,7 @@ function TrustGuideContent() {
                       <h4 className="text-[13.5px] font-medium text-slate-800">
                         Select and Appoint Trustees (Minimum 2)
                       </h4>
-                      <p className="text-[12px] font-light text-slate-600 leading-relaxed">
+                      <p className="text-[12px] font-normal text-slate-900 leading-relaxed">
                         Appoint at least two adult trustees of sound mind with valid Indian PAN and Aadhaar records to administer trust operations.
                       </p>
                     </div>
@@ -717,7 +717,7 @@ function TrustGuideContent() {
                       <h4 className="text-[13.5px] font-medium text-slate-800">
                         Execute Deed on Non-Judicial Stamp Paper
                       </h4>
-                      <p className="text-[12px] font-light text-slate-600 leading-relaxed">
+                      <p className="text-[12px] font-normal text-slate-900 leading-relaxed">
                         Print the finalized trust deed on non-judicial stamp paper based on the prescribed stamp duty rate of the registered office state.
                       </p>
                     </div>
@@ -731,7 +731,7 @@ function TrustGuideContent() {
                       <h4 className="text-[13.5px] font-medium text-slate-800">
                         Visit the Jurisdictional Sub-Registrar Office
                       </h4>
-                      <p className="text-[12px] font-light text-slate-600 leading-relaxed">
+                      <p className="text-[12px] font-normal text-slate-900 leading-relaxed">
                         The Settlor, trustees, and two independent witnesses appear before the local Sub-Registrar for deed execution and biometric verification.
                       </p>
                     </div>
@@ -745,7 +745,7 @@ function TrustGuideContent() {
                       <h4 className="text-[13.5px] font-medium text-slate-800">
                         Obtain Certified Trust Registration Deed
                       </h4>
-                      <p className="text-[12px] font-light text-slate-600 leading-relaxed">
+                      <p className="text-[12px] font-normal text-slate-900 leading-relaxed">
                         Once validated and stamped, the Sub-Registrar issues the official registered copy bearing volume and book registration numbers.
                       </p>
                     </div>
@@ -759,7 +759,7 @@ function TrustGuideContent() {
                       <h4 className="text-[13.5px] font-medium text-slate-800">
                         Apply for Trust PAN &amp; TAN Card
                       </h4>
-                      <p className="text-[12px] font-light text-slate-600 leading-relaxed">
+                      <p className="text-[12px] font-normal text-slate-900 leading-relaxed">
                         Apply online in Form 49A with the registered deed to secure the trust&apos;s distinct Permanent Account Number (PAN).
                       </p>
                     </div>
@@ -773,7 +773,7 @@ function TrustGuideContent() {
                       <h4 className="text-[13.5px] font-medium text-slate-800">
                         Open Dedicated Trust Bank Current Account
                       </h4>
-                      <p className="text-[12px] font-light text-slate-600 leading-relaxed">
+                      <p className="text-[12px] font-normal text-slate-900 leading-relaxed">
                         Open a bank current account in the trust name using the certified deed, PAN, and trustee board authorization resolution.
                       </p>
                     </div>
@@ -787,7 +787,7 @@ function TrustGuideContent() {
                       <h4 className="text-[13.5px] font-medium text-slate-800">
                         Apply for 12A &amp; 80G Tax Exemption (Form 10A)
                       </h4>
-                      <p className="text-[12px] font-light text-slate-600 leading-relaxed">
+                      <p className="text-[12px] font-normal text-slate-900 leading-relaxed">
                         File electronic application Form 10A on the Income Tax Portal to obtain 12A tax exemption and 80G donor deduction status.
                       </p>
                     </div>
@@ -800,14 +800,14 @@ function TrustGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   How to Apply for PAN Card for a Registered Trust?
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   After obtaining the registered trust deed, applying for a PAN card is a mandatory step. A dedicated PAN is required for opening a bank account, filing annual income tax returns, and issuing donor receipts:
                 </p>
                 <div className="bg-[#FAF9F7] p-4 rounded-xl border border-slate-200/80">
                   <h4 className="text-[13.5px] font-medium text-slate-800 mb-2">
                     Documents Required for Trust PAN Card:
                   </h4>
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[12.5px] font-light text-slate-600">
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[12.5px] font-normal text-slate-900">
                     <li className="flex items-center gap-2">
                       <Check className="w-3.5 h-3.5 text-[#00B074]" />
                       <span>Certified Copy of Registered Trust Deed</span>
@@ -833,12 +833,12 @@ function TrustGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   What is ITR-7 Return Filing for Trusts?
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   All registered trusts in India that claim income tax exemption under Sections 11, 12, 12A, or 12AA are required to file their annual income tax return using Form ITR-7:
                 </p>
 
                 <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-4">
-                  <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                  <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                     <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                       <tr>
                         <th className="py-3 px-4 font-normal">Particulars</th>
@@ -868,7 +868,7 @@ function TrustGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   How to Get 12A &amp; 80G Registration for a Trust?
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   Section 12A (now 12AB) and Section 80G together form the backbone of a non-profit trust&apos;s financial framework in India:
                 </p>
 
@@ -878,7 +878,7 @@ function TrustGuideContent() {
                       <BadgePercent className="w-4 h-4 text-[#00A86B]" />
                       Section 12A (100% Tax Relief)
                     </h4>
-                    <p className="text-[12.5px] font-light text-slate-600 leading-relaxed">
+                    <p className="text-[12.5px] font-normal text-slate-900 leading-relaxed">
                       Grants complete income tax exemption on the trust&apos;s annual surplus income. Filed electronically via Form 10A on the Income Tax Portal.
                     </p>
                   </div>
@@ -888,7 +888,7 @@ function TrustGuideContent() {
                       <Receipt className="w-4 h-4 text-[#00A86B]" />
                       Section 80G (Donor Tax Deduction)
                     </h4>
-                    <p className="text-[12.5px] font-light text-slate-600 leading-relaxed">
+                    <p className="text-[12.5px] font-normal text-slate-900 leading-relaxed">
                       Empowers donors (individuals, corporates, CSR committees) to claim 50% or 100% deduction on their donations, boosting fundraising capacity.
                     </p>
                   </div>
@@ -900,11 +900,11 @@ function TrustGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   What are the Compliance Requirements for Registered Trusts?
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   To safeguard tax-exempt status and avoid penalties, registered trusts must maintain the following ongoing compliances:
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[12.5px] font-light text-slate-600">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[12.5px] font-normal text-slate-900">
                   <div className="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200/60">
                     <FileCheck className="w-4 h-4 text-[#00A86B] shrink-0 mt-0.5" />
                     <div>
@@ -955,12 +955,12 @@ function TrustGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   What is the Difference Between Trust, Society and Section 8 Company?
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   Choosing the right non-profit structure is critical. Here is a direct comparison across essential legal parameters:
                 </p>
 
                 <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs">
-                  <table className="w-full text-left text-[12px] font-light text-slate-700">
+                  <table className="w-full text-left text-[12px] font-normal text-slate-900">
                     <thead className="bg-[#FAF9F7] text-slate-800 font-normal border-b border-slate-200">
                       <tr>
                         <th className="py-2.5 px-3 font-normal">Parameter</th>
@@ -994,11 +994,11 @@ function TrustGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   What is the Cancellation of Trust Registration?
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   Trust registration and 12A/80G status can be revoked under Section 12AB if the trust violates statutory non-profit criteria. Common causes include:
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[12.5px] font-light text-slate-600">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[12.5px] font-normal text-slate-900">
                   <div className="p-3 rounded-lg border border-red-100 bg-red-50/40 flex items-start gap-2.5">
                     <AlertTriangle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                     <span>Non-filing of annual ITR-7 returns for consecutive fiscal years</span>
@@ -1036,7 +1036,7 @@ function TrustGuideContent() {
                     <h4 className="text-[14px] font-medium text-slate-900 mb-1">
                       Expert Legal Drafting Team
                     </h4>
-                    <p className="text-[12.5px] font-light text-slate-600 leading-relaxed">
+                    <p className="text-[12.5px] font-normal text-slate-900 leading-relaxed">
                       Custom deeds crafted by seasoned legal draftsmen ensuring complete compliance with the Indian Trusts Act and Income Tax provisions.
                     </p>
                   </div>
@@ -1044,7 +1044,7 @@ function TrustGuideContent() {
                     <h4 className="text-[14px] font-medium text-slate-900 mb-1">
                       12A &amp; 80G Guaranteed Support
                     </h4>
-                    <p className="text-[12.5px] font-light text-slate-600 leading-relaxed">
+                    <p className="text-[12.5px] font-normal text-slate-900 leading-relaxed">
                       Complete filing on the Income Tax Portal via Form 10A / 10AB to secure 100% tax exemption and donor deduction eligibility.
                     </p>
                   </div>
@@ -1052,7 +1052,7 @@ function TrustGuideContent() {
                     <h4 className="text-[14px] font-medium text-slate-900 mb-1">
                       Local Sub-Registrar Coordination
                     </h4>
-                    <p className="text-[12.5px] font-light text-slate-600 leading-relaxed">
+                    <p className="text-[12.5px] font-normal text-slate-900 leading-relaxed">
                       Clear guidance on state stamp duty, appointment scheduling, and document execution at your designated jurisdictional office.
                     </p>
                   </div>
@@ -1060,7 +1060,7 @@ function TrustGuideContent() {
                     <h4 className="text-[14px] font-medium text-slate-900 mb-1">
                       Annual Compliance &amp; ITR-7
                     </h4>
-                    <p className="text-[12.5px] font-light text-slate-600 leading-relaxed">
+                    <p className="text-[12.5px] font-normal text-slate-900 leading-relaxed">
                       Ongoing annual accounting, Form 10B audit coordination, and annual ITR-7 filing support to maintain active compliance year after year.
                     </p>
                   </div>
@@ -1076,7 +1076,7 @@ export default function TrustRegistrationPage() {
       badgeText="India's Oldest & Most Flexible Non-Profit Vehicle"
       heroTitle={
         <>
-          <span className="bg-gradient-to-r from-[#5C3BFF] via-[#7052FF] to-[#FF4ED0] bg-clip-text text-transparent font-light">
+          <span className="bg-gradient-to-r from-[#5C3BFF] via-[#7052FF] to-[#FF4ED0] bg-clip-text text-transparent font-normal">
             Trust Registration
           </span>{" "}
           in India

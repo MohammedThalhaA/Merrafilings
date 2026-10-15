@@ -316,10 +316,10 @@ function LlpGuideContent() {
                 <h1 className="text-2xl sm:text-[26px] md:text-[28px] font-normal text-[#1F1646] text-center mb-6 leading-snug">
                   Limited Liability Partnership (LLP) Registration Online in India
                 </h1>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-3">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-3">
                   A <strong className="font-medium text-slate-800">Limited Liability Partnership (LLP)</strong> is one of the most preferred corporate business vehicles in India for service providers, consultants, software agencies, and co-founded ventures. Introduced under the <strong className="font-medium text-slate-800">Limited Liability Partnership Act, 2008</strong>, an LLP combines the operational flexibility of a partnership with the limited liability protections of a private limited company.
                 </p>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed">
                   Unlike traditional partnership firms, an LLP operates as a <strong className="font-medium text-slate-800">separate legal entity</strong>. The personal wealth and private assets of individual partners remain shielded from business liabilities, debts, or misdeeds of other partners. With <a href="/" className="text-[#00B074] hover:underline font-normal">Merrafilings</a>, you get transparent, end-to-end guidance from MCA name approval to stamp paper agreement execution.
                 </p>
               </div>
@@ -329,11 +329,11 @@ function LlpGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Key Advantages of Registering an LLP in India
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   Founders select the LLP structure over other legal entities due to distinctive advantages in tax, governance, and liability protection:
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[12.5px] font-light text-slate-700">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[12.5px] font-normal text-slate-900">
                   <div className="p-3.5 rounded-xl border border-slate-200/80 bg-[#FAF9F7]/70">
                     <strong className="font-medium text-slate-900 block mb-1">
                       Limited Liability Protection
@@ -366,12 +366,12 @@ function LlpGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Minimum Statutory Requirements for LLP Incorporation
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   Before applying for incorporation on the Ministry of Corporate Affairs (MCA) portal, ensure your founding team satisfies these legal conditions:
                 </p>
 
                 <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-4">
-                  <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                  <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                     <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                       <tr>
                         <th className="py-3 px-4 font-normal">Requirement</th>
@@ -401,7 +401,7 @@ function LlpGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Eligibility Criteria for Partners &amp; Designated Partners
                 </h2>
-                <div className="space-y-3 text-[13px] font-light text-slate-600">
+                <div className="space-y-3 text-[13px] font-normal text-slate-900">
                   <div className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full bg-emerald-100 text-[#00A86B] flex items-center justify-center shrink-0 mt-0.5 text-xs font-semibold">
                       ✓
@@ -442,7 +442,7 @@ function LlpGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Documents Required for LLP Registration in India
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   To ensure uninterrupted filing on the MCA portal, have clear scanned copies of these documents ready:
                 </p>
 
@@ -453,7 +453,7 @@ function LlpGuideContent() {
                       <Users className="w-4 h-4 text-[#6B4BFF]" />
                       <span>For All Partners &amp; Designated Partners</span>
                     </h3>
-                    <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
+                    <ul className="space-y-2 text-[12.5px] font-normal text-slate-900">
                       <li className="flex items-center gap-2">
                         <Check className="w-3.5 h-3.5 text-[#00B074] shrink-0" />
                         <span>Self-attested PAN Card (Passport for foreign citizens)</span>
@@ -479,7 +479,7 @@ function LlpGuideContent() {
                       <Building className="w-4 h-4 text-[#00A86B]" />
                       <span>For Registered Office in India</span>
                     </h3>
-                    <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
+                    <ul className="space-y-2 text-[12.5px] font-normal text-slate-900">
                       <li className="flex items-center gap-2">
                         <Check className="w-3.5 h-3.5 text-[#00B074] shrink-0" />
                         <span>Electricity, water, or gas bill (&lt; 2 months old)</span>
@@ -506,7 +506,7 @@ function LlpGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Step-by-Step LLP Incorporation Process
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-5">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-5">
                   At Merrafilings, we handle the entire lifecycle from preliminary document preparation to post-incorporation deed filings:
                 </p>
 
@@ -542,7 +542,7 @@ function LlpGuideContent() {
                       </span>
                       <div>
                         <h4 className="font-medium text-slate-800 text-[13.5px] mb-1">{st.title}</h4>
-                        <p className="text-[12.5px] font-light text-slate-600 leading-relaxed">{st.desc}</p>
+                        <p className="text-[12.5px] font-normal text-slate-900 leading-relaxed">{st.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -554,12 +554,12 @@ function LlpGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Comparison: LLP vs. Private Limited vs. General Partnership
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   Select the entity structure that corresponds accurately to your fundraising goals, compliance capability, and risk appetite:
                 </p>
 
                 <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs">
-                  <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                  <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                     <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                       <tr>
                         <th className="py-3 px-4 font-normal">Parameter</th>
@@ -593,12 +593,12 @@ function LlpGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Mandatory Compliances After LLP Registration
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   LLPs enjoy straightforward compliances compared to private companies, but statutory deadlines must be honoured to avoid late penalties:
                 </p>
 
                 <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-5">
-                  <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                  <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                     <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                       <tr>
                         <th className="py-3 px-4 font-normal">Statutory Compliance</th>
@@ -657,10 +657,10 @@ function LlpGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Why Choose Merrafilings for Your LLP Registration?
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   Merrafilings is India&apos;s premier corporate compliance platform, trusted by over 2 Lakh businesses nationwide:
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[13px] font-light text-slate-700">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[13px] font-normal text-slate-900">
                   <div className="flex items-center gap-2">
                     <span className="text-[#00A86B] font-bold">✓</span>
                     <span>Dedicated CA, CS &amp; Corporate Legal Advisor</span>
@@ -689,7 +689,7 @@ export default function LlpRegistrationPage() {
       badgeText="Flexible Partnership with Limited Liability"
       heroTitle={
         <>
-          <span className="bg-gradient-to-r from-[#5C3BFF] via-[#7052FF] to-[#FF4ED0] bg-clip-text text-transparent font-light">
+          <span className="bg-gradient-to-r from-[#5C3BFF] via-[#7052FF] to-[#FF4ED0] bg-clip-text text-transparent font-normal">
             Limited Liability Partnership
           </span>{" "}
           Registration in India

@@ -39,14 +39,14 @@ export default function TrademarkRenewalValidityPage() {
               <h2 className="text-base sm:text-lg font-medium text-emerald-950">
                 Direct Statutory Answer: Exactly 10 Years
               </h2>
-              <p className="text-xs sm:text-sm text-emerald-800/90 font-light mt-1 leading-relaxed">
+              <p className="text-xs sm:text-sm text-emerald-800/90 font-normal mt-1 leading-relaxed">
                 Under <strong className="font-semibold">Section 25 of the Trade Marks Act, 1999</strong>, a registered trademark in India is valid for a statutory term of <strong className="font-semibold">10 years</strong> from the initial filing date. It can be renewed perpetually every 10 years by filing <strong className="font-semibold">Form TM-R</strong> with the Trade Marks Registry.
               </p>
             </div>
           </div>
         </div>
 
-        <p className="text-[14.5px] leading-relaxed text-slate-700 font-light">
+        <p className="text-[14.5px] leading-relaxed text-slate-700 font-normal">
           Unlike patents (which lapse irrevocably after 20 years) or industrial designs (which expire after 15 years), trademark rights in India have <strong className="font-medium text-slate-900">no finite expiration cap</strong>. As long as you submit the required renewal filings and pay the prescribed statutory fees within designated timelines, your exclusive brand monopoly can endure for generations.
         </p>
       </div>
@@ -56,12 +56,12 @@ export default function TrademarkRenewalValidityPage() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           Trademark Validity &amp; Renewal Lifecycle in India
         </h2>
-        <p className="text-sm text-slate-600 font-light">
+        <p className="text-sm text-slate-600 font-normal">
           The table below illustrates how the 10-year validity cycles extend perpetually through timely filings:
         </p>
 
         <div className="overflow-x-auto rounded-2xl border border-slate-200/80 shadow-xs">
-          <table className="w-full text-left border-collapse text-xs sm:text-sm font-light">
+          <table className="w-full text-left border-collapse text-xs sm:text-sm font-normal">
             <thead>
               <tr className="bg-slate-50/80 border-b border-slate-200/80 text-slate-800 font-medium">
                 <th className="p-3.5 sm:p-4">Trademark Milestone</th>
@@ -106,7 +106,7 @@ export default function TrademarkRenewalValidityPage() {
           <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
             When Can a Trademark Renewal Application Be Filed?
           </h2>
-          <p className="text-sm text-slate-600 font-light mt-1">
+          <p className="text-sm text-slate-600 font-normal mt-1">
             Indian trademark law establishes 3 critical statutory windows for renewing an expiring mark:
           </p>
         </div>
@@ -121,7 +121,7 @@ export default function TrademarkRenewalValidityPage() {
               <h3 className="text-base font-medium text-slate-900">
                 Within 6 Months Prior to Expiry
               </h3>
-              <p className="text-xs text-slate-600 font-light leading-relaxed">
+              <p className="text-xs text-slate-600 font-normal leading-relaxed">
                 You can submit Form TM-R anytime within the 6 months leading up to your trademark’s 10th anniversary. This is the optimal window that incurs standard government fees with zero late penalties.
               </p>
             </div>
@@ -140,7 +140,7 @@ export default function TrademarkRenewalValidityPage() {
               <h3 className="text-base font-medium text-slate-900">
                 Within 6 Months After Expiry
               </h3>
-              <p className="text-xs text-slate-600 font-light leading-relaxed">
+              <p className="text-xs text-slate-600 font-normal leading-relaxed">
                 If you miss the initial deadline, the Trade Marks Act grants a 6-month statutory grace period immediately following the expiration date. You must pay a surcharge penalty alongside standard renewal fees.
               </p>
             </div>
@@ -159,7 +159,7 @@ export default function TrademarkRenewalValidityPage() {
               <h3 className="text-base font-medium text-slate-900">
                 Within 1 Year After Expiry
               </h3>
-              <p className="text-xs text-slate-600 font-light leading-relaxed">
+              <p className="text-xs text-slate-600 font-normal leading-relaxed">
                 If the grace period lapses, the Registrar removes the mark from the Register. However, under Section 25(4), you can file for &quot;Restoration and Renewal&quot; within 1 year of expiry with an explanation of delay.
               </p>
             </div>
@@ -176,12 +176,12 @@ export default function TrademarkRenewalValidityPage() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           Trademark Renewal Fees Based on Number of Classes
         </h2>
-        <p className="text-sm text-slate-600 font-light">
+        <p className="text-sm text-slate-600 font-normal">
           Under the Trade Marks Rules 2017, the statutory renewal fee for Form TM-R is ₹9,000 per class (unlike Form TM-A, there is no MSME rebate for renewal fees):
         </p>
 
         <div className="overflow-x-auto rounded-2xl border border-slate-200/80 shadow-xs">
-          <table className="w-full text-left border-collapse text-xs sm:text-sm font-light">
+          <table className="w-full text-left border-collapse text-xs sm:text-sm font-normal">
             <thead>
               <tr className="bg-slate-50/80 border-b border-slate-200/80 text-slate-800 font-medium">
                 <th className="p-3.5 sm:p-4">Number of Classes</th>
@@ -219,11 +219,11 @@ export default function TrademarkRenewalValidityPage() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           What Happens If a Trademark Is Not Renewed?
         </h2>
-        <p className="text-sm text-slate-600 font-light">
+        <p className="text-sm text-slate-600 font-normal">
           Neglecting trademark renewal carries serious statutory and commercial consequences for your business:
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-xs sm:text-sm text-slate-700 font-light">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-xs sm:text-sm text-slate-700 font-normal">
           <div className="p-3.5 bg-rose-50/50 rounded-xl border border-rose-100 flex items-start gap-3">
             <AlertTriangle className="w-4 h-4 text-rose-600 shrink-0 mt-0.5" />
             <div>
@@ -265,7 +265,7 @@ export default function TrademarkRenewalValidityPage() {
         </h2>
 
         <div className="overflow-x-auto rounded-2xl border border-slate-200/80 shadow-xs">
-          <table className="w-full text-left border-collapse text-xs sm:text-sm font-light">
+          <table className="w-full text-left border-collapse text-xs sm:text-sm font-normal">
             <thead>
               <tr className="bg-slate-50/80 border-b border-slate-200/80 text-slate-800 font-medium">
                 <th className="p-3.5 sm:p-4">Particular</th>

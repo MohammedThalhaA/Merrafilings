@@ -1,7 +1,18 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
-import { Search, ChevronDown, Menu, X, ShieldCheck, Sparkles, Building2, User, PhoneCall, HelpCircle } from "lucide-react";
+import Link from "next/link";
+import {
+  Search,
+  ChevronDown,
+  Menu,
+  X,
+  ShieldCheck,
+  User,
+  ArrowRight,
+  Building2,
+  Lock,
+} from "lucide-react";
 import { NAV_CATEGORIES } from "@/data/navigation";
 
 interface NavbarProps {
@@ -29,125 +40,90 @@ export default function Navbar({ onOpenSearch, onOpenContact }: NavbarProps) {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-[0_1px_3px_0_rgba(15,23,42,0.03)] font-sans transition-all" ref={dropdownRef}>
-      {/* Micro Brand Gradient Accent Hairline */}
-      <div className="h-[2px] w-full bg-gradient-to-r from-[#15803D] via-[#155EEF] to-[#EA580C] opacity-85" />
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-[0_1px_3px_0_rgba(15,23,42,0.02)] font-sans transition-all" ref={dropdownRef}>
+      {/* Delicate Refined Hairline Accent */}
+      <div className="h-[2px] w-full bg-gradient-to-r from-emerald-600 via-teal-600 to-slate-900 opacity-90" />
 
       <div className="w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10">
         <div className="flex items-center justify-between h-[68px] gap-2 lg:gap-4">
-          {/* Brand Logo */}
+          
+          {/* Bespoke Merrafilings Minimalist Brand Identity */}
           <div className="flex items-center gap-4 lg:gap-5 shrink-0">
-            <a href="/" className="flex items-center gap-2 group" aria-label="MerraFilings Home">
-              {/* Refined Crest Badge - Crisp, Sharp, No Artifacts */}
-              <div className="relative flex items-center justify-center">
-                <div className="w-[126px] h-[38px] rounded-full border-[1.5px] border-[#15803D] bg-white flex items-center justify-center px-3 py-1 shadow-[0_1px_2px_rgba(0,0,0,0.04)] group-hover:border-[#155EEF] group-hover:shadow-xs transition-all duration-200">
-                  <div className="text-center leading-none">
-                    <span className="block text-[14.5px] font-bold text-[#15803D] tracking-tight group-hover:text-[#155EEF] transition-colors">
-                      Merra
-                    </span>
-                    <span className="block text-[9.5px] font-bold text-[#EA580C] uppercase tracking-[0.14em] mt-0.5">
-                      Filings
-                    </span>
-                  </div>
-                </div>
+            <Link href="/" className="flex items-center gap-2.5 group cursor-pointer" aria-label="Merrafilings Home">
+              <div className="w-8 h-8 rounded-lg bg-[#0F172A] flex items-center justify-center text-white shadow-xs group-hover:bg-emerald-700 transition-colors">
+                <ShieldCheck className="w-4 h-4 text-emerald-400" />
               </div>
-            </a>
+              <div className="leading-tight">
+                <span className="block text-[17px] font-bold text-[#0F172A] tracking-tight group-hover:text-emerald-800 transition-colors">
+                  Merra<span className="text-emerald-700">filings</span>
+                </span>
+                <span className="block text-[9.5px] font-medium text-slate-400 uppercase tracking-widest -mt-0.5">
+                  Corporate Advisory
+                </span>
+              </div>
+            </Link>
           </div>
 
-          {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1 2xl:gap-1.5 whitespace-nowrap min-w-0" aria-label="Main Navigation">
+          {/* Desktop Navigation Links with Responsive Visibility */}
+          <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1 whitespace-nowrap min-w-0" aria-label="Main Navigation">
             {NAV_CATEGORIES.map((cat) => {
-              const isOpen = activeDropdown === cat.id;
-
-              // Standalone items without dropdown
-              if (!cat.hasDropdown) {
-                // Specialized visual treatment for Refer and Hiring badges
-                if (cat.id === "refer") {
-                  return (
-                    <button
-                      key={cat.id}
-                      onClick={onOpenContact}
-                      className="px-2 py-1 text-[12.5px] xl:text-[13px] font-medium text-amber-800 bg-amber-50 hover:bg-amber-100 border border-amber-200/80 rounded-full transition-all cursor-pointer inline-flex items-center gap-1 shrink-0 shadow-2xs hover:shadow-xs"
-                    >
-                      {cat.label}
-                    </button>
-                  );
-                }
-
-                if (cat.id === "hiring") {
-                  return (
-                    <button
-                      key={cat.id}
-                      onClick={onOpenContact}
-                      className="px-2 py-1 text-[12.5px] xl:text-[13px] font-medium text-violet-800 bg-violet-50 hover:bg-violet-100 border border-violet-200/80 rounded-full transition-all cursor-pointer inline-flex items-center gap-1 shrink-0 shadow-2xs hover:shadow-xs"
-                    >
-                      {cat.label}
-                    </button>
-                  );
-                }
-
-                return (
-                  <button
-                    key={cat.id}
-                    onClick={onOpenContact}
-                    className="px-1.5 xl:px-2 2xl:px-2.5 py-1.5 text-[13px] xl:text-[13.5px] font-medium text-slate-800 hover:text-[#155EEF] hover:bg-slate-100/70 rounded-lg transition-all cursor-pointer inline-flex items-center gap-1 whitespace-nowrap shrink-0"
-                  >
-                    {cat.label}
-                  </button>
-                );
+              // We reserve refer and hiring for the "More" dropdown and mobile menu to prevent navbar collision
+              if (cat.id === "refer" || cat.id === "hiring" || cat.id === "consultation") {
+                return null;
               }
 
-              // Dropdown Trigger
+              const isOpen = activeDropdown === cat.id;
+
+              // Breakpoint visibility: core items always visible on lg; compliance & global visible on xl+
+              const visibilityClass =
+                cat.id === "compliance" || cat.id === "global"
+                  ? "hidden xl:inline-block"
+                  : "inline-block";
+
+              const dropdownAlign =
+                cat.id === "startup"
+                  ? "left-0"
+                  : cat.id === "registrations"
+                  ? "left-0"
+                  : cat.id === "trademark"
+                  ? "left-0 xl:left-[-20px]"
+                  : cat.id === "gst"
+                  ? "left-[-40px] xl:left-[-60px]"
+                  : cat.id === "income-tax"
+                  ? "left-[-80px] xl:left-[-110px]"
+                  : cat.id === "mca"
+                  ? "left-[-120px] xl:left-[-170px]"
+                  : "right-0";
+
               return (
-                <div key={cat.id} className="relative group shrink-0">
+                <div key={cat.id} className={`relative group shrink-0 ${visibilityClass}`}>
                   <button
                     onClick={() => setActiveDropdown(isOpen ? null : cat.id)}
                     onMouseEnter={() => setActiveDropdown(cat.id)}
-                    className={`px-1.5 xl:px-2 2xl:px-2.5 py-1.5 text-[13px] xl:text-[13.5px] font-medium rounded-lg transition-all inline-flex items-center gap-0.5 xl:gap-1 cursor-pointer whitespace-nowrap shrink-0 ${
+                    className={`px-2 xl:px-2.5 py-1.5 text-[12.5px] xl:text-[13px] 2xl:text-[13.5px] font-medium rounded-lg transition-all inline-flex items-center gap-0.5 xl:gap-1 cursor-pointer whitespace-nowrap shrink-0 ${
                       isOpen
-                        ? "text-[#155EEF] bg-blue-50/90 shadow-[inset_0_0_0_1px_rgba(21,94,239,0.18)]"
-                        : "text-slate-800 hover:text-[#155EEF] hover:bg-slate-100/70"
+                        ? "text-emerald-800 bg-emerald-50/80"
+                        : "text-slate-700 hover:text-[#0F172A] hover:bg-slate-50"
                     }`}
                     aria-expanded={isOpen}
                   >
                     <span>{cat.label}</span>
                     <ChevronDown
-                      className={`w-3 h-3 xl:w-3.5 xl:h-3.5 transition-transform duration-200 shrink-0 ${
-                        isOpen ? "rotate-180 text-[#155EEF]" : "text-slate-400 group-hover:text-[#155EEF]"
+                      className={`w-3.5 h-3.5 transition-transform duration-200 shrink-0 ${
+                        isOpen ? "rotate-180 text-emerald-700" : "text-slate-400 group-hover:text-slate-700"
                       }`}
                     />
                   </button>
 
-                  {/* Enhanced Mega Menu Dropdown */}
+                  {/* Mega Menu Dropdown */}
                   {isOpen && (
                     <div
                       onMouseLeave={() => setActiveDropdown(null)}
-                      className={`absolute top-full mt-2 bg-white/98 backdrop-blur-xl rounded-2xl border border-slate-200/90 shadow-[0_20px_50px_-10px_rgba(15,23,42,0.15)] p-6 z-50 ring-1 ring-slate-900/5 animate-in fade-in slide-in-from-top-1.5 duration-200 max-w-[calc(100vw-2rem)] ${
+                      className={`absolute top-full mt-2 bg-white rounded-2xl border border-slate-200 shadow-xl p-6 z-50 animate-in fade-in slide-in-from-top-1 duration-150 max-w-[calc(100vw-2rem)] ${
                         cat.columnLayout ? cat.columnLayout.width : "w-[560px]"
-                      } ${
-                        cat.id === "startup"
-                          ? "left-0"
-                          : cat.id === "registrations"
-                          ? "left-[-40px]"
-                          : cat.id === "trademark"
-                          ? "left-[-40px]"
-                          : cat.id === "gst"
-                          ? "left-[-80px]"
-                          : cat.id === "income-tax"
-                          ? "left-[-110px]"
-                          : cat.id === "mca"
-                          ? "left-[-170px]"
-                          : cat.id === "compliance"
-                          ? "left-[-180px]"
-                          : cat.id === "consultation"
-                          ? "left-[-220px]"
-                          : cat.id === "global"
-                          ? "right-0"
-                          : "left-[-100px]"
-                      }`}
+                      } ${dropdownAlign}`}
                     >
                       {cat.columnLayout ? (
-                        /* Multi-Column List Layout with Smooth Hover Pill Animation */
                         <div>
                           <div
                             className="grid gap-6 sm:gap-8"
@@ -158,14 +134,14 @@ export default function Navbar({ onOpenSearch, onOpenContact }: NavbarProps) {
                             {cat.columnLayout.columns.map((col, colIdx) => (
                               <div key={colIdx} className="space-y-1">
                                 {col.map((link, linkIdx) => (
-                                  <a
+                                  <Link
                                     key={linkIdx}
                                     href={link.href}
                                     onClick={() => setActiveDropdown(null)}
-                                    className="block py-2 px-3 text-[13.5px] font-medium text-slate-800 hover:text-[#155EEF] hover:bg-blue-50/70 hover:translate-x-1 rounded-lg transition-all leading-snug whitespace-nowrap"
+                                    className="block py-2 px-3 text-[13.5px] font-medium text-slate-700 hover:text-emerald-800 hover:bg-emerald-50/60 rounded-lg transition-all leading-snug whitespace-nowrap"
                                   >
                                     {link.title}
-                                  </a>
+                                  </Link>
                                 ))}
                               </div>
                             ))}
@@ -173,79 +149,47 @@ export default function Navbar({ onOpenSearch, onOpenContact }: NavbarProps) {
 
                           {/* Advisory Helper Banner at Bottom of Mega Menu */}
                           <div className="mt-5 pt-3.5 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2 text-[12px] text-slate-600">
-                            <span className="flex items-center gap-1.5 shrink-0">
+                            <span className="flex items-center gap-1.5 shrink-0 font-medium">
                               <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                              Govt. Certified Filing Platform
+                              Chartered Accountant &amp; CS Certified Advisory
                             </span>
                             <button
                               onClick={() => {
                                 setActiveDropdown(null);
                                 onOpenContact();
                               }}
-                              className="text-[#155EEF] hover:underline font-semibold flex items-center gap-1 cursor-pointer shrink-0"
+                              className="text-emerald-700 hover:text-emerald-800 font-semibold flex items-center gap-1 cursor-pointer shrink-0"
                             >
-                              Talk to Expert Advisor &rarr;
+                              <span>Talk to Senior Advisor</span>
+                              <ArrowRight className="w-3.5 h-3.5" />
                             </button>
                           </div>
                         </div>
                       ) : (
                         cat.items && (
-                          <div>
-                            <div className="grid grid-cols-2 gap-6">
-                              {cat.items.map((sub, idx) => (
-                                <div key={idx} className="space-y-3">
-                                  {sub.categoryTitle && (
-                                    <h4 className="text-[11.5px] font-bold text-slate-400 uppercase tracking-wider border-b border-slate-100 pb-2">
-                                      {sub.categoryTitle}
-                                    </h4>
-                                  )}
-                                  <ul className="space-y-1.5">
-                                    {sub.links.map((link, lIdx) => (
-                                      <li key={lIdx}>
-                                        <a
-                                          href={link.href}
-                                          onClick={() => setActiveDropdown(null)}
-                                          className="block p-2 rounded-xl hover:bg-blue-50/60 hover:translate-x-1 transition-all group/link"
-                                        >
-                                          <div className="flex items-center justify-between">
-                                            <span className="text-[13.5px] font-semibold text-slate-800 group-hover/link:text-[#155EEF] transition-colors">
-                                              {link.title}
-                                            </span>
-                                            {link.badge && (
-                                              <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-blue-100 text-blue-700">
-                                                {link.badge}
-                                              </span>
-                                            )}
-                                          </div>
-                                          {link.desc && (
-                                            <p className="text-[11.5px] text-slate-500 line-clamp-1 mt-0.5">
-                                              {link.desc}
-                                            </p>
-                                          )}
-                                        </a>
-                                      </li>
-                                    ))}
-                                  </ul>
-                                </div>
-                              ))}
-                            </div>
-
-                            {/* Advisory Helper Banner */}
-                            <div className="mt-5 pt-3.5 border-t border-slate-100 flex items-center justify-between text-[12px] text-slate-500">
-                              <span className="flex items-center gap-1.5">
-                                <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                                100% Online &amp; Compliant
-                              </span>
-                              <button
-                                onClick={() => {
-                                  setActiveDropdown(null);
-                                  onOpenContact();
-                                }}
-                                className="text-[#155EEF] hover:underline font-semibold flex items-center gap-1 cursor-pointer"
-                              >
-                                Need Help Choosing? Talk to CA &rarr;
-                              </button>
-                            </div>
+                          <div className="grid grid-cols-2 gap-6">
+                            {cat.items.map((sub, idx) => (
+                              <div key={idx} className="space-y-2">
+                                {sub.categoryTitle && (
+                                  <h4 className="text-[11.5px] font-bold text-slate-400 uppercase tracking-wider border-b border-slate-100 pb-2">
+                                    {sub.categoryTitle}
+                                  </h4>
+                                )}
+                                <ul className="space-y-1">
+                                  {sub.links.map((link, lIdx) => (
+                                    <li key={lIdx}>
+                                      <Link
+                                        href={link.href}
+                                        onClick={() => setActiveDropdown(null)}
+                                        className="block p-2 rounded-lg hover:bg-emerald-50/60 transition-all text-[13.5px] font-medium text-slate-700 hover:text-emerald-800"
+                                      >
+                                        {link.title}
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            ))}
                           </div>
                         )
                       )}
@@ -254,59 +198,186 @@ export default function Navbar({ onOpenSearch, onOpenContact }: NavbarProps) {
                 </div>
               );
             })}
+
+            {/* "More" Dropdown Menu to prevent overcrowding */}
+            <div className="relative group shrink-0">
+              <button
+                onClick={() => setActiveDropdown(activeDropdown === "more" ? null : "more")}
+                onMouseEnter={() => setActiveDropdown("more")}
+                className={`px-2 xl:px-2.5 py-1.5 text-[12.5px] xl:text-[13px] 2xl:text-[13.5px] font-medium rounded-lg transition-all inline-flex items-center gap-0.5 xl:gap-1 cursor-pointer whitespace-nowrap shrink-0 ${
+                  activeDropdown === "more"
+                    ? "text-emerald-800 bg-emerald-50/80"
+                    : "text-slate-700 hover:text-[#0F172A] hover:bg-slate-50"
+                }`}
+                aria-expanded={activeDropdown === "more"}
+              >
+                <span>More</span>
+                <ChevronDown
+                  className={`w-3.5 h-3.5 transition-transform duration-200 shrink-0 ${
+                    activeDropdown === "more" ? "rotate-180 text-emerald-700" : "text-slate-400 group-hover:text-slate-700"
+                  }`}
+                />
+              </button>
+
+              {activeDropdown === "more" && (
+                <div
+                  onMouseLeave={() => setActiveDropdown(null)}
+                  className="absolute top-full right-0 mt-2 bg-white rounded-2xl border border-slate-200 shadow-xl p-5 z-50 animate-in fade-in slide-in-from-top-1 duration-150 w-[360px] max-w-[calc(100vw-2rem)]"
+                >
+                  <div className="space-y-3">
+                    {/* On smaller desktop screens (lg), provide quick access to Compliance & Global */}
+                    <div className="xl:hidden pb-3 border-b border-slate-100 space-y-1">
+                      <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-2 pb-1">
+                        Corporate Solutions
+                      </p>
+                      <button
+                        onClick={() => {
+                          setActiveDropdown(null);
+                          onOpenContact();
+                        }}
+                        className="w-full text-left px-2.5 py-2 rounded-lg hover:bg-slate-50 text-[13px] font-medium text-slate-700 flex items-center justify-between cursor-pointer"
+                      >
+                        <span className="flex items-center gap-2">
+                          <Building2 className="w-4 h-4 text-emerald-700" />
+                          Compliance &amp; Secretarial
+                        </span>
+                        <ArrowRight className="w-3.5 h-3.5 text-slate-400" />
+                      </button>
+                      <button
+                        onClick={() => {
+                          setActiveDropdown(null);
+                          onOpenContact();
+                        }}
+                        className="w-full text-left px-2.5 py-2 rounded-lg hover:bg-slate-50 text-[13px] font-medium text-slate-700 flex items-center justify-between cursor-pointer"
+                      >
+                        <span className="flex items-center gap-2">
+                          <span className="text-sm">🌐</span>
+                          Global (US, Dubai, Singapore)
+                        </span>
+                        <ArrowRight className="w-3.5 h-3.5 text-slate-400" />
+                      </button>
+                    </div>
+
+                    {/* CA & CS Consultation */}
+                    <div className="pb-3 border-b border-slate-100">
+                      <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-2 pb-1.5">
+                        Senior Advisory
+                      </p>
+                      <button
+                        onClick={() => {
+                          setActiveDropdown(null);
+                          onOpenContact();
+                        }}
+                        className="w-full text-left p-2.5 rounded-xl hover:bg-emerald-50/60 transition-colors flex items-start gap-2.5 group cursor-pointer"
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0 mt-0.5">
+                          <ShieldCheck className="w-4 h-4 text-emerald-700" />
+                        </div>
+                        <div>
+                          <p className="text-[13px] font-semibold text-slate-900 group-hover:text-emerald-800">
+                            Speak with a CA or CS
+                          </p>
+                          <p className="text-[11.5px] text-slate-500 leading-snug">
+                            Expert consultation for tax scrutiny, company structuring &amp; audit guidance.
+                          </p>
+                        </div>
+                      </button>
+                    </div>
+
+                    {/* Perks & Careers */}
+                    <div className="space-y-1">
+                      <button
+                        onClick={() => {
+                          setActiveDropdown(null);
+                          onOpenContact();
+                        }}
+                        className="w-full text-left px-2.5 py-2 rounded-lg hover:bg-slate-50 text-[13px] font-medium text-slate-700 flex items-center justify-between cursor-pointer"
+                      >
+                        <span className="flex items-center gap-2">
+                          <span className="text-sm">🎁</span> Refer a Founder
+                        </span>
+                        <span className="text-[10.5px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-100">
+                          Earn ₹5,000
+                        </span>
+                      </button>
+
+                      <button
+                        onClick={() => {
+                          setActiveDropdown(null);
+                          onOpenContact();
+                        }}
+                        className="w-full text-left px-2.5 py-2 rounded-lg hover:bg-slate-50 text-[13px] font-medium text-slate-700 flex items-center justify-between cursor-pointer"
+                      >
+                        <span className="flex items-center gap-2">
+                          <span className="text-sm">💼</span> Careers at Merrafilings
+                        </span>
+                        <span className="text-[10.5px] font-semibold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full border border-blue-100">
+                          We&apos;re Hiring
+                        </span>
+                      </button>
+                    </div>
+
+                  </div>
+                </div>
+              )}
+            </div>
           </nav>
 
-          {/* Right Action Icons & Login Button */}
-          <div className="flex items-center gap-2 xl:gap-2.5 shrink-0">
-            {/* Quick Search Button */}
+          {/* Right Action Icons & Login Button - Secured with ml-auto and shrink-0 */}
+          <div className="flex items-center gap-1.5 sm:gap-2 xl:gap-2.5 shrink-0 ml-auto pl-2 bg-white">
+            {/* Quick Search Button with ⌘K badge */}
             <button
               onClick={onOpenSearch}
-              className="w-9 h-9 rounded-full bg-slate-100/90 hover:bg-slate-200/90 text-slate-700 hover:text-[#155EEF] flex items-center justify-center transition-all cursor-pointer shadow-2xs hover:shadow-xs shrink-0"
+              className="h-8.5 sm:h-9 px-2.5 sm:px-3 rounded-full bg-slate-100 hover:bg-slate-200/80 text-slate-600 hover:text-[#0F172A] flex items-center gap-1.5 sm:gap-2 transition-all cursor-pointer shadow-2xs shrink-0"
               title="Search services (Ctrl + K)"
               aria-label="Search all services"
             >
-              <Search className="w-4 h-4 text-slate-600 hover:text-[#155EEF] transition-colors" />
+              <Search className="w-3.5 h-3.5 text-slate-500 shrink-0" />
+              <span className="text-xs text-slate-600 hidden md:inline font-medium">Search</span>
+              <kbd className="hidden xl:inline-block px-1.5 py-0.5 text-[10px] font-mono font-medium text-slate-400 bg-white rounded border border-slate-200">
+                ⌘K
+              </kbd>
             </button>
 
-            {/* Elevated Login Pill Button */}
+            {/* Client Portal Button */}
             <div className="relative shrink-0">
               <button
                 onClick={() => setDashboardOpen(!dashboardOpen)}
-                className="inline-flex items-center gap-1.5 px-3.5 xl:px-4 py-1.5 text-[13px] xl:text-[13.5px] font-semibold text-white bg-slate-900 hover:bg-[#155EEF] rounded-full transition-all duration-200 shadow-xs hover:shadow-sm cursor-pointer whitespace-nowrap group"
+                className="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 sm:py-2 text-[12px] sm:text-[12.5px] font-medium text-slate-700 hover:text-[#0F172A] bg-slate-100 hover:bg-slate-200/70 rounded-full transition-all cursor-pointer whitespace-nowrap shrink-0"
               >
-                <User className="w-3.5 h-3.5 text-slate-300 group-hover:text-white transition-colors" />
-                <span>Login</span>
+                <User className="w-3.5 h-3.5 text-slate-500 shrink-0" />
+                <span>Client Vault</span>
               </button>
 
               {dashboardOpen && (
-                <div className="absolute right-0 mt-2.5 w-72 bg-white/98 backdrop-blur-xl rounded-2xl border border-slate-200 shadow-2xl shadow-slate-900/15 p-3.5 z-50 ring-1 ring-slate-900/5 animate-in fade-in slide-in-from-top-1.5">
+                <div className="absolute right-0 mt-2.5 w-72 bg-white rounded-2xl border border-slate-200 shadow-xl p-3.5 z-50 animate-in fade-in slide-in-from-top-1.5">
                   <div className="px-3 py-2 border-b border-slate-100 mb-2">
-                    <p className="text-[11px] font-bold uppercase tracking-wider text-slate-400">Client Access</p>
-                    <p className="text-[13px] font-semibold text-slate-900">Compliance &amp; Invoicing Portal</p>
+                    <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Merrafilings</p>
+                    <p className="text-[13px] font-semibold text-slate-900">Entity Vault &amp; Filings</p>
                   </div>
                   <a
                     href="#login"
                     onClick={() => setDashboardOpen(false)}
-                    className="flex items-center gap-2.5 px-3 py-2 text-[13px] text-slate-800 hover:bg-slate-50 hover:text-[#155EEF] rounded-xl transition-colors font-medium"
+                    className="flex items-center gap-2.5 px-3 py-2 text-[13px] text-slate-700 hover:bg-slate-50 hover:text-slate-950 rounded-xl transition-colors font-medium"
                   >
-                    <User className="w-4 h-4 text-[#155EEF]" />
+                    <User className="w-4 h-4 text-emerald-700" />
                     <span>Client Login / Register</span>
                   </a>
                   <a
-                    href="#ledgers"
+                    href="#vault"
                     onClick={() => setDashboardOpen(false)}
-                    className="flex items-center gap-2.5 px-3 py-2 text-[13px] text-slate-800 hover:bg-slate-50 hover:text-[#15803D] rounded-xl transition-colors font-medium"
+                    className="flex items-center gap-2.5 px-3 py-2 text-[13px] text-slate-700 hover:bg-slate-50 hover:text-slate-950 rounded-xl transition-colors font-medium"
                   >
-                    <Sparkles className="w-4 h-4 text-[#15803D]" />
-                    <span>LEDGERS Accounting Cloud</span>
+                    <ShieldCheck className="w-4 h-4 text-emerald-700" />
+                    <span>Document Vault &amp; Certs</span>
                   </a>
                   <a
                     href="#partner"
                     onClick={() => setDashboardOpen(false)}
-                    className="flex items-center gap-2.5 px-3 py-2 text-[13px] text-slate-800 hover:bg-slate-50 hover:text-[#EA580C] rounded-xl transition-colors font-medium"
+                    className="flex items-center gap-2.5 px-3 py-2 text-[13px] text-slate-700 hover:bg-slate-50 hover:text-slate-950 rounded-xl transition-colors font-medium"
                   >
-                    <Building2 className="w-4 h-4 text-[#EA580C]" />
-                    <span>Partner / CA Network Portal</span>
+                    <Building2 className="w-4 h-4 text-purple-700" />
+                    <span>Chartered Accountant Network</span>
                   </a>
                   <div className="mt-2.5 pt-2 border-t border-slate-100">
                     <button
@@ -314,7 +385,7 @@ export default function Navbar({ onOpenSearch, onOpenContact }: NavbarProps) {
                         setDashboardOpen(false);
                         onOpenContact();
                       }}
-                      className="w-full text-center py-2 text-[12.5px] font-semibold text-white bg-[#155EEF] hover:bg-[#1849A9] rounded-xl transition-colors cursor-pointer shadow-xs"
+                      className="w-full text-center py-2 text-[12.5px] font-semibold text-white bg-[#0F172A] hover:bg-slate-800 rounded-xl transition-colors cursor-pointer shadow-xs"
                     >
                       Book Free Consultation
                     </button>
@@ -322,6 +393,14 @@ export default function Navbar({ onOpenSearch, onOpenContact }: NavbarProps) {
                 </div>
               )}
             </div>
+
+            {/* Primary Action Button */}
+            <button
+              onClick={onOpenContact}
+              className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-1.5 sm:py-2 text-[12.5px] sm:text-[13px] font-medium text-white bg-[#0F172A] hover:bg-slate-800 rounded-full transition-all duration-200 cursor-pointer whitespace-nowrap shadow-xs shrink-0"
+            >
+              <span>Get Started</span>
+            </button>
 
             {/* Mobile Menu Toggle Button */}
             <button
@@ -337,7 +416,7 @@ export default function Navbar({ onOpenSearch, onOpenContact }: NavbarProps) {
 
       {/* Mobile Navigation Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-slate-200 bg-white/98 backdrop-blur-xl px-4 pt-3 pb-6 max-h-[80vh] overflow-y-auto">
+        <div className="lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 max-h-[80vh] overflow-y-auto">
           <div className="space-y-1">
             {NAV_CATEGORIES.map((cat) => {
               const isExpanded = mobileExpandedCat === cat.id;
@@ -349,7 +428,7 @@ export default function Navbar({ onOpenSearch, onOpenContact }: NavbarProps) {
                       setMobileMenuOpen(false);
                       onOpenContact();
                     }}
-                    className="w-full text-left px-3 py-2.5 text-[15px] font-semibold text-slate-800 hover:bg-slate-50 rounded-xl"
+                    className="w-full text-left px-3 py-2.5 text-[15px] font-medium text-slate-800 hover:bg-slate-50 rounded-xl"
                   >
                     {cat.label}
                   </button>
@@ -360,49 +439,24 @@ export default function Navbar({ onOpenSearch, onOpenContact }: NavbarProps) {
                 <div key={cat.id} className="border-b border-slate-100 last:border-0 pb-1">
                   <button
                     onClick={() => setMobileExpandedCat(isExpanded ? null : cat.id)}
-                    className="w-full flex items-center justify-between px-3 py-2.5 text-[15px] font-semibold text-slate-800"
+                    className="w-full flex items-center justify-between px-3 py-2.5 text-[15px] font-medium text-slate-800"
                   >
                     <span>{cat.label}</span>
-                    <ChevronDown className={`w-4 h-4 transition-transform ${isExpanded ? "rotate-180 text-[#155EEF]" : "text-slate-400"}`} />
+                    <ChevronDown className={`w-4 h-4 transition-transform ${isExpanded ? "rotate-180 text-emerald-700" : "text-slate-400"}`} />
                   </button>
 
-                  {isExpanded && (
-                    <div className="pl-4 pr-2 pb-3 space-y-3">
-                      {cat.columnLayout ? (
-                        <div className="grid grid-cols-1 gap-1 pt-1">
-                          {cat.columnLayout.columns.flat().map((link, lIdx) => (
-                            <a
-                              key={lIdx}
-                              href={link.href}
-                              onClick={() => setMobileMenuOpen(false)}
-                              className="block py-1.5 px-2 text-[13.5px] font-medium text-slate-800 hover:text-[#155EEF] hover:bg-slate-50 rounded-lg"
-                            >
-                              {link.title}
-                            </a>
-                          ))}
-                        </div>
-                      ) : (
-                        cat.items &&
-                        cat.items.map((sub, sIdx) => (
-                          <div key={sIdx} className="space-y-1">
-                            {sub.categoryTitle && (
-                              <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider pt-1">
-                                {sub.categoryTitle}
-                              </p>
-                            )}
-                            {sub.links.map((link, lIdx) => (
-                              <a
-                                key={lIdx}
-                                href={link.href}
-                                onClick={() => setMobileMenuOpen(false)}
-                                className="block py-1.5 px-2 text-[13.5px] font-medium text-slate-600 hover:text-[#155EEF] hover:bg-slate-50 rounded-lg"
-                              >
-                                {link.title}
-                              </a>
-                            ))}
-                          </div>
-                        ))
-                      )}
+                  {isExpanded && cat.columnLayout && (
+                    <div className="pl-4 pr-2 pb-3 space-y-1.5 pt-1">
+                      {cat.columnLayout.columns.flat().map((link, lIdx) => (
+                        <Link
+                          key={lIdx}
+                          href={link.href}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="block py-1.5 px-2 text-[13.5px] font-medium text-slate-700 hover:text-emerald-800 hover:bg-slate-50 rounded-lg"
+                        >
+                          {link.title}
+                        </Link>
+                      ))}
                     </div>
                   )}
                 </div>
@@ -410,13 +464,13 @@ export default function Navbar({ onOpenSearch, onOpenContact }: NavbarProps) {
             })}
           </div>
 
-          <div className="mt-5 pt-4 border-t border-slate-200 space-y-2">
+          <div className="mt-5 pt-4 border-t border-slate-200">
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
                 onOpenContact();
               }}
-              className="w-full py-2.5 text-center text-[14px] font-semibold text-white bg-[#155EEF] hover:bg-[#1849A9] rounded-xl shadow-xs"
+              className="w-full py-2.5 text-center text-[14px] font-medium text-white bg-[#0F172A] hover:bg-slate-800 rounded-xl shadow-xs"
             >
               Get Started / Talk to Expert
             </button>

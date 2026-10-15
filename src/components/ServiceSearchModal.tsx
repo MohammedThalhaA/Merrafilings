@@ -99,7 +99,7 @@ export default function ServiceSearchModal({ isOpen, onClose, onSelectService }:
         </div>
 
         {/* Search Results List */}
-        <div className="max-h-[380px] overflow-y-auto p-2 divide-y divide-[#F1F5F9]">
+        <div className="max-h-[380px] overflow-y-auto p-2 divide-y divide-slate-100">
           {filtered.length > 0 ? (
             filtered.map((item, idx) => (
               <div
@@ -108,43 +108,43 @@ export default function ServiceSearchModal({ isOpen, onClose, onSelectService }:
                   onSelectService(item.name);
                   onClose();
                 }}
-                className="p-3 rounded-xl hover:bg-[#F8FAFC] cursor-pointer transition-colors group flex items-center justify-between gap-3"
+                className="p-3 rounded-xl hover:bg-slate-50 cursor-pointer transition-colors group flex items-center justify-between gap-3"
               >
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="text-[14px] font-semibold text-[#111827] group-hover:text-[#155EEF] transition-colors">
+                    <span className="text-sm font-medium text-slate-900 group-hover:text-emerald-800 transition-colors">
                       {item.name}
                     </span>
                     {item.badge && (
-                      <span className="text-[10px] font-bold uppercase px-1.5 py-0.5 rounded bg-[#155EEF]/10 text-[#155EEF]">
+                      <span className="text-[10px] font-medium tracking-wide uppercase px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-100">
                         {item.badge}
                       </span>
                     )}
                   </div>
-                  <p className="text-[12.5px] text-[#475467] mt-0.5">{item.description}</p>
-                  <span className="inline-block text-[11px] font-medium text-[#64748B] bg-[#F1F5F9] px-2 py-0.5 rounded mt-1.5">
+                  <p className="text-xs text-slate-500 mt-0.5">{item.description}</p>
+                  <span className="inline-block text-[11px] font-medium text-slate-500 bg-slate-100 px-2 py-0.5 rounded mt-1.5">
                     {item.category}
                   </span>
                 </div>
 
-                <div className="shrink-0 text-[#94A3B8] group-hover:text-[#155EEF] transition-colors">
+                <div className="shrink-0 text-slate-400 group-hover:text-slate-900 transition-colors">
                   <ArrowRight className="w-4 h-4" />
                 </div>
               </div>
             ))
           ) : (
-            <div className="py-12 text-center text-[#64748B]">
-              <p className="text-[14px] font-medium">No matching services found for &ldquo;{query}&rdquo;</p>
-              <p className="text-[12.5px] mt-1">Try searching for &quot;GST&quot;, &quot;Incorporation&quot;, or &quot;Trademark&quot;.</p>
+            <div className="py-12 text-center text-slate-500">
+              <p className="text-sm font-medium">No matching services found for &ldquo;{query}&rdquo;</p>
+              <p className="text-xs mt-1 text-slate-400">Try searching for &quot;GST&quot;, &quot;Incorporation&quot;, or &quot;Trademark&quot;.</p>
             </div>
           )}
         </div>
 
         {/* Modal Footer */}
-        <div className="px-4 py-2.5 bg-[#F8FAFC] border-t border-[#E4E7EC] flex items-center justify-between text-[11.5px] text-[#64748B]">
+        <div className="px-4 py-2.5 bg-slate-50 border-t border-slate-200 flex items-center justify-between text-[11.5px] text-slate-500">
           <span>Tip: Press ESC to exit</span>
-          <span className="flex items-center gap-1 text-[#155EEF] font-medium">
-            <Sparkles className="w-3.5 h-3.5" /> All services backed by CA guarantee
+          <span className="flex items-center gap-1 text-emerald-700 font-medium">
+            <Sparkles className="w-3.5 h-3.5 text-emerald-600" /> All services backed by CA guarantee
           </span>
         </div>
       </div>

@@ -179,7 +179,7 @@ function RCMCGuideContent() {
     <>
       {/* Intro */}
       <div>
-        <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+        <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed">
           The <strong className="font-medium text-slate-800">Registration-Cum-Membership Certificate (RCMC)</strong> is an indispensable statutory credential for any business enterprise aiming to export goods or services from India. Mandated under the <strong className="font-medium text-slate-800">Foreign Trade Policy (FTP)</strong> by the Directorate General of Foreign Trade (DGFT), Ministry of Commerce and Industry, the RCMC validates an exporter as an authorized member of a recognized <strong className="font-medium text-slate-800">Export Promotion Council (EPC)</strong>, Commodity Board, or Export Development Authority. Holding an RCMC is the primary gateway to claiming vital government incentives, including duty drawback, RoDTEP remissions, concessional import tariffs, and global market development assistance.
         </p>
       </div>
@@ -189,10 +189,10 @@ function RCMCGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           1. What is RCMC Registration in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           RCMC stands for <strong>Registration-Cum-Membership Certificate</strong>. It is granted by designated Export Promotion Councils or commodity boards recognized by the Directorate General of Foreign Trade (DGFT). An RCMC functions as official documentary proof that an exporter is registered with an authorized apex body overseeing their particular trade domain.
         </p>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Whether you are an established manufacturer exporting engineering goods or a fledgling merchant shipping agricultural produce, possessing an RCMC is legally mandatory if you plan to avail any concession, subsidy, or incentive introduced in the Foreign Trade Policy.
         </p>
 
@@ -200,17 +200,17 @@ function RCMCGuideContent() {
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/90 hover:bg-white hover:border-emerald-500 hover:shadow-md transition-all duration-200 cursor-pointer group">
             <ShieldCheck className="w-5 h-5 text-emerald-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-semibold text-slate-900">5-Year Legal Validity</h4>
-            <p className="text-xs text-slate-600 font-light mt-1">Valid across five full financial licensing years with seamless digital renewal.</p>
+            <p className="text-xs text-slate-600 font-normal mt-1">Valid across five full financial licensing years with seamless digital renewal.</p>
           </div>
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/90 hover:bg-white hover:border-blue-500 hover:shadow-md transition-all duration-200 cursor-pointer group">
             <Globe2 className="w-5 h-5 text-blue-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-semibold text-slate-900">35 Recognized Councils</h4>
-            <p className="text-xs text-slate-600 font-light mt-1">Specific statutory councils covering textiles, pharmaceuticals, agriculture, gems, and IT.</p>
+            <p className="text-xs text-slate-600 font-normal mt-1">Specific statutory councils covering textiles, pharmaceuticals, agriculture, gems, and IT.</p>
           </div>
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/90 hover:bg-white hover:border-purple-500 hover:shadow-md transition-all duration-200 cursor-pointer group">
             <BadgePercent className="w-5 h-5 text-purple-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-semibold text-slate-900">Duty & Tax Incentives</h4>
-            <p className="text-xs text-slate-600 font-light mt-1">Compulsory for RoDTEP, RoSCTL, Duty Drawback, and Advance Authorizations.</p>
+            <p className="text-xs text-slate-600 font-normal mt-1">Compulsory for RoDTEP, RoSCTL, Duty Drawback, and Advance Authorizations.</p>
           </div>
         </div>
       </section>
@@ -220,10 +220,10 @@ function RCMCGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           2. Why is RCMC Required for Exporters in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Under Chapter 2 of the Foreign Trade Policy, any exporter applying for an authorization to import or export restricted goods, or seeking duty remissions and benefits under schemes such as EPCG (Export Promotion Capital Goods) and Advance Authorization, must furnish an RCMC granted by the concerned council.
         </p>
-        <ul className="space-y-2.5 text-xs sm:text-sm text-slate-600 font-light">
+        <ul className="space-y-2.5 text-xs sm:text-sm text-slate-600 font-normal">
           <li className="flex items-start gap-2.5">
             <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
             <span><strong>Customs Duty Concessions:</strong> Exporters cannot claim tariff remissions or zero-duty import of raw materials without submitting their RCMC number.</span>
@@ -244,7 +244,7 @@ function RCMCGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           3. What are the Benefits of RCMC for Indian Exporters?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Holding an active RCMC certificate transforms your business into a verified, globally recognized export entity. The core commercial advantages include:
         </p>
 
@@ -254,7 +254,7 @@ function RCMCGuideContent() {
               <Receipt className="w-4 h-4" />
             </div>
             <h4 className="text-[14px] font-semibold text-slate-900">RoDTEP &amp; RoSCTL Claims</h4>
-            <p className="text-xs text-slate-600 font-light mt-1">Rebate of Duties and Taxes on Exported Products allows exporters to recover embedded central and state taxes.</p>
+            <p className="text-xs text-slate-600 font-normal mt-1">Rebate of Duties and Taxes on Exported Products allows exporters to recover embedded central and state taxes.</p>
           </div>
 
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/90 hover:bg-white hover:border-blue-500 hover:shadow-md transition-all duration-200 cursor-pointer group">
@@ -262,7 +262,7 @@ function RCMCGuideContent() {
               <Ship className="w-4 h-4" />
             </div>
             <h4 className="text-[14px] font-semibold text-slate-900">Advance Authorization Scheme</h4>
-            <p className="text-xs text-slate-600 font-light mt-1">Import raw materials and packaging supplies completely free of customs duty to manufacture export shipments.</p>
+            <p className="text-xs text-slate-600 font-normal mt-1">Import raw materials and packaging supplies completely free of customs duty to manufacture export shipments.</p>
           </div>
 
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/90 hover:bg-white hover:border-purple-500 hover:shadow-md transition-all duration-200 cursor-pointer group">
@@ -270,7 +270,7 @@ function RCMCGuideContent() {
               <Globe2 className="w-4 h-4" />
             </div>
             <h4 className="text-[14px] font-semibold text-slate-900">Global Trade Delegations</h4>
-            <p className="text-xs text-slate-600 font-light mt-1">Exclusive participation in government-sponsored international trade delegations, exhibitions, and buyer-seller meets.</p>
+            <p className="text-xs text-slate-600 font-normal mt-1">Exclusive participation in government-sponsored international trade delegations, exhibitions, and buyer-seller meets.</p>
           </div>
 
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/90 hover:bg-white hover:border-amber-500 hover:shadow-md transition-all duration-200 cursor-pointer group">
@@ -278,7 +278,7 @@ function RCMCGuideContent() {
               <Award className="w-4 h-4" />
             </div>
             <h4 className="text-[14px] font-semibold text-slate-900">Enhanced International Credibility</h4>
-            <p className="text-xs text-slate-600 font-light mt-1">Foreign buyers and overseas banking networks verify RCMC status on DGFT before executing high-value Letters of Credit (LC).</p>
+            <p className="text-xs text-slate-600 font-normal mt-1">Foreign buyers and overseas banking networks verify RCMC status on DGFT before executing high-value Letters of Credit (LC).</p>
           </div>
         </div>
       </section>
@@ -288,7 +288,7 @@ function RCMCGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           4. Eligibility Criteria for RCMC Registration in India
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Any commercial entity incorporated in India can apply for RCMC provided they satisfy basic foreign trade prerequisites:
         </p>
 
@@ -325,7 +325,7 @@ function RCMCGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           5. List of Export Promotion Councils &amp; Issuing Authorities
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           India has over 35 recognized councils, boards, and development authorities authorized to issue RCMC certificates. Below is a reference of major categories and their corresponding issuing authorities:
         </p>
 
@@ -394,7 +394,7 @@ function RCMCGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           6. Documents Required for RCMC Registration Online
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Keep digital copies of the following documents ready before initiating your application on the DGFT e-RCMC portal:
         </p>
 
@@ -443,7 +443,7 @@ function RCMCGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           7. Step-by-Step Online RCMC Registration Procedure on DGFT Portal
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Since December 2021, DGFT has integrated the common digital <strong>e-RCMC module</strong> across all 35 Export Promotion Councils. The workflow includes:
         </p>
 
@@ -452,7 +452,7 @@ function RCMCGuideContent() {
             <div className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs shrink-0">1</div>
             <div>
               <h4 className="text-sm font-semibold text-slate-900">DGFT Portal Login &amp; Profile Linkage</h4>
-              <p className="text-xs text-slate-600 font-light mt-0.5">Log in to the official DGFT portal using IEC credentials. Navigate to Services &gt; e-RCMC &gt; Apply for e-RCMC.</p>
+              <p className="text-xs text-slate-600 font-normal mt-0.5">Log in to the official DGFT portal using IEC credentials. Navigate to Services &gt; e-RCMC &gt; Apply for e-RCMC.</p>
             </div>
           </div>
 
@@ -460,7 +460,7 @@ function RCMCGuideContent() {
             <div className="w-7 h-7 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs shrink-0">2</div>
             <div>
               <h4 className="text-sm font-semibold text-slate-900">Council &amp; Fee Slab Selection</h4>
-              <p className="text-xs text-slate-600 font-light mt-0.5">Select the relevant Export Promotion Council based on your primary HS code. Choose membership category (Associate or Ordinary) based on your past turnover.</p>
+              <p className="text-xs text-slate-600 font-normal mt-0.5">Select the relevant Export Promotion Council based on your primary HS code. Choose membership category (Associate or Ordinary) based on your past turnover.</p>
             </div>
           </div>
 
@@ -468,7 +468,7 @@ function RCMCGuideContent() {
             <div className="w-7 h-7 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-xs shrink-0">3</div>
             <div>
               <h4 className="text-sm font-semibold text-slate-900">Document Upload &amp; CA Declaration</h4>
-              <p className="text-xs text-slate-600 font-light mt-0.5">Upload scanned PDFs of the PAN card, Incorporation Deed, and CA certificate of foreign exchange earnings. Digitally sign using Class 3 DSC or Aadhaar e-Sign.</p>
+              <p className="text-xs text-slate-600 font-normal mt-0.5">Upload scanned PDFs of the PAN card, Incorporation Deed, and CA certificate of foreign exchange earnings. Digitally sign using Class 3 DSC or Aadhaar e-Sign.</p>
             </div>
           </div>
 
@@ -476,7 +476,7 @@ function RCMCGuideContent() {
             <div className="w-7 h-7 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xs shrink-0">4</div>
             <div>
               <h4 className="text-sm font-semibold text-slate-900">Council Verification &amp; Digital Certificate Issuance</h4>
-              <p className="text-xs text-slate-600 font-light mt-0.5">The issuing council scrutinizes the file. Upon approval, the digitally signed RCMC certificate is issued directly to your DGFT portal account with a unique registration number.</p>
+              <p className="text-xs text-slate-600 font-normal mt-0.5">The issuing council scrutinizes the file. Upon approval, the digitally signed RCMC certificate is issued directly to your DGFT portal account with a unique registration number.</p>
             </div>
           </div>
         </div>
@@ -487,11 +487,11 @@ function RCMCGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           8. Mandatory Compliance for RCMC Holders
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Obtaining an RCMC certificate entails statutory obligations under the Foreign Trade Policy:
         </p>
 
-        <ul className="space-y-2 text-xs sm:text-sm text-slate-600 font-light">
+        <ul className="space-y-2 text-xs sm:text-sm text-slate-600 font-normal">
           <li className="flex items-start gap-2">
             <span className="text-emerald-600 font-bold">✓</span>
             <span><strong>Periodic Export Returns:</strong> Furnish quarterly or annual export shipment statements to your council detailing invoice values, country of destination, and foreign currency received.</span>
@@ -517,7 +517,7 @@ function RCMCGuideContent() {
             <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0" />
             Operational &amp; Financial Disadvantages of Non-Registration
           </p>
-          <p className="font-light leading-relaxed">
+          <p className="font-normal leading-relaxed">
             While basic exports can technically occur under an IEC, <strong>unregistered exporters lose up to 3%–7% of their FOB invoice value</strong> in uncollected RoDTEP remissions, customs duty drawbacks, and port tariff refunds. Additionally, customs authorities may reject shipping bills for restricted commodity categories, leading to stranded consignments, severe detention charges, and forfeiture of government export benefits.
           </p>
         </div>
@@ -528,7 +528,7 @@ function RCMCGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           10. Why Choose Merrafilings for RCMC Registration?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Merrafilings is India&apos;s trusted foreign trade legal partner, having onboarded over 15,000+ exporters onto the DGFT e-RCMC network:
         </p>
 

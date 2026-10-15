@@ -370,7 +370,7 @@ function PartnershipGuideContent() {
                   <h1 className="text-2xl sm:text-[26px] md:text-[28px] font-normal text-[#1F1646] text-center mb-6 leading-snug">
                     Partnership Firm Registration in India
                   </h1>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed">
                     A <strong className="font-normal text-slate-900">partnership firm</strong> is one of the most preferred business structures in India, where two or more individuals come together to run a business and share profits and losses. Governed by the <strong className="font-normal text-slate-900">Indian Partnership Act, 1932</strong>, a partnership firm offers immense operational flexibility, shared management responsibility, and ease of formation. Whether you are starting a new joint venture or formalizing an ongoing enterprise, understanding the complete <a href="#pricing" className="text-[#155EEF] hover:underline font-normal">partnership firm registration process</a> is the first step towards building a legally recognized and credible business in India. Our legal experts at <a href="/" className="text-[#00B074] hover:underline font-normal">MerraFilings</a> guide you through every milestone from custom deed drafting to Registrar of Firms certificate delivery.
                   </p>
                 </div>
@@ -380,10 +380,10 @@ function PartnershipGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646]">
                     What is Partnership Firm Registration in India?
                   </h2>
-                  <p className="mt-3 text-[13.5px] font-light text-slate-600 leading-relaxed">
+                  <p className="mt-3 text-[13.5px] font-normal text-slate-900 leading-relaxed">
                     <strong className="font-normal text-slate-900">Partnership firm registration in India</strong> is the legal procedure of registering a business entity formed by two or more co-founders under the <strong className="font-normal text-slate-900">Indian Partnership Act, 1932</strong>. Although registration is optional under the Act, a registered firm enjoys significant legal standing over an unregistered one, including the statutory right to sue defaulting parties in court and claim monetary set-offs.
                   </p>
-                  <p className="mt-2.5 text-[13.5px] font-light text-slate-600 leading-relaxed">
+                  <p className="mt-2.5 text-[13.5px] font-normal text-slate-900 leading-relaxed">
                     The registration is administered by the <strong className="font-normal text-slate-900">Registrar of Firms (ROF)</strong> under the respective state government where the firm&apos;s principal place of business is situated. A comprehensively drafted <strong className="font-normal text-slate-900">Partnership Deed</strong> executed on state non-judicial stamp paper serves as the legal backbone of the enterprise.
                   </p>
                 </div>
@@ -393,12 +393,12 @@ function PartnershipGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     What are the Types of Partnership Firms in India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     Selecting the right partnership model determines the liability exposure, governance flexibility, and longevity of your business:
                   </p>
 
                   <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-5">
-                    <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                    <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                       <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                         <tr>
                           <th className="py-3 px-4 font-normal">Type of Partnership</th>
@@ -431,25 +431,25 @@ function PartnershipGuideContent() {
                   <div className="space-y-4 pt-2">
                     <div>
                       <h3 className="text-[15px] font-normal text-[#1F1646]">1. General Partnership (GP)</h3>
-                      <p className="text-[13px] font-light text-slate-600 mt-1 leading-relaxed">
+                      <p className="text-[13px] font-normal text-slate-900 mt-1 leading-relaxed">
                         The most prevalent format where all partners hold joint authority and unlimited personal liability. If the business defaults, personal assets of any or all partners can be attached to settle firm debts.
                       </p>
                     </div>
                     <div>
                       <h3 className="text-[15px] font-normal text-[#1F1646]">2. Limited Liability Partnership (LLP)</h3>
-                      <p className="text-[13px] font-light text-slate-600 mt-1 leading-relaxed">
+                      <p className="text-[13px] font-normal text-slate-900 mt-1 leading-relaxed">
                         A corporate hybrid governed by the LLP Act, 2008 with Ministry of Corporate Affairs oversight. Partners enjoy limited liability protection restricted strictly to their agreed capital contribution.
                       </p>
                     </div>
                     <div>
                       <h3 className="text-[15px] font-normal text-[#1F1646]">3. Partnership at Will</h3>
-                      <p className="text-[13px] font-light text-slate-600 mt-1 leading-relaxed">
+                      <p className="text-[13px] font-normal text-slate-900 mt-1 leading-relaxed">
                         Formed without any fixed duration clause in the deed under Section 7 of the Act. Any partner can dissolve the partnership at any time simply by serving written notice to other co-partners.
                       </p>
                     </div>
                     <div>
                       <h3 className="text-[15px] font-normal text-[#1F1646]">4. Particular Partnership</h3>
-                      <p className="text-[13px] font-light text-slate-600 mt-1 leading-relaxed">
+                      <p className="text-[13px] font-normal text-slate-900 mt-1 leading-relaxed">
                         Constituted under Section 8 solely for a specific project, tender, or venture (e.g. joint construction or infrastructure subcontracting). Automatically dissolves upon completion of the venture.
                       </p>
                     </div>
@@ -461,12 +461,12 @@ function PartnershipGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     Registered vs Unregistered Partnership Firm in India
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     The Indian Partnership Act does not penalize non-registration, but it imposes severe legal disabilities on unregistered firms:
                   </p>
 
                   <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs">
-                    <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                    <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                       <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                         <tr>
                           <th className="py-3 px-4 font-normal">Feature</th>
@@ -504,7 +504,7 @@ function PartnershipGuideContent() {
                         <Users className="w-4 h-4 text-[#00A86B]" />
                         Partner Eligibility Criteria
                       </h4>
-                      <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
+                      <ul className="space-y-2 text-[12.5px] font-normal text-slate-900">
                         <li className="flex items-start gap-2">
                           <span className="text-[#00A86B] font-bold">✓</span>
                           <span>Minimum 2 partners, maximum 50 partners under Companies Act</span>
@@ -529,7 +529,7 @@ function PartnershipGuideContent() {
                         <Scale className="w-4 h-4 text-[#00A86B]" />
                         Naming Rules &amp; Guidelines
                       </h4>
-                      <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
+                      <ul className="space-y-2 text-[12.5px] font-normal text-slate-900">
                         <li className="flex items-start gap-2">
                           <span className="text-[#00A86B] font-bold">✓</span>
                           <span>Must be distinct and not identical to any registered trademark or firm</span>
@@ -556,7 +556,7 @@ function PartnershipGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     Documents Required for Partnership Firm Registration
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     The essential documentation checklist required for drafting the deed and filing Form 1 with the Registrar:
                   </p>
 
@@ -566,7 +566,7 @@ function PartnershipGuideContent() {
                         <FileText className="w-4 h-4 text-[#00A86B]" />
                         Documents from All Partners
                       </h4>
-                      <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
+                      <ul className="space-y-2 text-[12.5px] font-normal text-slate-900">
                         <li className="flex items-start gap-2">
                           <span className="text-[#00A86B] font-bold">✓</span>
                           <span>PAN Card of all partners (mandatory for taxation)</span>
@@ -591,7 +591,7 @@ function PartnershipGuideContent() {
                         <Building className="w-4 h-4 text-[#00A86B]" />
                         Principal Place of Business Documents
                       </h4>
-                      <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
+                      <ul className="space-y-2 text-[12.5px] font-normal text-slate-900">
                         <li className="flex items-start gap-2">
                           <span className="text-[#00A86B] font-bold">✓</span>
                           <span>Latest Electricity bill or property tax receipt of office premises</span>
@@ -618,7 +618,7 @@ function PartnershipGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     Step-by-Step Partnership Registration Process in India
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-5">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-5">
                     Follow these 6 sequential steps to legally register and operationalize your partnership enterprise:
                   </p>
 
@@ -661,7 +661,7 @@ function PartnershipGuideContent() {
                         </div>
                         <div>
                           <h4 className="text-[14px] font-medium text-slate-900">{stepItem.title}</h4>
-                          <p className="text-[12.5px] font-light text-slate-600 mt-1 leading-relaxed">
+                          <p className="text-[12.5px] font-normal text-slate-900 mt-1 leading-relaxed">
                             {stepItem.desc}
                           </p>
                         </div>
@@ -675,12 +675,12 @@ function PartnershipGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     Partnership Firm vs Other Business Structures
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     Comparison between Partnership Firm, LLP, Private Limited Company, and Sole Proprietorship:
                   </p>
 
                   <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs">
-                    <table className="w-full text-left text-[12px] font-light text-slate-700">
+                    <table className="w-full text-left text-[12px] font-normal text-slate-900">
                       <thead className="bg-[#FAF9F7] text-slate-800 font-normal border-b border-slate-200">
                         <tr>
                           <th className="py-2.5 px-3 font-normal">Feature</th>
@@ -710,10 +710,10 @@ function PartnershipGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     Compliance Requirements for Partnership Firms in India
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     Statutory compliances required to maintain good tax standing and avoid penal interest:
                   </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[13px] font-light text-slate-700">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[13px] font-normal text-slate-900">
                     <div className="flex items-start gap-2">
                       <span className="text-[#00A86B] font-bold">✓</span>
                       <span><strong>Income Tax Return (ITR-5):</strong> Flat 30% tax rate, filed annually by 31st July</span>
@@ -738,10 +738,10 @@ function PartnershipGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     Why Choose Merrafilings for Partnership Firm Registration?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     Merrafilings is India&apos;s leading corporate compliance platform, having assisted over 100,000+ businesses with firm registration and annual compliance:
                   </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[13px] font-light text-slate-700">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[13px] font-normal text-slate-900">
                     <div className="flex items-center gap-2">
                       <span className="text-[#00A86B] font-bold">✓</span>
                       <span>Experienced CAs and Advocates specializing in Partnership Law</span>
@@ -770,7 +770,7 @@ export default function PartnershipPage() {
       badgeText="Traditional Partnership with Operational Simplicity"
       heroTitle={
         <>
-          <span className="bg-gradient-to-r from-[#5C3BFF] via-[#7052FF] to-[#FF4ED0] bg-clip-text text-transparent font-light">
+          <span className="bg-gradient-to-r from-[#5C3BFF] via-[#7052FF] to-[#FF4ED0] bg-clip-text text-transparent font-normal">
             Partnership Company
           </span>{" "}
           Registration Online in India

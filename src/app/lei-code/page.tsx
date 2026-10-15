@@ -245,7 +245,7 @@ function LeiGuideContent() {
                   <h1 className="text-2xl sm:text-[26px] md:text-[28px] font-normal text-[#1F1646] text-center mb-6 leading-snug">
                     Legal Entity Identifier Number Registration Online in India
                   </h1>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed">
                     A <strong className="font-medium text-slate-800">Legal Entity Identifier (LEI) number</strong> is a unique 20-character alphanumeric code assigned to legal entities participating in global financial transactions. Businesses, banks, mutual funds, and commercial corporations in India must obtain an <strong className="font-medium text-slate-800">LEI registration</strong> to comply with strict Reserve Bank of India (RBI) mandates and international financial governance standards. Merrafilings provides end-to-end expert advisory, swift documentation review, and seamless coordination with accredited Local Operating Units (LOUs) to issue and maintain your LEI code efficiently.
                   </p>
                 </div>
@@ -255,20 +255,20 @@ function LeiGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     What is a Legal Entity Identifier (LEI) Number?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     A Legal Entity Identifier number is a globally recognized unique identification code issued to legal entities involved in financial transactions. Introduced by the <strong>Financial Stability Board (FSB)</strong> and endorsed by the G20 in the aftermath of the 2008 global financial crisis, the LEI system was created to improve transparency, monitor systemic exposure, and eliminate counterparty ambiguity across international financial markets.
                   </p>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     In India, the Reserve Bank of India (RBI) has made LEI registration mandatory for entities participating in large-value centralized transactions, over-the-counter derivatives, non-derivative markets, and foreign currency transactions. Every LEI number is linked to publicly accessible, verified reference data about a legal entity, providing definitive proof of its institutional existence and corporate hierarchy.
                   </p>
 
                   <h3 className="text-[15px] sm:text-[16px] font-medium text-[#1F1646] mt-5 mb-2">
                     Structure of an LEI Code (ISO 17442 Norm)
                   </h3>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-3">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-3">
                     An LEI code is a 20-character alphanumeric identifier standardized under the international ISO 17442 norm, structured as follows:
                   </p>
-                  <ul className="space-y-2 text-[13px] font-light text-slate-600 mb-5">
+                  <ul className="space-y-2 text-[13px] font-normal text-slate-900 mb-5">
                     <li className="flex items-start gap-2">
                       <span className="text-[#00A86B] font-bold">✓</span>
                       <span><strong>Characters 1-4 (LOU Prefix):</strong> Identifies the accredited Local Operating Unit that issued the code (e.g., 3358 for CCIL/LEIL in India).</span>
@@ -286,11 +286,11 @@ function LeiGuideContent() {
                   <h3 className="text-[15px] sm:text-[16px] font-medium text-[#1F1646] mt-5 mb-2">
                     LEI vs. Other Business Identifiers
                   </h3>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-3">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-3">
                     To understand where the LEI sits within corporate identity systems, consider how it compares to conventional domestic identifiers:
                   </p>
                   <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-5">
-                    <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                    <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                       <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                         <tr>
                           <th className="py-3 px-4 font-normal">Identifier</th>
@@ -355,17 +355,17 @@ function LeiGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     Why is Legal Entity Identifier Registration Mandatory in India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     The LEI registration mandate in India was established by the Reserve Bank of India to bolster financial sector stability, track systemic concentration risks, and bring transparency to high-value capital transfers. Over recent years, the RBI has progressively expanded the scope of mandatory LEI compliance across corporate banking, foreign exchange, and debt markets.
                   </p>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     Failing to obtain or renew an LEI number leads to immediate operational gridlock: commercial banks in India are prohibited from executing RTGS and NEFT transactions exceeding prescribed limits for non-compliant entities, causing delays in supplier disbursements, loan servicing, and overseas remittances.
                   </p>
 
                   <h3 className="text-[15px] sm:text-[16px] font-medium text-[#1F1646] mt-4 mb-2">
                     RBI Guidelines on LEI Compliance
                   </h3>
-                  <ul className="space-y-2 text-[13px] font-light text-slate-600 mb-5">
+                  <ul className="space-y-2 text-[13px] font-normal text-slate-900 mb-5">
                     <li className="flex items-start gap-2">
                       <span className="text-[#00A86B] font-bold">✓</span>
                       <span><strong>RTGS and NEFT Payments:</strong> Mandatory for all single payment transactions of ₹50 Crore and above undertaken by non-individual entities in centralized payment systems.</span>
@@ -391,7 +391,7 @@ function LeiGuideContent() {
                   <h3 className="text-[15px] sm:text-[16px] font-medium text-[#1F1646] mt-4 mb-2">
                     Who Needs to Complete the LEI Registration?
                   </h3>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed">
                     Under notifications issued jointly by the RBI, SEBI, and IRDAI, the following categories of organizations must obtain an active LEI number: all public and private limited companies, banks, Non-Banking Financial Companies (NBFCs), insurance providers, mutual fund schemes, registered partnership firms, Limited Liability Partnerships (LLPs), institutional trusts, and foreign portfolio investors (FPIs).
                   </p>
                 </div>
@@ -401,10 +401,10 @@ function LeiGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     What is the Purpose of LEI Registration in India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     The fundamental purpose of LEI registration is to establish an internationally unified, unambiguous identity for every organization transacting in modern financial markets. By replacing fragmented regional registration codes with a single globally recognized credential, the LEI system enables regulators, financial institutions, and trading counterparties to clearly identify transaction parties across borders, significantly curtailing systemic vulnerabilities.
                   </p>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed">
                     In India, the RBI&apos;s mandate on large-value transactions enforces strict fiscal accountability, accelerates automated settlement processing, and directly bolsters national Anti-Money Laundering (AML) and Counter-Terrorism Financing (CFT) risk management architectures.
                   </p>
                 </div>
@@ -414,7 +414,7 @@ function LeiGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     What are the Benefits of LEI Registration in India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     Securing an official LEI certificate delivers substantial strategic, operational, and compliance advantages to corporate enterprises and institutional lenders alike:
                   </p>
 
@@ -427,35 +427,35 @@ function LeiGuideContent() {
                         <Globe2 className="w-4 h-4 text-[#00A86B]" />
                         Global Financial Recognition
                       </div>
-                      <p className="text-[12px] font-light text-slate-600">Universally recognized across 200+ jurisdictions, opening frictionless doors to international trade and overseas banking.</p>
+                      <p className="text-[12px] font-normal text-slate-900">Universally recognized across 200+ jurisdictions, opening frictionless doors to international trade and overseas banking.</p>
                     </div>
                     <div className="p-3.5 rounded-xl bg-[#FAF9F7] border border-slate-200/70">
                       <div className="font-medium text-[13.5px] text-slate-900 mb-1 flex items-center gap-2">
                         <ShieldCheck className="w-4 h-4 text-[#00A86B]" />
                         Full Regulatory Compliance
                       </div>
-                      <p className="text-[12px] font-light text-slate-600">Guarantees uninterrupted processing of RTGS/NEFT transactions of ₹50 Cr+ without banking rejections or RBI penalties.</p>
+                      <p className="text-[12px] font-normal text-slate-900">Guarantees uninterrupted processing of RTGS/NEFT transactions of ₹50 Cr+ without banking rejections or RBI penalties.</p>
                     </div>
                     <div className="p-3.5 rounded-xl bg-[#FAF9F7] border border-slate-200/70">
                       <div className="font-medium text-[13.5px] text-slate-900 mb-1 flex items-center gap-2">
                         <Award className="w-4 h-4 text-[#00A86B]" />
                         Elevated Corporate Creditworthiness
                       </div>
-                      <p className="text-[12px] font-light text-slate-600">Instills institutional confidence in commercial banks, debt syndicates, and overseas export-import counterparties.</p>
+                      <p className="text-[12px] font-normal text-slate-900">Instills institutional confidence in commercial banks, debt syndicates, and overseas export-import counterparties.</p>
                     </div>
                     <div className="p-3.5 rounded-xl bg-[#FAF9F7] border border-slate-200/70">
                       <div className="font-medium text-[13.5px] text-slate-900 mb-1 flex items-center gap-2">
                         <Clock className="w-4 h-4 text-[#00A86B]" />
                         Expedited Transaction Clearing
                       </div>
-                      <p className="text-[12px] font-light text-slate-600">Automates counterparty verification, eliminating manual compliance audits and settlement delays.</p>
+                      <p className="text-[12px] font-normal text-slate-900">Automates counterparty verification, eliminating manual compliance audits and settlement delays.</p>
                     </div>
                   </div>
 
                   <h3 className="text-[15px] sm:text-[16px] font-medium text-[#1F1646] mt-4 mb-2">
                     Benefits for Financial Institutions and Banks
                   </h3>
-                  <ul className="space-y-2 text-[13px] font-light text-slate-600">
+                  <ul className="space-y-2 text-[13px] font-normal text-slate-900">
                     <li className="flex items-start gap-2">
                       <span className="text-[#00A86B] font-bold">•</span>
                       <span><strong>Streamlined Regulatory Reporting:</strong> Standardizes counterparty data fields across internal risk databases and RBI reporting systems.</span>
@@ -476,7 +476,7 @@ function LeiGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     What are the Types of Entities Eligible for LEI Registration?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     Any distinct legal organization that participates in financial transactions is eligible and qualified to apply for an LEI code. The following categories of entities can register in India:
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-4">
@@ -496,7 +496,7 @@ function LeiGuideContent() {
                     ].map((ent, idx) => (
                       <div key={idx} className="p-3 rounded-lg bg-[#FAF9F7] border border-slate-200/70">
                         <div className="font-medium text-[13px] text-slate-800">{ent.title}</div>
-                        <div className="text-[12px] font-light text-slate-500 mt-0.5">{ent.desc}</div>
+                        <div className="text-[12px] font-normal text-slate-900 mt-0.5">{ent.desc}</div>
                       </div>
                     ))}
                   </div>
@@ -507,14 +507,14 @@ function LeiGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     What Information is Required for LEI Registration in India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     Before initiating the online application, entities must compile two levels of verified corporate data as mandated by the GLEIF governance framework:
                   </p>
 
                   <h3 className="text-[15px] sm:text-[16px] font-medium text-[#1F1646] mb-2">
                     Level 1 Data: Legal Entity Information (&ldquo;Who is Who&rdquo;)
                   </h3>
-                  <ul className="space-y-1.5 text-[13px] font-light text-slate-600 mb-5">
+                  <ul className="space-y-1.5 text-[13px] font-normal text-slate-900 mb-5">
                     <li className="flex items-start gap-2">
                       <span className="text-[#00A86B] font-bold">•</span>
                       <span>Official statutory legal name as reflected in official government registries.</span>
@@ -544,7 +544,7 @@ function LeiGuideContent() {
                   <h3 className="text-[15px] sm:text-[16px] font-medium text-[#1F1646] mb-2">
                     Level 2 Data: Corporate Structure Details (&ldquo;Who owns Whom&rdquo;)
                   </h3>
-                  <ul className="space-y-1.5 text-[13px] font-light text-slate-600">
+                  <ul className="space-y-1.5 text-[13px] font-normal text-slate-900">
                     <li className="flex items-start gap-2">
                       <span className="text-[#00A86B] font-bold">•</span>
                       <span><strong>Direct Parent Entity:</strong> Legal name, LEI (if available), and registration details of the immediate holding company consolidating the accounts.</span>
@@ -569,12 +569,12 @@ function LeiGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     What Documents are Required for LEI Registration in India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     Uploading verified documents matching government registries ensures rapid clearance without requisition queries. Below is the entity-wise document matrix:
                   </p>
 
                   <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-5">
-                    <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                    <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                       <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                         <tr>
                           <th className="py-3 px-4 font-normal">Type of Entity</th>
@@ -638,7 +638,7 @@ function LeiGuideContent() {
                   <h3 className="text-[15px] sm:text-[16px] font-medium text-[#1F1646] mb-2">
                     General Supporting Documentation for Other Entities
                   </h3>
-                  <ul className="space-y-1.5 text-[13px] font-light text-slate-600">
+                  <ul className="space-y-1.5 text-[13px] font-normal text-slate-900">
                     <li className="flex items-start gap-2">
                       <span className="text-[#00A86B] font-bold">•</span>
                       <span>Government identity proof (PAN card and Aadhaar / Passport) of the authorized signatory.</span>
@@ -659,10 +659,10 @@ function LeiGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     How One Can Obtain LEI in India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     In India, entities can obtain their LEI number through a Local Operating Unit (LOU) accredited by the Global Legal Entity Identifier Foundation (GLEIF). The primary accredited LOU in India is <strong>Legal Entity Identifier India Limited (LEIL)</strong>, a dedicated subsidiary of the Clearing Corporation of India Limited (CCIL).
                   </p>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed">
                     Entities can apply directly on the CCIL portal or engage authorized registration facilitators like Merrafilings. Applying with Merrafilings eliminates procedural friction: our regulatory specialists audit corporate records, draft mandatory Board Resolutions, manage LOU communications, and guarantee that the certificate is generated accurately without rejection.
                   </p>
                 </div>
@@ -672,7 +672,7 @@ function LeiGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     What is the Process of LEI Application in India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     The LEI application process follows a structured validation sequence to ensure compliance with global GLEIF benchmarks:
                   </p>
 
@@ -696,7 +696,7 @@ function LeiGuideContent() {
                         </div>
                         <div>
                           <div className="font-medium text-[13.5px] text-slate-900">{st.title}</div>
-                          <div className="text-[12.5px] font-light text-slate-600 mt-0.5">{st.text}</div>
+                          <div className="text-[12.5px] font-normal text-slate-900 mt-0.5">{st.text}</div>
                         </div>
                       </div>
                     ))}
@@ -705,7 +705,7 @@ function LeiGuideContent() {
                   <h3 className="text-[15px] sm:text-[16px] font-medium text-[#1F1646] mb-2">
                     LEI Application Form Filling Guidelines
                   </h3>
-                  <ul className="space-y-1.5 text-[13px] font-light text-slate-600">
+                  <ul className="space-y-1.5 text-[13px] font-normal text-slate-900">
                     <li className="flex items-start gap-2">
                       <span className="text-[#00A86B] font-bold">•</span>
                       <span>Ensure the legal name matches character-by-character with your MCA Certificate of Incorporation or PAN Card.</span>
@@ -726,7 +726,7 @@ function LeiGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     How to Register an LEI Number Online in India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     The entire LEI registration process in India is 100% digital with zero physical paperwork. However, avoiding common submission blunders is critical to prevent application rejection:
                   </p>
 
@@ -736,19 +736,19 @@ function LeiGuideContent() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
                     <div className="p-3 rounded-lg border border-red-200/80 bg-red-50/20">
                       <div className="font-medium text-[13px] text-red-900">1. Name Mismatches</div>
-                      <div className="text-[12px] font-light text-slate-600 mt-1">Discrepancies between the name in MCA, Income Tax PAN, and the LEI application will trigger instant rejection.</div>
+                      <div className="text-[12px] font-normal text-slate-900 mt-1">Discrepancies between the name in MCA, Income Tax PAN, and the LEI application will trigger instant rejection.</div>
                     </div>
                     <div className="p-3 rounded-lg border border-red-200/80 bg-red-50/20">
                       <div className="font-medium text-[13px] text-red-900">2. Wrong Registered Address</div>
-                      <div className="text-[12px] font-light text-slate-600 mt-1">Using operational or branch addresses instead of the legal registered office listed with MCA causes verification failure.</div>
+                      <div className="text-[12px] font-normal text-slate-900 mt-1">Using operational or branch addresses instead of the legal registered office listed with MCA causes verification failure.</div>
                     </div>
                     <div className="p-3 rounded-lg border border-red-200/80 bg-red-50/20">
                       <div className="font-medium text-[13px] text-red-900">3. Incomplete Parent Entity Records</div>
-                      <div className="text-[12px] font-light text-slate-600 mt-1">Omitting parent company details or failing to upload formal consolidation opt-out reasons delays issuance.</div>
+                      <div className="text-[12px] font-normal text-slate-900 mt-1">Omitting parent company details or failing to upload formal consolidation opt-out reasons delays issuance.</div>
                     </div>
                     <div className="p-3 rounded-lg border border-red-200/80 bg-red-50/20">
                       <div className="font-medium text-[13px] text-red-900">4. Expired or Unsigned Documents</div>
-                      <div className="text-[12px] font-light text-slate-600 mt-1">Uploading undated Board Resolutions or expired registration certificates results in scrutiny queries.</div>
+                      <div className="text-[12px] font-normal text-slate-900 mt-1">Uploading undated Board Resolutions or expired registration certificates results in scrutiny queries.</div>
                     </div>
                   </div>
                 </div>
@@ -758,12 +758,12 @@ function LeiGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     What is the LEI Registration Fee and Validity in India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     The cost of obtaining and maintaining an LEI code in India includes the statutory LOU fee plus professional facilitation fees. Below is the indicative fee structure:
                   </p>
 
                   <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-5">
-                    <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                    <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                       <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                         <tr>
                           <th className="py-3 px-4 font-normal">Service Type</th>
@@ -814,14 +814,14 @@ function LeiGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     What is the Renewal and Validity of LEI Code in India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     An LEI code is valid for exactly one year from the date of issuance. To keep the LEI status marked as &ldquo;ISSUED&rdquo; (Active) in the global GLEIF database, legal entities must submit annual renewal applications and verify their corporate ownership records.
                   </p>
 
                   <h3 className="text-[15px] sm:text-[16px] font-medium text-[#1F1646] mb-2">
                     LEI Renewal Process and Timeline
                   </h3>
-                  <ul className="space-y-1.5 text-[13px] font-light text-slate-600 mb-5">
+                  <ul className="space-y-1.5 text-[13px] font-normal text-slate-900 mb-5">
                     <li className="flex items-start gap-2">
                       <span className="text-[#00A86B] font-bold">•</span>
                       <span>Initiate renewal at least 30 days before the annual expiry date to prevent lapsing.</span>
@@ -844,7 +844,7 @@ function LeiGuideContent() {
                       <ShieldAlert className="w-4 h-4 text-red-600 shrink-0" />
                       Critical Penalties of a Lapsed LEI:
                     </div>
-                    <ul className="text-[12.5px] font-light text-slate-700 space-y-1.5 pl-6 list-disc">
+                    <ul className="text-[12.5px] font-normal text-slate-900 space-y-1.5 pl-6 list-disc">
                       <li><strong>Immediate Lapsed Status:</strong> Status changes from Active to LAPSED in the global GLEIF registry.</li>
                       <li><strong>Blocked Banking Transactions:</strong> Commercial banks in India will decline RTGS and NEFT transactions exceeding ₹50 Crore.</li>
                       <li><strong>Trade Facility Freezes:</strong> Credit, working capital lines, and letter of credit disbursements will be halted by financial institutions.</li>
@@ -858,10 +858,10 @@ function LeiGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     How to Download the LEI Certificate in India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     Upon successful approval by the LOU, you can download your official LEI Certificate in PDF format through the following steps:
                   </p>
-                  <ol className="list-decimal list-inside space-y-2 text-[13px] font-light text-slate-600 mb-4">
+                  <ol className="list-decimal list-inside space-y-2 text-[13px] font-normal text-slate-900 mb-4">
                     <li>Log into your registered account on the CCIL LEI portal (<span className="text-[#155EEF]">legalentity.ccilindia.co.in</span>) or Merrafilings dashboard.</li>
                     <li>Navigate to the &ldquo;My LEI&rdquo; or &ldquo;Certificate&rdquo; tab on your dashboard.</li>
                     <li>Select the active LEI record associated with your legal entity.</li>
@@ -875,19 +875,19 @@ function LeiGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     How to Verify the Legal Entity Identifier Certificate in India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     Commercial counterparties, corporate treasuries, and compliance officers can independently verify any LEI code in real-time:
                   </p>
                   <div className="space-y-3 mb-4">
                     <div className="p-3.5 rounded-xl bg-[#FAF9F7] border border-slate-200/70">
                       <div className="font-medium text-[13.5px] text-slate-900 mb-1">1. Global GLEIF Search Portal</div>
-                      <p className="text-[12.5px] font-light text-slate-600">
+                      <p className="text-[12.5px] font-normal text-slate-900">
                         Visit <span className="text-[#155EEF]">gleif.org</span> and enter the 20-character code in the global search bar to review entity ownership, LOU issuer, and active status.
                       </p>
                     </div>
                     <div className="p-3.5 rounded-xl bg-[#FAF9F7] border border-slate-200/70">
                       <div className="font-medium text-[13.5px] text-slate-900 mb-1">2. India CCIL / LEIL Directory</div>
-                      <p className="text-[12.5px] font-light text-slate-600">
+                      <p className="text-[12.5px] font-normal text-slate-900">
                         Visit <span className="text-[#155EEF]">legalentity.ccilindia.co.in</span> and input the PAN, CIN, or LEI number to verify domestic records against RBI mandates.
                       </p>
                     </div>
@@ -899,10 +899,10 @@ function LeiGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     Why Should You Choose Merrafilings for LEI Registration in India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     Merrafilings is India&apos;s premier corporate legal and compliance advisory platform. Our dedicated team of Chartered Accountants, Company Secretaries, and banking specialists takes the friction out of LEI registration and multi-year renewals:
                   </p>
-                  <ul className="space-y-2.5 text-[13px] font-light text-slate-600 mb-6">
+                  <ul className="space-y-2.5 text-[13px] font-normal text-slate-900 mb-6">
                     <li className="flex items-start gap-2.5">
                       <span className="text-[#00A86B] font-bold">✓</span>
                       <span><strong>Fast-Track Issuance in 24-48 Hours:</strong> Expedited documentation and direct coordination with CCIL/LEIL for urgent bank clearance.</span>
@@ -924,7 +924,7 @@ function LeiGuideContent() {
                   <div className="p-4 rounded-xl bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200/80 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div>
                       <div className="font-medium text-[14.5px] text-slate-900">Need an LEI Code for High-Value Bank Transfers?</div>
-                      <div className="text-[12.5px] font-light text-slate-600">Connect with our corporate regulatory specialists today.</div>
+                      <div className="text-[12.5px] font-normal text-slate-900">Connect with our corporate regulatory specialists today.</div>
                     </div>
                     <button
                       type="button"

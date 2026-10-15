@@ -478,10 +478,10 @@ function FSSAIGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           1. What is FSSAI Registration?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           <strong className="text-slate-800 font-medium">FSSAI Registration</strong> is an official certification issued by the <strong className="text-slate-800 font-medium">Food Safety and Standards Authority of India (FSSAI)</strong>, the apex statutory authority functioning under the Ministry of Health and Family Welfare, Government of India. It grants legal authorization to any Food Business Operator (FBO) to manufacture, process, package, store, transport, distribute, or sell food products within India.
         </p>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Established under the <strong className="text-slate-800 font-medium">Food Safety and Standards Act, 2006 (FSS Act)</strong>, FSSAI registration acts as a guarantee of quality and hygiene. It ensures that the food products supplied to consumers meet scientific standards, preventing food adulteration, contamination, and toxic ingredients.
         </p>
 
@@ -491,34 +491,34 @@ function FSSAIGuideContent() {
             <ShieldCheck className="w-5 h-5 text-emerald-600" />
             <span>Understanding the 14-Digit FSSAI License / Registration Number</span>
           </div>
-          <p className="text-xs text-slate-600 leading-relaxed font-light">
+          <p className="text-xs text-slate-600 leading-relaxed font-normal">
             Every certified food business is issued a unique 14-digit registration number that provides complete traceability. The structure of this 14-digit number is decoded as follows:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2.5 pt-1 text-xs">
             <div className="p-3 rounded-xl bg-white border border-slate-200">
               <span className="block font-semibold text-emerald-700 text-sm">Digit 1</span>
               <span className="text-slate-700 font-medium">Registration Status</span>
-              <span className="block text-[11px] text-slate-500 font-light mt-0.5">Indicates whether registration or license</span>
+              <span className="block text-[11px] text-slate-500 font-normal mt-0.5">Indicates whether registration or license</span>
             </div>
             <div className="p-3 rounded-xl bg-white border border-slate-200">
               <span className="block font-semibold text-blue-700 text-sm">Digits 2 &amp; 3</span>
               <span className="text-slate-700 font-medium">State Code</span>
-              <span className="block text-[11px] text-slate-500 font-light mt-0.5">Identifies the Indian state of operation</span>
+              <span className="block text-[11px] text-slate-500 font-normal mt-0.5">Identifies the Indian state of operation</span>
             </div>
             <div className="p-3 rounded-xl bg-white border border-slate-200">
               <span className="block font-semibold text-purple-700 text-sm">Digits 4 &amp; 5</span>
               <span className="text-slate-700 font-medium">Enrollment Year</span>
-              <span className="block text-[11px] text-slate-500 font-light mt-0.5">The calendar year when license was granted</span>
+              <span className="block text-[11px] text-slate-500 font-normal mt-0.5">The calendar year when license was granted</span>
             </div>
             <div className="p-3 rounded-xl bg-white border border-slate-200">
               <span className="block font-semibold text-amber-700 text-sm">Digits 6, 7 &amp; 8</span>
               <span className="text-slate-700 font-medium">Quantity Master</span>
-              <span className="block text-[11px] text-slate-500 font-light mt-0.5">Classification of food business category</span>
+              <span className="block text-[11px] text-slate-500 font-normal mt-0.5">Classification of food business category</span>
             </div>
             <div className="p-3 rounded-xl bg-white border border-slate-200">
               <span className="block font-semibold text-rose-700 text-sm">Digits 9 to 14</span>
               <span className="text-slate-700 font-medium">Unique FBO Serial</span>
-              <span className="block text-[11px] text-slate-500 font-light mt-0.5">Distinct manufacturer serial number</span>
+              <span className="block text-[11px] text-slate-500 font-normal mt-0.5">Distinct manufacturer serial number</span>
             </div>
           </div>
         </div>
@@ -529,7 +529,7 @@ function FSSAIGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           2. What are the Different Types of FSSAI Registration?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           FSSAI classifies food business registrations into three main categories based on the scale of business operations, annual turnover thresholds, and production capacity:
         </p>
 
@@ -541,10 +541,10 @@ function FSSAIGuideContent() {
             <h3 className="text-base font-medium text-slate-900 mb-1.5 group-hover:text-emerald-700 transition-colors">
               FSSAI Basic Registration
             </h3>
-            <p className="text-xs text-slate-600 font-light leading-relaxed mb-3">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed mb-3">
               Designed for petty food manufacturers, small retail shops, hawkers, tea stalls, juice corners, home bakers, and temporary food stalls with turnover up to ₹12 Lakhs per annum.
             </p>
-            <ul className="text-xs text-slate-600 space-y-1.5 font-light">
+            <ul className="text-xs text-slate-600 space-y-1.5 font-normal">
               <li>• Filing Form: Form A on FoSCoS</li>
               <li>• Statutory Fee: ₹100 / year</li>
               <li>• Delivery: 7 to 10 working days</li>
@@ -558,10 +558,10 @@ function FSSAIGuideContent() {
             <h3 className="text-base font-medium text-slate-900 mb-1.5 group-hover:text-[#00B074] transition-colors">
               FSSAI State License
             </h3>
-            <p className="text-xs text-slate-600 font-light leading-relaxed mb-3">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed mb-3">
               Mandatory for restaurants, bakeries, cloud kitchens, caterers, food distributors, wholesalers, and mid-sized manufacturing units with turnover between ₹12 Lakhs and ₹20 Crores.
             </p>
-            <ul className="text-xs text-slate-600 space-y-1.5 font-light">
+            <ul className="text-xs text-slate-600 space-y-1.5 font-normal">
               <li>• Filing Form: Form B on FoSCoS</li>
               <li>• Statutory Fee: ₹2,000 to ₹5,000 / year</li>
               <li>• Delivery: 30 to 45 working days</li>
@@ -575,10 +575,10 @@ function FSSAIGuideContent() {
             <h3 className="text-base font-medium text-slate-900 mb-1.5 group-hover:text-purple-700 transition-colors">
               FSSAI Central License
             </h3>
-            <p className="text-xs text-slate-600 font-light leading-relaxed mb-3">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed mb-3">
               Required for large food manufacturers exceeding ₹20 Crores turnover, 100% Export Oriented Units (EOU), food importers holding IEC, seaports, airports, and multi-state restaurant chains.
             </p>
-            <ul className="text-xs text-slate-600 space-y-1.5 font-light">
+            <ul className="text-xs text-slate-600 space-y-1.5 font-normal">
               <li>• Filing Form: Form B (Central CLA)</li>
               <li>• Statutory Fee: ₹7,500 / year</li>
               <li>• Delivery: 45 to 60 working days</li>
@@ -601,7 +601,7 @@ function FSSAIGuideContent() {
                   <th className="py-3 px-4">Issuing Authority</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100 font-light text-slate-600">
+              <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
                 {TABLE_1_TYPES.map((row, idx) => (
                   <tr key={idx} className="transition-colors">
                     <td className="py-3 px-4 font-medium text-slate-800">{row.type}</td>
@@ -621,7 +621,7 @@ function FSSAIGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           3. Who Needs to Apply for FSSAI Registration?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Under Section 31 of the Food Safety and Standards Act, 2006, any commercial establishment or individual involved in any stage of the food value chain is legally classified as a Food Business Operator (FBO) and must obtain FSSAI registration:
         </p>
 
@@ -629,7 +629,7 @@ function FSSAIGuideContent() {
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-indigo-500 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <Factory className="w-5 h-5 text-indigo-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-medium text-slate-900 mb-1">Food Manufacturers &amp; Processors</h4>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Industrial plants manufacturing packaged goods, beverages, snacks, oils, confectionery, or dairy products.
             </p>
           </div>
@@ -637,7 +637,7 @@ function FSSAIGuideContent() {
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <UtensilsCrossed className="w-5 h-5 text-emerald-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-medium text-slate-900 mb-1">Restaurants &amp; Cloud Kitchens</h4>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Dine-in restaurants, cafes, cloud kitchens, delivery kitchens, food trucks, and corporate canteens.
             </p>
           </div>
@@ -645,7 +645,7 @@ function FSSAIGuideContent() {
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-blue-500 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <Store className="w-5 h-5 text-blue-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-medium text-slate-900 mb-1">Wholesalers, Distributors &amp; Retailers</h4>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Kirana stores, supermarkets, grocery wholesalers, cold storages, warehouses, and re-packers.
             </p>
           </div>
@@ -653,7 +653,7 @@ function FSSAIGuideContent() {
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-purple-500 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <Globe2 className="w-5 h-5 text-purple-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-medium text-slate-900 mb-1">Food Importers &amp; Exporters</h4>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Importers bringing foreign packaged foods into India or exporting domestic produce through customs ports.
             </p>
           </div>
@@ -661,7 +661,7 @@ function FSSAIGuideContent() {
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-amber-500 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <Truck className="w-5 h-5 text-amber-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-medium text-slate-900 mb-1">Food Transporters &amp; Delivery Fleets</h4>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Logistics operators transporting perishable food items, refrigerated container trucks, and delivery networks.
             </p>
           </div>
@@ -669,7 +669,7 @@ function FSSAIGuideContent() {
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-rose-500 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <Flame className="w-5 h-5 text-rose-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-medium text-slate-900 mb-1">E-Commerce &amp; Online Food Aggregators</h4>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Online food delivery portals (Swiggy, Zomato), grocery delivery apps, and online marketplace sellers.
             </p>
           </div>
@@ -681,7 +681,7 @@ function FSSAIGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           4. What are the Documents Required for FSSAI Registration?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           The documentation requirements vary depending on whether you are applying for Basic Registration, State License, or Central License:
         </p>
 
@@ -696,7 +696,7 @@ function FSSAIGuideContent() {
                 <th className="py-3 px-4 text-purple-700">Central License</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 font-light text-slate-600">
+            <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
               {TABLE_2_DOCUMENTS.map((row, idx) => (
                 <tr key={idx} className="transition-colors">
                   <td className="py-3 px-4 font-medium text-slate-800">{row.document}</td>
@@ -715,7 +715,7 @@ function FSSAIGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           5. What is the FSSAI Registration Process?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           The FSSAI licensing process is 100% digitalized on the FoSCoS cloud platform. Merrafilings handles the end-to-end filing to ensure zero delays:
         </p>
 
@@ -724,7 +724,7 @@ function FSSAIGuideContent() {
             <span className="w-7 h-7 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">1</span>
             <div>
               <h3 className="text-sm font-medium text-slate-900">Eligibility &amp; Food Category Selection</h3>
-              <p className="text-xs text-slate-600 mt-1 font-light leading-relaxed">
+              <p className="text-xs text-slate-600 mt-1 font-normal leading-relaxed">
                 We review your business operations against FSSAI food product categorization codes (Dairy, Confectionery, Beverages, Meat, Health Supplements) and determine whether Form A (Basic) or Form B (State/Central) applies.
               </p>
             </div>
@@ -734,7 +734,7 @@ function FSSAIGuideContent() {
             <span className="w-7 h-7 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">2</span>
             <div>
               <h3 className="text-sm font-medium text-slate-900">FoSCoS Portal Application Drafting</h3>
-              <p className="text-xs text-slate-600 mt-1 font-light leading-relaxed">
+              <p className="text-xs text-slate-600 mt-1 font-normal leading-relaxed">
                 Our team registers your account on the FoSCoS portal, fills out all statutory forms, drafts the Food Safety Management Plan (FSMS), and prepares self-declarations.
               </p>
             </div>
@@ -744,7 +744,7 @@ function FSSAIGuideContent() {
             <span className="w-7 h-7 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">3</span>
             <div>
               <h3 className="text-sm font-medium text-slate-900">Document Upload &amp; Treasury Fee Payment</h3>
-              <p className="text-xs text-slate-600 mt-1 font-light leading-relaxed">
+              <p className="text-xs text-slate-600 mt-1 font-normal leading-relaxed">
                 All applicant KYC, premises proof, water testing reports, and layout plans are uploaded to the government server, and statutory fees are paid via online challan for the requested validity period (1 to 5 years).
               </p>
             </div>
@@ -754,7 +754,7 @@ function FSSAIGuideContent() {
             <span className="w-7 h-7 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">4</span>
             <div>
               <h3 className="text-sm font-medium text-slate-900">Designated Officer (DO) Scrutiny &amp; Inspection</h3>
-              <p className="text-xs text-slate-600 mt-1 font-light leading-relaxed">
+              <p className="text-xs text-slate-600 mt-1 font-normal leading-relaxed">
                 The food authority reviews the application. For State and Central licenses, a Food Safety Officer (FSO) may schedule an inspection of the premises. We assist in resolving any queries within the mandated 30-day window.
               </p>
             </div>
@@ -764,7 +764,7 @@ function FSSAIGuideContent() {
             <span className="w-7 h-7 rounded-full bg-[#00B074] text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">5</span>
             <div>
               <h3 className="text-sm font-medium text-slate-900">FSSAI License Issuance &amp; QR Certificate Download</h3>
-              <p className="text-xs text-slate-600 mt-1 font-light leading-relaxed">
+              <p className="text-xs text-slate-600 mt-1 font-normal leading-relaxed">
                 Upon final approval, the 14-digit FSSAI Registration Certificate with an embedded verification QR code is issued and delivered straight to your dashboard.
               </p>
             </div>
@@ -777,7 +777,7 @@ function FSSAIGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           6. What is the FSSAI Registration Inspection and Approval Process?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Once your application is submitted on FoSCoS, the Designated Officer (DO) conducts a thorough scrutiny. Understanding the inspection criteria and approval stages helps avoid unnecessary delays:
         </p>
 
@@ -786,7 +786,7 @@ function FSSAIGuideContent() {
             <h3 className="text-sm font-medium text-slate-900 flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-600" /> Key Inspection Parameters
             </h3>
-            <ul className="text-xs text-slate-600 space-y-1.5 font-light">
+            <ul className="text-xs text-slate-600 space-y-1.5 font-normal">
               <li>• Kitchen / manufacturing floor cleanliness and drainage facilities</li>
               <li>• Availability of potable running water with NABL test reports</li>
               <li>• Pest control measures and sealed waste disposal systems</li>
@@ -799,7 +799,7 @@ function FSSAIGuideContent() {
             <h3 className="text-sm font-medium text-slate-900 flex items-center gap-2">
               <Clock className="w-4 h-4 text-blue-600" /> Inspection &amp; Approval Milestones
             </h3>
-            <ul className="text-xs text-slate-600 space-y-1.5 font-light">
+            <ul className="text-xs text-slate-600 space-y-1.5 font-normal">
               <li>• Basic Registration: No inspection; automated approval in 7-10 days</li>
               <li>• State License: Discretionary inspection within 30 days of submission</li>
               <li>• Central License: Mandatory physical inspection before approval</li>
@@ -823,7 +823,7 @@ function FSSAIGuideContent() {
                   <th className="py-3 px-4 text-purple-700">Central License</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100 font-light text-slate-600">
+              <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
                 {TABLE_3_INSPECTION.map((row, idx) => (
                   <tr key={idx} className="transition-colors">
                     <td className="py-3 px-4 font-medium text-slate-800">{row.stage}</td>
@@ -843,7 +843,7 @@ function FSSAIGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           7. What are the Fees for FSSAI Registration?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Government statutory fees are determined according to the registration tier and the validity period chosen by the applicant (1 to 5 years):
         </p>
 
@@ -858,7 +858,7 @@ function FSSAIGuideContent() {
                 <th className="py-3 px-4">Remarks</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 font-light text-slate-600">
+            <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
               {TABLE_4_FEES.map((row, idx) => (
                 <tr key={idx} className="transition-colors">
                   <td className="py-3 px-4 font-medium text-slate-800">{row.type}</td>
@@ -877,7 +877,7 @@ function FSSAIGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           8. What is the Validity of FSSAI License?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           FSSAI registration or license is granted for a minimum duration of 1 year and a maximum duration of 5 years, depending on the number of years paid for during initial application.
         </p>
 
@@ -893,7 +893,7 @@ function FSSAIGuideContent() {
                 <th className="py-3 px-4">Mandatory Renewal Deadline</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 font-light text-slate-600">
+            <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
               {TABLE_5_VALIDITY.map((row, idx) => (
                 <tr key={idx} className="transition-colors">
                   <td className="py-3 px-4 font-medium text-slate-800">{row.type}</td>
@@ -913,7 +913,7 @@ function FSSAIGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           9. What is the FSSAI License Renewal Process?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           FSSAI licenses must be renewed well before their expiration date to maintain seamless business operations and avoid heavy government penalties:
         </p>
         <div className="bg-amber-50/60 p-4.5 rounded-2xl border border-amber-200/80 space-y-2">
@@ -921,7 +921,7 @@ function FSSAIGuideContent() {
             <AlertTriangle className="w-4 h-4 text-amber-600" />
             <span>Crucial Rule: Apply at least 30 Days Before Expiry</span>
           </div>
-          <p className="text-xs text-amber-800 leading-relaxed font-light">
+          <p className="text-xs text-amber-800 leading-relaxed font-normal">
             The FoSCoS portal allows renewal applications starting 120 days prior to expiry. If a renewal application is not filed at least 30 days before the expiration date, a mandatory late fee penalty of <strong>₹100 per day</strong> is levied. If the license expires completely, the FBO cannot renew and must apply for a brand new license, halting operations.
           </p>
         </div>
@@ -929,19 +929,19 @@ function FSSAIGuideContent() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
           <div className="p-4 rounded-xl bg-white border border-slate-200">
             <span className="text-xs font-semibold text-[#155EEF] block mb-1">Step 1: Check Expiry Date</span>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Verify your certificate expiration date on the FoSCoS portal or via your Merrafilings dashboard.
             </p>
           </div>
           <div className="p-4 rounded-xl bg-white border border-slate-200">
             <span className="text-xs font-semibold text-[#155EEF] block mb-1">Step 2: File Form A/B Renewal</span>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Submit the online renewal petition with updated annual turnover figures and latest premise proofs.
             </p>
           </div>
           <div className="p-4 rounded-xl bg-white border border-slate-200">
             <span className="text-xs font-semibold text-[#00B074] block mb-1">Step 3: Download Renewed License</span>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Upon officer sign-off, download your renewed certificate preserving your original 14-digit number.
             </p>
           </div>
@@ -953,7 +953,7 @@ function FSSAIGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           10. What are the Penalties for Non-Compliance with FSSAI?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Operating a food business in India without a valid FSSAI license or violating food safety norms carries severe criminal penalties and financial liabilities under the FSS Act, 2006:
         </p>
 
@@ -966,7 +966,7 @@ function FSSAIGuideContent() {
                 <th className="py-3 px-4 text-rose-700">Prescribed Legal Penalty</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 font-light text-slate-600">
+            <tbody className="divide-y divide-slate-100 font-normal text-slate-900">
               {TABLE_6_PENALTIES.map((row, idx) => (
                 <tr key={idx} className="transition-colors">
                   <td className="py-3 px-4 font-medium text-slate-800">{row.offence}</td>
@@ -983,7 +983,7 @@ function FSSAIGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           11. How to Check FSSAI Registration Status Online?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           You can track your application status anytime using your 17-digit FoSCoS application reference number:
         </p>
 
@@ -992,7 +992,7 @@ function FSSAIGuideContent() {
             <h3 className="text-sm font-medium text-slate-900 mb-2 flex items-center gap-2">
               <Search className="w-4 h-4 text-[#155EEF]" /> Step-by-Step Status Tracking
             </h3>
-            <ol className="list-decimal pl-4 space-y-1.5 text-xs text-slate-600 font-light">
+            <ol className="list-decimal pl-4 space-y-1.5 text-xs text-slate-600 font-normal">
               <li>Visit the official portal at <strong>foscos.fssai.gov.in</strong></li>
               <li>Click on &apos;Track Application Status&apos; on the top navigation bar.</li>
               <li>Enter your 17-digit FoSCoS Application Reference Number.</li>
@@ -1005,7 +1005,7 @@ function FSSAIGuideContent() {
             <h3 className="text-sm font-medium text-slate-900 mb-2 flex items-center gap-2">
               <Download className="w-4 h-4 text-emerald-600" /> How to Download FSSAI Certificate
             </h3>
-            <ol className="list-decimal pl-4 space-y-1.5 text-xs text-slate-600 font-light">
+            <ol className="list-decimal pl-4 space-y-1.5 text-xs text-slate-600 font-normal">
               <li>Log in to the FoSCoS portal with your user credentials.</li>
               <li>Navigate to &apos;Issued &gt; Issued License / Registration&apos;.</li>
               <li>Click on your 14-digit License Number link to open authorization details.</li>
@@ -1025,28 +1025,28 @@ function FSSAIGuideContent() {
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-rose-500 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <AlertTriangle className="w-4 h-4 text-rose-600 mb-1.5 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-medium text-slate-900 mb-1">Incorrect Turnover Estimation</h4>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Applying for Basic Registration when actual turnover exceeds ₹12 Lakhs leads to rejection and forfeiture of fees.
             </p>
           </div>
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-rose-500 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <AlertTriangle className="w-4 h-4 text-rose-600 mb-1.5 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-medium text-slate-900 mb-1">Mismatched Food Product Categories</h4>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Failing to map every food product category you sell results in an incomplete license requiring costly amendments.
             </p>
           </div>
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-rose-500 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <AlertTriangle className="w-4 h-4 text-rose-600 mb-1.5 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-medium text-slate-900 mb-1">Submitting Blurry or Incomplete Documents</h4>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Uploading illegible rent deeds, unsigned partnership agreements, or expired electricity bills triggers official scrutiny objections.
             </p>
           </div>
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-rose-500 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <AlertTriangle className="w-4 h-4 text-rose-600 mb-1.5 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-medium text-slate-900 mb-1">Ignoring FSO Inspection Clarifications</h4>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Failing to reply to Food Safety Officer queries on FoSCoS within 30 days causes automatic application rejection.
             </p>
           </div>
@@ -1062,7 +1062,7 @@ function FSSAIGuideContent() {
           <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-emerald-500 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <ShieldCheck className="w-5 h-5 text-emerald-600 mb-2 group-hover:scale-110 transition-transform" />
             <h3 className="text-sm font-medium text-slate-900 mb-1">Consumer Trust &amp; Brand Value</h3>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Displaying the official FSSAI logo and 14-digit number on your food packaging and storefront builds unmatched customer confidence.
             </p>
           </div>
@@ -1070,7 +1070,7 @@ function FSSAIGuideContent() {
           <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-blue-500 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <Store className="w-5 h-5 text-[#155EEF] mb-2 group-hover:scale-110 transition-transform" />
             <h3 className="text-sm font-medium text-slate-900 mb-1">Online Aggregator Onboarding</h3>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Mandatory for onboarding restaurants and food products on Swiggy, Zomato, Amazon, Blinkit, Zepto, and BigBasket.
             </p>
           </div>
@@ -1078,7 +1078,7 @@ function FSSAIGuideContent() {
           <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-purple-500 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <Scale className="w-5 h-5 text-purple-600 mb-2 group-hover:scale-110 transition-transform" />
             <h3 className="text-sm font-medium text-slate-900 mb-1">Complete Legal Immunity</h3>
-            <p className="text-xs text-slate-600 font-light leading-relaxed">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed">
               Protects business owners from hefty fines up to ₹5 Lakhs and criminal imprisonment under Section 31 of the FSS Act, 2006.
             </p>
           </div>
@@ -1090,7 +1090,7 @@ function FSSAIGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           14. Why Choose Merrafilings for FSSAI Registration Services?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Merrafilings is India&apos;s premier regulatory compliance platform. We remove all bureaucracy and streamline your food licensing end-to-end:
         </p>
 

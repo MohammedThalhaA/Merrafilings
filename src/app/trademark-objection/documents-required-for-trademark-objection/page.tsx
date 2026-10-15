@@ -33,7 +33,7 @@ export default function DocumentsRequiredForTrademarkObjectionPage() {
         <p className="text-[15px] leading-relaxed text-slate-700">
           Submitting a persuasive written rebuttal to a Trademark Examination Report requires compiling an airtight <strong className="font-semibold text-slate-900">evidence dossier</strong>. Under Indian intellectual property jurisprudence, unsubstantiated statements are summarily rejected by Hearing Officers; every factual assertion regarding prior commercial use, distinctiveness, or brand uniqueness must be corroborated by documentary proof.
         </p>
-        <p className="text-[14.5px] leading-relaxed text-slate-600 font-light">
+        <p className="text-[14.5px] leading-relaxed text-slate-600 font-normal">
           This comprehensive guide outlines the complete list of mandatory and supporting documents needed to defend your application against <strong className="font-medium text-slate-900">Section 9 and Section 11</strong> objections, along with technical e-filing specifications mandated by the IP India digital portal.
         </p>
       </div>
@@ -43,7 +43,7 @@ export default function DocumentsRequiredForTrademarkObjectionPage() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           The 11 Pillars of Trademark Objection Documentation
         </h2>
-        <p className="text-sm text-slate-600 font-light">
+        <p className="text-sm text-slate-600 font-normal">
           Review the complete evidentiary catalogue required to assemble your formal reply:
         </p>
 
@@ -54,7 +54,7 @@ export default function DocumentsRequiredForTrademarkObjectionPage() {
               <FileCheck className="w-4 h-4" />
               <span>1. Examination Report</span>
             </div>
-            <p className="text-xs text-slate-500 font-light leading-relaxed">
+            <p className="text-xs text-slate-500 font-normal leading-relaxed">
               Official PDF copy of the Examination Report downloaded from the Trade Marks Registry gateway displaying the notice dispatch date.
             </p>
           </div>
@@ -65,7 +65,7 @@ export default function DocumentsRequiredForTrademarkObjectionPage() {
               <Scale className="w-4 h-4" />
               <span>2. Sworn User Affidavit (Rule 25)</span>
             </div>
-            <p className="text-xs text-slate-500 font-light leading-relaxed">
+            <p className="text-xs text-slate-500 font-normal leading-relaxed">
               Legal affidavit affirmed on non-judicial stamp paper, duly notarized, swearing to the exact date of first commercial adoption and continuous use.
             </p>
           </div>
@@ -76,7 +76,7 @@ export default function DocumentsRequiredForTrademarkObjectionPage() {
               <Receipt className="w-4 h-4" />
               <span>3. Continuous Tax Invoices</span>
             </div>
-            <p className="text-xs text-slate-500 font-light leading-relaxed">
+            <p className="text-xs text-slate-500 font-normal leading-relaxed">
               Chronologically ordered sales invoices, GST invoices, or excise receipts proving commercial distribution of goods/services under the brand.
             </p>
           </div>
@@ -87,7 +87,7 @@ export default function DocumentsRequiredForTrademarkObjectionPage() {
               <FileSpreadsheet className="w-4 h-4" />
               <span>4. CA Turnover Certificate</span>
             </div>
-            <p className="text-xs text-slate-500 font-light leading-relaxed">
+            <p className="text-xs text-slate-500 font-normal leading-relaxed">
               Certificate from a practicing Chartered Accountant certifying year-wise gross sales turnover specifically attributable to the trademark.
             </p>
           </div>
@@ -98,7 +98,7 @@ export default function DocumentsRequiredForTrademarkObjectionPage() {
               <Globe2 className="w-4 h-4" />
               <span>5. Website &amp; Domain Records</span>
             </div>
-            <p className="text-xs text-slate-500 font-light leading-relaxed">
+            <p className="text-xs text-slate-500 font-normal leading-relaxed">
               WHOIS domain creation certificate, historical Wayback Machine snapshots, social media engagement metrics, and active web storefront links.
             </p>
           </div>
@@ -109,7 +109,7 @@ export default function DocumentsRequiredForTrademarkObjectionPage() {
               <Award className="w-4 h-4" />
               <span>6. Marketing Expenditure Invoices</span>
             </div>
-            <p className="text-xs text-slate-500 font-light leading-relaxed">
+            <p className="text-xs text-slate-500 font-normal leading-relaxed">
               Invoices for digital ads (Google Ads, Meta Ads), newspaper advertisements, event banners, and celebrity endorsements demonstrating brand visibility.
             </p>
           </div>
@@ -120,7 +120,7 @@ export default function DocumentsRequiredForTrademarkObjectionPage() {
               <ShieldCheck className="w-4 h-4" />
               <span>7. Packaging &amp; Label Specimens</span>
             </div>
-            <p className="text-xs text-slate-500 font-light leading-relaxed">
+            <p className="text-xs text-slate-500 font-normal leading-relaxed">
               High-resolution photographs of actual physical product packaging, containers, garment tags, or store signage exhibiting the mark.
             </p>
           </div>
@@ -131,7 +131,7 @@ export default function DocumentsRequiredForTrademarkObjectionPage() {
               <UploadCloud className="w-4 h-4" />
               <span>8. Signed Form TM-48 (Power of Attorney)</span>
             </div>
-            <p className="text-xs text-slate-500 font-light leading-relaxed">
+            <p className="text-xs text-slate-500 font-normal leading-relaxed">
               Formal statutory legal authorization empowering Merrafilings trademark attorneys to file pleadings and appear before the Hearing Officer.
             </p>
           </div>
@@ -142,7 +142,7 @@ export default function DocumentsRequiredForTrademarkObjectionPage() {
               <CheckCircle2 className="w-4 h-4" />
               <span>9. Proof of Business Incorporation</span>
             </div>
-            <p className="text-xs text-slate-500 font-light leading-relaxed">
+            <p className="text-xs text-slate-500 font-normal leading-relaxed">
               Certificate of Incorporation, LLP Agreement, Partnership Deed, or Udyam MSME Registration Certificate validating the applicant&apos;s legal persona.
             </p>
           </div>
@@ -155,7 +155,7 @@ export default function DocumentsRequiredForTrademarkObjectionPage() {
           Technical Specifications for E-Filing on IP India
         </h2>
         <div className="overflow-x-auto rounded-2xl border border-slate-200/80 shadow-xs">
-          <table className="w-full text-left border-collapse text-xs sm:text-sm font-light">
+          <table className="w-full text-left border-collapse text-xs sm:text-sm font-normal">
             <thead>
               <tr className="bg-slate-50/80 border-b border-slate-200/80 text-slate-800 font-medium">
                 <th className="p-3.5 sm:p-4">Submission Requirement</th>
@@ -194,7 +194,7 @@ export default function DocumentsRequiredForTrademarkObjectionPage() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           Pre-Submission Verification Checklist
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-xs sm:text-sm text-slate-700 font-light">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-xs sm:text-sm text-slate-700 font-normal">
           <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-2.5">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
             <span>Application number, trade class, and applicant entity name are consistent across all exhibits.</span>

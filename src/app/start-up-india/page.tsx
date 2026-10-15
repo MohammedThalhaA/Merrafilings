@@ -245,7 +245,7 @@ function StartupGuideContent() {
     <>
       {/* Intro */}
       <div>
-        <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+        <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed">
           India has built one of the world&apos;s most vibrant and rapidly expanding startup ecosystems, and the <strong className="font-medium text-slate-800">Startup India Registration</strong> scheme is at the very core of this entrepreneurial transformation. Backed directly by the Government of India, this flagship program provides early-stage companies and innovative ventures with formal DPIIT recognition, substantial tax exemptions, subsidised intellectual property protection, streamlined compliance self-certification, and direct access to state-backed capital funds.
         </p>
       </div>
@@ -255,13 +255,13 @@ function StartupGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     What is a Startup?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     A startup is a newly incorporated business entity built around a unique idea, product, or service with high potential for rapid growth, market innovation, and commercial scalability. Unlike conventional businesses that operate on established commercial blueprints, startups focus on disrupting existing value chains or creating entirely new markets through innovation and modern technology.
                   </p>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     As per the statutory guidelines issued by the Government of India, a startup is formally defined as an entity incorporated or registered in India that:
                   </p>
-                  <ul className="space-y-2 text-[13px] font-light text-slate-600 mb-5">
+                  <ul className="space-y-2 text-[13px] font-normal text-slate-900 mb-5">
                     <li className="flex items-start gap-2">
                       <span className="text-[#00A86B] font-bold">✓</span>
                       <span>Is less than 10 years old from the date of its incorporation or registration.</span>
@@ -286,26 +286,26 @@ function StartupGuideContent() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
                     <div className="p-3.5 rounded-xl bg-[#FAF9F7] border border-slate-200/70">
                       <h4 className="font-medium text-[13.5px] text-slate-900 mb-1">Technology Startups</h4>
-                      <p className="text-[12.5px] font-light text-slate-600">Ventures focused on software development, Artificial Intelligence, SaaS platforms, and digital transformation.</p>
+                      <p className="text-[12.5px] font-normal text-slate-900">Ventures focused on software development, Artificial Intelligence, SaaS platforms, and digital transformation.</p>
                     </div>
                     <div className="p-3.5 rounded-xl bg-[#FAF9F7] border border-slate-200/70">
                       <h4 className="font-medium text-[13.5px] text-slate-900 mb-1">Social Startups</h4>
-                      <p className="text-[12.5px] font-light text-slate-600">Enterprises prioritizing measurable social impact, sustainable communities, healthcare access, and environmental solutions.</p>
+                      <p className="text-[12.5px] font-normal text-slate-900">Enterprises prioritizing measurable social impact, sustainable communities, healthcare access, and environmental solutions.</p>
                     </div>
                     <div className="p-3.5 rounded-xl bg-[#FAF9F7] border border-slate-200/70">
                       <h4 className="font-medium text-[13.5px] text-slate-900 mb-1">Scalable Startups</h4>
-                      <p className="text-[12.5px] font-light text-slate-600">High-growth businesses built to capture massive national or global markets backed by venture capital.</p>
+                      <p className="text-[12.5px] font-normal text-slate-900">High-growth businesses built to capture massive national or global markets backed by venture capital.</p>
                     </div>
                     <div className="p-3.5 rounded-xl bg-[#FAF9F7] border border-slate-200/70">
                       <h4 className="font-medium text-[13.5px] text-slate-900 mb-1">Small Business &amp; Lifestyle Startups</h4>
-                      <p className="text-[12.5px] font-light text-slate-600">Specialized ventures created around a founder&apos;s passion, niche domain expertise, or artisanal products.</p>
+                      <p className="text-[12.5px] font-normal text-slate-900">Specialized ventures created around a founder&apos;s passion, niche domain expertise, or artisanal products.</p>
                     </div>
                   </div>
 
                   <h3 className="text-[15px] sm:text-[16px] font-medium text-[#1F1646] mt-4 mb-2">
                     Key Characteristics of a Startup
                   </h3>
-                  <ul className="space-y-2 text-[13px] font-light text-slate-600">
+                  <ul className="space-y-2 text-[13px] font-normal text-slate-900">
                     <li className="flex items-start gap-2">
                       <span className="text-[#00A86B] font-bold">•</span>
                       <span><strong>Innovation-led and technology-driven operations:</strong> Leveraging original intellectual property, software, or novel engineering methods.</span>
@@ -334,17 +334,17 @@ function StartupGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     What is the Startup India Scheme?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     The Startup India Scheme is a flagship national initiative unveiled on January 16, 2016, by the Government of India. The objective was to build an all-inclusive ecosystem that fosters entrepreneurship, stimulates grassroots innovation, and transforms India from a country of job-seekers into a powerhouse of job-creators.
                   </p>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     Administered under the Department for Promotion of Industry and Internal Trade (DPIIT), Ministry of Commerce and Industry, the scheme operates through the centralized Startup India portal (<span className="text-[#155EEF]">startupindia.gov.in</span>), serving as a single-window digital gateway for online registration, verification, and incentive allocation.
                   </p>
 
                   <h3 className="text-[15px] sm:text-[16px] font-medium text-[#1F1646] mt-4 mb-2">
                     Launch and Objective
                   </h3>
-                  <ul className="space-y-2 text-[13px] font-light text-slate-600 mb-5">
+                  <ul className="space-y-2 text-[13px] font-normal text-slate-900 mb-5">
                     <li className="flex items-start gap-2">
                       <span className="text-[#00A86B] font-bold">✓</span>
                       <span>Launched on January 16, 2016, based on a comprehensive 19-point action plan.</span>
@@ -376,21 +376,21 @@ function StartupGuideContent() {
                         1
                       </div>
                       <h4 className="font-medium text-[13.5px] text-slate-900 mb-1">Simplification &amp; Handholding</h4>
-                      <p className="text-[12px] font-light text-slate-600">Online single-window portal, mobile app support, fast-track patent review, and 90-day exit resolution.</p>
+                      <p className="text-[12px] font-normal text-slate-900">Online single-window portal, mobile app support, fast-track patent review, and 90-day exit resolution.</p>
                     </div>
                     <div className="p-4 rounded-xl bg-[#FAF9F7] border border-slate-200/70">
                       <div className="w-8 h-8 rounded-lg bg-emerald-100 text-[#00A86B] flex items-center justify-center font-bold text-sm mb-2">
                         2
                       </div>
                       <h4 className="font-medium text-[13.5px] text-slate-900 mb-1">Funding Support &amp; Tax Incentives</h4>
-                      <p className="text-[12px] font-light text-slate-600">₹10,000 crore Fund of Funds, credit guarantees, 3-year Section 80-IAC tax holiday, and angel tax exemptions.</p>
+                      <p className="text-[12px] font-normal text-slate-900">₹10,000 crore Fund of Funds, credit guarantees, 3-year Section 80-IAC tax holiday, and angel tax exemptions.</p>
                     </div>
                     <div className="p-4 rounded-xl bg-[#FAF9F7] border border-slate-200/70">
                       <div className="w-8 h-8 rounded-lg bg-emerald-100 text-[#00A86B] flex items-center justify-center font-bold text-sm mb-2">
                         3
                       </div>
                       <h4 className="font-medium text-[13.5px] text-slate-900 mb-1">Industry-Academia Incubation</h4>
-                      <p className="text-[12px] font-light text-slate-600">Atal Incubation Centers, research parks, annual startup fests, and global market outreach programs.</p>
+                      <p className="text-[12px] font-normal text-slate-900">Atal Incubation Centers, research parks, annual startup fests, and global market outreach programs.</p>
                     </div>
                   </div>
                 </div>
@@ -400,17 +400,17 @@ function StartupGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     What is DPIIT Registration for Startups in India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     DPIIT Registration is the formal recognition protocol conducted by the Department for Promotion of Industry and Internal Trade. Obtaining this certification is the primary gateway through which eligible startups obtain official recognition from the Central Government, separating themselves from standard commercial business entities.
                   </p>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     Once an enterprise is granted DPIIT recognition, it receives an authentic Certificate of Recognition endowed with a distinct DPIIT serial number. This certificate validates the business as innovative and scalable, granting immediate access to statutory tax holidays, discounted IP protection, relaxed public tender rules, and government-backed credit facilities.
                   </p>
 
                   <h3 className="text-[15px] sm:text-[16px] font-medium text-[#1F1646] mt-4 mb-2">
                     How DPIIT Registration Differs from Regular Business Registration
                   </h3>
-                  <ul className="space-y-2 text-[13px] font-light text-slate-600 mb-4">
+                  <ul className="space-y-2 text-[13px] font-normal text-slate-900 mb-4">
                     <li className="flex items-start gap-2">
                       <span className="text-[#00A86B] font-bold">•</span>
                       <span><strong>Separate Statutory Layer:</strong> Incorporating with the Ministry of Corporate Affairs (MCA) or Registrar of Firms (RoF) grants legal existence; DPIIT recognition bestows qualified startup status.</span>
@@ -428,7 +428,7 @@ function StartupGuideContent() {
                   <h3 className="text-[15px] sm:text-[16px] font-medium text-[#1F1646] mt-4 mb-2">
                     Certificate Details
                   </h3>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed">
                     The DPIIT Certificate of Recognition is issued electronically through the national Startup India portal upon application review. It features the company&apos;s corporate name, CIN / LLPIN / Registration Number, DPIIT Recognition Number, and date of issue. This official certificate never expires as long as the startup remains within the 10-year age limit and ₹100 crore annual turnover ceiling.
                   </p>
                 </div>
@@ -438,7 +438,7 @@ function StartupGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     Who is Eligible for Startup India Registration in India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     Eligibility for Startup India Registration is strictly regulated by guidelines established by DPIIT. Only businesses that meet all statutory eligibility criteria are approved for recognition.
                   </p>
 
@@ -448,7 +448,7 @@ function StartupGuideContent() {
                         <Clock className="w-4 h-4 text-[#00A86B]" />
                         Age of Entity
                       </h4>
-                      <p className="text-[12.5px] font-light text-slate-600">
+                      <p className="text-[12.5px] font-normal text-slate-900">
                         The business must have been incorporated or registered for less than 10 years from the date of incorporation. Companies older than 10 years are disqualified.
                       </p>
                     </div>
@@ -458,7 +458,7 @@ function StartupGuideContent() {
                         <BadgePercent className="w-4 h-4 text-[#00A86B]" />
                         Turnover Limit
                       </h4>
-                      <p className="text-[12.5px] font-light text-slate-600">
+                      <p className="text-[12.5px] font-normal text-slate-900">
                         The entity&apos;s annual turnover must not have exceeded ₹100 crore in any single financial year since incorporation.
                       </p>
                     </div>
@@ -468,13 +468,13 @@ function StartupGuideContent() {
                         <Sparkles className="w-4 h-4 text-[#00A86B]" />
                         Innovation Criteria
                       </h4>
-                      <p className="text-[12.5px] font-light text-slate-600">
+                      <p className="text-[12.5px] font-normal text-slate-900">
                         Must actively work towards development or commercial improvement of products, processes, or services, or demonstrate a scalable model with high job/wealth creation potential.
                       </p>
                     </div>
                   </div>
 
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed">
                     <strong>Original Entity Requirement:</strong> The venture must not be formed by splitting up, reconstructing, or reincorporating an existing enterprise already in operation.
                   </p>
                 </div>
@@ -484,7 +484,7 @@ function StartupGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     Which Sectors Are Eligible for Startup India Registration in India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     The Startup India scheme is sector-agnostic and embraces innovative ventures across virtually all major industries. Startups across diverse domains have been granted DPIIT recognition.
                   </p>
 
@@ -506,7 +506,7 @@ function StartupGuideContent() {
                     ].map((sec, idx) => (
                       <div key={idx} className="p-3 rounded-lg bg-[#FAF9F7] border border-slate-200/70">
                         <div className="font-medium text-[13px] text-slate-800">{sec.title}</div>
-                        <div className="text-[12px] font-light text-slate-500 mt-0.5">{sec.desc}</div>
+                        <div className="text-[12px] font-normal text-slate-900 mt-0.5">{sec.desc}</div>
                       </div>
                     ))}
                   </div>
@@ -514,7 +514,7 @@ function StartupGuideContent() {
                   <h3 className="text-[15px] sm:text-[16px] font-medium text-[#1F1646] mb-2">
                     Excluded Entities
                   </h3>
-                  <ul className="space-y-1.5 text-[13px] font-light text-slate-600">
+                  <ul className="space-y-1.5 text-[13px] font-normal text-slate-900">
                     <li className="flex items-start gap-2">
                       <span className="text-red-500 font-bold">✕</span>
                       <span>Businesses formed by splitting, reconstructing, or rebranding an existing firm.</span>
@@ -539,11 +539,11 @@ function StartupGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     Which Business Entities Can Apply for Startup India in India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     The Government of India recognizes only three specific legal entity types under the Startup India framework. Choosing the right entity structure before initiating DPIIT registration is critical:
                   </p>
                   <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-5">
-                    <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                    <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                       <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                         <tr>
                           <th className="py-3 px-4 font-normal">Entity Type</th>
@@ -588,7 +588,7 @@ function StartupGuideContent() {
                             Sole Proprietorship
                           </td>
                           <td className="py-3 px-4 text-slate-600">Not Applicable</td>
-                          <td className="py-3 px-4 text-red-500 font-light">❌ No</td>
+                          <td className="py-3 px-4 text-red-500 font-normal">❌ No</td>
                         </tr>
                         <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
                           <td className="relative py-3 px-4 font-normal text-slate-800">
@@ -596,7 +596,7 @@ function StartupGuideContent() {
                             Public Limited Company
                           </td>
                           <td className="py-3 px-4 text-slate-600">Companies Act, 2013</td>
-                          <td className="py-3 px-4 text-red-500 font-light">❌ No</td>
+                          <td className="py-3 px-4 text-red-500 font-normal">❌ No</td>
                         </tr>
                       </tbody>
                     </table>
@@ -608,7 +608,7 @@ function StartupGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     What Documents Are Needed for Startup India Registration in India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     Preparing a complete dossier of authentic documents prior to filing ensures faster clearance and prevents avoidable requisition queries from DPIIT scrutiny officers.
                   </p>
 
@@ -616,7 +616,7 @@ function StartupGuideContent() {
                     Standard Documents Checklist
                   </h3>
                   <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-5">
-                    <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                    <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                       <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                         <tr>
                           <th className="py-3 px-4 font-normal">Document Category</th>
@@ -673,7 +673,7 @@ function StartupGuideContent() {
                   <h3 className="text-[15px] sm:text-[16px] font-medium text-[#1F1646] mb-2">
                     Entity-wise Document Requirements
                   </h3>
-                  <ul className="space-y-2 text-[13px] font-light text-slate-600">
+                  <ul className="space-y-2 text-[13px] font-normal text-slate-900">
                     <li className="flex items-start gap-2">
                       <span className="text-[#00A86B] font-bold">•</span>
                       <span><strong>Private Limited Company:</strong> MCA Certificate of Incorporation, Memorandum of Association (MOA), Articles of Association (AOA), and Company PAN Card.</span>
@@ -694,7 +694,7 @@ function StartupGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     How to Register a Startup Under the Startup India Scheme in India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     The Startup India registration process is completely online with zero physical visits to any government department. When backed by well-prepared documentation and structured innovation answers, the registration is processed smoothly.
                   </p>
 
@@ -718,7 +718,7 @@ function StartupGuideContent() {
                         </div>
                         <div>
                           <div className="font-medium text-[13.5px] text-slate-900">{item.title}</div>
-                          <div className="text-[12.5px] font-light text-slate-600 mt-0.5">{item.text}</div>
+                          <div className="text-[12.5px] font-normal text-slate-900 mt-0.5">{item.text}</div>
                         </div>
                       </div>
                     ))}
@@ -730,14 +730,14 @@ function StartupGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     What Are the Advantages of the Startup India Scheme in India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     The Startup India initiative delivers an extensive matrix of advantages spanning beyond fiscal incentives. It establishes an enabling infrastructure that facilitates ease of doing business, risk reduction, and cross-border expansion.
                   </p>
 
                   <h3 className="text-[15px] sm:text-[16px] font-medium text-[#1F1646] mb-2">
                     Top Strategic Advantages
                   </h3>
-                  <ul className="space-y-2 text-[13px] font-light text-slate-600 mb-4">
+                  <ul className="space-y-2 text-[13px] font-normal text-slate-900 mb-4">
                     <li className="flex items-start gap-2">
                       <span className="text-[#00A86B] font-bold">✓</span>
                       <span><strong>Official Government Stamp:</strong> DPIIT recognition validates your venture in the eyes of institutional investors, commercial lenders, and corporate partners.</span>
@@ -763,7 +763,7 @@ function StartupGuideContent() {
                   <h3 className="text-[15px] sm:text-[16px] font-medium text-[#1F1646] mb-2">
                     Government Support Mechanisms &amp; Ecosystem Benefits
                   </h3>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed">
                     DPIIT conducts ongoing inter-ministerial coordination to expedite regulatory clearances, enact targeted policy interventions, and organize specialized development schemes for women-led ventures and startups originating in Tier-2 and Tier-3 cities.
                   </p>
                 </div>
@@ -773,25 +773,25 @@ function StartupGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     What Are the Benefits of Registering Under Startup India in India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     Registering under the Startup India scheme unlocks a structured suite of benefits specifically designed to ease early-stage capital drain and operational compliance bottlenecks:
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
                     <div className="p-3.5 rounded-xl border border-slate-200/80 bg-white">
                       <div className="font-medium text-[13.5px] text-slate-900 mb-1 text-[#00A86B]">Tax Holiday (Section 80-IAC)</div>
-                      <p className="text-[12.5px] font-light text-slate-600">100% income tax exemption on corporate profits for 3 consecutive financial years within the first 10 years of incorporation.</p>
+                      <p className="text-[12.5px] font-normal text-slate-900">100% income tax exemption on corporate profits for 3 consecutive financial years within the first 10 years of incorporation.</p>
                     </div>
                     <div className="p-3.5 rounded-xl border border-slate-200/80 bg-white">
                       <div className="font-medium text-[13.5px] text-slate-900 mb-1 text-[#00A86B]">Angel Tax Exemption (Section 56)</div>
-                      <p className="text-[12.5px] font-light text-slate-600">Exemption from tax on share premiums exceeding Fair Market Value when issuing equity shares to accredited investors.</p>
+                      <p className="text-[12.5px] font-normal text-slate-900">Exemption from tax on share premiums exceeding Fair Market Value when issuing equity shares to accredited investors.</p>
                     </div>
                     <div className="p-3.5 rounded-xl border border-slate-200/80 bg-white">
                       <div className="font-medium text-[13.5px] text-slate-900 mb-1 text-[#00A86B]">80% Patent &amp; 50% Trademark Rebates</div>
-                      <p className="text-[12.5px] font-light text-slate-600">Massive statutory rebates on patent filing and trademark applications, coupled with fast-tracked IP examinations.</p>
+                      <p className="text-[12.5px] font-normal text-slate-900">Massive statutory rebates on patent filing and trademark applications, coupled with fast-tracked IP examinations.</p>
                     </div>
                     <div className="p-3.5 rounded-xl border border-slate-200/80 bg-white">
                       <div className="font-medium text-[13.5px] text-slate-900 mb-1 text-[#00A86B]">Compliance Self-Certification</div>
-                      <p className="text-[12.5px] font-light text-slate-600">Self-certify compliance under 9 central labor laws and 3 environmental regulations without surprise inspections for up to 5 years.</p>
+                      <p className="text-[12.5px] font-normal text-slate-900">Self-certify compliance under 9 central labor laws and 3 environmental regulations without surprise inspections for up to 5 years.</p>
                     </div>
                   </div>
                 </div>
@@ -801,11 +801,11 @@ function StartupGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     How Much Does Startup India Registration Cost in India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     The DPIIT recognition process itself carries zero government fees on the official Startup India portal. The overall expense is determined by the underlying legal entity registration fees and professional advisory costs:
                   </p>
                   <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-5">
-                    <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                    <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                       <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                         <tr>
                           <th className="py-3 px-4 font-normal">Cost Component</th>
@@ -872,28 +872,28 @@ function StartupGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     What Tax Benefits Do Startups Get Under Startup India in India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     Statutory tax benefits are among the strongest incentives for entrepreneurs to pursue DPIIT startup recognition. The Government has carved out specific exemptions within the Income Tax Act, 1961:
                   </p>
 
                   <h3 className="text-[15px] sm:text-[16px] font-medium text-[#1F1646] mb-2">
                     Section 80-IAC — 3-Year Income Tax Holiday
                   </h3>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     Recognised Private Limited Companies and LLPs incorporated on or after April 1, 2016, can apply to the Inter-Ministerial Board (IMB) for a 100% tax deduction on profits for any 3 consecutive assessment years out of their first 10 years of existence. This enables early-stage startups to reinvest 100% of generated profits back into business scaling and talent acquisition.
                   </p>
 
                   <h3 className="text-[15px] sm:text-[16px] font-medium text-[#1F1646] mb-2">
                     Section 56(2)(viib) — Angel Tax Exemption
                   </h3>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     When an unlisted startup issues shares to resident investors at a premium higher than Fair Market Value, the excess was historically taxed as income from other sources (the &ldquo;Angel Tax&rdquo;). DPIIT-recognised startups can claim full exemption from Section 56(2)(viib) by filing a simple Form 2 declaration on the Startup India portal, provided their aggregate paid-up capital and share premium do not exceed ₹25 crore (excluding investments from listed companies, non-residents, and SEBI-registered Category I AIFs).
                   </p>
 
                   <h3 className="text-[15px] sm:text-[16px] font-medium text-[#1F1646] mb-2">
                     Capital Gains Tax Exemption (Section 54GB)
                   </h3>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed">
                     Long-term capital gains realized by individuals or HUFs from the sale of residential property are exempt from tax if the proceeds are reinvested into the equity shares of an eligible DPIIT startup for purchasing new plant and machinery.
                   </p>
                 </div>
@@ -903,7 +903,7 @@ function StartupGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     What Funding Support Can DPIIT-Recognised Startups Access in India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     Access to institutional growth capital is one of the highest hurdles faced by early founders. The Startup India initiative addresses this through state-backed funding mechanisms available exclusively to recognized startups:
                   </p>
 
@@ -913,7 +913,7 @@ function StartupGuideContent() {
                         <Landmark className="w-4 h-4 text-[#00A86B]" />
                         Fund of Funds for Startups (FFS) — ₹10,000 Crore Corpus
                       </h4>
-                      <p className="text-[12.5px] font-light text-slate-600">
+                      <p className="text-[12.5px] font-normal text-slate-900">
                         The Government of India created a dedicated ₹10,000 crore Fund of Funds managed by the Small Industries Development Bank of India (SIDBI). Rather than investing directly in single enterprises, FFS contributes capital to SEBI-registered Alternative Investment Funds (daughter funds), which in turn deploy early-stage equity capital into DPIIT-recognised startups across the country.
                       </p>
                     </div>
@@ -923,7 +923,7 @@ function StartupGuideContent() {
                         <ShieldCheck className="w-4 h-4 text-[#00A86B]" />
                         Credit Guarantee Scheme for Startups (CGSS)
                       </h4>
-                      <p className="text-[12.5px] font-light text-slate-600">
+                      <p className="text-[12.5px] font-normal text-slate-900">
                         Managed by the National Credit Guarantee Trustee Company (NCGTC), CGSS provides credit guarantee coverage up to ₹10 crore per startup on loans sanctioned by commercial banks and NBFCs, dramatically lowering collateral requirements for early ventures seeking debt capital.
                       </p>
                     </div>
@@ -933,7 +933,7 @@ function StartupGuideContent() {
                         <Briefcase className="w-4 h-4 text-[#00A86B]" />
                         SIDBI Direct Loans &amp; Venture Capital Support
                       </h4>
-                      <p className="text-[12.5px] font-light text-slate-600">
+                      <p className="text-[12.5px] font-normal text-slate-900">
                         Direct loan products, quasi-equity, and working capital lines provided through SIDBI schemes specifically tailored for innovative manufacturing and technology startups.
                       </p>
                     </div>
@@ -945,14 +945,14 @@ function StartupGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     What IP Benefits Do Registered Startups Get in India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     Protecting proprietary inventions, brand assets, and industrial designs is crucial for innovation-driven enterprises. The Startup India program provides subsidized and fast-tracked Intellectual Property (IP) privileges:
                   </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
                     <div className="p-4 rounded-xl border border-slate-200/80 bg-white">
                       <h4 className="font-medium text-[13.5px] text-slate-900 mb-1 text-[#00A86B]">Patent Benefits</h4>
-                      <ul className="text-[12px] font-light text-slate-600 space-y-1.5 mt-2">
+                      <ul className="text-[12px] font-normal text-slate-900 space-y-1.5 mt-2">
                         <li>• Fast-tracked patent examination &amp; grant</li>
                         <li>• 80% rebate on statutory patent filing fees</li>
                         <li>• Subsidized international PCT applications</li>
@@ -961,7 +961,7 @@ function StartupGuideContent() {
 
                     <div className="p-4 rounded-xl border border-slate-200/80 bg-white">
                       <h4 className="font-medium text-[13.5px] text-slate-900 mb-1 text-[#00A86B]">Trademark Benefits</h4>
-                      <ul className="text-[12px] font-light text-slate-600 space-y-1.5 mt-2">
+                      <ul className="text-[12px] font-normal text-slate-900 space-y-1.5 mt-2">
                         <li>• Expedited examination by Trademark Registry</li>
                         <li>• 50% rebate on official filing fees</li>
                         <li>• Multi-class brand asset protection</li>
@@ -970,7 +970,7 @@ function StartupGuideContent() {
 
                     <div className="p-4 rounded-xl border border-slate-200/80 bg-white">
                       <h4 className="font-medium text-[13.5px] text-slate-900 mb-1 text-[#00A86B]">IP Facilitation Cell</h4>
-                      <ul className="text-[12px] font-light text-slate-600 space-y-1.5 mt-2">
+                      <ul className="text-[12px] font-normal text-slate-900 space-y-1.5 mt-2">
                         <li>• Free legal advisory from empanelled attorneys</li>
                         <li>• Government bears statutory facilitator fees</li>
                         <li>• Advisory across patents, designs &amp; copyrights</li>
@@ -984,11 +984,11 @@ function StartupGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     How is a DPIIT Startup Different from an MCA Company in India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     Many entrepreneurs mistakenly believe that registering a company with the Ministry of Corporate Affairs (MCA) automatically affords them Startup India benefits. However, DPIIT recognition is an entirely distinct certification providing privileges that standard MCA companies do not receive:
                   </p>
                   <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-5">
-                    <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                    <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                       <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                         <tr>
                           <th className="py-3 px-4 font-normal">Parameter</th>
@@ -1003,7 +1003,7 @@ function StartupGuideContent() {
                             Tax Holiday
                           </td>
                           <td className="py-3 px-4 text-[#00A86B] font-medium">✅ 3-year exemption under Section 80-IAC</td>
-                          <td className="py-3 px-4 text-red-500 font-light">❌ Not applicable</td>
+                          <td className="py-3 px-4 text-red-500 font-normal">❌ Not applicable</td>
                         </tr>
                         <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
                           <td className="relative py-3 px-4 font-normal text-slate-800">
@@ -1011,7 +1011,7 @@ function StartupGuideContent() {
                             Angel Tax Exemption
                           </td>
                           <td className="py-3 px-4 text-[#00A86B] font-medium">✅ Available under Section 56(2)(viib)</td>
-                          <td className="py-3 px-4 text-red-500 font-light">❌ Not available</td>
+                          <td className="py-3 px-4 text-red-500 font-normal">❌ Not available</td>
                         </tr>
                         <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
                           <td className="relative py-3 px-4 font-normal text-slate-800">
@@ -1019,7 +1019,7 @@ function StartupGuideContent() {
                             Patent Fee Rebate
                           </td>
                           <td className="py-3 px-4 text-[#00A86B] font-medium">✅ 80% rebate on statutory fees</td>
-                          <td className="py-3 px-4 text-red-500 font-light">❌ Standard fees apply</td>
+                          <td className="py-3 px-4 text-red-500 font-normal">❌ Standard fees apply</td>
                         </tr>
                         <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
                           <td className="relative py-3 px-4 font-normal text-slate-800">
@@ -1027,7 +1027,7 @@ function StartupGuideContent() {
                             Trademark Fee Rebate
                           </td>
                           <td className="py-3 px-4 text-[#00A86B] font-medium">✅ 50% rebate on statutory fees</td>
-                          <td className="py-3 px-4 text-red-500 font-light">❌ Standard fees apply</td>
+                          <td className="py-3 px-4 text-red-500 font-normal">❌ Standard fees apply</td>
                         </tr>
                         <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
                           <td className="relative py-3 px-4 font-normal text-slate-800">
@@ -1035,7 +1035,7 @@ function StartupGuideContent() {
                             Self-Certification
                           </td>
                           <td className="py-3 px-4 text-[#00A86B] font-medium">✅ Under 9 labor &amp; 3 environmental laws</td>
-                          <td className="py-3 px-4 text-red-500 font-light">❌ Full regular compliance required</td>
+                          <td className="py-3 px-4 text-red-500 font-normal">❌ Full regular compliance required</td>
                         </tr>
                         <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
                           <td className="relative py-3 px-4 font-normal text-slate-800">
@@ -1043,7 +1043,7 @@ function StartupGuideContent() {
                             Government Procurement
                           </td>
                           <td className="py-3 px-4 text-[#00A86B] font-medium">✅ Exemption from prior turnover &amp; EMD</td>
-                          <td className="py-3 px-4 text-red-500 font-light">❌ Standard criteria strictly apply</td>
+                          <td className="py-3 px-4 text-red-500 font-normal">❌ Standard criteria strictly apply</td>
                         </tr>
                         <tr className="hover:bg-[#EDF8F3] transition-colors duration-150 group cursor-default">
                           <td className="relative py-3 px-4 font-normal text-slate-800">
@@ -1051,7 +1051,7 @@ function StartupGuideContent() {
                             Fast-track Winding Up
                           </td>
                           <td className="py-3 px-4 text-[#00A86B] font-medium">✅ 90-day process under IBC</td>
-                          <td className="py-3 px-4 text-red-500 font-light">❌ Standard lengthy timeline (180+ days)</td>
+                          <td className="py-3 px-4 text-red-500 font-normal">❌ Standard lengthy timeline (180+ days)</td>
                         </tr>
                       </tbody>
                     </table>
@@ -1063,14 +1063,14 @@ function StartupGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     What Compliances Apply After Startup India Registration in India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     While DPIIT recognition affords substantial compliance relief, startups must fulfill certain ongoing baseline obligations to retain their recognition and ensure unbroken access to fiscal incentives:
                   </p>
 
                   <h3 className="text-[15px] sm:text-[16px] font-medium text-[#1F1646] mb-2">
                     Annual Corporate &amp; Tax Obligations
                   </h3>
-                  <ul className="space-y-2 text-[13px] font-light text-slate-600 mb-4">
+                  <ul className="space-y-2 text-[13px] font-normal text-slate-900 mb-4">
                     <li className="flex items-start gap-2">
                       <span className="text-[#00A86B] font-bold">•</span>
                       <span><strong>MCA Annual Filings:</strong> Timely filing of annual financial statements (AOC-4) and annual return (MGT-7/7A) for companies, or Form 8 and Form 11 for LLPs.</span>
@@ -1092,7 +1092,7 @@ function StartupGuideContent() {
                   <h3 className="text-[15px] sm:text-[16px] font-medium text-[#1F1646] mb-2">
                     Labor &amp; Environmental Self-Certification
                   </h3>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed">
                     DPIIT-recognised startups can self-certify compliance under 9 central labor laws (including Employee Provident Fund, ESIC, Payment of Gratuity, and Maternity Benefit) for up to 5 years from incorporation without routine inspections. Startups in non-hazardous industrial sectors can also self-certify compliance under 3 central environmental laws for up to 3 years.
                   </p>
                 </div>
@@ -1102,7 +1102,7 @@ function StartupGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     What Are the Challenges and Opportunities Under Startup India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     While the Startup India initiative has democratized entrepreneurship across India, founders must navigate both structural hurdles and dynamic opportunities:
                   </p>
 
@@ -1112,7 +1112,7 @@ function StartupGuideContent() {
                         <ShieldAlert className="w-4 h-4 text-red-600" />
                         Key Challenges
                       </h4>
-                      <ul className="text-[12.5px] font-light text-slate-700 space-y-2">
+                      <ul className="text-[12.5px] font-normal text-slate-900 space-y-2">
                         <li>• <strong>Documentation Rigor:</strong> Inadequate articulation of innovation narrative leading to DPIIT application rejection.</li>
                         <li>• <strong>Tier-2 &amp; Tier-3 Awareness Gaps:</strong> Limited local knowledge regarding IMB Section 80-IAC approval mechanics.</li>
                         <li>• <strong>Strict Eligibility Criteria:</strong> Disqualification of traditional business models lacking technological novelty.</li>
@@ -1125,7 +1125,7 @@ function StartupGuideContent() {
                         <TrendingUp className="w-4 h-4 text-[#00A86B]" />
                         Key Opportunities
                       </h4>
-                      <ul className="text-[12.5px] font-light text-slate-700 space-y-2">
+                      <ul className="text-[12.5px] font-normal text-slate-900 space-y-2">
                         <li>• <strong>₹10,000 Crore SIDBI Fund Access:</strong> Channeled directly through leading Indian VC funds and institutional AIFs.</li>
                         <li>• <strong>Government GeM Market:</strong> Direct preferential bidding on billions worth of public procurement tenders.</li>
                         <li>• <strong>Investor Credibility:</strong> Substantially elevated valuation and investor comfort during seed and Series A rounds.</li>
@@ -1140,10 +1140,10 @@ function StartupGuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     Why Choose Merrafilings for Startup India Registration?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     Merrafilings is one of India&apos;s leading tech-enabled platforms for startup incorporation, business registrations, and comprehensive corporate compliance. With a team of veteran Chartered Accountants, Company Secretaries, and startup corporate lawyers, we make DPIIT recognition swift, precise, and completely stress-free.
                   </p>
-                  <ul className="space-y-2.5 text-[13px] font-light text-slate-600 mb-6">
+                  <ul className="space-y-2.5 text-[13px] font-normal text-slate-900 mb-6">
                     <li className="flex items-start gap-2.5">
                       <span className="text-[#00A86B] font-bold">✓</span>
                       <span><strong>End-to-End Handholding:</strong> From business incorporation to innovation narrative drafting and DPIIT portal filing, we handle the entire process without errors.</span>
@@ -1165,7 +1165,7 @@ function StartupGuideContent() {
                   <div className="p-4 rounded-xl bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200/80 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div>
                       <div className="font-medium text-[14.5px] text-slate-900">Ready to Get Your Startup India DPIIT Recognition?</div>
-                      <div className="text-[12.5px] font-light text-slate-600">Connect with our startup advisors for an immediate eligibility assessment.</div>
+                      <div className="text-[12.5px] font-normal text-slate-900">Connect with our startup advisors for an immediate eligibility assessment.</div>
                     </div>
                     <button
                       type="button"

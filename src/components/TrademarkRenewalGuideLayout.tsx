@@ -133,7 +133,7 @@ export default function TrademarkRenewalGuideLayout({
         {/* 2-Column Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
           {/* Left Column: Article Body */}
-          <article className="lg:col-span-8 bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-sm p-6 sm:p-10 lg:p-12">
+          <article data-reveal className="lg:col-span-8 bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-sm p-6 sm:p-10 lg:p-12">
             {/* Meta Header */}
             <div className="flex items-center gap-3 sm:gap-4 pb-6 border-b border-slate-100 flex-wrap text-xs text-slate-600">
               <div className="flex items-center gap-2">
@@ -198,7 +198,7 @@ export default function TrademarkRenewalGuideLayout({
           </article>
 
           {/* Right Column: Clean Sticky Sidebar */}
-          <aside className="lg:col-span-4 space-y-6 lg:sticky lg:top-24">
+          <aside data-reveal className="lg:col-span-4 space-y-6 lg:sticky lg:top-24 stagger-1">
             {/* Widget 1: Consult Experts */}
             <div
               onClick={() => openContact("Trademark Renewal Specialist Call")}
@@ -226,7 +226,7 @@ export default function TrademarkRenewalGuideLayout({
                   <div className="text-[14.5px] font-medium text-slate-800 group-hover:text-[#155EEF] transition-colors">
                     Consult <span className="text-[#155EEF]">Experts</span>
                   </div>
-                  <div className="text-[11.5px] text-slate-500 font-light">
+                  <div className="text-[11.5px] text-slate-500 font-normal">
                     Direct call with registered trademark attorneys
                   </div>
                 </div>
@@ -281,7 +281,7 @@ export default function TrademarkRenewalGuideLayout({
                 <h4 className="text-[15px] font-medium text-slate-900 leading-snug">
                   Check Trademark Renewal Expiry Date
                 </h4>
-                <p className="text-[12px] text-slate-500 font-light mt-1">
+                <p className="text-[12px] text-slate-500 font-normal mt-1">
                   Enter your trademark application number to calculate your exact 10-year expiration date, standard renewal window, and late fee cutoffs.
                 </p>
               </div>
@@ -306,7 +306,7 @@ export default function TrademarkRenewalGuideLayout({
                 </div>
                 <div>
                   <div className="text-sm font-medium leading-tight">Live chat with experts</div>
-                  <div className="text-[11px] text-emerald-100 font-light">Online &amp; available now</div>
+                  <div className="text-[11px] text-emerald-100 font-normal">Online &amp; available now</div>
                 </div>
               </div>
               <ChevronRight className="w-5 h-5 text-emerald-100" />

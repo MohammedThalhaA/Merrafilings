@@ -247,7 +247,7 @@ function UdyamGuideContent() {
     <>
       {/* Intro */}
       <div>
-        <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+        <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed">
           <strong className="font-medium text-slate-800">Udyam Registration</strong> (also known as Micro, Small, and Medium Enterprise or MSME Registration) is the official statutory registration system introduced by the Ministry of Micro, Small &amp; Medium Enterprises (MoMSME), Government of India, on July 1, 2020. Replacing the obsolete Udyog Aadhaar and EM-I/II frameworks, Udyam Registration establishes a digital, paperless, and self-declaration-based single-window identity for enterprises across India. It unlocks crucial government-backed benefits, including priority sector lending, collateral-free bank loans, subsidies on patent and trademark filings, exemptions from government tender fees, and statutory protection against buyer payment delays under Section 43B(h) of the Income Tax Act.
         </p>
       </div>
@@ -257,7 +257,7 @@ function UdyamGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           1. What is Udyam Registration in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Udyam Registration is the primary identification mechanism for businesses classified as Micro, Small, or Medium Enterprises in India. Fully integrated with the Income Tax (CBDT) and Goods and Services Tax Network (GSTN) databases, the Udyam portal automatically verifies financial data, investment figures, and annual turnover without requiring manual balance sheet uploads. Once registered, the enterprise is allotted a permanent 16-character alphanumeric <strong className="font-medium text-slate-800">Udyam Registration Number (URN)</strong> and an official digital QR-coded certificate that never expires.
         </p>
       </section>
@@ -267,7 +267,7 @@ function UdyamGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           2. What is the Purpose of UDYAM Registration in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           The central objective of the Udyam framework is to formalize and accelerate the growth of India&apos;s MSME sector, which contributes over 30% to the national GDP and 45% to total exports. Key statutory purposes include:
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
@@ -276,7 +276,7 @@ function UdyamGuideContent() {
               <Landmark className="w-4 h-4 text-emerald-600 shrink-0" />
               <span>Priority Sector Lending</span>
             </h3>
-            <p className="text-xs text-slate-500 font-light mt-1.5 leading-relaxed">
+            <p className="text-xs text-slate-500 font-normal mt-1.5 leading-relaxed">
               Mandatory qualification for scheduled commercial banks to grant concessional credit under Priority Sector Lending (PSL) targets.
             </p>
           </div>
@@ -285,7 +285,7 @@ function UdyamGuideContent() {
               <ShieldCheck className="w-4 h-4 text-blue-600 shrink-0" />
               <span>Collateral-Free Credit via CGTMSE</span>
             </h3>
-            <p className="text-xs text-slate-500 font-light mt-1.5 leading-relaxed">
+            <p className="text-xs text-slate-500 font-normal mt-1.5 leading-relaxed">
               Enables enterprises to access institutional bank financing up to ₹5 Crore without offering third-party collateral or assets.
             </p>
           </div>
@@ -294,7 +294,7 @@ function UdyamGuideContent() {
               <Award className="w-4 h-4 text-purple-600 shrink-0" />
               <span>Public Procurement Exemption</span>
             </h3>
-            <p className="text-xs text-slate-500 font-light mt-1.5 leading-relaxed">
+            <p className="text-xs text-slate-500 font-normal mt-1.5 leading-relaxed">
               Central ministries and public sector undertakings (PSUs) must mandatorily procure 25% of annual requirements from MSMEs with EMD waivers.
             </p>
           </div>
@@ -303,7 +303,7 @@ function UdyamGuideContent() {
               <BadgePercent className="w-4 h-4 text-amber-600 shrink-0" />
               <span>Statutory IP &amp; Quality Subsidies</span>
             </h3>
-            <p className="text-xs text-slate-500 font-light mt-1.5 leading-relaxed">
+            <p className="text-xs text-slate-500 font-normal mt-1.5 leading-relaxed">
               50% fee concessions on Trademark filings, 80% on Patents, and reimbursement of expenses incurred in obtaining ISO certifications.
             </p>
           </div>
@@ -315,10 +315,10 @@ function UdyamGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           3. Why Are Banks Mandating UDYAM Registration in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Under Reserve Bank of India (RBI) circulars, all scheduled commercial banks, regional rural banks (RRBs), and NBFCs are mandated to verify Udyam Registration certificates before classifying commercial loans under Priority Sector Lending. Possessing an active Udyam certificate offers businesses:
         </p>
-        <ul className="space-y-2 text-xs sm:text-sm text-slate-600 font-light pl-4 list-disc">
+        <ul className="space-y-2 text-xs sm:text-sm text-slate-600 font-normal pl-4 list-disc">
           <li><strong>Interest Rate Subventions:</strong> 1% to 2% discount on working capital term loans and cash credit facilities.</li>
           <li><strong>Mudra Loan Clearances:</strong> Rapid processing of Shishu (up to ₹50,000), Kishore (up to ₹5 Lakh), and Tarun (up to ₹10 Lakh) loan schemes.</li>
           <li><strong>Exemption from Loan Margin Money:</strong> Relaxed margin requirements for manufacturing plant and machinery additions.</li>
@@ -331,10 +331,10 @@ function UdyamGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           4. Who Can Apply for UDYAM Registration in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Any commercial entity engaged in manufacturing, production, processing, preservation of goods, or rendering services can register. As per the landmark July 2021 notification by the Ministry of MSME, <strong className="font-medium text-slate-800">retail and wholesale traders</strong> are also fully eligible to register under Udyam to obtain Priority Sector Lending benefits. Eligible legal constitutions include:
         </p>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2.5 pt-2 text-xs font-light text-slate-700">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2.5 pt-2 text-xs font-normal text-slate-900">
           <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-200/70 text-center hover:bg-white hover:border-[#155EEF] transition-all">Sole Proprietorships</div>
           <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-200/70 text-center hover:bg-white hover:border-[#155EEF] transition-all">Partnership Firms</div>
           <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-200/70 text-center hover:bg-white hover:border-[#155EEF] transition-all">Limited Liability Partnerships (LLP)</div>
@@ -351,7 +351,7 @@ function UdyamGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           5. UDYAM Registration Number Structure &amp; Format
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Upon successful verification of Aadhaar and PAN data on the national portal, the enterprise is assigned a unique, permanent identification string termed the <strong className="font-medium text-slate-800">Udyam Registration Number (URN)</strong> formatted as follows:
         </p>
 
@@ -369,27 +369,27 @@ function UdyamGuideContent() {
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-900">Prefix</td>
                 <td className="py-3 px-4 font-mono text-[#594CF5]">UDYAM</td>
-                <td className="py-3 px-4 font-light">Fixed standardized prefix for all Indian registrations</td>
+                <td className="py-3 px-4 font-normal">Fixed standardized prefix for all Indian registrations</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-900">State Code</td>
                 <td className="py-3 px-4 font-mono text-[#594CF5]">XX (2 Letters)</td>
-                <td className="py-3 px-4 font-light">Two-letter state abbreviation where registered office is situated (e.g., MH, TN, DL, KA)</td>
+                <td className="py-3 px-4 font-normal">Two-letter state abbreviation where registered office is situated (e.g., MH, TN, DL, KA)</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-900">District Code</td>
                 <td className="py-3 px-4 font-mono text-[#594CF5]">00 (2 Digits)</td>
-                <td className="py-3 px-4 font-light">Numerical code identifying the municipal district jurisdiction</td>
+                <td className="py-3 px-4 font-normal">Numerical code identifying the municipal district jurisdiction</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-900">Serial Number</td>
                 <td className="py-3 px-4 font-mono text-[#594CF5]">0000000 (7 Digits)</td>
-                <td className="py-3 px-4 font-light">Unique sequential alphanumeric serial allocated to the enterprise</td>
+                <td className="py-3 px-4 font-normal">Unique sequential alphanumeric serial allocated to the enterprise</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors bg-purple-50/40">
                 <td className="py-3 px-4 font-semibold text-slate-900">Full Example</td>
                 <td className="py-3 px-4 font-mono font-semibold text-purple-700">UDYAM-TN-01-0012345</td>
-                <td className="py-3 px-4 font-light text-slate-800">Enterprise registered in Chennai District, Tamil Nadu</td>
+                <td className="py-3 px-4 font-normal text-slate-900">Enterprise registered in Chennai District, Tamil Nadu</td>
               </tr>
             </tbody>
           </table>
@@ -401,7 +401,7 @@ function UdyamGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           6. Udyam Application Status Codes &amp; Verification
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           After submitting your application, you can track its progress on the national portal. The application transitions through standard status checkpoints:
         </p>
 
@@ -417,23 +417,23 @@ function UdyamGuideContent() {
             <tbody className="divide-y divide-slate-100 bg-white">
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-medium text-blue-700">Submitted</td>
-                <td className="py-3 px-4 font-light">Application successfully lodged on national portal; under automated database check.</td>
+                <td className="py-3 px-4 font-normal">Application successfully lodged on national portal; under automated database check.</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-medium text-purple-700">Verified</td>
-                <td className="py-3 px-4 font-light">Aadhaar OTP confirmed, PAN verified with CBDT, and GST data matched.</td>
+                <td className="py-3 px-4 font-normal">Aadhaar OTP confirmed, PAN verified with CBDT, and GST data matched.</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-medium text-emerald-700">Approved</td>
-                <td className="py-3 px-4 font-light">Udyam Registration Certificate generated and ready for instant PDF download.</td>
+                <td className="py-3 px-4 font-normal">Udyam Registration Certificate generated and ready for instant PDF download.</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-medium text-amber-700">Pending</td>
-                <td className="py-3 px-4 font-light">Additional verification needed or PAN-Aadhaar linkage check in progress.</td>
+                <td className="py-3 px-4 font-normal">Additional verification needed or PAN-Aadhaar linkage check in progress.</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-medium text-rose-700">Rejected</td>
-                <td className="py-3 px-4 font-light">Discrepancy in applicant name, mismatched PAN, or duplicate application flagged.</td>
+                <td className="py-3 px-4 font-normal">Discrepancy in applicant name, mismatched PAN, or duplicate application flagged.</td>
               </tr>
             </tbody>
           </table>
@@ -445,7 +445,7 @@ function UdyamGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           7. Difference Between Old MSME (Udyog Aadhaar) vs Udyam Registration
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Entrepreneurs who held old Udyog Aadhaar Memorandums (UAM) or EM-II certificates must migrate to Udyam Registration. Old registrations are no longer legally recognized by banks or government departments.
         </p>
 
@@ -462,33 +462,33 @@ function UdyamGuideContent() {
             <tbody className="divide-y divide-slate-100 bg-white">
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-900">National Portal</td>
-                <td className="py-3 px-4 font-light">Udyog Aadhaar Portal (Discontinued)</td>
-                <td className="py-3 px-4 font-light font-medium text-purple-700">Udyam Registration Portal (Active)</td>
+                <td className="py-3 px-4 font-normal">Udyog Aadhaar Portal (Discontinued)</td>
+                <td className="py-3 px-4 font-normal font-medium text-purple-700">Udyam Registration Portal (Active)</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-900">Launch Date</td>
-                <td className="py-3 px-4 font-light">September 2015</td>
-                <td className="py-3 px-4 font-light">July 1, 2020</td>
+                <td className="py-3 px-4 font-normal">September 2015</td>
+                <td className="py-3 px-4 font-normal">July 1, 2020</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-900">Verification Basis</td>
-                <td className="py-3 px-4 font-light">Self-declaration without automated tax verification</td>
-                <td className="py-3 px-4 font-light text-emerald-700 font-medium">Real-time IT (CBDT) and GSTN API integration</td>
+                <td className="py-3 px-4 font-normal">Self-declaration without automated tax verification</td>
+                <td className="py-3 px-4 font-normal text-emerald-700 font-medium">Real-time IT (CBDT) and GSTN API integration</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-900">Classification Basis</td>
-                <td className="py-3 px-4 font-light">Investment in Plant &amp; Machinery only</td>
-                <td className="py-3 px-4 font-light">Composite Criteria: Investment AND Annual Turnover</td>
+                <td className="py-3 px-4 font-normal">Investment in Plant &amp; Machinery only</td>
+                <td className="py-3 px-4 font-normal">Composite Criteria: Investment AND Annual Turnover</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-900">Validity Period</td>
-                <td className="py-3 px-4 font-light">Required periodic manual renewal</td>
-                <td className="py-3 px-4 font-light text-emerald-700 font-medium">Permanent Lifetime (Auto-updates via ITR)</td>
+                <td className="py-3 px-4 font-normal">Required periodic manual renewal</td>
+                <td className="py-3 px-4 font-normal text-emerald-700 font-medium">Permanent Lifetime (Auto-updates via ITR)</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-medium text-slate-900">Current Legal Status</td>
-                <td className="py-3 px-4 font-light text-rose-600 font-medium">Invalidated by MoMSME</td>
-                <td className="py-3 px-4 font-light text-emerald-700 font-medium">100% Mandatory for all MSME benefits</td>
+                <td className="py-3 px-4 font-normal text-rose-600 font-medium">Invalidated by MoMSME</td>
+                <td className="py-3 px-4 font-normal text-emerald-700 font-medium">100% Mandatory for all MSME benefits</td>
               </tr>
             </tbody>
           </table>
@@ -500,7 +500,7 @@ function UdyamGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           8. Revised Composite MSME Classification Criteria in India
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Effective July 1, 2020, the Government of India abolished the distinction between the manufacturing and service sectors, adopting a unified <strong className="font-medium text-slate-800">Composite Criteria</strong> combining investment in plant, machinery, or equipment with annual turnover:
         </p>
 
@@ -524,7 +524,7 @@ function UdyamGuideContent() {
                 </td>
                 <td className="py-3 px-4 font-medium text-slate-800">Does not exceed ₹1 Crore</td>
                 <td className="py-3 px-4 font-medium text-slate-800">Does not exceed ₹5 Crore</td>
-                <td className="py-3 px-4 font-light text-emerald-600">Exports 100% Excluded</td>
+                <td className="py-3 px-4 font-normal text-emerald-600">Exports 100% Excluded</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-semibold text-slate-900">
@@ -534,7 +534,7 @@ function UdyamGuideContent() {
                 </td>
                 <td className="py-3 px-4 font-medium text-slate-800">Does not exceed ₹10 Crore</td>
                 <td className="py-3 px-4 font-medium text-slate-800">Does not exceed ₹50 Crore</td>
-                <td className="py-3 px-4 font-light text-emerald-600">Exports 100% Excluded</td>
+                <td className="py-3 px-4 font-normal text-emerald-600">Exports 100% Excluded</td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-semibold text-slate-900">
@@ -544,12 +544,12 @@ function UdyamGuideContent() {
                 </td>
                 <td className="py-3 px-4 font-medium text-slate-800">Does not exceed ₹50 Crore</td>
                 <td className="py-3 px-4 font-medium text-slate-800">Does not exceed ₹250 Crore</td>
-                <td className="py-3 px-4 font-light text-emerald-600">Exports 100% Excluded</td>
+                <td className="py-3 px-4 font-normal text-emerald-600">Exports 100% Excluded</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-slate-500 font-light italic pt-1">
+        <p className="text-xs text-slate-500 font-normal italic pt-1">
           *Note: Under Section 7 of the MSMED Act, turnover generated from export of goods or services is completely excluded while calculating the turnover threshold for MSME classification.
         </p>
       </section>
@@ -559,10 +559,10 @@ function UdyamGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           9. The 45-Day Payment Rule Under Section 43B(h) of the Income Tax Act
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           One of the most powerful protections provided to Udyam-registered Micro and Small enterprises is statutory protection against delayed payments from commercial buyers:
         </p>
-        <div className="p-4 rounded-xl bg-purple-50/50 border border-purple-200/60 space-y-2 text-xs sm:text-sm text-slate-700 font-light">
+        <div className="p-4 rounded-xl bg-purple-50/50 border border-purple-200/60 space-y-2 text-xs sm:text-sm text-slate-700 font-normal">
           <p>
             <strong>Statutory Payment Timeline (MSMED Act Section 15):</strong> A buyer must make payment to an MSME supplier within the agreed period, which cannot exceed <strong className="text-purple-900 font-medium">45 days</strong> from the day of acceptance of goods/services. If no written agreement exists, payment must be made within <strong className="text-purple-900 font-medium">15 days</strong>.
           </p>
@@ -580,7 +580,7 @@ function UdyamGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           10. Step-by-Step Udyam Registration Online Process
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           The registration process is 100% paperless and executed digitally:
         </p>
         <div className="space-y-3 pt-2">
@@ -588,7 +588,7 @@ function UdyamGuideContent() {
             <div className="w-6 h-6 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-semibold shrink-0 mt-0.5">1</div>
             <div>
               <h3 className="text-xs sm:text-sm font-medium text-slate-900">Aadhaar &amp; PAN Authentication</h3>
-              <p className="text-xs text-slate-500 font-light mt-0.5 leading-relaxed">
+              <p className="text-xs text-slate-500 font-normal mt-0.5 leading-relaxed">
                 Enter the 12-digit Aadhaar number of the proprietor, managing partner, or authorized director. Verify identity via instant Aadhaar OTP, followed by PAN validation.
               </p>
             </div>
@@ -597,7 +597,7 @@ function UdyamGuideContent() {
             <div className="w-6 h-6 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-semibold shrink-0 mt-0.5">2</div>
             <div>
               <h3 className="text-xs sm:text-sm font-medium text-slate-900">Enterprise Profile &amp; Location Details</h3>
-              <p className="text-xs text-slate-500 font-light mt-0.5 leading-relaxed">
+              <p className="text-xs text-slate-500 font-normal mt-0.5 leading-relaxed">
                 Provide enterprise name, official business address, plant/unit location addresses, commercial bank account details (IFSC and account number), and employee headcount.
               </p>
             </div>
@@ -606,7 +606,7 @@ function UdyamGuideContent() {
             <div className="w-6 h-6 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-semibold shrink-0 mt-0.5">3</div>
             <div>
               <h3 className="text-xs sm:text-sm font-medium text-slate-900">National Industrial Classification (NIC) Code Selection</h3>
-              <p className="text-xs text-slate-500 font-light mt-0.5 leading-relaxed">
+              <p className="text-xs text-slate-500 font-normal mt-0.5 leading-relaxed">
                 Accurately map your business activities under 2-digit, 4-digit, and 5-digit NIC codes (manufacturing, service, or retail/wholesale trade). Up to 10 NIC codes can be added.
               </p>
             </div>
@@ -615,7 +615,7 @@ function UdyamGuideContent() {
             <div className="w-6 h-6 rounded-full bg-[#155EEF] text-white flex items-center justify-center text-xs font-semibold shrink-0 mt-0.5">4</div>
             <div>
               <h3 className="text-xs sm:text-sm font-medium text-slate-900">Final OTP Submission &amp; Certificate Issuance</h3>
-              <p className="text-xs text-slate-500 font-light mt-0.5 leading-relaxed">
+              <p className="text-xs text-slate-500 font-normal mt-0.5 leading-relaxed">
                 Submit the final OTP received on your Aadhaar-linked mobile. Your application is assigned an acknowledgement number, and the official Udyam Registration Certificate is generated within 24 to 48 hours.
               </p>
             </div>
@@ -628,33 +628,33 @@ function UdyamGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           11. Mandatory Documents &amp; Information Checklist
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Because the Udyam portal operates on digital self-declaration, <strong className="font-medium text-slate-800">no physical documents need to be uploaded</strong>. You only require the following verified data points:
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
           <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span className="text-xs text-slate-700 font-light">Aadhaar card linked with active mobile number for OTP</span>
+            <span className="text-xs text-slate-700 font-normal">Aadhaar card linked with active mobile number for OTP</span>
           </div>
           <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span className="text-xs text-slate-700 font-light">Permanent Account Number (PAN) of enterprise / proprietor</span>
+            <span className="text-xs text-slate-700 font-normal">Permanent Account Number (PAN) of enterprise / proprietor</span>
           </div>
           <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span className="text-xs text-slate-700 font-light">Commercial bank account number and IFSC code</span>
+            <span className="text-xs text-slate-700 font-normal">Commercial bank account number and IFSC code</span>
           </div>
           <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span className="text-xs text-slate-700 font-light">GSTIN (if applicable or mandatory under GST Act)</span>
+            <span className="text-xs text-slate-700 font-normal">GSTIN (if applicable or mandatory under GST Act)</span>
           </div>
           <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span className="text-xs text-slate-700 font-light">Exact address of manufacturing plants and offices</span>
+            <span className="text-xs text-slate-700 font-normal">Exact address of manufacturing plants and offices</span>
           </div>
           <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span className="text-xs text-slate-700 font-light">Number of male, female, and other employees</span>
+            <span className="text-xs text-slate-700 font-normal">Number of male, female, and other employees</span>
           </div>
         </div>
       </section>
@@ -664,7 +664,7 @@ function UdyamGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           12. Common Mistakes to Avoid in Udyam Registration
         </h2>
-        <ul className="space-y-2 text-xs sm:text-sm text-slate-600 font-light pl-4 list-disc">
+        <ul className="space-y-2 text-xs sm:text-sm text-slate-600 font-normal pl-4 list-disc">
           <li><strong>Multiple Registrations on Same PAN:</strong> Only ONE Udyam registration is legally permitted per PAN. All branches, units, and manufacturing facilities must be added under the same registration.</li>
           <li><strong>Incorrect NIC Codes:</strong> Selecting broad or incorrect NIC codes can disqualify your business from state industrial subsidies and specific sector bank schemes.</li>
           <li><strong>Aadhaar-PAN Name Mismatch:</strong> Spelling discrepancies between your PAN card and Aadhaar card cause instant portal validation rejection.</li>
@@ -677,10 +677,10 @@ function UdyamGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           13. Why Choose Merrafilings for Udyam Registration?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           While government portal registration is paperless, ensuring accurate 5-digit NIC code mapping, seamless PAN-GST data integration, GeM tender readiness, and Section 43B(h) compliance requires professional regulatory precision. Merrafilings provides:
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs font-light text-slate-700">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs font-normal text-slate-900">
           <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
             <span className="group-hover:text-slate-900 transition-colors">Dedicated MSME Regulatory Consultants</span>

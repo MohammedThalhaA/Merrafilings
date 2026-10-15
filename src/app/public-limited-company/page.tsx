@@ -434,10 +434,10 @@ function PublicGuideContent() {
                 <h2 className="text-[22px] sm:text-[24px] font-normal text-[#1F1646] mb-3">
                   Public Limited Company Registration Online in India
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-3">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-3">
                   A <strong className="font-medium text-slate-800">Public Limited Company</strong> is the premier business structure in India for ambitious, large-scale commercial enterprises. It grants businesses legal authority to offer shares to the public, attract institutional capital, and pursue an Initial Public Offering (IPO) on stock exchanges like the NSE and BSE.
                 </p>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed">
                   Governed by the <strong className="font-medium text-slate-800">Companies Act, 2013</strong>, a public company provides limited liability shield to all shareholders, distinct legal entity status, and perpetual succession. At Merrafilings, our senior corporate secretarial lawyers and Chartered Accountants ensure seamless incorporation from RUN name approval to full statutory compliance.
                 </p>
               </div>
@@ -447,11 +447,11 @@ function PublicGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Why Should You Choose Public Limited Company Registration in India?
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   Unlike private business structures that restrict growth to 200 members, a Public Limited Company provides boundless scalability:
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[12.5px] font-light text-slate-700">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[12.5px] font-normal text-slate-900">
                   <div className="p-3.5 rounded-xl border border-slate-200/80 bg-[#FAF9F7]/70">
                     <strong className="font-medium text-slate-900 block mb-1">
                       Access to Public Capital &amp; IPO
@@ -484,12 +484,12 @@ function PublicGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   What are the Minimum Requirements for a Public Limited Company?
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   Before applying for incorporation on the MCA portal, ensure your corporate founding team satisfies the statutory thresholds:
                 </p>
 
                 <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-4">
-                  <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                  <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                     <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                       <tr>
                         <th className="py-3 px-4 font-normal">Requirement</th>
@@ -519,7 +519,7 @@ function PublicGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Eligibility Criteria for Directors &amp; Shareholders
                 </h2>
-                <div className="space-y-3 text-[13px] font-light text-slate-600">
+                <div className="space-y-3 text-[13px] font-normal text-slate-900">
                   <div className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full bg-emerald-100 text-[#00A86B] flex items-center justify-center shrink-0 mt-0.5 text-xs font-semibold">
                       ✓
@@ -560,11 +560,11 @@ function PublicGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   What are the Documents Required for Public Limited Company Registration?
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   To ensure error-free electronic processing on the MCA SPICe+ system, prepare the following documents:
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-[12.5px] font-light text-slate-700 mb-4">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-[12.5px] font-normal text-slate-900 mb-4">
                   <div className="p-3.5 rounded-xl border border-slate-200/80 bg-[#FAF9F7]/70">
                     <strong className="font-medium text-slate-900 block mb-1">
                       For Directors &amp; Promoters
@@ -600,7 +600,7 @@ function PublicGuideContent() {
                       <h4 className="text-[13.5px] font-medium text-slate-800">
                         Obtain Class-3 Digital Signature Certificates (DSC)
                       </h4>
-                      <p className="text-[12px] font-light text-slate-600 leading-relaxed">
+                      <p className="text-[12px] font-normal text-slate-900 leading-relaxed">
                         Obtain Class-3 DSCs for all 3 proposed directors to execute digital MCA incorporation forms and e-declarations.
                       </p>
                     </div>
@@ -614,7 +614,7 @@ function PublicGuideContent() {
                       <h4 className="text-[13.5px] font-medium text-slate-800">
                         Apply for Company Name Approval (RUN / SPICe+ Part A)
                       </h4>
-                      <p className="text-[12px] font-light text-slate-600 leading-relaxed">
+                      <p className="text-[12px] font-normal text-slate-900 leading-relaxed">
                         Submit 2 proposed unique names ending with &quot;Limited&quot; on the MCA RUN service for Central Registration Centre approval.
                       </p>
                     </div>
@@ -628,7 +628,7 @@ function PublicGuideContent() {
                       <h4 className="text-[13.5px] font-medium text-slate-800">
                         Draft Tailored MOA &amp; AOA
                       </h4>
-                      <p className="text-[12px] font-light text-slate-600 leading-relaxed">
+                      <p className="text-[12px] font-normal text-slate-900 leading-relaxed">
                         Draft comprehensive Memorandum of Association (main and ancillary objects) and Articles of Association (governance, shares, voting rules).
                       </p>
                     </div>
@@ -642,7 +642,7 @@ function PublicGuideContent() {
                       <h4 className="text-[13.5px] font-medium text-slate-800">
                         File SPICe+ Part B &amp; Integrated Services (AGILE-PRO-S)
                       </h4>
-                      <p className="text-[12px] font-light text-slate-600 leading-relaxed">
+                      <p className="text-[12px] font-normal text-slate-900 leading-relaxed">
                         Submit SPICe+ Part B with DIN applications, registered office proofs, EPFO, ESIC, Profession Tax, and corporate bank current account selection.
                       </p>
                     </div>
@@ -656,7 +656,7 @@ function PublicGuideContent() {
                       <h4 className="text-[13.5px] font-medium text-slate-800">
                         CRC Verification &amp; Certificate of Incorporation Issuance
                       </h4>
-                      <p className="text-[12px] font-light text-slate-600 leading-relaxed">
+                      <p className="text-[12px] font-normal text-slate-900 leading-relaxed">
                         MCA Registrar scrutinizes the filing and issues the Certificate of Incorporation bearing your 21-digit Corporate Identity Number (CIN).
                       </p>
                     </div>
@@ -670,7 +670,7 @@ function PublicGuideContent() {
                       <h4 className="text-[13.5px] font-medium text-slate-800">
                         File Form INC-20A (Commencement of Business)
                       </h4>
-                      <p className="text-[12px] font-light text-slate-600 leading-relaxed">
+                      <p className="text-[12px] font-normal text-slate-900 leading-relaxed">
                         Deposit subscription capital into the corporate bank account within 180 days and file Form INC-20A to begin commercial trading.
                       </p>
                     </div>
@@ -683,12 +683,12 @@ function PublicGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Registration Timeline &amp; Cost Breakdown
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   Overview of the stage-by-stage registration turnaround time:
                 </p>
 
                 <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-6">
-                  <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                  <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                     <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                       <tr>
                         <th className="py-3 px-4 font-normal">Incorporation Stage</th>
@@ -718,7 +718,7 @@ function PublicGuideContent() {
                   Statutory Fee Components
                 </h3>
                 <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs">
-                  <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                  <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                     <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                       <tr>
                         <th className="py-3 px-4 font-normal">Fee Component</th>
@@ -750,12 +750,12 @@ function PublicGuideContent() {
                 <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                   Public Limited vs Private Limited vs LLP Comparison
                 </h2>
-                <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                   Understand how a Public Limited structure compares with other prominent incorporation options:
                 </p>
 
                 <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-6">
-                  <table className="w-full text-left text-[12px] font-light text-slate-700">
+                  <table className="w-full text-left text-[12px] font-normal text-slate-900">
                     <thead className="bg-[#FAF9F7] text-slate-800 font-normal border-b border-slate-200">
                       <tr>
                         <th className="py-2.5 px-3 font-normal">Parameter</th>
@@ -787,7 +787,7 @@ function PublicGuideContent() {
                   Public Limited vs Private Limited Company (Head-to-Head)
                 </h3>
                 <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs">
-                  <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                  <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                     <thead className="bg-[#FAF9F7] text-slate-800 font-normal border-b border-slate-200">
                       <tr>
                         <th className="py-2.5 px-3 font-normal">Parameter</th>
@@ -824,7 +824,7 @@ function PublicGuideContent() {
                     <h4 className="text-[14px] font-medium text-slate-900 mb-1">
                       Dedicated Senior Corporate Lawyers
                     </h4>
-                    <p className="text-[12.5px] font-light text-slate-600 leading-relaxed">
+                    <p className="text-[12.5px] font-normal text-slate-900 leading-relaxed">
                       Handled directly by corporate practitioners experienced in complex multi-shareholder charter drafting and MCA CRC compliance.
                     </p>
                   </div>
@@ -832,7 +832,7 @@ function PublicGuideContent() {
                     <h4 className="text-[14px] font-medium text-slate-900 mb-1">
                       End-to-End Enterprise Setup
                     </h4>
-                    <p className="text-[12.5px] font-light text-slate-600 leading-relaxed">
+                    <p className="text-[12.5px] font-normal text-slate-900 leading-relaxed">
                       From RUN name reservation and 3 DSCs to statutory registers, INC-20A commencement, and dematerialisation connectivity.
                     </p>
                   </div>
@@ -840,7 +840,7 @@ function PublicGuideContent() {
                     <h4 className="text-[14px] font-medium text-slate-900 mb-1">
                       Transparent &amp; Fixed Pricing
                     </h4>
-                    <p className="text-[12.5px] font-light text-slate-600 leading-relaxed">
+                    <p className="text-[12.5px] font-normal text-slate-900 leading-relaxed">
                       Clear milestone-based fee structure with no hidden charges, ensuring complete predictability for board budgets.
                     </p>
                   </div>
@@ -848,7 +848,7 @@ function PublicGuideContent() {
                     <h4 className="text-[14px] font-medium text-slate-900 mb-1">
                       Annual Secretarial Compliance
                     </h4>
-                    <p className="text-[12.5px] font-light text-slate-600 leading-relaxed">
+                    <p className="text-[12.5px] font-normal text-slate-900 leading-relaxed">
                       Full support for annual general meetings, statutory audits, Form AOC-4, Form MGT-7, and director KYC compliance year after year.
                     </p>
                   </div>
@@ -864,7 +864,7 @@ export default function PublicLimitedCompanyPage() {
       badgeText="Apex Corporate Entity for Large Scale Capital"
       heroTitle={
         <>
-          <span className="bg-gradient-to-r from-[#5C3BFF] via-[#7052FF] to-[#FF4ED0] bg-clip-text text-transparent font-light">
+          <span className="bg-gradient-to-r from-[#5C3BFF] via-[#7052FF] to-[#FF4ED0] bg-clip-text text-transparent font-normal">
             Public Limited Company
           </span>{" "}
           Registration in India

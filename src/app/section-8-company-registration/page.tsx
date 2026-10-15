@@ -299,7 +299,7 @@ function Section8GuideContent() {
                   <h1 className="text-2xl sm:text-[26px] md:text-[28px] font-normal text-[#1F1646] text-center mb-6 leading-snug">
                     Section 8 Company Registration Online in India
                   </h1>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed">
                     <strong className="font-normal text-slate-900">Section 8 company registration in India</strong> is the legally recognized process of incorporating a non-profit organization under the <strong className="font-normal text-slate-900">Companies Act, 2013</strong>. It is ideal for individuals and organizations aiming to promote education, charity, science, religion, arts, or social welfare. A Section 8 company enjoys distinct legal identity, <a href="#pricing" className="text-[#155EEF] hover:underline font-normal">income tax benefits</a>, and higher credibility compared to traditional non-profit structures. Our experts at <a href="/" className="text-[#00B074] hover:underline font-normal">Merrafilings</a> provide complete end-to-end guidance from name approval to 12A &amp; 80G registrations at transparent costs.
                   </p>
                 </div>
@@ -309,14 +309,14 @@ function Section8GuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646]">
                     What is Section 8 Company Registration in India?
                   </h2>
-                  <p className="mt-3 text-[13.5px] font-light text-slate-600 leading-relaxed">
+                  <p className="mt-3 text-[13.5px] font-normal text-slate-900 leading-relaxed">
                     A <strong className="font-normal text-slate-900">Section 8 company</strong> is a type of non-profit organization registered under <strong className="font-normal text-slate-900">Section 8 of the Companies Act, 2013</strong>, governed by the Ministry of Corporate Affairs (MCA). It is incorporated with the primary objective of promoting commerce, art, science, sports, education, research, social welfare, religion, charity, or environmental protection. Unlike commercial companies, a Section 8 company does not distribute dividends or profits to its members — all income and surplus must be reinvested solely towards achieving its stated public welfare objectives.
                   </p>
 
                   <h3 className="text-[15px] font-normal text-[#1F1646] mt-5 mb-3">
                     Features of Section 8 Company
                   </h3>
-                  <ul className="space-y-2.5 text-[13px] font-light text-slate-600">
+                  <ul className="space-y-2.5 text-[13px] font-normal text-slate-900">
                     {[
                       "Registered under the Companies Act, 2013 with MCA corporate oversight",
                       "Separate legal entity distinct from its promoters and directors",
@@ -343,12 +343,12 @@ function Section8GuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     Key Differences Between Trust, Society, and Section 8 Company
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     Choosing the right non-profit structure is critical for long-term governance and fundraising success. Here is an interactive comparison across key parameters:
                   </p>
 
                   <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs">
-                    <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                    <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                       <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                         <tr>
                           <th className="py-3 px-4 font-normal">Parameter</th>
@@ -382,10 +382,10 @@ function Section8GuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646]">
                     Section 8 Company vs NGO &amp; Private Limited Company
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed">
                     Many founders confuse Section 8 companies with traditional NGOs. An NGO is an umbrella category that encompasses Trusts, Societies, and Section 8 companies. While Trusts and Societies are registered under archaic state acts, a Section 8 company enjoys national recognition, standardized MCA filing systems, and the ability to operate across all Indian states without requiring separate state approvals.
                   </p>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed">
                     Compared to a regular <a href="#pvt-ltd" className="text-[#155EEF] hover:underline font-normal">Private Limited Company</a>, a Section 8 company cannot distribute dividends or capital gains to its promoters. However, it benefits from substantial stamp duty concessions, exemption from minimum capital rules, and the ability to obtain 12A and 80G tax exemptions for tax-free donations.
                   </p>
                 </div>
@@ -395,7 +395,7 @@ function Section8GuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     Why Should You Register a Section 8 Company in India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     Registering a Section 8 company in India offers significant legal, financial, and reputational advantages for non-profit initiatives:
                   </p>
 
@@ -442,7 +442,7 @@ function Section8GuideContent() {
                           <span className="w-2 h-2 rounded-full bg-[#00A86B]" />
                           {benefit.title}
                         </h4>
-                        <p className="text-[12px] font-light text-slate-600 mt-1 leading-relaxed">
+                        <p className="text-[12px] font-normal text-slate-900 mt-1 leading-relaxed">
                           {benefit.desc}
                         </p>
                       </div>
@@ -455,12 +455,12 @@ function Section8GuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     Who is Eligible to Register a Section 8 Company in India?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     Before starting the Section 8 incorporation process, ensure that your founding team meets the following mandatory criteria:
                   </p>
 
                   <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-5">
-                    <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                    <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                       <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                         <tr>
                           <th className="py-3 px-4 font-normal">Requirement</th>
@@ -520,7 +520,7 @@ function Section8GuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     What Documents Are Required for Section 8 Company Registration?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     Having the complete set of verified documents ready ensures quick name approval and seamless SPICe+ form processing:
                   </p>
 
@@ -530,7 +530,7 @@ function Section8GuideContent() {
                         <FileText className="w-4 h-4 text-[#00A86B]" />
                         Documents from Directors &amp; Promoters
                       </h4>
-                      <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
+                      <ul className="space-y-2 text-[12.5px] font-normal text-slate-900">
                         <li className="flex items-start gap-2">
                           <span className="text-[#00A86B] font-bold">✓</span>
                           <span>PAN Card of all proposed directors and shareholders (mandatory)</span>
@@ -559,7 +559,7 @@ function Section8GuideContent() {
                         <Building className="w-4 h-4 text-[#00A86B]" />
                         Documents for Registered Office Premises
                       </h4>
-                      <ul className="space-y-2 text-[12.5px] font-light text-slate-600">
+                      <ul className="space-y-2 text-[12.5px] font-normal text-slate-900">
                         <li className="flex items-start gap-2">
                           <span className="text-[#00A86B] font-bold">✓</span>
                           <span>Latest Electricity, Water, or Gas Bill (not older than 2 months)</span>
@@ -586,7 +586,7 @@ function Section8GuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     Step-by-Step Process for Section 8 Company Registration in India
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-5">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-5">
                     The registration process is entirely online through the MCA portal. Here is how our team guides you through the 5 essential milestones:
                   </p>
 
@@ -624,7 +624,7 @@ function Section8GuideContent() {
                         </div>
                         <div>
                           <h4 className="text-[14px] font-medium text-slate-900">{stepItem.title}</h4>
-                          <p className="text-[12.5px] font-light text-slate-600 mt-1 leading-relaxed">
+                          <p className="text-[12.5px] font-normal text-slate-900 mt-1 leading-relaxed">
                             {stepItem.desc}
                           </p>
                         </div>
@@ -638,14 +638,14 @@ function Section8GuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     Timeline and Fee Breakdown for Section 8 Company Registration
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     Estimated working days and typical government &amp; professional cost components:
                   </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {/* Timeline Table */}
                     <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs">
-                      <table className="w-full text-left text-[12px] font-light text-slate-700">
+                      <table className="w-full text-left text-[12px] font-normal text-slate-900">
                         <thead className="bg-[#FAF9F7] text-slate-800 font-normal border-b border-slate-200">
                           <tr>
                             <th className="py-2.5 px-3 font-normal">Milestone</th>
@@ -683,7 +683,7 @@ function Section8GuideContent() {
 
                     {/* Fees Breakdown Table */}
                     <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs">
-                      <table className="w-full text-left text-[12px] font-light text-slate-700">
+                      <table className="w-full text-left text-[12px] font-normal text-slate-900">
                         <thead className="bg-[#FAF9F7] text-slate-800 font-normal border-b border-slate-200">
                           <tr>
                             <th className="py-2.5 px-3 font-normal">Component</th>
@@ -726,12 +726,12 @@ function Section8GuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     Compliances After Section 8 Company Registration
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     Post-incorporation, every Section 8 company must fulfil mandatory annual MCA and Income Tax compliances to protect its legal standing and tax-exempt status:
                   </p>
 
                   <div className="overflow-x-auto rounded-xl border border-slate-200/90 shadow-2xs mb-5">
-                    <table className="w-full text-left text-[12.5px] font-light text-slate-700">
+                    <table className="w-full text-left text-[12.5px] font-normal text-slate-900">
                       <thead className="bg-[#FAF9F7] text-slate-800 text-[12.5px] font-normal border-b border-slate-200">
                         <tr>
                           <th className="py-3 px-4 font-normal">Compliance</th>
@@ -798,10 +798,10 @@ function Section8GuideContent() {
                   <h2 className="text-[18px] sm:text-[19px] font-normal text-[#1F1646] mb-3">
                     Why Choose Merrafilings for Section 8 Company Registration?
                   </h2>
-                  <p className="text-[13.5px] font-light text-slate-600 leading-relaxed mb-4">
+                  <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed mb-4">
                     Merrafilings is India&apos;s modern cloud compliance platform, assisting thousands of non-profits, foundations, and social impact leaders nationwide:
                   </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[13px] font-light text-slate-700">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[13px] font-normal text-slate-900">
                     <div className="flex items-center gap-2">
                       <span className="text-[#00A86B] font-bold">✓</span>
                       <span>Dedicated CA &amp; CS advisory team</span>
@@ -830,7 +830,7 @@ export default function Section8CompanyRegistrationPage() {
       badgeText="India's Most Prestigious Non-Profit Structure"
       heroTitle={
         <>
-          <span className="bg-gradient-to-r from-[#5C3BFF] via-[#7052FF] to-[#FF4ED0] bg-clip-text text-transparent font-light">
+          <span className="bg-gradient-to-r from-[#5C3BFF] via-[#7052FF] to-[#FF4ED0] bg-clip-text text-transparent font-normal">
             Section 8 Company
           </span>{" "}
           Registration in India

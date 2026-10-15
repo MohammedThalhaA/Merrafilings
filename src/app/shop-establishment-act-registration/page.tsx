@@ -237,7 +237,7 @@ function ShopActGuideContent() {
     <>
       {/* Intro */}
       <div>
-        <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+        <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed">
           The <strong className="font-medium text-slate-800">Shop and Establishment Act License</strong> is a mandatory state-level statutory authorization issued by the Department of Labour in every Indian state and union territory. Enacted to regulate terms of employment, working conditions, employee wages, and commercial operations across the unorganized and organized private sectors, this license applies universally to retail shops, commercial offices, software corporations, consulting agencies, restaurants, and service providers. Possessing an active Shop &amp; Establishment certificate is not only legally compulsory within 30 days of opening a physical commercial premises, but is also the foremost commercial document required by leading banks to <strong className="font-medium text-slate-800">open a commercial business current bank account</strong>.
         </p>
       </div>
@@ -247,10 +247,10 @@ function ShopActGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           1. What is a Shop and Establishment Act License in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           The Shop and Establishment Act is state-specific legislation enacted by respective state governments to govern the operational conduct of commercial establishments and protect employee rights. While the Factories Act, 1948 oversees industrial manufacturing units, the <strong>Shop and Establishment Act regulates all non-factory commercial entities</strong>—including retail shops, administrative corporate offices, financial firms, educational centers, hotels, and entertainment facilities.
         </p>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Commonly known as the <strong>Gumasta License</strong> in Maharashtra, <strong>e-Karmika</strong> in Karnataka, or <strong>Labour Department Registration</strong> in Delhi and other states, this certificate proves that your business enterprise is officially registered on municipal records and complies with state employment standards.
         </p>
 
@@ -258,17 +258,17 @@ function ShopActGuideContent() {
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/90 hover:bg-white hover:border-emerald-500 hover:shadow-md transition-all duration-200 cursor-pointer group">
             <Store className="w-5 h-5 text-emerald-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-semibold text-slate-900">Commercial Legitimacy</h4>
-            <p className="text-xs text-slate-600 font-light mt-1">Primary state proof of legal commercial establishment and trade address.</p>
+            <p className="text-xs text-slate-600 font-normal mt-1">Primary state proof of legal commercial establishment and trade address.</p>
           </div>
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/90 hover:bg-white hover:border-blue-500 hover:shadow-md transition-all duration-200 cursor-pointer group">
             <Building className="w-5 h-5 text-blue-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-semibold text-slate-900">Current Bank Account</h4>
-            <p className="text-xs text-slate-600 font-light mt-1">Recognized by all major scheduled banks as mandatory KYC to open business accounts.</p>
+            <p className="text-xs text-slate-600 font-normal mt-1">Recognized by all major scheduled banks as mandatory KYC to open business accounts.</p>
           </div>
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/90 hover:bg-white hover:border-purple-500 hover:shadow-md transition-all duration-200 cursor-pointer group">
             <Scale className="w-5 h-5 text-purple-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-semibold text-slate-900">Employee Rights Framework</h4>
-            <p className="text-xs text-slate-600 font-light mt-1">Governs working hours, overtime wages, maternity benefits, and statutory leaves.</p>
+            <p className="text-xs text-slate-600 font-normal mt-1">Governs working hours, overtime wages, maternity benefits, and statutory leaves.</p>
           </div>
         </div>
       </section>
@@ -278,7 +278,7 @@ function ShopActGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           2. Who Can Apply for Shop and Establishment Act Registration?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Any individual or business operating from a designated premises must obtain this registration. The Act categorizes establishments into two primary classifications:
         </p>
 
@@ -288,10 +288,10 @@ function ShopActGuideContent() {
               <Store className="w-4 h-4 text-emerald-600" />
               Shops &amp; Retail Outlets
             </h3>
-            <p className="text-xs text-slate-600 font-light leading-relaxed mb-2.5">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed mb-2.5">
               Any premises where goods are sold at retail or wholesale prices, or where personal services are rendered to customers:
             </p>
-            <ul className="space-y-1.5 text-xs text-slate-600 font-light">
+            <ul className="space-y-1.5 text-xs text-slate-600 font-normal">
               <li className="flex items-center gap-2">
                 <Check className="w-3.5 h-3.5 text-emerald-600" />
                 <span>Supermarkets, grocery stores, pharmacies &amp; apparel stores</span>
@@ -312,10 +312,10 @@ function ShopActGuideContent() {
               <Building className="w-4 h-4 text-blue-600" />
               Commercial Establishments &amp; Offices
             </h3>
-            <p className="text-xs text-slate-600 font-light leading-relaxed mb-2.5">
+            <p className="text-xs text-slate-600 font-normal leading-relaxed mb-2.5">
               Any premises carrying on trading, banking, consulting, software, or professional administrative operations:
             </p>
-            <ul className="space-y-1.5 text-xs text-slate-600 font-light">
+            <ul className="space-y-1.5 text-xs text-slate-600 font-normal">
               <li className="flex items-center gap-2">
                 <Check className="w-3.5 h-3.5 text-blue-600" />
                 <span>IT, ITES, software development &amp; tech startup offices</span>
@@ -342,11 +342,11 @@ function ShopActGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           3. Entities Exempt from Mandatory Shop Act Registration
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           While the Act applies widely, certain entities are granted statutory exemption from obtaining a municipal Shop Act registration:
         </p>
 
-        <ul className="space-y-2 text-xs sm:text-sm text-slate-600 font-light">
+        <ul className="space-y-2 text-xs sm:text-sm text-slate-600 font-normal">
           <li className="flex items-start gap-2">
             <span className="text-emerald-600 font-bold">✓</span>
             <span><strong>Government &amp; Public Sector Offices:</strong> Central government, state government, and local municipal administrative departments.</span>
@@ -375,25 +375,25 @@ function ShopActGuideContent() {
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/90 hover:bg-white hover:border-emerald-500 hover:shadow-md transition-all duration-200 cursor-pointer group">
             <Landmark className="w-5 h-5 text-emerald-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-[14px] font-semibold text-slate-900">Commercial Current Account Opening</h4>
-            <p className="text-xs text-slate-600 font-light mt-1">Mandatory KYC document demanded by banks (HDFC, ICICI, SBI, Axis) to verify commercial establishment proof.</p>
+            <p className="text-xs text-slate-600 font-normal mt-1">Mandatory KYC document demanded by banks (HDFC, ICICI, SBI, Axis) to verify commercial establishment proof.</p>
           </div>
 
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/90 hover:bg-white hover:border-blue-500 hover:shadow-md transition-all duration-200 cursor-pointer group">
             <ShieldCheck className="w-5 h-5 text-blue-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-[14px] font-semibold text-slate-900">Immunity from Municipal Inspection Fines</h4>
-            <p className="text-xs text-slate-600 font-light mt-1">Prevents harassment, spot fines, and closure notices from local municipal corporation labour inspectors.</p>
+            <p className="text-xs text-slate-600 font-normal mt-1">Prevents harassment, spot fines, and closure notices from local municipal corporation labour inspectors.</p>
           </div>
 
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/90 hover:bg-white hover:border-purple-500 hover:shadow-md transition-all duration-200 cursor-pointer group">
             <Award className="w-5 h-5 text-purple-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-[14px] font-semibold text-slate-900">Government Tenders &amp; Subsidy Eligibility</h4>
-            <p className="text-xs text-slate-600 font-light mt-1">Required to participate in local municipal supply contracts, state tenders, and MSME industrial subsidy schemes.</p>
+            <p className="text-xs text-slate-600 font-normal mt-1">Required to participate in local municipal supply contracts, state tenders, and MSME industrial subsidy schemes.</p>
           </div>
 
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/90 hover:bg-white hover:border-amber-500 hover:shadow-md transition-all duration-200 cursor-pointer group">
             <Users className="w-5 h-5 text-amber-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-[14px] font-semibold text-slate-900">Smooth Employee Dispute Resolution</h4>
-            <p className="text-xs text-slate-600 font-light mt-1">Standardizes employment terms, shielding management against frivolous wage and overtime disputes in labour courts.</p>
+            <p className="text-xs text-slate-600 font-normal mt-1">Standardizes employment terms, shielding management against frivolous wage and overtime disputes in labour courts.</p>
           </div>
         </div>
       </section>
@@ -403,7 +403,7 @@ function ShopActGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           5. Key Regulatory Features of the Shop and Establishment Act
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Every employer registered under the Act must operate within these prescribed employment boundaries:
         </p>
 
@@ -440,7 +440,7 @@ function ShopActGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           6. Documents Required for Shop and Establishment Registration
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Submit clear scanned copies of the following documents for fast verification:
         </p>
 
@@ -450,7 +450,7 @@ function ShopActGuideContent() {
               <Users className="w-4 h-4 text-emerald-600" />
               For Proprietorship &amp; Individual Traders
             </h3>
-            <ul className="space-y-2 text-xs text-slate-600 font-light">
+            <ul className="space-y-2 text-xs text-slate-600 font-normal">
               <li className="flex items-start gap-2">
                 <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
                 <span><strong>PAN Card &amp; Aadhaar Card:</strong> Self-attested identity proof of the business proprietor.</span>
@@ -475,7 +475,7 @@ function ShopActGuideContent() {
               <Building className="w-4 h-4 text-blue-600" />
               For Companies, LLPs &amp; Partnership Firms
             </h3>
-            <ul className="space-y-2 text-xs text-slate-600 font-light">
+            <ul className="space-y-2 text-xs text-slate-600 font-normal">
               <li className="flex items-start gap-2">
                 <Check className="w-3.5 h-3.5 text-blue-600 shrink-0 mt-0.5" />
                 <span><strong>Entity PAN &amp; Certificate:</strong> Certificate of Incorporation + MOA/AOA, or registered Partnership Deed.</span>
@@ -502,7 +502,7 @@ function ShopActGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           7. State-Wise Overview, Acts &amp; Validity Breakdown
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Each state enforces its distinct statutory title and fee structure. Below is a comparative snapshot across premier commercial hubs:
         </p>
 
@@ -574,7 +574,7 @@ function ShopActGuideContent() {
             <div className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs shrink-0">1</div>
             <div>
               <h4 className="text-sm font-semibold text-slate-900">State Jurisdiction &amp; Employee Slab Determination</h4>
-              <p className="text-xs text-slate-600 font-light mt-0.5">Determine the precise state labour department portal and fee slab based on employee headcount (0-9 vs 10+ employees).</p>
+              <p className="text-xs text-slate-600 font-normal mt-0.5">Determine the precise state labour department portal and fee slab based on employee headcount (0-9 vs 10+ employees).</p>
             </div>
           </div>
 
@@ -582,7 +582,7 @@ function ShopActGuideContent() {
             <div className="w-7 h-7 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs shrink-0">2</div>
             <div>
               <h4 className="text-sm font-semibold text-slate-900">Premises KYC &amp; Documentation Audit</h4>
-              <p className="text-xs text-slate-600 font-light mt-0.5">Our legal team audits lease deeds, utility bills, entity registration proofs, and signboard photographs to ensure zero department rejection.</p>
+              <p className="text-xs text-slate-600 font-normal mt-0.5">Our legal team audits lease deeds, utility bills, entity registration proofs, and signboard photographs to ensure zero department rejection.</p>
             </div>
           </div>
 
@@ -590,7 +590,7 @@ function ShopActGuideContent() {
             <div className="w-7 h-7 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-xs shrink-0">3</div>
             <div>
               <h4 className="text-sm font-semibold text-slate-900">Online State Labour Portal Filing &amp; Fee Lodgement</h4>
-              <p className="text-xs text-slate-600 font-light mt-0.5">The formal application is drafted, uploaded, and submitted with exact municipal treasury fees on the state labour department portal.</p>
+              <p className="text-xs text-slate-600 font-normal mt-0.5">The formal application is drafted, uploaded, and submitted with exact municipal treasury fees on the state labour department portal.</p>
             </div>
           </div>
 
@@ -598,7 +598,7 @@ function ShopActGuideContent() {
             <div className="w-7 h-7 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xs shrink-0">4</div>
             <div>
               <h4 className="text-sm font-semibold text-slate-900">Labour Inspector Clearance &amp; Certificate Delivery</h4>
-              <p className="text-xs text-slate-600 font-light mt-0.5">Upon approval by the area labour commissioner, your digitally signed, QR-coded Shop &amp; Establishment certificate is downloaded and delivered with free statutory register kits.</p>
+              <p className="text-xs text-slate-600 font-normal mt-0.5">Upon approval by the area labour commissioner, your digitally signed, QR-coded Shop &amp; Establishment certificate is downloaded and delivered with free statutory register kits.</p>
             </div>
           </div>
         </div>
@@ -609,7 +609,7 @@ function ShopActGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           9. Why Choose Merrafilings for Shop Act Registration?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Merrafilings manages municipal registrations for over 30,000+ businesses across India with dedicated legal care:
         </p>
 

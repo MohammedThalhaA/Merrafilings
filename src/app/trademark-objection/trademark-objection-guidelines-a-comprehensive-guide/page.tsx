@@ -33,7 +33,7 @@ export default function TrademarkObjectionGuidelinesPage() {
         <p className="text-[15px] leading-relaxed text-slate-700">
           Receiving a <strong className="font-semibold text-slate-900">Trademark Objection</strong> from the Trade Marks Registry is a common yet time-critical stage in the Indian trademark registration lifecycle. Governed by the <strong className="font-semibold text-slate-900">Trade Marks Act, 1999</strong> and <strong className="font-semibold text-slate-900">Rule 33 of the Trade Marks Rules, 2017</strong>, an objection represents a formal legal query raised by the Trademark Examiner during the substantive examination phase.
         </p>
-        <p className="text-[14.5px] leading-relaxed text-slate-600 font-light">
+        <p className="text-[14.5px] leading-relaxed text-slate-600 font-normal">
           It is crucial to understand that an objection is <strong className="font-medium text-slate-900">not a permanent rejection</strong>. Instead, it is an administrative show-cause opportunity providing the applicant a statutory window of <strong className="font-semibold text-rose-700">30 days</strong> to file a comprehensive written legal rebuttal. When drafted with authoritative judicial precedents and supported by prior commercial use evidence, a high percentage of objected marks proceed successfully to official Journal publication.
         </p>
       </div>
@@ -48,7 +48,7 @@ export default function TrademarkObjectionGuidelinesPage() {
             <h3 className="text-base font-semibold text-rose-950">
               Strict 30-Day Statutory Limitation Period
             </h3>
-            <p className="text-xs sm:text-sm text-rose-900/90 font-light mt-1 leading-relaxed">
+            <p className="text-xs sm:text-sm text-rose-900/90 font-normal mt-1 leading-relaxed">
               Under Rule 33, the applicant must file their written response within exactly 30 days from the date of dispatch or receipt of the Examination Report. Failure to lodge a reply within this period triggers automatic mark abandonment by the Registry under Section 132.
             </p>
           </div>
@@ -60,7 +60,7 @@ export default function TrademarkObjectionGuidelinesPage() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           Common Grounds for Trademark Objection in India
         </h2>
-        <p className="text-sm text-slate-600 font-light leading-relaxed">
+        <p className="text-sm text-slate-600 font-normal leading-relaxed">
           The Trade Marks Act, 1999 empowers the Examiner to object to an application primarily under two distinct statutory sections:
         </p>
 
@@ -71,10 +71,10 @@ export default function TrademarkObjectionGuidelinesPage() {
               <Scale className="w-4 h-4" />
               <span>Section 9: Absolute Grounds for Refusal</span>
             </div>
-            <p className="text-xs sm:text-sm text-slate-600 font-light leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed">
               Pertains to intrinsic defects in the mark itself. Common reasons include:
             </p>
-            <ul className="text-xs text-slate-600 font-light space-y-1.5 list-disc pl-4">
+            <ul className="text-xs text-slate-600 font-normal space-y-1.5 list-disc pl-4">
               <li><strong className="font-medium text-slate-800">Lack of Distinctiveness:</strong> Mark cannot differentiate your goods from others.</li>
               <li><strong className="font-medium text-slate-800">Descriptive Terms:</strong> Designates kind, quality, purpose, or geographical origin (e.g., &quot;Cold Drink&quot;).</li>
               <li><strong className="font-medium text-slate-800">Customary Language:</strong> Established phrases commonly used in current trade practices.</li>
@@ -88,10 +88,10 @@ export default function TrademarkObjectionGuidelinesPage() {
               <ShieldAlert className="w-4 h-4" />
               <span>Section 11: Relative Grounds for Refusal</span>
             </div>
-            <p className="text-xs sm:text-sm text-slate-600 font-light leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed">
               Pertains to conflicts with third-party pre-existing rights. Common reasons include:
             </p>
-            <ul className="text-xs text-slate-600 font-light space-y-1.5 list-disc pl-4">
+            <ul className="text-xs text-slate-600 font-normal space-y-1.5 list-disc pl-4">
               <li><strong className="font-medium text-slate-800">Identical Mark:</strong> Same wordmark or logo already registered for identical goods.</li>
               <li><strong className="font-medium text-slate-800">Deceptive Similarity:</strong> Phonetic, visual, or conceptual resemblance creating confusion.</li>
               <li><strong className="font-medium text-slate-800">Well-Known Trademarks:</strong> Mark conflicts with recognized famous marks under Section 11(6).</li>
@@ -107,7 +107,7 @@ export default function TrademarkObjectionGuidelinesPage() {
           Comparison: Section 9 vs. Section 11 Objections
         </h2>
         <div className="overflow-x-auto rounded-2xl border border-slate-200/80 shadow-xs">
-          <table className="w-full text-left border-collapse text-xs sm:text-sm font-light">
+          <table className="w-full text-left border-collapse text-xs sm:text-sm font-normal">
             <thead>
               <tr className="bg-slate-50/80 border-b border-slate-200/80 text-slate-800 font-medium">
                 <th className="p-3.5 sm:p-4">Key Dimension</th>
@@ -146,7 +146,7 @@ export default function TrademarkObjectionGuidelinesPage() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           How to Structure a Strong Trademark Objection Response
         </h2>
-        <p className="text-sm text-slate-600 font-light">
+        <p className="text-sm text-slate-600 font-normal">
           A successful objection reply requires a structured, multi-tier legal argument:
         </p>
 
@@ -157,7 +157,7 @@ export default function TrademarkObjectionGuidelinesPage() {
             </div>
             <div>
               <strong className="font-medium text-slate-900 block text-sm">Detailed Ground-by-Ground Rebuttal</strong>
-              <p className="text-xs text-slate-500 font-light mt-0.5">
+              <p className="text-xs text-slate-500 font-normal mt-0.5">
                 Address each specific objection paragraph cited by the Examiner separately. Never submit generic or one-line denials.
               </p>
             </div>
@@ -169,7 +169,7 @@ export default function TrademarkObjectionGuidelinesPage() {
             </div>
             <div>
               <strong className="font-medium text-slate-900 block text-sm">Anti-Dissection Rule &amp; Whole Mark Doctrine</strong>
-              <p className="text-xs text-slate-500 font-light mt-0.5">
+              <p className="text-xs text-slate-500 font-normal mt-0.5">
                 Under Section 17 of the Act, a trademark must be assessed in its commercial totality. Highlight that individual elements cannot be dissected in isolation to engineer a superficial similarity.
               </p>
             </div>
@@ -181,7 +181,7 @@ export default function TrademarkObjectionGuidelinesPage() {
             </div>
             <div>
               <strong className="font-medium text-slate-900 block text-sm">Relevant Judicial Precedents</strong>
-              <p className="text-xs text-slate-500 font-light mt-0.5">
+              <p className="text-xs text-slate-500 font-normal mt-0.5">
                 Cite authoritative rulings from the Supreme Court of India, High Courts (e.g. Delhi, Bombay, Madras), and IPAB decisions establishing registrability of comparable marks.
               </p>
             </div>
@@ -193,7 +193,7 @@ export default function TrademarkObjectionGuidelinesPage() {
             </div>
             <div>
               <strong className="font-medium text-slate-900 block text-sm">Notarized User Affidavit &amp; Documentary Exhibits</strong>
-              <p className="text-xs text-slate-500 font-light mt-0.5">
+              <p className="text-xs text-slate-500 font-normal mt-0.5">
                 Back claims of commercial goodwill with date-stamped tax invoices, audited sales turnover figures, packaging specimen photos, and marketing media expenditures.
               </p>
             </div>
@@ -207,7 +207,7 @@ export default function TrademarkObjectionGuidelinesPage() {
           Trademark Objection vs. Trademark Opposition
         </h2>
         <div className="overflow-x-auto rounded-2xl border border-slate-200/80 shadow-xs">
-          <table className="w-full text-left border-collapse text-xs sm:text-sm font-light">
+          <table className="w-full text-left border-collapse text-xs sm:text-sm font-normal">
             <thead>
               <tr className="bg-slate-50/80 border-b border-slate-200/80 text-slate-800 font-medium">
                 <th className="p-3.5 sm:p-4">Aspect</th>

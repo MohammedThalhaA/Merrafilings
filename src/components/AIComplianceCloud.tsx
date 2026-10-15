@@ -9,8 +9,14 @@ import {
   ShieldCheck,
   Users,
   CheckCircle2,
-  Sparkles,
   ArrowRight,
+  Clock,
+  Sparkles,
+  Award,
+  Check,
+  BadgeCheck,
+  FileText,
+  UserCheck,
 } from "lucide-react";
 
 interface AIComplianceCloudProps {
@@ -19,350 +25,268 @@ interface AIComplianceCloudProps {
 }
 
 export default function AIComplianceCloud({ onExplore, onBookDemo }: AIComplianceCloudProps) {
-  const [activeNode, setActiveNode] = useState<number | null>(null);
+  const [activeTab, setActiveTab] = useState<number>(0);
 
-  const nodes = [
+  const capabilities = [
     {
       id: 0,
-      title: "Business Registration",
-      icon: Building2,
-      color: "#2563EB",
-      stroke: "#60A5FA",
-      tag: "SPICe+ Part B & RUN Integration",
-      detail: "Direct MCA V3 integration with automated DIN & PAN generation",
+      tabLabel: "GST & Tax",
+      title: "GST Return Filing & Tax Advisory",
+      badge: "Dedicated CA Assigned",
+      icon: Receipt,
+      stat: "100%",
+      statLabel: "On-Time Filing Record",
+      statSub: "Guaranteed penalty-free compliance",
+      assurance: "Zero Late Filing Guarantee",
+      manager: "Senior Chartered Accountant",
+      desc: "Our experienced Chartered Accountants manage your complete monthly and quarterly GST filings. We thoroughly reconcile your Input Tax Credit (ITC) with GSTR-2B so you never overpay taxes or face government department notices.",
+      steps: [
+        "Send your monthly sales & purchase bills via email or simple portal upload",
+        "Your assigned CA verifies invoices and reconciles eligible Input Tax Credit (ITC) against GSTR-2B",
+        "Review your clear net tax calculation summary before any filing is submitted",
+        "Our CA files GSTR-1 & GSTR-3B on the government portal and delivers your official ARN receipt",
+      ],
     },
     {
       id: 1,
-      title: "GST Compliance",
-      icon: FileCheck2,
-      color: "#16A34A",
-      stroke: "#4ADE80",
-      tag: "GSP / GSTN Direct Pipe",
-      detail: "Instant GSTR-1, 3B auto-filing & 2B invoice reconciliation",
+      tabLabel: "MCA Secretarial",
+      title: "ROC & MCA Annual Secretarial Care",
+      badge: "Qualified CS Sign-off",
+      icon: Landmark,
+      stat: "₹0",
+      statLabel: "Late Filing Penalty",
+      statSub: "For all companies under our annual care",
+      assurance: "100% Companies Act Compliant",
+      manager: "Certified Company Secretary",
+      desc: "Never worry about complex Companies Act regulations. Our Company Secretaries prepare your annual financial disclosures, draft mandatory board minutes, and file Forms AOC-4 and MGT-7 with certified CS digital signatures.",
+      steps: [
+        "CA reviews your annual balance sheet, profit & loss, and financial statements",
+        "Company Secretary drafts mandatory Board Resolutions, Director's Report & AGM notices",
+        "Filing of Form AOC-4 (Financials) and MGT-7 (Annual Return) on the MCA V3 portal",
+        "Annual Director DIN eKYC updates and maintenance of mandatory statutory company registers",
+      ],
     },
     {
       id: 2,
-      title: "MCA Compliance",
-      icon: Landmark,
-      color: "#9333EA",
-      stroke: "#C084FC",
-      tag: "Annual ROC & KYC Engine",
-      detail: "AOC-4, MGT-7 statutory auto-generation and director validation",
+      tabLabel: "Trademark & IP",
+      title: "Trademark Protection & Brand Defense",
+      badge: "Registered IP Attorneys",
+      icon: ShieldCheck,
+      stat: "45",
+      statLabel: "Classes Monitored",
+      statSub: "Comprehensive national brand protection",
+      assurance: "Full Legal Representation",
+      manager: "Registered Trademark Attorney",
+      desc: "Protect your brand name, logo, and tagline with registered trademark lawyers. We conduct free comprehensive public searches, file Form TM-A so you can use the ™ symbol immediately, and defend your mark against competitor objections.",
+      steps: [
+        "Deep search across the Trade Marks Registry to confirm your brand name is legally available",
+        "Drafting and filing Form TM-A with the government to start using the ™ mark within 24 hours",
+        "Weekly tracking of the official government Trade Marks Journal for conflicting competitor marks",
+        "Professional legal drafting of formal replies if an examination report or objection is raised",
+      ],
     },
     {
       id: 3,
-      title: "Income Tax Filing",
-      icon: Receipt,
-      color: "#EA580C",
-      stroke: "#FB923C",
-      tag: "AIS & 26AS Tax Intelligence",
-      detail: "Pre-filled ITR computation and tax exemption audit trail",
-    },
-    {
-      id: 4,
-      title: "Trademark Protection",
-      icon: ShieldCheck,
-      color: "#E11D48",
-      stroke: "#F87171",
-      tag: "IP India Real-Time Watch",
-      detail: "Vienna code matching and automated trademark objection alerts",
-    },
-    {
-      id: 5,
-      title: "HR & Payroll",
+      tabLabel: "Payroll & Labour",
+      title: "Payroll & Employee Statutory Compliance",
+      badge: "Dedicated Labour Desk",
       icon: Users,
-      color: "#0D9488",
-      stroke: "#2DD4BF",
-      tag: "EPFO & ESIC Auto-Sync",
-      detail: "One-click salary disbursement, Form 16 & statutory Challans",
+      stat: "100%",
+      statLabel: "Accurate Payroll",
+      statSub: "Timely monthly challan generation",
+      assurance: "Zero Employee Welfare Defaults",
+      manager: "Senior Payroll Specialist",
+      desc: "Ensure seamless employee compliance without hiring an expensive internal HR legal department. We calculate monthly salaries, process EPF and ESIC challans, file Professional Tax, and generate Form 16 for your team members.",
+      steps: [
+        "Monthly attendance and salary computation with proper PF, ESIC & tax deductions",
+        "Electronic challan preparation and online payment processing for EPFO and ESIC",
+        "Monthly and annual Professional Tax (PT) return filing with respective state municipal bodies",
+        "Annual TDS compilation and automatic generation of Form 16 (Part A & B) for all staff",
+      ],
     },
   ];
 
+  const current = capabilities[activeTab];
+  const Icon = current.icon;
+
   return (
-    <section className="py-20 md:py-28 bg-white border-b border-[#E4E7EC]">
-      <div className="w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10">
+    <section className="py-10 md:py-14 bg-[#FAFAFA] border-b border-slate-200/80 font-sans relative overflow-hidden" id="compliance-care">
+      {/* Subtle ambient light bloom */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-r from-emerald-100/30 via-teal-100/20 to-blue-100/30 blur-3xl pointer-events-none rounded-full" />
+
+      <div className="w-full max-w-[1400px] 2xl:max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
           
-          {/* Left Column: Text Information (Matching Screenshot 2) */}
-          <div className="lg:col-span-5 space-y-6">
+          {/* Left Column: Editorial Information */}
+          <div className="lg:col-span-5 space-y-6 text-left">
             <div>
-              <span className="inline-block text-[11px] font-bold uppercase tracking-[0.15em] text-[#155EEF] mb-3">
-                AI-POWERED
-              </span>
-              <h2 className="text-[32px] sm:text-[38px] md:text-[42px] font-semibold tracking-tight text-[#111827] leading-[1.18]">
-                India compliance, automated
+              <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-emerald-800 bg-emerald-50/90 px-3 py-1 rounded-full border border-emerald-100 mb-3 shadow-2xs">
+                <BadgeCheck className="w-3.5 h-3.5 text-emerald-600" />
+                <span>CA &amp; CS Managed Advisory</span>
+              </div>
+              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-[#0F172A] leading-[1.18]">
+                Complete corporate compliance, handled by seasoned professionals.
               </h2>
             </div>
 
-            <p className="text-[15px] sm:text-[16px] text-[#475467] leading-relaxed">
-              Stay compliant in India with automated help for GST filing, income tax returns, ROC
-              compliance, and annual filings — with smart reminders and audit trails.
+            <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
+              No complicated software to learn, no confusing government portals to figure out. Our dedicated Chartered Accountants and Company Secretaries handle your taxes, company filings, and legal paperwork for you.
             </p>
 
-            <p className="text-[15px] sm:text-[16px] text-[#475467] leading-relaxed">
-              Connect banks, payment gateways, and government portals in one workflow so
-              reconciliations, journal posting, and return-ready records stay in sync. Teams can also
-              extend invoicing and compliance flows with developer-friendly APIs and webhooks.
+            <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
+              Simply share your invoices and basic documents with your assigned account manager. We review, verify, and complete all statutory filings directly with government authorities on your behalf.
             </p>
 
-            {/* Feature Highlights */}
-            <div className="pt-2 space-y-2.5">
-              <div className="flex items-center gap-2.5 text-[14px] text-[#111827] font-medium">
-                <CheckCircle2 className="w-4 h-4 text-[#15803D] shrink-0" />
-                <span>Zero manual entry: Direct connection to GSTN, MCA &amp; ITD</span>
+            {/* Feature Highlights with animated check icons */}
+            <div className="pt-2 space-y-3">
+              <div className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-900 font-medium group">
+                <div className="w-6 h-6 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0 group-hover:bg-emerald-100 transition-colors">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700" />
+                </div>
+                <span>Dedicated Chartered Accountant &amp; CS assigned to your account</span>
               </div>
-              <div className="flex items-center gap-2.5 text-[14px] text-[#111827] font-medium">
-                <CheckCircle2 className="w-4 h-4 text-[#15803D] shrink-0" />
-                <span>Automated AI reconciliation with 99.9% filing accuracy</span>
+              <div className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-900 font-medium group">
+                <div className="w-6 h-6 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0 group-hover:bg-emerald-100 transition-colors">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700" />
+                </div>
+                <span>Zero penalty assurance: all returns filed well before statutory deadlines</span>
               </div>
-              <div className="flex items-center gap-2.5 text-[14px] text-[#111827] font-medium">
-                <CheckCircle2 className="w-4 h-4 text-[#15803D] shrink-0" />
-                <span>Dual verification by AI algorithm and certified CA/CS</span>
+              <div className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-900 font-medium group">
+                <div className="w-6 h-6 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0 group-hover:bg-emerald-100 transition-colors">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700" />
+                </div>
+                <span>Dual-layer verification by licensed professionals before government submission</span>
               </div>
             </div>
 
             {/* Action Buttons */}
             <div className="pt-4 flex flex-wrap items-center gap-3">
               <button
+                type="button"
                 onClick={onExplore}
-                className="px-5 py-2.5 text-[14px] font-semibold text-white bg-[#155EEF] hover:bg-[#1849A9] rounded-xl shadow-xs hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 flex items-center gap-2 cursor-pointer group"
+                className="px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-medium text-white bg-slate-900 hover:bg-slate-800 rounded-full transition-all duration-200 flex items-center gap-2 cursor-pointer shadow-sm hover:shadow-md hover:-translate-y-0.5"
               >
-                <span>Explore AI Compliance</span>
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                <span>Explore All Services</span>
+                <ArrowRight className="w-4 h-4" />
               </button>
               <button
+                type="button"
                 onClick={onBookDemo}
-                className="px-5 py-2.5 text-[14px] font-semibold text-[#111827] bg-white border border-[#E4E7EC] hover:bg-[#F8FAFC] hover:border-slate-400 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 rounded-xl transition-all duration-200 cursor-pointer"
+                className="px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-medium text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 rounded-full transition-all duration-200 cursor-pointer shadow-2xs hover:-translate-y-0.5"
               >
-                Book a Live Demo
+                Schedule CA Consultation
               </button>
             </div>
           </div>
 
-          {/* Right Column: AI Compliance Cloud Interactive Diagram (Matching Screenshot 2) */}
+          {/* Right Column: Clean Professional Service Dossier with Single-Line Tabs */}
           <div className="lg:col-span-7">
-            <div className="relative bg-[#F8FAFC] rounded-3xl border border-[#E4E7EC] p-6 sm:p-8 md:p-10 shadow-xs overflow-hidden min-h-[480px] flex flex-col justify-between">
-              {/* Radial gradient background flair */}
-              <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-72 h-72 bg-[#155EEF]/5 rounded-full blur-3xl pointer-events-none" />
-
-              <div className="relative w-full flex flex-col md:flex-row items-center justify-between gap-6 md:gap-3 py-2 my-auto">
-                
-                {/* Center Hub: Dark box "MerraFilings AI COMPLIANCE CLOUD" */}
-                <div className="flex flex-col items-center justify-center shrink-0">
-                  <div className="relative w-[170px] sm:w-[195px] aspect-square rounded-3xl bg-[#0F172A] border border-[#1E293B] shadow-2xl p-5 flex flex-col items-center justify-center text-center group transition-all duration-300 hover:scale-[1.02]">
-                    {/* Glowing pulse ring */}
-                    <div className="absolute -inset-1.5 rounded-3xl bg-gradient-to-r from-[#155EEF]/30 via-[#10B981]/25 to-[#9333EA]/30 opacity-70 blur-md pointer-events-none -z-10" />
-
-                    {/* Logo inside Hub */}
-                    <div className="w-[104px] h-[34px] rounded-full border-2 border-[#15803D] bg-white flex items-center justify-center px-2 py-0.5 shadow-xs mb-3">
-                      <span className="text-[12px] font-bold text-[#15803D] leading-none">
-                        Merra<span className="text-[#EA580C]">Filings</span>
-                      </span>
-                    </div>
-
-                    <div className="space-y-0.5">
-                      <span className="inline-flex items-center gap-1 text-[9px] font-bold text-[#38BDF8] uppercase tracking-wider">
-                        <Sparkles className="w-2.5 h-2.5" /> AI Cloud
-                      </span>
-                      <p className="text-[11.5px] font-bold text-white uppercase tracking-wider leading-snug">
-                        AI COMPLIANCE
-                        <br />
-                        CLOUD
-                      </p>
-                    </div>
-
-                    <div className="mt-2.5 flex items-center gap-1.5 bg-[#1E293B]/70 px-2 py-0.5 rounded-full border border-white/5">
-                      <span className="relative flex h-1.5 w-1.5">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#10B981] opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#10B981]"></span>
-                      </span>
-                      <span className="text-[9.5px] text-[#94A3B8] font-mono">24/7 Active</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* SVG Curved Dashed Connectors (Desktop & Tablet) */}
-                <div className="hidden md:block flex-1 min-w-[80px] max-w-[150px] h-[348px] relative">
-                  <svg
-                    className="w-full h-full overflow-visible"
-                    viewBox="0 0 100 348"
-                    preserveAspectRatio="none"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+            
+            {/* 4 Tabs - STRICTLY IN THE SAME LINE using a 4-column grid */}
+            <div className="grid grid-cols-4 gap-1.5 sm:gap-2 mb-4 bg-slate-100/90 p-1.5 rounded-2xl border border-slate-200/80">
+              {capabilities.map((cap, idx) => {
+                const TabIcon = cap.icon;
+                const isActive = activeTab === idx;
+                return (
+                  <button
+                    key={cap.id}
+                    type="button"
+                    onClick={() => setActiveTab(idx)}
+                    className={`w-full py-2.5 sm:py-3 px-1 sm:px-3 rounded-xl text-center text-xs sm:text-[13px] font-medium transition-all duration-200 cursor-pointer flex items-center justify-center gap-1.5 whitespace-nowrap ${
+                      isActive
+                        ? "bg-[#0F172A] text-white shadow-xs scale-[1.01]"
+                        : "text-slate-600 hover:text-slate-900 hover:bg-white/80"
+                    }`}
                   >
-                    <defs>
-                      {/* Optional subtle glow filter for active lines */}
-                      <filter id="line-glow" x="-20%" y="-20%" width="140%" height="140%">
-                        <feGaussianBlur stdDeviation="2" result="blur" />
-                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                      </filter>
-                    </defs>
-
-                    {/* All 6 Continuous Streaming Dotted Lines */}
-                    {nodes.map((node, i) => {
-                      const yStart = 174;
-                      const yEnd = 24 + i * 60;
-                      const isHovered = activeNode === i;
-                      const pathD = `M 0 ${yStart} C 40 ${yStart}, 48 ${yEnd}, 100 ${yEnd}`;
-
-                      return (
-                        <g key={node.id}>
-                          {/* Background glow path when hovered */}
-                          {isHovered && (
-                            <path
-                              d={pathD}
-                              stroke={node.stroke}
-                              strokeWidth="5"
-                              strokeOpacity="0.4"
-                              filter="url(#line-glow)"
-                            />
-                          )}
-
-                          {/* Base animated flowing dotted path */}
-                          <path
-                            d={pathD}
-                            stroke={node.stroke}
-                            strokeWidth={isHovered ? "2.6" : "1.8"}
-                            strokeLinecap="round"
-                            className={`animate-flow-dash-${i}`}
-                            style={{
-                              transition: "stroke-width 0.2s, stroke 0.2s, opacity 0.2s",
-                              opacity: isHovered ? 1 : 0.85,
-                            }}
-                          />
-
-                          {/* Primary Traveling Luminous Data Packet */}
-                          <circle r={isHovered ? "3.5" : "2.8"} fill={node.color} opacity="0.95">
-                            <animateMotion
-                              path={pathD}
-                              dur={`${1.8 + i * 0.15}s`}
-                              repeatCount="indefinite"
-                            />
-                          </circle>
-
-                          {/* White Core of the Packet for vibrant sparkle */}
-                          <circle r="1.5" fill="#FFFFFF" opacity="0.95">
-                            <animateMotion
-                              path={pathD}
-                              dur={`${1.8 + i * 0.15}s`}
-                              repeatCount="indefinite"
-                            />
-                          </circle>
-
-                          {/* Secondary Staggered Packet */}
-                          <circle r="2.2" fill={node.color} opacity="0.75">
-                            <animateMotion
-                              path={pathD}
-                              dur={`${1.8 + i * 0.15}s`}
-                              begin={`${0.9 + i * 0.08}s`}
-                              repeatCount="indefinite"
-                            />
-                          </circle>
-
-                          {/* Terminal receiver dot at card entrance */}
-                          <circle
-                            cx="100"
-                            cy={yEnd}
-                            r={isHovered ? "3.5" : "2.5"}
-                            fill={node.color}
-                            opacity={isHovered ? "1" : "0.85"}
-                            style={{ transition: "r 0.2s, opacity 0.2s" }}
-                          />
-                        </g>
-                      );
-                    })}
-
-                    {/* Central Origin Emitter Beacon */}
-                    <circle cx="0" cy="174" r="6" fill="#10B981" opacity="0.25" className="animate-ping" />
-                    <circle cx="0" cy="174" r="4.5" fill="#0F172A" stroke="#10B981" strokeWidth="2" />
-                    <circle cx="0" cy="174" r="2.2" fill="#10B981" />
-                  </svg>
-                </div>
-
-                {/* Right Stack: 6 Connected Service Pill Cards */}
-                <div className="w-full md:w-[260px] lg:w-[280px] space-y-3 shrink-0">
-                  {nodes.map((node, i) => {
-                    const Icon = node.icon;
-                    const isActive = activeNode === i;
-
-                    return (
-                      <div
-                        key={node.id}
-                        onMouseEnter={() => setActiveNode(i)}
-                        onMouseLeave={() => setActiveNode(null)}
-                        className={`relative h-[48px] bg-white rounded-2xl border px-3.5 flex items-center justify-between transition-all duration-200 cursor-pointer shadow-2xs group ${
-                          isActive
-                            ? "shadow-md -translate-x-1.5"
-                            : "border-[#E4E7EC] hover:border-[#CBD5E1]"
-                        }`}
-                        style={{
-                          borderColor: isActive ? node.color : undefined,
-                          boxShadow: isActive ? `0 6px 16px -2px ${node.color}25` : undefined,
-                          backgroundColor: isActive ? `${node.color}06` : '#FFFFFF',
-                        }}
-                      >
-                        <div className="flex items-center gap-3 min-w-0">
-                          <div
-                            className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 transition-transform duration-200 ${
-                              isActive ? "scale-110" : "group-hover:scale-105"
-                            }`}
-                            style={{
-                              backgroundColor: `${node.color}15`,
-                              color: node.color,
-                            }}
-                          >
-                            <Icon className="w-4 h-4" />
-                          </div>
-                          <div className="min-w-0 flex-1">
-                            <span
-                              className="block text-[13.5px] font-semibold truncate transition-colors duration-200"
-                              style={{ color: isActive ? node.color : '#111827' }}
-                            >
-                              {node.title}
-                            </span>
-                          </div>
-                        </div>
-
-                        {/* Subtle Active Indicator Arrow in Matching Color */}
-                        <div className="flex items-center gap-1 shrink-0">
-                          <ArrowRight
-                            className={`w-3.5 h-3.5 transition-all duration-200 ${
-                              isActive ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1"
-                            }`}
-                            style={{ color: node.color }}
-                          />
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-
-              </div>
-
-              {/* Bottom Live Stream Intelligence Bar */}
-              <div className="w-full shrink-0 mt-5 pt-3.5 border-t border-[#E4E7EC] flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
-                {activeNode !== null ? (
-                  <div className="flex items-center gap-2 min-w-0 sm:flex-1 animate-in fade-in duration-150">
-                    <span
-                      className="w-2 h-2 rounded-full animate-pulse shrink-0"
-                      style={{ backgroundColor: nodes[activeNode].color }}
-                    />
-                    <span className="font-semibold text-[#111827] shrink-0">{nodes[activeNode].title}:</span>
-                    <span className="text-slate-600 font-light truncate min-w-0">{nodes[activeNode].detail}</span>
-                  </div>
-                ) : (
-                  <div className="flex items-center gap-2 text-slate-400 font-light min-w-0 sm:flex-1">
-                    <Sparkles className="w-3.5 h-3.5 text-[#155EEF] shrink-0" />
-                    <span className="truncate">Hover over any compliance channel to inspect live statutory pipelines &amp; integrations</span>
-                  </div>
-                )}
-                <div className="shrink-0 flex items-center gap-2 self-start sm:self-auto">
-                  <span className="text-[10.5px] font-mono px-2 py-0.5 rounded-full bg-slate-200/70 text-slate-700">
-                    {activeNode !== null ? nodes[activeNode].tag : "Direct API Sync"}
-                  </span>
-                </div>
-              </div>
+                    <TabIcon className={`w-3.5 h-3.5 shrink-0 hidden sm:inline-block ${isActive ? "text-emerald-400" : "text-slate-400"}`} />
+                    <span className="truncate">{cap.tabLabel}</span>
+                  </button>
+                );
+              })}
             </div>
+
+            {/* Clean White Feature Card with Professional Content */}
+            <div
+              key={activeTab}
+              className="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-8 shadow-sm text-left animate-in fade-in slide-in-from-bottom-2 duration-300"
+            >
+              
+              {/* Card Header with Professional Badges */}
+              <div className="flex flex-wrap items-center justify-between pb-5 border-b border-slate-100 gap-3">
+                <div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[11px] font-semibold uppercase tracking-wider text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">
+                      {current.badge}
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-slate-600 bg-slate-50 border border-slate-200/60 px-2.5 py-0.5 rounded-full">
+                      <UserCheck className="w-3.5 h-3.5 text-emerald-600" />
+                      <span>{current.manager}</span>
+                    </span>
+                  </div>
+                  <h3 className="font-serif text-xl sm:text-2xl font-normal text-slate-900 mt-2">
+                    {current.title}
+                  </h3>
+                </div>
+
+                <div className="text-right">
+                  <p className="font-serif text-2xl sm:text-3xl font-normal text-slate-900">
+                    {current.stat}
+                  </p>
+                  <p className="text-[11px] text-slate-500 font-medium">
+                    {current.statLabel}
+                  </p>
+                </div>
+              </div>
+
+              {/* Service Assurance Banner */}
+              <div className="mt-4 p-3.5 rounded-2xl bg-emerald-50/70 border border-emerald-100 flex items-center justify-between gap-4">
+                <div className="flex items-center gap-2.5 text-xs font-medium text-emerald-900">
+                  <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span>{current.assurance} • Dual Review by Certified Experts</span>
+                </div>
+                <span className="text-[11px] font-semibold text-emerald-800 bg-white px-2.5 py-1 rounded-lg border border-emerald-200/70 shrink-0 shadow-3xs">
+                  Done-For-You Service
+                </span>
+              </div>
+
+              {/* Description */}
+              <p className="mt-4 text-xs sm:text-sm text-slate-700 leading-relaxed font-normal">
+                {current.desc}
+              </p>
+
+              {/* 4 Professional Service Steps */}
+              <div className="mt-6 space-y-2.5">
+                <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">
+                  How Our Experts Handle It for You
+                </p>
+                {current.steps.map((st, sIdx) => (
+                  <div
+                    key={sIdx}
+                    className="flex items-start gap-3 p-3 rounded-xl bg-slate-50/80 border border-slate-100 hover:border-slate-200 hover:bg-white hover:shadow-xs transition-all duration-200 group"
+                  >
+                    <span className="w-5 h-5 rounded-full bg-emerald-100/80 text-emerald-800 text-[11px] font-semibold flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                      {sIdx + 1}
+                    </span>
+                    <span className="text-xs sm:text-[13px] text-slate-800 font-medium leading-relaxed">
+                      {st}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Verified Sign-Off Footer */}
+              <div className="mt-6 pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500">
+                <span className="flex items-center gap-1.5 font-medium text-slate-700">
+                  <Award className="w-4 h-4 text-emerald-600" />
+                  Dual CA / CS Regulatory Verification Included
+                </span>
+                <span className="font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-100/60">
+                  Audit-Ready 365 Days
+                </span>
+              </div>
+
+            </div>
+
           </div>
 
         </div>

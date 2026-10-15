@@ -204,7 +204,7 @@ function DSCGuideContent() {
     <>
       {/* Intro */}
       <div>
-        <p className="text-[13.5px] font-light text-slate-600 leading-relaxed">
+        <p className="text-[13.5px] font-normal text-slate-900 leading-relaxed">
           A <strong className="font-medium text-slate-800">Digital Signature Certificate (DSC)</strong> is the legal electronic equivalent of a physical signature, established under the <strong className="font-medium text-slate-800">Information Technology Act, 2000</strong>. Issued by licensed Certifying Authorities (CAs) under the guidance of the Controller of Certifying Authorities (CCA), Ministry of Electronics &amp; Information Technology (MeitY), a DSC utilizes robust public-key cryptography to ensure absolute identity authentication, data integrity, and non-repudiation in electronic transactions. Whether you are incorporating a company on the <strong className="font-medium text-slate-800">MCA portal</strong>, filing audited corporate tax returns with the <strong className="font-medium text-slate-800">Income Tax Department</strong>, or submitting competitive bids on <strong className="font-medium text-slate-800">government e-tendering portals (GeM, CPPP)</strong>, a Class 3 DSC is an indispensable statutory tool.
         </p>
       </div>
@@ -214,10 +214,10 @@ function DSCGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           1. What is a Digital Signature Certificate in India?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           A Digital Signature Certificate (DSC) is a cryptographically secured electronic file that serves as an identity card in the digital realm. Stored in a physical, password-protected <strong>FIPS 140-2 certified USB cryptographic token</strong>, the certificate contains the user&apos;s legal name, email address, country, issuing authority, and cryptographic public key.
         </p>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Whenever a document or form is signed using a DSC, a unique mathematical hash of the data is encrypted using the signer&apos;s private key. If even a single character or punctuation mark is modified after signing, the digital signature becomes immediately invalid, guaranteeing 100% tamper detection and legal enforceability under Indian law.
         </p>
 
@@ -225,17 +225,17 @@ function DSCGuideContent() {
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/90 hover:bg-white hover:border-emerald-500 hover:shadow-md transition-all duration-200 cursor-pointer group">
             <Lock className="w-5 h-5 text-emerald-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-semibold text-slate-900">Asymmetric Cryptography</h4>
-            <p className="text-xs text-slate-600 font-light mt-1">2048-bit RSA encryption keys ensure unbreachable data security and confidentiality.</p>
+            <p className="text-xs text-slate-600 font-normal mt-1">2048-bit RSA encryption keys ensure unbreachable data security and confidentiality.</p>
           </div>
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/90 hover:bg-white hover:border-blue-500 hover:shadow-md transition-all duration-200 cursor-pointer group">
             <Scale className="w-5 h-5 text-blue-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-semibold text-slate-900">Legal Admissibility</h4>
-            <p className="text-xs text-slate-600 font-light mt-1">Recognized under Section 65B of the Indian Evidence Act as indisputable court evidence.</p>
+            <p className="text-xs text-slate-600 font-normal mt-1">Recognized under Section 65B of the Indian Evidence Act as indisputable court evidence.</p>
           </div>
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/90 hover:bg-white hover:border-purple-500 hover:shadow-md transition-all duration-200 cursor-pointer group">
             <HardDrive className="w-5 h-5 text-purple-600 mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-sm font-semibold text-slate-900">FIPS USB Crypto Token</h4>
-            <p className="text-xs text-slate-600 font-light mt-1">Hardware-isolated crypto tokens prevent extraction or copying of the private key.</p>
+            <p className="text-xs text-slate-600 font-normal mt-1">Hardware-isolated crypto tokens prevent extraction or copying of the private key.</p>
           </div>
         </div>
       </section>
@@ -245,7 +245,7 @@ function DSCGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           2. Types of Digital Signature Certificates Available in India
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Over the years, the Controller of Certifying Authorities (CCA) has evolved the certification standards to maximize cybersecurity. Below is the historical and current framework:
         </p>
 
@@ -255,7 +255,7 @@ function DSCGuideContent() {
               <span className="w-2.5 h-2.5 rounded-full bg-slate-400"></span>
               Class 1 DSC (Discontinued)
             </h3>
-            <p className="text-xs sm:text-sm text-slate-600 font-light leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed">
               Previously issued to confirm only that the user&apos;s name and email address formed a valid record. It carried basic security and was strictly non-admissible for corporate compliance or statutory government filings.
             </p>
           </div>
@@ -265,7 +265,7 @@ function DSCGuideContent() {
               <span className="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
               Class 2 DSC (Discontinued by CCA as of Jan 1, 2021)
             </h3>
-            <p className="text-xs sm:text-sm text-slate-600 font-light leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed">
               Historically used for MCA, ROC, and Income Tax returns based on physical document verification. Under new CCA directives, Class 2 has been completely deprecated to upgrade national security to Class 3.
             </p>
           </div>
@@ -275,7 +275,7 @@ function DSCGuideContent() {
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-pulse"></span>
               Class 3 DSC (Current National Mandatory Standard)
             </h3>
-            <p className="text-xs sm:text-sm text-slate-700 font-light leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-700 font-normal leading-relaxed">
               The highest level of digital certification in India. It mandates rigorous identity verification (Aadhaar OTP + live video recording). <strong>Class 3 DSC is now compulsory across all platforms: MCA V3, Income Tax, GST, GeM, CPWD, Railways, and ICEGATE.</strong>
             </p>
           </div>
@@ -287,7 +287,7 @@ function DSCGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           3. Licensed Certifying Authorities in India
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Only Certifying Authorities licensed by the Controller of Certifying Authorities (CCA) have legal power to issue valid DSCs. Merrafilings partners directly with India&apos;s leading licensed CAs:
         </p>
 
@@ -342,7 +342,7 @@ function DSCGuideContent() {
               <Fingerprint className="w-4 h-4" />
             </div>
             <h4 className="text-[14px] font-semibold text-slate-900">Identity Authentication</h4>
-            <p className="text-xs text-slate-600 font-light mt-1">Conclusively confirms that the electronic transmission originated from the authorized director, proprietor, or representative.</p>
+            <p className="text-xs text-slate-600 font-normal mt-1">Conclusively confirms that the electronic transmission originated from the authorized director, proprietor, or representative.</p>
           </div>
 
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/90 hover:bg-white hover:border-blue-500 hover:shadow-md transition-all duration-200 cursor-pointer group">
@@ -350,7 +350,7 @@ function DSCGuideContent() {
               <FileCheck className="w-4 h-4" />
             </div>
             <h4 className="text-[14px] font-semibold text-slate-900">Unbreachable Data Integrity</h4>
-            <p className="text-xs text-slate-600 font-light mt-1">Any post-signing alteration automatically breaks the mathematical hash, alerting recipients to unauthorized file modifications.</p>
+            <p className="text-xs text-slate-600 font-normal mt-1">Any post-signing alteration automatically breaks the mathematical hash, alerting recipients to unauthorized file modifications.</p>
           </div>
 
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/90 hover:bg-white hover:border-purple-500 hover:shadow-md transition-all duration-200 cursor-pointer group">
@@ -358,7 +358,7 @@ function DSCGuideContent() {
               <Scale className="w-4 h-4" />
             </div>
             <h4 className="text-[14px] font-semibold text-slate-900">Legal Non-Repudiation</h4>
-            <p className="text-xs text-slate-600 font-light mt-1">The signer cannot legally claim that the document was forged or signed without their authorization under IT Act Section 15.</p>
+            <p className="text-xs text-slate-600 font-normal mt-1">The signer cannot legally claim that the document was forged or signed without their authorization under IT Act Section 15.</p>
           </div>
 
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/90 hover:bg-white hover:border-amber-500 hover:shadow-md transition-all duration-200 cursor-pointer group">
@@ -366,7 +366,7 @@ function DSCGuideContent() {
               <HardDrive className="w-4 h-4" />
             </div>
             <h4 className="text-[14px] font-semibold text-slate-900">Hardware Token Portability</h4>
-            <p className="text-xs text-slate-600 font-light mt-1">Compact USB crypto token allows secure, paperless signing from any computer worldwide with plug-and-play ease.</p>
+            <p className="text-xs text-slate-600 font-normal mt-1">Compact USB crypto token allows secure, paperless signing from any computer worldwide with plug-and-play ease.</p>
           </div>
         </div>
       </section>
@@ -376,7 +376,7 @@ function DSCGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           5. Documents Required for DSC Registration in India
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Merrafilings offers 100% paperless verification. Prepare digital copies of the following documents:
         </p>
 
@@ -386,7 +386,7 @@ function DSCGuideContent() {
               <Users className="w-4 h-4 text-emerald-600" />
               For Individual Applicants (Directors / CAs / Partners)
             </h3>
-            <ul className="space-y-2 text-xs text-slate-600 font-light">
+            <ul className="space-y-2 text-xs text-slate-600 font-normal">
               <li className="flex items-start gap-2">
                 <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
                 <span><strong>PAN Card:</strong> Self-attested copy of applicant&apos;s PAN card.</span>
@@ -415,7 +415,7 @@ function DSCGuideContent() {
               <Building className="w-4 h-4 text-blue-600" />
               For Organization DSC (Companies / LLPs / Trusts)
             </h3>
-            <ul className="space-y-2 text-xs text-slate-600 font-light">
+            <ul className="space-y-2 text-xs text-slate-600 font-normal">
               <li className="flex items-start gap-2">
                 <Check className="w-3.5 h-3.5 text-blue-600 shrink-0 mt-0.5" />
                 <span><strong>Entity PAN Card:</strong> Copy of the Company, LLP, or Firm PAN.</span>
@@ -446,7 +446,7 @@ function DSCGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           6. How to Obtain a Digital Signature Certificate Online in India
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Obtaining a Class 3 DSC with Merrafilings is rapid and fully digital:
         </p>
 
@@ -455,7 +455,7 @@ function DSCGuideContent() {
             <div className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs shrink-0">1</div>
             <div>
               <h4 className="text-sm font-semibold text-slate-900">Select Certificate Type &amp; Order Online</h4>
-              <p className="text-xs text-slate-600 font-light mt-0.5">Choose your certificate category (Individual Signing, Organization Combo, or DGFT) and preferred validity period.</p>
+              <p className="text-xs text-slate-600 font-normal mt-0.5">Choose your certificate category (Individual Signing, Organization Combo, or DGFT) and preferred validity period.</p>
             </div>
           </div>
 
@@ -463,7 +463,7 @@ function DSCGuideContent() {
             <div className="w-7 h-7 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs shrink-0">2</div>
             <div>
               <h4 className="text-sm font-semibold text-slate-900">Complete Paperless Aadhaar e-KYC</h4>
-              <p className="text-xs text-slate-600 font-light mt-0.5">Submit your PAN and Aadhaar number to trigger instant OTP verification directly with the Certifying Authority.</p>
+              <p className="text-xs text-slate-600 font-normal mt-0.5">Submit your PAN and Aadhaar number to trigger instant OTP verification directly with the Certifying Authority.</p>
             </div>
           </div>
 
@@ -471,7 +471,7 @@ function DSCGuideContent() {
             <div className="w-7 h-7 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-xs shrink-0">3</div>
             <div>
               <h4 className="text-sm font-semibold text-slate-900">15-Second Video Verification</h4>
-              <p className="text-xs text-slate-600 font-light mt-0.5">Click the CA verification link sent to your phone, record a quick 15-second selfie video reading the on-screen code and showing your original ID.</p>
+              <p className="text-xs text-slate-600 font-normal mt-0.5">Click the CA verification link sent to your phone, record a quick 15-second selfie video reading the on-screen code and showing your original ID.</p>
             </div>
           </div>
 
@@ -479,7 +479,7 @@ function DSCGuideContent() {
             <div className="w-7 h-7 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xs shrink-0">4</div>
             <div>
               <h4 className="text-sm font-semibold text-slate-900">Instant CA Approval &amp; FIPS USB Token Delivery</h4>
-              <p className="text-xs text-slate-600 font-light mt-0.5">Within 30 minutes of video submission, the CA approves the certificate. We configure the hardware USB crypto token and ship it via express courier, providing free remote driver setup.</p>
+              <p className="text-xs text-slate-600 font-normal mt-0.5">Within 30 minutes of video submission, the CA approves the certificate. We configure the hardware USB crypto token and ship it via express courier, providing free remote driver setup.</p>
             </div>
           </div>
         </div>
@@ -490,7 +490,7 @@ function DSCGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           7. Digital Signature Certificate Pricing &amp; Validity Breakdown
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           The investment for a Digital Signature Certificate depends on its class, cryptographic key combination, and statutory validity:
         </p>
 
@@ -533,7 +533,7 @@ function DSCGuideContent() {
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
           8. Why Choose Merrafilings for Digital Signature Services?
         </h2>
-        <p className="text-sm leading-relaxed text-slate-600 font-light">
+        <p className="text-sm leading-relaxed text-slate-600 font-normal">
           Merrafilings is India&apos;s leading legal-tech platform, processing over 25,000+ DSC applications annually with unmatched reliability:
         </p>
 

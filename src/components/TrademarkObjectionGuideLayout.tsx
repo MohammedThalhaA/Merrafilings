@@ -226,7 +226,7 @@ export default function TrademarkObjectionGuideLayout({
                   <div className="text-[14.5px] font-medium text-slate-800 group-hover:text-[#155EEF] transition-colors">
                     Consult <span className="text-[#155EEF]">Experts</span>
                   </div>
-                  <div className="text-[11.5px] text-slate-500 font-light">
+                  <div className="text-[11.5px] text-slate-500 font-normal">
                     Direct call with senior trademark advocates
                   </div>
                 </div>
@@ -281,7 +281,7 @@ export default function TrademarkObjectionGuideLayout({
                 <h4 className="text-[15px] font-medium text-slate-900 leading-snug">
                   Get Free Examination Report Review
                 </h4>
-                <p className="text-[12px] text-slate-500 font-light mt-1">
+                <p className="text-[12px] text-slate-500 font-normal mt-1">
                   Upload or share your application number for a complimentary analysis of Section 9 or 11 objections by our attorneys.
                 </p>
               </div>
@@ -306,7 +306,7 @@ export default function TrademarkObjectionGuideLayout({
                 </div>
                 <div>
                   <div className="text-sm font-medium leading-tight">Live chat with experts</div>
-                  <div className="text-[11px] text-emerald-100 font-light">Available for urgent filings</div>
+                  <div className="text-[11px] text-emerald-100 font-normal">Available for urgent filings</div>
                 </div>
               </div>
               <ChevronRight className="w-5 h-5 text-emerald-100" />
