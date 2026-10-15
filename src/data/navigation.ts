@@ -124,10 +124,10 @@ export const NAV_CATEGORIES: NavCategory[] = [
         // Column 2 from Screenshot 1
         [
           { title: "GST Registration for Foreigners", href: "/gst-registration-for-foreigners" },
-          { title: "GST Amendment", href: "#gst-amend" },
-          { title: "GST Revocation", href: "#gst-revocation" },
-          { title: "GSTR-10", href: "#gstr-10" },
-          { title: "Virtual Office + GSTIN", href: "#virtual-office" },
+          { title: "GST Amendment", href: "/gst-amendment" },
+          { title: "GST Revocation", href: "/gst-revocation" },
+          { title: "GSTR-10", href: "/gstr-10" },
+          { title: "Virtual Office + GSTIN", href: "/virtual-office" },
         ],
       ],
     },
