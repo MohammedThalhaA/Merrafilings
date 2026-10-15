@@ -150,28 +150,28 @@ const FAQ_COL_2 = [
 
 const RELATED_GUIDES = [
   {
+    title: "Understanding GST Revocation: How to Apply",
+    href: "/gst-revocation/gst-revocation-how-to-apply-effectively",
+  },
+  {
+    title: "Understanding GST Revocation: A Comprehensive Guide",
+    href: "/gst-revocation/comprehensive-gst-revocation-guide",
+  },
+  {
+    title: "GST Revocation Guide",
+    href: "/gst-revocation/gst-revocation-guide",
+  },
+  {
+    title: "Introduction to GST Revocation Filing",
+    href: "/gst-revocation/gst-revocation-filing-guide-process-tips",
+  },
+  {
+    title: "GST Revocation in 5 Easy Steps with Merrafilings",
+    href: "/gst-revocation/gst-revocation-guide-in-5-easy-steps",
+  },
+  {
     title: "GST Registration Amendment Online: Update Core & Non-Core Details",
     href: "/gst-amendment",
-  },
-  {
-    title: "GSTR-10 Final Return Filing: Due Date, Late Fees & Process",
-    href: "/gstr-10",
-  },
-  {
-    title: "GST Notice Reply & Legal Response Solutions in India",
-    href: "/gst-notice",
-  },
-  {
-    title: "Virtual Office Online for GST & MCA Company Registration",
-    href: "/virtual-office",
-  },
-  {
-    title: "GST Return Filing by Accountants: Form GSTR-1 & 3B",
-    href: "/gst-return-filing",
-  },
-  {
-    title: "GST Registration Online: Process, Eligibility & Documentation",
-    href: "/gst-registration",
   },
 ];
 
