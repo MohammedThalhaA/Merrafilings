@@ -151,28 +151,28 @@ const FAQ_COL_2 = [
 
 const RELATED_GUIDES = [
   {
+    title: "Understanding the GST-10 Process: A Business Necessity",
+    href: "/gstr-10/understanding-the-gst10-process-business-needs",
+  },
+  {
+    title: "GSTR-10: Ultimate Guide on Final Return Filing",
+    href: "/gstr-10/gstr10-filing-ultimate-guide",
+  },
+  {
+    title: "Understanding GSTR-10: Comprehensive Guide for Taxpayers",
+    href: "/gstr-10/understanding-gstr10-comprehensive-taxpayer-guide",
+  },
+  {
+    title: "GSTR-10 Filing Explained: Who Needs to File and When?",
+    href: "/gstr-10/gstr10-filing-who-needs-to-file-and-when",
+  },
+  {
+    title: "Understanding the GSTR 10 Process: A Comprehensive Guide",
+    href: "/gstr-10/understanding-the-gstr-10-process-guide",
+  },
+  {
     title: "GST Registration Revocation: Restore Cancelled GSTIN Online",
     href: "/gst-revocation",
-  },
-  {
-    title: "GST Registration Amendment Online: Update Core & Non-Core Details",
-    href: "/gst-amendment",
-  },
-  {
-    title: "Virtual Office Online for GST & MCA Company Registration",
-    href: "/virtual-office",
-  },
-  {
-    title: "GST Notice Reply & Legal Response Solutions in India",
-    href: "/gst-notice",
-  },
-  {
-    title: "GST Annual Return Filing (GSTR-9 & GSTR-9C) Complete Guide",
-    href: "/gst-annual-return",
-  },
-  {
-    title: "GST Return Filing by Accountants: Form GSTR-1 & 3B",
-    href: "/gst-return-filing",
   },
 ];
 
