@@ -92,9 +92,9 @@ export default function GstRevocationHowToApplyEffectivelyPage() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-2 group-hover:text-[#5C3BFF] transition-colors">
-                <Ban className="w-4 h-4 text-red-600" />
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-red-500 hover:shadow-xl hover:shadow-red-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-2 group-hover:text-red-600 transition-colors">
+                <Ban className="w-4 h-4 text-red-600 shrink-0" />
                 <span>Operational Paralysis</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -102,9 +102,9 @@ export default function GstRevocationHowToApplyEffectivelyPage() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-2 group-hover:text-[#5C3BFF] transition-colors">
-                <Receipt className="w-4 h-4 text-amber-600" />
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-amber-500 hover:shadow-xl hover:shadow-amber-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-2 group-hover:text-amber-600 transition-colors">
+                <Receipt className="w-4 h-4 text-amber-600 shrink-0" />
                 <span>ITC Blockade for Buyers</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -112,9 +112,9 @@ export default function GstRevocationHowToApplyEffectivelyPage() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-2 group-hover:text-[#5C3BFF] transition-colors">
-                <ShieldCheck className="w-4 h-4 text-emerald-600" />
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-emerald-500 hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-2 group-hover:text-emerald-600 transition-colors">
+                <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
                 <span>Restoration of Business Standing</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -135,9 +135,9 @@ export default function GstRevocationHowToApplyEffectivelyPage() {
           </p>
 
           <div className="space-y-3 my-4">
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 text-xs mb-1 group-hover:text-[#5C3BFF] transition-colors">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-emerald-500 hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 text-xs mb-1 group-hover:text-emerald-600 transition-colors">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                 <span>1. Filing All Due Returns Up to Cancellation Date</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -145,9 +145,9 @@ export default function GstRevocationHowToApplyEffectivelyPage() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 text-xs mb-1 group-hover:text-[#5C3BFF] transition-colors">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-emerald-500 hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 text-xs mb-1 group-hover:text-emerald-600 transition-colors">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                 <span>2. Full Discharge of Outstanding Taxes, Interest &amp; Late Fees</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -155,9 +155,9 @@ export default function GstRevocationHowToApplyEffectivelyPage() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 text-xs mb-1 group-hover:text-[#5C3BFF] transition-colors">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-emerald-500 hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 text-xs mb-1 group-hover:text-emerald-600 transition-colors">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                 <span>3. Gathering Documentary Justification &amp; Authority Resolutions</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -178,50 +178,50 @@ export default function GstRevocationHowToApplyEffectivelyPage() {
           </p>
 
           <div className="space-y-4 my-6">
-            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
               <div className="flex items-center gap-3 mb-2">
                 <span className="w-6 h-6 rounded-full bg-indigo-50 text-indigo-700 font-bold text-xs flex items-center justify-center shrink-0 border border-indigo-200">1</span>
-                <h3 className="text-sm font-semibold text-slate-900 group-hover:text-[#5C3BFF] transition-colors">Step 1: Authenticate on the GST Common Portal</h3>
+                <h3 className="text-sm font-semibold text-slate-900 group-hover:text-indigo-600 transition-colors">Step 1: Authenticate on the GST Common Portal</h3>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed pl-9">
                 Navigate to <code className="font-mono text-slate-800">services.gst.gov.in</code>. Log in using your existing Username and Password. Even though registration is cancelled, portal access remains available for compliance and revocation purposes.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
               <div className="flex items-center gap-3 mb-2">
                 <span className="w-6 h-6 rounded-full bg-indigo-50 text-indigo-700 font-bold text-xs flex items-center justify-center shrink-0 border border-indigo-200">2</span>
-                <h3 className="text-sm font-semibold text-slate-900 group-hover:text-[#5C3BFF] transition-colors">Step 2: Access the Revocation Form</h3>
+                <h3 className="text-sm font-semibold text-slate-900 group-hover:text-indigo-600 transition-colors">Step 2: Access the Revocation Form</h3>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed pl-9">
                 Click on the <strong className="text-slate-800 font-semibold">&apos;Services&apos;</strong> tab on the main dashboard, select <strong className="text-slate-800 font-semibold">&apos;Registration&apos;</strong>, and click on <strong className="text-slate-800 font-semibold">&apos;Application for Revocation of Cancelled Registration&apos;</strong>.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
               <div className="flex items-center gap-3 mb-2">
                 <span className="w-6 h-6 rounded-full bg-indigo-50 text-indigo-700 font-bold text-xs flex items-center justify-center shrink-0 border border-indigo-200">3</span>
-                <h3 className="text-sm font-semibold text-slate-900 group-hover:text-[#5C3BFF] transition-colors">Step 3: Articulate Reasons for Revocation</h3>
+                <h3 className="text-sm font-semibold text-slate-900 group-hover:text-indigo-600 transition-colors">Step 3: Articulate Reasons for Revocation</h3>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed pl-9">
                 Review the pre-populated cancellation order details (Form GST REG-19 number and date). In the text box labeled <strong className="text-slate-800 font-semibold">&apos;Reasons for Revocation&apos;</strong>, articulate clearly why cancellation occurred, confirm that all returns and taxes are fully discharged, and request restoration.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
               <div className="flex items-center gap-3 mb-2">
                 <span className="w-6 h-6 rounded-full bg-indigo-50 text-indigo-700 font-bold text-xs flex items-center justify-center shrink-0 border border-indigo-200">4</span>
-                <h3 className="text-sm font-semibold text-slate-900 group-hover:text-[#5C3BFF] transition-colors">Step 4: Attach Supporting Evidence &amp; Proofs</h3>
+                <h3 className="text-sm font-semibold text-slate-900 group-hover:text-indigo-600 transition-colors">Step 4: Attach Supporting Evidence &amp; Proofs</h3>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed pl-9">
                 Upload verified PDF documents supporting your explanation: proof of tax payment challans, copy of filed returns acknowledgments, bank statements, and condonation petitions if applying beyond 90 days.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
               <div className="flex items-center gap-3 mb-2">
                 <span className="w-6 h-6 rounded-full bg-indigo-50 text-indigo-700 font-bold text-xs flex items-center justify-center shrink-0 border border-indigo-200">5</span>
-                <h3 className="text-sm font-semibold text-slate-900 group-hover:text-[#5C3BFF] transition-colors">Step 5: Sign Digitally &amp; Generate ARN</h3>
+                <h3 className="text-sm font-semibold text-slate-900 group-hover:text-indigo-600 transition-colors">Step 5: Sign Digitally &amp; Generate ARN</h3>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed pl-9">
                 Check the verification box, select the Authorized Signatory, enter the location, and submit using a Class 3 Digital Signature Certificate (mandatory for Companies and LLPs) or Electronic Verification Code (EVC) via Aadhaar OTP. A 15-digit ARN is issued immediately.
@@ -286,37 +286,41 @@ export default function GstRevocationHowToApplyEffectivelyPage() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-1 group-hover:text-[#5C3BFF] transition-colors">
-                1. Applying Without Filing All Overdue Returns
-              </h3>
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-red-500 hover:shadow-xl hover:shadow-red-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 mb-1.5 font-bold text-slate-900 text-xs uppercase tracking-wider group-hover:text-red-600 transition-colors">
+                <Ban className="w-4 h-4 text-red-600 shrink-0" />
+                <span>1. Applying Without Filing All Overdue Returns</span>
+              </div>
               <p className="text-xs text-slate-600 leading-relaxed">
                 Filing Form GST REG-21 before filing all defaulting returns up to cancellation date leads to immediate rejection by the portal or the proper officer.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-1 group-hover:text-[#5C3BFF] transition-colors">
-                2. Overlooking the Limitation Period
-              </h3>
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-amber-500 hover:shadow-xl hover:shadow-amber-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 mb-1.5 font-bold text-slate-900 text-xs uppercase tracking-wider group-hover:text-amber-600 transition-colors">
+                <Clock className="w-4 h-4 text-amber-600 shrink-0" />
+                <span>2. Overlooking the Limitation Period</span>
+              </div>
               <p className="text-xs text-slate-600 leading-relaxed">
                 Applying beyond 90 days without attaching a formally drafted Condonation of Delay petition addressing the Additional/Joint Commissioner leads to jurisdictional dismissal.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-1 group-hover:text-[#5C3BFF] transition-colors">
-                3. Submitting Vague or Unsubstantiated Justifications
-              </h3>
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-orange-500 hover:shadow-xl hover:shadow-orange-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 mb-1.5 font-bold text-slate-900 text-xs uppercase tracking-wider group-hover:text-orange-600 transition-colors">
+                <AlertCircle className="w-4 h-4 text-orange-600 shrink-0" />
+                <span>3. Submitting Vague or Unsubstantiated Justifications</span>
+              </div>
               <p className="text-xs text-slate-600 leading-relaxed">
                 Merely writing &quot;business loss&quot; or &quot;oversight&quot; without financial records or medical documents gives the officer legal grounds to issue an SCN in REG-23.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-1 group-hover:text-[#5C3BFF] transition-colors">
-                4. Defaulting on the 7-Day SCN Reply Window
-              </h3>
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-red-500 hover:shadow-xl hover:shadow-red-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 mb-1.5 font-bold text-slate-900 text-xs uppercase tracking-wider group-hover:text-red-600 transition-colors">
+                <AlertTriangle className="w-4 h-4 text-red-600 shrink-0" />
+                <span>4. Defaulting on the 7-Day SCN Reply Window</span>
+              </div>
               <p className="text-xs text-slate-600 leading-relaxed">
                 Failing to submit Form GST REG-24 within 7 working days of receiving Form GST REG-23 results in automatic issuance of a rejection order in Form GST REG-05.
               </p>

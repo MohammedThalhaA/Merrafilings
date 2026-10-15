@@ -91,9 +91,9 @@ export default function GstRevocationGuidePage() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-1.5 group-hover:text-[#5C3BFF] transition-colors">
-                <Clock className="w-4 h-4 text-indigo-600" />
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-1.5 group-hover:text-indigo-600 transition-colors">
+                <Clock className="w-4 h-4 text-indigo-600 shrink-0" />
                 <span>Return Non-Filing Defaults</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -101,9 +101,9 @@ export default function GstRevocationGuidePage() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-1.5 group-hover:text-[#5C3BFF] transition-colors">
-                <BarChart3 className="w-4 h-4 text-emerald-600" />
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-emerald-500 hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-1.5 group-hover:text-emerald-600 transition-colors">
+                <BarChart3 className="w-4 h-4 text-emerald-600 shrink-0" />
                 <span>Automated Return Discrepancies</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -111,9 +111,9 @@ export default function GstRevocationGuidePage() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-1.5 group-hover:text-[#5C3BFF] transition-colors">
-                <Building2 className="w-4 h-4 text-purple-600" />
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-purple-500 hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-1.5 group-hover:text-purple-600 transition-colors">
+                <Building2 className="w-4 h-4 text-purple-600 shrink-0" />
                 <span>Failed Physical Verification</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -121,9 +121,9 @@ export default function GstRevocationGuidePage() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-1.5 group-hover:text-[#5C3BFF] transition-colors">
-                <ShieldCheck className="w-4 h-4 text-red-600" />
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-red-500 hover:shadow-xl hover:shadow-red-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-1.5 group-hover:text-red-600 transition-colors">
+                <ShieldCheck className="w-4 h-4 text-red-600 shrink-0" />
                 <span>Misuse of Registration &amp; Fake Invoicing</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -189,8 +189,8 @@ export default function GstRevocationGuidePage() {
           </p>
 
           <div className="space-y-3.5 my-6">
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 text-xs mb-1 group-hover:text-[#5C3BFF] transition-colors">
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 text-xs mb-1 group-hover:text-indigo-600 transition-colors">
                 <span className="w-5 h-5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center shrink-0">1</span>
                 <span>Phase 1: Notice Issuance &amp; Order Passing</span>
               </div>
@@ -199,8 +199,8 @@ export default function GstRevocationGuidePage() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 text-xs mb-1 group-hover:text-[#5C3BFF] transition-colors">
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 text-xs mb-1 group-hover:text-indigo-600 transition-colors">
                 <span className="w-5 h-5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center shrink-0">2</span>
                 <span>Phase 2: Rectification &amp; Form GST REG-21 Application</span>
               </div>
@@ -209,8 +209,8 @@ export default function GstRevocationGuidePage() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 text-xs mb-1 group-hover:text-[#5C3BFF] transition-colors">
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 text-xs mb-1 group-hover:text-indigo-600 transition-colors">
                 <span className="w-5 h-5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center shrink-0">3</span>
                 <span>Phase 3: Adjudication &amp; Restoration Order (REG-22)</span>
               </div>
@@ -232,28 +232,31 @@ export default function GstRevocationGuidePage() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <h3 className="text-xs font-bold text-slate-900 mb-1.5 group-hover:text-[#5C3BFF] transition-colors">
-                1. Conduct Total Compliance Audit
-              </h3>
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-1.5 group-hover:text-blue-600 transition-colors">
+                <FileCheck2 className="w-4 h-4 text-blue-600 shrink-0" />
+                <span className="text-xs font-bold">1. Conduct Total Compliance Audit</span>
+              </div>
               <p className="text-xs text-slate-600 leading-relaxed">
                 Tally all defaulting months, compute accurate tax liability, calculate Section 50 interest at 18%, and identify late fee caps available under relevant GST amnesty schemes.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <h3 className="text-xs font-bold text-slate-900 mb-1.5 group-hover:text-[#5C3BFF] transition-colors">
-                2. Engage Professional Counsel
-              </h3>
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-1.5 group-hover:text-indigo-600 transition-colors">
+                <Scale className="w-4 h-4 text-indigo-600 shrink-0" />
+                <span className="text-xs font-bold">2. Engage Professional Counsel</span>
+              </div>
               <p className="text-xs text-slate-600 leading-relaxed">
                 Work with experienced Indirect Tax Advocates or Chartered Accountants to draft strong factual rebuttals and legal condonation petitions that officers cannot easily dismiss.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <h3 className="text-xs font-bold text-slate-900 mb-1.5 group-hover:text-[#5C3BFF] transition-colors">
-                3. Proactive ARN Monitoring
-              </h3>
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-amber-500 hover:shadow-xl hover:shadow-amber-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-1.5 group-hover:text-amber-600 transition-colors">
+                <Clock className="w-4 h-4 text-amber-600 shrink-0" />
+                <span className="text-xs font-bold">3. Proactive ARN Monitoring</span>
+              </div>
               <p className="text-xs text-slate-600 leading-relaxed">
                 Track your 15-digit ARN daily on the portal. If Form GST REG-23 is received, submit Form GST REG-24 within 7 working days to prevent automatic rejection.
               </p>

@@ -94,9 +94,9 @@ export default function GstNameChangeProcessPage() {
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-2 group-hover:text-[#5C3BFF] transition-colors">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-emerald-500 hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-2 group-hover:text-emerald-600 transition-colors">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                 <span>Private or Public Limited Companies</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -104,9 +104,9 @@ export default function GstNameChangeProcessPage() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-2 group-hover:text-[#5C3BFF] transition-colors">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-emerald-500 hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-2 group-hover:text-emerald-600 transition-colors">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                 <span>Limited Liability Partnerships (LLPs)</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -114,9 +114,9 @@ export default function GstNameChangeProcessPage() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-2 group-hover:text-[#5C3BFF] transition-colors">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-emerald-500 hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-2 group-hover:text-emerald-600 transition-colors">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                 <span>Partnership Firms</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -124,9 +124,9 @@ export default function GstNameChangeProcessPage() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-2 group-hover:text-[#5C3BFF] transition-colors">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-emerald-500 hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-2 group-hover:text-emerald-600 transition-colors">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                 <span>Sole Proprietorships &amp; Brand Rebranding</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -197,10 +197,11 @@ export default function GstNameChangeProcessPage() {
           </p>
 
           <div className="space-y-3 my-4">
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <h3 className="text-sm font-semibold text-slate-900 mb-1 group-hover:text-[#5C3BFF] transition-colors">
-                For Private Limited, Public Limited &amp; One Person Companies (OPC)
-              </h3>
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 text-sm mb-1 group-hover:text-indigo-600 transition-colors">
+                <Building2 className="w-4 h-4 text-indigo-600 shrink-0" />
+                <span>For Private Limited, Public Limited &amp; One Person Companies (OPC)</span>
+              </div>
               <ul className="text-xs text-slate-600 space-y-1 list-disc pl-5">
                 <li>Fresh Certificate of Incorporation issued by MCA/ROC reflecting the new legal name.</li>
                 <li>ROC Approval Letter / Form INC-24 approval copy.</li>
@@ -209,10 +210,11 @@ export default function GstNameChangeProcessPage() {
               </ul>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <h3 className="text-sm font-semibold text-slate-900 mb-1 group-hover:text-[#5C3BFF] transition-colors">
-                For Limited Liability Partnerships (LLP)
-              </h3>
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-purple-500 hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 text-sm mb-1 group-hover:text-purple-600 transition-colors">
+                <Building2 className="w-4 h-4 text-purple-600 shrink-0" />
+                <span>For Limited Liability Partnerships (LLP)</span>
+              </div>
               <ul className="text-xs text-slate-600 space-y-1 list-disc pl-5">
                 <li>MCA Certificate of Registration of change of name for LLP.</li>
                 <li>Approved copy of Form 5 submitted to the Registrar.</li>
@@ -221,10 +223,11 @@ export default function GstNameChangeProcessPage() {
               </ul>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <h3 className="text-sm font-semibold text-slate-900 mb-1 group-hover:text-[#5C3BFF] transition-colors">
-                For Partnership Firms &amp; Sole Proprietorships
-              </h3>
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 text-sm mb-1 group-hover:text-blue-600 transition-colors">
+                <FileText className="w-4 h-4 text-blue-600 shrink-0" />
+                <span>For Partnership Firms &amp; Sole Proprietorships</span>
+              </div>
               <ul className="text-xs text-slate-600 space-y-1 list-disc pl-5">
                 <li>Amended / Supplementary Partnership Deed registered with the local Registrar of Firms.</li>
                 <li>Updated trade license, municipal establishment certificate, or Udyam registration showing the revised trade name.</li>
@@ -245,50 +248,50 @@ export default function GstNameChangeProcessPage() {
           </p>
 
           <div className="space-y-4 my-6">
-            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
               <div className="flex items-center gap-3 mb-2">
                 <span className="w-6 h-6 rounded-full bg-indigo-50 text-indigo-700 font-bold text-xs flex items-center justify-center shrink-0 border border-indigo-200">1</span>
-                <h3 className="text-sm font-semibold text-slate-900 group-hover:text-[#5C3BFF] transition-colors">Step 1: Authenticate on the GST Common Portal</h3>
+                <h3 className="text-sm font-semibold text-slate-900 group-hover:text-indigo-600 transition-colors">Step 1: Authenticate on the GST Common Portal</h3>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed pl-9">
                 Navigate to <code className="font-mono text-slate-800">services.gst.gov.in</code> and log in using your valid username, password, and the dynamic captcha code.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
               <div className="flex items-center gap-3 mb-2">
                 <span className="w-6 h-6 rounded-full bg-indigo-50 text-indigo-700 font-bold text-xs flex items-center justify-center shrink-0 border border-indigo-200">2</span>
-                <h3 className="text-sm font-semibold text-slate-900 group-hover:text-[#5C3BFF] transition-colors">Step 2: Navigate to Amendment of Core Fields</h3>
+                <h3 className="text-sm font-semibold text-slate-900 group-hover:text-indigo-600 transition-colors">Step 2: Navigate to Amendment of Core Fields</h3>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed pl-9">
                 From the top dashboard menu, click on <strong className="font-semibold text-slate-800">Services &gt; Registration &gt; Amendment of Registration Core Fields</strong>. This loads Form GST REG-14 in edit mode.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
               <div className="flex items-center gap-3 mb-2">
                 <span className="w-6 h-6 rounded-full bg-indigo-50 text-indigo-700 font-bold text-xs flex items-center justify-center shrink-0 border border-indigo-200">3</span>
-                <h3 className="text-sm font-semibold text-slate-900 group-hover:text-[#5C3BFF] transition-colors">Step 3: Edit Legal Name / Trade Name &amp; Reasons</h3>
+                <h3 className="text-sm font-semibold text-slate-900 group-hover:text-indigo-600 transition-colors">Step 3: Edit Legal Name / Trade Name &amp; Reasons</h3>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed pl-9">
                 Under the &apos;Business Details&apos; tab, click the edit icon beside &apos;Legal Name of Business&apos; or &apos;Trade Name&apos;. Enter the revised name precisely matching your ROC incorporation certificate. Specify the <strong className="font-semibold text-slate-800">Date of Amendment</strong> and input a clear justification in the <strong className="font-semibold text-slate-800">Reasons for Amendment</strong> field.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
               <div className="flex items-center gap-3 mb-2">
                 <span className="w-6 h-6 rounded-full bg-indigo-50 text-indigo-700 font-bold text-xs flex items-center justify-center shrink-0 border border-indigo-200">4</span>
-                <h3 className="text-sm font-semibold text-slate-900 group-hover:text-[#5C3BFF] transition-colors">Step 4: Upload MCA &amp; ROC Supporting Proof</h3>
+                <h3 className="text-sm font-semibold text-slate-900 group-hover:text-indigo-600 transition-colors">Step 4: Upload MCA &amp; ROC Supporting Proof</h3>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed pl-9">
                 In the document upload section, select the appropriate document type (e.g., &apos;Others&apos; or &apos;Certificate of Incorporation&apos;). Upload the clear PDF scan of the fresh Certificate of Incorporation / ROC Approval letter and click &apos;Save&apos;.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
               <div className="flex items-center gap-3 mb-2">
                 <span className="w-6 h-6 rounded-full bg-indigo-50 text-indigo-700 font-bold text-xs flex items-center justify-center shrink-0 border border-indigo-200">5</span>
-                <h3 className="text-sm font-semibold text-slate-900 group-hover:text-[#5C3BFF] transition-colors">Step 5: Digital Verification &amp; ARN Generation</h3>
+                <h3 className="text-sm font-semibold text-slate-900 group-hover:text-indigo-600 transition-colors">Step 5: Digital Verification &amp; ARN Generation</h3>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed pl-9">
                 Navigate to the &apos;Verification&apos; tab. Check the declaration checkbox, select the authorized signatory, and sign the application using a <strong className="font-semibold text-slate-800">Class 3 Digital Signature Certificate (DSC)</strong> (mandatory for Companies and LLPs) or via <strong className="font-semibold text-slate-800">Electronic Verification Code (EVC)</strong>. Upon successful submission, a 15-digit Application Reference Number (ARN) is issued instantly via email and SMS.
@@ -308,9 +311,9 @@ export default function GstNameChangeProcessPage() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
-            <div className="p-4 rounded-xl bg-emerald-50/60 border border-emerald-200 hover:border-[#10B981] hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 text-emerald-950 font-semibold text-xs mb-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+            <div className="p-4 rounded-xl bg-emerald-50/60 border border-emerald-200 hover:border-emerald-500 hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 text-emerald-950 font-semibold text-xs mb-2 group-hover:text-emerald-700 transition-colors">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                 <span>Approval Order in Form GST REG-15</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -318,9 +321,9 @@ export default function GstNameChangeProcessPage() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-amber-50/60 border border-amber-200 hover:border-amber-400 hover:shadow-xl hover:shadow-amber-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 text-amber-950 font-semibold text-xs mb-2">
-                <AlertTriangle className="w-4 h-4 text-amber-600" />
+            <div className="p-4 rounded-xl bg-amber-50/60 border border-amber-200 hover:border-amber-500 hover:shadow-xl hover:shadow-amber-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 text-amber-950 font-semibold text-xs mb-2 group-hover:text-amber-700 transition-colors">
+                <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0" />
                 <span>Clarification Notice in Form GST REG-03</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -375,16 +378,25 @@ export default function GstNameChangeProcessPage() {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-4">
-            <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-red-400 hover:shadow-xl hover:shadow-red-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="text-red-600 font-semibold text-xs mb-1 group-hover:text-red-700 transition-colors">Mismatch with MCA</div>
+            <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-red-500 hover:shadow-xl hover:shadow-red-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-1.5 text-red-600 font-semibold text-xs mb-1 group-hover:text-red-700 transition-colors">
+                <AlertCircle className="w-3.5 h-3.5 text-red-600 shrink-0" />
+                <span>Mismatch with MCA</span>
+              </div>
               <p className="text-[11.5px] text-slate-600 leading-relaxed">Entering a legal name that differs even by a single character or punctuation mark from the ROC incorporation certificate.</p>
             </div>
-            <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-red-400 hover:shadow-xl hover:shadow-red-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="text-red-600 font-semibold text-xs mb-1 group-hover:text-red-700 transition-colors">Illegible Uploads</div>
+            <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-red-500 hover:shadow-xl hover:shadow-red-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-1.5 text-red-600 font-semibold text-xs mb-1 group-hover:text-red-700 transition-colors">
+                <AlertCircle className="w-3.5 h-3.5 text-red-600 shrink-0" />
+                <span>Illegible Uploads</span>
+              </div>
               <p className="text-[11.5px] text-slate-600 leading-relaxed">Uploading low-resolution, blurred, or truncated scans of the fresh Certificate of Incorporation or approval orders.</p>
             </div>
-            <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-red-400 hover:shadow-xl hover:shadow-red-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="text-red-600 font-semibold text-xs mb-1 group-hover:text-red-700 transition-colors">Missing Authorization</div>
+            <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-red-500 hover:shadow-xl hover:shadow-red-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-1.5 text-red-600 font-semibold text-xs mb-1 group-hover:text-red-700 transition-colors">
+                <AlertCircle className="w-3.5 h-3.5 text-red-600 shrink-0" />
+                <span>Missing Authorization</span>
+              </div>
               <p className="text-[11.5px] text-slate-600 leading-relaxed">Omitting the certified Board Resolution or authorization letter empowering the signatory to execute the amendment.</p>
             </div>
           </div>

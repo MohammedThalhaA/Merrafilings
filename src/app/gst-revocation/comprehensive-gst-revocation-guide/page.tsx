@@ -112,9 +112,9 @@ export default function ComprehensiveGstRevocationGuidePage() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-2 group-hover:text-[#5C3BFF] transition-colors">
-                <Clock className="w-4 h-4 text-indigo-600" />
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">
+                <Clock className="w-4 h-4 text-indigo-600 shrink-0" />
                 <span>1. Consecutive Return Non-Filing Defaults</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -122,9 +122,9 @@ export default function ComprehensiveGstRevocationGuidePage() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-2 group-hover:text-[#5C3BFF] transition-colors">
-                <ShieldCheck className="w-4 h-4 text-emerald-600" />
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-emerald-500 hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-2 group-hover:text-emerald-600 transition-colors">
+                <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
                 <span>2. Rule 10A Bank Account Default</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -132,9 +132,9 @@ export default function ComprehensiveGstRevocationGuidePage() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-2 group-hover:text-[#5C3BFF] transition-colors">
-                <Building2 className="w-4 h-4 text-purple-600" />
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-purple-500 hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-2 group-hover:text-purple-600 transition-colors">
+                <Building2 className="w-4 h-4 text-purple-600 shrink-0" />
                 <span>3. Non-Commencement of Business</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -142,9 +142,9 @@ export default function ComprehensiveGstRevocationGuidePage() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-2 group-hover:text-[#5C3BFF] transition-colors">
-                <Gavel className="w-4 h-4 text-red-600" />
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-red-500 hover:shadow-xl hover:shadow-red-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-2 group-hover:text-red-600 transition-colors">
+                <Gavel className="w-4 h-4 text-red-600 shrink-0" />
                 <span>4. Fraud or Suppression of Material Facts</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -165,8 +165,8 @@ export default function ComprehensiveGstRevocationGuidePage() {
           </p>
 
           <div className="space-y-4 my-6">
-            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 text-sm mb-1 group-hover:text-[#5C3BFF] transition-colors">
+            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 text-sm mb-1 group-hover:text-indigo-600 transition-colors">
                 <span className="w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 font-bold text-xs flex items-center justify-center shrink-0">1</span>
                 <span>Stage 1: Filing Application in Form GST REG-21</span>
               </div>
@@ -175,8 +175,8 @@ export default function ComprehensiveGstRevocationGuidePage() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 text-sm mb-1 group-hover:text-[#5C3BFF] transition-colors">
+            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 text-sm mb-1 group-hover:text-indigo-600 transition-colors">
                 <span className="w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 font-bold text-xs flex items-center justify-center shrink-0">2</span>
                 <span>Stage 2: Uploading Verified Documentary Evidence</span>
               </div>
@@ -185,8 +185,8 @@ export default function ComprehensiveGstRevocationGuidePage() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 text-sm mb-1 group-hover:text-[#5C3BFF] transition-colors">
+            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 text-sm mb-1 group-hover:text-indigo-600 transition-colors">
                 <span className="w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 font-bold text-xs flex items-center justify-center shrink-0">3</span>
                 <span>Stage 3: Proper Officer Evaluation &amp; SCN Handling</span>
               </div>
@@ -195,8 +195,8 @@ export default function ComprehensiveGstRevocationGuidePage() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 text-sm mb-1 group-hover:text-[#5C3BFF] transition-colors">
+            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 text-sm mb-1 group-hover:text-indigo-600 transition-colors">
                 <span className="w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 font-bold text-xs flex items-center justify-center shrink-0">4</span>
                 <span>Stage 4: Issuance of Revocation Order in Form GST REG-22</span>
               </div>

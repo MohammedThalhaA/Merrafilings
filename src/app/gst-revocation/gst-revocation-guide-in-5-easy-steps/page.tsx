@@ -95,12 +95,12 @@ export default function GstRevocationGuideIn5EasyStepsPage() {
           <div className="space-y-6 my-6">
             
             {/* Step 1 */}
-            <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+            <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
               <div className="flex items-center gap-3 mb-2">
                 <span className="w-8 h-8 rounded-xl bg-indigo-50 border border-indigo-200 text-indigo-700 font-bold text-sm flex items-center justify-center shrink-0">
                   1
                 </span>
-                <h3 className="text-base font-semibold text-slate-900 group-hover:text-[#5C3BFF] transition-colors">
+                <h3 className="text-base font-semibold text-slate-900 group-hover:text-indigo-600 transition-colors">
                   Step 1: Root Cause Analysis &amp; Order Review
                 </h3>
               </div>
@@ -110,12 +110,12 @@ export default function GstRevocationGuideIn5EasyStepsPage() {
             </div>
 
             {/* Step 2 */}
-            <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+            <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
               <div className="flex items-center gap-3 mb-2">
                 <span className="w-8 h-8 rounded-xl bg-indigo-50 border border-indigo-200 text-indigo-700 font-bold text-sm flex items-center justify-center shrink-0">
                   2
                 </span>
-                <h3 className="text-base font-semibold text-slate-900 group-hover:text-[#5C3BFF] transition-colors">
+                <h3 className="text-base font-semibold text-slate-900 group-hover:text-indigo-600 transition-colors">
                   Step 2: Clear Pending Returns &amp; Assemble Evidence Dossier
                 </h3>
               </div>
@@ -125,12 +125,12 @@ export default function GstRevocationGuideIn5EasyStepsPage() {
             </div>
 
             {/* Step 3 */}
-            <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+            <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
               <div className="flex items-center gap-3 mb-2">
                 <span className="w-8 h-8 rounded-xl bg-indigo-50 border border-indigo-200 text-indigo-700 font-bold text-sm flex items-center justify-center shrink-0">
                   3
                 </span>
-                <h3 className="text-base font-semibold text-slate-900 group-hover:text-[#5C3BFF] transition-colors">
+                <h3 className="text-base font-semibold text-slate-900 group-hover:text-indigo-600 transition-colors">
                   Step 3: File Form GST REG-21 on the GST Common Portal
                 </h3>
               </div>
@@ -140,12 +140,12 @@ export default function GstRevocationGuideIn5EasyStepsPage() {
             </div>
 
             {/* Step 4 */}
-            <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+            <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
               <div className="flex items-center gap-3 mb-2">
                 <span className="w-8 h-8 rounded-xl bg-indigo-50 border border-indigo-200 text-indigo-700 font-bold text-sm flex items-center justify-center shrink-0">
                   4
                 </span>
-                <h3 className="text-base font-semibold text-slate-900 group-hover:text-[#5C3BFF] transition-colors">
+                <h3 className="text-base font-semibold text-slate-900 group-hover:text-indigo-600 transition-colors">
                   Step 4: Proactive ARN Tracking &amp; Responding to Form GST REG-23
                 </h3>
               </div>
@@ -155,12 +155,12 @@ export default function GstRevocationGuideIn5EasyStepsPage() {
             </div>
 
             {/* Step 5 */}
-            <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+            <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
               <div className="flex items-center gap-3 mb-2">
                 <span className="w-8 h-8 rounded-xl bg-indigo-50 border border-indigo-200 text-indigo-700 font-bold text-sm flex items-center justify-center shrink-0">
                   5
                 </span>
-                <h3 className="text-base font-semibold text-slate-900 group-hover:text-[#5C3BFF] transition-colors">
+                <h3 className="text-base font-semibold text-slate-900 group-hover:text-indigo-600 transition-colors">
                   Step 5: Receive Form GST REG-22 &amp; Execute Post-Revocation Compliances
                 </h3>
               </div>

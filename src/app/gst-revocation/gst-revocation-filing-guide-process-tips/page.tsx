@@ -92,9 +92,9 @@ export default function GstRevocationFilingGuideProcessTipsPage() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-1.5 group-hover:text-[#5C3BFF] transition-colors">
-                <Receipt className="w-4 h-4 text-emerald-600" />
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-emerald-500 hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-1.5 group-hover:text-emerald-600 transition-colors">
+                <Receipt className="w-4 h-4 text-emerald-600 shrink-0" />
                 <span>Legitimate Tax Invoicing</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -102,9 +102,9 @@ export default function GstRevocationFilingGuideProcessTipsPage() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-1.5 group-hover:text-[#5C3BFF] transition-colors">
-                <Scale className="w-4 h-4 text-indigo-600" />
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-1.5 group-hover:text-indigo-600 transition-colors">
+                <Scale className="w-4 h-4 text-indigo-600 shrink-0" />
                 <span>Avoid Section 122 Penalties</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -112,9 +112,9 @@ export default function GstRevocationFilingGuideProcessTipsPage() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-1.5 group-hover:text-[#5C3BFF] transition-colors">
-                <Undo2 className="w-4 h-4 text-purple-600" />
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-purple-500 hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-1.5 group-hover:text-purple-600 transition-colors">
+                <Undo2 className="w-4 h-4 text-purple-600 shrink-0" />
                 <span>Credit Ledger Unfreezing</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -135,8 +135,8 @@ export default function GstRevocationFilingGuideProcessTipsPage() {
           </p>
 
           <div className="space-y-4 my-6">
-            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 text-sm mb-1 group-hover:text-[#5C3BFF] transition-colors">
+            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 text-sm mb-1 group-hover:text-indigo-600 transition-colors">
                 <span className="w-5 h-5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center shrink-0">1</span>
                 <span>Step 1: Complete Pre-Filing Tax &amp; Return Clearance</span>
               </div>
@@ -145,8 +145,8 @@ export default function GstRevocationFilingGuideProcessTipsPage() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 text-sm mb-1 group-hover:text-[#5C3BFF] transition-colors">
+            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 text-sm mb-1 group-hover:text-indigo-600 transition-colors">
                 <span className="w-5 h-5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center shrink-0">2</span>
                 <span>Step 2: Log in and Navigate to Registration Services</span>
               </div>
@@ -155,8 +155,8 @@ export default function GstRevocationFilingGuideProcessTipsPage() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 text-sm mb-1 group-hover:text-[#5C3BFF] transition-colors">
+            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-indigo-500 hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 text-sm mb-1 group-hover:text-indigo-600 transition-colors">
                 <span className="w-5 h-5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center shrink-0">3</span>
                 <span>Step 3: Articulate Reason for Revocation with Precision</span>
               </div>
@@ -165,8 +165,8 @@ export default function GstRevocationFilingGuideProcessTipsPage() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 text-sm mb-1 group-hover:text-[#5C3BFF] transition-colors">
+            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 text-sm mb-1 group-hover:text-indigo-600 transition-colors">
                 <span className="w-5 h-5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center shrink-0">4</span>
                 <span>Step 4: Upload Corroborating Documentary Evidence</span>
               </div>
@@ -175,8 +175,8 @@ export default function GstRevocationFilingGuideProcessTipsPage() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 text-sm mb-1 group-hover:text-[#5C3BFF] transition-colors">
+            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 text-sm mb-1 group-hover:text-indigo-600 transition-colors">
                 <span className="w-5 h-5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center shrink-0">5</span>
                 <span>Step 5: Sign Digitally (DSC/EVC) &amp; Receive 15-Digit ARN</span>
               </div>
@@ -238,37 +238,41 @@ export default function GstRevocationFilingGuideProcessTipsPage() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-1.5 group-hover:text-[#5C3BFF] transition-colors">
-                Tip 1: Clear Electronic Cash Ledger Deficits
-              </h3>
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-emerald-500 hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 mb-1.5 font-bold text-slate-900 text-xs uppercase tracking-wider group-hover:text-emerald-600 transition-colors">
+                <Receipt className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span>Tip 1: Clear Electronic Cash Ledger Deficits</span>
+              </div>
               <p className="text-xs text-slate-600 leading-relaxed">
                 Ensure that sufficient cash balance exists in your Electronic Cash Ledger under Major Heads (IGST/CGST/SGST) and Minor Heads (Tax/Interest/Fee) to offset liabilities before submitting pending returns.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-1.5 group-hover:text-[#5C3BFF] transition-colors">
-                Tip 2: Cross-Reference GSTR-2B Before 3B
-              </h3>
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 mb-1.5 font-bold text-slate-900 text-xs uppercase tracking-wider group-hover:text-blue-600 transition-colors">
+                <CheckCircle2 className="w-4 h-4 text-blue-600 shrink-0" />
+                <span>Tip 2: Cross-Reference GSTR-2B Before 3B</span>
+              </div>
               <p className="text-xs text-slate-600 leading-relaxed">
                 When filing overdue GSTR-3B returns, ensure ITC claimed strictly matches available GSTR-2B records to prevent automated Rule 88D system flags that trigger fresh cancellation proceedings.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-1.5 group-hover:text-[#5C3BFF] transition-colors">
-                Tip 3: Prepare for Form GST REG-23 Notice
-              </h3>
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-amber-500 hover:shadow-xl hover:shadow-amber-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 mb-1.5 font-bold text-slate-900 text-xs uppercase tracking-wider group-hover:text-amber-600 transition-colors">
+                <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0" />
+                <span>Tip 3: Prepare for Form GST REG-23 Notice</span>
+              </div>
               <p className="text-xs text-slate-600 leading-relaxed">
                 If the officer issues a clarification notice in Form GST REG-23, prepare your response immediately. Form GST REG-24 must be filed within 7 working days; missing this deadline triggers immediate rejection under REG-05.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-1.5 group-hover:text-[#5C3BFF] transition-colors">
-                Tip 4: Calendar the 30-Day Interim Return Rule
-              </h3>
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 mb-1.5 font-bold text-slate-900 text-xs uppercase tracking-wider group-hover:text-indigo-600 transition-colors">
+                <Clock className="w-4 h-4 text-indigo-600 shrink-0" />
+                <span>Tip 4: Calendar the 30-Day Interim Return Rule</span>
+              </div>
               <p className="text-xs text-slate-600 leading-relaxed">
                 Once the revocation order in Form GST REG-22 is received, calendar the mandatory 30-day window under Rule 23(1) to file all returns for the period between cancellation and restoration order date.
               </p>
