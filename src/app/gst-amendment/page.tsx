@@ -150,28 +150,28 @@ const FAQ_COL_2 = [
 
 const RELATED_GUIDES = [
   {
+    title: "GST Name Change Process in GST Registration - Complete Guide",
+    href: "/gst-amendment/name-change-process",
+  },
+  {
+    title: "Understanding GST Amendment Guidelines for 2023",
+    href: "/gst-amendment/gst-amendment-guidelines-key-2023-updates",
+  },
+  {
+    title: "Understanding GST Amendment & GST Amendment Online",
+    href: "/gst-amendment/gst-amendment-online-streamline-your-compliance",
+  },
+  {
+    title: "Unpacking the GST Amendment: What You Need to Know",
+    href: "/gst-amendment/gst-amendment-essentials-what-you-need-to-know",
+  },
+  {
+    title: "Understanding the Latest GST Amendment: What You Need to Know",
+    href: "/gst-amendment/understanding-the-latest-gst-amendment",
+  },
+  {
     title: "GST Registration Revocation: Restore Cancelled GSTIN Online",
     href: "/gst-revocation",
-  },
-  {
-    title: "GSTR-10 Final Return Filing: Due Date, Late Fees & Process",
-    href: "/gstr-10",
-  },
-  {
-    title: "Virtual Office Online for GST & MCA Company Registration",
-    href: "/virtual-office",
-  },
-  {
-    title: "GST Registration Online: Process, Eligibility & Documentation",
-    href: "/gst-registration",
-  },
-  {
-    title: "GST Notice Reply & Legal Response Solutions in India",
-    href: "/gst-notice",
-  },
-  {
-    title: "GST Annual Return Filing (GSTR-9 & GSTR-9C) Complete Guide",
-    href: "/gst-annual-return",
   },
 ];
 
