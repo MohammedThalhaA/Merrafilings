@@ -61,12 +61,6 @@ export const GST_REVOCATION_RELATED_GUIDES: GstRevocationGuideItem[] = [
     href: "/gst-revocation/gst-revocation-guide-in-5-easy-steps",
     shortTitle: "GST Revocation in 5 Steps",
   },
-  {
-    slug: "gst-revocation",
-    title: "GST Revocation & GSTIN Restoration Service Desk",
-    href: "/gst-revocation",
-    shortTitle: "GST Revocation Service",
-  },
 ];
 
 interface GstRevocationGuideLayoutProps {

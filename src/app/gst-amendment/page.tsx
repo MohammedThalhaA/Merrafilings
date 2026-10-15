@@ -169,10 +169,6 @@ const RELATED_GUIDES = [
     title: "Understanding the Latest GST Amendment: What You Need to Know",
     href: "/gst-amendment/understanding-the-latest-gst-amendment",
   },
-  {
-    title: "GST Registration Revocation: Restore Cancelled GSTIN Online",
-    href: "/gst-revocation",
-  },
 ];
 
 const RELATED_SERVICES_TAGS = [

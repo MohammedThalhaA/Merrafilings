@@ -66,12 +66,6 @@ export const GST_AMENDMENT_RELATED_GUIDES: GstAmendmentGuideItem[] = [
     href: "/gst-amendment/understanding-the-latest-gst-amendment",
     shortTitle: "Latest GST Amendment Guide",
   },
-  {
-    slug: "gst-amendment",
-    title: "GST Registration Amendment Service Desk",
-    href: "/gst-amendment",
-    shortTitle: "GST Amendment Filing Service",
-  },
 ];
 
 interface GstAmendmentGuideLayoutProps {

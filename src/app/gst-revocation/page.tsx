@@ -169,10 +169,6 @@ const RELATED_GUIDES = [
     title: "GST Revocation in 5 Easy Steps with Merrafilings",
     href: "/gst-revocation/gst-revocation-guide-in-5-easy-steps",
   },
-  {
-    title: "GST Registration Amendment Online: Update Core & Non-Core Details",
-    href: "/gst-amendment",
-  },
 ];
 
 const RELATED_SERVICES_TAGS = [
