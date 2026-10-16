@@ -514,12 +514,17 @@ p[class*="text-emerald-100"] {
   color: #E2E8F0 !important;
 }
 
-.text-slate-600:not([class*="hover:"]):not([class*="group-hover:"]) {
-  color: #1E293B;
+/* High-contrast typography: ensure text on cards and descriptions has rich, clear readability on light surfaces */
+:not([class*="bg-slate-900"]):not([class*="bg-black"]):not([class*="text-white"]) > .text-slate-600,
+p.text-slate-600:not([class*="text-white"]):not([class*="text-slate-100"]):not([class*="text-slate-200"]),
+span.text-slate-600 {
+  color: #334155 !important;
 }
 
-.text-slate-600 {
-  color: #1E293B;
+:not([class*="bg-slate-900"]):not([class*="bg-black"]):not([class*="text-white"]) > .text-slate-500,
+p.text-slate-500:not([class*="text-white"]):not([class*="text-slate-100"]):not([class*="text-slate-200"]),
+span.text-slate-500 {
+  color: #475569 !important;
 }
 
 /* ==========================================================================
