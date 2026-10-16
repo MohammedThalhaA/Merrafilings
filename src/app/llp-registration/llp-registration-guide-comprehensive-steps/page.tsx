@@ -135,7 +135,7 @@ const PROCESS_STEPS = [
 const ADVANTAGES = [
   {
     icon: <ShieldCheck className="w-5 h-5 text-emerald-600" />,
-    iconBox: "bg-emerald-50 text-emerald-600 border border-emerald-100 group-hover:bg-emerald-600 group-hover:text-white",
+    iconBox: "bg-emerald-50 text-emerald-600 border border-emerald-100 group-hover:bg-emerald-100/80 group-hover:border-emerald-200 group-hover:scale-105",
     hoverBorder: "hover:border-emerald-500",
     hoverShadow: "hover:shadow-md hover:shadow-emerald-500/15",
     hoverBg: "hover:bg-emerald-50/20",
@@ -145,7 +145,7 @@ const ADVANTAGES = [
   },
   {
     icon: <Users className="w-5 h-5 text-blue-600" />,
-    iconBox: "bg-blue-50 text-blue-600 border border-blue-100 group-hover:bg-blue-600 group-hover:text-white",
+    iconBox: "bg-blue-50 text-blue-600 border border-blue-100 group-hover:bg-blue-100/80 group-hover:border-blue-200 group-hover:scale-105",
     hoverBorder: "hover:border-blue-500",
     hoverShadow: "hover:shadow-md hover:shadow-blue-500/15",
     hoverBg: "hover:bg-blue-50/20",
@@ -155,7 +155,7 @@ const ADVANTAGES = [
   },
   {
     icon: <BadgePercent className="w-5 h-5 text-purple-600" />,
-    iconBox: "bg-purple-50 text-purple-600 border border-purple-100 group-hover:bg-purple-600 group-hover:text-white",
+    iconBox: "bg-purple-50 text-purple-600 border border-purple-100 group-hover:bg-purple-100/80 group-hover:border-purple-200 group-hover:scale-105",
     hoverBorder: "hover:border-purple-500",
     hoverShadow: "hover:shadow-md hover:shadow-purple-500/15",
     hoverBg: "hover:bg-purple-50/20",
@@ -165,7 +165,7 @@ const ADVANTAGES = [
   },
   {
     icon: <Building className="w-5 h-5 text-amber-600" />,
-    iconBox: "bg-amber-50 text-amber-600 border border-amber-100 group-hover:bg-amber-600 group-hover:text-white",
+    iconBox: "bg-amber-50 text-amber-600 border border-amber-100 group-hover:bg-amber-100/80 group-hover:border-amber-200 group-hover:scale-105",
     hoverBorder: "hover:border-amber-500",
     hoverShadow: "hover:shadow-md hover:shadow-amber-500/15",
     hoverBg: "hover:bg-amber-50/20",
@@ -175,7 +175,7 @@ const ADVANTAGES = [
   },
   {
     icon: <Scale className="w-5 h-5 text-teal-600" />,
-    iconBox: "bg-teal-50 text-teal-600 border border-teal-100 group-hover:bg-teal-600 group-hover:text-white",
+    iconBox: "bg-teal-50 text-teal-600 border border-teal-100 group-hover:bg-teal-100/80 group-hover:border-teal-200 group-hover:scale-105",
     hoverBorder: "hover:border-teal-500",
     hoverShadow: "hover:shadow-md hover:shadow-teal-500/15",
     hoverBg: "hover:bg-teal-50/20",
@@ -185,7 +185,7 @@ const ADVANTAGES = [
   },
   {
     icon: <Landmark className="w-5 h-5 text-indigo-600" />,
-    iconBox: "bg-indigo-50 text-indigo-600 border border-indigo-100 group-hover:bg-indigo-600 group-hover:text-white",
+    iconBox: "bg-indigo-50 text-indigo-600 border border-indigo-100 group-hover:bg-indigo-100/80 group-hover:border-indigo-200 group-hover:scale-105",
     hoverBorder: "hover:border-indigo-500",
     hoverShadow: "hover:shadow-md hover:shadow-indigo-500/15",
     hoverBg: "hover:bg-indigo-50/20",
@@ -201,7 +201,7 @@ const ANNUAL_COMPLIANCES = [
     dueDate: "Due by: May 30th",
     desc: "Summary of management, partners, and capital contributions filed within 60 days of fiscal year end.",
     icon: <FileText className="w-5 h-5 text-emerald-600" />,
-    iconBox: "bg-emerald-50 text-emerald-600 border border-emerald-100 group-hover:bg-emerald-600 group-hover:text-white",
+    iconBox: "bg-emerald-50 text-emerald-600 border border-emerald-100 group-hover:bg-emerald-100/80 group-hover:border-emerald-200 group-hover:scale-105",
     hoverBorder: "hover:border-emerald-500",
     hoverShadow: "hover:shadow-md hover:shadow-emerald-500/15",
     hoverBg: "hover:bg-emerald-50/20",
@@ -212,7 +212,7 @@ const ANNUAL_COMPLIANCES = [
     dueDate: "Due by: October 30th",
     desc: "Statutory declaration of financial standing, assets, and liabilities signed by designated partners.",
     icon: <ShieldCheck className="w-5 h-5 text-blue-600" />,
-    iconBox: "bg-blue-50 text-blue-600 border border-blue-100 group-hover:bg-blue-600 group-hover:text-white",
+    iconBox: "bg-blue-50 text-blue-600 border border-blue-100 group-hover:bg-blue-100/80 group-hover:border-blue-200 group-hover:scale-105",
     hoverBorder: "hover:border-blue-500",
     hoverShadow: "hover:shadow-md hover:shadow-blue-500/15",
     hoverBg: "hover:bg-blue-50/20",
@@ -223,7 +223,7 @@ const ANNUAL_COMPLIANCES = [
     dueDate: "Due by: July 31st / Oct 31st",
     desc: "Annual tax declaration filed with the Income Tax Department at a flat 30% firm tax rate.",
     icon: <Receipt className="w-5 h-5 text-purple-600" />,
-    iconBox: "bg-purple-50 text-purple-600 border border-purple-100 group-hover:bg-purple-600 group-hover:text-white",
+    iconBox: "bg-purple-50 text-purple-600 border border-purple-100 group-hover:bg-purple-100/80 group-hover:border-purple-200 group-hover:scale-105",
     hoverBorder: "hover:border-purple-500",
     hoverShadow: "hover:shadow-md hover:shadow-purple-500/15",
     hoverBg: "hover:bg-purple-50/20",

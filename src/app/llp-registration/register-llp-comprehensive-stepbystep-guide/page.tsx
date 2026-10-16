@@ -58,7 +58,7 @@ const STATUTORY_ROADMAP = [
     detail:
       "All proposed designated partners must obtain a Class 3 Digital Signature Certificate with encrypted USB tokens for secure paperless e-filing on the MCA V3 portal.",
     icon: <KeyRound className="w-5 h-5 text-emerald-600" />,
-    iconBox: "bg-emerald-50 text-emerald-600 border border-emerald-100 group-hover:bg-emerald-600 group-hover:text-white",
+    iconBox: "bg-emerald-50 text-emerald-600 border border-emerald-100 group-hover:bg-emerald-100/80 group-hover:border-emerald-200 group-hover:scale-105",
     hoverBorder: "hover:border-emerald-500",
     hoverShadow: "hover:shadow-md hover:shadow-emerald-500/15",
     hoverBg: "hover:bg-emerald-50/20",
@@ -70,7 +70,7 @@ const STATUTORY_ROADMAP = [
     detail:
       "Designated partners require an 8-digit identification number. Existing DIN holders use their existing number; new applicants receive DPINs directly through the FiLLiP incorporation form.",
     icon: <UserCheck className="w-5 h-5 text-blue-600" />,
-    iconBox: "bg-blue-50 text-blue-600 border border-blue-100 group-hover:bg-blue-600 group-hover:text-white",
+    iconBox: "bg-blue-50 text-blue-600 border border-blue-100 group-hover:bg-blue-100/80 group-hover:border-blue-200 group-hover:scale-105",
     hoverBorder: "hover:border-blue-500",
     hoverShadow: "hover:shadow-md hover:shadow-blue-500/15",
     hoverBg: "hover:bg-blue-50/20",
@@ -82,7 +82,7 @@ const STATUTORY_ROADMAP = [
     detail:
       "Lodge your trade name application on the MCA portal. Ensure the proposed name is distinctive, reflects the commercial activity, and complies with Rule 18 naming standards.",
     icon: <Sparkles className="w-5 h-5 text-purple-600" />,
-    iconBox: "bg-purple-50 text-purple-600 border border-purple-100 group-hover:bg-purple-600 group-hover:text-white",
+    iconBox: "bg-purple-50 text-purple-600 border border-purple-100 group-hover:bg-purple-100/80 group-hover:border-purple-200 group-hover:scale-105",
     hoverBorder: "hover:border-purple-500",
     hoverShadow: "hover:shadow-md hover:shadow-purple-500/15",
     hoverBg: "hover:bg-purple-50/20",
@@ -94,7 +94,7 @@ const STATUTORY_ROADMAP = [
     detail:
       "Upload the incorporation e-form along with subscriber sheets, partner declarations (Form 9 & DIR-2), registered office utility bill, and owner NOC. Central ROC issues the COI.",
     icon: <FileText className="w-5 h-5 text-amber-600" />,
-    iconBox: "bg-amber-50 text-amber-600 border border-amber-100 group-hover:bg-amber-600 group-hover:text-white",
+    iconBox: "bg-amber-50 text-amber-600 border border-amber-100 group-hover:bg-amber-100/80 group-hover:border-amber-200 group-hover:scale-105",
     hoverBorder: "hover:border-amber-500",
     hoverShadow: "hover:shadow-md hover:shadow-amber-500/15",
     hoverBg: "hover:bg-amber-50/20",
@@ -106,7 +106,7 @@ const STATUTORY_ROADMAP = [
     detail:
       "Draft a comprehensive partnership deed tailored to your capital and profit-sharing terms, print on state-specific non-judicial stamp paper, and notarize before a gazetted public notary.",
     icon: <FileSignature className="w-5 h-5 text-teal-600" />,
-    iconBox: "bg-teal-50 text-teal-600 border border-teal-100 group-hover:bg-teal-600 group-hover:text-white",
+    iconBox: "bg-teal-50 text-teal-600 border border-teal-100 group-hover:bg-teal-100/80 group-hover:border-teal-200 group-hover:scale-105",
     hoverBorder: "hover:border-teal-500",
     hoverShadow: "hover:shadow-md hover:shadow-teal-500/15",
     hoverBg: "hover:bg-teal-50/20",
@@ -118,7 +118,7 @@ const STATUTORY_ROADMAP = [
     detail:
       "Submit the executed LLP Agreement electronically in MCA Form 3 within 30 days of incorporation to legally validate your partnership terms and prevent daily statutory late penalties.",
     icon: <ShieldCheck className="w-5 h-5 text-indigo-600" />,
-    iconBox: "bg-indigo-50 text-indigo-600 border border-indigo-100 group-hover:bg-indigo-600 group-hover:text-white",
+    iconBox: "bg-indigo-50 text-indigo-600 border border-indigo-100 group-hover:bg-indigo-100/80 group-hover:border-indigo-200 group-hover:scale-105",
     hoverBorder: "hover:border-indigo-500",
     hoverShadow: "hover:shadow-md hover:shadow-indigo-500/15",
     hoverBg: "hover:bg-indigo-50/20",
@@ -163,7 +163,7 @@ export default function RegisterLlpComprehensiveStepByStepGuidePage() {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs sm:text-[13px]">
           <div className="group p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/20 hover:-translate-y-0.5 transition-all duration-200 space-y-2 cursor-pointer">
-            <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+            <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center group-hover:bg-emerald-100/80 group-hover:border-emerald-200 group-hover:scale-105 transition-all">
               <ShieldCheck className="w-4 h-4" />
             </div>
             <strong className="font-semibold text-slate-900 group-hover:text-emerald-700 transition-colors block">Limited Liability Shield</strong>
@@ -171,8 +171,8 @@ export default function RegisterLlpComprehensiveStepByStepGuidePage() {
               Partners’ personal assets (properties, savings) are 100% immune from company debts and the negligence of fellow partners.
             </p>
           </div>
-          <div className="group p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/15 hover:bg-blue-50/20 hover:-translate-y-0.5 transition-all duration-200 space-y-2 cursor-pointer">
-            <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 border border-blue-100 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors">
+          <div className="group p-4 rounded-xl bg-white border border-blue-500 hover:shadow-md hover:shadow-blue-500/15 hover:bg-blue-50/20 hover:-translate-y-0.5 transition-all duration-200 space-y-2 cursor-pointer">
+            <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 border border-blue-100 flex items-center justify-center group-hover:bg-blue-100/80 group-hover:border-blue-200 group-hover:scale-105 transition-all">
               <BadgeDollarSign className="w-4 h-4" />
             </div>
             <strong className="font-semibold text-slate-900 group-hover:text-blue-700 transition-colors block">No Double Dividend Taxation</strong>
@@ -180,8 +180,8 @@ export default function RegisterLlpComprehensiveStepByStepGuidePage() {
               Unlike private limited companies where post-tax dividends face personal taxation, LLP profit withdrawals are entirely tax-free.
             </p>
           </div>
-          <div className="group p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/15 hover:bg-purple-50/20 hover:-translate-y-0.5 transition-all duration-200 space-y-2 cursor-pointer">
-            <div className="w-8 h-8 rounded-lg bg-purple-50 text-purple-600 border border-purple-100 flex items-center justify-center group-hover:bg-purple-600 group-hover:text-white transition-colors">
+          <div className="group p-4 rounded-xl bg-white border border-purple-500 hover:shadow-md hover:shadow-purple-500/15 hover:bg-purple-50/20 hover:-translate-y-0.5 transition-all duration-200 space-y-2 cursor-pointer">
+            <div className="w-8 h-8 rounded-lg bg-purple-50 text-purple-600 border border-purple-100 flex items-center justify-center group-hover:bg-purple-100/80 group-hover:border-purple-200 group-hover:scale-105 transition-all">
               <Scale className="w-4 h-4" />
             </div>
             <strong className="font-semibold text-slate-900 group-hover:text-purple-700 transition-colors block">Audit Exemption Thresholds</strong>
@@ -243,7 +243,7 @@ export default function RegisterLlpComprehensiveStepByStepGuidePage() {
           {/* Card 1: Blue */}
           <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/15 hover:bg-blue-50/20 hover:-translate-y-0.5 transition-all duration-200 space-y-2 cursor-pointer">
             <div className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-lg bg-blue-50 text-blue-600 border border-blue-100 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors">
+              <div className="w-7 h-7 rounded-lg bg-blue-50 text-blue-600 border border-blue-100 flex items-center justify-center group-hover:bg-blue-100/80 group-hover:border-blue-200 group-hover:scale-105 transition-all">
                 <UserCheck className="w-4 h-4" />
               </div>
               <h4 className="font-semibold text-slate-900 group-hover:text-blue-700 transition-colors">1. Partner KYC Documentation</h4>
@@ -259,7 +259,7 @@ export default function RegisterLlpComprehensiveStepByStepGuidePage() {
           {/* Card 2: Purple */}
           <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/15 hover:bg-purple-50/20 hover:-translate-y-0.5 transition-all duration-200 space-y-2 cursor-pointer">
             <div className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-lg bg-purple-50 text-purple-600 border border-purple-100 flex items-center justify-center group-hover:bg-purple-600 group-hover:text-white transition-colors">
+              <div className="w-7 h-7 rounded-lg bg-purple-50 text-purple-600 border border-purple-100 flex items-center justify-center group-hover:bg-purple-100/80 group-hover:border-purple-200 group-hover:scale-105 transition-all">
                 <Receipt className="w-4 h-4" />
               </div>
               <h4 className="font-semibold text-slate-900 group-hover:text-purple-700 transition-colors">2. Residential Address Proof</h4>
@@ -274,7 +274,7 @@ export default function RegisterLlpComprehensiveStepByStepGuidePage() {
           {/* Card 3: Amber */}
           <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-amber-500 hover:shadow-md hover:shadow-amber-500/15 hover:bg-amber-50/20 hover:-translate-y-0.5 transition-all duration-200 space-y-2 cursor-pointer">
             <div className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-lg bg-amber-50 text-amber-600 border border-amber-100 flex items-center justify-center group-hover:bg-amber-600 group-hover:text-white transition-colors">
+              <div className="w-7 h-7 rounded-lg bg-amber-50 text-amber-600 border border-amber-100 flex items-center justify-center group-hover:bg-amber-100/80 group-hover:border-amber-200 group-hover:scale-105 transition-all">
                 <Building className="w-4 h-4" />
               </div>
               <h4 className="font-semibold text-slate-900 group-hover:text-amber-700 transition-colors">3. Registered Business Office Proof</h4>
@@ -290,7 +290,7 @@ export default function RegisterLlpComprehensiveStepByStepGuidePage() {
           {/* Card 4: Emerald */}
           <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/20 hover:-translate-y-0.5 transition-all duration-200 space-y-2 cursor-pointer">
             <div className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+              <div className="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center group-hover:bg-emerald-100/80 group-hover:border-emerald-200 group-hover:scale-105 transition-all">
                 <FileSignature className="w-4 h-4" />
               </div>
               <h4 className="font-semibold text-slate-900 group-hover:text-emerald-700 transition-colors">4. Constitutional Legal Documents</h4>

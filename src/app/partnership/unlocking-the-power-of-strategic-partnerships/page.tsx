@@ -200,36 +200,49 @@ export default function UnlockingThePowerOfStrategicPartnershipsPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
           {STRATEGIC_BENEFITS.map((item, idx) => {
-            let hoverClasses = "hover:border-slate-300 hover:shadow-slate-500/10";
-            if (item.color === "blue") {
-              hoverClasses = "hover:border-blue-500 hover:shadow-blue-500/10 group-hover:text-blue-950";
-            } else if (item.color === "emerald") {
-              hoverClasses = "hover:border-emerald-500 hover:shadow-emerald-500/10 group-hover:text-emerald-950";
-            } else if (item.color === "purple") {
-              hoverClasses = "hover:border-purple-500 hover:shadow-purple-500/10 group-hover:text-purple-950";
-            } else if (item.color === "indigo") {
-              hoverClasses = "hover:border-indigo-500 hover:shadow-indigo-500/10 group-hover:text-indigo-950";
-            }
+            const colorStyles: Record<string, { card: string; title: string; iconBox: string }> = {
+              blue: {
+                card: "hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/15 hover:bg-blue-50/20",
+                title: "group-hover:text-blue-700",
+                iconBox: "bg-blue-50 text-blue-600 border-blue-100 group-hover:bg-blue-100/80 group-hover:border-blue-200",
+              },
+              emerald: {
+                card: "hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/20",
+                title: "group-hover:text-emerald-700",
+                iconBox: "bg-emerald-50 text-emerald-600 border-emerald-100 group-hover:bg-emerald-100/80 group-hover:border-emerald-200",
+              },
+              purple: {
+                card: "hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/15 hover:bg-purple-50/20",
+                title: "group-hover:text-purple-700",
+                iconBox: "bg-purple-50 text-purple-600 border-purple-100 group-hover:bg-purple-100/80 group-hover:border-purple-200",
+              },
+              indigo: {
+                card: "hover:border-indigo-500 hover:shadow-md hover:shadow-indigo-500/15 hover:bg-indigo-50/20",
+                title: "group-hover:text-indigo-700",
+                iconBox: "bg-indigo-50 text-indigo-600 border-indigo-100 group-hover:bg-indigo-100/80 group-hover:border-indigo-200",
+              },
+            };
+            const style = colorStyles[item.color] || colorStyles.blue;
 
             return (
               <div
                 key={idx}
-                className={`p-4.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:shadow-md transition-all duration-200 cursor-pointer group space-y-2 ${hoverClasses}`}
+                className={`p-4.5 rounded-xl bg-white border border-slate-200/80 shadow-2xs hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group space-y-2 ${style.card}`}
               >
                 <div className="flex items-center justify-between gap-2">
                   <div className="flex items-center gap-2.5">
-                    <div className="w-8 h-8 rounded-lg bg-white border border-slate-200/80 flex items-center justify-center shrink-0 shadow-3xs group-hover:scale-105 transition-transform">
+                    <div className={`w-8 h-8 rounded-lg border flex items-center justify-center shrink-0 shadow-3xs group-hover:scale-105 transition-all ${style.iconBox}`}>
                       {item.icon}
                     </div>
-                    <h3 className="text-sm font-semibold text-slate-950 transition-colors">
+                    <h3 className={`text-sm font-semibold text-slate-950 transition-colors ${style.title}`}>
                       {item.title}
                     </h3>
                   </div>
-                  <span className="text-[11px] font-semibold px-2 py-0.5 rounded-md bg-white border border-slate-200 text-slate-700 shrink-0">
+                  <span className="text-[11px] font-semibold px-2 py-0.5 rounded-md bg-slate-50 border border-slate-200 text-slate-700 shrink-0">
                     {item.badge}
                   </span>
                 </div>
-                <p className="text-xs sm:text-[13px] text-slate-800 leading-relaxed font-normal">
+                <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal">
                   {item.desc}
                 </p>
               </div>
@@ -249,31 +262,44 @@ export default function UnlockingThePowerOfStrategicPartnershipsPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
           {PARTNERSHIP_VARIANTS.map((variant, idx) => {
-            let hoverClasses = "hover:border-slate-300 hover:shadow-slate-500/10";
-            if (variant.color === "blue") {
-              hoverClasses = "hover:border-blue-500 hover:shadow-blue-500/10 group-hover:text-blue-950";
-            } else if (variant.color === "emerald") {
-              hoverClasses = "hover:border-emerald-500 hover:shadow-emerald-500/10 group-hover:text-emerald-950";
-            } else if (variant.color === "purple") {
-              hoverClasses = "hover:border-purple-500 hover:shadow-purple-500/10 group-hover:text-purple-950";
-            } else if (variant.color === "indigo") {
-              hoverClasses = "hover:border-indigo-500 hover:shadow-indigo-500/10 group-hover:text-indigo-950";
-            }
+            const colorStyles: Record<string, { card: string; title: string; iconBox: string }> = {
+              blue: {
+                card: "hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/15 hover:bg-blue-50/20",
+                title: "group-hover:text-blue-700",
+                iconBox: "bg-blue-50 text-blue-600 border-blue-100 group-hover:bg-blue-100/80 group-hover:border-blue-200",
+              },
+              emerald: {
+                card: "hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/20",
+                title: "group-hover:text-emerald-700",
+                iconBox: "bg-emerald-50 text-emerald-600 border-emerald-100 group-hover:bg-emerald-100/80 group-hover:border-emerald-200",
+              },
+              purple: {
+                card: "hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/15 hover:bg-purple-50/20",
+                title: "group-hover:text-purple-700",
+                iconBox: "bg-purple-50 text-purple-600 border-purple-100 group-hover:bg-purple-100/80 group-hover:border-purple-200",
+              },
+              indigo: {
+                card: "hover:border-indigo-500 hover:shadow-md hover:shadow-indigo-500/15 hover:bg-indigo-50/20",
+                title: "group-hover:text-indigo-700",
+                iconBox: "bg-indigo-50 text-indigo-600 border-indigo-100 group-hover:bg-indigo-100/80 group-hover:border-indigo-200",
+              },
+            };
+            const style = colorStyles[variant.color] || colorStyles.blue;
 
             return (
               <div
                 key={idx}
-                className={`p-4.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:shadow-md transition-all duration-200 cursor-pointer group space-y-2 ${hoverClasses}`}
+                className={`p-4.5 rounded-xl bg-white border border-slate-200/80 shadow-2xs hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group space-y-2 ${style.card}`}
               >
                 <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-lg bg-white border border-slate-200/80 flex items-center justify-center shrink-0 shadow-3xs group-hover:scale-105 transition-transform">
+                  <div className={`w-8 h-8 rounded-lg border flex items-center justify-center shrink-0 shadow-3xs group-hover:scale-105 transition-all ${style.iconBox}`}>
                     {variant.icon}
                   </div>
-                  <h3 className="text-sm font-semibold text-slate-950 transition-colors">
+                  <h3 className={`text-sm font-semibold text-slate-950 transition-colors ${style.title}`}>
                     {variant.title}
                   </h3>
                 </div>
-                <p className="text-xs sm:text-[13px] text-slate-800 leading-relaxed font-normal">
+                <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal">
                   {variant.desc}
                 </p>
               </div>
@@ -319,21 +345,21 @@ export default function UnlockingThePowerOfStrategicPartnershipsPage() {
           4. Iconic Strategic Partnerships: Real-World Synergies
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1.5 hover:bg-white hover:border-blue-400 transition-all duration-200">
-            <h4 className="text-xs sm:text-sm font-semibold text-slate-950">Apple &amp; IBM</h4>
-            <p className="text-xs text-slate-800 leading-relaxed font-normal">
+          <div className="group p-4 rounded-xl bg-white border border-slate-200/80 shadow-2xs space-y-1.5 hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/15 hover:bg-blue-50/20 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer">
+            <h4 className="text-xs sm:text-sm font-semibold text-slate-950 group-hover:text-blue-700 transition-colors">Apple &amp; IBM</h4>
+            <p className="text-xs text-slate-700 leading-relaxed font-normal">
               Combined Apple&apos;s intuitive iOS enterprise hardware with IBM&apos;s big data analytics and cloud backend to revolutionize enterprise mobile software.
             </p>
           </div>
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1.5 hover:bg-white hover:border-emerald-400 transition-all duration-200">
-            <h4 className="text-xs sm:text-sm font-semibold text-slate-950">Nike &amp; Apple</h4>
-            <p className="text-xs text-slate-800 leading-relaxed font-normal">
+          <div className="group p-4 rounded-xl bg-white border border-slate-200/80 shadow-2xs space-y-1.5 hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/20 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer">
+            <h4 className="text-xs sm:text-sm font-semibold text-slate-950 group-hover:text-emerald-700 transition-colors">Nike &amp; Apple</h4>
+            <p className="text-xs text-slate-700 leading-relaxed font-normal">
               Pioneered wearable fitness tech through the Nike+iPod ecosystem, merging world-class athletic gear with synchronized digital music and workout tracking.
             </p>
           </div>
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1.5 hover:bg-white hover:border-purple-400 transition-all duration-200">
-            <h4 className="text-xs sm:text-sm font-semibold text-slate-950">Starbucks &amp; Spotify</h4>
-            <p className="text-xs text-slate-800 leading-relaxed font-normal">
+          <div className="group p-4 rounded-xl bg-white border border-slate-200/80 shadow-2xs space-y-1.5 hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/15 hover:bg-purple-50/20 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer">
+            <h4 className="text-xs sm:text-sm font-semibold text-slate-950 group-hover:text-purple-700 transition-colors">Starbucks &amp; Spotify</h4>
+            <p className="text-xs text-slate-700 leading-relaxed font-normal">
               Linked retail coffee loyalty with personalized digital audio streaming, giving coffee patrons direct curation power over in-store cafe playlists.
             </p>
           </div>

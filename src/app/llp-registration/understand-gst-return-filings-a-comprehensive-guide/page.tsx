@@ -104,7 +104,7 @@ const WORKFLOW_STAGES = [
     title: "Ledger & Invoice Data Compilation",
     desc: "Consolidate sales registers, purchase books, e-invoicing JSON files, and credit/debit notes for the tax period. Ensure all taxable, exempt, and export sales are categorized correctly.",
     icon: <FileText className="w-5 h-5 text-emerald-600" />,
-    iconBox: "bg-emerald-50 text-emerald-600 border border-emerald-100 group-hover:bg-emerald-600 group-hover:text-white",
+    iconBox: "bg-emerald-50 text-emerald-600 border border-emerald-100 group-hover:bg-emerald-100/80 group-hover:border-emerald-200 group-hover:scale-105",
     hoverBorder: "hover:border-emerald-500",
     hoverShadow: "hover:shadow-md hover:shadow-emerald-500/15",
     hoverBg: "hover:bg-emerald-50/20",
@@ -115,7 +115,7 @@ const WORKFLOW_STAGES = [
     title: "GSTR-2B Input Tax Credit Reconciliation",
     desc: "Cross-verify purchase registers against the auto-generated GSTR-2B statement. Under Section 16(2)(aa), ITC can only be claimed if your supplier has reported the invoice in their GSTR-1.",
     icon: <CheckCircle2 className="w-5 h-5 text-blue-600" />,
-    iconBox: "bg-blue-50 text-blue-600 border border-blue-100 group-hover:bg-blue-600 group-hover:text-white",
+    iconBox: "bg-blue-50 text-blue-600 border border-blue-100 group-hover:bg-blue-100/80 group-hover:border-blue-200 group-hover:scale-105",
     hoverBorder: "hover:border-blue-500",
     hoverShadow: "hover:shadow-md hover:shadow-blue-500/15",
     hoverBg: "hover:bg-blue-50/20",
@@ -126,7 +126,7 @@ const WORKFLOW_STAGES = [
     title: "Access the Official GST Portal",
     desc: "Log in to the government portal (services.gst.gov.in) using your registered 15-digit GSTIN credentials and navigate to the Returns Dashboard.",
     icon: <Sparkles className="w-5 h-5 text-purple-600" />,
-    iconBox: "bg-purple-50 text-purple-600 border border-purple-100 group-hover:bg-purple-600 group-hover:text-white",
+    iconBox: "bg-purple-50 text-purple-600 border border-purple-100 group-hover:bg-purple-100/80 group-hover:border-purple-200 group-hover:scale-105",
     hoverBorder: "hover:border-purple-500",
     hoverShadow: "hover:shadow-md hover:shadow-purple-500/15",
     hoverBg: "hover:bg-purple-50/20",
@@ -137,7 +137,7 @@ const WORKFLOW_STAGES = [
     title: "Prepare & Upload GSTR-1 Outward Supplies",
     desc: "Enter invoice details in Table 4A (B2B sales), Table 5 (large B2C sales), Table 7 (small B2C), and Table 12 (HSN summary). Generate summary and submit with DSC.",
     icon: <Receipt className="w-5 h-5 text-amber-600" />,
-    iconBox: "bg-amber-50 text-amber-600 border border-amber-100 group-hover:bg-amber-600 group-hover:text-white",
+    iconBox: "bg-amber-50 text-amber-600 border border-amber-100 group-hover:bg-amber-100/80 group-hover:border-amber-200 group-hover:scale-105",
     hoverBorder: "hover:border-amber-500",
     hoverShadow: "hover:shadow-md hover:shadow-amber-500/15",
     hoverBg: "hover:bg-amber-50/20",
@@ -148,7 +148,7 @@ const WORKFLOW_STAGES = [
     title: "Review Auto-Populated GSTR-3B",
     desc: "After GSTR-1 submission, open GSTR-3B. Verify that outward tax liabilities match GSTR-1 and that eligible ITC reflects GSTR-2B accurately.",
     icon: <FileCheck className="w-5 h-5 text-teal-600" />,
-    iconBox: "bg-teal-50 text-teal-600 border border-teal-100 group-hover:bg-teal-600 group-hover:text-white",
+    iconBox: "bg-teal-50 text-teal-600 border border-teal-100 group-hover:bg-teal-100/80 group-hover:border-teal-200 group-hover:scale-105",
     hoverBorder: "hover:border-teal-500",
     hoverShadow: "hover:shadow-md hover:shadow-teal-500/15",
     hoverBg: "hover:bg-teal-50/20",
@@ -159,7 +159,7 @@ const WORKFLOW_STAGES = [
     title: "Offset Tax Liability & Challan Payment",
     desc: "Offset outward tax against available electronic credit ledger balance. If cash shortfall exists, generate a PMT-06 challan and pay via Net Banking or NEFT/RTGS.",
     icon: <BadgePercent className="w-5 h-5 text-indigo-600" />,
-    iconBox: "bg-indigo-50 text-indigo-600 border border-indigo-100 group-hover:bg-indigo-600 group-hover:text-white",
+    iconBox: "bg-indigo-50 text-indigo-600 border border-indigo-100 group-hover:bg-indigo-100/80 group-hover:border-indigo-200 group-hover:scale-105",
     hoverBorder: "hover:border-indigo-500",
     hoverShadow: "hover:shadow-md hover:shadow-indigo-500/15",
     hoverBg: "hover:bg-indigo-50/20",
@@ -170,7 +170,7 @@ const WORKFLOW_STAGES = [
     title: "Electronic Verification (DSC) & ARN Generation",
     desc: "For LLPs and companies, sign the return electronically using the Class-3 Digital Signature Certificate (DSC) of a designated partner. Upon successful filing, an Application Reference Number (ARN) is generated for statutory audit records.",
     icon: <ShieldCheck className="w-5 h-5 text-rose-600" />,
-    iconBox: "bg-rose-50 text-rose-600 border border-rose-100 group-hover:bg-rose-600 group-hover:text-white",
+    iconBox: "bg-rose-50 text-rose-600 border border-rose-100 group-hover:bg-rose-100/80 group-hover:border-rose-200 group-hover:scale-105",
     hoverBorder: "hover:border-rose-500",
     hoverShadow: "hover:shadow-md hover:shadow-rose-500/15",
     hoverBg: "hover:bg-rose-50/20",
@@ -216,7 +216,7 @@ export default function UnderstandGstReturnFilingsAComprehensiveGuidePage() {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs sm:text-[13px]">
           <div className="group p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/20 hover:-translate-y-0.5 transition-all duration-200 space-y-2 cursor-pointer">
-            <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+            <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center group-hover:bg-emerald-100/80 group-hover:border-emerald-200 group-hover:scale-105 transition-all">
               <CheckCircle2 className="w-4 h-4" />
             </div>
             <strong className="text-slate-900 block font-semibold group-hover:text-emerald-700 transition-colors">Seamless ITC Pass-Through</strong>
@@ -225,7 +225,7 @@ export default function UnderstandGstReturnFilingsAComprehensiveGuidePage() {
             </p>
           </div>
           <div className="group p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-amber-500 hover:shadow-md hover:shadow-amber-500/15 hover:bg-amber-50/20 hover:-translate-y-0.5 transition-all duration-200 space-y-2 cursor-pointer">
-            <div className="w-8 h-8 rounded-lg bg-amber-50 text-amber-600 border border-amber-100 flex items-center justify-center group-hover:bg-amber-600 group-hover:text-white transition-colors">
+            <div className="w-8 h-8 rounded-lg bg-amber-50 text-amber-600 border border-amber-100 flex items-center justify-center group-hover:bg-amber-100/80 group-hover:border-amber-200 group-hover:scale-105 transition-all">
               <Receipt className="w-4 h-4" />
             </div>
             <strong className="text-slate-900 block font-semibold group-hover:text-amber-700 transition-colors">Zero Late Fees &amp; Interest</strong>
@@ -234,7 +234,7 @@ export default function UnderstandGstReturnFilingsAComprehensiveGuidePage() {
             </p>
           </div>
           <div className="group p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/15 hover:bg-blue-50/20 hover:-translate-y-0.5 transition-all duration-200 space-y-2 cursor-pointer">
-            <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 border border-blue-100 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors">
+            <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 border border-blue-100 flex items-center justify-center group-hover:bg-blue-100/80 group-hover:border-blue-200 group-hover:scale-105 transition-all">
               <ShieldCheck className="w-4 h-4" />
             </div>
             <strong className="text-slate-900 block font-semibold group-hover:text-blue-700 transition-colors">Protection from Suspension</strong>
@@ -328,7 +328,7 @@ export default function UnderstandGstReturnFilingsAComprehensiveGuidePage() {
           {/* Mistake 1: Rose */}
           <div className="group p-3.5 rounded-xl bg-white border border-rose-200/70 shadow-2xs hover:border-rose-500 hover:shadow-md hover:shadow-rose-500/15 hover:bg-rose-50/20 hover:-translate-y-0.5 transition-all duration-200 space-y-1.5 cursor-pointer">
             <div className="flex items-center gap-2">
-              <div className="w-6 h-6 rounded-md bg-rose-50 text-rose-600 border border-rose-100 flex items-center justify-center group-hover:bg-rose-600 group-hover:text-white transition-colors shrink-0">
+              <div className="w-6 h-6 rounded-md bg-rose-50 text-rose-600 border border-rose-100 flex items-center justify-center group-hover:bg-rose-100/80 group-hover:border-rose-200 group-hover:scale-105 transition-all shrink-0">
                 <AlertTriangle className="w-3.5 h-3.5" />
               </div>
               <strong className="block font-semibold text-slate-900 group-hover:text-rose-700 transition-colors">1. Claiming Ineligible / Blocked ITC</strong>
@@ -341,7 +341,7 @@ export default function UnderstandGstReturnFilingsAComprehensiveGuidePage() {
           {/* Mistake 2: Amber */}
           <div className="group p-3.5 rounded-xl bg-white border border-amber-200/70 shadow-2xs hover:border-amber-500 hover:shadow-md hover:shadow-amber-500/15 hover:bg-amber-50/20 hover:-translate-y-0.5 transition-all duration-200 space-y-1.5 cursor-pointer">
             <div className="flex items-center gap-2">
-              <div className="w-6 h-6 rounded-md bg-amber-50 text-amber-600 border border-amber-100 flex items-center justify-center group-hover:bg-amber-600 group-hover:text-white transition-colors shrink-0">
+              <div className="w-6 h-6 rounded-md bg-amber-50 text-amber-600 border border-amber-100 flex items-center justify-center group-hover:bg-amber-100/80 group-hover:border-amber-200 group-hover:scale-105 transition-all shrink-0">
                 <AlertCircle className="w-3.5 h-3.5" />
               </div>
               <strong className="block font-semibold text-slate-900 group-hover:text-amber-700 transition-colors">2. Discrepancy Between GSTR-1 and GSTR-3B</strong>
@@ -354,7 +354,7 @@ export default function UnderstandGstReturnFilingsAComprehensiveGuidePage() {
           {/* Mistake 3: Purple */}
           <div className="group p-3.5 rounded-xl bg-white border border-purple-200/70 shadow-2xs hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/15 hover:bg-purple-50/20 hover:-translate-y-0.5 transition-all duration-200 space-y-1.5 cursor-pointer">
             <div className="flex items-center gap-2">
-              <div className="w-6 h-6 rounded-md bg-purple-50 text-purple-600 border border-purple-100 flex items-center justify-center group-hover:bg-purple-600 group-hover:text-white transition-colors shrink-0">
+              <div className="w-6 h-6 rounded-md bg-purple-50 text-purple-600 border border-purple-100 flex items-center justify-center group-hover:bg-purple-100/80 group-hover:border-purple-200 group-hover:scale-105 transition-all shrink-0">
                 <Scale className="w-3.5 h-3.5" />
               </div>
               <strong className="block font-semibold text-slate-900 group-hover:text-purple-700 transition-colors">3. Failure to File Nil Returns</strong>
@@ -367,7 +367,7 @@ export default function UnderstandGstReturnFilingsAComprehensiveGuidePage() {
           {/* Mistake 4: Blue */}
           <div className="group p-3.5 rounded-xl bg-white border border-blue-200/70 shadow-2xs hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/15 hover:bg-blue-50/20 hover:-translate-y-0.5 transition-all duration-200 space-y-1.5 cursor-pointer">
             <div className="flex items-center gap-2">
-              <div className="w-6 h-6 rounded-md bg-blue-50 text-blue-600 border border-blue-100 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors shrink-0">
+              <div className="w-6 h-6 rounded-md bg-blue-50 text-blue-600 border border-blue-100 flex items-center justify-center group-hover:bg-blue-100/80 group-hover:border-blue-200 group-hover:scale-105 transition-all shrink-0">
                 <Receipt className="w-3.5 h-3.5" />
               </div>
               <strong className="block font-semibold text-slate-900 group-hover:text-blue-700 transition-colors">4. Incorrect HSN / SAC Code Classifications</strong>
@@ -391,7 +391,7 @@ export default function UnderstandGstReturnFilingsAComprehensiveGuidePage() {
           {/* Reform 1: Blue */}
           <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/15 hover:bg-blue-50/20 hover:-translate-y-0.5 transition-all duration-200 space-y-2 cursor-pointer">
             <div className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-lg bg-blue-50 text-blue-600 border border-blue-100 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors shrink-0">
+              <div className="w-7 h-7 rounded-lg bg-blue-50 text-blue-600 border border-blue-100 flex items-center justify-center group-hover:bg-blue-100/80 group-hover:border-blue-200 group-hover:scale-105 transition-all shrink-0">
                 <Sparkles className="w-4 h-4" />
               </div>
               <strong className="text-slate-900 block font-semibold group-hover:text-blue-700 transition-colors">GSTR-1A Amendment Window</strong>
@@ -404,7 +404,7 @@ export default function UnderstandGstReturnFilingsAComprehensiveGuidePage() {
           {/* Reform 2: Emerald */}
           <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/20 hover:-translate-y-0.5 transition-all duration-200 space-y-2 cursor-pointer">
             <div className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-colors shrink-0">
+              <div className="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center group-hover:bg-emerald-100/80 group-hover:border-emerald-200 group-hover:scale-105 transition-all shrink-0">
                 <ShieldCheck className="w-4 h-4" />
               </div>
               <strong className="text-slate-900 block font-semibold group-hover:text-emerald-700 transition-colors">Hard-Locking of Auto-ITC</strong>
@@ -417,7 +417,7 @@ export default function UnderstandGstReturnFilingsAComprehensiveGuidePage() {
           {/* Reform 3: Purple */}
           <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/15 hover:bg-purple-50/20 hover:-translate-y-0.5 transition-all duration-200 space-y-2 cursor-pointer">
             <div className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-lg bg-purple-50 text-purple-600 border border-purple-100 flex items-center justify-center group-hover:bg-purple-600 group-hover:text-white transition-colors shrink-0">
+              <div className="w-7 h-7 rounded-lg bg-purple-50 text-purple-600 border border-purple-100 flex items-center justify-center group-hover:bg-purple-100/80 group-hover:border-purple-200 group-hover:scale-105 transition-all shrink-0">
                 <FileCheck className="w-4 h-4" />
               </div>
               <strong className="text-slate-900 block font-semibold group-hover:text-purple-700 transition-colors">E-Invoicing Expansion</strong>
