@@ -70,6 +70,7 @@ export default function Footer() {
         { name: "Trademark Search Engine", href: "#tm-search" },
         { name: "HSN / SAC Code Finder", href: "#hsn-finder" },
         { name: "Income Tax Calculator", href: "#it-calc" },
+        { name: "OPC Registration Guide", href: "/one-person-company/opc-registration-process-guide" },
         { name: "Startup Cost Estimator", href: "#cost-calc" },
         { name: "Merra Client Workspace", href: "#workspace" },
       ],

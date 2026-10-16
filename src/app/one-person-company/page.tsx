@@ -33,6 +33,8 @@ import {
   Globe2,
 } from "lucide-react";
 
+import Link from "next/link";
+
 const OPC_DOCUMENTS_TABLE = [
   {
     document: "PAN Card (Director & Nominee)",
@@ -376,12 +378,26 @@ const FORM_FEATURES = [
 ];
 
 const RELATED_GUIDES = [
-  "Comprehensive Guide to One Person Company (OPC) Registration",
-  "Mandatory Nominee Consent Rules & Form INC-3 Explained",
-  "Differences Between OPC, Sole Proprietorship, and Private Limited",
-  "Annual ROC Compliances for OPC: AOC-4 & MGT-7A Filing Deadlines",
-  "How to Convert an OPC into a Private Limited Company",
-  "Taxation Rules for One Person Companies in India: Flat 22% Corporate Tax",
+  {
+    title: "Understanding the OPC Registration Process: A Complete Guide",
+    href: "/one-person-company/opc-registration-process-guide",
+  },
+  {
+    title: "How to Register an OPC: A Step-by-Step Guide",
+    href: "/one-person-company/register-an-opc-stepbystep-guide",
+  },
+  {
+    title: "Understanding OPC Registration Fee: How to Apply Easily",
+    href: "/one-person-company/opc-registration-fee-how-to-apply-easily",
+  },
+  {
+    title: "One Person Company: Structure, Rules & Success Guide",
+    href: "/one-person-company/understanding-one-person-company-structure",
+  },
+  {
+    title: "OPC Registration: Streamline Your Business Setup in India",
+    href: "/one-person-company/opc-registration-streamline-your-business-setup",
+  },
 ];
 
 const RELATED_SERVICES_TAGS = [
@@ -821,6 +837,45 @@ function OpcGuideContent() {
                       From GST registration to annual ROC filing and accounting support, we stay with your business for the long haul.
                     </p>
                   </div>
+                </div>
+              </div>
+
+              {/* Section: Official OPC Registration Guides & Handbooks */}
+              <div className="border-t border-slate-100 pt-8 mt-2">
+                <div className="mb-5">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-semibold uppercase tracking-wider mb-2">
+                    <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+                    <span>In-Depth Regulatory Handbooks</span>
+                  </div>
+                  <h3 className="text-[20px] sm:text-[22px] font-normal text-[#1F1646]">
+                    Official One Person Company Knowledge Guides
+                  </h3>
+                  <p className="text-xs sm:text-[13px] text-slate-700 mt-1 leading-relaxed">
+                    Step-by-step statutory roadmaps, government fee schedules, and incorporation procedures curated by Chartered Accountants and Company Secretaries.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {RELATED_GUIDES.map((guide, idx) => (
+                    <Link
+                      key={idx}
+                      href={guide.href}
+                      className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-emerald-500 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between cursor-pointer"
+                    >
+                      <div>
+                        <div className="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center mb-3 font-bold text-xs border border-emerald-200/70 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                          0{idx + 1}
+                        </div>
+                        <h4 className="text-[14px] sm:text-[14.5px] font-bold text-slate-950 group-hover:text-emerald-700 transition-colors leading-snug">
+                          {guide.title}
+                        </h4>
+                      </div>
+                      <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-emerald-700">
+                        <span>Read Full Guide</span>
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </Link>
+                  ))}
                 </div>
               </div>
     </>
