@@ -181,7 +181,7 @@ export default function TrademarkObjectionGuideLayout({
                   <h3 className="text-xl sm:text-2xl font-normal text-white">
                     Received a Trademark Examination Report?
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-200 font-normal max-w-xl">
+                  <p className="text-xs sm:text-sm text-slate-200 font-normal max-w-xl" style={{ color: "#E2E8F0" }}>
                     Don&apos;t let your application get deemed &quot;Abandoned&quot;. Merrafilings senior IP attorneys draft compelling legal replies with judicial citations and user affidavits within 48 hours.
                   </p>
                 </div>

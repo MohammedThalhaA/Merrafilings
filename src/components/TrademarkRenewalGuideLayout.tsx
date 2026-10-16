@@ -181,7 +181,7 @@ export default function TrademarkRenewalGuideLayout({
                   <h3 className="text-xl sm:text-2xl font-normal text-white">
                     Need Help Renewing or Restoring Your Trademark?
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-200 font-normal max-w-xl">
+                  <p className="text-xs sm:text-sm text-slate-200 font-normal max-w-xl" style={{ color: "#E2E8F0" }}>
                     Don&apos;t let your 10-year brand exclusivity lapse into abandonment. File Form TM-R before expiration or restore within the grace window with Merrafilings registered IP attorneys.
                   </p>
                 </div>

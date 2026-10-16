@@ -181,7 +181,7 @@ export default function TrademarkCertificateGuideLayout({
                   <h3 className="text-xl sm:text-2xl font-normal text-white">
                     Need Help with Your Trademark Certificate or Brand Protection?
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-200 font-normal max-w-xl">
+                  <p className="text-xs sm:text-sm text-slate-200 font-normal max-w-xl" style={{ color: "#E2E8F0" }}>
                     Whether you need to retrieve your official Form RG-2 certificate, resolve clerical errors, or monitor conflicting journal filings, Merrafilings senior IP attorneys are here to assist.
                   </p>
                 </div>

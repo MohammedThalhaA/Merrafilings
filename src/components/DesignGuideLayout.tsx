@@ -182,7 +182,7 @@ export default function DesignGuideLayout({
                   <h3 className="text-xl sm:text-2xl font-normal text-white">
                     Ready to Protect Your Product Design from Copycats?
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-200 font-normal max-w-xl">
+                  <p className="text-xs sm:text-sm text-slate-200 font-normal max-w-xl" style={{ color: "#E2E8F0" }}>
                     Secure 15 years of exclusive aesthetic market monopoly across India with expert 7-angle CAD drawing drafting and fast-track Kolkata prosecution.
                   </p>
                 </div>

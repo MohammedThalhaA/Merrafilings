@@ -446,21 +446,22 @@ a:not([class*="bg-clip-text"])[class*="from-[#5C3BFF]"] {
 
 /* ==========================================================================
    Editorial Content & High-Contrast Dark Typography
-   Makes all article text, paragraphs, descriptions, and lists clearly visible with rich dark color
+   Makes article body text, paragraphs, and descriptions clearly visible while preserving light text on dark banners
    ========================================================================== */
-article,
-article p,
-article li,
-article ul,
-article ol,
-article p *,
-article li *,
-.guide-content p,
-.guide-content li,
 .prose p,
-.prose li {
-  color: #0F172A !important; /* Deep Dark Slate 900 / Near-Black for maximum contrast */
+.prose li,
+.prose ul,
+.prose ol,
+.guide-content p,
+.guide-content li {
+  color: #0F172A !important;
   font-weight: 400 !important;
+}
+
+article > p,
+article > div:not([class*="bg-"]):not([class*="from-"]):not([class*="text-white"]) p {
+  color: #0F172A;
+  font-weight: 400;
 }
 
 article .font-light,
@@ -469,19 +470,42 @@ article [class*="font-light"],
   font-weight: 400 !important;
 }
 
-article .text-slate-600,
-article .text-slate-500,
-article [class*="text-slate-600"],
-article [class*="text-slate-500"] {
-  color: #0F172A !important;
-}
-
 article strong,
 article b,
 .prose strong,
 .prose b {
   color: #000000 !important;
   font-weight: 600 !important;
+}
+
+/* Explicit high-contrast white/light text for dark consultation cards and banners */
+[class*="from-[#1F1646]"],
+[class*="from-[#1F1646]"] p,
+[class*="from-[#1F1646]"] p *,
+[class*="from-[#2A1E5C]"],
+[class*="from-[#2A1E5C]"] p,
+[class*="from-[#2A1E5C]"] p *,
+[class*="from-[#0F172A]"],
+[class*="from-[#0F172A]"] p,
+[class*="from-[#0F172A]"] p *,
+[class*="from-slate-900"],
+[class*="from-slate-900"] p,
+[class*="from-slate-900"] p *,
+[class*="bg-slate-900"] p,
+[class*="bg-slate-900"] p *,
+[class*="bg-[#1F1646]"] p,
+[class*="bg-[#1F1646]"] p *,
+[class*="text-white"] p,
+[class*="text-white"] p *,
+article p[class*="text-slate-100"],
+article p[class*="text-slate-200"],
+article p[class*="text-slate-300"],
+p[class*="text-slate-100"],
+p[class*="text-slate-200"],
+p[class*="text-slate-300"],
+p[class*="text-purple-100"],
+p[class*="text-emerald-100"] {
+  color: #E2E8F0 !important;
 }
 
 .text-slate-600:not([class*="hover:"]):not([class*="group-hover:"]) {

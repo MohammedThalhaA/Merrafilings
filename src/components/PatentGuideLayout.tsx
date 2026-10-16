@@ -182,7 +182,7 @@ export default function PatentGuideLayout({
                   <h3 className="text-xl sm:text-2xl font-normal text-white">
                     Ready to Protect Your Invention with a 20-Year Patent?
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-200 font-normal max-w-xl">
+                  <p className="text-xs sm:text-sm text-slate-200 font-normal max-w-xl" style={{ color: "#E2E8F0" }}>
                     Lock in your priority date today with an official provisional patent application or draft your complete techno-legal specification with registered Indian Patent Agents.
                   </p>
                 </div>

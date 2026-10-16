@@ -180,7 +180,7 @@ export default function CopyrightGuideLayout({
                   <h3 className="text-xl sm:text-2xl font-normal text-white">
                     Ready to Register Your Copyright in India?
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-200 font-normal max-w-xl">
+                  <p className="text-xs sm:text-sm text-slate-200 font-normal max-w-xl" style={{ color: "#E2E8F0" }}>
                     Protect your original software code, literary work, artistic designs, sound recordings, or video content. Same-day Form XIV drafting, IP advocate review, and government dairy number generation.
                   </p>
                 </div>

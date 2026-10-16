@@ -167,7 +167,7 @@ export default function TrademarkGuideLayout({
                   <h3 className="text-xl sm:text-2xl font-normal text-white">
                     Ready to Protect Your Brand Identity?
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-200 font-normal max-w-xl">
+                  <p className="text-xs sm:text-sm text-slate-200 font-normal max-w-xl" style={{ color: "#E2E8F0" }}>
                     Get your trademark filed with the IP India registry today. Same-day Form TM-A drafting, Nice classification guidance, and MSME 50% fee rebate assistance.
                   </p>
                 </div>
