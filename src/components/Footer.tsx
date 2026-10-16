@@ -71,6 +71,7 @@ export default function Footer() {
         { name: "HSN / SAC Code Finder", href: "#hsn-finder" },
         { name: "Income Tax Calculator", href: "#it-calc" },
         { name: "OPC Registration Guide", href: "/one-person-company/opc-registration-process-guide" },
+        { name: "LLP Registration Guide", href: "/llp-registration/llp-registration-guide-comprehensive-steps" },
         { name: "Startup Cost Estimator", href: "#cost-calc" },
         { name: "Merra Client Workspace", href: "#workspace" },
       ],

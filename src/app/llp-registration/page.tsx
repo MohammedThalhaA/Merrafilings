@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import ServicePageTemplate, {
   PricingPackage,
   useServicePage,
@@ -298,12 +299,22 @@ const FORM_FEATURES = [
 ];
 
 const RELATED_GUIDES = [
-  "Comprehensive Guide to Limited Liability Partnership in India",
-  "LLP Agreement Drafting: Mandatory Clauses & Form 3 ROC Filing",
-  "Differences Between LLP, Private Limited Company, and Partnership",
-  "Annual ROC Compliances for LLP: Form 8 & Form 11 Deadlines",
-  "How to Add or Remove a Partner in an Existing LLP",
-  "Taxation of LLPs in India: Corporate Tax, Surcharge & Cess Rates",
+  {
+    title: "Understanding Key Documents for LLP Registration",
+    href: "/llp-registration/key-documents-for-llp-registration-guide",
+  },
+  {
+    title: "A Comprehensive Guide to LLP Registration: Step-by-Step",
+    href: "/llp-registration/llp-registration-guide-comprehensive-steps",
+  },
+  {
+    title: "How to Register an LLP: A Step-by-Step Guide",
+    href: "/llp-registration/register-llp-comprehensive-stepbystep-guide",
+  },
+  {
+    title: "Understanding GST Return Filings: A Comprehensive Guide",
+    href: "/llp-registration/understand-gst-return-filings-a-comprehensive-guide",
+  },
 ];
 
 function LlpGuideContent() {
@@ -677,6 +688,45 @@ function LlpGuideContent() {
                     <span className="text-[#00A86B] font-bold">✓</span>
                     <span>100% Online Paperless Process across all 28 states</span>
                   </div>
+                </div>
+              </div>
+
+              {/* Related Regulatory Guides Cards */}
+              <div className="border-t border-slate-100 pt-7 mt-6">
+                <div className="mb-5">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-semibold uppercase tracking-wider mb-2">
+                    <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+                    <span>In-Depth Statutory Handbooks</span>
+                  </div>
+                  <h3 className="text-[20px] sm:text-[22px] font-normal text-[#1F1646]">
+                    Official LLP Knowledge &amp; Registration Guides
+                  </h3>
+                  <p className="text-xs sm:text-[13px] text-slate-700 mt-1 leading-relaxed">
+                    Step-by-step statutory roadmaps, document checklists, and compliance guides curated by practicing Chartered Accountants and Company Secretaries.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {RELATED_GUIDES.map((guide, idx) => (
+                    <Link
+                      key={idx}
+                      href={guide.href}
+                      className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-emerald-500 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between cursor-pointer"
+                    >
+                      <div>
+                        <div className="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center mb-3 font-bold text-xs border border-emerald-200/70 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                          0{idx + 1}
+                        </div>
+                        <h4 className="text-[14px] sm:text-[14.5px] font-bold text-slate-950 group-hover:text-emerald-700 transition-colors leading-snug">
+                          {guide.title}
+                        </h4>
+                      </div>
+                      <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-emerald-700">
+                        <span>Read Full Guide</span>
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </Link>
+                  ))}
                 </div>
               </div>
     </>
