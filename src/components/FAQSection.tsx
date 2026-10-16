@@ -75,8 +75,8 @@ export default function FAQSection() {
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search questions (e.g. GST, MCA, Pvt Ltd, Documents)..."
-                className="w-full px-4 py-2.5 rounded-full border border-slate-200 text-xs sm:text-sm text-slate-900 placeholder-slate-400 focus:outline-hidden focus:border-slate-800 bg-slate-50/60 focus:bg-white transition-colors"
+                placeholder="Search questions (e.g. GST, MCA, Pvt Ltd)..."
+                className="w-full px-4 py-2.5 min-h-[44px] rounded-full border border-slate-200 text-base sm:text-sm text-slate-900 placeholder-slate-400 focus:outline-hidden focus:border-slate-800 bg-slate-50/60 focus:bg-white transition-colors"
               />
             </div>
           </div>

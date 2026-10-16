@@ -29,6 +29,7 @@ export default function DashboardShowcase({ onOpenPortal }: DashboardShowcasePro
     {
       id: "corporate",
       label: "MCA Corporate Vault",
+      shortLabel: "MCA Vault",
       icon: FolderLock,
       company: "Aetheric Robotics Private Limited",
       cin: "U72900KA2024PTC189241",
@@ -67,6 +68,7 @@ export default function DashboardShowcase({ onOpenPortal }: DashboardShowcasePro
     {
       id: "tax",
       label: "GST & Tax Repository",
+      shortLabel: "GST & Tax",
       company: "Aetheric Robotics Private Limited",
       cin: "GSTIN: 29AAACA9012J1Z8",
       incorporationDate: "Active Regular Taxpayer",
@@ -105,6 +107,7 @@ export default function DashboardShowcase({ onOpenPortal }: DashboardShowcasePro
     {
       id: "trademark",
       label: "Trademark & IP Sentinel",
+      shortLabel: "Trademarks",
       company: "Aetheric Robotics Private Limited",
       cin: "TM App: 6189204 (Class 9 & 42)",
       incorporationDate: "Journal No: 2140",
@@ -143,6 +146,7 @@ export default function DashboardShowcase({ onOpenPortal }: DashboardShowcasePro
     {
       id: "calendar",
       label: "Statutory Radar & Alerts",
+      shortLabel: "Radar",
       company: "Aetheric Robotics Private Limited",
       cin: "Auto-Alerts: WhatsApp & Email Active",
       incorporationDate: "365-Day Audit Care",
@@ -226,9 +230,9 @@ export default function DashboardShowcase({ onOpenPortal }: DashboardShowcasePro
             </div>
 
             <div className="flex items-center gap-2">
-              <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-emerald-400 bg-emerald-950/80 px-2.5 py-0.5 rounded-full border border-emerald-800/60">
+              <span className="inline-flex items-center gap-1.5 text-[10px] sm:text-[11px] font-semibold text-emerald-400 bg-emerald-950/80 px-2 sm:px-2.5 py-0.5 rounded-full border border-emerald-800/60 whitespace-nowrap">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
-                256-Bit Bank-Grade AES Encryption
+                <span className="hidden xs:inline">Bank-Grade </span>AES-256 Vault
               </span>
             </div>
           </div>
@@ -277,14 +281,15 @@ export default function DashboardShowcase({ onOpenPortal }: DashboardShowcasePro
                     key={tab.id}
                     type="button"
                     onClick={() => setActiveTab(idx)}
-                    className={`relative z-10 w-1/4 py-2.5 px-2 rounded-xl text-xs sm:text-[13px] font-medium transition-colors duration-250 cursor-pointer flex items-center justify-center gap-2 truncate ${
+                    className={`relative z-10 w-1/4 py-2.5 px-1 sm:px-2 rounded-xl text-center text-xs sm:text-[13px] font-medium transition-colors duration-250 cursor-pointer flex items-center justify-center gap-1.5 whitespace-nowrap truncate ${
                       isActive
                         ? "text-white"
                         : "text-slate-600 hover:text-slate-900"
                     }`}
                   >
-                    <TabIcon className={`w-3.5 h-3.5 shrink-0 transition-colors ${isActive ? "text-emerald-400" : "text-slate-400"}`} />
-                    <span className="truncate">{tab.label}</span>
+                    <TabIcon className={`w-3.5 h-3.5 shrink-0 hidden sm:inline-block transition-colors ${isActive ? "text-emerald-400" : "text-slate-400"}`} />
+                    <span className="hidden sm:inline truncate">{tab.label}</span>
+                    <span className="sm:hidden text-[11px] font-medium truncate">{tab.shortLabel}</span>
                   </button>
                 );
               })}

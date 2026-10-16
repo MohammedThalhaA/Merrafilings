@@ -352,12 +352,26 @@ const FORM_FEATURES = [
 ];
 
 const RELATED_GUIDES = [
-  "Registered vs Unregistered Partnership Firm: Legal Rights Explained",
-  "How to Register a Partnership Firm with the Registrar of Firms (ROF)",
-  "Essential Clauses Every Partnership Deed Must Have in India",
-  "Differences Between General Partnership, LLP, and Private Limited",
-  "Income Tax Rules for Partnership Firms: 30% Flat Tax & Partner Salary",
-  "How to Dissolve or Reconstitute a Partnership Firm in India",
+  {
+    title: "Understanding the Partnership Model",
+    href: "/partnership/understanding-the-partnership-model",
+  },
+  {
+    title: "Understanding Partnership Firm Registration: A Comprehensive Guide",
+    href: "/partnership/partnership-firm-registration-guidence",
+  },
+  {
+    title: "Partnership Firm Registration Made Easy",
+    href: "/partnership/partnership-firm-registration-made-easy-to-us",
+  },
+  {
+    title: "Partnership Firm Registration Guidelines: A Comprehensive Overview",
+    href: "/partnership/partnership-firm-registration-guide-essential-steps",
+  },
+  {
+    title: "Unlocking the Power of Strategic Partnerships",
+    href: "/partnership/unlocking-the-power-of-strategic-partnerships",
+  },
 ];
 
 function PartnershipGuideContent() {

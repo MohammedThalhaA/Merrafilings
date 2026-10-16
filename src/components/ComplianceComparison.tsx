@@ -84,7 +84,7 @@ export default function ComplianceComparison({ onGetStarted }: ComplianceCompari
         {/* Comparison Table Card */}
         <div data-reveal="up" className="bg-white rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden">
           <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse">
+            <table className="w-full min-w-[640px] text-left border-collapse">
               <thead>
                 <tr className="border-b border-slate-200/90 bg-[#FAFBFB]">
                   <th className="py-5 px-6 text-xs font-semibold uppercase tracking-wider text-slate-500 w-2/5">

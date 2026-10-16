@@ -158,13 +158,13 @@ export default function HowItWorks({ onStartProcess }: HowItWorksProps) {
         </div>
 
         {/* Bottom CTA Banner with Hover Transform */}
-        <div className="mt-14 text-center">
+        <div className="mt-10 sm:mt-14 text-center">
           <button
             onClick={onStartProcess}
-            className="inline-flex items-center gap-2 px-8 py-3.5 text-xs sm:text-sm font-medium text-white bg-slate-900 hover:bg-slate-800 rounded-full shadow-sm hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 cursor-pointer group"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 sm:px-8 py-3.5 min-h-[44px] text-xs sm:text-sm font-medium text-white bg-slate-900 hover:bg-slate-800 rounded-full shadow-sm hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 cursor-pointer group"
           >
-            <span>Start Your Incorporation or Statutory Filing Today</span>
-            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            <span className="text-center">Start Your Incorporation or Statutory Filing Today</span>
+            <ArrowRight className="w-4 h-4 shrink-0 transition-transform group-hover:translate-x-1" />
           </button>
         </div>
 

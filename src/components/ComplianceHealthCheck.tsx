@@ -145,7 +145,7 @@ export default function ComplianceHealthCheck({ onBookAudit }: ComplianceHealthC
               <label className="text-xs font-semibold uppercase tracking-wider text-slate-500 block mb-2.5">
                 1. Select Entity Stage
               </label>
-              <div className="grid grid-cols-3 gap-2">
+              <div className="grid grid-cols-1 xs:grid-cols-3 gap-2">
                 {[
                   { id: "early", label: "Seed / Pre-Revenue", sub: "0–1 yr" },
                   { id: "growth", label: "Growth Stage", sub: "₹20L–₹5Cr" },
@@ -229,7 +229,7 @@ export default function ComplianceHealthCheck({ onBookAudit }: ComplianceHealthC
           </div>
 
           {/* Right Column: Dynamic Live Health Score Output Card */}
-          <div className="lg:col-span-5 bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-8 shadow-sm text-left sticky top-24 self-start h-fit">
+          <div className="lg:col-span-5 bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-8 shadow-sm text-left lg:sticky lg:top-24 self-start h-fit">
             
             <div className="flex items-center justify-between pb-5 border-b border-slate-100">
               <div>

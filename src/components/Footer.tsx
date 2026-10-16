@@ -96,7 +96,7 @@ export default function Footer() {
             </span>
           </div>
 
-          <div className="flex flex-wrap items-center gap-6 text-xs text-slate-600">
+          <div className="flex flex-wrap items-center gap-3 sm:gap-6 text-xs text-slate-600">
             <a href="tel:18001234567" className="flex items-center gap-1.5 hover:text-slate-900 transition-colors">
               <Phone className="w-3.5 h-3.5 text-slate-700" />
               <span className="font-semibold text-slate-900">Toll-Free:</span> 1800 123 4567
@@ -114,8 +114,8 @@ export default function Footer() {
       </div>
 
       {/* Main Footer Links Columns */}
-      <div className="w-full max-w-[1400px] 2xl:max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 2xl:gap-12">
+      <div className="w-full max-w-[1400px] 2xl:max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+        <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 2xl:gap-12">
           {footerColumns.map((col, idx) => (
             <div key={idx} className="space-y-3.5">
               <h4 className="text-xs font-semibold text-slate-900 uppercase tracking-wider">

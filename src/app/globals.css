@@ -47,6 +47,7 @@
 
 html {
   overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -59,6 +60,11 @@ body {
   overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure images, SVGs, videos never cause horizontal overflow */
+img, svg, video, canvas, audio, iframe, embed, object {
+  max-width: 100%;
 }
 
 /* Custom Scrollbar for sleek corporate aesthetic */
@@ -515,5 +521,41 @@ p[class*="text-emerald-100"] {
 .text-slate-600 {
   color: #1E293B;
 }
+
+/* ==========================================================================
+   Responsive Design & Mobile-First Foundation Rules
+   ========================================================================== */
+
+/* 1. Prevent iOS Safari auto-zoom on form inputs by guaranteeing 16px minimum on mobile */
+@media screen and (max-width: 768px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* 2. Responsive Tables: Ensure all tables inside articles or wrappers scroll cleanly horizontally */
+article table,
+.prose table,
+.guide-content table,
+.overflow-x-auto table {
+  max-width: 100%;
+}
+
+.overflow-x-auto {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+}
+
+/* 3. Safe area padding helpers for devices with notches / home bars */
+.safe-pb {
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
+.safe-pt {
+  padding-top: max(1rem, env(safe-area-inset-top));
+}
+
 
 

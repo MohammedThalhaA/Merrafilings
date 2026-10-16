@@ -35,7 +35,7 @@ export default function ClientLogos() {
         </div>
 
         {/* Brand Grid with Multi-Directional Entrance Animations */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
+        <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
           {brands.map((brand, idx) => {
             const revealDir = idx < 2 ? "left" : idx < 4 ? "up" : "right";
             const staggerClass = `stagger-${idx + 1}`;
@@ -44,7 +44,7 @@ export default function ClientLogos() {
               <div
                 key={idx}
                 data-reveal={revealDir}
-                className={`bg-white rounded-xl p-4 text-center border border-slate-200/80 shadow-2xs hover:border-slate-300 hover:shadow-xs transition-all flex flex-col justify-between ${staggerClass}`}
+                className={`bg-white rounded-xl p-3.5 sm:p-4 text-center border border-slate-200/80 shadow-2xs hover:border-slate-300 hover:shadow-xs transition-all flex flex-col justify-between ${staggerClass}`}
               >
                 <div>
                   <span className="text-[10px] font-medium text-slate-400 uppercase tracking-wider block mb-1">

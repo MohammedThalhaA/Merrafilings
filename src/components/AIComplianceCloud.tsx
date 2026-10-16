@@ -31,6 +31,7 @@ export default function AIComplianceCloud({ onExplore, onBookDemo }: AIComplianc
     {
       id: 0,
       tabLabel: "GST & Tax",
+      shortTabLabel: "GST",
       title: "GST Return Filing & Tax Advisory",
       badge: "Dedicated CA Assigned",
       icon: Receipt,
@@ -50,6 +51,7 @@ export default function AIComplianceCloud({ onExplore, onBookDemo }: AIComplianc
     {
       id: 1,
       tabLabel: "MCA Secretarial",
+      shortTabLabel: "MCA",
       title: "ROC & MCA Annual Secretarial Care",
       badge: "Qualified CS Sign-off",
       icon: Landmark,
@@ -69,6 +71,7 @@ export default function AIComplianceCloud({ onExplore, onBookDemo }: AIComplianc
     {
       id: 2,
       tabLabel: "Trademark & IP",
+      shortTabLabel: "Trademarks",
       title: "Trademark Protection & Brand Defense",
       badge: "Registered IP Attorneys",
       icon: ShieldCheck,
@@ -88,6 +91,7 @@ export default function AIComplianceCloud({ onExplore, onBookDemo }: AIComplianc
     {
       id: 3,
       tabLabel: "Payroll & Labour",
+      shortTabLabel: "Payroll",
       title: "Payroll & Employee Statutory Compliance",
       badge: "Dedicated Labour Desk",
       icon: Users,
@@ -207,8 +211,8 @@ export default function AIComplianceCloud({ onExplore, onBookDemo }: AIComplianc
                         : "text-slate-600 hover:text-slate-900"
                     }`}
                   >
-                    <TabIcon className={`w-3.5 h-3.5 shrink-0 hidden sm:inline-block transition-colors ${isActive ? "text-emerald-400" : "text-slate-400"}`} />
-                    <span className="truncate">{cap.tabLabel}</span>
+                    <span className="hidden sm:inline truncate">{cap.tabLabel}</span>
+                    <span className="sm:hidden text-[11px] font-medium truncate">{cap.shortTabLabel}</span>
                   </button>
                 );
               })}

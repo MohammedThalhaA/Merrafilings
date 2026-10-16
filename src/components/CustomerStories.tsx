@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Play, X, CheckCircle, ArrowRight, Sparkles } from "lucide-react";
 
@@ -19,8 +19,24 @@ interface StoryItem {
 
 export default function CustomerStories() {
   const [selectedStory, setSelectedStory] = useState<StoryItem | null>(null);
-
   const [activeIndustry, setActiveIndustry] = useState<string>("all");
+
+  // Lock body scroll and listen for Escape key when modal is open
+  useEffect(() => {
+    if (selectedStory) {
+      document.body.style.overflow = "hidden";
+      const handleKeyDown = (e: KeyboardEvent) => {
+        if (e.key === "Escape") setSelectedStory(null);
+      };
+      window.addEventListener("keydown", handleKeyDown);
+      return () => {
+        document.body.style.overflow = "";
+        window.removeEventListener("keydown", handleKeyDown);
+      };
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [selectedStory]);
 
   const industries = [
     { id: "all", label: "All Founder Stories" },
@@ -222,23 +238,26 @@ export default function CustomerStories() {
       {/* Story Details & Case Study Modal */}
       {selectedStory && (
         <div
-          className="fixed inset-0 z-50 bg-slate-900/40 backdrop-blur-xs flex items-center justify-center p-4 animate-in fade-in duration-200"
+          className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 animate-in fade-in duration-200"
           onClick={() => setSelectedStory(null)}
+          role="dialog"
+          aria-modal="true"
         >
           <div
-            className="bg-white rounded-2xl max-w-[640px] w-full overflow-hidden shadow-2xl border border-slate-200 relative animate-in zoom-in-95 duration-200"
+            className="bg-white rounded-2xl max-w-[640px] w-full max-h-[calc(100dvh-2rem)] overflow-y-auto overscroll-contain shadow-2xl border border-slate-200 relative animate-in zoom-in-95 duration-200 safe-pb"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
             <button
               onClick={() => setSelectedStory(null)}
-              className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-white/90 hover:bg-white text-slate-700 hover:text-slate-900 flex items-center justify-center shadow-xs transition-colors cursor-pointer border border-slate-200"
+              aria-label="Close case study"
+              className="absolute top-3 right-3 z-10 w-9 h-9 sm:w-8 sm:h-8 min-h-[44px] min-w-[44px] sm:min-h-0 sm:min-w-0 rounded-full bg-white/95 hover:bg-white text-slate-700 hover:text-slate-900 flex items-center justify-center shadow-xs transition-colors cursor-pointer border border-slate-200"
             >
               <X className="w-4 h-4" />
             </button>
 
             {/* Modal Header Banner */}
-            <div className="relative h-56 w-full bg-slate-900">
+            <div className="relative h-44 sm:h-56 w-full bg-slate-900 shrink-0">
               <Image
                 src={selectedStory.image}
                 alt={selectedStory.title}
@@ -246,11 +265,11 @@ export default function CustomerStories() {
                 className="object-cover opacity-85"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/30 to-transparent" />
-              <div className="absolute bottom-4 left-6 text-white pr-12">
+              <div className="absolute bottom-3 sm:bottom-4 left-4 sm:left-6 text-white pr-12">
                 <span className="text-[10px] font-semibold uppercase tracking-wider text-emerald-300 bg-emerald-950/70 border border-emerald-500/30 px-2 py-0.5 rounded">
                   {selectedStory.tag}
                 </span>
-                <h3 className="font-serif text-xl sm:text-2xl font-normal mt-1 text-white">
+                <h3 className="font-serif text-lg sm:text-2xl font-normal mt-1 text-white">
                   {selectedStory.company}
                 </h3>
                 <p className="text-xs text-slate-300 mt-0.5">{selectedStory.location}</p>
@@ -258,10 +277,10 @@ export default function CustomerStories() {
             </div>
 
             {/* Modal Body */}
-            <div className="p-6 sm:p-7 space-y-5">
+            <div className="p-5 sm:p-7 space-y-5">
               {/* Quote */}
               <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
-                <p className="italic text-slate-700 text-sm leading-relaxed">
+                <p className="italic text-slate-700 text-xs sm:text-sm leading-relaxed">
                   &ldquo;{selectedStory.quote}&rdquo;
                 </p>
                 <div className="mt-2.5 not-italic text-xs text-slate-900 font-semibold">
@@ -270,7 +289,7 @@ export default function CustomerStories() {
               </div>
 
               {/* Key Metrics Grid */}
-              <div className="grid grid-cols-3 gap-3">
+              <div className="grid grid-cols-1 xs:grid-cols-3 gap-2.5 sm:gap-3">
                 {selectedStory.metrics.map((m, idx) => (
                   <div key={idx} className="text-center p-3 rounded-xl bg-white border border-slate-200">
                     <p className="text-base sm:text-lg font-semibold text-slate-900">{m.value}</p>
@@ -280,14 +299,14 @@ export default function CustomerStories() {
               </div>
 
               {/* Action Bar */}
-              <div className="flex items-center justify-between pt-2 border-t border-slate-100">
+              <div className="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-slate-100">
                 <div className="flex items-center gap-1.5 text-xs text-emerald-700 font-medium">
-                  <CheckCircle className="w-3.5 h-3.5 text-emerald-600" />
+                  <CheckCircle className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
                   <span>Verified Merrafilings Client</span>
                 </div>
                 <button
                   onClick={() => setSelectedStory(null)}
-                  className="px-4 py-2 text-xs font-medium text-white bg-slate-900 hover:bg-slate-800 rounded-lg transition-colors cursor-pointer"
+                  className="px-4 py-2 text-xs font-medium text-white bg-slate-900 hover:bg-slate-800 rounded-lg transition-colors cursor-pointer min-h-[36px]"
                 >
                   Close Case Study
                 </button>

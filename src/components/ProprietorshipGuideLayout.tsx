@@ -190,7 +190,7 @@ export default function ProprietorshipGuideLayout({
           </article>
 
           {/* Right Sticky Sidebar Column */}
-          <aside className="lg:col-span-4 space-y-6 sticky top-24">
+          <aside className="lg:col-span-4 space-y-6 lg:sticky lg:top-24 self-start h-fit">
             {/* Expert Consult Box */}
             <div className="bg-white border border-slate-200/90 rounded-2xl p-4.5 shadow-2xs hover:shadow-md transition-shadow">
               <div className="flex items-center justify-between gap-3">
@@ -280,7 +280,7 @@ export default function ProprietorshipGuideLayout({
                 <button
                   type="button"
                   onClick={() => openContact("Direct Proprietorship Filing")}
-                  className="w-full py-2.5 px-4 rounded-xl bg-[#00B074] hover:bg-[#009B66] text-white font-medium text-xs transition-colors cursor-pointer text-center"
+                  className="w-full py-2.5 px-4 min-h-[44px] rounded-xl bg-[#00B074] hover:bg-[#009B66] text-white font-medium text-xs transition-colors cursor-pointer flex items-center justify-center text-center"
                 >
                   Apply in 10 Minutes &rarr;
                 </button>
@@ -291,13 +291,13 @@ export default function ProprietorshipGuideLayout({
       </main>
 
       {/* Floating Live Chat Button */}
-      <div className="fixed bottom-6 right-6 z-40">
+      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 safe-pb">
         <button
           type="button"
           onClick={() => openContact("Live Expert Chat")}
-          className="inline-flex items-center gap-2 px-4.5 py-2.5 rounded-full bg-[#00B074] hover:bg-[#009B66] text-white font-medium text-xs sm:text-[13px] shadow-lg hover:shadow-xl hover:shadow-emerald-500/20 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+          className="inline-flex items-center gap-2 px-3.5 sm:px-4.5 py-2 sm:py-2.5 rounded-full bg-[#00B074] hover:bg-[#009B66] text-white font-medium text-xs sm:text-[13px] shadow-lg hover:shadow-xl hover:shadow-emerald-500/20 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer min-h-[44px]"
         >
-          <MessageCircle className="w-4 h-4 fill-white text-[#00B074]" />
+          <MessageCircle className="w-4 h-4 fill-white text-[#00B074] shrink-0" />
           <span>Live chat with experts</span>
         </button>
       </div>

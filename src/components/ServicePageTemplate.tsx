@@ -1998,7 +1998,7 @@ export default function ServicePageTemplate({
                         placeholder="Full Name *"
                         value={formName}
                         onChange={(e) => setFormName(e.target.value)}
-                        className="w-full px-4 py-2.5 bg-slate-50/70 border border-slate-200 rounded-xl text-[13px] font-normal text-slate-800 placeholder-slate-400 focus:bg-white focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-none transition-all"
+                        className="w-full px-4 py-2.5 min-h-[44px] bg-slate-50/70 border border-slate-200 rounded-xl text-base sm:text-[13px] font-normal text-slate-800 placeholder-slate-400 focus:bg-white focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-none transition-all"
                       />
                     </div>
 
@@ -2010,13 +2010,13 @@ export default function ServicePageTemplate({
                         placeholder="Official Email *"
                         value={formEmail}
                         onChange={(e) => setFormEmail(e.target.value)}
-                        className="w-full px-4 py-2.5 bg-slate-50/70 border border-slate-200 rounded-xl text-[13px] font-normal text-slate-800 placeholder-slate-400 focus:bg-white focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-none transition-all"
+                        className="w-full px-4 py-2.5 min-h-[44px] bg-slate-50/70 border border-slate-200 rounded-xl text-base sm:text-[13px] font-normal text-slate-800 placeholder-slate-400 focus:bg-white focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-none transition-all"
                       />
                     </div>
 
                     {/* Phone with Flag */}
                     <div className="flex">
-                      <span className="inline-flex items-center gap-1 px-3 py-2.5 bg-slate-100 border border-r-0 border-slate-200 rounded-l-xl text-[12.5px] text-slate-600 font-normal select-none">
+                      <span className="inline-flex items-center gap-1 px-3 py-2.5 min-h-[44px] bg-slate-100 border border-r-0 border-slate-200 rounded-l-xl text-xs sm:text-[12.5px] text-slate-600 font-normal select-none">
                         <span>🇮🇳</span>
                         <span>+91</span>
                       </span>
@@ -2027,7 +2027,7 @@ export default function ServicePageTemplate({
                         pattern="[0-9]{10}"
                         value={formPhone}
                         onChange={(e) => setFormPhone(e.target.value)}
-                        className="flex-1 min-w-0 px-4 py-2.5 bg-slate-50/70 border border-slate-200 rounded-r-xl text-[13px] font-normal text-slate-800 placeholder-slate-400 focus:bg-white focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-none transition-all"
+                        className="flex-1 min-w-0 px-4 py-2.5 min-h-[44px] bg-slate-50/70 border border-slate-200 rounded-r-xl text-base sm:text-[13px] font-normal text-slate-800 placeholder-slate-400 focus:bg-white focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-none transition-all"
                       />
                     </div>
 
@@ -2037,7 +2037,7 @@ export default function ServicePageTemplate({
                         required
                         value={formState}
                         onChange={(e) => setFormState(e.target.value)}
-                        className="w-full px-4 py-2.5 bg-slate-50/70 border border-slate-200 rounded-xl text-[13px] font-normal text-slate-700 focus:bg-white focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-none transition-all cursor-pointer"
+                        className="w-full px-4 py-2.5 min-h-[44px] bg-slate-50/70 border border-slate-200 rounded-xl text-base sm:text-[13px] font-normal text-slate-700 focus:bg-white focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-none transition-all cursor-pointer"
                       >
                         <option value="">Select Operating State *</option>
                         {INDIAN_STATES.map((s) => (
@@ -2919,13 +2919,13 @@ export default function ServicePageTemplate({
       </section>
 
       {/* Floating Concierge Action */}
-      <div className="fixed bottom-6 right-6 z-40">
+      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 safe-pb">
         <button
           onClick={() => openServiceModal()}
-          className="inline-flex items-center gap-2 px-4.5 py-2.5 rounded-full bg-[#00BF72] hover:bg-[#00AB66] text-white font-medium text-[13.5px] shadow-md hover:shadow-xl hover:shadow-emerald-500/30 transition-all duration-200 hover:-translate-y-1 active:translate-y-0 cursor-pointer"
+          className="inline-flex items-center gap-2 px-3.5 sm:px-4.5 py-2 sm:py-2.5 rounded-full bg-[#00BF72] hover:bg-[#00AB66] text-white font-medium text-xs sm:text-[13.5px] shadow-md hover:shadow-xl hover:shadow-emerald-500/30 transition-all duration-200 hover:-translate-y-1 active:translate-y-0 cursor-pointer min-h-[44px]"
         >
-          <MessageCircle className="w-4.5 h-4.5 fill-white text-[#00BF72]" />
-          <span>Live chat with experts</span>
+          <MessageCircle className="w-4 h-4 sm:w-4.5 sm:h-4.5 fill-white text-[#00BF72] shrink-0" />
+          <span className="whitespace-nowrap">Live chat with experts</span>
         </button>
       </div>
 

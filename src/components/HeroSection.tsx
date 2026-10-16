@@ -68,19 +68,19 @@ export default function HeroSection({ onGetStarted, onSelectCategory }: HeroSect
         
         {/* Subtle Refined Editorial Kicker with Live Pulsing Dot */}
         <div className="flex justify-center mb-6 animate-in fade-in slide-in-from-top-2 duration-300">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200/90 text-slate-700 text-xs font-medium tracking-tight shadow-xs hover:border-slate-300 transition-colors">
-            <span className="relative flex h-2 w-2">
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-white border border-slate-200/90 text-slate-700 text-[11px] sm:text-xs font-medium tracking-tight shadow-xs hover:border-slate-300 transition-colors max-w-full">
+            <span className="relative flex h-2 w-2 shrink-0">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-600"></span>
             </span>
-            <span>Direct MCA V3 &amp; GSTN Regulatory Infrastructure</span>
+            <span className="truncate">Direct MCA V3 &amp; GSTN Infrastructure</span>
             <span className="text-slate-300">•</span>
-            <span className="text-emerald-700 font-semibold">Dual CA/CS Vetted</span>
+            <span className="text-emerald-700 font-semibold whitespace-nowrap">Dual CA/CS Vetted</span>
           </div>
         </div>
 
         {/* Main Editorial Serif Headline */}
-        <h1 className="font-serif text-[40px] sm:text-[48px] md:text-[56px] lg:text-[64px] font-normal tracking-tight text-[#0F172A] leading-[1.12] max-w-[1020px] mx-auto transition-all animate-in fade-in slide-in-from-top-3 duration-500">
+        <h1 className="font-serif text-[32px] sm:text-[44px] md:text-[54px] lg:text-[64px] font-normal tracking-tight text-[#0F172A] leading-[1.15] max-w-[1020px] mx-auto transition-all animate-in fade-in slide-in-from-top-3 duration-500">
           Modern Corporate Legal &amp; Compliance Services,{" "}
           <span className="italic text-slate-700">
             Thoughtfully Simplified.
@@ -88,15 +88,15 @@ export default function HeroSection({ onGetStarted, onSelectCategory }: HeroSect
         </h1>
 
         {/* Subtitle Value Proposition */}
-        <p className="mt-6 text-sm sm:text-base md:text-lg text-slate-600 max-w-[760px] mx-auto font-sans leading-relaxed font-normal animate-in fade-in slide-in-from-top-4 duration-500">
+        <p className="mt-5 sm:mt-6 text-sm sm:text-base md:text-lg text-slate-600 max-w-[760px] mx-auto font-sans leading-relaxed font-normal animate-in fade-in slide-in-from-top-4 duration-500">
           Incorporate your Private Limited company in 3 days, automate GST and MCA filings, protect trademarks, and maintain flawless statutory records — backed by certified Chartered Accountants.
         </p>
 
         {/* Primary Action Button Row */}
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4 animate-in fade-in slide-in-from-top-5 duration-500">
+        <div className="mt-7 sm:mt-8 flex flex-col xs:flex-row items-stretch xs:items-center justify-center gap-3 sm:gap-4 animate-in fade-in slide-in-from-top-5 duration-500 max-w-md mx-auto xs:max-w-none">
           <button
             onClick={onGetStarted}
-            className="inline-flex items-center justify-center gap-2 px-8 py-3 text-xs sm:text-sm font-medium text-white bg-slate-900 hover:bg-slate-800 hover:shadow-xl hover:-translate-y-1 active:translate-y-0 rounded-full transition-all duration-300 cursor-pointer group shadow-sm"
+            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-xs sm:text-sm font-medium text-white bg-slate-900 hover:bg-slate-800 hover:shadow-xl hover:-translate-y-1 active:translate-y-0 rounded-full transition-all duration-300 cursor-pointer group shadow-sm min-h-[44px]"
           >
             <span>Start Your Business</span>
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -105,7 +105,7 @@ export default function HeroSection({ onGetStarted, onSelectCategory }: HeroSect
           <button
             type="button"
             onClick={onGetStarted}
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 text-xs sm:text-sm font-medium text-slate-700 hover:text-slate-950 bg-white hover:bg-slate-50 border border-slate-200/90 rounded-full transition-all duration-300 cursor-pointer shadow-2xs hover:-translate-y-0.5"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 text-xs sm:text-sm font-medium text-slate-700 hover:text-slate-950 bg-white hover:bg-slate-50 border border-slate-200/90 rounded-full transition-all duration-300 cursor-pointer shadow-2xs hover:-translate-y-0.5 min-h-[44px]"
           >
             <span>Consult a Senior CA</span>
           </button>
@@ -132,19 +132,19 @@ export default function HeroSection({ onGetStarted, onSelectCategory }: HeroSect
         </div>
 
         {/* Bottom Quick Category Strip with Hover Animations */}
-        <div className="mt-12 sm:mt-14 md:mt-16">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4 xl:gap-5">
+        <div className="mt-10 sm:mt-14 md:mt-16">
+          <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4 xl:gap-5">
             {quickCategories.map((item) => {
               const Icon = item.icon;
               return (
                 <div
                   key={item.id}
                   onClick={() => onSelectCategory && onSelectCategory(item.id)}
-                  className={`bg-white rounded-2xl border border-slate-200/90 p-4 text-left transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-slate-300 cursor-pointer group ${item.borderHover}`}
+                  className={`bg-white rounded-2xl border border-slate-200/90 p-3.5 sm:p-4 text-left transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-slate-300 cursor-pointer group ${item.borderHover}`}
                 >
                   <div className="flex items-center gap-3">
-                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:rotate-2 transition-transform duration-300 ${item.iconBg}`}>
-                      <Icon className="w-5 h-5" />
+                    <div className={`w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:rotate-2 transition-transform duration-300 ${item.iconBg}`}>
+                      <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
                     </div>
                     <div className="min-w-0 flex-1">
                       <h3 className={`text-xs sm:text-[13.5px] font-semibold text-[#0F172A] ${item.accentColor} transition-colors truncate`}>

@@ -25,9 +25,9 @@ export default function FinalCTA({ onFormSubmit }: FinalCTAProps) {
   return (
     <section className="py-10 md:py-14 bg-white border-b border-slate-200/80" id="contact">
       <div className="w-full max-w-[1400px] 2xl:max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#FAF9F6] rounded-3xl border border-slate-200/90 p-8 sm:p-12 md:p-16 relative overflow-hidden">
+        <div className="bg-[#FAF9F6] rounded-3xl border border-slate-200/90 p-5 sm:p-10 md:p-14 lg:p-16 relative overflow-hidden">
           
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
             
             {/* Left Column: Heading and value propositions */}
             <div data-reveal="left" className="lg:col-span-7 space-y-5">
@@ -66,7 +66,7 @@ export default function FinalCTA({ onFormSubmit }: FinalCTAProps) {
 
             {/* Right Column: Quick Consultation Form */}
             <div data-reveal="right" className="lg:col-span-5">
-              <div className="bg-white rounded-2xl border border-slate-200/90 p-6 sm:p-7 shadow-xs">
+              <div className="bg-white rounded-2xl border border-slate-200/90 p-5 sm:p-7 shadow-xs">
                 {submitted ? (
                   <div className="text-center py-8 space-y-3">
                     <div className="w-12 h-12 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 flex items-center justify-center mx-auto">
@@ -78,7 +78,7 @@ export default function FinalCTA({ onFormSubmit }: FinalCTAProps) {
                     </p>
                     <button
                       onClick={() => setSubmitted(false)}
-                      className="mt-3 text-xs text-emerald-800 font-medium underline underline-offset-2 cursor-pointer"
+                      className="mt-3 text-xs text-emerald-800 font-medium underline underline-offset-2 cursor-pointer py-1.5"
                     >
                       Submit another inquiry
                     </button>
@@ -104,7 +104,7 @@ export default function FinalCTA({ onFormSubmit }: FinalCTAProps) {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="e.g. Rahul Sharma"
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-900 placeholder-slate-400 focus:outline-hidden focus:border-slate-800 transition-colors bg-white"
+                        className="w-full px-3.5 py-2.5 min-h-[44px] rounded-xl border border-slate-200 text-base sm:text-sm text-slate-900 placeholder-slate-400 focus:outline-hidden focus:border-slate-800 transition-colors bg-white"
                       />
                     </div>
 
@@ -122,7 +122,7 @@ export default function FinalCTA({ onFormSubmit }: FinalCTAProps) {
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                           placeholder="98765 43210"
-                          className="w-full px-3.5 py-2.5 rounded-r-xl border border-slate-200 text-sm text-slate-900 placeholder-slate-400 focus:outline-hidden focus:border-slate-800 transition-colors bg-white"
+                          className="w-full px-3.5 py-2.5 min-h-[44px] rounded-r-xl border border-slate-200 text-base sm:text-sm text-slate-900 placeholder-slate-400 focus:outline-hidden focus:border-slate-800 transition-colors bg-white"
                         />
                       </div>
                     </div>
@@ -134,7 +134,7 @@ export default function FinalCTA({ onFormSubmit }: FinalCTAProps) {
                       <select
                         value={formData.service}
                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-900 focus:outline-hidden focus:border-slate-800 transition-colors bg-white"
+                        className="w-full px-3.5 py-2.5 min-h-[44px] rounded-xl border border-slate-200 text-base sm:text-sm text-slate-900 focus:outline-hidden focus:border-slate-800 transition-colors bg-white"
                       >
                         <option value="Private Limited Company">Private Limited Company</option>
                         <option value="Limited Liability Partnership (LLP)">LLP Registration</option>
@@ -148,7 +148,7 @@ export default function FinalCTA({ onFormSubmit }: FinalCTAProps) {
 
                     <button
                       type="submit"
-                      className="w-full py-2.5 px-4 rounded-xl text-xs sm:text-sm font-medium text-white bg-slate-900 hover:bg-slate-800 shadow-xs transition-colors flex items-center justify-center gap-2 cursor-pointer mt-2"
+                      className="w-full py-3 px-4 min-h-[44px] rounded-xl text-xs sm:text-sm font-medium text-white bg-slate-900 hover:bg-slate-800 shadow-xs transition-colors flex items-center justify-center gap-2 cursor-pointer mt-2"
                     >
                       <PhoneCall className="w-3.5 h-3.5" />
                       <span>Get Free Advisory Call</span>

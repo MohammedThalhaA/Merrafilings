@@ -180,7 +180,7 @@ export default function RegulatoryGazetteRadar({ onConsultUpdate }: RegulatoryGa
                 </span>
                 <button
                   onClick={() => onConsultUpdate && onConsultUpdate(item.title)}
-                  className="inline-flex items-center gap-1 cursor-pointer hover:underline"
+                  className="inline-flex items-center gap-1.5 py-2.5 min-h-[44px] cursor-pointer hover:underline text-xs font-semibold text-slate-900 group-hover:text-emerald-700"
                 >
                   <span>Consult Advisory Team</span>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
