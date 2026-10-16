@@ -332,19 +332,19 @@ export default function GstLutFilingASimple5StepGuidePage() {
           4. 4 Common LUT Filing Mistakes &amp; How to Prevent Them
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-1 hover:bg-rose-50/20 transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
             <strong className="font-semibold text-rose-900 block mb-1">1. Selecting the Incorrect Financial Year:</strong>
             Filing an LUT for the expiring financial year instead of the upcoming one invalidates your zero-rated exports after March 31. Always double-check the fiscal year dropdown before clicking submit.
           </div>
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-1 hover:bg-rose-50/20 transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
             <strong className="font-semibold text-rose-900 block mb-1">2. Listing Ineligible Witnesses:</strong>
             The authorized signatory cannot serve as their own witness, nor can a single individual occupy both witness slots. Ensure two distinct, independent adult individuals are recorded with complete residential details.
           </div>
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-1 hover:bg-rose-50/20 transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
             <strong className="font-semibold text-rose-900 block mb-1">3. Omitting the LUT Declaration on Invoices:</strong>
             Invoices issued under LUT must explicitly state: <em>&quot;Supply Meant For Export Under Letter of Undertaking Without Payment of Integrated Tax&quot;</em> alongside your ARN. Omitting this declaration triggers Customs discrepancies.
           </div>
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-1 hover:bg-rose-50/20 transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
             <strong className="font-semibold text-rose-900 block mb-1">4. Overlooking Foreign Exchange Deadlines:</strong>
             For service exports, failing to collect foreign remittance within 1 year violates the statutory undertaking. Maintain a strict ledger of Foreign Inward Remittance Certificates (FIRC) / e-BRCs to avoid interest liabilities.
           </div>

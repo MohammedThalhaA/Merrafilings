@@ -177,8 +177,8 @@ export default function UnderstandingTheGstLutFormKeyInsightsPage() {
             </p>
           </div>
 
-          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
-            <div className="flex items-center gap-2 mb-2 text-indigo-950 font-semibold text-sm">
+          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-1 hover:bg-emerald-50/20 transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
+            <div className="flex items-center gap-2 mb-2 text-slate-950 group-hover:text-emerald-950 font-semibold text-sm transition-colors">
               <Sparkles className="w-4 h-4 text-emerald-600" />
               <span>Electronic Verification Code (EVC)</span>
             </div>

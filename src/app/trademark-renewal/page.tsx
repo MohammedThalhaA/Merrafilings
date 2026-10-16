@@ -286,8 +286,8 @@ function TrademarkRenewalGuideContent() {
           3. Core Commercial Benefits of Trademark Renewal
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pt-2">
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-emerald-700 transition-colors flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
               <span>Perpetual Legal Monopoly</span>
             </h3>
@@ -295,8 +295,8 @@ function TrademarkRenewalGuideContent() {
               Unlike patents or designs which irrevocably enter the public domain after 20 years, a trademark can be owned forever through timely 10-year renewals.
             </p>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-blue-700 transition-colors flex items-center gap-2">
               <TrendingUp className="w-4 h-4 text-blue-600 shrink-0" />
               <span>Brand Goodwill &amp; Valuation</span>
             </h3>
@@ -304,8 +304,8 @@ function TrademarkRenewalGuideContent() {
               Preserves intangible enterprise goodwill on your balance sheet, critical for investor due diligence, franchising agreements, and corporate M&amp;A.
             </p>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-purple-700 transition-colors flex items-center gap-2">
               <Scale className="w-4 h-4 text-purple-600 shrink-0" />
               <span>Deter Infringers &amp; Fakes</span>
             </h3>
@@ -414,21 +414,21 @@ function TrademarkRenewalGuideContent() {
           Missing a renewal deadline can permanently destroy a decade of brand equity. Merrafilings provides proactive, automated trademark management:
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs sm:text-[13px] font-normal text-slate-900">
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">Automated 10-Year Expiry Surveillance &amp; Timely Reminders</span>
+            <span className="text-slate-900 group-hover:text-emerald-800 font-medium transition-colors">Automated 10-Year Expiry Surveillance &amp; Timely Reminders</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">Same-Day Form TM-R Digital Lodgement by IP Attorneys</span>
+            <span className="text-slate-900 group-hover:text-emerald-800 font-medium transition-colors">Same-Day Form TM-R Digital Lodgement by IP Attorneys</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">Specialized Grace Period &amp; Restoration Petition Advocacy</span>
+            <span className="text-slate-900 group-hover:text-emerald-800 font-medium transition-colors">Specialized Grace Period &amp; Restoration Petition Advocacy</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">Official Renewal Certificate Delivery &amp; Cloud Document Vault</span>
+            <span className="text-slate-900 group-hover:text-emerald-800 font-medium transition-colors">Official Renewal Certificate Delivery &amp; Cloud Document Vault</span>
           </div>
         </div>
 

@@ -49,9 +49,9 @@ export default function TrademarkObjectionRequiredDocumentsGuidePage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
           {/* Doc 1 */}
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1.5">
-            <div className="flex items-center gap-2 text-slate-900 font-medium text-sm">
-              <FileCheck className="w-4 h-4 text-emerald-600" />
+          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group space-y-1.5">
+            <div className="flex items-center gap-2 text-slate-900 group-hover:text-emerald-700 transition-colors font-medium text-sm">
+              <FileCheck className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
               <span>1. Official Examination Report</span>
             </div>
             <p className="text-xs text-slate-500 font-normal leading-relaxed">
@@ -60,9 +60,9 @@ export default function TrademarkObjectionRequiredDocumentsGuidePage() {
           </div>
 
           {/* Doc 2 */}
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1.5">
-            <div className="flex items-center gap-2 text-slate-900 font-medium text-sm">
-              <Scale className="w-4 h-4 text-purple-600" />
+          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group space-y-1.5">
+            <div className="flex items-center gap-2 text-slate-900 group-hover:text-purple-700 transition-colors font-medium text-sm">
+              <Scale className="w-4 h-4 text-purple-600 shrink-0 group-hover:scale-110 transition-transform" />
               <span>2. Sworn User Affidavit (Rule 25)</span>
             </div>
             <p className="text-xs text-slate-500 font-normal leading-relaxed">
@@ -71,9 +71,9 @@ export default function TrademarkObjectionRequiredDocumentsGuidePage() {
           </div>
 
           {/* Doc 3 */}
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1.5">
-            <div className="flex items-center gap-2 text-slate-900 font-medium text-sm">
-              <Receipt className="w-4 h-4 text-blue-600" />
+          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group space-y-1.5">
+            <div className="flex items-center gap-2 text-slate-900 group-hover:text-blue-700 transition-colors font-medium text-sm">
+              <Receipt className="w-4 h-4 text-blue-600 shrink-0 group-hover:scale-110 transition-transform" />
               <span>3. Earliest Sales Invoices &amp; Tax Receipts</span>
             </div>
             <p className="text-xs text-slate-500 font-normal leading-relaxed">
@@ -82,9 +82,9 @@ export default function TrademarkObjectionRequiredDocumentsGuidePage() {
           </div>
 
           {/* Doc 4 */}
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1.5">
-            <div className="flex items-center gap-2 text-slate-900 font-medium text-sm">
-              <Award className="w-4 h-4 text-emerald-600" />
+          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group space-y-1.5">
+            <div className="flex items-center gap-2 text-slate-900 group-hover:text-emerald-700 transition-colors font-medium text-sm">
+              <Award className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
               <span>4. Chartered Accountant Turnover Certificate</span>
             </div>
             <p className="text-xs text-slate-500 font-normal leading-relaxed">
@@ -93,9 +93,9 @@ export default function TrademarkObjectionRequiredDocumentsGuidePage() {
           </div>
 
           {/* Doc 5 */}
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1.5">
-            <div className="flex items-center gap-2 text-slate-900 font-medium text-sm">
-              <Globe2 className="w-4 h-4 text-indigo-600" />
+          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-indigo-500 hover:shadow-md hover:shadow-indigo-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group space-y-1.5">
+            <div className="flex items-center gap-2 text-slate-900 group-hover:text-indigo-700 transition-colors font-medium text-sm">
+              <Globe2 className="w-4 h-4 text-indigo-600 shrink-0 group-hover:scale-110 transition-transform" />
               <span>5. Digital Footprint &amp; Domain Records</span>
             </div>
             <p className="text-xs text-slate-500 font-normal leading-relaxed">
@@ -104,9 +104,9 @@ export default function TrademarkObjectionRequiredDocumentsGuidePage() {
           </div>
 
           {/* Doc 6 */}
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1.5">
-            <div className="flex items-center gap-2 text-slate-900 font-medium text-sm">
-              <FileText className="w-4 h-4 text-purple-600" />
+          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group space-y-1.5">
+            <div className="flex items-center gap-2 text-slate-900 group-hover:text-purple-700 transition-colors font-medium text-sm">
+              <FileText className="w-4 h-4 text-purple-600 shrink-0 group-hover:scale-110 transition-transform" />
               <span>6. Marketing &amp; Advertisement Invoices</span>
             </div>
             <p className="text-xs text-slate-500 font-normal leading-relaxed">

@@ -444,25 +444,25 @@ function TrustGuideContent() {
                   Key Objectives of Trust Registration
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-[12.5px] font-normal text-slate-900">
-                  <div className="flex items-center gap-2 p-2.5 rounded-lg bg-slate-50 border border-slate-200/60">
+                  <div className="flex items-center gap-2 p-2.5 rounded-lg bg-slate-50 border border-slate-200/60 hover:bg-white hover:border-[#00A86B] hover:shadow-sm hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
                     <CheckCircle2 className="w-4 h-4 text-[#00A86B] shrink-0" />
-                    <span>Legal recognition &amp; distinct identity for the trust entity</span>
+                    <span className="group-hover:text-emerald-950 transition-colors">Legal recognition &amp; distinct identity for the trust entity</span>
                   </div>
-                  <div className="flex items-center gap-2 p-2.5 rounded-lg bg-slate-50 border border-slate-200/60">
+                  <div className="flex items-center gap-2 p-2.5 rounded-lg bg-slate-50 border border-slate-200/60 hover:bg-white hover:border-[#00A86B] hover:shadow-sm hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
                     <CheckCircle2 className="w-4 h-4 text-[#00A86B] shrink-0" />
-                    <span>Protection of trust assets and endowed properties</span>
+                    <span className="group-hover:text-emerald-950 transition-colors">Protection of trust assets and endowed properties</span>
                   </div>
-                  <div className="flex items-center gap-2 p-2.5 rounded-lg bg-slate-50 border border-slate-200/60">
+                  <div className="flex items-center gap-2 p-2.5 rounded-lg bg-slate-50 border border-slate-200/60 hover:bg-white hover:border-[#00A86B] hover:shadow-sm hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
                     <CheckCircle2 className="w-4 h-4 text-[#00A86B] shrink-0" />
-                    <span>Eligibility for income tax exemptions under Sections 12A &amp; 80G</span>
+                    <span className="group-hover:text-emerald-950 transition-colors">Eligibility for income tax exemptions under Sections 12A &amp; 80G</span>
                   </div>
-                  <div className="flex items-center gap-2 p-2.5 rounded-lg bg-slate-50 border border-slate-200/60">
+                  <div className="flex items-center gap-2 p-2.5 rounded-lg bg-slate-50 border border-slate-200/60 hover:bg-white hover:border-[#00A86B] hover:shadow-sm hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
                     <CheckCircle2 className="w-4 h-4 text-[#00A86B] shrink-0" />
-                    <span>Enhanced credibility among donors, CSR committees, &amp; govt</span>
+                    <span className="group-hover:text-emerald-950 transition-colors">Enhanced credibility among donors, CSR committees, &amp; govt</span>
                   </div>
-                  <div className="flex items-center gap-2 p-2.5 rounded-lg bg-slate-50 border border-slate-200/60 sm:col-span-2">
+                  <div className="flex items-center gap-2 p-2.5 rounded-lg bg-slate-50 border border-slate-200/60 hover:bg-white hover:border-[#00A86B] hover:shadow-sm hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group sm:col-span-2">
                     <CheckCircle2 className="w-4 h-4 text-[#00A86B] shrink-0" />
-                    <span>Smooth perpetual succession and seamless management of family assets</span>
+                    <span className="group-hover:text-emerald-950 transition-colors">Smooth perpetual succession and seamless management of family assets</span>
                   </div>
                 </div>
               </div>
@@ -873,8 +873,8 @@ function TrustGuideContent() {
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="p-4 rounded-xl border border-slate-200/80 bg-white">
-                    <h4 className="text-[14px] font-medium text-slate-900 mb-1.5 flex items-center gap-1.5">
+                  <div className="p-4 rounded-xl border border-slate-200/80 bg-white hover:border-[#00A86B] hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
+                    <h4 className="text-[14px] font-medium text-slate-900 group-hover:text-emerald-800 transition-colors mb-1.5 flex items-center gap-1.5">
                       <BadgePercent className="w-4 h-4 text-[#00A86B]" />
                       Section 12A (100% Tax Relief)
                     </h4>
@@ -883,8 +883,8 @@ function TrustGuideContent() {
                     </p>
                   </div>
 
-                  <div className="p-4 rounded-xl border border-slate-200/80 bg-white">
-                    <h4 className="text-[14px] font-medium text-slate-900 mb-1.5 flex items-center gap-1.5">
+                  <div className="p-4 rounded-xl border border-slate-200/80 bg-white hover:border-[#00A86B] hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
+                    <h4 className="text-[14px] font-medium text-slate-900 group-hover:text-emerald-800 transition-colors mb-1.5 flex items-center gap-1.5">
                       <Receipt className="w-4 h-4 text-[#00A86B]" />
                       Section 80G (Donor Tax Deduction)
                     </h4>
@@ -905,45 +905,45 @@ function TrustGuideContent() {
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[12.5px] font-normal text-slate-900">
-                  <div className="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200/60">
+                  <div className="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200/60 hover:bg-white hover:border-[#00A86B] hover:shadow-sm hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
                     <FileCheck className="w-4 h-4 text-[#00A86B] shrink-0 mt-0.5" />
                     <div>
-                      <strong className="font-medium text-slate-800 block">ITR-7 Return Filing:</strong>
+                      <strong className="font-medium text-slate-800 group-hover:text-emerald-800 transition-colors block">ITR-7 Return Filing:</strong>
                       File annual returns with the Income Tax Department by 31st October.
                     </div>
                   </div>
-                  <div className="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200/60">
+                  <div className="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200/60 hover:bg-white hover:border-[#00A86B] hover:shadow-sm hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
                     <FileCheck className="w-4 h-4 text-[#00A86B] shrink-0 mt-0.5" />
                     <div>
-                      <strong className="font-medium text-slate-800 block">Form 10B / 10BB Audit:</strong>
+                      <strong className="font-medium text-slate-800 group-hover:text-emerald-800 transition-colors block">Form 10B / 10BB Audit:</strong>
                       Mandatory CA audit report if total annual receipts exceed ₹2.5 Lakhs.
                     </div>
                   </div>
-                  <div className="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200/60">
+                  <div className="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200/60 hover:bg-white hover:border-[#00A86B] hover:shadow-sm hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
                     <FileCheck className="w-4 h-4 text-[#00A86B] shrink-0 mt-0.5" />
                     <div>
-                      <strong className="font-medium text-slate-800 block">12A &amp; 80G Timely Renewal:</strong>
+                      <strong className="font-medium text-slate-800 group-hover:text-emerald-800 transition-colors block">12A &amp; 80G Timely Renewal:</strong>
                       Ensure timely 5-year re-registration under Form 10AB.
                     </div>
                   </div>
-                  <div className="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200/60">
+                  <div className="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200/60 hover:bg-white hover:border-[#00A86B] hover:shadow-sm hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
                     <FileCheck className="w-4 h-4 text-[#00A86B] shrink-0 mt-0.5" />
                     <div>
-                      <strong className="font-medium text-slate-800 block">Books of Accounts Maintenance:</strong>
+                      <strong className="font-medium text-slate-800 group-hover:text-emerald-800 transition-colors block">Books of Accounts Maintenance:</strong>
                       Maintain ledgers, vouchers, and receipt books systematically.
                     </div>
                   </div>
-                  <div className="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200/60">
+                  <div className="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200/60 hover:bg-white hover:border-[#00A86B] hover:shadow-sm hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
                     <FileCheck className="w-4 h-4 text-[#00A86B] shrink-0 mt-0.5" />
                     <div>
-                      <strong className="font-medium text-slate-800 block">TDS &amp; GST Compliance:</strong>
+                      <strong className="font-medium text-slate-800 group-hover:text-emerald-800 transition-colors block">TDS &amp; GST Compliance:</strong>
                       Deduct and deposit TDS on professional payments where applicable.
                     </div>
                   </div>
-                  <div className="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200/60">
+                  <div className="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200/60 hover:bg-white hover:border-[#00A86B] hover:shadow-sm hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
                     <FileCheck className="w-4 h-4 text-[#00A86B] shrink-0 mt-0.5" />
                     <div>
-                      <strong className="font-medium text-slate-800 block">FCRA Compliance:</strong>
+                      <strong className="font-medium text-slate-800 group-hover:text-emerald-800 transition-colors block">FCRA Compliance:</strong>
                       Separate bank account and quarterly reporting if foreign funds are accepted.
                     </div>
                   </div>
@@ -999,29 +999,29 @@ function TrustGuideContent() {
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[12.5px] font-normal text-slate-900">
-                  <div className="p-3 rounded-lg border border-red-100 bg-red-50/40 flex items-start gap-2.5">
+                  <div className="p-3 rounded-lg border border-red-100 bg-red-50/40 hover:bg-white hover:border-red-400 hover:shadow-sm hover:shadow-red-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group flex items-start gap-2.5">
                     <AlertTriangle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
-                    <span>Non-filing of annual ITR-7 returns for consecutive fiscal years</span>
+                    <span className="group-hover:text-red-950 transition-colors">Non-filing of annual ITR-7 returns for consecutive fiscal years</span>
                   </div>
-                  <div className="p-3 rounded-lg border border-red-100 bg-red-50/40 flex items-start gap-2.5">
+                  <div className="p-3 rounded-lg border border-red-100 bg-red-50/40 hover:bg-white hover:border-red-400 hover:shadow-sm hover:shadow-red-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group flex items-start gap-2.5">
                     <AlertTriangle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
-                    <span>Misuse of trust funds or property for personal trustee enrichment</span>
+                    <span className="group-hover:text-red-950 transition-colors">Misuse of trust funds or property for personal trustee enrichment</span>
                   </div>
-                  <div className="p-3 rounded-lg border border-red-100 bg-red-50/40 flex items-start gap-2.5">
+                  <div className="p-3 rounded-lg border border-red-100 bg-red-50/40 hover:bg-white hover:border-red-400 hover:shadow-sm hover:shadow-red-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group flex items-start gap-2.5">
                     <AlertTriangle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
-                    <span>Deviation from stated charitable objectives in the registered deed</span>
+                    <span className="group-hover:text-red-950 transition-colors">Deviation from stated charitable objectives in the registered deed</span>
                   </div>
-                  <div className="p-3 rounded-lg border border-red-100 bg-red-50/40 flex items-start gap-2.5">
+                  <div className="p-3 rounded-lg border border-red-100 bg-red-50/40 hover:bg-white hover:border-red-400 hover:shadow-sm hover:shadow-red-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group flex items-start gap-2.5">
                     <AlertTriangle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
-                    <span>Failure to renew 12A or 80G registrations under Form 10AB</span>
+                    <span className="group-hover:text-red-950 transition-colors">Failure to renew 12A or 80G registrations under Form 10AB</span>
                   </div>
-                  <div className="p-3 rounded-lg border border-red-100 bg-red-50/40 flex items-start gap-2.5">
+                  <div className="p-3 rounded-lg border border-red-100 bg-red-50/40 hover:bg-white hover:border-red-400 hover:shadow-sm hover:shadow-red-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group flex items-start gap-2.5">
                     <AlertTriangle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
-                    <span>Violation of FCRA provisions regarding foreign funding</span>
+                    <span className="group-hover:text-red-950 transition-colors">Violation of FCRA provisions regarding foreign funding</span>
                   </div>
-                  <div className="p-3 rounded-lg border border-red-100 bg-red-50/40 flex items-start gap-2.5">
+                  <div className="p-3 rounded-lg border border-red-100 bg-red-50/40 hover:bg-white hover:border-red-400 hover:shadow-sm hover:shadow-red-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group flex items-start gap-2.5">
                     <AlertTriangle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
-                    <span>Court injunction or dissolution order by charity commissioner</span>
+                    <span className="group-hover:text-red-950 transition-colors">Court injunction or dissolution order by charity commissioner</span>
                   </div>
                 </div>
               </div>

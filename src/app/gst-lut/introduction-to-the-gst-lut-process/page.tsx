@@ -244,19 +244,19 @@ export default function IntroductionToTheGstLutProcessPage() {
           5. Crucial Compliance Timelines &amp; Common Errors to Avoid
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-1 hover:bg-rose-50/20 transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
             <strong className="font-semibold text-rose-900 block mb-1">Annual Expiration on March 31:</strong>
             An LUT expires strictly at 11:59 PM on 31st March of each financial year. Generating an export invoice on 1st April without an active renewed LUT forces mandatory 18% IGST payment.
           </div>
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-1 hover:bg-rose-50/20 transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
             <strong className="font-semibold text-rose-900 block mb-1">90-Day Physical Export Clock for Goods:</strong>
             Goods invoiced under LUT must leave Indian territorial waters within 3 months. Exporters must secure the final Bill of Lading or Air Waybill within this window to prevent demand notices.
           </div>
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-1 hover:bg-rose-50/20 transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
             <strong className="font-semibold text-rose-900 block mb-1">FEMA 1-Year Realization for Services:</strong>
             Remittances for export services must be received in convertible foreign currency within 1 year. Indian Rupee realizations are prohibited unless received through an approved Special Vostro Rupee Account (SVRA).
           </div>
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-1 hover:bg-rose-50/20 transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
             <strong className="font-semibold text-rose-900 block mb-1">Table 6A Disclosure in GSTR-1:</strong>
             Export invoices must be correctly reported under Table 6A of GSTR-1 with zero tax rate and shipping bill numbers to reconcile seamlessly with ICEGATE Customs data.
           </div>

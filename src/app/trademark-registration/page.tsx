@@ -362,8 +362,8 @@ function TrademarkRegistrationGuideContent() {
           Any individual, startup, MSME, or corporation that sells products or delivers services under a unique commercial identity needs trademark registration:
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pt-2">
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-emerald-700 transition-colors flex items-center gap-2">
               <Store className="w-4 h-4 text-emerald-600 shrink-0" />
               <span>E-Commerce &amp; D2C Brands</span>
             </h3>
@@ -371,8 +371,8 @@ function TrademarkRegistrationGuideContent() {
               Mandatory to unlock Amazon Brand Registry, Flipkart Brand Protection, and prevent unauthorized sellers from hijacking product listings.
             </p>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-blue-700 transition-colors flex items-center gap-2">
               <Zap className="w-4 h-4 text-blue-600 shrink-0" />
               <span>Startups &amp; Tech Ventures</span>
             </h3>
@@ -380,8 +380,8 @@ function TrademarkRegistrationGuideContent() {
               Protects proprietary software, mobile app names, domain trademarks, and creates valuable IP assets required for institutional venture funding.
             </p>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-purple-700 transition-colors flex items-center gap-2">
               <Factory className="w-4 h-4 text-purple-600 shrink-0" />
               <span>Manufacturers &amp; Traders</span>
             </h3>
@@ -598,27 +598,27 @@ function TrademarkRegistrationGuideContent() {
           9. Mandatory Documents for Trademark Registration
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] transition-all">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-sm hover:shadow-emerald-500/10 transition-all">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
             <span className="text-xs sm:text-[13px] text-slate-900 font-medium">Brand Name, Slogan, or High-Resolution Logo Artwork</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] transition-all">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-sm hover:shadow-emerald-500/10 transition-all">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
             <span className="text-xs sm:text-[13px] text-slate-900 font-medium">PAN &amp; Aadhaar / Passport of the applicant</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] transition-all">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-sm hover:shadow-emerald-500/10 transition-all">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
             <span className="text-xs sm:text-[13px] text-slate-900 font-medium">Certificate of Incorporation / Partnership Deed (if company)</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] transition-all">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-sm hover:shadow-emerald-500/10 transition-all">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
             <span className="text-xs sm:text-[13px] text-slate-900 font-medium">Udyam Registration Certificate (for 50% fee concession)</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] transition-all">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-sm hover:shadow-emerald-500/10 transition-all">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
             <span className="text-xs sm:text-[13px] text-slate-900 font-medium">Signed Form TM-48 (Legal Power of Attorney)</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] transition-all">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-sm hover:shadow-emerald-500/10 transition-all">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
             <span className="text-xs sm:text-[13px] text-slate-900 font-medium">User Affidavit with proof of prior usage date (if mark in use)</span>
           </div>
@@ -634,21 +634,21 @@ function TrademarkRegistrationGuideContent() {
           Merrafilings is India&apos;s leading Intellectual Property firm, managing trademark filings for over 100,000+ businesses with the highest first-time grant rate:
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs sm:text-[13px] font-normal text-slate-900">
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">Same-Day Filing &amp; Instant Application Number</span>
+            <span className="text-slate-900 group-hover:text-emerald-800 font-medium transition-colors">Same-Day Filing &amp; Instant Application Number</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">Dedicated Trademark Attorneys &amp; Registered IP Agents</span>
+            <span className="text-slate-900 group-hover:text-emerald-800 font-medium transition-colors">Dedicated Trademark Attorneys &amp; Registered IP Agents</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">Complimentary Multi-Layered Conflict Search</span>
+            <span className="text-slate-900 group-hover:text-emerald-800 font-medium transition-colors">Complimentary Multi-Layered Conflict Search</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">Full 10-Year Validity Tracking &amp; Certificate Vault</span>
+            <span className="text-slate-900 group-hover:text-emerald-800 font-medium transition-colors">Full 10-Year Validity Tracking &amp; Certificate Vault</span>
           </div>
         </div>
 

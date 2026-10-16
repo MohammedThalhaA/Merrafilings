@@ -281,8 +281,8 @@ function TrademarkCertificateGuideContent() {
           3. Commercial &amp; Legal Powers Conferred by the Certificate
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pt-2">
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-emerald-700 transition-colors flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
               <span>Right to Display the ® Symbol</span>
             </h3>
@@ -290,8 +290,8 @@ function TrademarkCertificateGuideContent() {
               Transition from ™ to ®. Legally notify competitors and consumers that your mark is officially registered and backed by civil and criminal remedies.
             </p>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-blue-700 transition-colors flex items-center gap-2">
               <Scale className="w-4 h-4 text-blue-600 shrink-0" />
               <span>Statutory Infringement Remedies</span>
             </h3>
@@ -299,8 +299,8 @@ function TrademarkCertificateGuideContent() {
               File suits under Section 29 in Commercial Courts, seek ex-parte Anton Piller search orders, interlocutory injunctions, and claim statutory damages.
             </p>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-purple-700 transition-colors flex items-center gap-2">
               <Globe2 className="w-4 h-4 text-purple-600 shrink-0" />
               <span>Amazon Brand Registry &amp; Global IP</span>
             </h3>
@@ -426,21 +426,21 @@ function TrademarkCertificateGuideContent() {
           From application tracking to post-registration enforcement, Merrafilings is your end-to-end IP legal partner:
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs sm:text-[13px] font-normal text-slate-900">
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">Continuous Surveillance from Journal Publication to Certificate</span>
+            <span className="text-slate-900 group-hover:text-emerald-800 font-medium transition-colors">Continuous Surveillance from Journal Publication to Certificate</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">Official Cryptographic Digital Seal &amp; Genuineness Validation</span>
+            <span className="text-slate-900 group-hover:text-emerald-800 font-medium transition-colors">Official Cryptographic Digital Seal &amp; Genuineness Validation</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">Specialized Form TM-M Clerical Error Rectification Support</span>
+            <span className="text-slate-900 group-hover:text-emerald-800 font-medium transition-colors">Specialized Form TM-M Clerical Error Rectification Support</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">Certified Copy Petitions (Section 137) for Court Litigation</span>
+            <span className="text-slate-900 group-hover:text-emerald-800 font-medium transition-colors">Certified Copy Petitions (Section 137) for Court Litigation</span>
           </div>
         </div>
 

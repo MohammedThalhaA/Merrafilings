@@ -91,9 +91,9 @@ export default function GstAmendmentEssentialsWhatYouNeedToKnowPage() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-2 group-hover:text-[#5C3BFF] transition-colors">
-                <ShieldCheck className="w-4 h-4 text-purple-600" />
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-purple-500 hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-2 group-hover:text-purple-700 transition-colors">
+                <ShieldCheck className="w-4 h-4 text-purple-600 shrink-0 group-hover:scale-110 transition-transform" />
                 <span>Tier 1: Core Fields</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed mb-2">
@@ -110,9 +110,9 @@ export default function GstAmendmentEssentialsWhatYouNeedToKnowPage() {
               </div>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-2 group-hover:text-[#5C3BFF] transition-colors">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-emerald-500 hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-2 group-hover:text-emerald-700 transition-colors">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
                 <span>Tier 2: Non-Core Fields</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed mb-2">
@@ -129,9 +129,9 @@ export default function GstAmendmentEssentialsWhatYouNeedToKnowPage() {
               </div>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-2 group-hover:text-[#5C3BFF] transition-colors">
-                <Ban className="w-4 h-4 text-red-600" />
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-rose-500 hover:shadow-xl hover:shadow-rose-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-slate-900 mb-2 group-hover:text-rose-700 transition-colors">
+                <Ban className="w-4 h-4 text-red-600 shrink-0 group-hover:scale-110 transition-transform" />
                 <span>Tier 3: Unamendable Fields</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed mb-2">
@@ -205,9 +205,9 @@ export default function GstAmendmentEssentialsWhatYouNeedToKnowPage() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-amber-500 hover:shadow-xl hover:shadow-amber-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
               <div className="flex items-center justify-between mb-1">
-                <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider group-hover:text-[#5C3BFF] transition-colors">
+                <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider group-hover:text-amber-700 transition-colors">
                   Stage 3: Taxpayer Clarification Reply
                 </h3>
                 <span className="text-[11px] font-semibold text-amber-700 bg-amber-50 px-2 py-0.5 rounded">Strict 7 Working Days</span>
@@ -217,9 +217,9 @@ export default function GstAmendmentEssentialsWhatYouNeedToKnowPage() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+            <div className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-500 hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
               <div className="flex items-center justify-between mb-1">
-                <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider group-hover:text-[#5C3BFF] transition-colors">
+                <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider group-hover:text-emerald-700 transition-colors">
                   Stage 4: Final Sanction or Deemed Approval
                 </h3>
                 <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Within 7 Working Days of Reply</span>

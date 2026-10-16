@@ -138,7 +138,7 @@ export default function GstLutCertificateForExportersEssentialGuidePage() {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:-translate-y-1 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-1 hover:bg-emerald-50/20 transition-all duration-300 cursor-pointer group text-xs sm:text-[13px] text-slate-900 font-normal">
             <div className="flex items-center gap-1.5 font-semibold text-emerald-800 text-sm mb-1.5">
               <CheckCircle2 className="w-4 h-4 text-emerald-600" />
               <span>Active GST Registration</span>

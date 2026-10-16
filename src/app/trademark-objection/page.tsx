@@ -264,8 +264,8 @@ function TrademarkObjectionGuideContent() {
           An objection does not mean your trademark has been rejected. It is an administrative show-cause opportunity granted by the Examiner for you to explain why your mark complies with statutory requirements. Objections are raised primarily under two provisions:
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-emerald-700 transition-colors flex items-center gap-2">
               <Scale className="w-4 h-4 text-emerald-600 shrink-0" />
               <span>Section 9: Absolute Grounds for Refusal</span>
             </h3>
@@ -273,8 +273,8 @@ function TrademarkObjectionGuideContent() {
               Raised when the Examiner believes the mark is non-distinctive, purely descriptive of the goods/services (e.g., &quot;Best Coffee&quot;), customary in the trade, or deceptive.
             </p>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-blue-700 transition-colors flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-blue-600 shrink-0" />
               <span>Section 11: Relative Grounds for Refusal</span>
             </h3>
@@ -458,21 +458,21 @@ function TrademarkObjectionGuideContent() {
           A generic, copy-pasted objection reply is the leading reason trademarks get abandoned. Merrafilings pairs your case with specialized IP advocates:
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs sm:text-[13px] font-normal text-slate-900">
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">97.6% First-Instance Examiner Acceptance Rate</span>
+            <span className="text-slate-900 group-hover:text-emerald-800 font-medium transition-colors">97.6% First-Instance Examiner Acceptance Rate</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">Expedited 48-Hour Turnaround Within 30-Day Window</span>
+            <span className="text-slate-900 group-hover:text-emerald-800 font-medium transition-colors">Expedited 48-Hour Turnaround Within 30-Day Window</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">Extensive High Court &amp; Supreme Court IP Citation Library</span>
+            <span className="text-slate-900 group-hover:text-emerald-800 font-medium transition-colors">Extensive High Court &amp; Supreme Court IP Citation Library</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">Complete Post-Filing Tracking Until Journal Advertisement</span>
+            <span className="text-slate-900 group-hover:text-emerald-800 font-medium transition-colors">Complete Post-Filing Tracking Until Journal Advertisement</span>
           </div>
         </div>
 

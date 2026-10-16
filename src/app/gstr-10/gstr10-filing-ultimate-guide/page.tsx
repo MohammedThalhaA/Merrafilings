@@ -120,9 +120,9 @@ export default function Gstr10FilingUltimateGuidePage() {
               </ul>
             </div>
 
-            <div className="p-5 rounded-xl border border-slate-200/80 bg-white hover:border-emerald-500 hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <div className="flex items-center gap-2 font-semibold text-sm text-slate-950 group-hover:text-emerald-700 transition-colors mb-2">
-                <ShieldCheck className="w-4 h-4 text-indigo-600" />
+            <div className="p-5 rounded-xl border border-slate-200/80 bg-white hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2 font-semibold text-sm text-slate-950 group-hover:text-indigo-700 transition-colors mb-2">
+                <ShieldCheck className="w-4 h-4 text-indigo-600 shrink-0 group-hover:scale-110 transition-transform" />
                 <span>Exempt Entities under Law</span>
               </div>
               <ul className="space-y-2 text-xs text-slate-600">

@@ -51,7 +51,7 @@ export default function ApplyTrademarkObjectionStepByStepPage() {
 
         <div className="space-y-4">
           {/* Step 1 */}
-          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#155EEF]/50 transition-all">
+          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-purple-400 hover:shadow-md hover:shadow-purple-500/10 transition-all">
             <div className="flex items-start gap-4">
               <div className="w-9 h-9 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-sm shrink-0">
                 1
@@ -68,7 +68,7 @@ export default function ApplyTrademarkObjectionStepByStepPage() {
           </div>
 
           {/* Step 2 */}
-          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#155EEF]/50 transition-all">
+          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-purple-400 hover:shadow-md hover:shadow-purple-500/10 transition-all">
             <div className="flex items-start gap-4">
               <div className="w-9 h-9 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-sm shrink-0">
                 2
@@ -85,7 +85,7 @@ export default function ApplyTrademarkObjectionStepByStepPage() {
           </div>
 
           {/* Step 3 */}
-          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#155EEF]/50 transition-all">
+          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-purple-400 hover:shadow-md hover:shadow-purple-500/10 transition-all">
             <div className="flex items-start gap-4">
               <div className="w-9 h-9 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-sm shrink-0">
                 3
@@ -102,7 +102,7 @@ export default function ApplyTrademarkObjectionStepByStepPage() {
           </div>
 
           {/* Step 4 */}
-          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#155EEF]/50 transition-all">
+          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-purple-400 hover:shadow-md hover:shadow-purple-500/10 transition-all">
             <div className="flex items-start gap-4">
               <div className="w-9 h-9 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-sm shrink-0">
                 4
@@ -119,7 +119,7 @@ export default function ApplyTrademarkObjectionStepByStepPage() {
           </div>
 
           {/* Step 5 */}
-          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#155EEF]/50 transition-all">
+          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-purple-400 hover:shadow-md hover:shadow-purple-500/10 transition-all">
             <div className="flex items-start gap-4">
               <div className="w-9 h-9 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-sm shrink-0">
                 5
@@ -136,7 +136,7 @@ export default function ApplyTrademarkObjectionStepByStepPage() {
           </div>
 
           {/* Step 6 */}
-          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#155EEF]/50 transition-all">
+          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-purple-400 hover:shadow-md hover:shadow-purple-500/10 transition-all">
             <div className="flex items-start gap-4">
               <div className="w-9 h-9 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-sm shrink-0">
                 6
@@ -153,7 +153,7 @@ export default function ApplyTrademarkObjectionStepByStepPage() {
           </div>
 
           {/* Step 7 */}
-          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#155EEF]/50 transition-all">
+          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-purple-400 hover:shadow-md hover:shadow-purple-500/10 transition-all">
             <div className="flex items-start gap-4">
               <div className="w-9 h-9 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-sm shrink-0">
                 7

@@ -203,7 +203,7 @@ export default function PatentRegistrationGuideProtectInventionPage() {
             </div>
           </div>
 
-          <div className="p-4.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:-translate-y-0.5 hover:bg-[#FAF9FF] transition-all duration-200 cursor-pointer group">
+          <div className="p-4.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 hover:bg-emerald-50/20 transition-all duration-200 cursor-pointer group">
             <div className="flex items-start gap-3.5">
               <div className="w-7 h-7 rounded-lg bg-emerald-600 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
                 3

@@ -202,7 +202,7 @@ export default function EasyPatentRegistrationSimplifyingPathPage() {
             </p>
           </div>
 
-          <div className="p-4 rounded-xl bg-white border border-slate-200/80 shadow-2xs hover:border-[#5C3BFF] hover:shadow-md hover:-translate-y-0.5 hover:bg-[#FAF9FF] transition-all duration-200 cursor-pointer group">
+          <div className="p-4 rounded-xl bg-white border border-slate-200/80 shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 hover:bg-emerald-50/20 transition-all duration-200 cursor-pointer group">
             <h3 className="text-sm font-semibold text-slate-950 group-hover:text-emerald-950 transition-colors">
               Milestone 7: Patent Grant &amp; Annual Maintenance (Years 3 to 20)
             </h3>

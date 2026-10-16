@@ -53,7 +53,7 @@ export default function TrademarkProcessFlowchartPage() {
         {/* Pipeline Container */}
         <div className="relative space-y-4 pt-2">
           {/* Stage 1 */}
-          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#155EEF]/50 transition-all relative">
+          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-purple-400 hover:shadow-md hover:shadow-purple-500/10 transition-all relative">
             <div className="flex items-start gap-4">
               <div className="w-9 h-9 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-sm shrink-0">
                 1
@@ -79,7 +79,7 @@ export default function TrademarkProcessFlowchartPage() {
           </div>
 
           {/* Stage 2 */}
-          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#155EEF]/50 transition-all relative">
+          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-purple-400 hover:shadow-md hover:shadow-purple-500/10 transition-all relative">
             <div className="flex items-start gap-4">
               <div className="w-9 h-9 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-sm shrink-0">
                 2
@@ -105,7 +105,7 @@ export default function TrademarkProcessFlowchartPage() {
           </div>
 
           {/* Stage 3 */}
-          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#155EEF]/50 transition-all relative">
+          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 transition-all relative">
             <div className="flex items-start gap-4">
               <div className="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-sm shrink-0">
                 3
@@ -131,7 +131,7 @@ export default function TrademarkProcessFlowchartPage() {
           </div>
 
           {/* Stage 4 */}
-          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#155EEF]/50 transition-all relative">
+          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-purple-400 hover:shadow-md hover:shadow-purple-500/10 transition-all relative">
             <div className="flex items-start gap-4">
               <div className="w-9 h-9 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-sm shrink-0">
                 4
@@ -183,7 +183,7 @@ export default function TrademarkProcessFlowchartPage() {
           </div>
 
           {/* Stage 6 */}
-          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#155EEF]/50 transition-all relative">
+          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-purple-400 hover:shadow-md hover:shadow-purple-500/10 transition-all relative">
             <div className="flex items-start gap-4">
               <div className="w-9 h-9 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-sm shrink-0">
                 6

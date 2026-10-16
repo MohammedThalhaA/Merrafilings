@@ -239,36 +239,36 @@ function CopyrightRegistrationGuideContent() {
           Any individual, startup, institution, or corporation that invests creative intellect or financial capital into original creative assets should obtain copyright registration:
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 pt-2">
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <BookOpen className="w-5 h-5 text-purple-600 mb-2 group-hover:scale-110 transition-transform" />
-            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-[#155EEF] transition-colors">
+            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-purple-700 transition-colors">
               Authors &amp; Writers
             </h3>
             <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-1 leading-relaxed">
               Books, research papers, novels, poems, scripts, and website editorial content.
             </p>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <Code className="w-5 h-5 text-blue-600 mb-2 group-hover:scale-110 transition-transform" />
-            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-[#155EEF] transition-colors">
+            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-blue-700 transition-colors">
               Software Developers
             </h3>
             <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-1 leading-relaxed">
               SaaS platforms, mobile application source code, database architectures, and algorithms.
             </p>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <Music className="w-5 h-5 text-emerald-600 mb-2 group-hover:scale-110 transition-transform" />
-            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-[#155EEF] transition-colors">
+            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-emerald-700 transition-colors">
               Musicians &amp; Composers
             </h3>
             <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-1 leading-relaxed">
               Musical compositions, melodies, lyrics, studio master audio recordings, and beats.
             </p>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-pink-500 hover:shadow-md hover:shadow-pink-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <Palette className="w-5 h-5 text-pink-600 mb-2 group-hover:scale-110 transition-transform" />
-            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-[#155EEF] transition-colors">
+            <h3 className="font-semibold text-[13.5px] text-slate-950 group-hover:text-pink-700 transition-colors">
               Artists &amp; Designers
             </h3>
             <p className="text-xs sm:text-[13px] text-slate-800 font-normal mt-1 leading-relaxed">
@@ -547,21 +547,21 @@ function CopyrightRegistrationGuideContent() {
           Copyright applications frequently stall due to minor discrepancies or improper No-Objection Certificates. Merrafilings ensures end-to-end legal certainty:
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs sm:text-[13px] font-normal text-slate-900">
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">Specialized IP Advocates for Literary, Tech &amp; Entertainment</span>
+            <span className="text-slate-900 group-hover:text-emerald-800 font-medium transition-colors">Specialized IP Advocates for Literary, Tech &amp; Entertainment</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">Same-Day Form XIV E-Filing &amp; Diary Number Generation</span>
+            <span className="text-slate-900 group-hover:text-emerald-800 font-medium transition-colors">Same-Day Form XIV E-Filing &amp; Diary Number Generation</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">Software Source Code Redaction &amp; Confidentiality Guarantee</span>
+            <span className="text-slate-900 group-hover:text-emerald-800 font-medium transition-colors">Software Source Code Redaction &amp; Confidentiality Guarantee</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="text-slate-900 group-hover:text-black font-medium transition-colors">Continuous Surveillance Until Official Certificate Issuance</span>
+            <span className="text-slate-900 group-hover:text-emerald-800 font-medium transition-colors">Continuous Surveillance Until Official Certificate Issuance</span>
           </div>
         </div>
 

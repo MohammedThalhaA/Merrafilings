@@ -669,7 +669,7 @@ function PatentRegistrationGuideContent() {
           9. Handling Patent Objections &amp; Opposition Proceedings
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-          <div className="p-4.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-lg hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-2.5">
+          <div className="p-4.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-amber-500 hover:shadow-lg hover:shadow-amber-500/10 hover:-translate-y-1.5 hover:bg-[#FFFDF7] transition-all duration-300 cursor-pointer group space-y-2.5">
             <div className="w-9 h-9 rounded-lg bg-amber-50 border border-amber-100/70 text-amber-600 flex items-center justify-center group-hover:scale-110 group-hover:bg-amber-600 group-hover:text-white group-hover:border-amber-600 transition-all duration-200 shadow-2xs">
               <AlertCircle className="w-5 h-5" />
             </div>

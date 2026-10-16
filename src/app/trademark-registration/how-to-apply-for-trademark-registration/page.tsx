@@ -108,7 +108,7 @@ export default function HowToApplyTrademarkPage() {
 
         <div className="space-y-5">
           {/* Step 1 */}
-          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#155EEF]/50 transition-all">
+          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-purple-400 hover:shadow-md hover:shadow-purple-500/10 transition-all">
             <div className="flex items-start gap-4">
               <div className="w-9 h-9 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-sm shrink-0">
                 1
@@ -125,7 +125,7 @@ export default function HowToApplyTrademarkPage() {
           </div>
 
           {/* Step 2 */}
-          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#155EEF]/50 transition-all">
+          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-purple-400 hover:shadow-md hover:shadow-purple-500/10 transition-all">
             <div className="flex items-start gap-4">
               <div className="w-9 h-9 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-sm shrink-0">
                 2
@@ -142,7 +142,7 @@ export default function HowToApplyTrademarkPage() {
           </div>
 
           {/* Step 3 */}
-          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#155EEF]/50 transition-all">
+          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-purple-400 hover:shadow-md hover:shadow-purple-500/10 transition-all">
             <div className="flex items-start gap-4">
               <div className="w-9 h-9 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-sm shrink-0">
                 3
@@ -159,7 +159,7 @@ export default function HowToApplyTrademarkPage() {
           </div>
 
           {/* Step 4 */}
-          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#155EEF]/50 transition-all">
+          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-purple-400 hover:shadow-md hover:shadow-purple-500/10 transition-all">
             <div className="flex items-start gap-4">
               <div className="w-9 h-9 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-sm shrink-0">
                 4
@@ -176,7 +176,7 @@ export default function HowToApplyTrademarkPage() {
           </div>
 
           {/* Step 5 & 6 */}
-          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#155EEF]/50 transition-all">
+          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-purple-400 hover:shadow-md hover:shadow-purple-500/10 transition-all">
             <div className="flex items-start gap-4">
               <div className="w-9 h-9 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-sm shrink-0">
                 5
@@ -193,7 +193,7 @@ export default function HowToApplyTrademarkPage() {
           </div>
 
           {/* Step 7 to 10 */}
-          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#155EEF]/50 transition-all">
+          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-purple-400 hover:shadow-md hover:shadow-purple-500/10 transition-all">
             <div className="flex items-start gap-4">
               <div className="w-9 h-9 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-sm shrink-0">
                 6
@@ -210,7 +210,7 @@ export default function HowToApplyTrademarkPage() {
           </div>
 
           {/* Step 8 to 12 */}
-          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#155EEF]/50 transition-all">
+          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 transition-all">
             <div className="flex items-start gap-4">
               <div className="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-sm shrink-0">
                 7
@@ -387,21 +387,21 @@ export default function HowToApplyTrademarkPage() {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm font-normal text-slate-900 pt-1">
-          <div className="p-3.5 bg-slate-50 rounded-xl border border-slate-200/80 flex items-center gap-3">
-            <Award className="w-4 h-4 text-purple-600 shrink-0" />
-            <span>Over 100,000+ brand filings completed across India</span>
+          <div className="p-3.5 bg-slate-50 rounded-xl border border-slate-200/80 hover:bg-white hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group flex items-center gap-3">
+            <Award className="w-4 h-4 text-purple-600 shrink-0 group-hover:scale-110 transition-transform" />
+            <span className="group-hover:text-purple-800 transition-colors">Over 100,000+ brand filings completed across India</span>
           </div>
-          <div className="p-3.5 bg-slate-50 rounded-xl border border-slate-200/80 flex items-center gap-3">
-            <Clock className="w-4 h-4 text-purple-600 shrink-0" />
-            <span>Guaranteed same-day Form TM-A digital filing &amp; ™ receipt</span>
+          <div className="p-3.5 bg-slate-50 rounded-xl border border-slate-200/80 hover:bg-white hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group flex items-center gap-3">
+            <Clock className="w-4 h-4 text-purple-600 shrink-0 group-hover:scale-110 transition-transform" />
+            <span className="group-hover:text-purple-800 transition-colors">Guaranteed same-day Form TM-A digital filing &amp; ™ receipt</span>
           </div>
-          <div className="p-3.5 bg-slate-50 rounded-xl border border-slate-200/80 flex items-center gap-3">
-            <Scale className="w-4 h-4 text-purple-600 shrink-0" />
-            <span>Full-cycle legal defense including examination replies &amp; hearings</span>
+          <div className="p-3.5 bg-slate-50 rounded-xl border border-slate-200/80 hover:bg-white hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group flex items-center gap-3">
+            <Scale className="w-4 h-4 text-purple-600 shrink-0 group-hover:scale-110 transition-transform" />
+            <span className="group-hover:text-purple-800 transition-colors">Full-cycle legal defense including examination replies &amp; hearings</span>
           </div>
-          <div className="p-3.5 bg-slate-50 rounded-xl border border-slate-200/80 flex items-center gap-3">
-            <BadgePercent className="w-4 h-4 text-purple-600 shrink-0" />
-            <span>Assistance claiming 50% MSME government fee rebate</span>
+          <div className="p-3.5 bg-slate-50 rounded-xl border border-slate-200/80 hover:bg-white hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group flex items-center gap-3">
+            <BadgePercent className="w-4 h-4 text-purple-600 shrink-0 group-hover:scale-110 transition-transform" />
+            <span className="group-hover:text-purple-800 transition-colors">Assistance claiming 50% MSME government fee rebate</span>
           </div>
         </div>
       </section>

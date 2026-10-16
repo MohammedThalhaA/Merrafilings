@@ -130,8 +130,8 @@ export default function TrademarkRenewalProcessKeyStepsPage() {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-xs sm:text-[13px] text-slate-900 font-normal">
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1.5">
-            <div className="flex items-center gap-2 text-indigo-700 font-semibold text-sm">
+          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-indigo-500 hover:shadow-md hover:shadow-indigo-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group space-y-1.5">
+            <div className="flex items-center gap-2 text-indigo-700 group-hover:text-indigo-800 font-semibold text-sm transition-colors">
               <CheckCircle2 className="w-4 h-4" />
               <span>Step 1: Audit Application Status &amp; Title</span>
             </div>
@@ -140,8 +140,8 @@ export default function TrademarkRenewalProcessKeyStepsPage() {
             </p>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1.5">
-            <div className="flex items-center gap-2 text-purple-700 font-semibold text-sm">
+          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group space-y-1.5">
+            <div className="flex items-center gap-2 text-purple-700 group-hover:text-purple-800 font-semibold text-sm transition-colors">
               <CheckCircle2 className="w-4 h-4" />
               <span>Step 2: Execute Form TM-48 (Power of Attorney)</span>
             </div>
@@ -150,8 +150,8 @@ export default function TrademarkRenewalProcessKeyStepsPage() {
             </p>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1.5">
-            <div className="flex items-center gap-2 text-emerald-700 font-semibold text-sm">
+          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group space-y-1.5">
+            <div className="flex items-center gap-2 text-emerald-700 group-hover:text-emerald-800 font-semibold text-sm transition-colors">
               <CheckCircle2 className="w-4 h-4" />
               <span>Step 3: Electronically File Form TM-R</span>
             </div>
@@ -160,8 +160,8 @@ export default function TrademarkRenewalProcessKeyStepsPage() {
             </p>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1.5">
-            <div className="flex items-center gap-2 text-rose-700 font-semibold text-sm">
+          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-rose-500 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group space-y-1.5">
+            <div className="flex items-center gap-2 text-rose-700 group-hover:text-rose-800 font-semibold text-sm transition-colors">
               <CheckCircle2 className="w-4 h-4" />
               <span>Step 4: Statutory Fee Payment &amp; CBR Issuance</span>
             </div>

@@ -167,36 +167,36 @@ export default function CopyrightRegistrationGuideKeyInsightsPage() {
           4. Common Pitfalls to Avoid During Copyright Filing
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-xs sm:text-[13px] font-normal text-slate-900">
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1">
-            <h4 className="font-semibold text-rose-950 flex items-center gap-1.5">
-              <AlertTriangle className="w-4 h-4 text-rose-600" />
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-rose-500 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group space-y-1">
+            <h4 className="font-semibold text-rose-950 group-hover:text-rose-700 transition-colors flex items-center gap-1.5">
+              <AlertTriangle className="w-4 h-4 text-rose-600 shrink-0 group-hover:scale-110 transition-transform" />
               <span>Missing No-Objection Certificates (NOCs)</span>
             </h4>
             <p className="text-slate-800 font-normal leading-relaxed">
               If multiple contributors (illustrators, hired software developers, editors) worked on your project, you must append signed assignment deeds or NOCs establishing ownership transfer.
             </p>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1">
-            <h4 className="font-semibold text-rose-950 flex items-center gap-1.5">
-              <AlertTriangle className="w-4 h-4 text-rose-600" />
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-rose-500 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group space-y-1">
+            <h4 className="font-semibold text-rose-950 group-hover:text-rose-700 transition-colors flex items-center gap-1.5">
+              <AlertTriangle className="w-4 h-4 text-rose-600 shrink-0 group-hover:scale-110 transition-transform" />
               <span>Failing to Respond to Discrepancies</span>
             </h4>
             <p className="text-slate-800 font-normal leading-relaxed">
               If the Examiner issues a discrepancy letter, you have exactly 30 days to file a formal reply. Unanswered discrepancies lead to automatic application abandonment.
             </p>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1">
-            <h4 className="font-semibold text-rose-950 flex items-center gap-1.5">
-              <AlertTriangle className="w-4 h-4 text-rose-600" />
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-rose-500 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group space-y-1">
+            <h4 className="font-semibold text-rose-950 group-hover:text-rose-700 transition-colors flex items-center gap-1.5">
+              <AlertTriangle className="w-4 h-4 text-rose-600 shrink-0 group-hover:scale-110 transition-transform" />
               <span>Confusing Trademark with Copyright</span>
             </h4>
             <p className="text-slate-800 font-normal leading-relaxed">
               Short brand names or slogans cannot be copyrighted. Applying for a copyright on a two-word business brand will result in immediate rejection by the Examiner.
             </p>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1">
-            <h4 className="font-semibold text-rose-950 flex items-center gap-1.5">
-              <AlertTriangle className="w-4 h-4 text-rose-600" />
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-rose-500 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group space-y-1">
+            <h4 className="font-semibold text-rose-950 group-hover:text-rose-700 transition-colors flex items-center gap-1.5">
+              <AlertTriangle className="w-4 h-4 text-rose-600 shrink-0 group-hover:scale-110 transition-transform" />
               <span>Artistic Works Without Form TM-C</span>
             </h4>
             <p className="text-slate-800 font-normal leading-relaxed">

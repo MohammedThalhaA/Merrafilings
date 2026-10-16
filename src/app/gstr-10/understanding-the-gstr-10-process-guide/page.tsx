@@ -97,9 +97,9 @@ export default function UnderstandingTheGstr10ProcessGuidePage() {
             The legal obligation to file Form GSTR-10 applies to every taxpayer whose GST registration is cancelled—whether on application by the taxpayer (voluntary surrender) or by the tax officer suo-moto.
           </p>
 
-          <div className="p-4 rounded-xl border border-slate-200/80 bg-white hover:border-emerald-500 hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-            <h4 className="text-xs font-bold text-slate-950 mb-2 group-hover:text-emerald-700 transition-colors flex items-center gap-2">
-              <Ban className="w-4 h-4 text-rose-500" />
+          <div className="p-4 rounded-xl border border-slate-200/80 bg-white hover:border-rose-500 hover:shadow-xl hover:shadow-rose-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+            <h4 className="text-xs font-bold text-slate-950 mb-2 group-hover:text-rose-700 transition-colors flex items-center gap-2">
+              <Ban className="w-4 h-4 text-rose-500 shrink-0 group-hover:scale-110 transition-transform" />
               <span>Statutory Exemptions under Section 45:</span>
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-600 font-normal">

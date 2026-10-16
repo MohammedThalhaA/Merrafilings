@@ -73,7 +73,7 @@ export default function AvoidingCommonTrademarkRenewalMistakesPage() {
 
         <div className="space-y-3.5 pt-2">
           {/* Mistake 1 */}
-          <div className="p-4.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
+          <div className="p-4.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-rose-500 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group space-y-2">
             <div className="flex items-center gap-2 text-rose-700 font-semibold text-sm">
               <XCircle className="w-4.5 h-4.5" />
               <span>Mistake 1: Calculating 10-Year Validity from Certificate Date Instead of Filing Date</span>
@@ -87,7 +87,7 @@ export default function AvoidingCommonTrademarkRenewalMistakesPage() {
           </div>
 
           {/* Mistake 2 */}
-          <div className="p-4.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
+          <div className="p-4.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-rose-500 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group space-y-2">
             <div className="flex items-center gap-2 text-rose-700 font-semibold text-sm">
               <XCircle className="w-4.5 h-4.5" />
               <span>Mistake 2: Relying Blindly on the Registry&apos;s O-3 Reminder Notice</span>
@@ -101,7 +101,7 @@ export default function AvoidingCommonTrademarkRenewalMistakesPage() {
           </div>
 
           {/* Mistake 3 */}
-          <div className="p-4.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
+          <div className="p-4.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-rose-500 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group space-y-2">
             <div className="flex items-center gap-2 text-rose-700 font-semibold text-sm">
               <XCircle className="w-4.5 h-4.5" />
               <span>Mistake 3: Attempting to Modify Logo Graphics or Wording in Form TM-R</span>
@@ -115,7 +115,7 @@ export default function AvoidingCommonTrademarkRenewalMistakesPage() {
           </div>
 
           {/* Mistake 4 */}
-          <div className="p-4.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
+          <div className="p-4.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-rose-500 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group space-y-2">
             <div className="flex items-center gap-2 text-rose-700 font-semibold text-sm">
               <XCircle className="w-4.5 h-4.5" />
               <span>Mistake 4: Ignoring Multi-Class Surcharge Obligations</span>
@@ -129,7 +129,7 @@ export default function AvoidingCommonTrademarkRenewalMistakesPage() {
           </div>
 
           {/* Mistake 5 */}
-          <div className="p-4.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
+          <div className="p-4.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-rose-500 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group space-y-2">
             <div className="flex items-center gap-2 text-rose-700 font-semibold text-sm">
               <XCircle className="w-4.5 h-4.5" />
               <span>Mistake 5: Overlooking Unrecorded Entity Name or Structure Changes</span>
@@ -143,7 +143,7 @@ export default function AvoidingCommonTrademarkRenewalMistakesPage() {
           </div>
 
           {/* Mistake 6 */}
-          <div className="p-4.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
+          <div className="p-4.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-rose-500 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group space-y-2">
             <div className="flex items-center gap-2 text-rose-700 font-semibold text-sm">
               <XCircle className="w-4.5 h-4.5" />
               <span>Mistake 6: Exceeding the 1-Year Restoration Outer Limit</span>
@@ -164,19 +164,19 @@ export default function AvoidingCommonTrademarkRenewalMistakesPage() {
           2. Safe Renewal Checklist
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-[13px] text-slate-900 font-normal pt-2">
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
-            <CheckCircle2 className="w-4 h-4 text-emerald-600 mb-1.5" />
-            <strong className="font-semibold text-slate-950">Set Docket at 9.5 Years</strong>
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+            <CheckCircle2 className="w-4 h-4 text-emerald-600 mb-1.5 group-hover:scale-110 transition-transform" />
+            <strong className="font-semibold text-slate-950 group-hover:text-emerald-800 transition-colors">Set Docket at 9.5 Years</strong>
             <p className="text-slate-800 mt-1 leading-relaxed">Initiate filing right when the 6-month pre-expiry window opens.</p>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
-            <CheckCircle2 className="w-4 h-4 text-emerald-600 mb-1.5" />
-            <strong className="font-semibold text-slate-950">Verify Entity Records</strong>
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+            <CheckCircle2 className="w-4 h-4 text-emerald-600 mb-1.5 group-hover:scale-110 transition-transform" />
+            <strong className="font-semibold text-slate-950 group-hover:text-emerald-800 transition-colors">Verify Entity Records</strong>
             <p className="text-slate-800 mt-1 leading-relaxed">Confirm proprietor name, registered office, and partner lists match MCA records.</p>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
-            <CheckCircle2 className="w-4 h-4 text-emerald-600 mb-1.5" />
-            <strong className="font-semibold text-slate-950">Engage Registered Counsel</strong>
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+            <CheckCircle2 className="w-4 h-4 text-emerald-600 mb-1.5 group-hover:scale-110 transition-transform" />
+            <strong className="font-semibold text-slate-950 group-hover:text-emerald-800 transition-colors">Engage Registered Counsel</strong>
             <p className="text-slate-800 mt-1 leading-relaxed">Ensure electronic filing via authorized IP attorneys to prevent portal rejections.</p>
           </div>
         </div>

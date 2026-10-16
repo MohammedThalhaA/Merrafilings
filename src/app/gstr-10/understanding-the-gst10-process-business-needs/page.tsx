@@ -175,9 +175,9 @@ export default function UnderstandingGst10ProcessBusinessNeedsPage() {
           </p>
 
           <div className="space-y-3 pt-1">
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <h4 className="text-sm font-semibold text-slate-950 group-hover:text-blue-600 transition-colors flex items-center gap-2">
-                <Check className="w-4 h-4 text-emerald-600" />
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-emerald-500 hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <h4 className="text-sm font-semibold text-slate-950 group-hover:text-emerald-700 transition-colors flex items-center gap-2">
+                <Check className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
                 <span>Drastic Reduction of Unforeseen Financial Penalties</span>
               </h4>
               <p className="text-xs text-slate-600 leading-relaxed mt-1">
@@ -185,9 +185,9 @@ export default function UnderstandingGst10ProcessBusinessNeedsPage() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <h4 className="text-sm font-semibold text-slate-950 group-hover:text-blue-600 transition-colors flex items-center gap-2">
-                <Check className="w-4 h-4 text-emerald-600" />
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-emerald-500 hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <h4 className="text-sm font-semibold text-slate-950 group-hover:text-emerald-700 transition-colors flex items-center gap-2">
+                <Check className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
                 <span>Full Transparency with Revenue Authorities</span>
               </h4>
               <p className="text-xs text-slate-600 leading-relaxed mt-1">
@@ -195,9 +195,9 @@ export default function UnderstandingGst10ProcessBusinessNeedsPage() {
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
-              <h4 className="text-sm font-semibold text-slate-950 group-hover:text-blue-600 transition-colors flex items-center gap-2">
-                <Check className="w-4 h-4 text-emerald-600" />
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-emerald-500 hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group">
+              <h4 className="text-sm font-semibold text-slate-950 group-hover:text-emerald-700 transition-colors flex items-center gap-2">
+                <Check className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
                 <span>Clean Exit for Corporate Mergers, Acquisitions &amp; Dissolutions</span>
               </h4>
               <p className="text-xs text-slate-600 leading-relaxed mt-1">

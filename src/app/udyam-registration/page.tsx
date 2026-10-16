@@ -271,8 +271,8 @@ function UdyamGuideContent() {
           The central objective of the Udyam framework is to formalize and accelerate the growth of India&apos;s MSME sector, which contributes over 30% to the national GDP and 45% to total exports. Key statutory purposes include:
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-            <h3 className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+            <h3 className="font-medium text-[13.5px] text-slate-900 group-hover:text-emerald-700 transition-colors flex items-center gap-2">
               <Landmark className="w-4 h-4 text-emerald-600 shrink-0" />
               <span>Priority Sector Lending</span>
             </h3>
@@ -280,8 +280,8 @@ function UdyamGuideContent() {
               Mandatory qualification for scheduled commercial banks to grant concessional credit under Priority Sector Lending (PSL) targets.
             </p>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-            <h3 className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+            <h3 className="font-medium text-[13.5px] text-slate-900 group-hover:text-blue-700 transition-colors flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-blue-600 shrink-0" />
               <span>Collateral-Free Credit via CGTMSE</span>
             </h3>
@@ -289,8 +289,8 @@ function UdyamGuideContent() {
               Enables enterprises to access institutional bank financing up to ₹5 Crore without offering third-party collateral or assets.
             </p>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-            <h3 className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+            <h3 className="font-medium text-[13.5px] text-slate-900 group-hover:text-purple-700 transition-colors flex items-center gap-2">
               <Award className="w-4 h-4 text-purple-600 shrink-0" />
               <span>Public Procurement Exemption</span>
             </h3>
@@ -298,8 +298,8 @@ function UdyamGuideContent() {
               Central ministries and public sector undertakings (PSUs) must mandatorily procure 25% of annual requirements from MSMEs with EMD waivers.
             </p>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-            <h3 className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-amber-500 hover:shadow-md hover:shadow-amber-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+            <h3 className="font-medium text-[13.5px] text-slate-900 group-hover:text-amber-700 transition-colors flex items-center gap-2">
               <BadgePercent className="w-4 h-4 text-amber-600 shrink-0" />
               <span>Statutory IP &amp; Quality Subsidies</span>
             </h3>
@@ -632,29 +632,29 @@ function UdyamGuideContent() {
           Because the Udyam portal operates on digital self-declaration, <strong className="font-medium text-slate-800">no physical documents need to be uploaded</strong>. You only require the following verified data points:
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-sm hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span className="text-xs text-slate-700 font-normal">Aadhaar card linked with active mobile number for OTP</span>
+            <span className="text-xs text-slate-700 group-hover:text-emerald-950 font-normal transition-colors">Aadhaar card linked with active mobile number for OTP</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-sm hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span className="text-xs text-slate-700 font-normal">Permanent Account Number (PAN) of enterprise / proprietor</span>
+            <span className="text-xs text-slate-700 group-hover:text-emerald-950 font-normal transition-colors">Permanent Account Number (PAN) of enterprise / proprietor</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-sm hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span className="text-xs text-slate-700 font-normal">Commercial bank account number and IFSC code</span>
+            <span className="text-xs text-slate-700 group-hover:text-emerald-950 font-normal transition-colors">Commercial bank account number and IFSC code</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-sm hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span className="text-xs text-slate-700 font-normal">GSTIN (if applicable or mandatory under GST Act)</span>
+            <span className="text-xs text-slate-700 group-hover:text-emerald-950 font-normal transition-colors">GSTIN (if applicable or mandatory under GST Act)</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-sm hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span className="text-xs text-slate-700 font-normal">Exact address of manufacturing plants and offices</span>
+            <span className="text-xs text-slate-700 group-hover:text-emerald-950 font-normal transition-colors">Exact address of manufacturing plants and offices</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-sm hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span className="text-xs text-slate-700 font-normal">Number of male, female, and other employees</span>
+            <span className="text-xs text-slate-700 group-hover:text-emerald-950 font-normal transition-colors">Number of male, female, and other employees</span>
           </div>
         </div>
       </section>
@@ -681,21 +681,21 @@ function UdyamGuideContent() {
           While government portal registration is paperless, ensuring accurate 5-digit NIC code mapping, seamless PAN-GST data integration, GeM tender readiness, and Section 43B(h) compliance requires professional regulatory precision. Merrafilings provides:
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs font-normal text-slate-900">
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="group-hover:text-slate-900 transition-colors">Dedicated MSME Regulatory Consultants</span>
+            <span className="text-slate-900 group-hover:text-emerald-800 font-medium transition-colors">Dedicated MSME Regulatory Consultants</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="group-hover:text-slate-900 transition-colors">100% Error-Free Fast-Track 24-48 Hour Turnaround</span>
+            <span className="text-slate-900 group-hover:text-emerald-800 font-medium transition-colors">100% Error-Free Fast-Track 24-48 Hour Turnaround</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="group-hover:text-slate-900 transition-colors">Free GeM &amp; TReDS Portal Onboarding Advisory</span>
+            <span className="text-slate-900 group-hover:text-emerald-800 font-medium transition-colors">Free GeM &amp; TReDS Portal Onboarding Advisory</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="group-hover:text-slate-900 transition-colors">Complimentary Section 43B(h) 45-Day Invoice Clause Template</span>
+            <span className="text-slate-900 group-hover:text-emerald-800 font-medium transition-colors">Complimentary Section 43B(h) 45-Day Invoice Clause Template</span>
           </div>
         </div>
 

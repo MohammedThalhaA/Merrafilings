@@ -293,17 +293,17 @@ function GstRevocationGuideContent() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-[13px] text-slate-800">
-          <div className="p-4.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-2">
+          <div className="p-4.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-emerald-500 hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1.5 hover:bg-emerald-50/20 transition-all duration-300 cursor-pointer group space-y-2">
             <span className="px-2.5 py-1 rounded-md text-[11px] font-semibold bg-emerald-100 text-emerald-800 inline-block">Tier 1: Standard Window</span>
-            <strong className="text-slate-950 font-semibold block text-sm group-hover:text-[#5C3BFF] transition-colors">Within 90 Days</strong>
+            <strong className="text-slate-950 font-semibold block text-sm group-hover:text-emerald-800 transition-colors">Within 90 Days</strong>
             <p className="text-slate-700 leading-relaxed font-normal">
               Taxpayers can file Form GST REG-21 directly on the GST portal without needing special condonation orders, provided all pending returns and taxes are paid.
             </p>
           </div>
 
-          <div className="p-4.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#5C3BFF] hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-2">
+          <div className="p-4.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 hover:bg-[#FAF9FF] transition-all duration-300 cursor-pointer group space-y-2">
             <span className="px-2.5 py-1 rounded-md text-[11px] font-semibold bg-indigo-100 text-indigo-800 inline-block">Tier 2: Joint / Addl. Commissioner</span>
-            <strong className="text-slate-950 font-semibold block text-sm group-hover:text-[#5C3BFF] transition-colors">90 to 180 Days</strong>
+            <strong className="text-slate-950 font-semibold block text-sm group-hover:text-indigo-800 transition-colors">90 to 180 Days</strong>
             <p className="text-slate-700 leading-relaxed font-normal">
               If the 90-day window is breached, an application for condonation of delay must be submitted to the Joint or Additional Commissioner demonstrating sufficient cause.
             </p>

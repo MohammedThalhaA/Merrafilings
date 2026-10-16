@@ -236,8 +236,8 @@ function NameChangeGuideContent() {
           Under Indian jurisprudence, an adult citizen has the fundamental right to change their name for any lawful reason, including:
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pt-2">
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-            <h3 className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+            <h3 className="font-medium text-[13.5px] text-slate-900 group-hover:text-emerald-700 transition-colors flex items-center gap-2">
               <Users className="w-4 h-4 text-emerald-600 shrink-0" />
               <span>Marriage &amp; Divorce</span>
             </h3>
@@ -245,8 +245,8 @@ function NameChangeGuideContent() {
               Adopting spouse&apos;s surname after marriage, hyphenating last names, or reverting to maiden surname following a divorce decree.
             </p>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-            <h3 className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+            <h3 className="font-medium text-[13.5px] text-slate-900 group-hover:text-blue-700 transition-colors flex items-center gap-2">
               <FileCheck className="w-4 h-4 text-blue-600 shrink-0" />
               <span>Spelling Corrections</span>
             </h3>
@@ -254,8 +254,8 @@ function NameChangeGuideContent() {
               Rectifying clerical spelling discrepancies between 10th marksheet, birth certificate, Aadhaar, and PAN records.
             </p>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-            <h3 className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+            <h3 className="font-medium text-[13.5px] text-slate-900 group-hover:text-purple-700 transition-colors flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-purple-600 shrink-0" />
               <span>Astrology &amp; Numerology</span>
             </h3>
@@ -263,8 +263,8 @@ function NameChangeGuideContent() {
               Modifying letter spellings or adopting a brand-new name based on numerological, astrological, or spiritual guidance.
             </p>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-            <h3 className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-indigo-500 hover:shadow-md hover:shadow-indigo-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+            <h3 className="font-medium text-[13.5px] text-slate-900 group-hover:text-indigo-700 transition-colors flex items-center gap-2">
               <Globe2 className="w-4 h-4 text-indigo-600 shrink-0" />
               <span>Religious Conversion</span>
             </h3>
@@ -272,8 +272,8 @@ function NameChangeGuideContent() {
               Adopting a new identity aligned with faith following voluntary religious conversion, supported by conversion deed.
             </p>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-            <h3 className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-amber-500 hover:shadow-md hover:shadow-amber-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+            <h3 className="font-medium text-[13.5px] text-slate-900 group-hover:text-amber-700 transition-colors flex items-center gap-2">
               <Scale className="w-4 h-4 text-amber-600 shrink-0" />
               <span>Minor Child Name Change</span>
             </h3>
@@ -281,8 +281,8 @@ function NameChangeGuideContent() {
               Changing child&apos;s name during school admissions, adoption, or parental surname alignment executed by legal guardians.
             </p>
           </div>
-          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-            <h3 className="font-medium text-[13.5px] text-slate-900 group-hover:text-[#155EEF] transition-colors flex items-center gap-2">
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-rose-500 hover:shadow-md hover:shadow-rose-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+            <h3 className="font-medium text-[13.5px] text-slate-900 group-hover:text-rose-700 transition-colors flex items-center gap-2">
               <Award className="w-4 h-4 text-rose-600 shrink-0" />
               <span>Personal Preference</span>
             </h3>
@@ -630,21 +630,21 @@ function NameChangeGuideContent() {
           Navigating notary drafting, formatting newspaper ad text, creating CD soft copies in exact government specifications, and coordinating with the Department of Publication in New Delhi can be overwhelming. Merrafilings handles the entire journey:
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs font-normal text-slate-900">
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="group-hover:text-slate-900 transition-colors">100% Online Paperless Process – No Visits to Delhi Needed</span>
+            <span className="text-slate-900 group-hover:text-emerald-800 font-medium transition-colors">100% Online Paperless Process – No Visits to Delhi Needed</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="group-hover:text-slate-900 transition-colors">Direct Tie-Ups with National &amp; State Vernacular Newspapers</span>
+            <span className="text-slate-900 group-hover:text-emerald-800 font-medium transition-colors">Direct Tie-Ups with National &amp; State Vernacular Newspapers</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="group-hover:text-slate-900 transition-colors">Legally Vetted Gazette Dossier Prepared to Eliminate Rejections</span>
+            <span className="text-slate-900 group-hover:text-emerald-800 font-medium transition-colors">Legally Vetted Gazette Dossier Prepared to Eliminate Rejections</span>
           </div>
-          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#155EEF] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
+          <div className="flex items-center gap-2.5 p-3 rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
-            <span className="group-hover:text-slate-900 transition-colors">Step-by-Step Passport &amp; Aadhaar Post-Gazette Update Guide</span>
+            <span className="text-slate-900 group-hover:text-emerald-800 font-medium transition-colors">Step-by-Step Passport &amp; Aadhaar Post-Gazette Update Guide</span>
           </div>
         </div>
 
