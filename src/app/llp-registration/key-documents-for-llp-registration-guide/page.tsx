@@ -18,6 +18,8 @@ import {
   ArrowRight,
   Sparkles,
   Info,
+  Receipt,
+  Award,
 } from "lucide-react";
 
 const FAQ_ITEMS = [
@@ -101,6 +103,138 @@ const DOCUMENT_CHECKLIST = [
   },
 ];
 
+const QUICK_CHECKLIST_ITEMS = [
+  {
+    title: "PAN Card",
+    desc: "Self-attested PAN card copy for all Indian partners.",
+    icon: <FileText className="w-4 h-4 text-emerald-600" />,
+    iconBox: "bg-emerald-50 text-emerald-600 border border-emerald-100 group-hover:bg-emerald-600 group-hover:text-white",
+    hoverBorder: "hover:border-emerald-500",
+    hoverShadow: "hover:shadow-md hover:shadow-emerald-500/15",
+    hoverBg: "hover:bg-emerald-50/20",
+    titleHover: "group-hover:text-emerald-700",
+  },
+  {
+    title: "Identity Proof",
+    desc: "Valid Passport, Voter ID, or Driving Licence.",
+    icon: <UserCheck className="w-4 h-4 text-blue-600" />,
+    iconBox: "bg-blue-50 text-blue-600 border border-blue-100 group-hover:bg-blue-600 group-hover:text-white",
+    hoverBorder: "hover:border-blue-500",
+    hoverShadow: "hover:shadow-md hover:shadow-blue-500/15",
+    hoverBg: "hover:bg-blue-50/20",
+    titleHover: "group-hover:text-blue-700",
+  },
+  {
+    title: "Residential Proof",
+    desc: "Bank statement or utility bill < 2 months old.",
+    icon: <Receipt className="w-4 h-4 text-purple-600" />,
+    iconBox: "bg-purple-50 text-purple-600 border border-purple-100 group-hover:bg-purple-600 group-hover:text-white",
+    hoverBorder: "hover:border-purple-500",
+    hoverShadow: "hover:shadow-md hover:shadow-purple-500/15",
+    hoverBg: "hover:bg-purple-50/20",
+    titleHover: "group-hover:text-purple-700",
+  },
+  {
+    title: "Registered Office",
+    desc: "Recent electricity bill + Rent Agreement + Owner NOC.",
+    icon: <Building className="w-4 h-4 text-amber-600" />,
+    iconBox: "bg-amber-50 text-amber-600 border border-amber-100 group-hover:bg-amber-600 group-hover:text-white",
+    hoverBorder: "hover:border-amber-500",
+    hoverShadow: "hover:shadow-md hover:shadow-amber-500/15",
+    hoverBg: "hover:bg-amber-50/20",
+    titleHover: "group-hover:text-amber-700",
+  },
+  {
+    title: "Digital Signature",
+    desc: "Class 3 DSC for all proposed designated partners.",
+    icon: <KeyRound className="w-4 h-4 text-teal-600" />,
+    iconBox: "bg-teal-50 text-teal-600 border border-teal-100 group-hover:bg-teal-600 group-hover:text-white",
+    hoverBorder: "hover:border-teal-500",
+    hoverShadow: "hover:shadow-md hover:shadow-teal-500/15",
+    hoverBg: "hover:bg-teal-50/20",
+    titleHover: "group-hover:text-teal-700",
+  },
+  {
+    title: "LLP Agreement",
+    desc: "Stamped & notarized agreement for Form 3 filing.",
+    icon: <FileSignature className="w-4 h-4 text-indigo-600" />,
+    iconBox: "bg-indigo-50 text-indigo-600 border border-indigo-100 group-hover:bg-indigo-600 group-hover:text-white",
+    hoverBorder: "hover:border-indigo-500",
+    hoverShadow: "hover:shadow-md hover:shadow-indigo-500/15",
+    hoverBg: "hover:bg-indigo-50/20",
+    titleHover: "group-hover:text-indigo-700",
+  },
+];
+
+const WORKFLOW_STEPS = [
+  {
+    step: "Step 1",
+    title: "Obtain Class 3 DSC",
+    desc: "Designated partners obtain Class-3 Digital Signatures with encrypted tokens to sign MCA electronic filings securely.",
+    icon: <KeyRound className="w-5 h-5 text-emerald-600" />,
+    iconBox: "bg-emerald-50 text-emerald-700 border border-emerald-200/80 group-hover:bg-emerald-600 group-hover:text-white",
+    hoverBorder: "hover:border-emerald-500",
+    hoverShadow: "hover:shadow-md hover:shadow-emerald-500/15",
+    hoverBg: "hover:bg-emerald-50/20",
+    titleHover: "group-hover:text-emerald-700",
+  },
+  {
+    step: "Step 2",
+    title: "Apply for DPIN / DIN",
+    desc: "Acquire Director Identification Numbers for proposed designated partners through the FiLLiP integrated form.",
+    icon: <UserCheck className="w-5 h-5 text-blue-600" />,
+    iconBox: "bg-blue-50 text-blue-700 border border-blue-200/80 group-hover:bg-blue-600 group-hover:text-white",
+    hoverBorder: "hover:border-blue-500",
+    hoverShadow: "hover:shadow-md hover:shadow-blue-500/15",
+    hoverBg: "hover:bg-blue-50/20",
+    titleHover: "group-hover:text-blue-700",
+  },
+  {
+    step: "Step 3",
+    title: "RUN-LLP Name Reservation",
+    desc: "Submit your desired trade name via RUN-LLP on the MCA portal, adhering to trademark availability and Rule 18 naming rules.",
+    icon: <Sparkles className="w-5 h-5 text-purple-600" />,
+    iconBox: "bg-purple-50 text-purple-700 border border-purple-200/80 group-hover:bg-purple-600 group-hover:text-white",
+    hoverBorder: "hover:border-purple-500",
+    hoverShadow: "hover:shadow-md hover:shadow-purple-500/15",
+    hoverBg: "hover:bg-purple-50/20",
+    titleHover: "group-hover:text-purple-700",
+  },
+  {
+    step: "Step 4",
+    title: "File Form FiLLiP (Incorporation)",
+    desc: "Upload the complete incorporation package with partner identity, address proof, subscriber sheets, and office proof to ROC.",
+    icon: <FileText className="w-5 h-5 text-amber-600" />,
+    iconBox: "bg-amber-50 text-amber-700 border border-amber-200/80 group-hover:bg-amber-600 group-hover:text-white",
+    hoverBorder: "hover:border-amber-500",
+    hoverShadow: "hover:shadow-md hover:shadow-amber-500/15",
+    hoverBg: "hover:bg-amber-50/20",
+    titleHover: "group-hover:text-amber-700",
+  },
+  {
+    step: "Step 5",
+    title: "Receive Certificate of Incorporation",
+    desc: "Upon ROC verification, the Certificate of Incorporation (COI) is granted with your unique 7-digit LLPIN, PAN, and TAN.",
+    icon: <Award className="w-5 h-5 text-teal-600" />,
+    iconBox: "bg-teal-50 text-teal-700 border border-teal-200/80 group-hover:bg-teal-600 group-hover:text-white",
+    hoverBorder: "hover:border-teal-500",
+    hoverShadow: "hover:shadow-md hover:shadow-teal-500/15",
+    hoverBg: "hover:bg-teal-50/20",
+    titleHover: "group-hover:text-teal-700",
+  },
+  {
+    step: "Step 6",
+    title: "Draft & File Form 3 (LLP Agreement)",
+    desc: "Execute your LLP Agreement on non-judicial stamp paper, notarize, and file Form 3 on the MCA portal within 30 days.",
+    icon: <FileSignature className="w-5 h-5 text-indigo-600" />,
+    iconBox: "bg-indigo-50 text-indigo-700 border border-indigo-200/80 group-hover:bg-indigo-600 group-hover:text-white",
+    hoverBorder: "hover:border-indigo-500",
+    hoverShadow: "hover:shadow-md hover:shadow-indigo-500/15",
+    hoverBg: "hover:bg-indigo-50/20",
+    titleHover: "group-hover:text-indigo-700",
+  },
+];
+
 export default function KeyDocumentsForLlpRegistrationPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -127,7 +261,7 @@ export default function KeyDocumentsForLlpRegistrationPage() {
         </p>
       </section>
 
-      {/* Visual Checklist Box */}
+      {/* Visual Checklist Box with Color-Matched Cards */}
       <section className="p-6 rounded-2xl bg-gradient-to-br from-emerald-50/60 via-[#FDFBF9] to-teal-50/40 border border-emerald-200/80 shadow-xs">
         <div className="flex items-center gap-2 text-emerald-900 font-semibold text-base mb-3">
           <FileCheck className="w-5 h-5 text-emerald-600" />
@@ -137,30 +271,22 @@ export default function KeyDocumentsForLlpRegistrationPage() {
           Prepare high-resolution digital PDF/JPEG scans of the following before commencing your registration filing on the MCA V3 portal:
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-[13px]">
-          <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white border border-slate-200/80">
-            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-            <span><strong>PAN Card:</strong> Self-attested PAN card copy for all Indian partners.</span>
-          </div>
-          <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white border border-slate-200/80">
-            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-            <span><strong>Identity Proof:</strong> Valid Passport, Voter ID, or Driving Licence.</span>
-          </div>
-          <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white border border-slate-200/80">
-            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-            <span><strong>Residential Proof:</strong> Bank statement or utility bill &lt; 2 months old.</span>
-          </div>
-          <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white border border-slate-200/80">
-            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-            <span><strong>Registered Office:</strong> Recent electricity bill + Rent Agreement + Owner NOC.</span>
-          </div>
-          <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white border border-slate-200/80">
-            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-            <span><strong>Digital Signature:</strong> Class 3 DSC for all proposed designated partners.</span>
-          </div>
-          <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white border border-slate-200/80">
-            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-            <span><strong>LLP Agreement:</strong> Stamped &amp; notarized agreement for Form 3 filing.</span>
-          </div>
+          {QUICK_CHECKLIST_ITEMS.map((item, idx) => (
+            <div
+              key={idx}
+              className={`group flex items-start gap-2.5 p-3 rounded-xl bg-white border border-slate-200/80 ${item.hoverBorder} ${item.hoverShadow} ${item.hoverBg} hover:-translate-y-0.5 transition-all duration-200 cursor-pointer`}
+            >
+              <span className={`p-1 rounded-md shrink-0 transition-colors ${item.iconBox}`}>
+                {item.icon}
+              </span>
+              <div>
+                <strong className={`block text-slate-900 ${item.titleHover} transition-colors font-semibold`}>
+                  {item.title}
+                </strong>
+                <span className="text-slate-600 leading-relaxed">{item.desc}</span>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -306,71 +432,31 @@ export default function KeyDocumentsForLlpRegistrationPage() {
         </div>
       </section>
 
-      {/* Step by Step Execution Process */}
+      {/* Step by Step Execution Process with Color-Matched Cards */}
       <section className="space-y-4 pt-4 border-t border-slate-100">
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646]">
           Step-by-Step LLP Documentation &amp; Filing Workflow
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-[13px]">
-          <div className="p-4 rounded-xl border border-slate-200 bg-white space-y-1.5">
-            <span className="inline-block px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold text-[11px]">
-              Step 1
-            </span>
-            <h4 className="font-semibold text-slate-900 text-sm">Obtain Class 3 DSC</h4>
-            <p className="text-slate-600 leading-relaxed">
-              Designated partners obtain Class-3 Digital Signatures with encrypted tokens to sign MCA electronic filings securely.
-            </p>
-          </div>
-
-          <div className="p-4 rounded-xl border border-slate-200 bg-white space-y-1.5">
-            <span className="inline-block px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold text-[11px]">
-              Step 2
-            </span>
-            <h4 className="font-semibold text-slate-900 text-sm">Apply for DPIN / DIN</h4>
-            <p className="text-slate-600 leading-relaxed">
-              Acquire Director Identification Numbers for proposed designated partners through the FiLLiP integrated form.
-            </p>
-          </div>
-
-          <div className="p-4 rounded-xl border border-slate-200 bg-white space-y-1.5">
-            <span className="inline-block px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold text-[11px]">
-              Step 3
-            </span>
-            <h4 className="font-semibold text-slate-900 text-sm">RUN-LLP Name Reservation</h4>
-            <p className="text-slate-600 leading-relaxed">
-              Submit your desired trade name via RUN-LLP on the MCA portal, adhering to trademark availability and Rule 18 naming rules.
-            </p>
-          </div>
-
-          <div className="p-4 rounded-xl border border-slate-200 bg-white space-y-1.5">
-            <span className="inline-block px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold text-[11px]">
-              Step 4
-            </span>
-            <h4 className="font-semibold text-slate-900 text-sm">File Form FiLLiP (Incorporation)</h4>
-            <p className="text-slate-600 leading-relaxed">
-              Upload the complete incorporation package with partner identity, address proof, subscriber sheets, and office proof to ROC.
-            </p>
-          </div>
-
-          <div className="p-4 rounded-xl border border-slate-200 bg-white space-y-1.5">
-            <span className="inline-block px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold text-[11px]">
-              Step 5
-            </span>
-            <h4 className="font-semibold text-slate-900 text-sm">Receive Certificate of Incorporation</h4>
-            <p className="text-slate-600 leading-relaxed">
-              Upon ROC verification, the Certificate of Incorporation (COI) is granted with your unique 7-digit LLPIN, PAN, and TAN.
-            </p>
-          </div>
-
-          <div className="p-4 rounded-xl border border-slate-200 bg-white space-y-1.5">
-            <span className="inline-block px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold text-[11px]">
-              Step 6
-            </span>
-            <h4 className="font-semibold text-slate-900 text-sm">Draft &amp; File Form 3 (LLP Agreement)</h4>
-            <p className="text-slate-600 leading-relaxed">
-              Execute your LLP Agreement on non-judicial stamp paper, notarize, and file Form 3 on the MCA portal within 30 days.
-            </p>
-          </div>
+          {WORKFLOW_STEPS.map((wf, idx) => (
+            <div
+              key={idx}
+              className={`group p-4 rounded-xl border border-slate-200 bg-white ${wf.hoverBorder} ${wf.hoverShadow} ${wf.hoverBg} hover:-translate-y-0.5 transition-all duration-200 space-y-2 cursor-pointer`}
+            >
+              <div className="flex items-center justify-between">
+                <span className={`inline-block px-2.5 py-0.5 rounded-full font-bold text-[11px] transition-colors ${wf.iconBox}`}>
+                  {wf.step}
+                </span>
+                <span className="shrink-0">{wf.icon}</span>
+              </div>
+              <h4 className={`font-semibold text-slate-900 text-sm ${wf.titleHover} transition-colors`}>
+                {wf.title}
+              </h4>
+              <p className="text-slate-600 leading-relaxed">
+                {wf.desc}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 

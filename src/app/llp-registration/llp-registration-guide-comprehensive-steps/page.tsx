@@ -19,6 +19,11 @@ import {
   Clock,
   ArrowRight,
   HelpCircle,
+  Award,
+  KeyRound,
+  UserCheck,
+  Receipt,
+  MapPin,
 } from "lucide-react";
 
 const FAQ_ITEMS = [
@@ -58,69 +63,204 @@ const PROCESS_STEPS = [
     title: "Obtain Digital Signature Certificate (DSC)",
     desc: "Class-3 DSC is obtained for all proposed designated partners. Because all MCA V3 e-forms require cryptographic electronic signing, DSC ensures legal non-repudiation and identity safety.",
     duration: "1 Day",
+    icon: <KeyRound className="w-5 h-5 text-emerald-600" />,
+    iconBox: "bg-emerald-50 text-emerald-600 border border-emerald-100 group-hover:bg-emerald-600 group-hover:text-white",
+    hoverBorder: "hover:border-emerald-500",
+    hoverShadow: "hover:shadow-md hover:shadow-emerald-500/15",
+    hoverBg: "hover:bg-emerald-50/20",
+    titleHover: "group-hover:text-emerald-700",
   },
   {
     step: "02",
     title: "Apply for Director Identification Number (DIN / DPIN)",
     desc: "Every designated partner must possess an 8-digit DPIN/DIN. If partners do not already hold one, up to 2 DPINs are allotted directly during the FiLLiP incorporation submission.",
     duration: "Integrated",
+    icon: <UserCheck className="w-5 h-5 text-blue-600" />,
+    iconBox: "bg-blue-50 text-blue-600 border border-blue-100 group-hover:bg-blue-600 group-hover:text-white",
+    hoverBorder: "hover:border-blue-500",
+    hoverShadow: "hover:shadow-md hover:shadow-blue-500/15",
+    hoverBg: "hover:bg-blue-50/20",
+    titleHover: "group-hover:text-blue-700",
   },
   {
     step: "03",
     title: "LLP Name Reservation via RUN-LLP",
     desc: "Submit up to 2 proposed names via the MCA RUN-LLP (Reserve Unique Name) service. Names must reflect primary business activities and avoid similarity to registered trademarks or corporate entities.",
     duration: "1-2 Days",
+    icon: <Sparkles className="w-5 h-5 text-purple-600" />,
+    iconBox: "bg-purple-50 text-purple-600 border border-purple-100 group-hover:bg-purple-600 group-hover:text-white",
+    hoverBorder: "hover:border-purple-500",
+    hoverShadow: "hover:shadow-md hover:shadow-purple-500/15",
+    hoverBg: "hover:bg-purple-50/20",
+    titleHover: "group-hover:text-purple-700",
   },
   {
     step: "04",
     title: "Form FiLLiP Preparation & ROC Submission",
     desc: "Prepare and electronically lodge Form FiLLiP (Form for incorporation of Limited Liability Partnership) along with subscriber sheets, consent forms (Form 9), utility bills, and registered office NOC.",
     duration: "2-3 Days",
+    icon: <FileText className="w-5 h-5 text-amber-600" />,
+    iconBox: "bg-amber-50 text-amber-600 border border-amber-100 group-hover:bg-amber-600 group-hover:text-white",
+    hoverBorder: "hover:border-amber-500",
+    hoverShadow: "hover:shadow-md hover:shadow-amber-500/15",
+    hoverBg: "hover:bg-amber-50/20",
+    titleHover: "group-hover:text-amber-700",
   },
   {
     step: "05",
     title: "Issuance of Certificate of Incorporation (COI)",
     desc: "The Central Registration Centre (CRC) scrutinizes the application and issues the Certificate of Incorporation containing the unique 7-digit LLPIN, PAN, and TAN.",
     duration: "Same Day as Approval",
+    icon: <Award className="w-5 h-5 text-teal-600" />,
+    iconBox: "bg-teal-50 text-teal-600 border border-teal-100 group-hover:bg-teal-600 group-hover:text-white",
+    hoverBorder: "hover:border-teal-500",
+    hoverShadow: "hover:shadow-md hover:shadow-teal-500/15",
+    hoverBg: "hover:bg-teal-50/20",
+    titleHover: "group-hover:text-teal-700",
   },
   {
     step: "06",
     title: "Drafting, Stamping & Filing Form 3 (LLP Agreement)",
     desc: "Draft a customized partnership deed, execute on state non-judicial stamp paper, notarize, and file Form 3 on the MCA portal within 30 days to conclude statutory incorporation.",
     duration: "Within 30 Days",
+    icon: <FileSignature className="w-5 h-5 text-indigo-600" />,
+    iconBox: "bg-indigo-50 text-indigo-600 border border-indigo-100 group-hover:bg-indigo-600 group-hover:text-white",
+    hoverBorder: "hover:border-indigo-500",
+    hoverShadow: "hover:shadow-md hover:shadow-indigo-500/15",
+    hoverBg: "hover:bg-indigo-50/20",
+    titleHover: "group-hover:text-indigo-700",
   },
 ];
 
 const ADVANTAGES = [
   {
     icon: <ShieldCheck className="w-5 h-5 text-emerald-600" />,
+    iconBox: "bg-emerald-50 text-emerald-600 border border-emerald-100 group-hover:bg-emerald-600 group-hover:text-white",
+    hoverBorder: "hover:border-emerald-500",
+    hoverShadow: "hover:shadow-md hover:shadow-emerald-500/15",
+    hoverBg: "hover:bg-emerald-50/20",
+    titleHover: "group-hover:text-emerald-700",
     title: "Limited Liability Protection",
     desc: "Partners enjoy personal wealth protection. Their liability is strictly capped at their agreed capital contribution, protecting homes, personal bank balances, and family assets from business risks.",
   },
   {
     icon: <Users className="w-5 h-5 text-blue-600" />,
+    iconBox: "bg-blue-50 text-blue-600 border border-blue-100 group-hover:bg-blue-600 group-hover:text-white",
+    hoverBorder: "hover:border-blue-500",
+    hoverShadow: "hover:shadow-md hover:shadow-blue-500/15",
+    hoverBg: "hover:bg-blue-50/20",
+    titleHover: "group-hover:text-blue-700",
     title: "Flexible Management Model",
     desc: "Unlike rigid board structures in private limited companies, partners have total flexibility to structure daily managerial responsibilities, voting thresholds, and profit shares via the partnership agreement.",
   },
   {
     icon: <BadgePercent className="w-5 h-5 text-purple-600" />,
+    iconBox: "bg-purple-50 text-purple-600 border border-purple-100 group-hover:bg-purple-600 group-hover:text-white",
+    hoverBorder: "hover:border-purple-500",
+    hoverShadow: "hover:shadow-md hover:shadow-purple-500/15",
+    hoverBg: "hover:bg-purple-50/20",
+    titleHover: "group-hover:text-purple-700",
     title: "Tax Pass-Through Efficiency",
     desc: "Profits are taxed at the firm level at 30%. Distributions of post-tax profits to partners are 100% tax-free, eliminating the double taxation burden seen in corporate dividend regimes.",
   },
   {
     icon: <Building className="w-5 h-5 text-amber-600" />,
+    iconBox: "bg-amber-50 text-amber-600 border border-amber-100 group-hover:bg-amber-600 group-hover:text-white",
+    hoverBorder: "hover:border-amber-500",
+    hoverShadow: "hover:shadow-md hover:shadow-amber-500/15",
+    hoverBg: "hover:bg-amber-50/20",
+    titleHover: "group-hover:text-amber-700",
     title: "Separate Legal Personality",
     desc: "An LLP is an incorporated corporate body with perpetual succession. It can own assets, sign commercial contracts, borrow funds, and sue or be sued in its own distinct legal name.",
   },
   {
     icon: <Scale className="w-5 h-5 text-teal-600" />,
+    iconBox: "bg-teal-50 text-teal-600 border border-teal-100 group-hover:bg-teal-600 group-hover:text-white",
+    hoverBorder: "hover:border-teal-500",
+    hoverShadow: "hover:shadow-md hover:shadow-teal-500/15",
+    hoverBg: "hover:bg-teal-50/20",
+    titleHover: "group-hover:text-teal-700",
     title: "Low Compliance Burden",
     desc: "No mandatory board meetings, no statutory audit requirement for revenues under ₹40 Lakhs and capital under ₹25 Lakhs, and streamlined annual filings (Form 8 & Form 11).",
   },
   {
     icon: <Landmark className="w-5 h-5 text-indigo-600" />,
+    iconBox: "bg-indigo-50 text-indigo-600 border border-indigo-100 group-hover:bg-indigo-600 group-hover:text-white",
+    hoverBorder: "hover:border-indigo-500",
+    hoverShadow: "hover:shadow-md hover:shadow-indigo-500/15",
+    hoverBg: "hover:bg-indigo-50/20",
+    titleHover: "group-hover:text-indigo-700",
     title: "No Minimum Capital Requirement",
     desc: "Entrepreneurs can incorporate with any nominal capital (e.g. ₹1,000 or ₹10,000). There is no mandatory statutory paid-up capital threshold under the LLP Act.",
+  },
+];
+
+const ANNUAL_COMPLIANCES = [
+  {
+    form: "Form 11 (Annual Return)",
+    dueDate: "Due by: May 30th",
+    desc: "Summary of management, partners, and capital contributions filed within 60 days of fiscal year end.",
+    icon: <FileText className="w-5 h-5 text-emerald-600" />,
+    iconBox: "bg-emerald-50 text-emerald-600 border border-emerald-100 group-hover:bg-emerald-600 group-hover:text-white",
+    hoverBorder: "hover:border-emerald-500",
+    hoverShadow: "hover:shadow-md hover:shadow-emerald-500/15",
+    hoverBg: "hover:bg-emerald-50/20",
+    titleHover: "group-hover:text-emerald-700",
+  },
+  {
+    form: "Form 8 (Solvency Statement)",
+    dueDate: "Due by: October 30th",
+    desc: "Statutory declaration of financial standing, assets, and liabilities signed by designated partners.",
+    icon: <ShieldCheck className="w-5 h-5 text-blue-600" />,
+    iconBox: "bg-blue-50 text-blue-600 border border-blue-100 group-hover:bg-blue-600 group-hover:text-white",
+    hoverBorder: "hover:border-blue-500",
+    hoverShadow: "hover:shadow-md hover:shadow-blue-500/15",
+    hoverBg: "hover:bg-blue-50/20",
+    titleHover: "group-hover:text-blue-700",
+  },
+  {
+    form: "ITR-5 (Income Tax Return)",
+    dueDate: "Due by: July 31st / Oct 31st",
+    desc: "Annual tax declaration filed with the Income Tax Department at a flat 30% firm tax rate.",
+    icon: <Receipt className="w-5 h-5 text-purple-600" />,
+    iconBox: "bg-purple-50 text-purple-600 border border-purple-100 group-hover:bg-purple-600 group-hover:text-white",
+    hoverBorder: "hover:border-purple-500",
+    hoverShadow: "hover:shadow-md hover:shadow-purple-500/15",
+    hoverBg: "hover:bg-purple-50/20",
+    titleHover: "group-hover:text-purple-700",
+  },
+];
+
+const STATE_STAMP_DUTIES = [
+  {
+    state: "Maharashtra",
+    rule: "Fixed ₹500 or slab-based percentage of capital contribution.",
+    icon: <MapPin className="w-4 h-4 text-blue-600" />,
+    iconBox: "bg-blue-50 text-blue-600 border border-blue-100",
+    hoverBorder: "hover:border-blue-500",
+    hoverShadow: "hover:shadow-md hover:shadow-blue-500/15",
+    hoverBg: "hover:bg-blue-50/20",
+    titleHover: "group-hover:text-blue-700",
+  },
+  {
+    state: "Karnataka & Tamil Nadu",
+    rule: "₹1,000 to ₹2,000+ depending on agreed partner capital.",
+    icon: <MapPin className="w-4 h-4 text-emerald-600" />,
+    iconBox: "bg-emerald-50 text-emerald-600 border border-emerald-100",
+    hoverBorder: "hover:border-emerald-500",
+    hoverShadow: "hover:shadow-md hover:shadow-emerald-500/15",
+    hoverBg: "hover:bg-emerald-50/20",
+    titleHover: "group-hover:text-emerald-700",
+  },
+  {
+    state: "Delhi & Uttar Pradesh",
+    rule: "Starting from ₹500 non-judicial stamp duty with notary attestation.",
+    icon: <MapPin className="w-4 h-4 text-purple-600" />,
+    iconBox: "bg-purple-50 text-purple-600 border border-purple-100",
+    hoverBorder: "hover:border-purple-500",
+    hoverShadow: "hover:shadow-md hover:shadow-purple-500/15",
+    hoverBg: "hover:bg-purple-50/20",
+    titleHover: "group-hover:text-purple-700",
   },
 ];
 
@@ -164,7 +304,7 @@ export default function LlpRegistrationGuideComprehensiveStepsPage() {
         </p>
       </section>
 
-      {/* Core Advantages Grid */}
+      {/* Core Advantages Grid with Color-Matched Hover Effects */}
       <section className="space-y-4 pt-4 border-t border-slate-100">
         <div>
           <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646]">
@@ -179,12 +319,12 @@ export default function LlpRegistrationGuideComprehensiveStepsPage() {
           {ADVANTAGES.map((adv, idx) => (
             <div
               key={idx}
-              className="p-4 sm:p-5 rounded-2xl border border-slate-200/90 bg-white shadow-2xs hover:border-emerald-400 hover:shadow-xs transition-all space-y-2"
+              className={`group p-4 sm:p-5 rounded-2xl border border-slate-200/90 bg-white shadow-2xs ${adv.hoverBorder} ${adv.hoverShadow} ${adv.hoverBg} hover:-translate-y-0.5 transition-all duration-200 space-y-2 cursor-pointer`}
             >
-              <div className="w-9 h-9 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center">
+              <div className={`w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-200 ${adv.iconBox}`}>
                 {adv.icon}
               </div>
-              <h3 className="text-sm sm:text-[15px] font-semibold text-slate-900">
+              <h3 className={`text-sm sm:text-[15px] font-semibold text-slate-900 ${adv.titleHover} transition-colors`}>
                 {adv.title}
               </h3>
               <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed">
@@ -195,7 +335,7 @@ export default function LlpRegistrationGuideComprehensiveStepsPage() {
         </div>
       </section>
 
-      {/* Step by Step Execution Process */}
+      {/* Step by Step Execution Process with Color-Matched Hover Effects */}
       <section className="space-y-6 pt-4 border-t border-slate-100">
         <div>
           <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646]">
@@ -210,16 +350,19 @@ export default function LlpRegistrationGuideComprehensiveStepsPage() {
           {PROCESS_STEPS.map((step, idx) => (
             <div
               key={idx}
-              className="p-5 sm:p-6 rounded-2xl border border-slate-200/90 bg-white shadow-2xs flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
+              className={`group p-5 sm:p-6 rounded-2xl border border-slate-200/90 bg-white shadow-2xs ${step.hoverBorder} ${step.hoverShadow} ${step.hoverBg} hover:-translate-y-0.5 transition-all duration-200 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 cursor-pointer`}
             >
               <div className="flex items-start gap-4">
-                <div className="w-11 h-11 rounded-2xl bg-emerald-50 text-emerald-700 font-bold text-sm sm:text-base flex items-center justify-center shrink-0 border border-emerald-200/60">
+                <div className={`w-11 h-11 rounded-2xl font-bold text-sm sm:text-base flex items-center justify-center shrink-0 transition-colors ${step.iconBox}`}>
                   {step.step}
                 </div>
                 <div className="space-y-1">
-                  <h3 className="text-sm sm:text-base font-semibold text-slate-900">
-                    {step.title}
-                  </h3>
+                  <div className="flex items-center gap-2">
+                    <span className="shrink-0">{step.icon}</span>
+                    <h3 className={`text-sm sm:text-base font-semibold text-slate-900 ${step.titleHover} transition-colors`}>
+                      {step.title}
+                    </h3>
+                  </div>
                   <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed max-w-2xl">
                     {step.desc}
                   </p>
@@ -236,7 +379,7 @@ export default function LlpRegistrationGuideComprehensiveStepsPage() {
         </div>
       </section>
 
-      {/* Regional Nuances & State Stamp Duty Callout */}
+      {/* Regional Nuances & State Stamp Duty Callout with Color-Matched Cards */}
       <section className="p-6 rounded-2xl bg-gradient-to-br from-blue-50/60 via-slate-50 to-indigo-50/40 border border-blue-200/70 space-y-3">
         <div className="flex items-center gap-2 text-blue-900 font-semibold text-base">
           <Landmark className="w-5 h-5 text-blue-600" />
@@ -246,25 +389,25 @@ export default function LlpRegistrationGuideComprehensiveStepsPage() {
           While the incorporation process through MCA V3 is centralized at the Central Registration Centre (CRC, Manesar), state stamp duty laws govern the execution of the constitutional LLP Agreement. Non-judicial stamp paper duty varies depending on the state where your registered office is situated and your total capital contribution:
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-2 text-xs">
-          <div className="p-3 rounded-xl bg-white border border-slate-200/80">
-            <span className="font-semibold text-slate-900 block mb-0.5">Maharashtra</span>
-            <span className="text-slate-600">Fixed ₹500 or slab-based percentage of capital contribution.</span>
-          </div>
-          <div className="p-3 rounded-xl bg-white border border-slate-200/80">
-            <span className="font-semibold text-slate-900 block mb-0.5">Karnataka &amp; Tamil Nadu</span>
-            <span className="text-slate-600">₹1,000 to ₹2,000+ depending on agreed partner capital.</span>
-          </div>
-          <div className="p-3 rounded-xl bg-white border border-slate-200/80">
-            <span className="font-semibold text-slate-900 block mb-0.5">Delhi &amp; Uttar Pradesh</span>
-            <span className="text-slate-600">Starting from ₹500 non-judicial stamp duty with notary attestation.</span>
-          </div>
+          {STATE_STAMP_DUTIES.map((sd, idx) => (
+            <div
+              key={idx}
+              className={`group p-3 rounded-xl bg-white border border-slate-200/80 ${sd.hoverBorder} ${sd.hoverShadow} ${sd.hoverBg} hover:-translate-y-0.5 transition-all duration-200 space-y-1 cursor-pointer`}
+            >
+              <div className="flex items-center gap-1.5">
+                <span className={`p-1 rounded-md ${sd.iconBox}`}>{sd.icon}</span>
+                <span className={`font-semibold text-slate-900 ${sd.titleHover} transition-colors block`}>{sd.state}</span>
+              </div>
+              <span className="text-slate-600 block text-[11.5px] leading-relaxed">{sd.rule}</span>
+            </div>
+          ))}
         </div>
         <p className="text-[12px] text-slate-600 leading-relaxed pt-1">
           Merrafilings manages complete state-specific legal stamp paper acquisition, drafting, notarization, and statutory Form 3 upload to guarantee zero non-compliance penalties.
         </p>
       </section>
 
-      {/* Mandatory Annual Compliance Overview */}
+      {/* Mandatory Annual Compliance Overview with Color-Matched Cards */}
       <section className="space-y-3 pt-4 border-t border-slate-100">
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646]">
           Post-Incorporation Annual Compliance Calendar
@@ -273,27 +416,25 @@ export default function LlpRegistrationGuideComprehensiveStepsPage() {
           Maintaining an active, penalty-free status for your LLP requires fulfilling three foundational regulatory filings each year:
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs sm:text-[13px] mt-2">
-          <div className="p-4 rounded-xl border border-slate-200 bg-white space-y-1">
-            <span className="text-emerald-700 font-bold block text-sm">Form 11 (Annual Return)</span>
-            <span className="text-slate-500 block text-xs">Due by: May 30th</span>
-            <p className="text-slate-600 text-xs leading-relaxed pt-1">
-              Summary of management, partners, and capital contributions filed within 60 days of fiscal year end.
-            </p>
-          </div>
-          <div className="p-4 rounded-xl border border-slate-200 bg-white space-y-1">
-            <span className="text-emerald-700 font-bold block text-sm">Form 8 (Solvency Statement)</span>
-            <span className="text-slate-500 block text-xs">Due by: October 30th</span>
-            <p className="text-slate-600 text-xs leading-relaxed pt-1">
-              Statutory declaration of financial standing, assets, and liabilities signed by designated partners.
-            </p>
-          </div>
-          <div className="p-4 rounded-xl border border-slate-200 bg-white space-y-1">
-            <span className="text-emerald-700 font-bold block text-sm">ITR-5 (Income Tax Return)</span>
-            <span className="text-slate-500 block text-xs">Due by: July 31st / Oct 31st</span>
-            <p className="text-slate-600 text-xs leading-relaxed pt-1">
-              Annual tax declaration filed with the Income Tax Department at a flat 30% firm tax rate.
-            </p>
-          </div>
+          {ANNUAL_COMPLIANCES.map((ac, idx) => (
+            <div
+              key={idx}
+              className={`group p-4 rounded-xl border border-slate-200/90 bg-white shadow-2xs ${ac.hoverBorder} ${ac.hoverShadow} ${ac.hoverBg} hover:-translate-y-0.5 transition-all duration-200 space-y-2 cursor-pointer`}
+            >
+              <div className={`w-8 h-8 rounded-lg flex items-center justify-center transition-colors ${ac.iconBox}`}>
+                {ac.icon}
+              </div>
+              <div>
+                <span className={`font-bold block text-sm text-slate-900 ${ac.titleHover} transition-colors`}>
+                  {ac.form}
+                </span>
+                <span className="text-slate-500 block text-xs mt-0.5">{ac.dueDate}</span>
+              </div>
+              <p className="text-slate-600 text-xs leading-relaxed pt-1 border-t border-slate-100">
+                {ac.desc}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 

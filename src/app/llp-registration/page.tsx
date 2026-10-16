@@ -707,26 +707,56 @@ function LlpGuideContent() {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {RELATED_GUIDES.map((guide, idx) => (
-                    <Link
-                      key={idx}
-                      href={guide.href}
-                      className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-emerald-500 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between cursor-pointer"
-                    >
-                      <div>
-                        <div className="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center mb-3 font-bold text-xs border border-emerald-200/70 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
-                          0{idx + 1}
+                  {RELATED_GUIDES.map((guide, idx) => {
+                    const cardThemes = [
+                      {
+                        badge: "bg-emerald-50 text-emerald-700 border-emerald-200/70 group-hover:bg-emerald-600 group-hover:text-white",
+                        hoverBorder: "hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/10",
+                        titleHover: "group-hover:text-emerald-700",
+                        ctaText: "text-emerald-700",
+                      },
+                      {
+                        badge: "bg-blue-50 text-blue-700 border-blue-200/70 group-hover:bg-blue-600 group-hover:text-white",
+                        hoverBorder: "hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/15 hover:bg-blue-50/10",
+                        titleHover: "group-hover:text-blue-700",
+                        ctaText: "text-blue-700",
+                      },
+                      {
+                        badge: "bg-purple-50 text-purple-700 border-purple-200/70 group-hover:bg-purple-600 group-hover:text-white",
+                        hoverBorder: "hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/15 hover:bg-purple-50/10",
+                        titleHover: "group-hover:text-purple-700",
+                        ctaText: "text-purple-700",
+                      },
+                      {
+                        badge: "bg-amber-50 text-amber-700 border-amber-200/70 group-hover:bg-amber-600 group-hover:text-white",
+                        hoverBorder: "hover:border-amber-500 hover:shadow-md hover:shadow-amber-500/15 hover:bg-amber-50/10",
+                        titleHover: "group-hover:text-amber-700",
+                        ctaText: "text-amber-700",
+                      },
+                    ];
+                    const theme = cardThemes[idx % cardThemes.length];
+
+                    return (
+                      <Link
+                        key={idx}
+                        href={guide.href}
+                        className={`p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs ${theme.hoverBorder} hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between cursor-pointer`}
+                      >
+                        <div>
+                          <div className={`w-9 h-9 rounded-xl flex items-center justify-center mb-3 font-bold text-xs border transition-colors ${theme.badge}`}>
+                            0{idx + 1}
+                          </div>
+                          <h4 className={`text-[14px] sm:text-[14.5px] font-bold text-slate-950 ${theme.titleHover} transition-colors leading-snug`}>
+                            {guide.title}
+                          </h4>
                         </div>
-                        <h4 className="text-[14px] sm:text-[14.5px] font-bold text-slate-950 group-hover:text-emerald-700 transition-colors leading-snug">
-                          {guide.title}
-                        </h4>
-                      </div>
-                      <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-emerald-700">
-                        <span>Read Full Guide</span>
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                      </div>
-                    </Link>
-                  ))}
+                        <div className={`mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-semibold ${theme.ctaText}`}>
+                          <span>Read Full Guide</span>
+                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </div>
+                      </Link>
+                    );
+                  })}
                 </div>
               </div>
     </>
