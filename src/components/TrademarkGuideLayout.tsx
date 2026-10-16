@@ -184,7 +184,7 @@ export default function TrademarkGuideLayout({
           </article>
 
           {/* Right Column: Clean Sidebar (No Video Ad) */}
-          <aside className="lg:col-span-4 space-y-6 lg:sticky lg:top-24">
+          <aside className="lg:col-span-4 space-y-6 lg:sticky lg:top-24 self-start h-fit">
             {/* Widget 1: Consult Experts */}
             <div
               onClick={() => openContact("Trademark Expert Call")}

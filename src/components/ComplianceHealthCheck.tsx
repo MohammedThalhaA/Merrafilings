@@ -113,7 +113,7 @@ export default function ComplianceHealthCheck({ onBookAudit }: ComplianceHealthC
   const StatusIcon = status.icon;
 
   return (
-    <section data-reveal className="py-10 md:py-14 bg-white border-b border-slate-200/80 font-sans relative overflow-hidden" id="diagnostic">
+    <section className="py-10 md:py-14 bg-white border-b border-slate-200/80 font-sans relative overflow-hidden" id="diagnostic">
       {/* Background glow blooms */}
       <div className="absolute top-1/3 -left-20 w-[450px] h-[350px] bg-emerald-100/30 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 right-0 w-[400px] h-[300px] bg-teal-100/30 rounded-full blur-3xl pointer-events-none" />
@@ -121,7 +121,7 @@ export default function ComplianceHealthCheck({ onBookAudit }: ComplianceHealthC
       <div className="w-full max-w-[1400px] 2xl:max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+        <div data-reveal="down" className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
           <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-emerald-800 bg-emerald-50/90 px-3.5 py-1 rounded-full border border-emerald-100 mb-3 shadow-2xs">
             <Sparkles className="w-3.5 h-3.5 text-emerald-600 animate-pulse" />
             <span>Interactive Risk Diagnostic</span>
@@ -138,7 +138,7 @@ export default function ComplianceHealthCheck({ onBookAudit }: ComplianceHealthC
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
           {/* Left Column: Interactive Checklists */}
-          <div className="lg:col-span-7 bg-[#FAFBFB] rounded-3xl border border-slate-200/90 p-6 sm:p-8 shadow-xs">
+          <div data-reveal="left" className="lg:col-span-7 bg-[#FAFBFB] rounded-3xl border border-slate-200/90 p-6 sm:p-8 shadow-xs">
             
             {/* Stage Selector Pills */}
             <div className="mb-6">
@@ -229,7 +229,7 @@ export default function ComplianceHealthCheck({ onBookAudit }: ComplianceHealthC
           </div>
 
           {/* Right Column: Dynamic Live Health Score Output Card */}
-          <div className="lg:col-span-5 bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-8 shadow-sm text-left sticky top-24">
+          <div className="lg:col-span-5 bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-8 shadow-sm text-left sticky top-24 self-start h-fit">
             
             <div className="flex items-center justify-between pb-5 border-b border-slate-100">
               <div>

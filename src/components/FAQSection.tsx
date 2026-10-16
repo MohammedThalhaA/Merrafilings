@@ -52,12 +52,12 @@ export default function FAQSection() {
   };
 
   return (
-    <section data-reveal className="py-10 md:py-14 bg-white border-b border-slate-200/80" id="faqs">
+    <section className="py-10 md:py-14 bg-white border-b border-slate-200/80" id="faqs">
       <div className="w-full max-w-[1400px] 2xl:max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-[960px] mx-auto">
         
           {/* Section Heading */}
-          <div className="text-center mb-6 md:mb-8">
+          <div data-reveal="down" className="text-center mb-6 md:mb-8">
             <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-emerald-800 bg-emerald-50/80 border border-emerald-100/90 px-3 py-1 rounded-full mb-3">
               <HelpCircle className="w-3.5 h-3.5 text-emerald-600" />
               Frequently Asked Questions
@@ -82,7 +82,7 @@ export default function FAQSection() {
           </div>
 
           {/* Accordion List with Smooth Expand Animation */}
-          <div className="border-t border-slate-200/80 divide-y divide-slate-200/80">
+          <div data-reveal="up" className="border-t border-slate-200/80 divide-y divide-slate-200/80">
             {filteredFaqs.length > 0 ? (
               filteredFaqs.map((faq, idx) => {
                 const isOpen = openIndex === idx;

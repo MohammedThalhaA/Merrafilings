@@ -14,32 +14,151 @@ export default function ScrollRevealProvider({ children }: { children?: React.Re
     let activeObserver: IntersectionObserver | null = null;
 
     const setupObserver = () => {
-      // Collect explicit targets as well as standard page sections and card grids
-      const explicitTargets = Array.from(
-        document.querySelectorAll<HTMLElement>(
-          "[data-reveal], .reveal-on-scroll, .pricing-card-lift, [data-reveal-card], .reveal-init"
+      if (activeObserver) {
+        activeObserver.disconnect();
+      }
+
+      const targets: HTMLElement[] = [];
+
+      // 1. Explicit directional & reveal elements
+      document
+        .querySelectorAll<HTMLElement>(
+          "[data-reveal], .reveal-on-scroll, .reveal-up, .reveal-down, .reveal-left, .reveal-right, .reveal-zoom"
         )
-      );
+        .forEach((el) => {
+          // If a full section has data-reveal, we don't want the whole section hiding; we want its contents to animate
+          if (el.tagName.toLowerCase() !== "section") {
+            targets.push(el);
+          }
+        });
 
-      // Major semantic sections (excluding hero and navbar)
-      const sectionTargets = Array.from(
-        document.querySelectorAll<HTMLElement>(
-          "main > section:not(.hero-section):not(.no-reveal):not(#hero)"
+      // 2. Section Headers (Badge, Title, Subtitle) - Float in from TOP
+      document
+        .querySelectorAll<HTMLElement>(
+          "main section:not(.hero-section) > div > .text-center, main section:not(.hero-section) .section-header"
         )
-      );
+        .forEach((header) => {
+          if (
+            !header.closest("header") &&
+            !header.closest("nav") &&
+            !header.classList.contains("no-reveal")
+          ) {
+            if (
+              !header.classList.contains("reveal-down") &&
+              !header.classList.contains("reveal-up") &&
+              !header.classList.contains("reveal-left") &&
+              !header.classList.contains("reveal-right") &&
+              !header.hasAttribute("data-reveal")
+            ) {
+              header.classList.add("reveal-down");
+            }
+            targets.push(header);
+          }
+        });
 
-      // Major cards inside grid sections (solutions, features, comparisons, testimonials)
-      const cardTargets = Array.from(
-        document.querySelectorAll<HTMLElement>(
-          "main section:not(.hero-section) .grid > div:not(.no-reveal)"
+      // 3. Two-Column Split Layouts - Left column from LEFT, Right column from RIGHT
+      document
+        .querySelectorAll<HTMLElement>(
+          "main section:not(.hero-section) .grid.grid-cols-1.lg\\:grid-cols-12, main section:not(.hero-section) .grid.grid-cols-1.md\\:grid-cols-2"
         )
-      );
+        .forEach((grid) => {
+          const children = Array.from(grid.children) as HTMLElement[];
+          if (children.length === 2) {
+            const leftCol = children[0];
+            const rightCol = children[1];
 
-      // Combine unique targets
-      const allTargets = Array.from(
-        new Set([...explicitTargets, ...sectionTargets, ...cardTargets])
-      );
+            if (
+              !leftCol.classList.contains("reveal-left") &&
+              !leftCol.hasAttribute("data-reveal") &&
+              !leftCol.classList.contains("no-reveal")
+            ) {
+              leftCol.classList.add("reveal-left");
+              targets.push(leftCol);
+            }
 
+            const isStickyRight =
+              rightCol.classList.contains("sticky") ||
+              rightCol.className.includes("sticky") ||
+              rightCol.querySelector(".sticky, [class*='sticky']") !== null;
+
+            if (
+              !rightCol.classList.contains("reveal-right") &&
+              !rightCol.hasAttribute("data-reveal") &&
+              !rightCol.classList.contains("no-reveal") &&
+              !isStickyRight
+            ) {
+              rightCol.classList.add("reveal-right");
+              targets.push(rightCol);
+            }
+          }
+        });
+
+      // 4. Multi-Card Grids (3-col, 4-col, 6-col) - Dynamic multi-directional entrances
+      document
+        .querySelectorAll<HTMLElement>(
+          "main section:not(.hero-section) .grid:not(.grid-cols-1.lg\\:grid-cols-12)"
+        )
+        .forEach((grid) => {
+          const cards = Array.from(grid.children) as HTMLElement[];
+          const colsCount = cards.length;
+
+          cards.forEach((card, idx) => {
+            if (
+              card.classList.contains("no-reveal") ||
+              card.closest("nav") ||
+              card.closest("header")
+            ) {
+              return;
+            }
+
+            // Assign directional physics based on column position if not already specified
+            if (
+              !card.classList.contains("reveal-up") &&
+              !card.classList.contains("reveal-left") &&
+              !card.classList.contains("reveal-right") &&
+              !card.classList.contains("reveal-down") &&
+              !card.classList.contains("reveal-zoom") &&
+              !card.hasAttribute("data-reveal")
+            ) {
+              if (colsCount >= 3) {
+                const colPos = idx % 3;
+                if (colPos === 0) {
+                  card.classList.add("reveal-left");
+                } else if (colPos === 1) {
+                  card.classList.add("reveal-up");
+                } else {
+                  card.classList.add("reveal-right");
+                }
+              } else if (colsCount === 2) {
+                if (idx % 2 === 0) {
+                  card.classList.add("reveal-left");
+                } else {
+                  card.classList.add("reveal-right");
+                }
+              } else {
+                card.classList.add("reveal-up");
+              }
+            }
+
+            // Stagger delay for cascade
+            const staggerIdx = (idx % 4) + 1;
+            if (!card.classList.contains(`stagger-${staggerIdx}`)) {
+              card.classList.add(`stagger-${staggerIdx}`);
+            }
+
+            // Automatically add icon popping effect to icons inside cards
+            card.querySelectorAll<HTMLElement>(".w-10, .w-11, .w-12, .w-14").forEach((iconContainer) => {
+              if (!iconContainer.classList.contains("reveal-icon")) {
+                iconContainer.classList.add("reveal-icon");
+              }
+            });
+
+            targets.push(card);
+          });
+        });
+
+      // Deduplicate targets
+      const uniqueTargets = Array.from(new Set(targets));
       const windowHeight = window.innerHeight || document.documentElement.clientHeight;
 
       activeObserver = new IntersectionObserver(
@@ -48,17 +167,18 @@ export default function ScrollRevealProvider({ children }: { children?: React.Re
             if (entry.isIntersecting) {
               const el = entry.target as HTMLElement;
               el.classList.add("is-revealed");
+              el.setAttribute("data-revealed", "true");
               activeObserver?.unobserve(el);
             }
           });
         },
         {
-          threshold: 0.06, // Trigger as soon as top 6% of the element enters the viewport
-          rootMargin: "0px 0px -30px 0px", // Trigger smoothly just before it clears the bottom
+          threshold: 0.05,
+          rootMargin: "0px 0px -40px 0px",
         }
       );
 
-      allTargets.forEach((target) => {
+      uniqueTargets.forEach((target) => {
         // Exclude navigation, header, and explicit no-reveal elements
         if (
           target.classList.contains("hero-section") ||
@@ -67,47 +187,61 @@ export default function ScrollRevealProvider({ children }: { children?: React.Re
           target.closest("nav")
         ) {
           target.classList.add("is-revealed");
+          target.setAttribute("data-revealed", "true");
           return;
         }
 
-        // Apply reveal base class if not already tagged
-        if (
-          !target.hasAttribute("data-reveal") &&
-          !target.classList.contains("reveal-on-scroll") &&
-          !target.classList.contains("pricing-card-lift")
-        ) {
-          target.classList.add("reveal-init");
-        }
-
-        // Add automatic stagger index to cards within grids
-        if (target.parentElement && target.parentElement.classList.contains("grid")) {
-          const siblings = Array.from(target.parentElement.children);
-          const index = siblings.indexOf(target);
-          if (index >= 0 && index < 6 && !target.classList.contains(`stagger-${index + 1}`)) {
-            target.classList.add(`stagger-${(index % 4) + 1}`);
-          }
+        // If element is already revealed, leave it permanently visible
+        if (target.getAttribute("data-revealed") === "true") {
+          target.classList.add("is-revealed");
+          return;
         }
 
         const rect = target.getBoundingClientRect();
         // If element is already in the viewport on initial load (above the fold), reveal immediately
-        if (rect.top < windowHeight * 0.85 && rect.bottom > 0) {
+        if (rect.top < windowHeight * 0.75 && rect.bottom > 0) {
           target.classList.add("is-revealed");
+          target.setAttribute("data-revealed", "true");
         } else {
-          // Keep element unrevealed until scrolled to
+          // Off-screen elements: prime for visible directional scroll reveal
           target.classList.remove("is-revealed");
           activeObserver?.observe(target);
         }
       });
     };
 
-    // Allow DOM to stabilize after Next.js page transition
-    const timer = setTimeout(setupObserver, 80);
+    // Staggered initialization to capture DOM stabilization and client-side hydration
+    const timer1 = setTimeout(setupObserver, 80);
+    const timer2 = setTimeout(setupObserver, 400);
+
+    // Mutation observer ensures React re-renders (like hover state or tab changes) NEVER wipe reveal state
+    const mutationObserver = new MutationObserver((mutations) => {
+      for (const mutation of mutations) {
+        if (mutation.type === "attributes" && mutation.attributeName === "class") {
+          const target = mutation.target as HTMLElement;
+          if (
+            target.getAttribute("data-revealed") === "true" &&
+            !target.classList.contains("is-revealed")
+          ) {
+            target.classList.add("is-revealed");
+          }
+        }
+      }
+    });
+
+    mutationObserver.observe(document.body, {
+      attributes: true,
+      attributeFilter: ["class"],
+      subtree: true,
+    });
 
     return () => {
-      clearTimeout(timer);
+      clearTimeout(timer1);
+      clearTimeout(timer2);
       if (activeObserver) {
         activeObserver.disconnect();
       }
+      mutationObserver.disconnect();
     };
   }, [pathname]);
 

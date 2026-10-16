@@ -17,6 +17,7 @@ export default function HeroSection({ onGetStarted, onSelectCategory }: HeroSect
       icon: Building2,
       iconBg: "bg-emerald-50 text-emerald-700 border border-emerald-100",
       borderHover: "hover:border-emerald-300 hover:shadow-emerald-500/5",
+      accentColor: "group-hover:text-emerald-700",
     },
     {
       id: "gst",
@@ -25,6 +26,7 @@ export default function HeroSection({ onGetStarted, onSelectCategory }: HeroSect
       icon: Receipt,
       iconBg: "bg-sky-50 text-sky-700 border border-sky-100",
       borderHover: "hover:border-sky-300 hover:shadow-sky-500/5",
+      accentColor: "group-hover:text-sky-700",
     },
     {
       id: "mca",
@@ -33,6 +35,7 @@ export default function HeroSection({ onGetStarted, onSelectCategory }: HeroSect
       icon: Landmark,
       iconBg: "bg-purple-50 text-purple-700 border border-purple-100",
       borderHover: "hover:border-purple-300 hover:shadow-purple-500/5",
+      accentColor: "group-hover:text-purple-700",
     },
     {
       id: "income-tax",
@@ -41,6 +44,7 @@ export default function HeroSection({ onGetStarted, onSelectCategory }: HeroSect
       icon: CreditCard,
       iconBg: "bg-amber-50 text-amber-700 border border-amber-100",
       borderHover: "hover:border-amber-300 hover:shadow-amber-500/5",
+      accentColor: "group-hover:text-amber-700",
     },
     {
       id: "trademark",
@@ -49,6 +53,7 @@ export default function HeroSection({ onGetStarted, onSelectCategory }: HeroSect
       icon: ShieldCheck,
       iconBg: "bg-teal-50 text-teal-700 border border-teal-100",
       borderHover: "hover:border-teal-300 hover:shadow-teal-500/5",
+      accentColor: "group-hover:text-teal-700",
     },
   ];
 
@@ -142,7 +147,7 @@ export default function HeroSection({ onGetStarted, onSelectCategory }: HeroSect
                       <Icon className="w-5 h-5" />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <h3 className="text-xs sm:text-[13.5px] font-semibold text-[#0F172A] group-hover:text-emerald-700 transition-colors truncate">
+                      <h3 className={`text-xs sm:text-[13.5px] font-semibold text-[#0F172A] ${item.accentColor} transition-colors truncate`}>
                         {item.name}
                       </h3>
                       <p className="text-[11px] text-slate-500 truncate mt-0.5">

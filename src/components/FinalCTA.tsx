@@ -23,14 +23,14 @@ export default function FinalCTA({ onFormSubmit }: FinalCTAProps) {
   };
 
   return (
-    <section data-reveal className="py-10 md:py-14 bg-white border-b border-slate-200/80" id="contact">
+    <section className="py-10 md:py-14 bg-white border-b border-slate-200/80" id="contact">
       <div className="w-full max-w-[1400px] 2xl:max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-[#FAF9F6] rounded-3xl border border-slate-200/90 p-8 sm:p-12 md:p-16 relative overflow-hidden">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             
             {/* Left Column: Heading and value propositions */}
-            <div className="lg:col-span-7 space-y-5">
+            <div data-reveal="left" className="lg:col-span-7 space-y-5">
               <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-emerald-800 bg-emerald-50/80 border border-emerald-100/90 px-3 py-1 rounded-full">
                 Get Started in Minutes
               </span>
@@ -65,7 +65,7 @@ export default function FinalCTA({ onFormSubmit }: FinalCTAProps) {
             </div>
 
             {/* Right Column: Quick Consultation Form */}
-            <div className="lg:col-span-5">
+            <div data-reveal="right" className="lg:col-span-5">
               <div className="bg-white rounded-2xl border border-slate-200/90 p-6 sm:p-7 shadow-xs">
                 {submitted ? (
                   <div className="text-center py-8 space-y-3">

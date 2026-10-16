@@ -190,7 +190,7 @@ export default function DashboardShowcase({ onOpenPortal }: DashboardShowcasePro
   };
 
   return (
-    <section data-reveal className="py-10 md:py-14 bg-white border-b border-slate-200/80 font-sans relative overflow-hidden" id="vault">
+    <section className="py-10 md:py-14 bg-white border-b border-slate-200/80 font-sans relative overflow-hidden" id="vault">
       {/* Dynamic ambient blooms */}
       <div className="absolute top-1/4 right-10 w-[500px] h-[350px] bg-emerald-100/30 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 left-10 w-[450px] h-[300px] bg-blue-100/20 rounded-full blur-3xl pointer-events-none" />
@@ -198,7 +198,7 @@ export default function DashboardShowcase({ onOpenPortal }: DashboardShowcasePro
       <div className="w-full max-w-[1400px] 2xl:max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-7 sm:mb-8">
+        <div data-reveal="down" className="text-center max-w-3xl mx-auto mb-7 sm:mb-8">
           <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-emerald-800 bg-emerald-50/90 px-3.5 py-1 rounded-full border border-emerald-100 mb-3 shadow-2xs">
             <Sparkles className="w-3.5 h-3.5 text-emerald-600 animate-pulse" />
             <span>Encrypted Founder Workspace</span>
@@ -212,7 +212,7 @@ export default function DashboardShowcase({ onOpenPortal }: DashboardShowcasePro
         </div>
 
         {/* Simulated Web Application Console */}
-        <div className="bg-[#0F172A] rounded-3xl p-2.5 sm:p-4 shadow-2xl border border-slate-800 max-w-5xl mx-auto">
+        <div data-reveal="up" className="bg-[#0F172A] rounded-3xl p-2.5 sm:p-4 shadow-2xl border border-slate-800 max-w-5xl mx-auto">
           
           {/* Top Browser Chrome Bar */}
           <div className="flex items-center justify-between px-3 sm:px-4 py-2.5 border-b border-slate-800 text-xs text-slate-400">
@@ -260,22 +260,30 @@ export default function DashboardShowcase({ onOpenPortal }: DashboardShowcasePro
               </div>
             </div>
 
-            {/* Interactive Tab Switcher - Grid of 4 columns on desktop, strictly in one row */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-1.5 sm:gap-2 my-5 bg-slate-100/90 p-1.5 rounded-2xl border border-slate-200/80">
+            {/* Interactive Tab Switcher - Single row on md+ with smooth sliding pill */}
+            <div className="relative flex my-5 bg-slate-100/90 p-1.5 rounded-2xl border border-slate-200/80">
+              <div
+                className="absolute top-1.5 bottom-1.5 rounded-xl bg-[#0F172A] shadow-xs transition-transform duration-350 ease-[cubic-bezier(0.16,1,0.3,1)] pointer-events-none"
+                style={{
+                  width: "calc((100% - 12px) / 4)",
+                  transform: `translate3d(${activeTab * 100}%, 0, 0)`,
+                }}
+              />
               {tabs.map((tab, idx) => {
                 const TabIcon = tab.icon;
                 const isActive = activeTab === idx;
                 return (
                   <button
                     key={tab.id}
+                    type="button"
                     onClick={() => setActiveTab(idx)}
-                    className={`py-2.5 px-2 rounded-xl text-xs sm:text-[13px] font-medium transition-all duration-200 cursor-pointer flex items-center justify-center gap-2 truncate ${
+                    className={`relative z-10 w-1/4 py-2.5 px-2 rounded-xl text-xs sm:text-[13px] font-medium transition-colors duration-250 cursor-pointer flex items-center justify-center gap-2 truncate ${
                       isActive
-                        ? "bg-[#0F172A] text-white shadow-xs"
-                        : "text-slate-600 hover:text-slate-900 hover:bg-white"
+                        ? "text-white"
+                        : "text-slate-600 hover:text-slate-900"
                     }`}
                   >
-                    <TabIcon className={`w-3.5 h-3.5 shrink-0 ${isActive ? "text-emerald-400" : "text-slate-400"}`} />
+                    <TabIcon className={`w-3.5 h-3.5 shrink-0 transition-colors ${isActive ? "text-emerald-400" : "text-slate-400"}`} />
                     <span className="truncate">{tab.label}</span>
                   </button>
                 );
@@ -293,41 +301,50 @@ export default function DashboardShowcase({ onOpenPortal }: DashboardShowcasePro
               </div>
             )}
 
-            {/* Document Cards List */}
-            <div className="space-y-2.5">
-              {current.documents.map((doc, dIdx) => (
-                <div
-                  key={dIdx}
-                  className="p-3.5 sm:p-4 rounded-2xl bg-slate-50/70 border border-slate-200/80 hover:border-slate-300 hover:bg-white hover:shadow-xs transition-all duration-200 flex flex-wrap items-center justify-between gap-3 group"
-                >
-                  <div className="flex items-center gap-3 min-w-0">
-                    <div className="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center shrink-0 group-hover:border-emerald-300 group-hover:bg-emerald-50 transition-colors">
-                      <FileText className="w-5 h-5 text-slate-600 group-hover:text-emerald-700" />
-                    </div>
-                    <div className="min-w-0">
-                      <p className="text-xs sm:text-[13.5px] font-semibold text-slate-900 group-hover:text-emerald-800 transition-colors truncate">
-                        {doc.name}
-                      </p>
-                      <p className="text-[11px] text-slate-500 mt-0.5">
-                        {doc.type} • {doc.size} • Stamped on {doc.date}
-                      </p>
-                    </div>
-                  </div>
+            {/* Document Cards List with Smooth Slide Transition */}
+            <div className="overflow-hidden">
+              <div
+                className="flex transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                style={{ transform: `translate3d(-${activeTab * 100}%, 0, 0)` }}
+              >
+                {tabs.map((tab) => (
+                  <div key={tab.id} className="w-full shrink-0 space-y-2.5">
+                    {tab.documents.map((doc, dIdx) => (
+                      <div
+                        key={dIdx}
+                        className="p-3.5 sm:p-4 rounded-2xl bg-slate-50/70 border border-slate-200/80 hover:border-slate-300 hover:bg-white hover:shadow-xs transition-all duration-200 flex flex-wrap items-center justify-between gap-3 group"
+                      >
+                        <div className="flex items-center gap-3 min-w-0">
+                          <div className="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center shrink-0 group-hover:border-emerald-300 group-hover:bg-emerald-50 transition-colors">
+                            <FileText className="w-5 h-5 text-slate-600 group-hover:text-emerald-700" />
+                          </div>
+                          <div className="min-w-0">
+                            <p className="text-xs sm:text-[13.5px] font-semibold text-slate-900 group-hover:text-emerald-800 transition-colors truncate">
+                              {doc.name}
+                            </p>
+                            <p className="text-[11px] text-slate-500 mt-0.5">
+                              {doc.type} • {doc.size} • Stamped on {doc.date}
+                            </p>
+                          </div>
+                        </div>
 
-                  <div className="flex items-center gap-2.5 shrink-0">
-                    <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-50 border border-emerald-100 px-2.5 py-1 rounded-full">
-                      {doc.status}
-                    </span>
-                    <button
-                      onClick={() => handleSimulateDownload(doc.name)}
-                      className="p-2 rounded-xl text-slate-500 hover:text-slate-900 hover:bg-slate-100 border border-transparent hover:border-slate-200 transition-all cursor-pointer"
-                      title="Download Certified PDF"
-                    >
-                      <Download className="w-4 h-4" />
-                    </button>
+                        <div className="flex items-center gap-2.5 shrink-0">
+                          <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-50 border border-emerald-100 px-2.5 py-1 rounded-full">
+                            {doc.status}
+                          </span>
+                          <button
+                            onClick={() => handleSimulateDownload(doc.name)}
+                            className="p-2 rounded-xl text-slate-500 hover:text-slate-900 hover:bg-slate-100 border border-transparent hover:border-slate-200 transition-all cursor-pointer"
+                            title="Download Certified PDF"
+                          >
+                            <Download className="w-4 h-4" />
+                          </button>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
 
             {/* Bottom Vault Guarantee */}

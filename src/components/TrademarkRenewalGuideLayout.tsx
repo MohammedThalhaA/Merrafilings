@@ -198,7 +198,7 @@ export default function TrademarkRenewalGuideLayout({
           </article>
 
           {/* Right Column: Clean Sticky Sidebar */}
-          <aside data-reveal className="lg:col-span-4 space-y-6 lg:sticky lg:top-24 stagger-1">
+          <aside className="lg:col-span-4 space-y-6 lg:sticky lg:top-24 self-start h-fit">
             {/* Widget 1: Consult Experts */}
             <div
               onClick={() => openContact("Trademark Renewal Specialist Call")}

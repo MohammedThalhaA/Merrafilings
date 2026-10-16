@@ -38,6 +38,9 @@ export default function BusinessSolutionsGrid({ onSelectSolution }: BusinessSolu
       startingPrice: "From ₹4,999",
       icon: Building2,
       iconBg: "bg-sky-50 text-sky-700 border border-sky-100",
+      hoverBorder: "hover:border-sky-400",
+      accentColor: "group-hover:text-sky-700",
+      btnHoverBg: "group-hover:bg-sky-600",
       description:
         "Private Limited, LLP, and One Person Company setup with fast-track DIN, Class 3 DSC, and PAN allotment in 3 days.",
       features: [
@@ -55,6 +58,9 @@ export default function BusinessSolutionsGrid({ onSelectSolution }: BusinessSolu
       startingPrice: "From ₹999/mo",
       icon: FileText,
       iconBg: "bg-emerald-50 text-emerald-700 border border-emerald-100",
+      hoverBorder: "hover:border-emerald-400",
+      accentColor: "group-hover:text-emerald-700",
+      btnHoverBg: "group-hover:bg-emerald-600",
       description:
         "GST registration, monthly GSTR-1 & 3B return filing, automated GSTR-2B purchase reconciliation, and notice resolution.",
       features: [
@@ -72,6 +78,9 @@ export default function BusinessSolutionsGrid({ onSelectSolution }: BusinessSolu
       startingPrice: "From ₹3,499/yr",
       icon: Landmark,
       iconBg: "bg-purple-50 text-purple-700 border border-purple-100",
+      hoverBorder: "hover:border-purple-400",
+      accentColor: "group-hover:text-purple-700",
+      btnHoverBg: "group-hover:bg-purple-600",
       description:
         "Annual ROC financial filing (AOC-4), annual return (MGT-7), director DIR-3 KYC, and corporate share capital changes.",
       features: [
@@ -89,6 +98,9 @@ export default function BusinessSolutionsGrid({ onSelectSolution }: BusinessSolu
       startingPrice: "From ₹1,499",
       icon: CreditCard,
       iconBg: "bg-amber-50 text-amber-700 border border-amber-100",
+      hoverBorder: "hover:border-amber-400",
+      accentColor: "group-hover:text-amber-700",
+      btnHoverBg: "group-hover:bg-amber-600",
       description:
         "Corporate ITR-6, individual tax filing, quarterly TDS returns, advance tax computation, and tax exemption planning.",
       features: [
@@ -106,6 +118,9 @@ export default function BusinessSolutionsGrid({ onSelectSolution }: BusinessSolu
       startingPrice: "From ₹1,999",
       icon: ShieldCheck,
       iconBg: "bg-rose-50 text-rose-700 border border-rose-100",
+      hoverBorder: "hover:border-rose-400",
+      accentColor: "group-hover:text-rose-700",
+      btnHoverBg: "group-hover:bg-rose-600",
       description:
         "Same-day trademark filing across Classes 1-45, trademark objection rebuttals, hearings, and continuous brand watch.",
       features: [
@@ -123,6 +138,9 @@ export default function BusinessSolutionsGrid({ onSelectSolution }: BusinessSolu
       startingPrice: "From ₹1,499",
       icon: Mail,
       iconBg: "bg-teal-50 text-teal-700 border border-teal-100",
+      hoverBorder: "hover:border-teal-400",
+      accentColor: "group-hover:text-teal-700",
+      btnHoverBg: "group-hover:bg-teal-600",
       description:
         "Startup India DPIIT recognition (80-IAC tax holiday), FSSAI food licensing, Udyam MSME certificate, and EPFO/ESIC.",
       features: [
@@ -139,11 +157,11 @@ export default function BusinessSolutionsGrid({ onSelectSolution }: BusinessSolu
     : solutions.filter((s) => s.category === activeFilter);
 
   return (
-    <section data-reveal className="py-10 md:py-14 bg-white border-b border-slate-200/80 font-sans" id="solutions">
+    <section className="py-10 md:py-14 bg-white border-b border-slate-200/80 font-sans" id="solutions">
       <div className="w-full max-w-[1400px] 2xl:max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-[820px] mx-auto mb-7 md:mb-8">
+        <div data-reveal="down" className="text-center max-w-[820px] mx-auto mb-7 md:mb-8">
           <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-emerald-800 bg-emerald-50/90 border border-emerald-100 px-3 py-1 rounded-full mb-3">
             <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
             Core Regulatory Capabilities
@@ -157,7 +175,7 @@ export default function BusinessSolutionsGrid({ onSelectSolution }: BusinessSolu
         </div>
 
         {/* Interactive Filter Pills */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
+        <div data-reveal="zoom" className="flex flex-wrap items-center justify-center gap-2 mb-10">
           {filterTabs.map((tab) => (
             <button
               key={tab.id}
@@ -173,21 +191,25 @@ export default function BusinessSolutionsGrid({ onSelectSolution }: BusinessSolu
           ))}
         </div>
 
-        {/* 6 Clean Editorial Cards Grid with Dynamic Animations */}
+        {/* 6 Clean Editorial Cards Grid with Dynamic Multi-Directional Entrance Animations */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
-          {filtered.map((item) => {
+          {filtered.map((item, idx) => {
             const Icon = item.icon;
+            const colPos = idx % 3;
+            const revealDir = colPos === 0 ? "left" : colPos === 1 ? "up" : "right";
+            const staggerClass = `stagger-${colPos + 1}`;
 
             return (
               <div
                 key={item.id}
+                data-reveal={revealDir}
                 onClick={() => onSelectSolution && onSelectSolution(item.title)}
-                className="group bg-white rounded-2xl border border-slate-200/90 p-6 sm:p-7 flex flex-col justify-between hover:border-slate-300 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 cursor-pointer animate-in fade-in zoom-in-95"
+                className={`group bg-white rounded-2xl border border-slate-200/90 p-6 sm:p-7 flex flex-col justify-between ${item.hoverBorder} hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 cursor-pointer ${staggerClass}`}
               >
                 <div>
                   {/* Top Meta Bar */}
                   <div className="flex items-center justify-between gap-2 mb-5">
-                    <div className={`w-11 h-11 rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-200 ${item.iconBg}`}>
+                    <div className={`w-11 h-11 rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-200 ${item.iconBg} reveal-icon`}>
                       <Icon className="w-5 h-5 stroke-[1.8]" />
                     </div>
                     <span className="text-[10.5px] font-semibold text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-100">
@@ -197,7 +219,7 @@ export default function BusinessSolutionsGrid({ onSelectSolution }: BusinessSolu
 
                   {/* Title & Starting Price */}
                   <div className="flex items-baseline justify-between gap-2">
-                    <h3 className="font-serif text-xl font-normal text-[#0F172A] tracking-tight group-hover:text-emerald-800 transition-colors">
+                    <h3 className={`font-serif text-xl font-normal text-[#0F172A] tracking-tight ${item.accentColor} transition-colors`}>
                       {item.title}
                     </h3>
                   </div>
@@ -224,11 +246,11 @@ export default function BusinessSolutionsGrid({ onSelectSolution }: BusinessSolu
 
                 {/* Learn More Action Link */}
                 <div className="mt-6 pt-3.5 border-t border-slate-100 flex items-center justify-between">
-                  <span className="text-xs font-medium text-slate-800 group-hover:text-emerald-800 transition-colors">
+                  <span className={`text-xs font-medium text-slate-800 ${item.accentColor} transition-colors`}>
                     {item.buttonText}
                   </span>
-                  <div className="w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 group-hover:bg-slate-900 group-hover:text-white transition-all">
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                  <div className={`w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 ${item.btnHoverBg} group-hover:text-white transition-all duration-200 shadow-2xs`}>
+                    <ArrowRight className="w-3.5 h-3.5 text-slate-600 group-hover:!text-white group-hover:translate-x-0.5 transition-all duration-200" />
                   </div>
                 </div>
               </div>

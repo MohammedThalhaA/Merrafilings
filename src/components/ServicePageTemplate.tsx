@@ -2113,7 +2113,7 @@ export default function ServicePageTemplate({
       </div>
 
       {/* 3. Social Proof Strip (Single-Row Logo Marquee) */}
-      <section data-reveal className="py-7 border-b border-slate-100 bg-white overflow-hidden">
+      <section className="py-7 border-b border-slate-100 bg-white overflow-hidden">
         <div className="w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-xs font-medium text-slate-400 uppercase tracking-wider shrink-0">
@@ -2158,14 +2158,14 @@ export default function ServicePageTemplate({
       </section>
 
       {/* 3.5. Service Strategic Spotlight: Why Mandatory & Why Choose Merrafilings */}
-      <section data-reveal className="py-16 sm:py-20 lg:py-24 bg-white border-b border-slate-200/80 font-sans relative overflow-hidden">
+      <section className="py-16 sm:py-20 lg:py-24 bg-white border-b border-slate-200/80 font-sans relative overflow-hidden">
         {/* Subtle ambient bloom */}
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-emerald-100/25 blur-3xl rounded-full pointer-events-none" />
 
         <div className="w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10 space-y-16 lg:space-y-20 relative z-10">
           {/* Part 1: Why Mandatory */}
           <div className="space-y-8 sm:space-y-10">
-            <div className="text-center max-w-3xl xl:max-w-4xl mx-auto mb-10">
+            <div data-reveal="down" className="text-center max-w-3xl xl:max-w-4xl mx-auto mb-10">
               <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-800 text-[11px] sm:text-xs font-semibold uppercase tracking-wider mb-3 shadow-2xs">
                 <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
                 <span>{spotlightData.mandatoryTag}</span>
@@ -2180,7 +2180,7 @@ export default function ServicePageTemplate({
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
               {/* Left Column: Interactive Statutory Gateway Card */}
-              <div className="lg:col-span-5 flex flex-col text-left">
+              <div data-reveal="left" className="lg:col-span-5 flex flex-col text-left">
                 <div className="bg-white rounded-3xl p-6 sm:p-7 text-slate-900 shadow-sm flex flex-col justify-between border border-slate-200/90 relative overflow-hidden h-full group hover:border-slate-300 hover:shadow-md transition-all duration-300">
                   {/* Top Bar with Live Ping */}
                   <div>
@@ -2256,7 +2256,7 @@ export default function ServicePageTemplate({
               </div>
 
               {/* Right Column: 4 Strategic Mandate Feature Cards */}
-              <div className="lg:col-span-7 flex flex-col justify-center text-left">
+              <div data-reveal="right" className="lg:col-span-7 flex flex-col justify-center text-left">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                   {spotlightData.mandatoryItems.map((item, idx) => {
                     const colorStyle = getSpotlightCardColorClasses(item);
@@ -2302,7 +2302,7 @@ export default function ServicePageTemplate({
 
           {/* Part 2: Why Choose Merrafilings */}
           <div className="space-y-8 sm:space-y-10">
-            <div className="text-center max-w-3xl xl:max-w-4xl mx-auto mb-10">
+            <div data-reveal="down" className="text-center max-w-3xl xl:max-w-4xl mx-auto mb-10">
               <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-800 text-[11px] sm:text-xs font-semibold uppercase tracking-wider mb-3 shadow-2xs">
                 <Award className="w-3.5 h-3.5 text-emerald-600" />
                 <span>{spotlightData.chooseTag}</span>
@@ -2317,7 +2317,7 @@ export default function ServicePageTemplate({
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
               {/* Left Column: 4 Value Pillar Cards */}
-              <div className="lg:col-span-7 flex flex-col justify-center order-2 lg:order-1 text-left">
+              <div data-reveal="left" className="lg:col-span-7 flex flex-col justify-center order-2 lg:order-1 text-left">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                   {spotlightData.chooseItems.map((item, idx) => {
                     const colorStyle = getSpotlightCardColorClasses(item);
@@ -2348,7 +2348,7 @@ export default function ServicePageTemplate({
               </div>
 
               {/* Right Column: Enterprise Credibility & Assurance Showcase Card */}
-              <div className="lg:col-span-5 flex flex-col order-1 lg:order-2 text-left">
+              <div data-reveal="right" className="lg:col-span-5 flex flex-col order-1 lg:order-2 text-left">
                 <div className="bg-white rounded-3xl p-6 sm:p-7 text-slate-900 shadow-sm border border-slate-200/90 hover:border-emerald-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden h-full group">
                   {/* Subtle Background Glow */}
                   <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-50/50 rounded-full blur-3xl -z-10 group-hover:bg-emerald-100/50 transition-all duration-500" />
@@ -2429,9 +2429,9 @@ export default function ServicePageTemplate({
       </section>
 
       {/* 4. Redesigned Pricing Studio: Structured Tier Comparison */}
-      <section id="pricing" data-reveal className="py-16 sm:py-20 bg-[#FAFBFB] border-b border-slate-200/80 font-sans">
+      <section id="pricing" className="py-16 sm:py-20 bg-[#FAFBFB] border-b border-slate-200/80 font-sans">
         <div className="w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10">
-          <div className="text-center max-w-3xl xl:max-w-4xl mx-auto mb-12 sm:mb-14">
+          <div data-reveal="down" className="text-center max-w-3xl xl:max-w-4xl mx-auto mb-12 sm:mb-14">
             <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-800 text-[11px] sm:text-xs font-semibold uppercase tracking-wider mb-3 shadow-2xs">
               <Receipt className="w-3.5 h-3.5 text-emerald-600" />
               <span>Transparent Statutory Fees</span>
@@ -2448,6 +2448,7 @@ export default function ServicePageTemplate({
             {packages.map((pkg, idx) => {
               const cardNum = idx + 1;
               const isPopular = pkg.popular || idx === 1;
+              const cardReveal = idx === 0 ? "left" : idx === 1 ? "up" : "right";
               const tierLabel = idx === 0 ? "Starter Tier" : isPopular ? "Flagship Package" : "Complete Coverage";
               const tierChipColor = idx === 0
                 ? "bg-slate-100 text-slate-700 border-slate-200/80"
@@ -2458,7 +2459,7 @@ export default function ServicePageTemplate({
               return (
                 <div
                   key={idx}
-                  data-reveal
+                  data-reveal={cardReveal}
                   className={`pricing-card-lift group rounded-3xl p-6 sm:p-8 flex flex-col justify-between cursor-pointer relative text-left ${
                     isPopular
                       ? "is-popular-card bg-gradient-to-b from-emerald-50/40 via-white to-white border-2 border-emerald-500 shadow-[0_16px_40px_rgba(5,150,105,0.14)] ring-1 ring-emerald-500/20"
@@ -2579,10 +2580,10 @@ export default function ServicePageTemplate({
       </section>
 
       {/* 5. Comprehensive Knowledge Hub: Editorial Workspace + Intelligence Rail */}
-      <section id="overview-section" data-reveal className="py-14 sm:py-16 bg-white font-sans">
+      <section id="overview-section" className="py-14 sm:py-16 bg-white font-sans">
         <div className="w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10">
           {/* Breadcrumb Navigation */}
-          <nav className="flex items-center gap-2 text-xs sm:text-[13px] font-medium text-slate-500 mb-6 flex-wrap">
+          <nav data-reveal="down" className="flex items-center gap-2 text-xs sm:text-[13px] font-medium text-slate-500 mb-6 flex-wrap">
             <a href="/" className="hover:text-slate-900 transition-colors">
               Home
             </a>
@@ -2664,7 +2665,7 @@ export default function ServicePageTemplate({
             </div>
 
             {/* Right Intelligence Rail (4 Cols) - Sticky */}
-            <div className="lg:col-span-4 space-y-6 lg:sticky lg:top-24 text-left">
+            <div className="lg:col-span-4 space-y-6 lg:sticky lg:top-24 self-start h-fit text-left">
               {/* Card 1: Consult Experts Concierge */}
               <div
                 onClick={() => openServiceModal()}
@@ -2786,19 +2787,21 @@ export default function ServicePageTemplate({
       </section>
 
       {/* 6. Redesigned FAQ Hub */}
-      <section id="faqs" data-reveal className="py-16 sm:py-20 bg-[#FAFBFB] border-t border-slate-200/80 font-sans">
+      <section id="faqs" className="py-16 sm:py-20 bg-[#FAFBFB] border-t border-slate-200/80 font-sans">
         <div className="w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10 text-left">
-          <div className="w-12 h-1 bg-emerald-600 rounded-full mb-3" />
-          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-normal text-slate-900">
-            Frequently asked questions
-          </h2>
-          <p className="text-xs sm:text-sm text-slate-600 font-normal mt-1.5 mb-8">
-            {faqSubtitle || `Common questions about ${breadcrumbCurrent} in India.`}
-          </p>
+          <div data-reveal="down">
+            <div className="w-12 h-1 bg-emerald-600 rounded-full mb-3" />
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-normal text-slate-900">
+              Frequently asked questions
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-600 font-normal mt-1.5 mb-8">
+              {faqSubtitle || `Common questions about ${breadcrumbCurrent} in India.`}
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
             {/* Column 1 */}
-            <div className="space-y-3.5">
+            <div data-reveal="left" className="space-y-3.5">
               {(showMoreFaqs ? [...faqCol1, ...faqExtraCol1] : faqCol1).map((faq, idx) => {
                 const faqId = `faq-c1-${idx}`;
                 const isOpen = openFaq === faqId;
@@ -2831,7 +2834,7 @@ export default function ServicePageTemplate({
             </div>
 
             {/* Column 2 */}
-            <div className="space-y-3.5">
+            <div data-reveal="right" className="space-y-3.5">
               {(showMoreFaqs ? [...faqCol2, ...faqExtraCol2] : faqCol2).map((faq, idx) => {
                 const faqId = `faq-c2-${idx}`;
                 const isOpen = openFaq === faqId;

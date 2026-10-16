@@ -45,13 +45,18 @@
   box-sizing: border-box;
 }
 
-html, body {
+html {
+  overflow-x: clip;
+}
+
+body {
   background-color: #FFFFFF !important;
   color: #111827;
   font-family: "Inter", var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -291,31 +296,116 @@ a:not([class*="bg-clip-text"])[class*="from-[#5C3BFF]"] {
 }
 
 /* ==========================================================================
-   Universal Scroll Reveal Animation System
+   Rich Dynamic Scroll Reveal & Directional Entrance Animations
+   Supports: left, right, up, down, zoom, and staggered cascades
    ========================================================================== */
-.reveal-on-scroll,
-[data-reveal],
-.reveal-init {
+
+/* Base transition physics */
+[data-reveal]:not([data-revealed="true"]):not(.is-revealed),
+.reveal-init:not([data-revealed="true"]):not(.is-revealed),
+.reveal-up:not([data-revealed="true"]):not(.is-revealed),
+.reveal-down:not([data-revealed="true"]):not(.is-revealed),
+.reveal-left:not([data-revealed="true"]):not(.is-revealed),
+.reveal-right:not([data-revealed="true"]):not(.is-revealed),
+.reveal-zoom:not([data-revealed="true"]):not(.is-revealed) {
   opacity: 0;
-  transform: translate3d(0, 24px, 0);
-  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.reveal-on-scroll.is-revealed,
-[data-reveal].is-revealed,
-.reveal-init.is-revealed {
+/* 1. Reveal from Bottom (Upward entrance) */
+.reveal-up:not([data-revealed="true"]):not(.is-revealed),
+[data-reveal="up"]:not([data-revealed="true"]):not(.is-revealed),
+[data-reveal]:not([data-reveal="left"]):not([data-reveal="right"]):not([data-reveal="down"]):not([data-reveal="zoom"]):not([data-revealed="true"]):not(.is-revealed),
+.reveal-init:not(.reveal-left):not(.reveal-right):not(.reveal-down):not(.reveal-zoom):not([data-revealed="true"]):not(.is-revealed) {
+  transform: translate3d(0, 56px, 0);
+}
+
+/* 2. Reveal from Left (Left entrance) */
+.reveal-left:not([data-revealed="true"]):not(.is-revealed),
+[data-reveal="left"]:not([data-revealed="true"]):not(.is-revealed) {
+  transform: translate3d(-64px, 0, 0);
+}
+
+/* 3. Reveal from Right (Right entrance) */
+.reveal-right:not([data-revealed="true"]):not(.is-revealed),
+[data-reveal="right"]:not([data-revealed="true"]):not(.is-revealed) {
+  transform: translate3d(64px, 0, 0);
+}
+
+/* 4. Reveal from Top (Downward entrance) */
+.reveal-down:not([data-revealed="true"]):not(.is-revealed),
+[data-reveal="down"]:not([data-revealed="true"]):not(.is-revealed) {
+  transform: translate3d(0, -44px, 0);
+}
+
+/* 5. Reveal with Scale Zoom */
+.reveal-zoom:not([data-revealed="true"]):not(.is-revealed),
+[data-reveal="zoom"]:not([data-revealed="true"]):not(.is-revealed) {
+  transform: scale(0.85) translate3d(0, 28px, 0);
+}
+
+/* Active Revealed State - Permanently visible even on hover & state updates */
+[data-revealed="true"],
+.is-revealed {
   opacity: 1 !important;
-  transform: translate3d(0, 0, 0);
 }
 
-/* Stagger delay utilities for grids and lists */
-.stagger-1 { transition-delay: 60ms !important; }
-.stagger-2 { transition-delay: 120ms !important; }
-.stagger-3 { transition-delay: 180ms !important; }
-.stagger-4 { transition-delay: 240ms !important; }
-.stagger-5 { transition-delay: 300ms !important; }
-.stagger-6 { transition-delay: 360ms !important; }
+/* Neutral resting position when revealed (does not fight hover lifts or sticky positioning) */
+[data-reveal][data-revealed="true"]:not(:hover),
+[data-reveal].is-revealed:not(:hover),
+.reveal-init[data-revealed="true"]:not(:hover),
+.reveal-init.is-revealed:not(:hover),
+.reveal-up[data-revealed="true"]:not(:hover),
+.reveal-up.is-revealed:not(:hover),
+.reveal-down[data-revealed="true"]:not(:hover),
+.reveal-down.is-revealed:not(:hover),
+.reveal-left[data-revealed="true"]:not(:hover),
+.reveal-left.is-revealed:not(:hover),
+.reveal-right[data-revealed="true"]:not(:hover),
+.reveal-right.is-revealed:not(:hover),
+.reveal-zoom[data-revealed="true"]:not(:hover),
+.reveal-zoom.is-revealed:not(:hover) {
+  transform: none;
+}
+
+/* Ensure sticky elements are never trapped by transform containment */
+.sticky, [class*="sticky"] {
+  will-change: auto !important;
+}
+
+/* Card inner icon pop animation upon scroll reveal */
+.is-revealed .reveal-icon,
+[data-reveal].is-revealed .reveal-icon,
+.reveal-up.is-revealed .reveal-icon,
+.reveal-left.is-revealed .reveal-icon,
+.reveal-right.is-revealed .reveal-icon,
+.is-revealed [data-reveal-icon] {
+  animation: iconPopIn 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both;
+}
+
+@keyframes iconPopIn {
+  0% {
+    transform: scale(0.6) rotate(-8deg);
+    opacity: 0.3;
+  }
+  60% {
+    transform: scale(1.12) rotate(3deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* Stagger delay utilities for cascading grids and elements */
+.stagger-1 { transition-delay: 90ms !important; }
+.stagger-2 { transition-delay: 180ms !important; }
+.stagger-3 { transition-delay: 270ms !important; }
+.stagger-4 { transition-delay: 360ms !important; }
+.stagger-5 { transition-delay: 450ms !important; }
+.stagger-6 { transition-delay: 540ms !important; }
 
 /* ==========================================================================
    Butter-Smooth Card Hover Physics
@@ -330,7 +420,8 @@ a:not([class*="bg-clip-text"])[class*="from-[#5C3BFF]"] {
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
-.pricing-card-lift:hover {
+.pricing-card-lift:hover,
+.pricing-card-lift.is-revealed:hover {
   transform: translate3d(0, -6px, 0) !important;
   box-shadow: 0 20px 38px -8px rgba(15, 23, 42, 0.12), 0 8px 16px -4px rgba(15, 23, 42, 0.06) !important;
 }
@@ -341,9 +432,16 @@ a:not([class*="bg-clip-text"])[class*="from-[#5C3BFF]"] {
   }
 }
 
-.pricing-card-lift.is-popular-card:hover {
+.pricing-card-lift.is-popular-card:hover,
+.pricing-card-lift.is-popular-card.is-revealed:hover {
   transform: translate3d(0, -10px, 0) !important;
   box-shadow: 0 24px 44px -8px rgba(5, 150, 105, 0.22), 0 10px 20px -4px rgba(5, 150, 105, 0.12) !important;
+}
+
+.card-hover-effect:hover,
+.card-hover-effect.is-revealed:hover {
+  transform: translate3d(0, -5px, 0) !important;
+  box-shadow: 0 16px 32px -8px rgba(15, 23, 42, 0.1), 0 4px 12px -2px rgba(15, 23, 42, 0.05) !important;
 }
 
 /* ==========================================================================
@@ -386,8 +484,12 @@ article b,
   font-weight: 600 !important;
 }
 
+.text-slate-600:not([class*="hover:"]):not([class*="group-hover:"]) {
+  color: #1E293B;
+}
+
 .text-slate-600 {
-  color: #1E293B !important; /* Rich Dark Slate 800 */
+  color: #1E293B;
 }
 
 

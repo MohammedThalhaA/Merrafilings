@@ -29,6 +29,11 @@ export default function IndustrySolutionsGrid({ onSelectIndustry }: IndustrySolu
       tagline: "Multi-warehouse GST & Legal Metrology for Amazon, Flipkart & Blinkit sellers",
       icon: ShoppingBag,
       iconColor: "text-emerald-700 bg-emerald-50 border-emerald-100",
+      hoverBorder: "hover:border-emerald-400 hover:shadow-emerald-500/10",
+      accentText: "group-hover:text-emerald-800",
+      badgeHover: "group-hover:bg-emerald-50 group-hover:text-emerald-800 group-hover:border-emerald-200",
+      ctaText: "group-hover:text-emerald-700",
+      checkColor: "text-emerald-600",
       sla: "3–5 Days Setup",
       mandates: [
         "Multi-State GST with Principal Place of Business (PPOB) & APOB",
@@ -44,6 +49,11 @@ export default function IndustrySolutionsGrid({ onSelectIndustry }: IndustrySolu
       tagline: "Tax-exempt corporate structuring for VC fundraising and global expansion",
       icon: Cpu,
       iconColor: "text-blue-700 bg-blue-50 border-blue-100",
+      hoverBorder: "hover:border-blue-400 hover:shadow-blue-500/10",
+      accentText: "group-hover:text-blue-800",
+      badgeHover: "group-hover:bg-blue-50 group-hover:text-blue-800 group-hover:border-blue-200",
+      ctaText: "group-hover:text-blue-700",
+      checkColor: "text-blue-600",
       sla: "3 Days Fast-Track",
       mandates: [
         "Pvt Ltd incorporation with clean 10,000,000 authorized equity capital",
@@ -59,6 +69,11 @@ export default function IndustrySolutionsGrid({ onSelectIndustry }: IndustrySolu
       tagline: "Complete licensing to launch on Swiggy, Zomato & offline commercial kitchens",
       icon: UtensilsCrossed,
       iconColor: "text-amber-700 bg-amber-50 border-amber-100",
+      hoverBorder: "hover:border-amber-400 hover:shadow-amber-500/10",
+      accentText: "group-hover:text-amber-800",
+      badgeHover: "group-hover:bg-amber-50 group-hover:text-amber-800 group-hover:border-amber-200",
+      ctaText: "group-hover:text-amber-700",
+      checkColor: "text-amber-600",
       sla: "5–7 Days Setup",
       mandates: [
         "FSSAI State or Central Manufacturing & Repacking license",
@@ -74,6 +89,11 @@ export default function IndustrySolutionsGrid({ onSelectIndustry }: IndustrySolu
       tagline: "Stringent regulatory clearances for clinics, labs & nutraceutical producers",
       icon: HeartPulse,
       iconColor: "text-rose-700 bg-rose-50 border-rose-100",
+      hoverBorder: "hover:border-rose-400 hover:shadow-rose-500/10",
+      accentText: "group-hover:text-rose-800",
+      badgeHover: "group-hover:bg-rose-50 group-hover:text-rose-800 group-hover:border-rose-200",
+      ctaText: "group-hover:text-rose-700",
+      checkColor: "text-rose-600",
       sla: "7–14 Days SLA",
       mandates: [
         "State Drug Controller Wholesale / Retail Drug License (Form 20B/21B)",
@@ -88,7 +108,12 @@ export default function IndustrySolutionsGrid({ onSelectIndustry }: IndustrySolu
       name: "Infrastructure, EPC & Real Estate",
       tagline: "RERA, contractor licenses & statutory labour compliance for builders",
       icon: HardHat,
-      iconColor: "text-slate-800 bg-slate-100 border-slate-200",
+      iconColor: "text-indigo-700 bg-indigo-50 border-indigo-100",
+      hoverBorder: "hover:border-indigo-400 hover:shadow-indigo-500/10",
+      accentText: "group-hover:text-indigo-800",
+      badgeHover: "group-hover:bg-indigo-50 group-hover:text-indigo-800 group-hover:border-indigo-200",
+      ctaText: "group-hover:text-indigo-700",
+      checkColor: "text-indigo-600",
       sla: "5–10 Days SLA",
       mandates: [
         "RERA Promoter & Real Estate Project registration and escrow bank account",
@@ -104,6 +129,11 @@ export default function IndustrySolutionsGrid({ onSelectIndustry }: IndustrySolu
       tagline: "Zero-rated tax benefits and international trade authorizations from DGFT",
       icon: Globe2,
       iconColor: "text-teal-700 bg-teal-50 border-teal-100",
+      hoverBorder: "hover:border-teal-400 hover:shadow-teal-500/10",
+      accentText: "group-hover:text-teal-800",
+      badgeHover: "group-hover:bg-teal-50 group-hover:text-teal-800 group-hover:border-teal-200",
+      ctaText: "group-hover:text-teal-700",
+      checkColor: "text-teal-600",
       sla: "24–48 Hours",
       mandates: [
         "Instant Import Export Code (IEC) issuance from DGFT portal",
@@ -128,14 +158,14 @@ export default function IndustrySolutionsGrid({ onSelectIndustry }: IndustrySolu
     : industries.filter((item) => item.category === activeTab);
 
   return (
-    <section data-reveal className="py-10 md:py-14 bg-[#FAFBFB] border-b border-slate-200/80 font-sans relative overflow-hidden" id="industries">
+    <section className="py-10 md:py-14 bg-[#FAFBFB] border-b border-slate-200/80 font-sans relative overflow-hidden" id="industries">
       {/* Decorative ambient bloom */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-emerald-100/20 blur-3xl rounded-full pointer-events-none" />
 
       <div className="w-full max-w-[1400px] 2xl:max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
+        <div data-reveal="down" className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
           <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-emerald-800 bg-emerald-50/90 px-3.5 py-1 rounded-full border border-emerald-100 mb-3 shadow-2xs">
             <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
             <span>Tailored Industry Blueprints</span>
@@ -149,7 +179,7 @@ export default function IndustrySolutionsGrid({ onSelectIndustry }: IndustrySolu
         </div>
 
         {/* Filter Pills */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-6 sm:mb-8">
+        <div data-reveal="zoom" className="flex flex-wrap items-center justify-center gap-2 mb-6 sm:mb-8">
           {filterTabs.map((tab) => (
             <button
               key={tab.id}
@@ -167,27 +197,32 @@ export default function IndustrySolutionsGrid({ onSelectIndustry }: IndustrySolu
 
         {/* Industry Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
-          {filtered.map((item) => {
+          {filtered.map((item, idx) => {
             const Icon = item.icon;
+            const colPos = idx % 3;
+            const revealDir = colPos === 0 ? "left" : colPos === 1 ? "up" : "right";
+            const staggerClass = `stagger-${colPos + 1}`;
+
             return (
               <div
                 key={item.id}
+                data-reveal={revealDir}
                 onClick={() => onSelectIndustry && onSelectIndustry(item.name)}
-                className="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-7 shadow-xs hover:shadow-xl hover:-translate-y-2 hover:border-emerald-300/80 transition-all duration-300 flex flex-col justify-between group cursor-pointer text-left"
+                className={`bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-7 shadow-xs hover:shadow-xl hover:-translate-y-2 ${item.hoverBorder} transition-all duration-300 flex flex-col justify-between group cursor-pointer text-left ${staggerClass}`}
               >
                 <div>
                   {/* Top Bar: Icon + SLA */}
                   <div className="flex items-center justify-between mb-5">
-                    <div className={`w-12 h-12 rounded-2xl flex items-center justify-center border group-hover:scale-110 group-hover:rotate-1 transition-transform duration-300 ${item.iconColor}`}>
+                    <div className={`w-12 h-12 rounded-2xl flex items-center justify-center border group-hover:scale-110 group-hover:rotate-1 transition-transform duration-300 ${item.iconColor} reveal-icon`}>
                       <Icon className="w-6 h-6" />
                     </div>
-                    <span className="text-xs font-semibold text-slate-700 bg-slate-50 border border-slate-200/80 px-3 py-1 rounded-full group-hover:bg-emerald-50 group-hover:text-emerald-800 group-hover:border-emerald-200 transition-colors">
+                    <span className={`text-xs font-semibold text-slate-700 bg-slate-50 border border-slate-200/80 px-3 py-1 rounded-full ${item.badgeHover} transition-colors`}>
                       {item.sla}
                     </span>
                   </div>
 
                   {/* Title & Tagline */}
-                  <h3 className="font-serif text-xl sm:text-2xl font-normal text-slate-900 group-hover:text-emerald-800 transition-colors">
+                  <h3 className={`font-serif text-xl sm:text-2xl font-normal text-slate-900 ${item.accentText} transition-colors`}>
                     {item.name}
                   </h3>
                   <p className="mt-2 text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
@@ -201,7 +236,7 @@ export default function IndustrySolutionsGrid({ onSelectIndustry }: IndustrySolu
                     </p>
                     {item.mandates.map((m, mIdx) => (
                       <div key={mIdx} className="flex items-start gap-2 text-xs text-slate-700 leading-snug">
-                        <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                        <CheckCircle2 className={`w-4 h-4 ${item.checkColor} shrink-0 mt-0.5`} />
                         <span>{m}</span>
                       </div>
                     ))}
@@ -214,7 +249,7 @@ export default function IndustrySolutionsGrid({ onSelectIndustry }: IndustrySolu
                     &ldquo;{item.advisorQuote}&rdquo;
                   </div>
 
-                  <div className="mt-4 flex items-center justify-between text-xs font-semibold text-slate-900 group-hover:text-emerald-700 transition-colors">
+                  <div className={`mt-4 flex items-center justify-between text-xs font-semibold text-slate-900 ${item.ctaText} transition-colors`}>
                     <span>Deploy Industry Blueprint</span>
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1.5" />
                   </div>

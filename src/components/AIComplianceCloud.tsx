@@ -110,7 +110,7 @@ export default function AIComplianceCloud({ onExplore, onBookDemo }: AIComplianc
   const Icon = current.icon;
 
   return (
-    <section data-reveal className="py-10 md:py-14 bg-[#FAFAFA] border-b border-slate-200/80 font-sans relative overflow-hidden" id="compliance-care">
+    <section className="py-10 md:py-14 bg-[#FAFAFA] border-b border-slate-200/80 font-sans relative overflow-hidden" id="compliance-care">
       {/* Subtle ambient light bloom */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-r from-emerald-100/30 via-teal-100/20 to-blue-100/30 blur-3xl pointer-events-none rounded-full" />
 
@@ -118,7 +118,7 @@ export default function AIComplianceCloud({ onExplore, onBookDemo }: AIComplianc
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
           
           {/* Left Column: Editorial Information */}
-          <div className="lg:col-span-5 space-y-6 text-left">
+          <div data-reveal="left" className="lg:col-span-5 space-y-6 text-left">
             <div>
               <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-emerald-800 bg-emerald-50/90 px-3 py-1 rounded-full border border-emerald-100 mb-3 shadow-2xs">
                 <BadgeCheck className="w-3.5 h-3.5 text-emerald-600" />
@@ -180,10 +180,19 @@ export default function AIComplianceCloud({ onExplore, onBookDemo }: AIComplianc
           </div>
 
           {/* Right Column: Clean Professional Service Dossier with Single-Line Tabs */}
-          <div className="lg:col-span-7">
+          <div data-reveal="right" className="lg:col-span-7">
             
-            {/* 4 Tabs - STRICTLY IN THE SAME LINE using a 4-column grid */}
-            <div className="grid grid-cols-4 gap-1.5 sm:gap-2 mb-4 bg-slate-100/90 p-1.5 rounded-2xl border border-slate-200/80">
+            {/* 4 Tabs with Smooth Sliding Background Pill */}
+            <div className="relative flex mb-4 bg-slate-100/90 p-1.5 rounded-2xl border border-slate-200/80">
+              {/* Animated sliding background pill */}
+              <div
+                className="absolute top-1.5 bottom-1.5 rounded-xl bg-[#0F172A] shadow-xs transition-transform duration-350 ease-[cubic-bezier(0.16,1,0.3,1)] pointer-events-none"
+                style={{
+                  width: "calc((100% - 12px) / 4)",
+                  transform: `translate3d(${activeTab * 100}%, 0, 0)`,
+                }}
+              />
+
               {capabilities.map((cap, idx) => {
                 const TabIcon = cap.icon;
                 const isActive = activeTab === idx;
@@ -192,99 +201,106 @@ export default function AIComplianceCloud({ onExplore, onBookDemo }: AIComplianc
                     key={cap.id}
                     type="button"
                     onClick={() => setActiveTab(idx)}
-                    className={`w-full py-2.5 sm:py-3 px-1 sm:px-3 rounded-xl text-center text-xs sm:text-[13px] font-medium transition-all duration-200 cursor-pointer flex items-center justify-center gap-1.5 whitespace-nowrap ${
+                    className={`relative z-10 w-1/4 py-2.5 sm:py-3 px-1 sm:px-2 rounded-xl text-center text-xs sm:text-[13px] font-medium transition-colors duration-250 cursor-pointer flex items-center justify-center gap-1.5 whitespace-nowrap ${
                       isActive
-                        ? "bg-[#0F172A] text-white shadow-xs scale-[1.01]"
-                        : "text-slate-600 hover:text-slate-900 hover:bg-white/80"
+                        ? "text-white"
+                        : "text-slate-600 hover:text-slate-900"
                     }`}
                   >
-                    <TabIcon className={`w-3.5 h-3.5 shrink-0 hidden sm:inline-block ${isActive ? "text-emerald-400" : "text-slate-400"}`} />
+                    <TabIcon className={`w-3.5 h-3.5 shrink-0 hidden sm:inline-block transition-colors ${isActive ? "text-emerald-400" : "text-slate-400"}`} />
                     <span className="truncate">{cap.tabLabel}</span>
                   </button>
                 );
               })}
             </div>
 
-            {/* Clean White Feature Card with Professional Content */}
-            <div
-              key={activeTab}
-              className="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-8 shadow-sm text-left animate-in fade-in slide-in-from-bottom-2 duration-300"
-            >
-              
-              {/* Card Header with Professional Badges */}
-              <div className="flex flex-wrap items-center justify-between pb-5 border-b border-slate-100 gap-3">
-                <div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-[11px] font-semibold uppercase tracking-wider text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">
-                      {current.badge}
-                    </span>
-                    <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-slate-600 bg-slate-50 border border-slate-200/60 px-2.5 py-0.5 rounded-full">
-                      <UserCheck className="w-3.5 h-3.5 text-emerald-600" />
-                      <span>{current.manager}</span>
-                    </span>
-                  </div>
-                  <h3 className="font-serif text-xl sm:text-2xl font-normal text-slate-900 mt-2">
-                    {current.title}
-                  </h3>
-                </div>
-
-                <div className="text-right">
-                  <p className="font-serif text-2xl sm:text-3xl font-normal text-slate-900">
-                    {current.stat}
-                  </p>
-                  <p className="text-[11px] text-slate-500 font-medium">
-                    {current.statLabel}
-                  </p>
-                </div>
-              </div>
-
-              {/* Service Assurance Banner */}
-              <div className="mt-4 p-3.5 rounded-2xl bg-emerald-50/70 border border-emerald-100 flex items-center justify-between gap-4">
-                <div className="flex items-center gap-2.5 text-xs font-medium text-emerald-900">
-                  <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span>{current.assurance} • Dual Review by Certified Experts</span>
-                </div>
-                <span className="text-[11px] font-semibold text-emerald-800 bg-white px-2.5 py-1 rounded-lg border border-emerald-200/70 shrink-0 shadow-3xs">
-                  Done-For-You Service
-                </span>
-              </div>
-
-              {/* Description */}
-              <p className="mt-4 text-xs sm:text-sm text-slate-700 leading-relaxed font-normal">
-                {current.desc}
-              </p>
-
-              {/* 4 Professional Service Steps */}
-              <div className="mt-6 space-y-2.5">
-                <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">
-                  How Our Experts Handle It for You
-                </p>
-                {current.steps.map((st, sIdx) => (
+            {/* Clean White Feature Card with Smooth Horizontal Slide Transition */}
+            <div className="bg-white rounded-3xl border border-slate-200/90 shadow-sm text-left overflow-hidden">
+              <div
+                className="flex transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                style={{ transform: `translate3d(-${activeTab * 100}%, 0, 0)` }}
+              >
+                {capabilities.map((cap) => (
                   <div
-                    key={sIdx}
-                    className="flex items-start gap-3 p-3 rounded-xl bg-slate-50/80 border border-slate-100 hover:border-slate-200 hover:bg-white hover:shadow-xs transition-all duration-200 group"
+                    key={cap.id}
+                    className="w-full shrink-0 p-6 sm:p-8 flex flex-col justify-between"
                   >
-                    <span className="w-5 h-5 rounded-full bg-emerald-100/80 text-emerald-800 text-[11px] font-semibold flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
-                      {sIdx + 1}
-                    </span>
-                    <span className="text-xs sm:text-[13px] text-slate-800 font-medium leading-relaxed">
-                      {st}
-                    </span>
+                    {/* Card Header with Professional Badges */}
+                    <div className="flex flex-wrap items-center justify-between pb-5 border-b border-slate-100 gap-3">
+                      <div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-[11px] font-semibold uppercase tracking-wider text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">
+                            {cap.badge}
+                          </span>
+                          <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-slate-600 bg-slate-50 border border-slate-200/60 px-2.5 py-0.5 rounded-full">
+                            <UserCheck className="w-3.5 h-3.5 text-emerald-600" />
+                            <span>{cap.manager}</span>
+                          </span>
+                        </div>
+                        <h3 className="font-serif text-xl sm:text-2xl font-normal text-slate-900 mt-2">
+                          {cap.title}
+                        </h3>
+                      </div>
+
+                      <div className="text-right">
+                        <p className="font-serif text-2xl sm:text-3xl font-normal text-slate-900">
+                          {cap.stat}
+                        </p>
+                        <p className="text-[11px] text-slate-500 font-medium">
+                          {cap.statLabel}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Service Assurance Banner */}
+                    <div className="mt-4 p-3.5 rounded-2xl bg-emerald-50/70 border border-emerald-100 flex items-center justify-between gap-4">
+                      <div className="flex items-center gap-2.5 text-xs font-medium text-emerald-900">
+                        <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+                        <span>{cap.assurance} • Dual Review by Certified Experts</span>
+                      </div>
+                      <span className="text-[11px] font-semibold text-emerald-800 bg-white px-2.5 py-1 rounded-lg border border-emerald-200/70 shrink-0 shadow-3xs">
+                        Done-For-You Service
+                      </span>
+                    </div>
+
+                    {/* Description */}
+                    <p className="mt-4 text-xs sm:text-sm text-slate-700 leading-relaxed font-normal">
+                      {cap.desc}
+                    </p>
+
+                    {/* 4 Professional Service Steps */}
+                    <div className="mt-6 space-y-2.5">
+                      <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">
+                        How Our Experts Handle It for You
+                      </p>
+                      {cap.steps.map((st, sIdx) => (
+                        <div
+                          key={sIdx}
+                          className="flex items-start gap-3 p-3 rounded-xl bg-slate-50/80 border border-slate-100 hover:border-slate-200 hover:bg-white hover:shadow-xs transition-all duration-200 group"
+                        >
+                          <span className="w-5 h-5 rounded-full bg-emerald-100/80 text-emerald-800 text-[11px] font-semibold flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                            {sIdx + 1}
+                          </span>
+                          <span className="text-xs sm:text-[13px] text-slate-800 font-medium leading-relaxed">
+                            {st}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Verified Sign-Off Footer */}
+                    <div className="mt-6 pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500">
+                      <span className="flex items-center gap-1.5 font-medium text-slate-700">
+                        <Award className="w-4 h-4 text-emerald-600" />
+                        Dual CA / CS Regulatory Verification Included
+                      </span>
+                      <span className="font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-100/60">
+                        Audit-Ready 365 Days
+                      </span>
+                    </div>
                   </div>
                 ))}
               </div>
-
-              {/* Verified Sign-Off Footer */}
-              <div className="mt-6 pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500">
-                <span className="flex items-center gap-1.5 font-medium text-slate-700">
-                  <Award className="w-4 h-4 text-emerald-600" />
-                  Dual CA / CS Regulatory Verification Included
-                </span>
-                <span className="font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-100/60">
-                  Audit-Ready 365 Days
-                </span>
-              </div>
-
             </div>
 
           </div>

@@ -61,14 +61,14 @@ export default function ComplianceComparison({ onGetStarted }: ComplianceCompari
   ];
 
   return (
-    <section data-reveal className="py-10 md:py-14 bg-[#FAFBFB] border-b border-slate-200/80 font-sans relative overflow-hidden" id="comparison">
+    <section className="py-10 md:py-14 bg-[#FAFBFB] border-b border-slate-200/80 font-sans relative overflow-hidden" id="comparison">
       {/* Dynamic ambient bloom */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[750px] h-[350px] bg-emerald-100/25 blur-3xl rounded-full pointer-events-none" />
 
       <div className="w-full max-w-[1400px] 2xl:max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-7 sm:mb-8">
+        <div data-reveal="down" className="text-center max-w-3xl mx-auto mb-7 sm:mb-8">
           <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-emerald-800 bg-emerald-50/90 px-3.5 py-1 rounded-full border border-emerald-100 mb-3 shadow-2xs">
             <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
             <span>Capability Comparison</span>
@@ -82,7 +82,7 @@ export default function ComplianceComparison({ onGetStarted }: ComplianceCompari
         </div>
 
         {/* Comparison Table Card */}
-        <div className="bg-white rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden">
+        <div data-reveal="up" className="bg-white rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>

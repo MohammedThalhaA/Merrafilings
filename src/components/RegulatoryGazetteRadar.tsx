@@ -79,14 +79,14 @@ export default function RegulatoryGazetteRadar({ onConsultUpdate }: RegulatoryGa
     : circulars.filter((c) => c.category === activeFilter);
 
   return (
-    <section data-reveal className="py-10 md:py-14 bg-white border-b border-slate-200/80 font-sans relative overflow-hidden" id="gazette">
+    <section className="py-10 md:py-14 bg-white border-b border-slate-200/80 font-sans relative overflow-hidden" id="gazette">
       {/* Background glow blooms */}
       <div className="absolute top-1/2 right-1/4 w-[500px] h-[350px] bg-emerald-100/20 rounded-full blur-3xl pointer-events-none" />
 
       <div className="w-full max-w-[1400px] 2xl:max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
+        <div data-reveal="down" className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
           <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-emerald-800 bg-emerald-50/90 px-3.5 py-1 rounded-full border border-emerald-100 mb-3 shadow-2xs">
             <BellRing className="w-3.5 h-3.5 text-emerald-600 animate-bounce" />
             <span>Real-Time Regulatory Intelligence</span>
@@ -100,7 +100,7 @@ export default function RegulatoryGazetteRadar({ onConsultUpdate }: RegulatoryGa
         </div>
 
         {/* Filter Pills */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
+        <div data-reveal="zoom" className="flex flex-wrap items-center justify-center gap-2 mb-10">
           {[
             { id: "all", label: "All Regulatory Circulars" },
             { id: "mca", label: "MCA & ROC" },
@@ -124,11 +124,16 @@ export default function RegulatoryGazetteRadar({ onConsultUpdate }: RegulatoryGa
 
         {/* Gazette Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-7">
-          {filtered.map((item) => (
-            <div
-              key={item.id}
-              className="bg-[#FAFBFB] rounded-3xl border border-slate-200/90 p-6 sm:p-7 shadow-xs hover:shadow-xl hover:-translate-y-1.5 hover:border-emerald-300/80 transition-all duration-300 flex flex-col justify-between group text-left"
-            >
+          {filtered.map((item, idx) => {
+            const revealDir = idx % 2 === 0 ? "left" : "right";
+            const staggerClass = `stagger-${(idx % 2) + 1}`;
+
+            return (
+              <div
+                key={item.id}
+                data-reveal={revealDir}
+                className={`bg-[#FAFBFB] rounded-3xl border border-slate-200/90 p-6 sm:p-7 shadow-xs hover:shadow-xl hover:-translate-y-1.5 hover:border-emerald-300/80 transition-all duration-300 flex flex-col justify-between group text-left ${staggerClass}`}
+              >
               <div>
                 {/* Meta bar */}
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
@@ -181,9 +186,9 @@ export default function RegulatoryGazetteRadar({ onConsultUpdate }: RegulatoryGa
                   <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                 </button>
               </div>
-
             </div>
-          ))}
+          );
+        })}
         </div>
 
       </div>

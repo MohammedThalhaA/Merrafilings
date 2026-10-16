@@ -110,11 +110,11 @@ export default function CustomerStories() {
     : stories.filter((s) => s.category === activeIndustry);
 
   return (
-    <section data-reveal className="py-10 md:py-14 bg-[#FBFBFA] border-b border-slate-200/80">
+    <section className="py-10 md:py-14 bg-[#FBFBFA] border-b border-slate-200/80">
       <div className="w-full max-w-[1400px] 2xl:max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Editorial Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 pb-5 border-b border-slate-200/70 gap-6">
+        <div data-reveal="down" className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 pb-5 border-b border-slate-200/70 gap-6">
           <div className="max-w-2xl">
             <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-emerald-800 bg-emerald-50/80 border border-emerald-100/90 px-3 py-1 rounded-full mb-3">
               <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
@@ -135,7 +135,7 @@ export default function CustomerStories() {
         </div>
 
         {/* Industry Filter Pills */}
-        <div className="flex flex-wrap items-center gap-2 mb-8">
+        <div data-reveal="zoom" className="flex flex-wrap items-center gap-2 mb-8">
           {industries.map((ind) => (
             <button
               key={ind.id}
@@ -153,12 +153,17 @@ export default function CustomerStories() {
 
         {/* 4 Cards Grid - Refined Minimalist Editorial Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {filteredStories.map((story) => (
-            <div
-              key={story.id}
-              onClick={() => setSelectedStory(story)}
-              className="bg-white rounded-2xl border border-slate-200/90 hover:border-slate-300 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col overflow-hidden group cursor-pointer animate-in fade-in zoom-in-95"
-            >
+          {filteredStories.map((story, sIdx) => {
+            const revealDir = sIdx === 0 ? "left" : sIdx === 3 ? "right" : "up";
+            const staggerClass = `stagger-${sIdx + 1}`;
+
+            return (
+              <div
+                key={story.id}
+                data-reveal={revealDir}
+                onClick={() => setSelectedStory(story)}
+                className={`bg-white rounded-2xl border border-slate-200/90 hover:border-slate-300 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col overflow-hidden group cursor-pointer ${staggerClass}`}
+              >
               {/* Image Banner */}
               <div className="relative h-48 w-full overflow-hidden bg-slate-100">
                 <Image
@@ -208,7 +213,8 @@ export default function CustomerStories() {
                 </div>
               </div>
             </div>
-          ))}
+          );
+        })}
         </div>
 
       </div>
