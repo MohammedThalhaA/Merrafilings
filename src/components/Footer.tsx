@@ -79,9 +79,9 @@ export default function Footer() {
   return (
     <footer className="bg-white border-t border-slate-200/80 font-sans">
       {/* Top Banner Contact / Helpline */}
-      <div className="border-b border-slate-200/80 bg-[#FAF9F6] py-5">
-        <div className="w-full max-w-[1400px] 2xl:max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
+      <div className="border-b border-slate-200/80 bg-[#FAF9F6] py-4 sm:py-5">
+        <div className="w-full max-w-[1400px] 2xl:max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-3.5 sm:gap-4">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3">
             {/* Minimalist Logo */}
             <div className="flex items-center gap-2">
               <span className="font-serif text-lg tracking-tight text-slate-900 font-normal">
@@ -96,17 +96,17 @@ export default function Footer() {
             </span>
           </div>
 
-          <div className="flex flex-wrap items-center gap-3 sm:gap-6 text-xs text-slate-600">
-            <a href="tel:18001234567" className="flex items-center gap-1.5 hover:text-slate-900 transition-colors">
-              <Phone className="w-3.5 h-3.5 text-slate-700" />
-              <span className="font-semibold text-slate-900">Toll-Free:</span> 1800 123 4567
+          <div className="flex flex-wrap items-center gap-x-5 sm:gap-x-6 gap-y-2 text-xs text-slate-600">
+            <a href="tel:18001234567" className="inline-flex items-center gap-1.5 hover:text-slate-900 transition-colors py-1">
+              <Phone className="w-3.5 h-3.5 text-slate-700 shrink-0" />
+              <span><span className="font-semibold text-slate-900">Toll-Free:</span> 1800 123 4567</span>
             </a>
-            <a href="mailto:support@merrafilings.com" className="flex items-center gap-1.5 hover:text-slate-900 transition-colors">
-              <Mail className="w-3.5 h-3.5 text-slate-700" />
+            <a href="mailto:support@merrafilings.com" className="inline-flex items-center gap-1.5 hover:text-slate-900 transition-colors py-1">
+              <Mail className="w-3.5 h-3.5 text-slate-700 shrink-0" />
               <span>advisory@merrafilings.com</span>
             </a>
-            <div className="flex items-center gap-1 text-emerald-700 font-medium">
-              <ShieldCheck className="w-3.5 h-3.5" />
+            <div className="inline-flex items-center gap-1.5 text-emerald-700 font-medium py-1">
+              <ShieldCheck className="w-3.5 h-3.5 shrink-0" />
               <span>ISO 27001 Certified Vault</span>
             </div>
           </div>
@@ -114,19 +114,22 @@ export default function Footer() {
       </div>
 
       {/* Main Footer Links Columns */}
-      <div className="w-full max-w-[1400px] 2xl:max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
-        <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 2xl:gap-12">
+      <div className="w-full max-w-[1400px] 2xl:max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-14">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-4 sm:gap-x-8 gap-y-8 sm:gap-y-10">
           {footerColumns.map((col, idx) => (
-            <div key={idx} className="space-y-3.5">
-              <h4 className="text-xs font-semibold text-slate-900 uppercase tracking-wider">
+            <div
+              key={idx}
+              className={`space-y-3 ${idx === 4 ? "col-span-2 md:col-span-1" : ""}`}
+            >
+              <h4 className="text-xs font-semibold text-slate-900 uppercase tracking-wider pb-1 border-b border-slate-100 md:border-0">
                 {col.title}
               </h4>
-              <ul className="space-y-2">
+              <ul className={`space-y-2 ${idx === 4 ? "grid grid-cols-2 md:grid-cols-1 gap-x-4 gap-y-2 space-y-0" : ""}`}>
                 {col.links.map((link, lIdx) => (
                   <li key={lIdx}>
                     <a
                       href={link.href}
-                      className="text-xs sm:text-[13px] text-slate-600 hover:text-slate-900 transition-colors block leading-snug"
+                      className="text-xs sm:text-[13px] text-slate-600 hover:text-slate-900 transition-colors block leading-snug py-0.5"
                     >
                       {link.name}
                     </a>
@@ -138,33 +141,33 @@ export default function Footer() {
         </div>
 
         {/* Office Locations */}
-        <div className="mt-14 pt-8 border-t border-slate-200/80">
-          <p className="text-xs font-semibold text-slate-900 uppercase tracking-wider mb-3">
+        <div className="mt-10 sm:mt-14 pt-8 border-t border-slate-200/80">
+          <p className="text-xs font-semibold text-slate-900 uppercase tracking-wider mb-3.5 text-left">
             Principal Corporate Desks
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs text-slate-600">
-            <div className="p-3.5 rounded-xl bg-[#FAF9F6] border border-slate-200/80 flex items-start gap-2.5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 text-xs text-slate-600">
+            <div className="p-3.5 rounded-xl bg-[#FAF9F6] border border-slate-200/80 flex items-start gap-2.5 text-left">
               <MapPin className="w-4 h-4 text-slate-700 shrink-0 mt-0.5" />
               <div>
                 <strong className="text-slate-900 block font-medium">Bengaluru</strong>
                 Indiranagar, 100 Feet Road, Bengaluru - 560038
               </div>
             </div>
-            <div className="p-3.5 rounded-xl bg-[#FAF9F6] border border-slate-200/80 flex items-start gap-2.5">
+            <div className="p-3.5 rounded-xl bg-[#FAF9F6] border border-slate-200/80 flex items-start gap-2.5 text-left">
               <MapPin className="w-4 h-4 text-slate-700 shrink-0 mt-0.5" />
               <div>
                 <strong className="text-slate-900 block font-medium">Chennai</strong>
                 Mount Road, Anna Salai, Chennai - 600002
               </div>
             </div>
-            <div className="p-3.5 rounded-xl bg-[#FAF9F6] border border-slate-200/80 flex items-start gap-2.5">
+            <div className="p-3.5 rounded-xl bg-[#FAF9F6] border border-slate-200/80 flex items-start gap-2.5 text-left">
               <MapPin className="w-4 h-4 text-slate-700 shrink-0 mt-0.5" />
               <div>
                 <strong className="text-slate-900 block font-medium">Mumbai</strong>
                 Bandra Kurla Complex (BKC), Mumbai - 400051
               </div>
             </div>
-            <div className="p-3.5 rounded-xl bg-[#FAF9F6] border border-slate-200/80 flex items-start gap-2.5">
+            <div className="p-3.5 rounded-xl bg-[#FAF9F6] border border-slate-200/80 flex items-start gap-2.5 text-left">
               <MapPin className="w-4 h-4 text-slate-700 shrink-0 mt-0.5" />
               <div>
                 <strong className="text-slate-900 block font-medium">New Delhi / NCR</strong>
@@ -175,31 +178,31 @@ export default function Footer() {
         </div>
 
         {/* Legal Disclaimer & Copyright */}
-        <div className="mt-10 pt-6 border-t border-slate-200/80 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <p>
+        <div className="mt-8 sm:mt-10 pt-6 border-t border-slate-200/80 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-slate-500 text-left">
+          <p className="text-left">
             © 2026 Merrafilings Technologies India Private Limited. All rights reserved.
           </p>
 
-          <div className="flex flex-wrap items-center gap-5">
-            <a href="#terms" className="hover:text-slate-900 transition-colors">
+          <div className="flex flex-wrap items-center gap-x-4 sm:gap-x-5 gap-y-2">
+            <a href="#terms" className="hover:text-slate-900 transition-colors py-0.5">
               Terms &amp; Conditions
             </a>
-            <a href="#privacy" className="hover:text-slate-900 transition-colors">
+            <a href="#privacy" className="hover:text-slate-900 transition-colors py-0.5">
               Privacy Policy
             </a>
-            <a href="#refund" className="hover:text-slate-900 transition-colors">
+            <a href="#refund" className="hover:text-slate-900 transition-colors py-0.5">
               Refund Policy
             </a>
-            <a href="#security" className="hover:text-slate-900 transition-colors">
+            <a href="#security" className="hover:text-slate-900 transition-colors py-0.5">
               Information Security
             </a>
-            <a href="#disclaimer" className="hover:text-slate-900 transition-colors">
+            <a href="#disclaimer" className="hover:text-slate-900 transition-colors py-0.5">
               Legal Disclaimer
             </a>
           </div>
         </div>
 
-        <div className="mt-4 text-[11px] text-slate-500 leading-relaxed font-normal">
+        <div className="mt-4 text-[11px] text-slate-500 leading-relaxed font-normal text-left pb-4 sm:pb-0">
           Disclaimer: Merrafilings is a corporate services technology advisory platform that connects businesses
           with qualified Chartered Accountants, Company Secretaries, and legal practitioners. Merrafilings
           is not a law firm and does not provide legal advice directly; all statutory filings are drafted and reviewed under the
