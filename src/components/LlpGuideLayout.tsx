@@ -28,6 +28,24 @@ export interface LlpGuideItem {
 
 export const LLP_RELATED_GUIDES: LlpGuideItem[] = [
   {
+    slug: "startup-india-registration-eligibility-process",
+    title: "Startup India Registration Eligibility Criteria and Process Guide",
+    href: "/llp-registration/startup-india-registration-eligibility-process",
+    shortTitle: "Startup India Registration Eligibility",
+  },
+  {
+    slug: "startup-india-portal-registration-online",
+    title: "How to Register on Startup India Portal Online for Business",
+    href: "/llp-registration/startup-india-portal-registration-online",
+    shortTitle: "Register on Startup India Portal",
+  },
+  {
+    slug: "company-registration-in-chennai",
+    title: "Company Registration in Chennai: Register Your Business Online",
+    href: "/llp-registration/company-registration-in-chennai",
+    shortTitle: "Company Registration in Chennai",
+  },
+  {
     slug: "key-documents-for-llp-registration-guide",
     title: "Understanding Key Documents for LLP Registration",
     href: "/llp-registration/key-documents-for-llp-registration-guide",
