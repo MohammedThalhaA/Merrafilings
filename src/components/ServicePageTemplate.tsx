@@ -1762,7 +1762,7 @@ export default function ServicePageTemplate({
         openSearchModal: () => setSearchOpen(true),
       }}
     >
-      <div className="min-h-screen bg-white text-zinc-900 font-sans antialiased selection:bg-[#155EEF] selection:text-white">
+      <div className="min-h-screen bg-white text-zinc-900 font-sans antialiased selection:bg-[#155EEF]/15 selection:text-[#155EEF]">
         {/* 1. Header Navigation */}
         <Navbar onOpenSearch={() => setSearchOpen(true)} onOpenContact={() => openServiceModal()} />
 

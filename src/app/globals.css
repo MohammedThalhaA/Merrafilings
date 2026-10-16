@@ -484,46 +484,44 @@ article b,
   font-weight: 600 !important;
 }
 
-/* Explicit high-contrast white/light text for dark consultation cards and banners */
-[class*="from-[#1F1646]"],
-[class*="from-[#1F1646]"] p,
-[class*="from-[#1F1646]"] p *,
-[class*="from-[#2A1E5C]"],
-[class*="from-[#2A1E5C]"] p,
-[class*="from-[#2A1E5C]"] p *,
-[class*="from-[#0F172A]"],
-[class*="from-[#0F172A]"] p,
-[class*="from-[#0F172A]"] p *,
-[class*="from-slate-900"],
-[class*="from-slate-900"] p,
-[class*="from-slate-900"] p *,
-[class*="bg-slate-900"] p,
-[class*="bg-slate-900"] p *,
-[class*="bg-[#1F1646]"] p,
-[class*="bg-[#1F1646]"] p *,
-[class*="text-white"] p,
-[class*="text-white"] p *,
-article p[class*="text-slate-100"],
-article p[class*="text-slate-200"],
-article p[class*="text-slate-300"],
-p[class*="text-slate-100"],
-p[class*="text-slate-200"],
-p[class*="text-slate-300"],
-p[class*="text-purple-100"],
-p[class*="text-emerald-100"] {
-  color: #E2E8F0 !important;
+/* Explicit high-contrast white/light text strictly scoped to dark consultation banners inside articles */
+article [class*="from-[#1F1646]"] p,
+article [class*="from-[#1F1646]"] p *,
+article [class*="from-[#2A1E5C]"] p,
+article [class*="from-[#2A1E5C]"] p *,
+article [class*="from-[#0F172A]"] p,
+article [class*="from-[#0F172A]"] p *,
+article [class*="from-slate-900"] p,
+article [class*="from-slate-900"] p *,
+article [class*="bg-slate-900"] p,
+article [class*="bg-slate-900"] p *,
+article [class*="bg-[#1F1646]"] p,
+article [class*="bg-[#1F1646]"] p *,
+article p.text-white,
+article p.text-slate-100,
+article p.text-slate-200,
+article p.text-slate-300 {
+  color: #F8FAFC !important;
 }
 
-/* High-contrast typography: ensure text on cards and descriptions has rich, clear readability on light surfaces */
-:not([class*="bg-slate-900"]):not([class*="bg-black"]):not([class*="text-white"]) > .text-slate-600,
-p.text-slate-600:not([class*="text-white"]):not([class*="text-slate-100"]):not([class*="text-slate-200"]),
-span.text-slate-600 {
+/* High-contrast typography: ensure card text, descriptions, and paragraphs are razor-sharp and dark */
+p.text-slate-800,
+.text-slate-800 {
+  color: #1E293B !important;
+}
+
+p.text-slate-700,
+.text-slate-700 {
   color: #334155 !important;
 }
 
-:not([class*="bg-slate-900"]):not([class*="bg-black"]):not([class*="text-white"]) > .text-slate-500,
-p.text-slate-500:not([class*="text-white"]):not([class*="text-slate-100"]):not([class*="text-slate-200"]),
-span.text-slate-500 {
+p.text-slate-600,
+.text-slate-600 {
+  color: #334155 !important;
+}
+
+p.text-slate-500,
+.text-slate-500 {
   color: #475569 !important;
 }
 
