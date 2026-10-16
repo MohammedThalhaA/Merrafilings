@@ -307,12 +307,26 @@ const FORM_FEATURES = [
 ];
 
 const RELATED_GUIDES = [
-  "Comprehensive Guide to Sole Proprietorship Registration in India",
-  "How to Open a Current Bank Account for a Sole Proprietorship",
-  "Udyam MSME Registration for Single-Owner Businesses",
-  "GST Registration Turnover Limits & Exemption Criteria",
-  "Differences Between Sole Proprietorship and One Person Company (OPC)",
-  "Income Tax Filing for Proprietors: ITR-3 vs ITR-4 Presumptive Scheme",
+  {
+    title: "Sole Proprietorship Definition and Features in India",
+    href: "/proprietorship/definition-and-meaning",
+  },
+  {
+    title: "Comprehensive Guide to Proprietorship Registration",
+    href: "/proprietorship/proprietorship-registration-guide-steps-benefits",
+  },
+  {
+    title: "How to Start a Proprietorship: A Step-by-Step Guide",
+    href: "/proprietorship/how-to-start-a-proprietorship-stepbystep-guide",
+  },
+  {
+    title: "Understanding Proprietorship: A Beginner's Guide",
+    href: "/proprietorship/understanding-proprietorship-a-beginners-guide",
+  },
+  {
+    title: "Sole Proprietorship Firm Registration Guide",
+    href: "/proprietorship/sole-proprietorship-firm-registration-guide",
+  },
 ];
 
 function ProprietorGuideContent() {
