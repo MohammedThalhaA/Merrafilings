@@ -142,9 +142,9 @@ export const NAV_CATEGORIES: NavCategory[] = [
       columns: [
         // Column 1 from Screenshot 2
         [
-          { title: "Income Tax E-Filing", href: "#itr-efiling" },
-          { title: "Business ITR Filing", href: "#itr-business" },
-          { title: "Partnership Firm / LLP ITR", href: "#itr-firm" },
+          { title: "Income Tax E-Filing", href: "/income-tax-filing" },
+          { title: "Business ITR Filing", href: "/business-itr-filing" },
+          { title: "Partnership Firm / LLP ITR", href: "/itr-5-form" },
           { title: "Company ITR Filing", href: "#itr-company" },
           { title: "Trust / NGO Tax Filing", href: "#itr-trust" },
         ],
