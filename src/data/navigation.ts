@@ -145,12 +145,12 @@ export const NAV_CATEGORIES: NavCategory[] = [
           { title: "Income Tax E-Filing", href: "/income-tax-filing" },
           { title: "Business ITR Filing", href: "/business-itr-filing" },
           { title: "Partnership Firm / LLP ITR", href: "/itr-5-form" },
-          { title: "Company ITR Filing", href: "#itr-company" },
-          { title: "Trust / NGO Tax Filing", href: "#itr-trust" },
+          { title: "Company ITR Filing", href: "/itr-6-form" },
+          { title: "Trust / NGO Tax Filing", href: "/itr-7-form" },
         ],
         // Column 2 from Screenshot 2
         [
-          { title: "15CA - 15CB Filing", href: "#15ca-15cb" },
+          { title: "15CA - 15CB Filing", href: "/15ca-15cb-filing" },
           { title: "TAN Registration", href: "#tan-reg" },
           { title: "TDS Return Filing", href: "#tds-filing" },
           { title: "Income Tax Notice", href: "#it-notice" },
