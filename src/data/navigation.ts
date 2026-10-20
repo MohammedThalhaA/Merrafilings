@@ -151,10 +151,10 @@ export const NAV_CATEGORIES: NavCategory[] = [
         // Column 2 from Screenshot 2
         [
           { title: "15CA - 15CB Filing", href: "/15ca-15cb-filing" },
-          { title: "TAN Registration", href: "#tan-reg" },
-          { title: "TDS Return Filing", href: "#tds-filing" },
-          { title: "Income Tax Notice", href: "#it-notice" },
-          { title: "Revised ITR Return (ITR-U)", href: "#itr-u" },
+          { title: "TAN Registration", href: "/tan-registration" },
+          { title: "TDS Return Filing", href: "/tds-return-filing" },
+          { title: "Income Tax Notice", href: "/income-tax-notice" },
+          { title: "Revised ITR Return (ITR-U)", href: "/revised-return" },
         ],
       ],
     },
