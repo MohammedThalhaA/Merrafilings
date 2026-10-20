@@ -211,13 +211,24 @@ const ITR5_SCHEDULES = [
 
 const FAQ_COL_1 = [
   {
-    q: "Who is required to file the ITR-5 Form?",
-    a: "The ITR-5 Form is specifically designated for Partnership Firms registered under the Indian Partnership Act 1932, Limited Liability Partnerships (LLPs) registered under the LLP Act 2008, Associations of Persons (AOPs), Bodies of Individuals (BOIs), Cooperative Societies, Local Authorities, Artificial Juridical Persons, and Business Trusts/Investment Funds. It is NOT for individuals, HUFs, or companies.",
+    q: "Who should file the ITR-5 Form?",
+    a: "The ITR-5 Form is meant for partnership firms, Limited Liability Partnerships (LLPs), Bodies of Individuals (BOIs), Associations of Persons (AOPs), estates of deceased individuals, artificial juridical persons, business trusts, investment funds, insolvent individuals, estates, cooperative societies, and local authorities. However, entities falling under Section 139(4A)-(4D) must file ITR-7.",
   },
   {
-    q: "Who is strictly excluded from filing Form ITR-5?",
-    a: "Individual taxpayers (who file ITR-1, ITR-2, or ITR-3), Hindu Undivided Families (ITR-2/ITR-3), Companies registered under Companies Act (who must file ITR-6), and charitable/religious trusts or political parties claiming exemption under Section 11 or required to file under Sections 139(4A), 139(4B), 139(4C), or 139(4D) who must file ITR-7 cannot use Form ITR-5.",
+    q: "What is the due date for filing the ITR-5 Form?",
+    a: "The due date for filing Form ITR-5 depends on whether the entity's accounts need to be audited: (1) 31st July of the Assessment Year for non-audit cases; (2) 31st October for accounts subject to tax audit under Section 44AB; and (3) 30th November if the entity is required to furnish a transfer pricing report in Form No. 3CEB.",
   },
+  {
+    q: "Who cannot use the ITR-5 Form?",
+    a: "The ITR-5 Form is not suitable for individual assesses, Hindu Undivided Families (HUFs), companies (except those claiming exemption under section 11), and taxpayers falling under Sections 139(4A), 139(4B), 139(4C), 139(4D), 139(4E), or 139(4F), who are required to use Form ITR-7.",
+  },
+  {
+    q: "Are any documents required to be attached with the ITR-5 form?",
+    a: "No physical documents are required to be attached with the ITR-5 form. It is an annexure-less electronic return. However, books of accounts, audited financial statements, partnership deeds, and tax audit reports must be preserved and produced before tax authorities if required during scrutiny assessment.",
+  },
+];
+
+const FAQ_COL_2 = [
   {
     q: "What is the income tax rate applicable to Partnership Firms and LLPs in India?",
     a: "Partnership Firms and LLPs are taxed at a flat rate of 30% on their net taxable income. Additionally, a surcharge of 12% is levied if the total taxable income exceeds ₹1 Crore. A Health and Education Cess of 4% applies on the aggregate of income tax and surcharge. The effective tax rate is 31.2% for income up to ₹1 Crore, and 34.944% for income exceeding ₹1 Crore. They may also be subject to Alternate Minimum Tax (AMT) at 18.5% under Section 115JC.",
@@ -226,24 +237,67 @@ const FAQ_COL_1 = [
     q: "What are the rules and statutory limits for partner remuneration under Section 40(b)?",
     a: "Under Section 40(b) of the Income Tax Act, salary, bonus, commission, or remuneration paid to working partners is deductible from the firm's business profits only if authorized by the Partnership Deed or LLP Agreement. The maximum allowable deduction is: (1) On the first ₹3,00,000 of book profit (or in case of a loss): ₹1,50,000 or 90% of book profit, whichever is greater; (2) On the balance of book profit exceeding ₹3,00,000: 60% of book profit.",
   },
-];
-
-const FAQ_COL_2 = [
   {
     q: "Can a Partnership Firm or LLP pay interest on capital to partners, and is it tax deductible?",
     a: "Yes, interest paid to partners on their capital contribution is tax deductible for the firm, provided two conditions are satisfied: (1) Payment must be explicitly authorized by and in accordance with the Partnership Deed / LLP Agreement; and (2) The rate of simple interest cannot exceed 12% per annum. Any interest paid in excess of 12% p.a. is disallowed under Section 40(b) and added back to the firm's taxable profits.",
   },
   {
-    q: "What are the due dates for filing ITR-5 for Assessment Year 2026-27?",
-    a: "The due dates for filing Form ITR-5 are: (1) 31st July 2026 for non-audit firms and LLPs; (2) 31st October 2026 for firms and LLPs subject to tax audit under Section 44AB; (3) 30th November 2026 for entities required to furnish an international or specified domestic transfer pricing report in Form 3CEB; and (4) 31st December 2026 for filing a belated or revised return.",
-  },
-  {
     q: "Is Digital Signature Certificate (DSC) mandatory for filing ITR-5?",
     a: "Yes, for LLPs and any partnership firm whose accounts are required to be audited under Section 44AB, e-verification using a Class 3 Digital Signature Certificate (DSC) of the Designated Partner or Managing Partner is legally mandatory. For non-audit partnership firms, verification can alternatively be done via Electronic Verification Code (EVC) generated through Aadhaar OTP or net banking.",
   },
+];
+
+const FAQ_EXTRA_COL_1 = [
+  {
+    q: "What is the recommended sequence for filling out the ITR-5 Form?",
+    a: "The Income Tax Department recommends filling out Form ITR-5 in the following logical sequence: (1) Part A (General Information and basic schedules); (2) Income Schedules (HP, BP, CG, OS, CFL, AMT); (3) Part B (Computation of Total Income - B-TI and Tax Liability - B-TTI); and (4) Electronic Verification.",
+  },
+  {
+    q: "Can a local authority or cooperative society use the ITR-5 Form?",
+    a: "Yes, local authorities (municipal corporations, district boards) and cooperative societies (urban/rural credit, dairy, housing) can use Form ITR-5 to declare their taxable income and compute tax liability.",
+  },
+  {
+    q: "What if my accounts need to be audited and I miss the due date for filing ITR-5?",
+    a: "Missing the 31st October audit due date attracts a mandatory late fee under Section 234F up to ₹5,000, interest at 1% per month on unpaid taxes under Section 234A, forfeiture of the right to carry forward business and capital losses under Section 80, and a potential penalty under Section 271B equal to 0.5% of turnover (up to ₹1,50,000) for failing to complete the tax audit.",
+  },
+  {
+    q: "Is there any special schedule for reporting foreign income in the ITR-5 Form?",
+    a: "Yes. Schedule FSI (Foreign Sourced Income) is used to report income earned outside India and claim tax relief under Sections 90, 90A, or 91 (Double Taxation Avoidance Agreements - DTAA). Schedule FA is used for declaring foreign assets and beneficial interests.",
+  },
+  {
+    q: "Can a business trust or investment fund use the ITR-5 Form?",
+    a: "Yes. Business trusts (REITs, InvITs) and alternative investment funds (AIFs) registered under SEBI regulations are among the non-corporate entities eligible and required to use Form ITR-5.",
+  },
+  {
+    q: "Can the ITR-5 Form be revised after filing if an omission is detected?",
+    a: "Yes. Under Section 139(5), an entity can file a Revised Return if it discovers any omission or incorrect statement in the original return. The revised return must be filed before 31st December of the Assessment Year, or before assessment completion, whichever is earlier.",
+  },
+];
+
+const FAQ_EXTRA_COL_2 = [
   {
     q: "What is Alternate Minimum Tax (AMT) under Section 115JC for LLPs and Firms?",
-    a: "Alternate Minimum Tax (AMT) applies to non-corporate entities (including LLPs and firms) that claim certain deductions (such as Chapter VI-A heading 'C' deductions like 80-IA, 80-IB, or Section 35AD). If the regular income tax payable is less than 18.5% of 'Adjusted Total Income' plus applicable surcharge and cess, the entity must pay tax computed as AMT. A Form 29C report certified by a Chartered Accountant must be submitted before filing the ITR.",
+    a: "Alternate Minimum Tax (AMT) applies to non-corporate entities claiming profit-linked deductions under Chapter VI-A (Section 80H to 80RRB, except 80P) or Section 35AD / 10AA. If regular tax payable is less than 18.5% of Adjusted Total Income (ATI), AMT applies. A Form 29C report certified by a Chartered Accountant must be submitted before filing the ITR.",
+  },
+  {
+    q: "What is the role of Form No. 3CEB in determining the due date for filing ITR-5?",
+    a: "If an entity has undertaken international transactions or specified domestic transactions with associated enterprises crossing transfer pricing thresholds, it must furnish an Accountant's Report in Form 3CEB. In such cases, the ITR-5 due date is extended to 30th November.",
+  },
+  {
+    q: "Can an estate of a deceased individual or insolvent use Form ITR-5?",
+    a: "Yes, the legal representative or executor administering the estate of a deceased person, as well as an official receiver handling the estate of an insolvent individual, must file Form ITR-5 to report income generated by the estate.",
+  },
+  {
+    q: "What are the common disallowances under Section 43B for Partnership Firms?",
+    a: "Statutory payments such as employer EPF and ESI contributions, GST liabilities, bonus or commission to employees, and interest on bank borrowings are deductible only if actually paid on or before the due date for filing the ITR under Section 139(1). Under Section 43B(h), dues to MSMEs must be paid within 15/45 days.",
+  },
+  {
+    q: "Can an LLP opt for the Presumptive Taxation Scheme under Section 44AD?",
+    a: "No. Limited Liability Partnerships (LLPs) are explicitly excluded from the presumptive taxation scheme under Sections 44AD and 44ADA. Every LLP must maintain formal books of account and file Form ITR-5 regardless of its business turnover.",
+  },
+  {
+    q: "Why choose Merrafilings for ITR-5 filing and compliance?",
+    a: "Merrafilings pairs your firm with seasoned Chartered Accountants who maximize allowable partner salary deductions under Section 40(b), calculate Section 32 depreciation, ensure accurate AMT and Form 29C certifications, complete 100% AIS/26AS reconciliations, and handle tax notices end-to-end.",
   },
 ];
 
@@ -433,7 +487,7 @@ function Itr5GuideContent() {
           </div>
 
           <div className="p-5 rounded-2xl border border-purple-200/90 bg-white shadow-2xs">
-            <div className="p-2.5 rounded-xl bg-purple-50 text-purple-600 border border-purple-100 mb-3 w-fit">
+            <div className="p-2.5 rounded-xl bg-purple-100 text-purple-700 border border-purple-200 mb-3 w-fit">
               <Coins className="w-5 h-5" />
             </div>
             <h3 className="text-base font-bold text-slate-900 mb-1">12% Surcharge</h3>
@@ -622,6 +676,8 @@ export default function Itr5FormPage() {
       relatedGuides={RELATED_GUIDES}
       faqCol1={FAQ_COL_1}
       faqCol2={FAQ_COL_2}
+      faqExtraCol1={FAQ_EXTRA_COL_1}
+      faqExtraCol2={FAQ_EXTRA_COL_2}
       faqSubtitle="Frequently asked questions about Form ITR-5 eligibility, flat 30% tax rates, Section 40(b) partner remuneration, and Section 44AB audits."
       relatedServicesTags={RELATED_SERVICES_TAGS}
       popularSearchesTags={POPULAR_SEARCHES_TAGS}

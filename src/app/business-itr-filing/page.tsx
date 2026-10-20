@@ -188,6 +188,15 @@ const AUDIT_THRESHOLDS = [
   },
 ];
 
+const COMMON_MISTAKES = [
+  { title: "Incorrect ITR Form Selection", desc: "Using ITR-1 or ITR-2 when having proprietary business income, or filing ITR-4 for an LLP which is legally prohibited." },
+  { title: "GST vs. ITR Turnover Mismatch", desc: "Failing to reconcile annual gross turnover reported across monthly GSTR-1 returns with the sales figures declared in the ITR." },
+  { title: "Unclaimed Form 26AS TDS Credits", desc: "Failing to cross-verify customer and client TDS deductions in Form 26AS/AIS, leading to unclaimed tax credits and higher tax dues." },
+  { title: "Ignoring Advance Tax Installments", desc: "Failing to pay 15%, 45%, 75%, and 100% advance tax on time, which triggers mandatory penal interest under Sections 234B and 234C." },
+  { title: "Disallowance of MSME Dues (Sec 43B(h))", desc: "Failing to clear payments to registered micro and small enterprises within 15/45 days, causing automatic disallowance and higher tax." },
+  { title: "Failure to Conduct Mandatory Audit", desc: "Crossing turnover thresholds without obtaining a Tax Audit Report in Form 3CD, inviting steep penalties under Section 271B." },
+];
+
 const FAQ_COL_1 = [
   {
     q: "Is it mandatory for a business or company to file an Income Tax Return if it incurred a loss?",
@@ -223,6 +232,44 @@ const FAQ_COL_2 = [
   {
     q: "What consequences can company directors face for non-filing of corporate ITR?",
     a: "Non-filing of corporate tax returns can lead to severe regulatory consequences: corporate bank accounts may be frozen, the company will be disqualified from government procurement tenders, and under severe prosecution provisions of Section 276CC, defaulting directors risk penalties and imprisonment of up to 7 years.",
+  },
+];
+
+const FAQ_EXTRA_COL_1 = [
+  {
+    q: "Which ITR form must a Private Limited Company or Public Company file?",
+    a: "All domestic and foreign companies registered under the Companies Act must file Form ITR-6 electronically using a Digital Signature Certificate (DSC). The only exception is companies claiming tax exemptions under Section 11 (charitable/religious institutions), which must file Form ITR-7.",
+  },
+  {
+    q: "What is the corporate tax rate for domestic companies in India?",
+    a: "Under Section 115BAA, domestic companies can opt for a concessional base tax rate of 22% (effective tax rate of 25.17% including 10% surcharge and 4% cess) subject to foregoing certain exemptions/incentives. For companies not opting for Section 115BAA, the base tax rate is 25% if annual turnover was up to ₹400 Crores, or 30% if turnover exceeded ₹400 Crores, plus applicable surcharge and 4% cess.",
+  },
+  {
+    q: "How to reconcile GST turnover with income tax return turnover?",
+    a: "Businesses must cross-verify the aggregate turnover reported across all 12 monthly GSTR-1 and GSTR-3B filings with the gross revenue shown in the audited Profit and Loss account and ITR Schedule BP. Any variances due to unbilled revenue, advance receipts, credit notes, or financial year-end adjustments should be documented with a detailed reconciliation sheet to avoid scrutiny notices.",
+  },
+  {
+    q: "Can a business file a revised return to correct inadvertent errors?",
+    a: "Yes. Under Section 139(5), a business can file a Revised Return if it discovers any omission or wrong statement in the original return. The revised return must be filed before December 31 of the relevant Assessment Year, or before the completion of the assessment, whichever is earlier.",
+  },
+];
+
+const FAQ_EXTRA_COL_2 = [
+  {
+    q: "What is Section 43B(h) regarding payments to MSMEs?",
+    a: "Introduced to protect micro and small enterprises, Section 43B(h) mandates that any sum payable by a business to a registered Micro or Small enterprise beyond the time limit specified in the MSMED Act (15 days where no written agreement exists, or maximum 45 days under written contract) will be disallowed as an expense in that financial year and added back to taxable income.",
+  },
+  {
+    q: "Is TAN registration mandatory before deducting TDS on business payments?",
+    a: "Yes. Every business entity (companies, LLPs, and audited proprietary firms) that is required to deduct tax at source (TDS) under Sections 194C (contractors), 194J (professional fees), 194I (rent), or 194Q (purchase of goods) must obtain a 10-digit Tax Deduction and Collection Account Number (TAN) from the IT Department before making deductions.",
+  },
+  {
+    q: "What are Form 15CA and Form 15CB for foreign remittances?",
+    a: "Form 15CA is an online declaration filed by the remitter before sending funds overseas. Form 15CB is a statutory certificate issued by an independent Chartered Accountant certifying the nature of the remittance, applicability of withholding tax (TDS), and Double Taxation Avoidance Agreement (DTAA) provisions.",
+  },
+  {
+    q: "How does Merrafilings assist corporate and firm clients with tax filings?",
+    a: "Merrafilings assigns dedicated senior Chartered Accountants to compile statutory financial statements, optimize Section 40(b) partner remuneration, review fixed asset depreciation under Section 32, file Form 3CB-3CD tax audit reports, reconcile GST vs. ITR turnover, and provide continuous scrutiny notice defense.",
   },
 ];
 
@@ -399,10 +446,86 @@ function BusinessItrGuideContent() {
         </div>
       </section>
 
-      {/* Section 5: Essential Financial Records Checklist */}
+      {/* Section 5: Advance Tax Schedule & Deadlines */}
       <section className="space-y-5 pt-6 border-t border-slate-100">
         <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
-          5. Mandatory Financial Documentation Checklist for Businesses
+          5. Advance Tax Payment Schedule &amp; Filing Calendar
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {/* Advance Tax Installments */}
+          <div className="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-2xs">
+            <div className="bg-slate-50 px-4 py-3 border-b border-slate-200 font-bold text-slate-900 text-sm">
+              Quarterly Advance Tax Payment Slabs
+            </div>
+            <div className="p-4 space-y-3 text-xs sm:text-[13px] text-slate-700">
+              <div className="flex justify-between pb-2 border-b border-slate-100">
+                <span>1st Installment (On or before June 15):</span>
+                <strong className="text-blue-700 font-semibold">15% of estimated tax</strong>
+              </div>
+              <div className="flex justify-between pb-2 border-b border-slate-100">
+                <span>2nd Installment (On or before Sept 15):</span>
+                <strong className="text-emerald-700 font-semibold">45% of estimated tax</strong>
+              </div>
+              <div className="flex justify-between pb-2 border-b border-slate-100">
+                <span>3rd Installment (On or before Dec 15):</span>
+                <strong className="text-purple-700 font-semibold">75% of estimated tax</strong>
+              </div>
+              <div className="flex justify-between">
+                <span>4th Installment (On or before March 15):</span>
+                <strong className="text-amber-700 font-semibold">100% of estimated tax</strong>
+              </div>
+            </div>
+          </div>
+
+          {/* Business Filing Calendar */}
+          <div className="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-2xs">
+            <div className="bg-slate-50 px-4 py-3 border-b border-slate-200 font-bold text-slate-900 text-sm">
+              Official Business ITR Filing Due Dates
+            </div>
+            <div className="p-4 space-y-3 text-xs sm:text-[13px] text-slate-700">
+              <div className="flex justify-between pb-2 border-b border-slate-100">
+                <span>Proprietorships &amp; Firms (Non-Audit):</span>
+                <strong className="text-blue-700 font-semibold">31st July 2026</strong>
+              </div>
+              <div className="flex justify-between pb-2 border-b border-slate-100">
+                <span>Tax Audit Entities (Firms, LLPs, Companies):</span>
+                <strong className="text-purple-700 font-semibold">31st October 2026</strong>
+              </div>
+              <div className="flex justify-between pb-2 border-b border-slate-100">
+                <span>Transfer Pricing Cases (Form 3CEB):</span>
+                <strong className="text-amber-700 font-semibold">30th November 2026</strong>
+              </div>
+              <div className="flex justify-between">
+                <span>Belated &amp; Revised Business Returns:</span>
+                <strong className="text-slate-900 font-semibold">31st December 2026</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 6: Common Mistakes to Avoid */}
+      <section className="space-y-5 pt-6 border-t border-slate-100">
+        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+          6. Critical Mistakes to Avoid in Business ITR Filing
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {COMMON_MISTAKES.map((item, idx) => (
+            <div key={idx} className="p-4.5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs">
+              <div className="flex items-center gap-2 mb-2 text-rose-600 font-bold text-xs">
+                <AlertCircle className="w-4 h-4 shrink-0" />
+                <span>{item.title}</span>
+              </div>
+              <p className="text-xs text-slate-600 leading-relaxed font-normal">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Section 7: Essential Financial Records Checklist */}
+      <section className="space-y-5 pt-6 border-t border-slate-100">
+        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+          7. Mandatory Financial Documentation Checklist for Businesses
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs sm:text-[13px] text-slate-700">
           <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs">
@@ -466,6 +589,8 @@ export default function BusinessItrFilingPage() {
       relatedGuides={RELATED_GUIDES}
       faqCol1={FAQ_COL_1}
       faqCol2={FAQ_COL_2}
+      faqExtraCol1={FAQ_EXTRA_COL_1}
+      faqExtraCol2={FAQ_EXTRA_COL_2}
       faqSubtitle="Frequently asked questions about business tax filing, Section 44AD/ADA presumptive rules, Section 44AB audit thresholds, and corporate tax rates."
       relatedServicesTags={RELATED_SERVICES_TAGS}
       popularSearchesTags={POPULAR_SEARCHES_TAGS}
