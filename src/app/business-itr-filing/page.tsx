@@ -275,20 +275,24 @@ const FAQ_EXTRA_COL_2 = [
 
 const RELATED_GUIDES = [
   {
-    title: "ITR-5 Form for Partnerships & LLPs",
-    href: "/itr-5-form",
+    title: "ITR Filing for Small Business Online in India",
+    href: "/business-itr-filing/itr-for-small-business",
   },
   {
-    title: "Income Tax Return Online (Individual & HNW)",
-    href: "/income-tax-filing",
+    title: "Presumptive Taxation Scheme for Business in India",
+    href: "/business-itr-filing/presumptive-taxation-scheme-business",
   },
   {
-    title: "Understanding GST Return Filings",
-    href: "/llp-registration/understand-gst-return-filings-a-comprehensive-guide",
+    title: "ITR for Business Income Filing in India Online",
+    href: "/business-itr-filing/itr-for-business-income",
   },
   {
-    title: "Company Registration in Chennai",
-    href: "/llp-registration/company-registration-in-chennai",
+    title: "Business ITR Form Types for Every Entity in India",
+    href: "/business-itr-filing/business-itr-types",
+  },
+  {
+    title: "Business ITR Filing Process Guide for Success",
+    href: "/business-itr-filing/business-tax-filing-guide-for-success",
   },
 ];
 
