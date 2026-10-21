@@ -378,20 +378,24 @@ const FAQ_EXTRA_COL_2 = [
 
 const RELATED_GUIDES = [
   {
-    title: "Business ITR Filing Online in India",
-    href: "/business-itr-filing",
+    title: "₹12 LPA Salary: Tax Calculation Explained with Real Examples",
+    href: "/income-tax-filing/12-lpa-salary-tax-calculation-guide",
   },
   {
-    title: "ITR-5 Form for Partnerships & LLPs",
-    href: "/itr-5-form",
+    title: "Documents Required for Company ITR Filing Online",
+    href: "/income-tax-filing/documents-needed-for-online-itr-filing",
   },
   {
-    title: "Understanding GST Return Filings",
-    href: "/llp-registration/understand-gst-return-filings-a-comprehensive-guide",
+    title: "Income Tax Return Filing Simplified",
+    href: "/income-tax-filing/income-tax-return-filing-simplified",
   },
   {
-    title: "Step-by-Step LLP Registration Guide",
-    href: "/llp-registration/llp-registration-guide-comprehensive-steps",
+    title: "New Due Dates for Filing ITR for FY 2025-26 (AY 2026-27)",
+    href: "/income-tax-filing/new-due-date-for-filing-itr-2025-26",
+  },
+  {
+    title: "Land Tax Online: Simplify and Save on Your Property Taxes",
+    href: "/income-tax-filing/land-tax-online-effortless-tax-management",
   },
 ];
 
