@@ -163,13 +163,13 @@ export default function DocumentsNeededForOnlineItrFilingPage() {
     >
       {/* Intro Overview */}
       <section className="space-y-4">
-        <p className="text-base sm:text-lg leading-relaxed text-slate-900 font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           Filing corporate income tax returns (<strong className="font-semibold text-slate-950">Form ITR-6</strong>) is
           a rigorous compliance exercise governed by strict statutory rules. Entering the Income Tax e-filing portal
           without pre-compiling your financial records, audit certificates, and director authorizations leads to portal timeouts,
           defective returns, and expensive penalty notices.
         </p>
-        <p className="text-sm sm:text-base text-slate-800 leading-relaxed font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           Whether you manage a private limited enterprise, an OPC, or an unlisted public company, this comprehensive checklist
           outlines every mandatory document, statutory audit schedule, and reconciliation report required for seamless online
           corporate tax filing in India.
@@ -178,10 +178,10 @@ export default function DocumentsNeededForOnlineItrFilingPage() {
 
       {/* Section 1: Why Accurate Documentation Matters */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
-        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
           1. Why Comprehensive Documentation is Vital for Corporate ITR
         </h2>
-        <p className="text-sm sm:text-base leading-relaxed text-slate-800 font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           Corporate tax filings undergo automated data validation across multiple government databases including MCA, GSTN,
           and banking networks. Maintaining flawless documentation guarantees:
         </p>
@@ -190,27 +190,27 @@ export default function DocumentsNeededForOnlineItrFilingPage() {
           <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/50">
             <ShieldCheck className="w-5 h-5 text-emerald-600 mb-2" />
             <h3 className="text-sm font-semibold text-slate-900 mb-1">Zero Defective Notices</h3>
-            <p className="text-xs text-slate-600">Prevents Section 139(9) notices arising from unmatched turnover or missing tax audit UDINs.</p>
+            <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">Prevents Section 139(9) notices arising from unmatched turnover or missing tax audit UDINs.</p>
           </div>
           <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/50">
             <CheckCircle2 className="w-5 h-5 text-blue-600 mb-2" />
             <h3 className="text-sm font-semibold text-slate-900 mb-1">Uninterrupted Loss Carry-Forward</h3>
-            <p className="text-xs text-slate-600">Ensures past business losses and unabsorbed depreciation can be legally offset against future profits.</p>
+            <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">Ensures past business losses and unabsorbed depreciation can be legally offset against future profits.</p>
           </div>
           <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/50">
             <Receipt className="w-5 h-5 text-purple-600 mb-2" />
             <h3 className="text-sm font-semibold text-slate-900 mb-1">Instant TDS / TCS Refunds</h3>
-            <p className="text-xs text-slate-600">Facilitates prompt verification and release of excess withholding taxes directly into corporate accounts.</p>
+            <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">Facilitates prompt verification and release of excess withholding taxes directly into corporate accounts.</p>
           </div>
         </div>
       </section>
 
       {/* Section 2: 7 Essential Documents */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
-        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
           2. The 7 Essential Primary Documents for Company ITR
         </h2>
-        <p className="text-sm sm:text-base leading-relaxed text-slate-800 font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           Ensure each of the following primary corporate records is verified and accessible before initiating Form ITR-6:
         </p>
 
@@ -247,35 +247,35 @@ export default function DocumentsNeededForOnlineItrFilingPage() {
 
       {/* Section 3: Additional Documentation for Special Cases */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
-        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
           3. Specialized Schedules & Auxiliary Documentation
         </h2>
-        <p className="text-sm sm:text-base leading-relaxed text-slate-800 font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           Depending on your company’s commercial footprint, several additional records must be maintained:
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
           <div className="p-4 rounded-xl border border-slate-200 bg-white">
             <h3 className="text-sm font-semibold text-slate-900 mb-1">Transfer Pricing Audit (Form 3CEB)</h3>
-            <p className="text-xs text-slate-600 leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
               Required if the company transacted with international associated enterprises or executed specified domestic transactions under Section 92E.
             </p>
           </div>
           <div className="p-4 rounded-xl border border-slate-200 bg-white">
             <h3 className="text-sm font-semibold text-slate-900 mb-1">DPIIT & Section 80-IAC Tax Exemption</h3>
-            <p className="text-xs text-slate-600 leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
               Recognized eligible startups claiming a 3-consecutive-year 100% tax holiday must furnish Inter-Ministerial Board (IMB) approval certificates.
             </p>
           </div>
           <div className="p-4 rounded-xl border border-slate-200 bg-white">
             <h3 className="text-sm font-semibold text-slate-900 mb-1">Schedule FA (Foreign Assets & Accounts)</h3>
-            <p className="text-xs text-slate-600 leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
               Mandatory disclosures regarding foreign depository accounts, foreign equity holdings, custodial accounts, and overseas subsidiary shares.
             </p>
           </div>
           <div className="p-4 rounded-xl border border-slate-200 bg-white">
             <h3 className="text-sm font-semibold text-slate-900 mb-1">Related Party Disclosures (Section 40A(2))</h3>
-            <p className="text-xs text-slate-600 leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
               Itemized ledgers of all remuneration, interest payments, commissions, and leases paid to directors or their relatives to demonstrate arms-length pricing.
             </p>
           </div>
@@ -284,10 +284,10 @@ export default function DocumentsNeededForOnlineItrFilingPage() {
 
       {/* Section 4: Step-by-Step Filing Workflow */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
-        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
           4. Step-by-Step Company Online ITR Filing Procedure
         </h2>
-        <p className="text-sm sm:text-base leading-relaxed text-slate-800 font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           Follow this structured four-stage workflow to execute an error-free corporate return:
         </p>
 
@@ -298,7 +298,7 @@ export default function DocumentsNeededForOnlineItrFilingPage() {
                 {step.step}
               </span>
               <h3 className="text-sm font-semibold text-slate-900 mb-1">{step.title}</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">{step.desc}</p>
+              <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">{step.desc}</p>
             </div>
           ))}
         </div>
@@ -306,7 +306,7 @@ export default function DocumentsNeededForOnlineItrFilingPage() {
 
       {/* Section 5: Common Pitfalls to Avoid */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
-        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
           5. Critical Mistakes to Avoid in Corporate Tax Filings
         </h2>
         <div className="space-y-3">
@@ -314,7 +314,7 @@ export default function DocumentsNeededForOnlineItrFilingPage() {
             <AlertTriangle className="w-5 h-5 text-rose-600 shrink-0 mt-0.5" />
             <div>
               <h3 className="text-xs sm:text-sm font-semibold text-rose-900">Unreconciled GST Turnover and P&L Revenue</h3>
-              <p className="text-xs text-slate-700 mt-0.5 leading-relaxed">
+              <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal mt-0.5 leading-relaxed">
                 Failing to explain variances between revenue in financial accounts and gross outward supplies reported in GSTR-9 triggers automated scrutiny inquiries under Section 133(6).
               </p>
             </div>
@@ -324,7 +324,7 @@ export default function DocumentsNeededForOnlineItrFilingPage() {
             <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
             <div>
               <h3 className="text-xs sm:text-sm font-semibold text-amber-900">Attempting Aadhaar OTP Verification</h3>
-              <p className="text-xs text-slate-700 mt-0.5 leading-relaxed">
+              <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal mt-0.5 leading-relaxed">
                 Directors often attempt to verify company returns using mobile OTP. For corporate entities, e-verification via Class 3 DSC registered in the director's profile is compulsory.
               </p>
             </div>
@@ -336,7 +336,7 @@ export default function DocumentsNeededForOnlineItrFilingPage() {
       <section className="space-y-4 pt-6 border-t border-slate-100">
         <div className="flex items-center gap-2">
           <HelpCircle className="w-5 h-5 text-emerald-600" />
-          <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+          <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
             Frequently Asked Questions
           </h2>
         </div>
@@ -367,7 +367,7 @@ export default function DocumentsNeededForOnlineItrFilingPage() {
                   />
                 </button>
                 {isOpen && (
-                  <div className="px-4 pb-4 pt-1 text-xs text-slate-700 leading-relaxed border-t border-slate-100 bg-slate-50/40">
+                  <div className="px-4 pb-4 pt-1 text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal border-t border-slate-100 bg-slate-50/40">
                     {faq.a}
                   </div>
                 )}

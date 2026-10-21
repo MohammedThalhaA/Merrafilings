@@ -161,13 +161,13 @@ export default function LandTaxOnlineEffortlessTaxManagementPage() {
     >
       {/* Intro Overview */}
       <section className="space-y-4">
-        <p className="text-base sm:text-lg leading-relaxed text-slate-900 font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           In an era of digitized governance, managing real estate assets has transitioned from bureaucratic municipal offices
           to seamless web portals. <strong className="font-semibold text-slate-950">Land Tax Online</strong> enables
           property owners, real estate developers, and individual investors to evaluate annual tax assessments, settle dues,
           and secure verified property tax receipts in minutes.
         </p>
-        <p className="text-sm sm:text-base text-slate-800 leading-relaxed font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           Whether you own vacant residential plots, commercial development land, or ancestral parcels, this comprehensive
           handbook explains how land tax is assessed, outlines the direct advantages of digital remittance, and highlights
           critical income tax implications under Sections 50C and 54F of the Income Tax Act.
@@ -176,35 +176,35 @@ export default function LandTaxOnlineEffortlessTaxManagementPage() {
 
       {/* Section 1: Fundamentals of Land Tax */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
-        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
           1. Understanding Land Tax: The Legal &amp; Revenue Basics
         </h2>
-        <p className="text-sm sm:text-base leading-relaxed text-slate-800 font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           Land tax is an ad-valorem or unit-area levy imposed by state municipal corporations and urban local bodies (ULBs):
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mt-3">
           <div className="p-4 rounded-xl border border-slate-200 bg-white">
             <h3 className="text-sm font-semibold text-slate-900 mb-1">Who Must Pay?</h3>
-            <p className="text-xs text-slate-600 leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
               Every individual, corporate entity, or HUF holding registered ownership title, Patta, or mutation rights to taxable land parcels within municipal limits.
             </p>
           </div>
           <div className="p-4 rounded-xl border border-slate-200 bg-white">
             <h3 className="text-sm font-semibold text-slate-900 mb-1">What is Taxed?</h3>
-            <p className="text-xs text-slate-600 leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
               The underlying land area, assessed either on its capital circle rate value or unit area rate (UAR), independent of building constructions.
             </p>
           </div>
           <div className="p-4 rounded-xl border border-slate-200 bg-white">
             <h3 className="text-sm font-semibold text-slate-900 mb-1">How are Rates Determined?</h3>
-            <p className="text-xs text-slate-600 leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
               Based on geographic zone classifications (Tier 1/2/3), street width frontage, developmental infrastructure, and commercial vs. residential zoning.
             </p>
           </div>
           <div className="p-4 rounded-xl border border-slate-200 bg-white">
             <h3 className="text-sm font-semibold text-slate-900 mb-1">Statutory Exemptions</h3>
-            <p className="text-xs text-slate-600 leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
               Land parcels exclusively dedicated to public places of worship, registered charitable trust activities, public burial grounds, or active rural cultivation.
             </p>
           </div>
@@ -213,10 +213,10 @@ export default function LandTaxOnlineEffortlessTaxManagementPage() {
 
       {/* Section 2: Advantages of Managing Land Tax Online */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
-        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
           2. Four Core Advantages of Paying Land Tax Online
         </h2>
-        <p className="text-sm sm:text-base leading-relaxed text-slate-800 font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           Switching to digital municipal channels delivers significant time and financial dividends:
         </p>
 
@@ -237,7 +237,7 @@ export default function LandTaxOnlineEffortlessTaxManagementPage() {
               <h3 className="text-sm font-semibold text-slate-900 group-hover:text-emerald-700 transition-colors mb-1">
                 {item.title}
               </h3>
-              <p className="text-xs text-slate-600 leading-relaxed">{item.desc}</p>
+              <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -245,10 +245,10 @@ export default function LandTaxOnlineEffortlessTaxManagementPage() {
 
       {/* Section 3: Step-by-Step Online Payment Workflow */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
-        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
           3. How to Pay Land Tax Online: A 4-Step Walkthrough
         </h2>
-        <p className="text-sm sm:text-base leading-relaxed text-slate-800 font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           Follow this standardized procedure across municipal revenue portals:
         </p>
 
@@ -259,7 +259,7 @@ export default function LandTaxOnlineEffortlessTaxManagementPage() {
                 {step.step}
               </span>
               <h3 className="text-sm font-semibold text-slate-900 mb-1">{step.title}</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">{step.desc}</p>
+              <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">{step.desc}</p>
             </div>
           ))}
         </div>
@@ -267,10 +267,10 @@ export default function LandTaxOnlineEffortlessTaxManagementPage() {
 
       {/* Section 4: Income Tax Intersection */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
-        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
           4. Income Tax Implications on Land Ownership &amp; Disposal
         </h2>
-        <p className="text-sm sm:text-base leading-relaxed text-slate-800 font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           Land ownership directly impacts your direct tax returns under the Income Tax Act, 1961:
         </p>
 
@@ -281,7 +281,7 @@ export default function LandTaxOnlineEffortlessTaxManagementPage() {
                 {item.section}
               </span>
               <h3 className="text-sm font-semibold text-slate-900 mb-1">{item.title}</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">{item.desc}</p>
+              <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -289,7 +289,7 @@ export default function LandTaxOnlineEffortlessTaxManagementPage() {
 
       {/* Section 5: Troubleshooting Challenges */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
-        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
           5. Common Online Land Tax Challenges &amp; Solutions
         </h2>
         <div className="space-y-3">
@@ -297,7 +297,7 @@ export default function LandTaxOnlineEffortlessTaxManagementPage() {
             <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
             <div>
               <h3 className="text-xs sm:text-sm font-semibold text-slate-900">Payment Gateway Drops &amp; Delayed Receipts</h3>
-              <p className="text-xs text-slate-700 mt-0.5 leading-relaxed">
+              <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal mt-0.5 leading-relaxed">
                 If money is deducted without generating a receipt, check your bank statement for a transaction reference number (UTR). Allow 24 hours for automatic reconciliation before initiating a fresh payment.
               </p>
             </div>
@@ -307,7 +307,7 @@ export default function LandTaxOnlineEffortlessTaxManagementPage() {
             <AlertTriangle className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
             <div>
               <h3 className="text-xs sm:text-sm font-semibold text-slate-900">Incorrect Property Zone or Extent</h3>
-              <p className="text-xs text-slate-700 mt-0.5 leading-relaxed">
+              <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal mt-0.5 leading-relaxed">
                 If the municipal system misclassifies your plot into an expensive commercial zone, submit an online grievance accompanied by your approved layout sanction to recalibrate the demand.
               </p>
             </div>
@@ -319,7 +319,7 @@ export default function LandTaxOnlineEffortlessTaxManagementPage() {
       <section className="space-y-4 pt-6 border-t border-slate-100">
         <div className="flex items-center gap-2">
           <HelpCircle className="w-5 h-5 text-emerald-600" />
-          <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+          <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
             Frequently Asked Questions
           </h2>
         </div>
@@ -350,7 +350,7 @@ export default function LandTaxOnlineEffortlessTaxManagementPage() {
                   />
                 </button>
                 {isOpen && (
-                  <div className="px-4 pb-4 pt-1 text-xs text-slate-700 leading-relaxed border-t border-slate-100 bg-slate-50/40">
+                  <div className="px-4 pb-4 pt-1 text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal border-t border-slate-100 bg-slate-50/40">
                     {faq.a}
                   </div>
                 )}

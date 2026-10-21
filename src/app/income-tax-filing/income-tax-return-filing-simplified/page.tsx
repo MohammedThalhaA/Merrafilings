@@ -172,12 +172,12 @@ export default function IncomeTaxReturnFilingSimplifiedPage() {
     >
       {/* Intro Overview */}
       <section className="space-y-4">
-        <p className="text-base sm:text-lg leading-relaxed text-slate-900 font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           Filing your <strong className="font-semibold text-slate-950">Income Tax Return (ITR)</strong> is often perceived
           as a daunting annual chore. However, with modern digitized tax administration, pre-filled financial datasets,
           and automated verification pipelines, filing your annual return is simpler and more advantageous than ever before.
         </p>
-        <p className="text-sm sm:text-base text-slate-800 leading-relaxed font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           Whether you are a first-time salaried employee, an active stock market investor, or an independent consultant,
           this simplified guide decodes core statutory obligations, explains which ITR form fits your financial profile,
           highlights recent portal revisions, and demonstrates how to maximize your lawful tax refunds.
@@ -186,10 +186,10 @@ export default function IncomeTaxReturnFilingSimplifiedPage() {
 
       {/* Section 1: 4 Core Benefits */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
-        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
           1. Understanding the Importance &amp; Strategic Benefits of Filing ITR
         </h2>
-        <p className="text-sm sm:text-base leading-relaxed text-slate-800 font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           Filing an income tax return is not merely about tax compliance; it is a foundational pillar of personal financial health:
         </p>
 
@@ -210,7 +210,7 @@ export default function IncomeTaxReturnFilingSimplifiedPage() {
               <h3 className="text-sm font-semibold text-slate-900 group-hover:text-emerald-700 transition-colors mb-1">
                 {item.title}
               </h3>
-              <p className="text-xs text-slate-600 leading-relaxed">{item.desc}</p>
+              <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -218,10 +218,10 @@ export default function IncomeTaxReturnFilingSimplifiedPage() {
 
       {/* Section 2: 4-Step Simplified Process */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
-        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
           2. The 4-Step Master Blueprint to Filing Your ITR
         </h2>
-        <p className="text-sm sm:text-base leading-relaxed text-slate-800 font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           Executing your annual income tax return involves four clear, straightforward milestones:
         </p>
 
@@ -231,7 +231,7 @@ export default function IncomeTaxReturnFilingSimplifiedPage() {
               <span className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center text-xs">1</span>
               <span>Compile &amp; Reconcile Financial Records</span>
             </div>
-            <p className="text-xs text-slate-700 leading-relaxed pl-8">
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal pl-8">
               Download your <strong>Form 16 / 16A</strong>, <strong>Annual Information Statement (AIS)</strong>, and <strong>Form 26AS</strong>.
               Gather interest certificates from your banks, broker capital gains statements, and receipts for investments under Section 80C to 80U.
             </p>
@@ -242,7 +242,7 @@ export default function IncomeTaxReturnFilingSimplifiedPage() {
               <span className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-xs">2</span>
               <span>Select the Appropriate ITR Form</span>
             </div>
-            <p className="text-xs text-slate-700 leading-relaxed pl-8">
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal pl-8">
               Choosing the wrong form invalidates your submission. Salaried individuals with simple income use <strong>ITR-1</strong>;
               equity and crypto investors require <strong>ITR-2</strong>; and professionals or business owners use <strong>ITR-3 or ITR-4</strong>.
             </p>
@@ -253,7 +253,7 @@ export default function IncomeTaxReturnFilingSimplifiedPage() {
               <span className="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center text-xs">3</span>
               <span>Execute Computation &amp; Tax Regime Comparison</span>
             </div>
-            <p className="text-xs text-slate-700 leading-relaxed pl-8">
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal pl-8">
               Compare your tax outgo under the <strong>Old Tax Regime</strong> (with HRA and Chapter VI-A deductions) versus the
               <strong>New Tax Regime</strong> (with ₹75,000 standard deduction and lower slab rates). Choose the optimal tax structure.
             </p>
@@ -264,7 +264,7 @@ export default function IncomeTaxReturnFilingSimplifiedPage() {
               <span className="w-6 h-6 rounded-full bg-amber-100 flex items-center justify-center text-xs">4</span>
               <span>Submit &amp; Instant E-Verification</span>
             </div>
-            <p className="text-xs text-slate-700 leading-relaxed pl-8">
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal pl-8">
               Submit your return electronically on the portal and immediately complete e-verification via <strong>Aadhaar OTP</strong>
               or <strong>Net Banking EVC</strong>. Always download your official <strong>ITR-V acknowledgement</strong> for record-keeping.
             </p>
@@ -274,10 +274,10 @@ export default function IncomeTaxReturnFilingSimplifiedPage() {
 
       {/* Section 3: ITR Forms Comparison Matrix */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
-        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
           3. Which ITR Form Should You File? (Form 1 to Form 6 Breakdown)
         </h2>
-        <p className="text-sm sm:text-base leading-relaxed text-slate-800 font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           Selecting the correct form ensures smooth processing by the CPC system without defect notices:
         </p>
 
@@ -291,7 +291,7 @@ export default function IncomeTaxReturnFilingSimplifiedPage() {
                 </span>
               </div>
               <h4 className="text-xs font-semibold text-emerald-700 mb-1">{item.eligibleFor}</h4>
-              <p className="text-xs text-slate-600 leading-relaxed">{item.scope}</p>
+              <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">{item.scope}</p>
             </div>
           ))}
         </div>
@@ -299,10 +299,10 @@ export default function IncomeTaxReturnFilingSimplifiedPage() {
 
       {/* Section 4: Modern Changes & Portal Upgrades */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
-        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
           4. Recent Structural Changes in Income Tax Filing
         </h2>
-        <p className="text-sm sm:text-base leading-relaxed text-slate-800 font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           The Central Board of Direct Taxes (CBDT) has deployed several key updates relevant for AY 2026-27:
         </p>
 
@@ -310,7 +310,7 @@ export default function IncomeTaxReturnFilingSimplifiedPage() {
           {RECENT_CHANGES.map((item, idx) => (
             <div key={idx} className="p-4 rounded-xl border border-slate-200 bg-white">
               <h3 className="text-sm font-semibold text-slate-900 mb-1">{item.title}</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">{item.desc}</p>
+              <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -318,7 +318,7 @@ export default function IncomeTaxReturnFilingSimplifiedPage() {
 
       {/* Section 5: Statutory Filing Due Dates */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
-        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
           5. Master Calendar: Key Filing Dates to Avoid Penalties
         </h2>
         <div className="overflow-x-auto border border-slate-200 rounded-xl">
@@ -360,7 +360,7 @@ export default function IncomeTaxReturnFilingSimplifiedPage() {
       <section className="space-y-4 pt-6 border-t border-slate-100">
         <div className="flex items-center gap-2">
           <HelpCircle className="w-5 h-5 text-emerald-600" />
-          <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+          <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
             Frequently Asked Questions
           </h2>
         </div>
@@ -391,7 +391,7 @@ export default function IncomeTaxReturnFilingSimplifiedPage() {
                   />
                 </button>
                 {isOpen && (
-                  <div className="px-4 pb-4 pt-1 text-xs text-slate-700 leading-relaxed border-t border-slate-100 bg-slate-50/40">
+                  <div className="px-4 pb-4 pt-1 text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal border-t border-slate-100 bg-slate-50/40">
                     {faq.a}
                   </div>
                 )}

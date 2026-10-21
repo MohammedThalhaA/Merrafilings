@@ -185,13 +185,13 @@ export default function TwelveLpaSalaryTaxCalculationGuidePage() {
     >
       {/* Intro Overview */}
       <section className="space-y-4">
-        <p className="text-base sm:text-lg leading-relaxed text-slate-900 font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           Earning a salary of <strong className="font-semibold text-slate-950">₹12 Lakhs Per Annum (₹12 LPA)</strong> is
           a major financial milestone in India. However, without proactive tax planning, a substantial portion of your hard-earned
           earnings can be consumed by income tax and mandatory deductions. Understanding how the Income Tax Department assesses
           your salary across Old and New tax regimes is essential for maximizing your monthly take-home pay.
         </p>
-        <p className="text-sm sm:text-base text-slate-800 leading-relaxed font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           This comprehensive guide provides a mathematical, step-by-step breakdown of tax liability on a ₹12 LPA CTC,
           analyzing gross versus net salary structures, standard deductions, Chapter VI-A investment exemptions, and a
           real-world case study comparing Old vs. New Tax Regimes for Assessment Year 2026-27.
@@ -200,45 +200,45 @@ export default function TwelveLpaSalaryTaxCalculationGuidePage() {
 
       {/* Section 1: Income Tax Classification in India */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
-        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
           1. Understanding the Basics: Income Tax Classification in India
         </h2>
-        <p className="text-sm sm:text-base leading-relaxed text-slate-800 font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           Under the Income Tax Act, 1961, all individual earnings are classified into five statutory heads of income:
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
           <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/50">
             <span className="text-xs font-semibold text-emerald-700 uppercase tracking-wider block mb-1">Head 1</span>
             <h3 className="text-sm font-semibold text-slate-900 mb-1">Income from Salaries</h3>
-            <p className="text-xs text-slate-600">All wages, allowances, perquisites, and bonuses received from an employer.</p>
+            <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">All wages, allowances, perquisites, and bonuses received from an employer.</p>
           </div>
           <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/50">
             <span className="text-xs font-semibold text-blue-700 uppercase tracking-wider block mb-1">Head 2</span>
             <h3 className="text-sm font-semibold text-slate-900 mb-1">Income from House Property</h3>
-            <p className="text-xs text-slate-600">Rental earnings or deemed rental values from owned residential or commercial properties.</p>
+            <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">Rental earnings or deemed rental values from owned residential or commercial properties.</p>
           </div>
           <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/50">
             <span className="text-xs font-semibold text-purple-700 uppercase tracking-wider block mb-1">Head 3</span>
             <h3 className="text-sm font-semibold text-slate-900 mb-1">Profits from Business or Profession</h3>
-            <p className="text-xs text-slate-600">Commercial profits earned by freelancers, proprietary owners, or professionals.</p>
+            <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">Commercial profits earned by freelancers, proprietary owners, or professionals.</p>
           </div>
           <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/50">
             <span className="text-xs font-semibold text-amber-700 uppercase tracking-wider block mb-1">Head 4 & 5</span>
             <h3 className="text-sm font-semibold text-slate-900 mb-1">Capital Gains & Other Sources</h3>
-            <p className="text-xs text-slate-600">Gains from equities, mutual funds, real estate, bank interest, and dividend payouts.</p>
+            <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">Gains from equities, mutual funds, real estate, bank interest, and dividend payouts.</p>
           </div>
         </div>
-        <p className="text-xs text-slate-600 italic">
+        <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal italic">
           For a salaried employee earning ₹12 LPA, earnings are primarily evaluated under "Income from Salaries," subject to deductions under Chapter VI-A.
         </p>
       </section>
 
       {/* Section 2: Breaking Down the ₹12 LPA Salary Structure */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
-        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
           2. Breaking Down the ₹12 LPA Salary Components
         </h2>
-        <p className="text-sm sm:text-base leading-relaxed text-slate-800 font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           Your Cost to Company (CTC) of ₹12 LPA is never the exact amount credited to your bank account. It is divided into
           gross salary, tax-exempt allowances, and employer retirement contributions:
         </p>
@@ -257,7 +257,7 @@ export default function TwelveLpaSalaryTaxCalculationGuidePage() {
                   {item.badge}
                 </span>
               </div>
-              <p className="text-xs text-slate-600 leading-relaxed">{item.desc}</p>
+              <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -265,10 +265,10 @@ export default function TwelveLpaSalaryTaxCalculationGuidePage() {
 
       {/* Section 3: Step-by-Step Tax Calculation Process */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
-        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
           3. Step-by-Step Tax Calculation for ₹12 LPA Salary
         </h2>
-        <p className="text-sm sm:text-base leading-relaxed text-slate-800 font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           The Income Tax Department applies a sequential procedure to evaluate your ultimate tax liability:
         </p>
 
@@ -278,7 +278,7 @@ export default function TwelveLpaSalaryTaxCalculationGuidePage() {
               <span className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center text-xs">1</span>
               <span>Compute Total Gross Salary</span>
             </div>
-            <p className="text-xs text-slate-700 leading-relaxed pl-8">
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal pl-8">
               Sum all salary credits including Basic Pay, HRA, Special Allowance, and variable performance bonuses. For this model, Gross Salary = <strong>₹12,00,000</strong>.
             </p>
           </div>
@@ -288,7 +288,7 @@ export default function TwelveLpaSalaryTaxCalculationGuidePage() {
               <span className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-xs">2</span>
               <span>Apply Statutory Standard & Chapter VI-A Deductions</span>
             </div>
-            <div className="text-xs text-slate-700 leading-relaxed pl-8 space-y-1.5">
+            <div className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal pl-8 space-y-1.5">
               <p>• <strong>Standard Deduction:</strong> ₹50,000 under Old Regime / ₹75,000 under New Regime.</p>
               <p>• <strong>Section 80C:</strong> Up to ₹1,50,000 for EPF, PPF, ELSS, life insurance, and child tuition fees.</p>
               <p>• <strong>Section 80D:</strong> Up to ₹25,000 for family health insurance premiums (up to ₹50,000 for senior parents).</p>
@@ -300,7 +300,7 @@ export default function TwelveLpaSalaryTaxCalculationGuidePage() {
               <span className="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center text-xs">3</span>
               <span>Calculate Base Tax Using Applicable Slabs</span>
             </div>
-            <p className="text-xs text-slate-700 leading-relaxed pl-8">
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal pl-8">
               Tax is computed progressively segment by segment according to the prevailing rates under the chosen regime.
             </p>
           </div>
@@ -310,7 +310,7 @@ export default function TwelveLpaSalaryTaxCalculationGuidePage() {
               <span className="w-6 h-6 rounded-full bg-amber-100 flex items-center justify-center text-xs">4</span>
               <span>Add 4% Health & Education Cess</span>
             </div>
-            <p className="text-xs text-slate-700 leading-relaxed pl-8">
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal pl-8">
               Multiply the calculated basic tax by 4% to arrive at the final payable tax or refundable amount.
             </p>
           </div>
@@ -319,10 +319,10 @@ export default function TwelveLpaSalaryTaxCalculationGuidePage() {
 
       {/* Section 4: Real-World Numerical Case Study */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
-        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
           4. Real-World Case Study: Old vs. New Tax Regime on ₹12 LPA
         </h2>
-        <p className="text-sm sm:text-base leading-relaxed text-slate-800 font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           Let us consider a salaried professional earning ₹12,00,000 annually with ₹1.5 Lakhs invested in Section 80C (EPF/ELSS)
           and ₹25,000 paid towards health insurance under Section 80D:
         </p>
@@ -389,10 +389,10 @@ export default function TwelveLpaSalaryTaxCalculationGuidePage() {
 
       {/* Section 5: Strategies to Optimize Tax Savings */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
-        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
           5. Smart Tax Planning Strategies for Salaried Professionals
         </h2>
-        <p className="text-sm sm:text-base leading-relaxed text-slate-800 font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           Legally minimizing your tax footprint requires structured investments aligned with income tax exemptions:
         </p>
 
@@ -406,7 +406,7 @@ export default function TwelveLpaSalaryTaxCalculationGuidePage() {
                 <span className="text-xs font-semibold text-slate-900">{item.limit}</span>
               </div>
               <h3 className="text-sm font-semibold text-slate-900 mt-2 mb-1">{item.title}</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">{item.desc}</p>
+              <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -416,7 +416,7 @@ export default function TwelveLpaSalaryTaxCalculationGuidePage() {
       <section className="space-y-4 pt-6 border-t border-slate-100">
         <div className="flex items-center gap-2">
           <HelpCircle className="w-5 h-5 text-emerald-600" />
-          <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+          <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
             Frequently Asked Questions
           </h2>
         </div>
@@ -447,7 +447,7 @@ export default function TwelveLpaSalaryTaxCalculationGuidePage() {
                   />
                 </button>
                 {isOpen && (
-                  <div className="px-4 pb-4 pt-1 text-xs text-slate-700 leading-relaxed border-t border-slate-100 bg-slate-50/40">
+                  <div className="px-4 pb-4 pt-1 text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal border-t border-slate-100 bg-slate-50/40">
                     {faq.a}
                   </div>
                 )}

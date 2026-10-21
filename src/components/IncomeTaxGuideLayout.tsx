@@ -136,7 +136,7 @@ export default function IncomeTaxGuideLayout({
                 <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
                 <span>Income Tax Compliance Guide</span>
               </div>
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-normal text-[#1F1646] tracking-tight leading-tight">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-950 tracking-tight leading-tight">
                 {displayTitle}
               </h1>
 
@@ -237,21 +237,21 @@ export default function IncomeTaxGuideLayout({
                   Related Guides
                 </h2>
               </div>
-              <ul className="space-y-2.5 text-xs sm:text-[13px]">
+              <ul className="space-y-2 text-[13px]">
                 {INCOME_TAX_RELATED_GUIDES.map((item) => {
                   const isActive = item.slug === currentSlug;
                   return (
                     <li key={item.slug}>
                       <Link
                         href={item.href}
-                        className={`group flex items-start gap-2.5 p-2 rounded-xl transition-all duration-200 ${
+                        className={`group flex items-start gap-2.5 p-2 rounded-xl text-[13px] leading-snug transition-all duration-200 ${
                           isActive
                             ? "bg-emerald-50 text-emerald-800 font-semibold border border-emerald-200/60 shadow-3xs"
                             : "text-slate-800 hover:text-emerald-700 hover:bg-slate-50 font-normal"
                         }`}
                       >
                         <span
-                          className={`mt-0.5 shrink-0 transition-transform duration-200 group-hover:translate-x-0.5 ${
+                          className={`mt-0.5 shrink-0 text-sm transition-transform duration-200 group-hover:translate-x-0.5 ${
                             isActive
                               ? "text-emerald-600 font-bold"
                               : "text-slate-400 group-hover:text-emerald-600"
@@ -259,7 +259,7 @@ export default function IncomeTaxGuideLayout({
                         >
                           &rarr;
                         </span>
-                        <span className="line-clamp-2 leading-relaxed">
+                        <span className="line-clamp-2">
                           {item.title}
                         </span>
                       </Link>

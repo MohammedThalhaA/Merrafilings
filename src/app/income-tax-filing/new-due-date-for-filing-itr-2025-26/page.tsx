@@ -178,13 +178,13 @@ export default function NewDueDateForFilingItrPage() {
     >
       {/* Intro Overview */}
       <section className="space-y-4">
-        <p className="text-base sm:text-lg leading-relaxed text-slate-900 font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           The Central Board of Direct Taxes (<strong className="font-semibold text-slate-950">CBDT</strong>) has introduced
           critical updates to the statutory Income Tax Return filing calendar for <strong className="font-semibold text-slate-950">Financial Year 2025-26 (Assessment Year 2026-27)</strong>.
           Taxpayers, corporate directors, and practicing professionals must align their compliance schedules with these revised timelines to prevent
           hefty late fees, interest charges, and the loss of loss-carry-forward privileges.
         </p>
-        <p className="text-sm sm:text-base text-slate-800 leading-relaxed font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           This comprehensive advisory breaks down the master timeline for each taxpayer category, details the newly segregated
           due dates for business returns, outlines enhanced capital gains reporting protocols, and explains the statutory
           implications of belated filings.
@@ -193,10 +193,10 @@ export default function NewDueDateForFilingItrPage() {
 
       {/* Section 1: Master Due Dates Table */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
-        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
           1. Revised Master ITR Filing Due Dates for AY 2026-27
         </h2>
-        <p className="text-sm sm:text-base leading-relaxed text-slate-800 font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           Review the statutory due dates prescribed under Section 139(1) of the Income Tax Act for each taxpayer classification:
         </p>
 
@@ -230,10 +230,10 @@ export default function NewDueDateForFilingItrPage() {
 
       {/* Section 2: Key Structural Highlights */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
-        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
           2. Key Highlights &amp; Landmark Changes for AY 2026-27
         </h2>
-        <p className="text-sm sm:text-base leading-relaxed text-slate-800 font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           Three pivotal administrative and structural changes distinguish the current filing cycle:
         </p>
 
@@ -256,10 +256,10 @@ export default function NewDueDateForFilingItrPage() {
 
       {/* Section 3: Consequences of Missing Due Dates */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
-        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
           3. Statutory Penalties &amp; Costs of Missing the Filing Due Date
         </h2>
-        <p className="text-sm sm:text-base leading-relaxed text-slate-800 font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           Failing to submit your return on or before the designated cutoff triggers strict statutory penalties:
         </p>
 
@@ -273,7 +273,7 @@ export default function NewDueDateForFilingItrPage() {
                 <span className="text-xs font-semibold text-slate-900">{item.amount}</span>
               </div>
               <h3 className="text-sm font-semibold text-slate-900 mb-1">{item.title}</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">{item.desc}</p>
+              <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -281,29 +281,29 @@ export default function NewDueDateForFilingItrPage() {
 
       {/* Section 4: Actionable Pre-Filing Checklist */}
       <section className="space-y-4 pt-6 border-t border-slate-100">
-        <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
           4. Essential Pre-Filing Checklist for AY 2026-27
         </h2>
-        <p className="text-sm sm:text-base leading-relaxed text-slate-800 font-normal">
+        <p className="text-[15px] sm:text-base leading-relaxed text-slate-800 font-normal">
           Do not delay your preparation until the final week. Complete these five proactive steps early:
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
           <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/50 flex items-start gap-2.5">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-            <p className="text-xs text-slate-700"><strong>Download AIS &amp; Form 26AS:</strong> Inspect every reported credit, interest payment, and tax deducted by employers and clients.</p>
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal"><strong>Download AIS &amp; Form 26AS:</strong> Inspect every reported credit, interest payment, and tax deducted by employers and clients.</p>
           </div>
           <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/50 flex items-start gap-2.5">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-            <p className="text-xs text-slate-700"><strong>Verify Bank Account Pre-Validation:</strong> Ensure your primary bank account is pre-validated on the portal for speedy refund credits.</p>
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal"><strong>Verify Bank Account Pre-Validation:</strong> Ensure your primary bank account is pre-validated on the portal for speedy refund credits.</p>
           </div>
           <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/50 flex items-start gap-2.5">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-            <p className="text-xs text-slate-700"><strong>Reconcile Capital Gains Statements:</strong> Obtain realized profit/loss statements from your equity brokers and mutual fund CAMS/KFintech.</p>
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal"><strong>Reconcile Capital Gains Statements:</strong> Obtain realized profit/loss statements from your equity brokers and mutual fund CAMS/KFintech.</p>
           </div>
           <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/50 flex items-start gap-2.5">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-            <p className="text-xs text-slate-700"><strong>Finalize Books of Accounts:</strong> Business owners should reconcile GST turnover and book revenues to prevent notice inquiries.</p>
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal"><strong>Finalize Books of Accounts:</strong> Business owners should reconcile GST turnover and book revenues to prevent notice inquiries.</p>
           </div>
         </div>
       </section>
@@ -312,7 +312,7 @@ export default function NewDueDateForFilingItrPage() {
       <section className="space-y-4 pt-6 border-t border-slate-100">
         <div className="flex items-center gap-2">
           <HelpCircle className="w-5 h-5 text-emerald-600" />
-          <h2 className="text-xl sm:text-2xl font-normal text-[#1F1646] tracking-tight">
+          <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
             Frequently Asked Questions
           </h2>
         </div>
@@ -343,7 +343,7 @@ export default function NewDueDateForFilingItrPage() {
                   />
                 </button>
                 {isOpen && (
-                  <div className="px-4 pb-4 pt-1 text-xs text-slate-700 leading-relaxed border-t border-slate-100 bg-slate-50/40">
+                  <div className="px-4 pb-4 pt-1 text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal border-t border-slate-100 bg-slate-50/40">
                     {faq.a}
                   </div>
                 )}
