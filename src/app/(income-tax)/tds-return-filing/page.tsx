@@ -318,28 +318,34 @@ const FAQ_EXTRA_COL_2 = [
 
 const RELATED_GUIDES = [
   {
-    title: "TAN Registration Online: Form 49B Application Process, Eligibility & Validity",
-    href: "/tan-registration",
-    date: "Tax Setup",
-    readTime: "7 min read",
-  },
-  {
-    title: "Foreign Remittance Compliance: When is Form 15CA & 15CB Mandatory?",
-    href: "/15ca-15cb-filing",
+    title: "Section 195 of the Income Tax Act: TDS on Payments to Non-Residents",
+    href: "/tds-return-filing/section-195--payment-to-non-resident",
     date: "International Tax",
     readTime: "8 min read",
   },
   {
-    title: "Corporate Tax Return Filing (Form ITR-6) for Companies in India: AY 2026-27",
-    href: "/itr-6-form",
-    date: "Corporate Tax",
-    readTime: "9 min read",
+    title: "TDS Return Filing Guidelines: Step-by-Step Procedure & Deadlines",
+    href: "/tds-return-filing/tds-return-filing-guidelines-essential-steps",
+    date: "Quarterly Filing",
+    readTime: "7 min read",
   },
   {
-    title: "Partnership Firm & LLP Tax Filing Guide (Form ITR-5): Rules & Deductions",
-    href: "/itr-5-form",
-    date: "Firm Tax Desk",
-    readTime: "10 min read",
+    title: "Filing of Form 141 for TDS on Purchase of Property – Complete Guide",
+    href: "/tds-return-filing/filing-of-form-141-tds-on-purchase-of-property",
+    date: "Property TDS",
+    readTime: "8 min read",
+  },
+  {
+    title: "Section 195 of the Income Tax Act: A Complete Guide to TDS on Payments to Non-Residents",
+    href: "/tds-return-filing/tds-under-section-195",
+    date: "DTAA & Treaties",
+    readTime: "8 min read",
+  },
+  {
+    title: "TDS Return Filing Guidelines: Key Benefits & Statutory Importance",
+    href: "/tds-return-filing/tds-return-filing-guidelines-benefits",
+    date: "Compliance Guide",
+    readTime: "7 min read",
   },
 ];
 
