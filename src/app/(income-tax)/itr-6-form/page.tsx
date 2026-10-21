@@ -459,28 +459,12 @@ const FAQ_EXTRA_COL_2 = [
 
 const RELATED_GUIDES = [
   {
-    title: "Understanding Corporate Tax Rates in India: Section 115BAA vs. Normal Tax Regime",
-    href: "/income-tax-filing",
-    date: "Tax Advisory",
-    readTime: "8 min read",
+    title: "Complete ITR-6 Return Filing Online Fee Guide",
+    href: "/itr-6-form/itr-6-return-filing-online-fee",
   },
   {
-    title: "Minimum Alternate Tax (MAT Section 115JB) & Form 29B Certification Explained",
-    href: "/business-itr-filing",
-    date: "Corporate Compliance",
-    readTime: "9 min read",
-  },
-  {
-    title: "Form ITR-5 Filing Guide for Partnership Firms & LLPs in India (AY 2026-27)",
-    href: "/itr-5-form",
-    date: "Statutory Guide",
-    readTime: "10 min read",
-  },
-  {
-    title: "Foreign Remittance Tax Compliance: Form 15CA & 15CB Online Filing Procedure",
-    href: "/15ca-15cb-filing",
-    date: "International Tax",
-    readTime: "7 min read",
+    title: "Introduction to ITR6 Return Filing",
+    href: "/itr-6-form/it-returns-introduction-to-itr6-filing-guide",
   },
 ];
 
