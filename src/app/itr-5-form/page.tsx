@@ -303,20 +303,24 @@ const FAQ_EXTRA_COL_2 = [
 
 const RELATED_GUIDES = [
   {
-    title: "Business ITR Filing Online in India",
-    href: "/business-itr-filing",
+    title: "ITR Due Date - 31st August: LLPs Need to Know",
+    href: "/itr-5-form/due-date-31st-august",
   },
   {
-    title: "Income Tax Return Online (Individual & HNW)",
-    href: "/income-tax-filing",
+    title: "LLP Annual Filing Guide",
+    href: "/itr-5-form/llp-annual-filing-guide",
   },
   {
-    title: "Step-by-Step LLP Registration Guide",
-    href: "/llp-registration/llp-registration-guide-comprehensive-steps",
+    title: "Understanding LLP Compliance: A 2023 Guide",
+    href: "/itr-5-form/understanding-llp-compliance-2023-guide",
   },
   {
-    title: "Understanding GST Return Filings",
-    href: "/llp-registration/understand-gst-return-filings-a-comprehensive-guide",
+    title: "Understanding LLP Compliance",
+    href: "/itr-5-form/understanding-llp-compliance-essentials",
+  },
+  {
+    title: "LLP Compliance: Essential Guide for 2023",
+    href: "/itr-5-form/llp-compliance-essential-guide-2023",
   },
 ];
 

@@ -426,9 +426,8 @@ export default function UnlockingThePowerOfStrategicPartnershipsPage() {
                     {faq.q}
                   </span>
                   <ChevronDown
-                    className={`w-4 h-4 text-slate-500 shrink-0 transition-transform duration-200 ${
-                      isOpen ? "rotate-180 text-blue-600" : ""
-                    }`}
+                    className={`w-4 h-4 text-slate-500 shrink-0 transition-transform duration-200 ${isOpen ? "rotate-180 text-blue-600" : ""
+                      }`}
                   />
                 </button>
                 {isOpen && (
