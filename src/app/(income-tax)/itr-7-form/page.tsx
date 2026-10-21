@@ -462,6 +462,18 @@ const FAQ_EXTRA_COL_2 = [
 
 const RELATED_GUIDES = [
   {
+    title: "ITR 7 Filing Document: Comprehensive Guide for Taxpayers",
+    href: "/itr-7-form/comprehensive-guide-to-itr-7-filings-doc",
+    date: "Statutory Guide",
+    readTime: "9 min read",
+  },
+  {
+    title: "Understanding the ITR-7 Form: A Comprehensive Guide",
+    href: "/itr-7-form/understanding-the-itr7-form-a-comprehensive-guide",
+    date: "Non-Profit Desk",
+    readTime: "10 min read",
+  },
+  {
     title: "Comprehensive Guide to Corporate Tax Filing (Form ITR-6) for Companies in India",
     href: "/itr-6-form",
     date: "Corporate Tax",
@@ -472,18 +484,6 @@ const RELATED_GUIDES = [
     href: "/itr-5-form",
     date: "Statutory Guide",
     readTime: "10 min read",
-  },
-  {
-    title: "Section 12AB & 80G Registration Renewal Process for NGOs and Charitable Trusts",
-    href: "/income-tax-filing",
-    date: "Non-Profit Desk",
-    readTime: "8 min read",
-  },
-  {
-    title: "Form 15CA & 15CB Filing for Cross-Border Remittances: Procedure & CA Certificate",
-    href: "/15ca-15cb-filing",
-    date: "International Tax",
-    readTime: "7 min read",
   },
 ];
 
