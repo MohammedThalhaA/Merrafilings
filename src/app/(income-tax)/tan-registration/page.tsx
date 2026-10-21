@@ -369,28 +369,34 @@ const FAQ_EXTRA_COL_2 = [
 
 const RELATED_GUIDES = [
   {
-    title: "Quarterly TDS Return Filing Guide: Forms 24Q, 26Q, 27Q Due Dates & Penalties",
-    href: "/tds-return-filing",
-    date: "Compliance Desk",
-    readTime: "8 min read",
-  },
-  {
-    title: "Foreign Remittance Compliance: When is Form 15CA & 15CB Mandatory?",
-    href: "/15ca-15cb-filing",
-    date: "International Tax",
+    title: "TAN Registration: A Comprehensive Guide for Businesses in India",
+    href: "/tan-registration/tan-registration-guide-for-businesses",
+    date: "Business Guide",
     readTime: "7 min read",
   },
   {
-    title: "Corporate Tax Return Filing (Form ITR-6) for Companies in India: AY 2026-27",
-    href: "/itr-6-form",
-    date: "Corporate Tax",
-    readTime: "9 min read",
+    title: "Online TAN Number Application Process in India: Step-by-Step Guide",
+    href: "/tan-registration/online-tan-application-process-india",
+    date: "Online Application",
+    readTime: "8 min read",
   },
   {
-    title: "Partnership Firm & LLP Tax Filing Guide (Form ITR-5): Rules & Deductions",
-    href: "/itr-5-form",
-    date: "Firm Tax Desk",
-    readTime: "10 min read",
+    title: "TAN Registration in India: Process, Compliance, and Key Updates Explained",
+    href: "/tan-registration/tan-registration-process-compliance-updates",
+    date: "Compliance & Updates",
+    readTime: "8 min read",
+  },
+  {
+    title: "TAN Registration Essential Guide for Indian Businesses",
+    href: "/tan-registration/tan-registration-guide-for-indian-businesses",
+    date: "Essential Guide",
+    readTime: "7 min read",
+  },
+  {
+    title: "Understanding TAN Registration: Key Steps Explained",
+    href: "/tan-registration/tan-registration-key-steps-explained",
+    date: "Key Steps Explained",
+    readTime: "8 min read",
   },
 ];
 
