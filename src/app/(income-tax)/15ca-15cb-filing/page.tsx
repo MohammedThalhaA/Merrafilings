@@ -372,28 +372,34 @@ const FAQ_EXTRA_COL_2 = [
 
 const RELATED_GUIDES = [
   {
-    title: "Understanding TDS on Foreign Payments under Section 195: Rules, Rates & DTAA Relief",
-    href: "/income-tax-filing",
-    date: "International Tax",
-    readTime: "8 min read",
-  },
-  {
-    title: "Corporate Income Tax Return Filing (Form ITR-6) for Companies in India: AY 2026-27",
-    href: "/itr-6-form",
-    date: "Corporate Compliance",
+    title: "Understanding Form 145/146 under the Income Tax Act, 2025 for Foreign Remittance",
+    href: "/15ca-15cb-filing/form-145-guide-for-foreign-remmittance",
+    date: "New Tax Act 2025",
     readTime: "9 min read",
   },
   {
-    title: "Partnership Firm & LLP Tax Filing Guide (Form ITR-5): Rules, Deductions & Surcharges",
-    href: "/itr-5-form",
-    date: "Firm Tax Desk",
-    readTime: "10 min read",
+    title: "Documents Required for 15CA-15CB Filing: A Comprehensive Guide",
+    href: "/15ca-15cb-filing/essential-documents-for-15ca15cb-filing-guide",
+    date: "Documentation",
+    readTime: "8 min read",
   },
   {
-    title: "Tax Residency Certificate (TRC) & Electronic Form 10F Online Filing Guide",
-    href: "/business-itr-filing",
-    date: "Cross-Border Guide",
-    readTime: "7 min read",
+    title: "Complete Guide to 15CA 15CB Filings in 2023",
+    href: "/15ca-15cb-filing/comprehensive-guide-to-15ca-15cb-filing",
+    date: "Master Guide",
+    readTime: "9 min read",
+  },
+  {
+    title: "Understanding 15CA-15CB Filing: Compliance for Foreign Remittances",
+    href: "/15ca-15cb-filing/15ca15cb-filing-foreign-remittance-compliance",
+    date: "Forex Compliance",
+    readTime: "8 min read",
+  },
+  {
+    title: "15CA-15CB Filing Online in India Compliance Guide",
+    href: "/15ca-15cb-filing/essential-guide-to-required-15ca15cb-filing",
+    date: "E-Filing Portal",
+    readTime: "8 min read",
   },
 ];
 
