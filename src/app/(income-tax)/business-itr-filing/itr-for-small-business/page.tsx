@@ -202,26 +202,26 @@ export default function ItrForSmallBusinessPage() {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mt-3">
-          <div className="p-4 rounded-xl border border-slate-200 bg-white">
-            <h3 className="text-sm sm:text-[15px] font-semibold text-slate-900 mb-1">Bank Loan &amp; Overdraft Approvals</h3>
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="text-sm sm:text-[15px] font-bold text-slate-950 group-hover:text-emerald-700 transition-colors mb-1">Bank Loan &amp; Overdraft Approvals</h3>
             <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
               Scheduled commercial banks mandate 3 consecutive years of verified ITR-V receipts to evaluate working capital loans, cash-credit (CC) limits, and business expansion financing.
             </p>
           </div>
-          <div className="p-4 rounded-xl border border-slate-200 bg-white">
-            <h3 className="text-sm sm:text-[15px] font-semibold text-slate-900 mb-1">Recover Excess Client TDS</h3>
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="text-sm sm:text-[15px] font-bold text-slate-950 group-hover:text-emerald-700 transition-colors mb-1">Recover Excess Client TDS</h3>
             <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
               If commercial clients or online marketplaces deducted withholding tax under Section 194C or 194Q, e-filing your return is the only legal avenue to claim direct bank refunds.
             </p>
           </div>
-          <div className="p-4 rounded-xl border border-slate-200 bg-white">
-            <h3 className="text-sm sm:text-[15px] font-semibold text-slate-900 mb-1">Government Tenders &amp; MSME Contracts</h3>
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="text-sm sm:text-[15px] font-bold text-slate-950 group-hover:text-emerald-700 transition-colors mb-1">Government Tenders &amp; MSME Contracts</h3>
             <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
               Government e-Marketplace (GeM) registration and public procurement tenders require audited or verified tax returns as primary proof of operational stability.
             </p>
           </div>
-          <div className="p-4 rounded-xl border border-slate-200 bg-white">
-            <h3 className="text-sm sm:text-[15px] font-semibold text-slate-900 mb-1">Avoid Section 234F Fines</h3>
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="text-sm sm:text-[15px] font-bold text-slate-950 group-hover:text-emerald-700 transition-colors mb-1">Avoid Section 234F Fines</h3>
             <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
               Timely filing shields your venture from mandatory ₹5,000 late fees and compounding 1% monthly interest on unpaid taxes under Section 234A.
             </p>
@@ -242,13 +242,13 @@ export default function ItrForSmallBusinessPage() {
           {SMALL_BIZ_FORMS.map((form, idx) => (
             <div
               key={idx}
-              className="p-5 rounded-xl border border-slate-200 bg-white hover:border-emerald-500 hover:shadow-md transition-all group"
+              className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer"
             >
               <div className="flex items-center justify-between mb-2">
-                <h3 className="text-base font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">
+                <h3 className="text-base font-bold text-slate-950 group-hover:text-emerald-700 transition-colors">
                   {form.form}
                 </h3>
-                <span className="text-[10px] font-semibold px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700">
+                <span className="text-[10px] font-semibold px-2.5 py-0.5 rounded-full bg-slate-100 group-hover:bg-emerald-100 group-hover:text-emerald-800 transition-colors text-slate-700">
                   {form.who}
                 </span>
               </div>
@@ -274,11 +274,11 @@ export default function ItrForSmallBusinessPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mt-3">
           {PRESUMPTIVE_ADVANTAGES.map((item, idx) => (
-            <div key={idx} className="p-4.5 rounded-xl border border-slate-200 bg-white">
-              <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200/60 inline-block mb-2">
+            <div key={idx} className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+              <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200/60 inline-block mb-2 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
                 {item.badge}
               </span>
-              <h3 className="text-sm sm:text-[15px] font-semibold text-slate-900 mb-1">{item.title}</h3>
+              <h3 className="text-sm sm:text-[15px] font-bold text-slate-950 group-hover:text-emerald-700 transition-colors mb-1">{item.title}</h3>
               <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">{item.desc}</p>
             </div>
           ))}
@@ -296,16 +296,18 @@ export default function ItrForSmallBusinessPage() {
 
         <div className="space-y-3 mt-3">
           {FILING_STEPS.map((step, idx) => (
-            <div key={idx} className="p-4.5 rounded-xl border border-slate-200 bg-white">
-              <div className="flex items-center gap-2 mb-1.5 text-emerald-800 font-semibold text-sm">
-                <span className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center text-xs">
-                  {idx + 1}
-                </span>
-                <span>{step.title}</span>
+            <div key={idx} className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-start gap-3">
+              <span className="w-6 h-6 rounded-full bg-slate-900 group-hover:bg-emerald-600 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 transition-colors">
+                {idx + 1}
+              </span>
+              <div className="space-y-1">
+                <h3 className="font-bold text-slate-950 group-hover:text-emerald-700 text-sm transition-colors">
+                  {step.title}
+                </h3>
+                <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+                  {step.desc}
+                </p>
               </div>
-              <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal pl-8">
-                {step.desc}
-              </p>
             </div>
           ))}
         </div>

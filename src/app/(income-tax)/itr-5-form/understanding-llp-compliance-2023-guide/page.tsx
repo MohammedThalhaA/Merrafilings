@@ -59,45 +59,53 @@ export default function UnderstandingLlpCompliance2023GuidePage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
           {/* Pillar 1 */}
-          <div className="p-4.5 rounded-xl border border-slate-200 bg-white shadow-3xs space-y-2">
-            <div className="flex items-center gap-2 text-emerald-800 font-bold text-sm">
-              <FileCheck className="w-4 h-4 text-emerald-600" />
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer space-y-2">
+            <div className="flex items-center gap-2.5 text-slate-950 group-hover:text-emerald-700 font-bold text-sm transition-colors">
+              <span className="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-all duration-200 shrink-0">
+                <FileCheck className="w-4 h-4" />
+              </span>
               <span>1. Annual Secretarial Filings (Form 11)</span>
             </div>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-10.5">
               Every LLP must file an annual return in <strong>Form 11</strong> with the Registrar of Companies (ROC) within 60 days of the financial year close (by <strong>30th May</strong>). It confirms the LLP’s management structure, capital contribution ratios, and business activities.
             </p>
           </div>
 
           {/* Pillar 2 */}
-          <div className="p-4.5 rounded-xl border border-slate-200 bg-white shadow-3xs space-y-2">
-            <div className="flex items-center gap-2 text-blue-800 font-bold text-sm">
-              <FileSignature className="w-4 h-4 text-blue-600" />
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/15 hover:bg-blue-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer space-y-2">
+            <div className="flex items-center gap-2.5 text-slate-950 group-hover:text-blue-700 font-bold text-sm transition-colors">
+              <span className="w-8 h-8 rounded-xl bg-blue-50 text-blue-600 border border-blue-100 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-200 shrink-0">
+                <FileSignature className="w-4 h-4" />
+              </span>
               <span>2. Accounts &amp; Solvency Declaration (Form 8)</span>
             </div>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-10.5">
               Due by <strong>30th October</strong> each year, <strong>Form 8</strong> requires the submission of the Balance Sheet, Profit &amp; Loss account, and a formal Statement of Solvency executed by the Designated Partners verifying that the LLP can pay its debts as they mature.
             </p>
           </div>
 
           {/* Pillar 3 */}
-          <div className="p-4.5 rounded-xl border border-slate-200 bg-white shadow-3xs space-y-2">
-            <div className="flex items-center gap-2 text-purple-800 font-bold text-sm">
-              <Scale className="w-4 h-4 text-purple-600" />
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/15 hover:bg-purple-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer space-y-2">
+            <div className="flex items-center gap-2.5 text-slate-950 group-hover:text-purple-700 font-bold text-sm transition-colors">
+              <span className="w-8 h-8 rounded-xl bg-purple-50 text-purple-600 border border-purple-100 flex items-center justify-center group-hover:bg-purple-600 group-hover:text-white transition-all duration-200 shrink-0">
+                <Scale className="w-4 h-4" />
+              </span>
               <span>3. Direct Tax Obligations (ITR-5 &amp; Advance Tax)</span>
             </div>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-10.5">
               LLPs must file their annual income tax return using <strong>Form ITR-5</strong> on the Income Tax e-filing portal. LLPs are subject to a flat income tax rate of 30% plus health &amp; education cess and surcharge, along with quarterly advance tax installments and TDS compliances.
             </p>
           </div>
 
           {/* Pillar 4 */}
-          <div className="p-4.5 rounded-xl border border-slate-200 bg-white shadow-3xs space-y-2">
-            <div className="flex items-center gap-2 text-amber-800 font-bold text-sm">
-              <Settings className="w-4 h-4 text-amber-600" />
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-amber-500 hover:shadow-md hover:shadow-amber-500/15 hover:bg-amber-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer space-y-2">
+            <div className="flex items-center gap-2.5 text-slate-950 group-hover:text-amber-700 font-bold text-sm transition-colors">
+              <span className="w-8 h-8 rounded-xl bg-amber-50 text-amber-600 border border-amber-100 flex items-center justify-center group-hover:bg-amber-600 group-hover:text-white transition-all duration-200 shrink-0">
+                <Settings className="w-4 h-4" />
+              </span>
               <span>4. Event-Based Secretarial Disclosures</span>
             </div>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-10.5">
               Whenever structural adjustments occur—such as the admission or resignation of partners (Form 4), amendment of the partnership agreement (Form 3), or shifting the registered office (Form 15)—statutory disclosures must be lodged within 30 days.
             </p>
           </div>

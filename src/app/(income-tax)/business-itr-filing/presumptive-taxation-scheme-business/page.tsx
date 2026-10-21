@@ -187,16 +187,16 @@ export default function PresumptiveTaxationSchemeBusinessPage() {
           {PRESUMPTIVE_SECTIONS.map((sec, idx) => (
             <div
               key={idx}
-              className="p-5 rounded-xl border border-slate-200 bg-white hover:border-emerald-500 hover:shadow-md transition-all"
+              className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer"
             >
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
                 <div className="flex items-center gap-2.5">
-                  <span className="text-xs font-bold text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200/60">
+                  <span className="text-xs font-bold text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200/60 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
                     {sec.section}
                   </span>
-                  <h3 className="text-base font-bold text-slate-900">{sec.title}</h3>
+                  <h3 className="text-base font-bold text-slate-950 group-hover:text-emerald-700 transition-colors">{sec.title}</h3>
                 </div>
-                <span className="text-xs font-mono font-medium text-slate-600 bg-slate-50 px-2.5 py-0.5 rounded-md border border-slate-200 self-start sm:self-auto">
+                <span className="text-xs font-mono font-medium text-slate-600 bg-slate-50 px-2.5 py-0.5 rounded-md border border-slate-200 self-start sm:self-auto group-hover:border-emerald-200 transition-colors">
                   {sec.form}
                 </span>
               </div>
@@ -261,8 +261,8 @@ export default function PresumptiveTaxationSchemeBusinessPage() {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mt-3">
           {ADVANTAGES.map((adv, idx) => (
-            <div key={idx} className="p-4.5 rounded-xl border border-slate-200 bg-white">
-              <h3 className="text-sm sm:text-[15px] font-semibold text-slate-900 mb-1">{adv.title}</h3>
+            <div key={idx} className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+              <h3 className="text-sm sm:text-[15px] font-bold text-slate-950 group-hover:text-emerald-700 transition-colors mb-1">{adv.title}</h3>
               <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">{adv.desc}</p>
             </div>
           ))}
@@ -274,15 +274,17 @@ export default function PresumptiveTaxationSchemeBusinessPage() {
         <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
           4. The Critical 5-Year Lock-In Rule (Section 44AD(4))
         </h2>
-        <div className="p-5 rounded-2xl bg-amber-50 border border-amber-200 text-amber-950 space-y-2">
-          <div className="flex items-center gap-2 font-bold text-sm text-amber-900">
-            <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0" />
+        <div className="group p-5 rounded-2xl bg-amber-50/70 border border-amber-200/80 shadow-2xs hover:border-amber-400 hover:shadow-md hover:shadow-amber-500/15 hover:bg-amber-50 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer text-amber-950 space-y-2">
+          <div className="flex items-center gap-2 font-bold text-sm text-amber-900 group-hover:text-amber-950 transition-colors">
+            <span className="w-8 h-8 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center group-hover:bg-amber-600 group-hover:text-white transition-colors shrink-0">
+              <AlertTriangle className="w-4 h-4" />
+            </span>
             <span>Understanding the Statutory Opting-Out Hazard</span>
           </div>
-          <p className="text-xs sm:text-[13px] leading-relaxed text-slate-800 font-normal">
+          <p className="text-xs sm:text-[13px] leading-relaxed text-slate-800 font-normal pl-10">
             If a small business opts for Section 44AD in one assessment year and subsequently declares profit below the deemed 6% or 8% rate in any of the subsequent 5 years, the consequences are severe:
           </p>
-          <ul className="text-xs sm:text-[13px] text-slate-800 space-y-1 list-disc pl-5">
+          <ul className="text-xs sm:text-[13px] text-slate-800 space-y-1 list-disc pl-15">
             <li>The business is <strong>strictly barred</strong> from re-entering Section 44AD for the next 5 consecutive assessment years.</li>
             <li>The taxpayer is mandated to maintain comprehensive books of account under Section 44AA.</li>
             <li>The taxpayer must undergo a compulsory Chartered Accountant tax audit under Section 44AB.</li>

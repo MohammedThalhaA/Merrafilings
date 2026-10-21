@@ -59,42 +59,50 @@ export default function DueDate31stAugustPage() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 my-4">
-          <div className="p-4 rounded-xl border border-slate-200 bg-white shadow-3xs">
-            <h3 className="font-bold text-slate-950 text-sm flex items-center gap-2 mb-1.5">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="font-bold text-slate-950 group-hover:text-emerald-700 text-sm flex items-center gap-2.5 mb-1.5 transition-colors">
+              <span className="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-all duration-200 shrink-0">
+                <CheckCircle2 className="w-4 h-4" />
+              </span>
               Limited Liability Partnerships (LLPs)
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-10.5">
               All LLPs incorporated under the Limited Liability Partnership Act, 2008, irrespective of whether they carried on commercial operations or incurred profits/losses during the fiscal year.
             </p>
           </div>
 
-          <div className="p-4 rounded-xl border border-slate-200 bg-white shadow-3xs">
-            <h3 className="font-bold text-slate-950 text-sm flex items-center gap-2 mb-1.5">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/15 hover:bg-blue-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="font-bold text-slate-950 group-hover:text-blue-700 text-sm flex items-center gap-2.5 mb-1.5 transition-colors">
+              <span className="w-8 h-8 rounded-xl bg-blue-50 text-blue-600 border border-blue-100 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-200 shrink-0">
+                <CheckCircle2 className="w-4 h-4" />
+              </span>
               Partnership Firms
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-10.5">
               General partnership firms registered or unregistered under the Indian Partnership Act, 1932, operating commercial trades, professional services, or industrial operations.
             </p>
           </div>
 
-          <div className="p-4 rounded-xl border border-slate-200 bg-white shadow-3xs">
-            <h3 className="font-bold text-slate-950 text-sm flex items-center gap-2 mb-1.5">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/15 hover:bg-purple-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="font-bold text-slate-950 group-hover:text-purple-700 text-sm flex items-center gap-2.5 mb-1.5 transition-colors">
+              <span className="w-8 h-8 rounded-xl bg-purple-50 text-purple-600 border border-purple-100 flex items-center justify-center group-hover:bg-purple-600 group-hover:text-white transition-all duration-200 shrink-0">
+                <CheckCircle2 className="w-4 h-4" />
+              </span>
               Associations of Persons (AOPs) &amp; BOIs
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-10.5">
               Consortiums, co-operative bodies, joint ventures, and groups of individuals coming together to execute specific revenue-generating projects or manage collective capital.
             </p>
           </div>
 
-          <div className="p-4 rounded-xl border border-slate-200 bg-white shadow-3xs">
-            <h3 className="font-bold text-slate-950 text-sm flex items-center gap-2 mb-1.5">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-amber-500 hover:shadow-md hover:shadow-amber-500/15 hover:bg-amber-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="font-bold text-slate-950 group-hover:text-amber-700 text-sm flex items-center gap-2.5 mb-1.5 transition-colors">
+              <span className="w-8 h-8 rounded-xl bg-amber-50 text-amber-600 border border-amber-100 flex items-center justify-center group-hover:bg-amber-600 group-hover:text-white transition-all duration-200 shrink-0">
+                <CheckCircle2 className="w-4 h-4" />
+              </span>
               Investment Funds &amp; Business Trusts
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-10.5">
               Alternative Investment Funds (AIFs Category I/II/III), Real Estate Investment Trusts (REITs), Infrastructure Investment Trusts (InvITs), and Artificial Juridical Persons (AJPs).
             </p>
           </div>
@@ -261,42 +269,50 @@ export default function DueDate31stAugustPage() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-3">
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
-            <h3 className="font-bold text-slate-950 text-sm flex items-center gap-2 mb-1">
-              <ShieldAlert className="w-4 h-4 text-emerald-600" />
+          <div className="group p-5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="font-bold text-slate-950 group-hover:text-emerald-700 text-sm flex items-center gap-2.5 mb-1.5 transition-colors">
+              <span className="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-all duration-200 shrink-0">
+                <ShieldAlert className="w-4 h-4" />
+              </span>
               Immunity from Section 234F Late Penalties
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-10.5">
               Filing after the deadline triggers an automatic mandatory fee under Section 234F of up to ₹5,000 (or ₹1,000 for entities with total income up to ₹5 Lakhs).
             </p>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
-            <h3 className="font-bold text-slate-950 text-sm flex items-center gap-2 mb-1">
-              <TrendingUp className="w-4 h-4 text-emerald-600" />
+          <div className="group p-5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="font-bold text-slate-950 group-hover:text-emerald-700 text-sm flex items-center gap-2.5 mb-1.5 transition-colors">
+              <span className="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-all duration-200 shrink-0">
+                <TrendingUp className="w-4 h-4" />
+              </span>
               Carry-Forward of Business Losses (Section 80)
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-10.5">
               Under Section 80 read with Section 72 and 74, unabsorbed business losses and capital losses cannot be carried forward for set-off in future years if the return is filed belatedly.
             </p>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
-            <h3 className="font-bold text-slate-950 text-sm flex items-center gap-2 mb-1">
-              <Percent className="w-4 h-4 text-emerald-600" />
+          <div className="group p-5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="font-bold text-slate-950 group-hover:text-emerald-700 text-sm flex items-center gap-2.5 mb-1.5 transition-colors">
+              <span className="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-all duration-200 shrink-0">
+                <Percent className="w-4 h-4" />
+              </span>
               Prevention of Penal Interest (Sec 234A/B/C)
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-10.5">
               Filing on time halts the compounding 1% per month interest charged under Section 234A on any outstanding self-assessment tax liability.
             </p>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
-            <h3 className="font-bold text-slate-950 text-sm flex items-center gap-2 mb-1">
-              <Building2 className="w-4 h-4 text-emerald-600" />
+          <div className="group p-5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="font-bold text-slate-950 group-hover:text-emerald-700 text-sm flex items-center gap-2.5 mb-1.5 transition-colors">
+              <span className="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-all duration-200 shrink-0">
+                <Building2 className="w-4 h-4" />
+              </span>
               Institutional Banking &amp; Tender Approvals
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-10.5">
               Banks, NBFCs, and government procurement portals strictly require the last 3 years of timely filed ITR-V acknowledgments before approving credit lines, loans, or issuing tenders.
             </p>
           </div>
@@ -309,42 +325,50 @@ export default function DueDate31stAugustPage() {
           Common Costly Mistakes to Avoid in ITR-5
         </h2>
         <div className="space-y-3">
-          <div className="p-3.5 rounded-lg border border-red-100 bg-red-50/40">
-            <h3 className="text-sm font-bold text-red-950 mb-1 flex items-center gap-2">
-              <AlertTriangle className="w-4 h-4 text-red-600" />
+          <div className="group p-4 rounded-xl border border-rose-200/80 bg-rose-50/40 hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/15 hover:bg-rose-50/70 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
+            <h3 className="text-sm font-bold text-rose-950 group-hover:text-rose-800 mb-1 flex items-center gap-2 transition-colors">
+              <span className="w-6 h-6 rounded-md bg-rose-100 text-rose-600 flex items-center justify-center group-hover:bg-rose-600 group-hover:text-white transition-colors shrink-0">
+                <AlertTriangle className="w-3.5 h-3.5" />
+              </span>
               1. Non-Compliance with Section 40(b) Remuneration Limits
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-8">
               Claiming partner salary or bonus that exceeds statutory book profit caps or is not authorized by the terms of the registered partnership deed will be added back to taxable income, attracting 30% firm tax plus surcharge.
             </p>
           </div>
 
-          <div className="p-3.5 rounded-lg border border-red-100 bg-red-50/40">
-            <h3 className="text-sm font-bold text-red-950 mb-1 flex items-center gap-2">
-              <AlertTriangle className="w-4 h-4 text-red-600" />
+          <div className="group p-4 rounded-xl border border-rose-200/80 bg-rose-50/40 hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/15 hover:bg-rose-50/70 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
+            <h3 className="text-sm font-bold text-rose-950 group-hover:text-rose-800 mb-1 flex items-center gap-2 transition-colors">
+              <span className="w-6 h-6 rounded-md bg-rose-100 text-rose-600 flex items-center justify-center group-hover:bg-rose-600 group-hover:text-white transition-colors shrink-0">
+                <AlertTriangle className="w-3.5 h-3.5" />
+              </span>
               2. Revenue Mismatches with Form 26AS, AIS, and GSTR-9
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-8">
               Any variance between turnover declared in ITR-5 and turnover reported across monthly GSTR-3B filings or TDS deductions in 26AS triggers automated Section 143(1)(a) computational mismatch notices.
             </p>
           </div>
 
-          <div className="p-3.5 rounded-lg border border-red-100 bg-red-50/40">
-            <h3 className="text-sm font-bold text-red-950 mb-1 flex items-center gap-2">
-              <AlertTriangle className="w-4 h-4 text-red-600" />
+          <div className="group p-4 rounded-xl border border-rose-200/80 bg-rose-50/40 hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/15 hover:bg-rose-50/70 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
+            <h3 className="text-sm font-bold text-rose-950 group-hover:text-rose-800 mb-1 flex items-center gap-2 transition-colors">
+              <span className="w-6 h-6 rounded-md bg-rose-100 text-rose-600 flex items-center justify-center group-hover:bg-rose-600 group-hover:text-white transition-colors shrink-0">
+                <AlertTriangle className="w-3.5 h-3.5" />
+              </span>
               3. Omission of Foreign Asset Disclosures (Schedule FA)
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-8">
               If an LLP or partnership holds foreign securities, depository accounts, or beneficial interests overseas, failure to disclose them in Schedule FA attracts severe scrutiny and penalties under the Black Money Act.
             </p>
           </div>
 
-          <div className="p-3.5 rounded-lg border border-red-100 bg-red-50/40">
-            <h3 className="text-sm font-bold text-red-950 mb-1 flex items-center gap-2">
-              <AlertTriangle className="w-4 h-4 text-red-600" />
+          <div className="group p-4 rounded-xl border border-rose-200/80 bg-rose-50/40 hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/15 hover:bg-rose-50/70 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
+            <h3 className="text-sm font-bold text-rose-950 group-hover:text-rose-800 mb-1 flex items-center gap-2 transition-colors">
+              <span className="w-6 h-6 rounded-md bg-rose-100 text-rose-600 flex items-center justify-center group-hover:bg-rose-600 group-hover:text-white transition-colors shrink-0">
+                <AlertTriangle className="w-3.5 h-3.5" />
+              </span>
               4. Forgetting to E-Verify the Return Within 30 Days
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-8">
               Submitting the ITR-5 JSON file online is incomplete without digital verification. For LLPs, verification via the Class 3 Digital Signature Certificate (DSC) of a Designated Partner is mandatory. If not verified within 30 days, the return is declared invalid.
             </p>
           </div>

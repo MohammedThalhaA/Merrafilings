@@ -59,71 +59,79 @@ export default function LlpAnnualFilingGuidePage() {
 
         <div className="space-y-4 my-4">
           {/* Component 1: Form 11 */}
-          <div className="p-5 rounded-2xl border border-slate-200 bg-white shadow-3xs">
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
             <div className="flex items-center justify-between gap-3 mb-2 flex-wrap">
-              <h3 className="font-bold text-slate-950 text-base flex items-center gap-2">
-                <FileCheck className="w-5 h-5 text-emerald-600" />
+              <h3 className="font-bold text-slate-950 group-hover:text-emerald-700 text-base flex items-center gap-2.5 transition-colors">
+                <span className="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-all duration-200 shrink-0">
+                  <FileCheck className="w-4 h-4" />
+                </span>
                 1. Form 11: Annual Return of the LLP
               </h3>
               <span className="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-semibold">
                 Due: 30th May (within 60 days of FY close)
               </span>
             </div>
-            <p className="text-xs sm:text-[13.5px] text-slate-800 font-normal leading-relaxed mb-2">
+            <p className="text-xs sm:text-[13.5px] text-slate-800 font-normal leading-relaxed mb-2 pl-10.5">
               Form 11 captures the comprehensive structural profile of the LLP as of 31st March. It documents the total number of designated and ordinary partners, total contribution obligations received from partners, details of body corporate partners, summary of penalties imposed on the LLP, and confirmation that all partner changes during the fiscal year were duly reported via Form 4.
             </p>
-            <div className="text-xs text-slate-700 bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+            <div className="text-xs text-slate-700 bg-slate-50 p-2.5 rounded-lg border border-slate-100 ml-10.5">
               <strong>Statutory Certification:</strong> If the turnover of the LLP exceeds ₹5 Crores or the capital contribution exceeds ₹50 Lakhs, Form 11 must be digitally certified by a practicing Company Secretary (PCS).
             </div>
           </div>
 
           {/* Component 2: Form 8 */}
-          <div className="p-5 rounded-2xl border border-slate-200 bg-white shadow-3xs">
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/15 hover:bg-blue-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
             <div className="flex items-center justify-between gap-3 mb-2 flex-wrap">
-              <h3 className="font-bold text-slate-950 text-base flex items-center gap-2">
-                <FileText className="w-5 h-5 text-blue-600" />
+              <h3 className="font-bold text-slate-950 group-hover:text-blue-700 text-base flex items-center gap-2.5 transition-colors">
+                <span className="w-8 h-8 rounded-xl bg-blue-50 text-blue-600 border border-blue-100 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-200 shrink-0">
+                  <FileText className="w-4 h-4" />
+                </span>
                 2. Form 8: Statement of Account &amp; Solvency
               </h3>
               <span className="px-2.5 py-1 rounded-full bg-blue-50 text-blue-800 text-xs font-semibold">
                 Due: 30th October (within 30 days from 6 months of FY end)
               </span>
             </div>
-            <p className="text-xs sm:text-[13.5px] text-slate-800 font-normal leading-relaxed mb-2">
+            <p className="text-xs sm:text-[13.5px] text-slate-800 font-normal leading-relaxed mb-2 pl-10.5">
               Form 8 is the primary financial disclosure document filed with the ROC. It comprises two parts: Part A (Statement of Solvency signed by designated partners declaring whether the LLP is capable of paying its debts as they fall due) and Part B (Statement of Accounts, including Balance Sheet, Profit &amp; Loss Account, and disclosures of contingent liabilities).
             </p>
-            <div className="text-xs text-slate-700 bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+            <div className="text-xs text-slate-700 bg-slate-50 p-2.5 rounded-lg border border-slate-100 ml-10.5">
               <strong>Mandatory Digital Signatures:</strong> Must be digitally signed by at least two Designated Partners with Class 3 DSC and verified by a practicing CA, CS, or Cost Accountant.
             </div>
           </div>
 
           {/* Component 3: ITR-5 */}
-          <div className="p-5 rounded-2xl border border-slate-200 bg-white shadow-3xs">
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/15 hover:bg-purple-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
             <div className="flex items-center justify-between gap-3 mb-2 flex-wrap">
-              <h3 className="font-bold text-slate-950 text-base flex items-center gap-2">
-                <Scale className="w-5 h-5 text-purple-600" />
+              <h3 className="font-bold text-slate-950 group-hover:text-purple-700 text-base flex items-center gap-2.5 transition-colors">
+                <span className="w-8 h-8 rounded-xl bg-purple-50 text-purple-600 border border-purple-100 flex items-center justify-center group-hover:bg-purple-600 group-hover:text-white transition-all duration-200 shrink-0">
+                  <Scale className="w-4 h-4" />
+                </span>
                 3. Form ITR-5: Annual Income Tax Return
               </h3>
               <span className="px-2.5 py-1 rounded-full bg-purple-50 text-purple-800 text-xs font-semibold">
                 Due: 31st July / 31st August (Non-Audit) or 31st October (Tax Audit)
               </span>
             </div>
-            <p className="text-xs sm:text-[13.5px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13.5px] text-slate-800 font-normal leading-relaxed pl-10.5">
               Every LLP must file Form ITR-5 with the Income Tax Department electronically using the Class 3 Digital Signature Certificate of its designated partner. ITR-5 computes taxable business profit, incorporates partner remuneration under Section 40(b), evaluates Alternate Minimum Tax (AMT Section 115JC), and reports taxes paid through TDS, TCS, and Advance Tax.
             </p>
           </div>
 
           {/* Component 4: DIR-3 KYC */}
-          <div className="p-5 rounded-2xl border border-slate-200 bg-white shadow-3xs">
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-amber-500 hover:shadow-md hover:shadow-amber-500/15 hover:bg-amber-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
             <div className="flex items-center justify-between gap-3 mb-2 flex-wrap">
-              <h3 className="font-bold text-slate-950 text-base flex items-center gap-2">
-                <Users className="w-5 h-5 text-amber-600" />
+              <h3 className="font-bold text-slate-950 group-hover:text-amber-700 text-base flex items-center gap-2.5 transition-colors">
+                <span className="w-8 h-8 rounded-xl bg-amber-50 text-amber-600 border border-amber-100 flex items-center justify-center group-hover:bg-amber-600 group-hover:text-white transition-all duration-200 shrink-0">
+                  <Users className="w-4 h-4" />
+                </span>
                 4. Form DIR-3 KYC / DIR-3 KYC-Web: Partner Annual KYC
               </h3>
               <span className="px-2.5 py-1 rounded-full bg-amber-50 text-amber-800 text-xs font-semibold">
                 Due: 30th September Annually
               </span>
             </div>
-            <p className="text-xs sm:text-[13.5px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13.5px] text-slate-800 font-normal leading-relaxed pl-10.5">
               Every individual partner holding an active Director Identification Number (DIN) or Designated Partner Identification Number (DPIN) must submit their annual KYC. Failure to file by 30th September leads to the DPIN status being marked &ldquo;Deactivated due to Non-filing of DIR-3 KYC&rdquo; and requires a government fee of ₹5,000 per DIN to restore.
             </p>
           </div>
@@ -239,12 +247,12 @@ export default function LlpAnnualFilingGuidePage() {
           5-Step Strategy for Hassle-Free Annual Filing
         </h2>
         <div className="space-y-3">
-          <div className="p-3.5 rounded-xl border border-slate-200 bg-white shadow-3xs flex items-start gap-3">
-            <span className="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-start gap-3">
+            <span className="w-6 h-6 rounded-full bg-slate-900 group-hover:bg-emerald-600 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 transition-colors">
               1
             </span>
             <div className="space-y-1">
-              <h3 className="font-bold text-slate-950 text-sm">
+              <h3 className="font-bold text-slate-950 group-hover:text-emerald-700 text-sm transition-colors">
                 Year-Round Systematic Bookkeeping &amp; Bank Reconciliation
               </h3>
               <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
@@ -253,12 +261,12 @@ export default function LlpAnnualFilingGuidePage() {
             </div>
           </div>
 
-          <div className="p-3.5 rounded-xl border border-slate-200 bg-white shadow-3xs flex items-start gap-3">
-            <span className="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-start gap-3">
+            <span className="w-6 h-6 rounded-full bg-slate-900 group-hover:bg-emerald-600 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 transition-colors">
               2
             </span>
             <div className="space-y-1">
-              <h3 className="font-bold text-slate-950 text-sm">
+              <h3 className="font-bold text-slate-950 group-hover:text-emerald-700 text-sm transition-colors">
                 Ensure Class 3 Digital Signature Certificate (DSC) Validity
               </h3>
               <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
@@ -267,12 +275,12 @@ export default function LlpAnnualFilingGuidePage() {
             </div>
           </div>
 
-          <div className="p-3.5 rounded-xl border border-slate-200 bg-white shadow-3xs flex items-start gap-3">
-            <span className="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-start gap-3">
+            <span className="w-6 h-6 rounded-full bg-slate-900 group-hover:bg-emerald-600 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 transition-colors">
               3
             </span>
             <div className="space-y-1">
-              <h3 className="font-bold text-slate-950 text-sm">
+              <h3 className="font-bold text-slate-950 group-hover:text-emerald-700 text-sm transition-colors">
                 Compile Partner Remuneration &amp; Section 40(b) Deductions
               </h3>
               <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
@@ -281,12 +289,12 @@ export default function LlpAnnualFilingGuidePage() {
             </div>
           </div>
 
-          <div className="p-3.5 rounded-xl border border-slate-200 bg-white shadow-3xs flex items-start gap-3">
-            <span className="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-start gap-3">
+            <span className="w-6 h-6 rounded-full bg-slate-900 group-hover:bg-emerald-600 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 transition-colors">
               4
             </span>
             <div className="space-y-1">
-              <h3 className="font-bold text-slate-950 text-sm">
+              <h3 className="font-bold text-slate-950 group-hover:text-emerald-700 text-sm transition-colors">
                 File Form 11 Prior to 30th May to Prevent Additional ROC Levies
               </h3>
               <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
@@ -295,12 +303,12 @@ export default function LlpAnnualFilingGuidePage() {
             </div>
           </div>
 
-          <div className="p-3.5 rounded-xl border border-slate-200 bg-white shadow-3xs flex items-start gap-3">
-            <span className="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-start gap-3">
+            <span className="w-6 h-6 rounded-full bg-slate-900 group-hover:bg-emerald-600 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 transition-colors">
               5
             </span>
             <div className="space-y-1">
-              <h3 className="font-bold text-slate-950 text-sm">
+              <h3 className="font-bold text-slate-950 group-hover:text-emerald-700 text-sm transition-colors">
                 Finalize Balance Sheet &amp; Submit Form 8 with CA Certification
               </h3>
               <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">

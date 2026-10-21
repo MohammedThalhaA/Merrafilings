@@ -61,32 +61,38 @@ export default function IntroductionToItr6FilingGuidePage() {
         </p>
 
         <div className="space-y-4 my-4">
-          <div className="p-4.5 rounded-xl border border-slate-200 bg-white shadow-3xs">
-            <h3 className="font-bold text-slate-950 text-sm flex items-center gap-2 mb-1.5">
-              <Building2 className="w-4 h-4 text-emerald-600" />
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="font-bold text-slate-950 group-hover:text-emerald-700 text-sm flex items-center gap-2.5 mb-1.5 transition-colors">
+              <span className="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-all duration-200 shrink-0">
+                <Building2 className="w-4 h-4" />
+              </span>
               Part A: General Information &amp; Schedule III Financials
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-10.5">
               Captures foundational corporate data including Corporate Identification Number (CIN), Company PAN, date of incorporation, nature of business codes, shareholding pattern, and residential status. It contains exhaustive financial statement tables: Part A-BS (Balance Sheet as per Schedule III), Part A-P&amp;L (Manufacturing, Trading, and Profit &amp; Loss account), and Part A-OI (Other Information required in tax audit cases).
             </p>
           </div>
 
-          <div className="p-4.5 rounded-xl border border-slate-200 bg-white shadow-3xs">
-            <h3 className="font-bold text-slate-950 text-sm flex items-center gap-2 mb-1.5">
-              <Calculator className="w-4 h-4 text-blue-600" />
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/15 hover:bg-blue-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="font-bold text-slate-950 group-hover:text-blue-700 text-sm flex items-center gap-2.5 mb-1.5 transition-colors">
+              <span className="w-8 h-8 rounded-xl bg-blue-50 text-blue-600 border border-blue-100 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-200 shrink-0">
+                <Calculator className="w-4 h-4" />
+              </span>
               Part B: Computation of Total Income &amp; Corporate Tax Liability
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-10.5">
               Consolidates taxable income across all heads, computes normal corporate tax liability (22% under Section 115BAA or 25%/30% under the normal regime), calculates Minimum Alternate Tax (MAT Section 115JB at 15%), credits advance tax, TDS, and TCS, and computes net tax payable or refundable.
             </p>
           </div>
 
-          <div className="p-4.5 rounded-xl border border-slate-200 bg-white shadow-3xs">
-            <h3 className="font-bold text-slate-950 text-sm flex items-center gap-2 mb-1.5">
-              <Layers className="w-4 h-4 text-purple-600" />
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/15 hover:bg-purple-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="font-bold text-slate-950 group-hover:text-purple-700 text-sm flex items-center gap-2.5 mb-1.5 transition-colors">
+              <span className="w-8 h-8 rounded-xl bg-purple-50 text-purple-600 border border-purple-100 flex items-center justify-center group-hover:bg-purple-600 group-hover:text-white transition-all duration-200 shrink-0">
+                <Layers className="w-4 h-4" />
+              </span>
               Critical Supporting Schedules
             </h3>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-700 font-normal mt-2">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-700 font-normal mt-3 pl-10.5">
               <li className="flex items-center gap-1.5">
                 <Check className="w-3.5 h-3.5 text-purple-600 shrink-0" />
                 <span><strong>Schedule BP:</strong> Computation of Business Profits</span>
@@ -122,12 +128,12 @@ export default function IntroductionToItr6FilingGuidePage() {
           Step-by-Step Guide to Filing Form ITR-6 Online
         </h2>
         <div className="space-y-3.5">
-          <div className="p-4 rounded-xl border border-slate-200 bg-white shadow-3xs flex items-start gap-3">
-            <span className="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-start gap-3">
+            <span className="w-6 h-6 rounded-full bg-slate-900 group-hover:bg-emerald-600 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 transition-colors">
               1
             </span>
             <div className="space-y-1">
-              <h3 className="font-bold text-slate-950 text-sm">
+              <h3 className="font-bold text-slate-950 group-hover:text-emerald-700 text-sm transition-colors">
                 Preparation &amp; Accounting Assembly
               </h3>
               <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
@@ -136,12 +142,12 @@ export default function IntroductionToItr6FilingGuidePage() {
             </div>
           </div>
 
-          <div className="p-4 rounded-xl border border-slate-200 bg-white shadow-3xs flex items-start gap-3">
-            <span className="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-start gap-3">
+            <span className="w-6 h-6 rounded-full bg-slate-900 group-hover:bg-emerald-600 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 transition-colors">
               2
             </span>
             <div className="space-y-1">
-              <h3 className="font-bold text-slate-950 text-sm">
+              <h3 className="font-bold text-slate-950 group-hover:text-emerald-700 text-sm transition-colors">
                 Accessing the Income Tax E-Filing Portal
               </h3>
               <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
@@ -150,12 +156,12 @@ export default function IntroductionToItr6FilingGuidePage() {
             </div>
           </div>
 
-          <div className="p-4 rounded-xl border border-slate-200 bg-white shadow-3xs flex items-start gap-3">
-            <span className="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-start gap-3">
+            <span className="w-6 h-6 rounded-full bg-slate-900 group-hover:bg-emerald-600 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 transition-colors">
               3
             </span>
             <div className="space-y-1">
-              <h3 className="font-bold text-slate-950 text-sm">
+              <h3 className="font-bold text-slate-950 group-hover:text-emerald-700 text-sm transition-colors">
                 Form Population &amp; Statutory Schedule Calibration
               </h3>
               <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
@@ -164,12 +170,12 @@ export default function IntroductionToItr6FilingGuidePage() {
             </div>
           </div>
 
-          <div className="p-4 rounded-xl border border-slate-200 bg-white shadow-3xs flex items-start gap-3">
-            <span className="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-start gap-3">
+            <span className="w-6 h-6 rounded-full bg-slate-900 group-hover:bg-emerald-600 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 transition-colors">
               4
             </span>
             <div className="space-y-1">
-              <h3 className="font-bold text-slate-950 text-sm">
+              <h3 className="font-bold text-slate-950 group-hover:text-emerald-700 text-sm transition-colors">
                 Mandatory Class 3 Digital Signature Certificate (DSC) Verification
               </h3>
               <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
@@ -234,32 +240,38 @@ export default function IntroductionToItr6FilingGuidePage() {
           Common Costly Pitfalls to Avoid in Corporate Tax Filing
         </h2>
         <div className="space-y-3">
-          <div className="p-3.5 rounded-lg border border-red-100 bg-red-50/40">
-            <h3 className="text-sm font-bold text-red-950 mb-1 flex items-center gap-2">
-              <AlertTriangle className="w-4 h-4 text-red-600" />
+          <div className="group p-4 rounded-xl border border-rose-200/80 bg-rose-50/40 hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/15 hover:bg-rose-50/70 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
+            <h3 className="text-sm font-bold text-rose-950 group-hover:text-rose-800 mb-1 flex items-center gap-2 transition-colors">
+              <span className="w-6 h-6 rounded-md bg-rose-100 text-rose-600 flex items-center justify-center group-hover:bg-rose-600 group-hover:text-white transition-colors shrink-0">
+                <AlertTriangle className="w-3.5 h-3.5" />
+              </span>
               1. Failure to File Form 10-IC for Section 115BAA
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-8">
               Companies wishing to adopt the concessional 22% corporate tax rate under Section 115BAA must submit Form 10-IC electronically before or alongside the ITR-6 due date. Missing this form subjects the company to standard 25% or 30% tax rates.
             </p>
           </div>
 
-          <div className="p-3.5 rounded-lg border border-red-100 bg-red-50/40">
-            <h3 className="text-sm font-bold text-red-950 mb-1 flex items-center gap-2">
-              <AlertTriangle className="w-4 h-4 text-red-600" />
+          <div className="group p-4 rounded-xl border border-rose-200/80 bg-rose-50/40 hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/15 hover:bg-rose-50/70 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
+            <h3 className="text-sm font-bold text-rose-950 group-hover:text-rose-800 mb-1 flex items-center gap-2 transition-colors">
+              <span className="w-6 h-6 rounded-md bg-rose-100 text-rose-600 flex items-center justify-center group-hover:bg-rose-600 group-hover:text-white transition-colors shrink-0">
+                <AlertTriangle className="w-3.5 h-3.5" />
+              </span>
               2. Discrepancies between 26AS, AIS, and Books of Account
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-8">
               Revenue mismatches between audited turnover and Form 26AS / AIS TDS records trigger automated Section 143(1)(a) tax notices. Thorough pre-filing reconciliation is essential.
             </p>
           </div>
 
-          <div className="p-3.5 rounded-lg border border-red-100 bg-red-50/40">
-            <h3 className="text-sm font-bold text-red-950 mb-1 flex items-center gap-2">
-              <AlertTriangle className="w-4 h-4 text-red-600" />
+          <div className="group p-4 rounded-xl border border-rose-200/80 bg-rose-50/40 hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/15 hover:bg-rose-50/70 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
+            <h3 className="text-sm font-bold text-rose-950 group-hover:text-rose-800 mb-1 flex items-center gap-2 transition-colors">
+              <span className="w-6 h-6 rounded-md bg-rose-100 text-rose-600 flex items-center justify-center group-hover:bg-rose-600 group-hover:text-white transition-colors shrink-0">
+                <AlertTriangle className="w-3.5 h-3.5" />
+              </span>
               3. Omission of Non-Operating Income
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-8">
               Failing to report fixed deposit interest, mutual fund capital gains, forex gains, or scrap sales in Schedule OS/CG exposes the company to underreporting penalties under Section 270A.
             </p>
           </div>

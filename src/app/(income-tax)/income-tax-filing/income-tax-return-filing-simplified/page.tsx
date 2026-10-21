@@ -197,13 +197,13 @@ export default function IncomeTaxReturnFilingSimplifiedPage() {
           {FOUR_CORE_BENEFITS.map((item, idx) => (
             <div
               key={idx}
-              className="p-4 rounded-xl border border-slate-200 bg-white hover:border-emerald-500 hover:shadow-md transition-all group"
+              className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer"
             >
               <div className="flex items-center justify-between mb-2">
-                <div className="w-8 h-8 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center">
+                <div className="w-8 h-8 rounded-lg bg-slate-50 group-hover:bg-emerald-100 border border-slate-100 group-hover:border-emerald-200 flex items-center justify-center transition-colors">
                   {item.icon}
                 </div>
-                <span className="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-100 text-slate-700">
+                <span className="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-100 group-hover:bg-emerald-100 group-hover:text-emerald-800 text-slate-700 transition-colors">
                   {item.badge}
                 </span>
               </div>
@@ -226,10 +226,10 @@ export default function IncomeTaxReturnFilingSimplifiedPage() {
         </p>
 
         <div className="space-y-3.5 mt-3">
-          <div className="p-4.5 rounded-xl border border-slate-200 bg-white">
+          <div className="group p-4.5 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
             <div className="flex items-center gap-2 mb-2 text-emerald-800 font-semibold text-sm">
-              <span className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center text-xs">1</span>
-              <span>Compile &amp; Reconcile Financial Records</span>
+              <span className="w-6 h-6 rounded-full bg-emerald-100 group-hover:bg-emerald-600 group-hover:text-white text-emerald-800 flex items-center justify-center text-xs font-bold transition-colors">1</span>
+              <span className="group-hover:text-emerald-900 transition-colors">Compile &amp; Reconcile Financial Records</span>
             </div>
             <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal pl-8">
               Download your <strong>Form 16 / 16A</strong>, <strong>Annual Information Statement (AIS)</strong>, and <strong>Form 26AS</strong>.
@@ -237,10 +237,10 @@ export default function IncomeTaxReturnFilingSimplifiedPage() {
             </p>
           </div>
 
-          <div className="p-4.5 rounded-xl border border-slate-200 bg-white">
+          <div className="group p-4.5 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/10 hover:bg-blue-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
             <div className="flex items-center gap-2 mb-2 text-blue-800 font-semibold text-sm">
-              <span className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-xs">2</span>
-              <span>Select the Appropriate ITR Form</span>
+              <span className="w-6 h-6 rounded-full bg-blue-100 group-hover:bg-blue-600 group-hover:text-white text-blue-800 flex items-center justify-center text-xs font-bold transition-colors">2</span>
+              <span className="group-hover:text-blue-900 transition-colors">Select the Appropriate ITR Form</span>
             </div>
             <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal pl-8">
               Choosing the wrong form invalidates your submission. Salaried individuals with simple income use <strong>ITR-1</strong>;
@@ -248,10 +248,10 @@ export default function IncomeTaxReturnFilingSimplifiedPage() {
             </p>
           </div>
 
-          <div className="p-4.5 rounded-xl border border-slate-200 bg-white">
+          <div className="group p-4.5 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/10 hover:bg-purple-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
             <div className="flex items-center gap-2 mb-2 text-purple-800 font-semibold text-sm">
-              <span className="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center text-xs">3</span>
-              <span>Execute Computation &amp; Tax Regime Comparison</span>
+              <span className="w-6 h-6 rounded-full bg-purple-100 group-hover:bg-purple-600 group-hover:text-white text-purple-800 flex items-center justify-center text-xs font-bold transition-colors">3</span>
+              <span className="group-hover:text-purple-900 transition-colors">Execute Computation &amp; Tax Regime Comparison</span>
             </div>
             <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal pl-8">
               Compare your tax outgo under the <strong>Old Tax Regime</strong> (with HRA and Chapter VI-A deductions) versus the
@@ -259,10 +259,10 @@ export default function IncomeTaxReturnFilingSimplifiedPage() {
             </p>
           </div>
 
-          <div className="p-4.5 rounded-xl border border-slate-200 bg-white">
+          <div className="group p-4.5 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-amber-500 hover:shadow-md hover:shadow-amber-500/10 hover:bg-amber-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
             <div className="flex items-center gap-2 mb-2 text-amber-800 font-semibold text-sm">
-              <span className="w-6 h-6 rounded-full bg-amber-100 flex items-center justify-center text-xs">4</span>
-              <span>Submit &amp; Instant E-Verification</span>
+              <span className="w-6 h-6 rounded-full bg-amber-100 group-hover:bg-amber-600 group-hover:text-white text-amber-800 flex items-center justify-center text-xs font-bold transition-colors">4</span>
+              <span className="group-hover:text-amber-900 transition-colors">Submit &amp; Instant E-Verification</span>
             </div>
             <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal pl-8">
               Submit your return electronically on the portal and immediately complete e-verification via <strong>Aadhaar OTP</strong>
@@ -283,14 +283,14 @@ export default function IncomeTaxReturnFilingSimplifiedPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 mt-3">
           {ITR_FORMS_GRID.map((item, idx) => (
-            <div key={idx} className="p-4 rounded-xl border border-slate-200 bg-white">
+            <div key={idx} className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-xs font-bold text-slate-900">{item.form}</span>
-                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200/60">
+                <span className="text-xs font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">{item.form}</span>
+                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-emerald-50 group-hover:bg-emerald-600 group-hover:text-white text-emerald-800 border border-emerald-200/60 transition-colors">
                   {item.badge}
                 </span>
               </div>
-              <h4 className="text-xs font-semibold text-emerald-700 mb-1">{item.eligibleFor}</h4>
+              <h4 className="text-xs font-semibold text-emerald-700 group-hover:text-emerald-900 transition-colors mb-1">{item.eligibleFor}</h4>
               <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">{item.scope}</p>
             </div>
           ))}
@@ -308,8 +308,8 @@ export default function IncomeTaxReturnFilingSimplifiedPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mt-3">
           {RECENT_CHANGES.map((item, idx) => (
-            <div key={idx} className="p-4 rounded-xl border border-slate-200 bg-white">
-              <h3 className="text-sm font-semibold text-slate-900 mb-1">{item.title}</h3>
+            <div key={idx} className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/10 hover:bg-blue-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+              <h3 className="text-sm font-semibold text-slate-900 group-hover:text-blue-700 transition-colors mb-1">{item.title}</h3>
               <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">{item.desc}</p>
             </div>
           ))}

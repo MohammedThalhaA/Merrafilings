@@ -207,24 +207,24 @@ export default function TwelveLpaSalaryTaxCalculationGuidePage() {
           Under the Income Tax Act, 1961, all individual earnings are classified into five statutory heads of income:
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
-          <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/50">
-            <span className="text-xs font-semibold text-emerald-700 uppercase tracking-wider block mb-1">Head 1</span>
-            <h3 className="text-sm font-semibold text-slate-900 mb-1">Income from Salaries</h3>
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <span className="text-xs font-semibold text-emerald-700 uppercase tracking-wider block mb-1 group-hover:text-emerald-800 transition-colors">Head 1</span>
+            <h3 className="text-sm font-semibold text-slate-900 group-hover:text-emerald-700 transition-colors mb-1">Income from Salaries</h3>
             <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">All wages, allowances, perquisites, and bonuses received from an employer.</p>
           </div>
-          <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/50">
-            <span className="text-xs font-semibold text-blue-700 uppercase tracking-wider block mb-1">Head 2</span>
-            <h3 className="text-sm font-semibold text-slate-900 mb-1">Income from House Property</h3>
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/10 hover:bg-blue-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <span className="text-xs font-semibold text-blue-700 uppercase tracking-wider block mb-1 group-hover:text-blue-800 transition-colors">Head 2</span>
+            <h3 className="text-sm font-semibold text-slate-900 group-hover:text-blue-700 transition-colors mb-1">Income from House Property</h3>
             <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">Rental earnings or deemed rental values from owned residential or commercial properties.</p>
           </div>
-          <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/50">
-            <span className="text-xs font-semibold text-purple-700 uppercase tracking-wider block mb-1">Head 3</span>
-            <h3 className="text-sm font-semibold text-slate-900 mb-1">Profits from Business or Profession</h3>
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/10 hover:bg-purple-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <span className="text-xs font-semibold text-purple-700 uppercase tracking-wider block mb-1 group-hover:text-purple-800 transition-colors">Head 3</span>
+            <h3 className="text-sm font-semibold text-slate-900 group-hover:text-purple-700 transition-colors mb-1">Profits from Business or Profession</h3>
             <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">Commercial profits earned by freelancers, proprietary owners, or professionals.</p>
           </div>
-          <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/50">
-            <span className="text-xs font-semibold text-amber-700 uppercase tracking-wider block mb-1">Head 4 & 5</span>
-            <h3 className="text-sm font-semibold text-slate-900 mb-1">Capital Gains & Other Sources</h3>
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-amber-500 hover:shadow-md hover:shadow-amber-500/10 hover:bg-amber-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <span className="text-xs font-semibold text-amber-700 uppercase tracking-wider block mb-1 group-hover:text-amber-800 transition-colors">Head 4 & 5</span>
+            <h3 className="text-sm font-semibold text-slate-900 group-hover:text-amber-700 transition-colors mb-1">Capital Gains & Other Sources</h3>
             <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">Gains from equities, mutual funds, real estate, bank interest, and dividend payouts.</p>
           </div>
         </div>
@@ -247,13 +247,13 @@ export default function TwelveLpaSalaryTaxCalculationGuidePage() {
           {SALARY_COMPONENTS.map((item, idx) => (
             <div
               key={idx}
-              className="p-4 rounded-xl border border-slate-200 bg-white hover:border-emerald-500 hover:shadow-md transition-all group"
+              className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer"
             >
               <div className="flex items-center justify-between gap-2 mb-2">
                 <h3 className="text-sm font-semibold text-slate-900 group-hover:text-emerald-700 transition-colors">
                   {item.title}
                 </h3>
-                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-slate-100 text-slate-700">
+                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-slate-100 group-hover:bg-emerald-100 group-hover:text-emerald-800 text-slate-700 transition-colors">
                   {item.badge}
                 </span>
               </div>
@@ -273,20 +273,20 @@ export default function TwelveLpaSalaryTaxCalculationGuidePage() {
         </p>
 
         <div className="space-y-3.5">
-          <div className="p-4.5 rounded-xl border border-slate-200 bg-white">
+          <div className="group p-4.5 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
             <div className="flex items-center gap-2 mb-2 text-emerald-800 font-semibold text-sm">
-              <span className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center text-xs">1</span>
-              <span>Compute Total Gross Salary</span>
+              <span className="w-6 h-6 rounded-full bg-emerald-100 group-hover:bg-emerald-600 group-hover:text-white text-emerald-800 flex items-center justify-center text-xs font-bold transition-colors">1</span>
+              <span className="group-hover:text-emerald-900 transition-colors">Compute Total Gross Salary</span>
             </div>
             <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal pl-8">
               Sum all salary credits including Basic Pay, HRA, Special Allowance, and variable performance bonuses. For this model, Gross Salary = <strong>₹12,00,000</strong>.
             </p>
           </div>
 
-          <div className="p-4.5 rounded-xl border border-slate-200 bg-white">
+          <div className="group p-4.5 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/10 hover:bg-blue-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
             <div className="flex items-center gap-2 mb-2 text-blue-800 font-semibold text-sm">
-              <span className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-xs">2</span>
-              <span>Apply Statutory Standard & Chapter VI-A Deductions</span>
+              <span className="w-6 h-6 rounded-full bg-blue-100 group-hover:bg-blue-600 group-hover:text-white text-blue-800 flex items-center justify-center text-xs font-bold transition-colors">2</span>
+              <span className="group-hover:text-blue-900 transition-colors">Apply Statutory Standard & Chapter VI-A Deductions</span>
             </div>
             <div className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal pl-8 space-y-1.5">
               <p>• <strong>Standard Deduction:</strong> ₹50,000 under Old Regime / ₹75,000 under New Regime.</p>
@@ -295,20 +295,20 @@ export default function TwelveLpaSalaryTaxCalculationGuidePage() {
             </div>
           </div>
 
-          <div className="p-4.5 rounded-xl border border-slate-200 bg-white">
+          <div className="group p-4.5 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/10 hover:bg-purple-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
             <div className="flex items-center gap-2 mb-2 text-purple-800 font-semibold text-sm">
-              <span className="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center text-xs">3</span>
-              <span>Calculate Base Tax Using Applicable Slabs</span>
+              <span className="w-6 h-6 rounded-full bg-purple-100 group-hover:bg-purple-600 group-hover:text-white text-purple-800 flex items-center justify-center text-xs font-bold transition-colors">3</span>
+              <span className="group-hover:text-purple-900 transition-colors">Calculate Base Tax Using Applicable Slabs</span>
             </div>
             <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal pl-8">
               Tax is computed progressively segment by segment according to the prevailing rates under the chosen regime.
             </p>
           </div>
 
-          <div className="p-4.5 rounded-xl border border-slate-200 bg-white">
+          <div className="group p-4.5 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-amber-500 hover:shadow-md hover:shadow-amber-500/10 hover:bg-amber-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
             <div className="flex items-center gap-2 mb-2 text-amber-800 font-semibold text-sm">
-              <span className="w-6 h-6 rounded-full bg-amber-100 flex items-center justify-center text-xs">4</span>
-              <span>Add 4% Health & Education Cess</span>
+              <span className="w-6 h-6 rounded-full bg-amber-100 group-hover:bg-amber-600 group-hover:text-white text-amber-800 flex items-center justify-center text-xs font-bold transition-colors">4</span>
+              <span className="group-hover:text-amber-900 transition-colors">Add 4% Health & Education Cess</span>
             </div>
             <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal pl-8">
               Multiply the calculated basic tax by 4% to arrive at the final payable tax or refundable amount.
@@ -398,14 +398,14 @@ export default function TwelveLpaSalaryTaxCalculationGuidePage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mt-3">
           {DEDUCTION_STRATEGIES.map((item, idx) => (
-            <div key={idx} className="p-4 rounded-xl border border-slate-200 bg-white">
+            <div key={idx} className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
               <div className="flex items-center justify-between mb-1.5">
-                <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200/60">
+                <span className="text-xs font-bold text-emerald-700 bg-emerald-50 group-hover:bg-emerald-600 group-hover:text-white px-2.5 py-0.5 rounded-full border border-emerald-200/60 transition-colors">
                   {item.section}
                 </span>
                 <span className="text-xs font-semibold text-slate-900">{item.limit}</span>
               </div>
-              <h3 className="text-sm font-semibold text-slate-900 mt-2 mb-1">{item.title}</h3>
+              <h3 className="text-sm font-semibold text-slate-900 group-hover:text-emerald-700 transition-colors mt-2 mb-1">{item.title}</h3>
               <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">{item.desc}</p>
             </div>
           ))}

@@ -154,42 +154,50 @@ export default function LlpComplianceEssentialGuide2023Page() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 my-3">
-          <div className="p-4 rounded-xl border border-slate-200 bg-white shadow-3xs">
-            <h3 className="font-bold text-slate-950 text-sm flex items-center gap-2 mb-1">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="font-bold text-slate-950 group-hover:text-emerald-700 text-sm flex items-center gap-2.5 mb-1.5 transition-colors">
+              <span className="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-all duration-200 shrink-0">
+                <CheckCircle2 className="w-4 h-4" />
+              </span>
               LLP Agreement Modifications (Form 3)
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-10.5">
               Any alteration in profit-sharing ratios, partner remuneration terms under Section 40(b), capital contributions, or business objectives requires an executed supplementary deed and Form 3 filing within 30 days.
             </p>
           </div>
 
-          <div className="p-4 rounded-xl border border-slate-200 bg-white shadow-3xs">
-            <h3 className="font-bold text-slate-950 text-sm flex items-center gap-2 mb-1">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/15 hover:bg-blue-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="font-bold text-slate-950 group-hover:text-blue-700 text-sm flex items-center gap-2.5 mb-1.5 transition-colors">
+              <span className="w-8 h-8 rounded-xl bg-blue-50 text-blue-600 border border-blue-100 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-200 shrink-0">
+                <CheckCircle2 className="w-4 h-4" />
+              </span>
               Partner Admission or Cessation (Form 4)
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-10.5">
               When a new partner joins or an existing partner resigns, retires, or passes away, Form 4 must be filed within 30 days along with partner consent and resignation letters.
             </p>
           </div>
 
-          <div className="p-4 rounded-xl border border-slate-200 bg-white shadow-3xs">
-            <h3 className="font-bold text-slate-950 text-sm flex items-center gap-2 mb-1">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/15 hover:bg-purple-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="font-bold text-slate-950 group-hover:text-purple-700 text-sm flex items-center gap-2.5 mb-1.5 transition-colors">
+              <span className="w-8 h-8 rounded-xl bg-purple-50 text-purple-600 border border-purple-100 flex items-center justify-center group-hover:bg-purple-600 group-hover:text-white transition-all duration-200 shrink-0">
+                <CheckCircle2 className="w-4 h-4" />
+              </span>
               Registered Office Relocation (Form 15)
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-10.5">
               Shifting the registered office within the same city or to another state requires partner approval and filing Form 15 within 30 days, accompanied by property ownership proof or a registered rent agreement with NOC.
             </p>
           </div>
 
-          <div className="p-4 rounded-xl border border-slate-200 bg-white shadow-3xs">
-            <h3 className="font-bold text-slate-950 text-sm flex items-center gap-2 mb-1">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-amber-500 hover:shadow-md hover:shadow-amber-500/15 hover:bg-amber-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="font-bold text-slate-950 group-hover:text-amber-700 text-sm flex items-center gap-2.5 mb-1.5 transition-colors">
+              <span className="w-8 h-8 rounded-xl bg-amber-50 text-amber-600 border border-amber-100 flex items-center justify-center group-hover:bg-amber-600 group-hover:text-white transition-all duration-200 shrink-0">
+                <CheckCircle2 className="w-4 h-4" />
+              </span>
               Striking Off Defunct LLPs (Form 24)
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-10.5">
               If an LLP has ceased commercial activity for at least one year and has no pending assets or liabilities, partners can file Form 24 with CA indemnity bonds and bank closure certificates to strike off its name cleanly.
             </p>
           </div>
@@ -233,30 +241,36 @@ export default function LlpComplianceEssentialGuide2023Page() {
           Best Practices for Seamless LLP Compliance Management
         </h2>
         <div className="space-y-3">
-          <div className="p-3.5 rounded-xl border border-slate-200 bg-white flex items-start gap-3">
-            <Check className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer flex items-start gap-3">
+            <span className="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-colors shrink-0 mt-0.5">
+              <Check className="w-4 h-4" />
+            </span>
             <div>
-              <strong className="text-slate-950 text-sm">Automate Statutory Tax &amp; MCA Calendar Reminders:</strong>
+              <strong className="text-slate-950 group-hover:text-emerald-700 text-sm transition-colors">Automate Statutory Tax &amp; MCA Calendar Reminders:</strong>
               <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed mt-0.5">
                 Set milestone reminders at least 30 days prior to 30th May (Form 11), 31st July/August (ITR-5), 30th September (DIR-3 KYC), and 30th October (Form 8) to avoid last-minute portal congestion.
               </p>
             </div>
           </div>
 
-          <div className="p-3.5 rounded-xl border border-slate-200 bg-white flex items-start gap-3">
-            <Check className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer flex items-start gap-3">
+            <span className="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-colors shrink-0 mt-0.5">
+              <Check className="w-4 h-4" />
+            </span>
             <div>
-              <strong className="text-slate-950 text-sm">Conduct Quarterly Financial Reviews:</strong>
+              <strong className="text-slate-950 group-hover:text-emerald-700 text-sm transition-colors">Conduct Quarterly Financial Reviews:</strong>
               <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed mt-0.5">
                 Review your trial balance each quarter with your Chartered Accountant to ensure that partner interest and salaries strictly adhere to Section 40(b) book profit limits.
               </p>
             </div>
           </div>
 
-          <div className="p-3.5 rounded-xl border border-slate-200 bg-white flex items-start gap-3">
-            <Check className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer flex items-start gap-3">
+            <span className="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-colors shrink-0 mt-0.5">
+              <Check className="w-4 h-4" />
+            </span>
             <div>
-              <strong className="text-slate-950 text-sm">Maintain a Centralized Digital Compliance Repository:</strong>
+              <strong className="text-slate-950 group-hover:text-emerald-700 text-sm transition-colors">Maintain a Centralized Digital Compliance Repository:</strong>
               <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed mt-0.5">
                 Store executed partnership agreements, supplementary deeds, bank statements, challan receipts, Form 26AS reports, and past ITR-V acknowledgments in a secure, centralized cloud archive for seamless audit retrieval.
               </p>

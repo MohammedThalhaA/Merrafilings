@@ -239,12 +239,12 @@ export default function NewDueDateForFilingItrPage() {
 
         <div className="space-y-3.5 mt-3">
           {THREE_MAJOR_REVISIONS.map((item, idx) => (
-            <div key={idx} className="p-4.5 rounded-xl border border-slate-200 bg-white hover:border-emerald-500 hover:shadow-md transition-all">
+            <div key={idx} className="group p-4.5 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
               <div className="flex items-center gap-2 mb-1.5 text-emerald-800 font-semibold text-sm">
-                <span className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center text-xs">
+                <span className="w-6 h-6 rounded-full bg-emerald-100 group-hover:bg-emerald-600 group-hover:text-white text-emerald-800 flex items-center justify-center text-xs font-bold transition-colors">
                   {item.num}
                 </span>
-                <span>{item.title}</span>
+                <span className="group-hover:text-emerald-900 transition-colors">{item.title}</span>
               </div>
               <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed pl-8">
                 {item.desc}
@@ -265,14 +265,14 @@ export default function NewDueDateForFilingItrPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mt-3">
           {PENALTY_CONSEQUENCES.map((item, idx) => (
-            <div key={idx} className="p-4.5 rounded-xl border border-slate-200 bg-white">
+            <div key={idx} className="group p-4.5 rounded-xl border border-rose-200/80 bg-rose-50/40 hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/15 hover:bg-rose-50/70 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-xs font-bold text-rose-700 bg-rose-50 px-2.5 py-0.5 rounded-full border border-rose-200/60">
+                <span className="text-xs font-bold text-rose-700 bg-rose-100 group-hover:bg-rose-200 px-2.5 py-0.5 rounded-full border border-rose-200 transition-colors">
                   {item.section}
                 </span>
                 <span className="text-xs font-semibold text-slate-900">{item.amount}</span>
               </div>
-              <h3 className="text-sm font-semibold text-slate-900 mb-1">{item.title}</h3>
+              <h3 className="text-sm font-semibold text-slate-900 group-hover:text-rose-900 transition-colors mb-1">{item.title}</h3>
               <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">{item.desc}</p>
             </div>
           ))}
@@ -289,21 +289,21 @@ export default function NewDueDateForFilingItrPage() {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
-          <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/50 flex items-start gap-2.5">
-            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal"><strong>Download AIS &amp; Form 26AS:</strong> Inspect every reported credit, interest payment, and tax deducted by employers and clients.</p>
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-start gap-2.5">
+            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal"><strong className="group-hover:text-emerald-900 transition-colors">Download AIS &amp; Form 26AS:</strong> Inspect every reported credit, interest payment, and tax deducted by employers and clients.</p>
           </div>
-          <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/50 flex items-start gap-2.5">
-            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal"><strong>Verify Bank Account Pre-Validation:</strong> Ensure your primary bank account is pre-validated on the portal for speedy refund credits.</p>
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/10 hover:bg-blue-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-start gap-2.5">
+            <CheckCircle2 className="w-4 h-4 text-blue-600 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal"><strong className="group-hover:text-blue-900 transition-colors">Verify Bank Account Pre-Validation:</strong> Ensure your primary bank account is pre-validated on the portal for speedy refund credits.</p>
           </div>
-          <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/50 flex items-start gap-2.5">
-            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal"><strong>Reconcile Capital Gains Statements:</strong> Obtain realized profit/loss statements from your equity brokers and mutual fund CAMS/KFintech.</p>
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/10 hover:bg-purple-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-start gap-2.5">
+            <CheckCircle2 className="w-4 h-4 text-purple-600 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal"><strong className="group-hover:text-purple-900 transition-colors">Reconcile Capital Gains Statements:</strong> Obtain realized profit/loss statements from your equity brokers and mutual fund CAMS/KFintech.</p>
           </div>
-          <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/50 flex items-start gap-2.5">
-            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal"><strong>Finalize Books of Accounts:</strong> Business owners should reconcile GST turnover and book revenues to prevent notice inquiries.</p>
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-amber-500 hover:shadow-md hover:shadow-amber-500/10 hover:bg-amber-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-start gap-2.5">
+            <CheckCircle2 className="w-4 h-4 text-amber-600 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+            <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal"><strong className="group-hover:text-amber-900 transition-colors">Finalize Books of Accounts:</strong> Business owners should reconcile GST turnover and book revenues to prevent notice inquiries.</p>
           </div>
         </div>
       </section>

@@ -175,16 +175,18 @@ export default function BusinessTaxFilingGuideForSuccessPage() {
 
         <div className="space-y-3.5 mt-3">
           {SUCCESS_MILESTONES.map((item, idx) => (
-            <div key={idx} className="p-4.5 rounded-xl border border-slate-200 bg-white hover:border-emerald-500 hover:shadow-md transition-all">
-              <div className="flex items-center gap-2 mb-1.5 text-emerald-800 font-semibold text-sm">
-                <span className="text-xs font-mono font-bold bg-emerald-100 px-2.5 py-0.5 rounded-md text-emerald-900">
-                  {item.step}
-                </span>
-                <span>{item.title}</span>
+            <div key={idx} className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-start gap-3">
+              <span className="text-xs font-mono font-bold bg-slate-900 group-hover:bg-emerald-600 text-white px-2.5 py-1 rounded-md transition-colors shrink-0 mt-0.5">
+                {item.step}
+              </span>
+              <div className="space-y-1">
+                <h3 className="font-bold text-slate-950 group-hover:text-emerald-700 text-sm transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
-              <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal pl-8">
-                {item.desc}
-              </p>
             </div>
           ))}
         </div>
@@ -201,8 +203,8 @@ export default function BusinessTaxFilingGuideForSuccessPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mt-3">
           {GST_ITR_INTERSECTION.map((item, idx) => (
-            <div key={idx} className="p-4.5 rounded-xl border border-slate-200 bg-white">
-              <h3 className="text-sm sm:text-[15px] font-semibold text-slate-900 mb-1">{item.title}</h3>
+            <div key={idx} className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+              <h3 className="text-sm sm:text-[15px] font-bold text-slate-950 group-hover:text-emerald-700 transition-colors mb-1">{item.title}</h3>
               <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">{item.desc}</p>
             </div>
           ))}
@@ -220,11 +222,11 @@ export default function BusinessTaxFilingGuideForSuccessPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mt-3">
           {STARTUP_ADVANTAGES.map((item, idx) => (
-            <div key={idx} className="p-4.5 rounded-xl border border-slate-200 bg-white">
-              <span className="text-xs font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-md border border-blue-200/60 inline-block mb-1.5">
+            <div key={idx} className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/15 hover:bg-blue-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+              <span className="text-xs font-bold text-blue-700 bg-blue-50 px-2.5 py-0.5 rounded-full border border-blue-200/60 inline-block mb-2 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                 Startup Advantage
               </span>
-              <h3 className="text-sm sm:text-[15px] font-semibold text-slate-900 mb-1">{item.title}</h3>
+              <h3 className="text-sm sm:text-[15px] font-bold text-slate-950 group-hover:text-blue-700 transition-colors mb-1">{item.title}</h3>
               <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">{item.desc}</p>
             </div>
           ))}

@@ -147,12 +147,14 @@ export default function Itr6ReturnFilingOnlineFeePage() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-3">
-          <div className="p-4.5 rounded-xl border border-slate-200 bg-white shadow-3xs space-y-2">
-            <h3 className="font-bold text-slate-950 text-sm flex items-center gap-2">
-              <FileCheck className="w-4 h-4 text-emerald-600" />
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer space-y-2">
+            <h3 className="font-bold text-slate-950 group-hover:text-emerald-700 text-sm flex items-center gap-2.5 transition-colors">
+              <span className="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-all duration-200 shrink-0">
+                <FileCheck className="w-4 h-4" />
+              </span>
               Corporate Financial Statements
             </h3>
-            <ul className="space-y-1.5 text-xs text-slate-700 font-normal">
+            <ul className="space-y-1.5 text-xs text-slate-700 font-normal pl-10.5">
               <li>• Audited Balance Sheet (Part A-BS) conforming to Schedule III</li>
               <li>• Profit &amp; Loss Statement (Part A-P&amp;L)</li>
               <li>• Cash Flow Statement (where applicable under Companies Act)</li>
@@ -161,12 +163,14 @@ export default function Itr6ReturnFilingOnlineFeePage() {
             </ul>
           </div>
 
-          <div className="p-4.5 rounded-xl border border-slate-200 bg-white shadow-3xs space-y-2">
-            <h3 className="font-bold text-slate-950 text-sm flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-blue-600" />
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/15 hover:bg-blue-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer space-y-2">
+            <h3 className="font-bold text-slate-950 group-hover:text-blue-700 text-sm flex items-center gap-2.5 transition-colors">
+              <span className="w-8 h-8 rounded-xl bg-blue-50 text-blue-600 border border-blue-100 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-200 shrink-0">
+                <ShieldCheck className="w-4 h-4" />
+              </span>
               Tax Statements &amp; Secretarial Records
             </h3>
-            <ul className="space-y-1.5 text-xs text-slate-700 font-normal">
+            <ul className="space-y-1.5 text-xs text-slate-700 font-normal pl-10.5">
               <li>• Form 26AS, AIS (Annual Information Statement) &amp; TIS</li>
               <li>• Advance Tax &amp; Self-Assessment Challan ITNS 280 receipts</li>
               <li>• Class 3 Digital Signature Certificate (DSC) of Director</li>
@@ -226,32 +230,38 @@ export default function Itr6ReturnFilingOnlineFeePage() {
           Penalties &amp; Commercial Risks of Late ITR-6 Filing
         </h2>
         <div className="space-y-3">
-          <div className="p-3.5 rounded-lg border border-red-100 bg-red-50/40">
-            <h3 className="text-sm font-bold text-red-950 mb-1 flex items-center gap-2">
-              <AlertTriangle className="w-4 h-4 text-red-600" />
+          <div className="group p-4 rounded-xl border border-rose-200/80 bg-rose-50/40 hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/15 hover:bg-rose-50/70 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
+            <h3 className="text-sm font-bold text-rose-950 group-hover:text-rose-800 mb-1 flex items-center gap-2 transition-colors">
+              <span className="w-6 h-6 rounded-md bg-rose-100 text-rose-600 flex items-center justify-center group-hover:bg-rose-600 group-hover:text-white transition-colors shrink-0">
+                <AlertTriangle className="w-3.5 h-3.5" />
+              </span>
               Section 234F Statutory Late Fee
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-8">
               Mandatory late fee of ₹5,000 is automatically levied upon submission after the due date (₹1,000 if total taxable income is up to ₹5 Lakhs).
             </p>
           </div>
 
-          <div className="p-3.5 rounded-lg border border-red-100 bg-red-50/40">
-            <h3 className="text-sm font-bold text-red-950 mb-1 flex items-center gap-2">
-              <AlertTriangle className="w-4 h-4 text-red-600" />
+          <div className="group p-4 rounded-xl border border-rose-200/80 bg-rose-50/40 hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/15 hover:bg-rose-50/70 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
+            <h3 className="text-sm font-bold text-rose-950 group-hover:text-rose-800 mb-1 flex items-center gap-2 transition-colors">
+              <span className="w-6 h-6 rounded-md bg-rose-100 text-rose-600 flex items-center justify-center group-hover:bg-rose-600 group-hover:text-white transition-colors shrink-0">
+                <AlertTriangle className="w-3.5 h-3.5" />
+              </span>
               Forfeiture of Carry-Forward Losses (Section 80)
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-8">
               Under Section 80 read with Section 72, if ITR-6 is filed past the deadline, current-year business losses and capital losses cannot be carried forward to offset future corporate profits.
             </p>
           </div>
 
-          <div className="p-3.5 rounded-lg border border-red-100 bg-red-50/40">
-            <h3 className="text-sm font-bold text-red-950 mb-1 flex items-center gap-2">
-              <AlertTriangle className="w-4 h-4 text-red-600" />
+          <div className="group p-4 rounded-xl border border-rose-200/80 bg-rose-50/40 hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/15 hover:bg-rose-50/70 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
+            <h3 className="text-sm font-bold text-rose-950 group-hover:text-rose-800 mb-1 flex items-center gap-2 transition-colors">
+              <span className="w-6 h-6 rounded-md bg-rose-100 text-rose-600 flex items-center justify-center group-hover:bg-rose-600 group-hover:text-white transition-colors shrink-0">
+                <AlertTriangle className="w-3.5 h-3.5" />
+              </span>
               Compounding Interest under Sections 234A, 234B &amp; 234C
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-8">
               Penal interest accumulates at 1% per month on outstanding tax liabilities, significantly increasing overall compliance costs.
             </p>
           </div>
@@ -264,48 +274,56 @@ export default function Itr6ReturnFilingOnlineFeePage() {
           Step-by-Step Corporate ITR-6 Online Filing Process
         </h2>
         <div className="space-y-3">
-          <div className="p-3.5 rounded-xl border border-slate-200 bg-white shadow-3xs flex items-start gap-3">
-            <span className="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-start gap-3">
+            <span className="w-6 h-6 rounded-full bg-slate-900 group-hover:bg-emerald-600 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 transition-colors">
               1
             </span>
             <div className="space-y-1">
-              <strong className="text-slate-950 text-sm">Financial Finalization &amp; Tax Audit Upload</strong>
+              <h3 className="font-bold text-slate-950 group-hover:text-emerald-700 text-sm transition-colors">
+                Financial Finalization &amp; Tax Audit Upload
+              </h3>
               <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
                 Finalize Schedule III financials, draft the tax computation, and upload Form 3CA-3CD before 30th September if Section 44AB applies.
               </p>
             </div>
           </div>
 
-          <div className="p-3.5 rounded-xl border border-slate-200 bg-white shadow-3xs flex items-start gap-3">
-            <span className="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-start gap-3">
+            <span className="w-6 h-6 rounded-full bg-slate-900 group-hover:bg-emerald-600 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 transition-colors">
               2
             </span>
             <div className="space-y-1">
-              <strong className="text-slate-950 text-sm">Tax Regime Selection (Sec 115BAA vs. Normal)</strong>
+              <h3 className="font-bold text-slate-950 group-hover:text-emerald-700 text-sm transition-colors">
+                Tax Regime Selection (Sec 115BAA vs. Normal)
+              </h3>
               <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
                 Evaluate whether adopting the Section 115BAA concessional 22% regime (via Form 10-IC) or claiming existing MAT credits under normal rates delivers greater tax savings.
               </p>
             </div>
           </div>
 
-          <div className="p-3.5 rounded-xl border border-slate-200 bg-white shadow-3xs flex items-start gap-3">
-            <span className="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-start gap-3">
+            <span className="w-6 h-6 rounded-full bg-slate-900 group-hover:bg-emerald-600 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 transition-colors">
               3
             </span>
             <div className="space-y-1">
-              <strong className="text-slate-950 text-sm">ITR-6 JSON Generation &amp; Error Validation</strong>
+              <h3 className="font-bold text-slate-950 group-hover:text-emerald-700 text-sm transition-colors">
+                ITR-6 JSON Generation &amp; Error Validation
+              </h3>
               <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
                 Populate all 35+ schedules in the CBDT offline utility, validate JSON schemas, and ensure zero schema mismatch errors.
               </p>
             </div>
           </div>
 
-          <div className="p-3.5 rounded-xl border border-slate-200 bg-white shadow-3xs flex items-start gap-3">
-            <span className="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-start gap-3">
+            <span className="w-6 h-6 rounded-full bg-slate-900 group-hover:bg-emerald-600 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 transition-colors">
               4
             </span>
             <div className="space-y-1">
-              <strong className="text-slate-950 text-sm">Mandatory Class 3 DSC Electronic Verification</strong>
+              <h3 className="font-bold text-slate-950 group-hover:text-emerald-700 text-sm transition-colors">
+                Mandatory Class 3 DSC Electronic Verification
+              </h3>
               <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
                 Upload the JSON return on the Income Tax portal and sign electronically using the registered Class 3 DSC of the Managing Director or Director. Download the ITR-V acknowledgment.
               </p>

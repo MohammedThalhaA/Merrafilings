@@ -58,42 +58,50 @@ export default function UnderstandingLlpComplianceEssentialsPage() {
         </p>
 
         <div className="space-y-3.5 my-4">
-          <div className="p-4 rounded-xl border border-slate-200 bg-white shadow-3xs">
-            <h3 className="font-bold text-slate-950 text-sm flex items-center gap-2 mb-1">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="font-bold text-slate-950 group-hover:text-emerald-700 text-sm flex items-center gap-2.5 mb-1.5 transition-colors">
+              <span className="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-all duration-200 shrink-0">
+                <CheckCircle2 className="w-4 h-4" />
+              </span>
               1. Maintenance of Statutory Registers at Registered Office
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-10.5">
               Under the LLP Act, every LLP must maintain a Register of Partners and Designated Partners, Register of Partner Contributions, Register of Charges/Mortgages created over LLP assets, and the formal Minutes Book documenting decisions passed at partner meetings. These records must be available for inspection at the registered office.
             </p>
           </div>
 
-          <div className="p-4 rounded-xl border border-slate-200 bg-white shadow-3xs">
-            <h3 className="font-bold text-slate-950 text-sm flex items-center gap-2 mb-1">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/15 hover:bg-blue-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="font-bold text-slate-950 group-hover:text-blue-700 text-sm flex items-center gap-2.5 mb-1.5 transition-colors">
+              <span className="w-8 h-8 rounded-xl bg-blue-50 text-blue-600 border border-blue-100 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-200 shrink-0">
+                <CheckCircle2 className="w-4 h-4" />
+              </span>
               2. Annual Return (Form 11) Submission
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-10.5">
               Filing the annual return via Form 11 on the MCA V3 portal within 60 days of the financial year close (by 30th May). It confirms the capital contribution of each partner, total business turnover, and ensures the public registry accurately reflects current management.
             </p>
           </div>
 
-          <div className="p-4 rounded-xl border border-slate-200 bg-white shadow-3xs">
-            <h3 className="font-bold text-slate-950 text-sm flex items-center gap-2 mb-1">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/15 hover:bg-purple-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="font-bold text-slate-950 group-hover:text-purple-700 text-sm flex items-center gap-2.5 mb-1.5 transition-colors">
+              <span className="w-8 h-8 rounded-xl bg-purple-50 text-purple-600 border border-purple-100 flex items-center justify-center group-hover:bg-purple-600 group-hover:text-white transition-all duration-200 shrink-0">
+                <CheckCircle2 className="w-4 h-4" />
+              </span>
               3. Statement of Account &amp; Solvency (Form 8)
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-10.5">
               Filing Form 8 within 30 days from the end of 6 months of the financial year (by 30th October). It consists of the verified balance sheet, P&amp;L statement, and an explicit declaration of solvency executed by at least two Designated Partners.
             </p>
           </div>
 
-          <div className="p-4 rounded-xl border border-slate-200 bg-white shadow-3xs">
-            <h3 className="font-bold text-slate-950 text-sm flex items-center gap-2 mb-1">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-amber-500 hover:shadow-md hover:shadow-amber-500/15 hover:bg-amber-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="font-bold text-slate-950 group-hover:text-amber-700 text-sm flex items-center gap-2.5 mb-1.5 transition-colors">
+              <span className="w-8 h-8 rounded-xl bg-amber-50 text-amber-600 border border-amber-100 flex items-center justify-center group-hover:bg-amber-600 group-hover:text-white transition-all duration-200 shrink-0">
+                <CheckCircle2 className="w-4 h-4" />
+              </span>
               4. Income Tax Return (ITR-5) Electronic Filing
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-10.5">
               Mandatory electronic filing of Form ITR-5 using the Class 3 Digital Signature Certificate of a Designated Partner by 31st July/31st August (non-audit cases) or 31st October (tax audit cases), alongside payment of taxes and reconciliation with AIS and Form 26AS.
             </p>
           </div>
@@ -110,22 +118,26 @@ export default function UnderstandingLlpComplianceEssentialsPage() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-3">
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
-            <h3 className="font-bold text-slate-950 text-sm flex items-center gap-2 mb-1">
-              <Scale className="w-4 h-4 text-emerald-600" />
+          <div className="group p-5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="font-bold text-slate-950 group-hover:text-emerald-700 text-sm flex items-center gap-2.5 mb-1.5 transition-colors">
+              <span className="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-all duration-200 shrink-0">
+                <Scale className="w-4 h-4" />
+              </span>
               Decriminalization of Procedural Defaults
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-10.5">
               Minor technical non-compliances (such as delayed form filings) have been decriminalized and shifted from criminal court proceedings to an In-House Adjudication Mechanism (IAM) led by designated Adjudicating Officers.
             </p>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
-            <h3 className="font-bold text-slate-950 text-sm flex items-center gap-2 mb-1">
-              <Building2 className="w-4 h-4 text-emerald-600" />
+          <div className="group p-5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/15 hover:bg-blue-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="font-bold text-slate-950 group-hover:text-blue-700 text-sm flex items-center gap-2.5 mb-1.5 transition-colors">
+              <span className="w-8 h-8 rounded-xl bg-blue-50 text-blue-600 border border-blue-100 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-200 shrink-0">
+                <Building2 className="w-4 h-4" />
+              </span>
               Introduction of &ldquo;Small LLP&rdquo; Concept
             </h3>
-            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-slate-800 font-normal leading-relaxed pl-10.5">
               LLPs with capital contributions up to ₹25 Lakhs (expandable up to ₹5 Crores) and annual turnover up to ₹40 Lakhs (expandable up to ₹50 Crores) qualify as &ldquo;Small LLPs,&rdquo; benefiting from reduced government filing fees and lower statutory penalties.
             </p>
           </div>
@@ -142,24 +154,30 @@ export default function UnderstandingLlpComplianceEssentialsPage() {
         </p>
 
         <div className="space-y-3 text-xs sm:text-[13px] text-slate-800 font-normal">
-          <div className="p-3.5 rounded-lg border border-slate-200 bg-white flex items-start gap-3">
-            <TrendingUp className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer flex items-start gap-3">
+            <span className="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-colors shrink-0 mt-0.5">
+              <TrendingUp className="w-4 h-4" />
+            </span>
             <div>
-              <strong className="text-slate-950">Frictionless Bank Financing:</strong> Commercial banks and financial institutions evaluate an LLP’s last 3 years of audited Form 8 balance sheets and ITR-V acknowledgments before sanctioning working capital or term loans.
+              <strong className="text-slate-950 group-hover:text-emerald-700 transition-colors">Frictionless Bank Financing:</strong> Commercial banks and financial institutions evaluate an LLP’s last 3 years of audited Form 8 balance sheets and ITR-V acknowledgments before sanctioning working capital or term loans.
             </div>
           </div>
 
-          <div className="p-3.5 rounded-lg border border-slate-200 bg-white flex items-start gap-3">
-            <Award className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer flex items-start gap-3">
+            <span className="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-colors shrink-0 mt-0.5">
+              <Award className="w-4 h-4" />
+            </span>
             <div>
-              <strong className="text-slate-950">Investor &amp; Venture Due Diligence:</strong> Venture capital funds and angel networks perform comprehensive MCA legal due diligence. Any delinquency in Form 11 or Form 8 triggers red flags and delays funding rounds.
+              <strong className="text-slate-950 group-hover:text-emerald-700 transition-colors">Investor &amp; Venture Due Diligence:</strong> Venture capital funds and angel networks perform comprehensive MCA legal due diligence. Any delinquency in Form 11 or Form 8 triggers red flags and delays funding rounds.
             </div>
           </div>
 
-          <div className="p-3.5 rounded-lg border border-slate-200 bg-white flex items-start gap-3">
-            <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer flex items-start gap-3">
+            <span className="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-colors shrink-0 mt-0.5">
+              <ShieldCheck className="w-4 h-4" />
+            </span>
             <div>
-              <strong className="text-slate-950">Protection of Designated Partners&rsquo; DPIN:</strong> Routine filings prevent designated partners from facing DPIN deactivations, which can disqualify them from acting as directors or partners across other corporate ventures.
+              <strong className="text-slate-950 group-hover:text-emerald-700 transition-colors">Protection of Designated Partners&rsquo; DPIN:</strong> Routine filings prevent designated partners from facing DPIN deactivations, which can disqualify them from acting as directors or partners across other corporate ventures.
             </div>
           </div>
         </div>

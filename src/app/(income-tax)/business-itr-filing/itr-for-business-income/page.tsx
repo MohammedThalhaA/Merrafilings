@@ -178,13 +178,13 @@ export default function ItrForBusinessIncomePage() {
           {ENTITY_FORM_MATRIX.map((item, idx) => (
             <div
               key={idx}
-              className="p-5 rounded-xl border border-slate-200 bg-white hover:border-emerald-500 hover:shadow-md transition-all group"
+              className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer"
             >
               <div className="flex items-center justify-between mb-2">
-                <h3 className="text-base font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">
+                <h3 className="text-base font-bold text-slate-950 group-hover:text-emerald-700 transition-colors">
                   {item.entity}
                 </h3>
-                <span className="text-xs font-mono font-semibold px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700">
+                <span className="text-xs font-mono font-semibold px-2.5 py-0.5 rounded-full bg-slate-100 group-hover:bg-emerald-100 group-hover:text-emerald-800 transition-colors text-slate-700">
                   {item.form}
                 </span>
               </div>
@@ -264,8 +264,8 @@ export default function ItrForBusinessIncomePage() {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 mt-3">
           {DOCUMENT_CHECKLIST.map((doc, idx) => (
-            <div key={idx} className="p-4 rounded-xl border border-slate-200 bg-white">
-              <h3 className="text-sm font-semibold text-slate-900 mb-1">{doc.title}</h3>
+            <div key={idx} className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+              <h3 className="text-sm font-bold text-slate-950 group-hover:text-emerald-700 transition-colors mb-1">{doc.title}</h3>
               <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">{doc.desc}</p>
             </div>
           ))}

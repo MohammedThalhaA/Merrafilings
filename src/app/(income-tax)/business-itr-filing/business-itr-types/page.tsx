@@ -202,16 +202,16 @@ export default function BusinessItrTypesPage() {
           {ITR_TYPES_LIST.map((item, idx) => (
             <div
               key={idx}
-              className="p-4.5 rounded-xl border border-slate-200 bg-white hover:border-emerald-500 hover:shadow-md transition-all"
+              className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer"
             >
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-1.5">
                 <div className="flex items-center gap-2.5">
-                  <span className="text-xs font-bold text-slate-900 bg-slate-100 px-2.5 py-0.5 rounded-md border border-slate-200 font-mono">
+                  <span className="text-xs font-bold text-slate-900 bg-slate-100 group-hover:bg-emerald-100 group-hover:text-emerald-800 transition-colors px-2.5 py-0.5 rounded-md border border-slate-200 font-mono">
                     {item.form}
                   </span>
-                  <h3 className="text-sm sm:text-[15px] font-bold text-slate-900">{item.category}</h3>
+                  <h3 className="text-sm sm:text-[15px] font-bold text-slate-950 group-hover:text-emerald-700 transition-colors">{item.category}</h3>
                 </div>
-                <span className="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200/60 self-start sm:self-auto">
+                <span className="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200/60 self-start sm:self-auto group-hover:bg-emerald-600 group-hover:text-white transition-colors">
                   {item.businessApplicability}
                 </span>
               </div>
@@ -262,26 +262,26 @@ export default function BusinessItrTypesPage() {
           3. Quick Entity-wise Form Selection Guide
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mt-3">
-          <div className="p-4.5 rounded-xl border border-slate-200 bg-white">
-            <h3 className="text-sm sm:text-[15px] font-semibold text-slate-900 mb-1">Sole Proprietorship</h3>
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="text-sm sm:text-[15px] font-bold text-slate-950 group-hover:text-emerald-700 transition-colors mb-1">Sole Proprietorship</h3>
             <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
               Use <strong>ITR-4 Sugam</strong> if opting for Section 44AD presumptive taxation without books. Use <strong>ITR-3</strong> if maintaining accounting books or claiming loss carry-forwards.
             </p>
           </div>
-          <div className="p-4.5 rounded-xl border border-slate-200 bg-white">
-            <h3 className="text-sm sm:text-[15px] font-semibold text-slate-900 mb-1">Partnership Firm &amp; LLP</h3>
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="text-sm sm:text-[15px] font-bold text-slate-950 group-hover:text-emerald-700 transition-colors mb-1">Partnership Firm &amp; LLP</h3>
             <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
               Always file <strong>Form ITR-5</strong>. Partnership firms may opt for Section 44AD via ITR-5, while LLPs are strictly mandated to maintain audited statutory accounts.
             </p>
           </div>
-          <div className="p-4.5 rounded-xl border border-slate-200 bg-white">
-            <h3 className="text-sm sm:text-[15px] font-semibold text-slate-900 mb-1">Private Limited Company &amp; OPC</h3>
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="text-sm sm:text-[15px] font-bold text-slate-950 group-hover:text-emerald-700 transition-colors mb-1">Private Limited Company &amp; OPC</h3>
             <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
               Mandatory to file <strong>Form ITR-6</strong> electronically with the designated Director's active Class 3 Digital Signature Certificate (DSC).
             </p>
           </div>
-          <div className="p-4.5 rounded-xl border border-slate-200 bg-white">
-            <h3 className="text-sm sm:text-[15px] font-semibold text-slate-900 mb-1">Section 8 NGO &amp; Trust</h3>
+          <div className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/15 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="text-sm sm:text-[15px] font-bold text-slate-950 group-hover:text-emerald-700 transition-colors mb-1">Section 8 NGO &amp; Trust</h3>
             <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
               Must file <strong>Form ITR-7</strong> along with Form 10B audit report to preserve statutory exemptions under Sections 11 and 12.
             </p>

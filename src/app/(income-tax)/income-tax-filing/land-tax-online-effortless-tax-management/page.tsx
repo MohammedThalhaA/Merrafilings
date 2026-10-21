@@ -184,26 +184,26 @@ export default function LandTaxOnlineEffortlessTaxManagementPage() {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mt-3">
-          <div className="p-4 rounded-xl border border-slate-200 bg-white">
-            <h3 className="text-sm font-semibold text-slate-900 mb-1">Who Must Pay?</h3>
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="text-sm font-semibold text-slate-900 group-hover:text-emerald-700 transition-colors mb-1">Who Must Pay?</h3>
             <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
               Every individual, corporate entity, or HUF holding registered ownership title, Patta, or mutation rights to taxable land parcels within municipal limits.
             </p>
           </div>
-          <div className="p-4 rounded-xl border border-slate-200 bg-white">
-            <h3 className="text-sm font-semibold text-slate-900 mb-1">What is Taxed?</h3>
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/10 hover:bg-blue-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="text-sm font-semibold text-slate-900 group-hover:text-blue-700 transition-colors mb-1">What is Taxed?</h3>
             <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
               The underlying land area, assessed either on its capital circle rate value or unit area rate (UAR), independent of building constructions.
             </p>
           </div>
-          <div className="p-4 rounded-xl border border-slate-200 bg-white">
-            <h3 className="text-sm font-semibold text-slate-900 mb-1">How are Rates Determined?</h3>
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/10 hover:bg-purple-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="text-sm font-semibold text-slate-900 group-hover:text-purple-700 transition-colors mb-1">How are Rates Determined?</h3>
             <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
               Based on geographic zone classifications (Tier 1/2/3), street width frontage, developmental infrastructure, and commercial vs. residential zoning.
             </p>
           </div>
-          <div className="p-4 rounded-xl border border-slate-200 bg-white">
-            <h3 className="text-sm font-semibold text-slate-900 mb-1">Statutory Exemptions</h3>
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-amber-500 hover:shadow-md hover:shadow-amber-500/10 hover:bg-amber-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="text-sm font-semibold text-slate-900 group-hover:text-amber-700 transition-colors mb-1">Statutory Exemptions</h3>
             <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
               Land parcels exclusively dedicated to public places of worship, registered charitable trust activities, public burial grounds, or active rural cultivation.
             </p>
@@ -224,13 +224,13 @@ export default function LandTaxOnlineEffortlessTaxManagementPage() {
           {ADVANTAGES.map((item, idx) => (
             <div
               key={idx}
-              className="p-4 rounded-xl border border-slate-200 bg-white hover:border-emerald-500 hover:shadow-md transition-all group"
+              className="group p-5 rounded-2xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer"
             >
               <div className="flex items-center justify-between mb-2">
-                <div className="w-8 h-8 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center">
+                <div className="w-8 h-8 rounded-lg bg-slate-50 group-hover:bg-emerald-100 border border-slate-100 group-hover:border-emerald-200 flex items-center justify-center transition-colors">
                   {item.icon}
                 </div>
-                <span className="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-100 text-slate-700">
+                <span className="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-100 group-hover:bg-emerald-100 group-hover:text-emerald-800 text-slate-700 transition-colors">
                   {item.badge}
                 </span>
               </div>
@@ -254,11 +254,11 @@ export default function LandTaxOnlineEffortlessTaxManagementPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mt-3">
           {ONBOARDING_STEPS.map((step, idx) => (
-            <div key={idx} className="p-4.5 rounded-xl border border-slate-200 bg-white">
-              <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200/60 inline-block mb-2">
+            <div key={idx} className="group p-4.5 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+              <span className="text-xs font-bold text-emerald-700 bg-emerald-50 group-hover:bg-emerald-600 group-hover:text-white px-2.5 py-0.5 rounded-full border border-emerald-200/60 inline-block mb-2 transition-colors">
                 {step.step}
               </span>
-              <h3 className="text-sm font-semibold text-slate-900 mb-1">{step.title}</h3>
+              <h3 className="text-sm font-semibold text-slate-900 group-hover:text-emerald-700 transition-colors mb-1">{step.title}</h3>
               <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">{step.desc}</p>
             </div>
           ))}
@@ -276,11 +276,11 @@ export default function LandTaxOnlineEffortlessTaxManagementPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mt-3">
           {INCOME_TAX_INTERSECTION.map((item, idx) => (
-            <div key={idx} className="p-4.5 rounded-xl border border-slate-200 bg-white">
-              <span className="text-xs font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-md border border-blue-200/60 inline-block mb-2">
+            <div key={idx} className="group p-4.5 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/10 hover:bg-blue-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+              <span className="text-xs font-bold text-blue-700 bg-blue-50 group-hover:bg-blue-600 group-hover:text-white px-2 py-0.5 rounded-md border border-blue-200/60 inline-block mb-2 transition-colors">
                 {item.section}
               </span>
-              <h3 className="text-sm font-semibold text-slate-900 mb-1">{item.title}</h3>
+              <h3 className="text-sm font-semibold text-slate-900 group-hover:text-blue-700 transition-colors mb-1">{item.title}</h3>
               <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">{item.desc}</p>
             </div>
           ))}
@@ -293,20 +293,20 @@ export default function LandTaxOnlineEffortlessTaxManagementPage() {
           5. Common Online Land Tax Challenges &amp; Solutions
         </h2>
         <div className="space-y-3">
-          <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/50 flex items-start gap-3">
-            <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
+          <div className="group p-4 rounded-xl border border-amber-200/80 bg-amber-50/40 hover:border-amber-400 hover:shadow-md hover:shadow-amber-500/15 hover:bg-amber-50/70 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer flex items-start gap-3">
+            <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
             <div>
-              <h3 className="text-xs sm:text-sm font-semibold text-slate-900">Payment Gateway Drops &amp; Delayed Receipts</h3>
+              <h3 className="text-xs sm:text-sm font-semibold text-amber-900">Payment Gateway Drops &amp; Delayed Receipts</h3>
               <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal mt-0.5 leading-relaxed">
                 If money is deducted without generating a receipt, check your bank statement for a transaction reference number (UTR). Allow 24 hours for automatic reconciliation before initiating a fresh payment.
               </p>
             </div>
           </div>
 
-          <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/50 flex items-start gap-3">
-            <AlertTriangle className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+          <div className="group p-4 rounded-xl border border-blue-200/80 bg-blue-50/40 hover:border-blue-400 hover:shadow-md hover:shadow-blue-500/15 hover:bg-blue-50/70 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer flex items-start gap-3">
+            <AlertTriangle className="w-5 h-5 text-blue-600 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
             <div>
-              <h3 className="text-xs sm:text-sm font-semibold text-slate-900">Incorrect Property Zone or Extent</h3>
+              <h3 className="text-xs sm:text-sm font-semibold text-blue-900">Incorrect Property Zone or Extent</h3>
               <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal mt-0.5 leading-relaxed">
                 If the municipal system misclassifies your plot into an expensive commercial zone, submit an online grievance accompanied by your approved layout sanction to recalibrate the demand.
               </p>

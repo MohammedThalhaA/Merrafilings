@@ -187,19 +187,19 @@ export default function DocumentsNeededForOnlineItrFilingPage() {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-3">
-          <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/50">
-            <ShieldCheck className="w-5 h-5 text-emerald-600 mb-2" />
-            <h3 className="text-sm font-semibold text-slate-900 mb-1">Zero Defective Notices</h3>
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <ShieldCheck className="w-5 h-5 text-emerald-600 mb-2 group-hover:scale-110 transition-transform" />
+            <h3 className="text-sm font-semibold text-slate-900 group-hover:text-emerald-700 transition-colors mb-1">Zero Defective Notices</h3>
             <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">Prevents Section 139(9) notices arising from unmatched turnover or missing tax audit UDINs.</p>
           </div>
-          <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/50">
-            <CheckCircle2 className="w-5 h-5 text-blue-600 mb-2" />
-            <h3 className="text-sm font-semibold text-slate-900 mb-1">Uninterrupted Loss Carry-Forward</h3>
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/10 hover:bg-blue-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <CheckCircle2 className="w-5 h-5 text-blue-600 mb-2 group-hover:scale-110 transition-transform" />
+            <h3 className="text-sm font-semibold text-slate-900 group-hover:text-blue-700 transition-colors mb-1">Uninterrupted Loss Carry-Forward</h3>
             <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">Ensures past business losses and unabsorbed depreciation can be legally offset against future profits.</p>
           </div>
-          <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/50">
-            <Receipt className="w-5 h-5 text-purple-600 mb-2" />
-            <h3 className="text-sm font-semibold text-slate-900 mb-1">Instant TDS / TCS Refunds</h3>
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/10 hover:bg-purple-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <Receipt className="w-5 h-5 text-purple-600 mb-2 group-hover:scale-110 transition-transform" />
+            <h3 className="text-sm font-semibold text-slate-900 group-hover:text-purple-700 transition-colors mb-1">Instant TDS / TCS Refunds</h3>
             <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">Facilitates prompt verification and release of excess withholding taxes directly into corporate accounts.</p>
           </div>
         </div>
@@ -218,18 +218,18 @@ export default function DocumentsNeededForOnlineItrFilingPage() {
           {ESSENTIAL_DOCUMENTS.map((doc, idx) => (
             <div
               key={idx}
-              className="p-4.5 rounded-xl border border-slate-200 bg-white hover:border-emerald-500 hover:shadow-md transition-all group"
+              className="group p-4.5 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer"
             >
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
                 <div className="flex items-center gap-2.5">
-                  <span className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs flex items-center justify-center shrink-0">
+                  <span className="w-6 h-6 rounded-full bg-slate-900 group-hover:bg-emerald-600 text-white font-bold text-xs flex items-center justify-center shrink-0 transition-colors">
                     {doc.num}
                   </span>
                   <h3 className="text-sm sm:text-base font-semibold text-slate-900 group-hover:text-emerald-700 transition-colors">
                     {doc.title}
                   </h3>
                 </div>
-                <span className="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 self-start sm:self-auto">
+                <span className="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-md bg-slate-100 group-hover:bg-emerald-100 group-hover:text-emerald-800 text-slate-700 self-start sm:self-auto transition-colors">
                   {doc.category}
                 </span>
               </div>
@@ -237,7 +237,7 @@ export default function DocumentsNeededForOnlineItrFilingPage() {
                 {doc.desc}
               </p>
               <div className="pl-8 text-xs text-emerald-800 font-medium flex items-center gap-1.5">
-                <Sparkles className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                <Sparkles className="w-3.5 h-3.5 text-emerald-600 shrink-0 group-hover:rotate-12 transition-transform" />
                 <span><strong>Compliance Value:</strong> {doc.importance}</span>
               </div>
             </div>
@@ -255,26 +255,26 @@ export default function DocumentsNeededForOnlineItrFilingPage() {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-          <div className="p-4 rounded-xl border border-slate-200 bg-white">
-            <h3 className="text-sm font-semibold text-slate-900 mb-1">Transfer Pricing Audit (Form 3CEB)</h3>
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/10 hover:bg-blue-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="text-sm font-semibold text-slate-900 group-hover:text-blue-700 transition-colors mb-1">Transfer Pricing Audit (Form 3CEB)</h3>
             <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
               Required if the company transacted with international associated enterprises or executed specified domestic transactions under Section 92E.
             </p>
           </div>
-          <div className="p-4 rounded-xl border border-slate-200 bg-white">
-            <h3 className="text-sm font-semibold text-slate-900 mb-1">DPIIT & Section 80-IAC Tax Exemption</h3>
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="text-sm font-semibold text-slate-900 group-hover:text-emerald-700 transition-colors mb-1">DPIIT & Section 80-IAC Tax Exemption</h3>
             <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
               Recognized eligible startups claiming a 3-consecutive-year 100% tax holiday must furnish Inter-Ministerial Board (IMB) approval certificates.
             </p>
           </div>
-          <div className="p-4 rounded-xl border border-slate-200 bg-white">
-            <h3 className="text-sm font-semibold text-slate-900 mb-1">Schedule FA (Foreign Assets & Accounts)</h3>
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-purple-500 hover:shadow-md hover:shadow-purple-500/10 hover:bg-purple-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="text-sm font-semibold text-slate-900 group-hover:text-purple-700 transition-colors mb-1">Schedule FA (Foreign Assets & Accounts)</h3>
             <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
               Mandatory disclosures regarding foreign depository accounts, foreign equity holdings, custodial accounts, and overseas subsidiary shares.
             </p>
           </div>
-          <div className="p-4 rounded-xl border border-slate-200 bg-white">
-            <h3 className="text-sm font-semibold text-slate-900 mb-1">Related Party Disclosures (Section 40A(2))</h3>
+          <div className="group p-4 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-amber-500 hover:shadow-md hover:shadow-amber-500/10 hover:bg-amber-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <h3 className="text-sm font-semibold text-slate-900 group-hover:text-amber-700 transition-colors mb-1">Related Party Disclosures (Section 40A(2))</h3>
             <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
               Itemized ledgers of all remuneration, interest payments, commissions, and leases paid to directors or their relatives to demonstrate arms-length pricing.
             </p>
@@ -293,11 +293,11 @@ export default function DocumentsNeededForOnlineItrFilingPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mt-3">
           {FILING_STEPS.map((step, idx) => (
-            <div key={idx} className="p-4.5 rounded-xl border border-slate-200 bg-white">
-              <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200/60 inline-block mb-2">
+            <div key={idx} className="group p-4.5 rounded-xl border border-slate-200 bg-white shadow-2xs hover:border-emerald-500 hover:shadow-md hover:shadow-emerald-500/10 hover:bg-emerald-50/15 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+              <span className="text-xs font-bold text-emerald-700 bg-emerald-50 group-hover:bg-emerald-600 group-hover:text-white px-2.5 py-0.5 rounded-full border border-emerald-200/60 inline-block mb-2 transition-colors">
                 {step.step}
               </span>
-              <h3 className="text-sm font-semibold text-slate-900 mb-1">{step.title}</h3>
+              <h3 className="text-sm font-semibold text-slate-900 group-hover:text-emerald-700 transition-colors mb-1">{step.title}</h3>
               <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">{step.desc}</p>
             </div>
           ))}
@@ -310,8 +310,8 @@ export default function DocumentsNeededForOnlineItrFilingPage() {
           5. Critical Mistakes to Avoid in Corporate Tax Filings
         </h2>
         <div className="space-y-3">
-          <div className="p-4 rounded-xl border border-rose-200 bg-rose-50/40 flex items-start gap-3">
-            <AlertTriangle className="w-5 h-5 text-rose-600 shrink-0 mt-0.5" />
+          <div className="group p-4 rounded-xl border border-rose-200 bg-rose-50/40 hover:border-rose-400 hover:shadow-md hover:shadow-rose-500/15 hover:bg-rose-50/70 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer flex items-start gap-3">
+            <AlertTriangle className="w-5 h-5 text-rose-600 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
             <div>
               <h3 className="text-xs sm:text-sm font-semibold text-rose-900">Unreconciled GST Turnover and P&L Revenue</h3>
               <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal mt-0.5 leading-relaxed">
@@ -320,8 +320,8 @@ export default function DocumentsNeededForOnlineItrFilingPage() {
             </div>
           </div>
 
-          <div className="p-4 rounded-xl border border-amber-200 bg-amber-50/40 flex items-start gap-3">
-            <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
+          <div className="group p-4 rounded-xl border border-amber-200 bg-amber-50/40 hover:border-amber-400 hover:shadow-md hover:shadow-amber-500/15 hover:bg-amber-50/70 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer flex items-start gap-3">
+            <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
             <div>
               <h3 className="text-xs sm:text-sm font-semibold text-amber-900">Attempting Aadhaar OTP Verification</h3>
               <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-normal mt-0.5 leading-relaxed">
