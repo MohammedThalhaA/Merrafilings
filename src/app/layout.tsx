@@ -43,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${inter.variable} scroll-smooth`}>
+    <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning className={`${inter.variable} scroll-smooth`}>
       <body suppressHydrationWarning className="min-h-screen bg-white text-[#111827] font-sans antialiased selection:bg-[#155EEF]/10 selection:text-[#155EEF]">
         <ScrollRevealProvider>{children}</ScrollRevealProvider>
       </body>

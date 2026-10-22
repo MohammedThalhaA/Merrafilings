@@ -2583,7 +2583,7 @@ export default function ServicePageTemplate({
       <section id="overview-section" className="py-14 sm:py-16 bg-white font-sans">
         <div className="w-full max-w-[1600px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-10">
           {/* Breadcrumb Navigation */}
-          <nav data-reveal="down" className="flex items-center gap-2 text-xs sm:text-[13px] font-medium text-slate-500 mb-6 flex-wrap">
+          <nav className="flex items-center gap-2 text-xs sm:text-[13px] font-medium text-slate-500 mb-6 flex-wrap">
             <a href="/" className="hover:text-slate-900 transition-colors">
               Home
             </a>
