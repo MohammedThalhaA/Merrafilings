@@ -40,12 +40,13 @@ export default function Footer() {
     {
       title: "Tax & Compliance",
       links: [
-        { name: "Income Tax Return (ITR)", href: "#itr" },
-        { name: "TDS Return Filing", href: "#tds" },
-        { name: "GST Return Filing (GSTR-3B)", href: "#gst-return" },
+        { name: "Income Tax Return (ITR)", href: "/income-tax-filing" },
+        { name: "TDS Return Filing", href: "/tds-return-filing" },
+        { name: "GST Return Filing (GSTR-3B)", href: "/gst-return-filing" },
+        { name: "FC-TRS & FDI Reporting", href: "/fc-trs-filing" },
+        { name: "ODI Filing (Overseas Investment)", href: "/odi-filing" },
         { name: "ROC Annual Filing (AOC-4)", href: "#roc-annual" },
         { name: "Director KYC (DIR-3)", href: "#dir3" },
-        { name: "Accounting & Bookkeeping", href: "#accounting" },
         { name: "Tax Audit Assistance", href: "#tax-audit" },
       ],
     },

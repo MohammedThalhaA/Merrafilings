@@ -222,9 +222,9 @@ export const NAV_CATEGORIES: NavCategory[] = [
           { title: "PF Return Filing", href: "#pf-return" },
           { title: "ESI Return Filing", href: "#esi-return" },
           { title: "Professional Tax Return", href: "#pt-return" },
-          { title: "TDS Compliance", href: "#tds-compliance" },
-          { title: "POSH Compliance", href: "#posh" },
-          { title: "RBI & FEMA Compliance", href: "#fema-compliance" },
+          { title: "TDS Compliance", href: "/tds-return-filing" },
+          { title: "FC-TRS & FDI Reporting", href: "/fc-trs-filing" },
+          { title: "ODI Filing (Overseas Investment)", href: "/odi-filing" },
         ],
       ],
     },
@@ -265,11 +265,12 @@ export const NAV_CATEGORIES: NavCategory[] = [
       width: "w-[540px]",
       columns: [
         [
+          { title: "Inbound FDI (FC-TRS)", href: "/fc-trs-filing" },
+          { title: "Outbound ODI Filing", href: "/odi-filing" },
           { title: "Dubai Mainland Company", href: "#dubai-mainland" },
           { title: "Dubai Freezone Company", href: "#dubai-freezone" },
           { title: "UAE Corporate Tax Filing", href: "#uae-tax" },
           { title: "UAE VAT Registration", href: "#uae-vat" },
-          { title: "UAE Bank Account Opening", href: "#uae-bank" },
         ],
         [
           { title: "US Incorporation", href: "#us-incorporation" },
