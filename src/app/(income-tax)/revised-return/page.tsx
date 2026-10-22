@@ -321,28 +321,34 @@ const FAQ_EXTRA_COL_2 = [
 
 const RELATED_GUIDES = [
   {
-    title: "Income Tax Notice Resolution: Sections 143(1), 143(2), 148 & DIN Verification",
-    href: "/income-tax-notice",
-    date: "Litigation Desk",
-    readTime: "9 min read",
-  },
-  {
-    title: "Quarterly TDS Return Filing: Forms 24Q, 26Q Due Dates & Late Fee Rules",
-    href: "/tds-return-filing",
-    date: "Compliance Desk",
+    title: "File a Revised Return: Optimize Your Tax",
+    href: "/revised-return/file-a-revised-return-optimize-your-tax",
+    date: "Tax Optimization",
     readTime: "8 min read",
   },
   {
-    title: "Corporate Tax Return Filing (Form ITR-6) for Companies in India: AY 2026-27",
-    href: "/itr-6-form",
-    date: "Corporate Tax",
-    readTime: "9 min read",
+    title: "File Revised Return - Required Documents & Process Guide",
+    href: "/revised-return/file-revised-return-required-documents",
+    date: "Documentation Desk",
+    readTime: "8 min read",
   },
   {
-    title: "Form ITR-5 Filing Guide for Partnership Firms & LLPs in India (AY 2026-27)",
-    href: "/itr-5-form",
-    date: "Firm Tax Desk",
-    readTime: "10 min read",
+    title: "Optimize Your Taxes with Revised Return Filing",
+    href: "/revised-return/revised-return-filing",
+    date: "Statutory Filing",
+    readTime: "8 min read",
+  },
+  {
+    title: "Revised Return Filing: Easy 5 Steps Guide",
+    href: "/revised-return/revised-return-filing-easy-5-steps-guide",
+    date: "Step-by-Step Guide",
+    readTime: "8 min read",
+  },
+  {
+    title: "Revised Income Tax Return Online - How to File & Due Dates",
+    href: "/revised-return/how-to-file-a-revised-income-tax-return",
+    date: "Portal & Due Dates",
+    readTime: "9 min read",
   },
 ];
 
