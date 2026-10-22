@@ -82,7 +82,7 @@ export default function HeroSection({ onGetStarted, onSelectCategory }: HeroSect
         {/* Main Editorial Serif Headline */}
         <h1 className="font-serif text-[32px] sm:text-[44px] md:text-[54px] lg:text-[64px] font-normal tracking-tight text-[#0F172A] leading-[1.15] max-w-[1020px] mx-auto transition-all animate-in fade-in slide-in-from-top-3 duration-500">
           Modern Corporate Legal &amp; Compliance Services,{" "}
-          <span className="italic text-slate-700">
+          <span className="text-slate-700">
             Thoughtfully Simplified.
           </span>
         </h1>
