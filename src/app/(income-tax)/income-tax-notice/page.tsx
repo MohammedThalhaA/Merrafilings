@@ -379,28 +379,34 @@ const FAQ_EXTRA_COL_2 = [
 
 const RELATED_GUIDES = [
   {
-    title: "Revised Return Filing (Section 139(5)) & Updated Return (ITR-U) Guide",
-    href: "/revised-return",
-    date: "Rectification Desk",
+    title: "Tax Notice Consultation: Your Expert Strategic Guidance",
+    href: "/income-tax-notice/tax-notice-consultation-your-expert-guidance",
+    date: "Direct Tax Litigation Desk",
     readTime: "8 min read",
   },
   {
-    title: "Quarterly TDS Return Filing: Due Dates, Penalties & TRACES Correction",
-    href: "/tds-return-filing",
-    date: "Tax Compliance",
+    title: "Understanding Your Income Tax Notice Response: Effective Steps",
+    href: "/income-tax-notice/income-tax-notice-response-effective-steps",
+    date: "e-Proceedings Desk",
     readTime: "9 min read",
   },
   {
-    title: "Corporate Tax Return Filing (Form ITR-6) for Companies in India: AY 2026-27",
-    href: "/itr-6-form",
-    date: "Corporate Tax",
+    title: "Clear Your Tax Notice with Merrafilings in 5 Simple Steps",
+    href: "/income-tax-notice/clear-your-tax-notice-with-indiafiling-5-simple-steps",
+    date: "Notice Resolution",
+    readTime: "10 min read",
+  },
+  {
+    title: "Responding to an Income Tax Notice: Effective Handling Guide",
+    href: "/income-tax-notice/effective-income-tax-notice-response-guide",
+    date: "Litigation Advisory",
     readTime: "9 min read",
   },
   {
-    title: "Understanding Section 143(1) Intimation & Rectification under Section 154",
-    href: "/income-tax-filing",
-    date: "Tax Advisory",
-    readTime: "7 min read",
+    title: "Concept of Deemed Let-Out Property under the Income Tax Act, 1961",
+    href: "/income-tax-notice/deemed-letout",
+    date: "House Property Tax Desk",
+    readTime: "10 min read",
   },
 ];
 
